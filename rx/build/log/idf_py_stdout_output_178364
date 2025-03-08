@@ -1,0 +1,2190 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb_tx_dv3/build/mcmb_tx_dv3.elf /home/davey_schoe/esp/mcmb_tx_dv3/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/esp-idf/tools/idf.py'
+
+[0m
+adu: 0x00 |0x00 |0x00 |�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1428-g0f0068fff3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  7 2025 18:07:42[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0fc98h ( 64664) map[0m
+[0;32mI (110) esp_image: segment 1: paddr=0001fcc0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0001fce4 vaddr=3ffb0000 size=00334h (   820) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=2a920h (174368) map[0m
+[0;32mI (181) esp_image: segment 4: paddr=0004a948 vaddr=3ffb0334 size=02058h (  8280) load[0m
+[0;32mI (185) esp_image: segment 5: paddr=0004c9a8 vaddr=40080000 size=0d28ch ( 53900) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (223) cpu_start: Multicore app[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) app_init: Application information:[0m
+[0;32mI (235) app_init: Project name:     mcmb_tx_dv3[0m
+[0;32mI (240) app_init: App version:      1[0m
+[0;32mI (244) app_init: Compile time:     Mar  7 2025 18:07:41[0m
+[0;32mI (250) app_init: ELF file SHA256:  61ca96f1d...[0m
+[0;32mI (255) app_init: ESP-IDF:          v5.5-dev-1428-g0f0068fff3-dirty[0m
+[0;32mI (262) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (267) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (272) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (277) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (284) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 3FFB3780 len 0002C880 (178 KiB): DRAM[0m
+[0;32mI (296) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (303) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (309) heap_init: At 4008D28C len 00012D74 (75 KiB): IRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;33mW (324) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (338) main_task: Started on CPU0[0m
+[0;32mI (348) main_task: Calling app_main()[0m
+[0;31mE (348) lwmb: r_connect(55), b=-1, errno=119[0m
+[0;32mI (348) lwmb: hw: 2064
+[0m
+[0;32mI (348) lwmb: Largest free block: 155648
+[0m
+[0;32mI (358) lwmb: Free heap: 284852
+[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (498) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |x00 |0x00 |0x00 |0x06 |0xff |0x1x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (608) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (618) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (628) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (628) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (638) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (638) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (648) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (658) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (668) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (668) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (688) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (788) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (798) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (798) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (808) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (818) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (818) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (828) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (858) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (878) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (888) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (888) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (898) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (1028) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (1138) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1138) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1148) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1158) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1158) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1168) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1178) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (1178) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1188) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1198) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1198) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (1208) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1218) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1228) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1228) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1238) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1248) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1248) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1258) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1258) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1268) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1278) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1278) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1288) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1298) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1298) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1308) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1308) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1318) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1328) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |[0;31mE (1348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+
+[0;31mE (1358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1358) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+r->s=56, r->ib=130, r->ob=0
+im: 0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |
+om: 0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |
+[0;32mI (1558) lwmb: hw: 2064
+[0m
+[0;32mI (1558) lwmb: Largest free block: 131072
+[0m
+[0;32mI (1568) lwmb: Free heap: 270816
+[0m
+[0;32mI (1568) lwmb: time_elapsed: 1210 ms[0m
+[0;31mE (1568) lwmb: r_send(55), r->ob=17, b=-1, errno=128[0m
+[0;31mE (1568) lwmb: r_recv(55), im->b=-1, errno=128[0m
+[0;31mE (1578) lwmb: r_shutdown(55), b=-1, errno=128[0m
+[0;31mE (1588) lwmb: r_bind(55), b=-1, errno=112[0m
+[0;31mE (1598) lwmb: r_connect(55), b=-1, errno=119[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (1698) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (1808) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1818) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1828) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1828) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1848) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (1858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1878) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (1888) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1898) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1898) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1908) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1908) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1918) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1928) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1928) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1938) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1948) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1948) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0xff |0x00 |0x00 |0x00 |0x00 |0x00 |
+[0;31mE (1958) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1968) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1968) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1978) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1988) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1988) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (1998) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (2008) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (2008) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (2018) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (2128) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (2178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2228) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2578) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2598) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (2598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2608) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (2608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2618) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (2628) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2628) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (2638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2638) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (2648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2658) lwmb: r_send(56), r->ob=9, b=-1, errno=104[0m
+[0;31mE (2658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2668) lwmb: r_shutdown(56), b=-1, errno=128[0m
+[0;31mE (2668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2678) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2868) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2868) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3098) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (3208) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3218) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3228) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3228) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3238) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3248) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3248) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3258) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3268) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3268) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3278) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3278) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3288) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3298) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3298) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3308) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3318) lwmb: r_proc: received an improperly formatted adu[0m
+r->s=57, r->ib=19, r->ob=12
+im: 0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |
+om: 0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |
+[0;32mI (3338) lwmb: hw: 2000
+[0m
+[0;31mE (3348) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (3348) lwmb: Largest free block: 126976
+[0m
+[0;31mE (3348) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (3358) lwmb: Free heap: 277672
+[0m
+[0;31mE (3368) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (3368) lwmb: time_elapsed: 1800 ms[0m
+[0;31mE (3378) lwmb: r_proc: received an improperly formatted adu[0m
+ b=-1, errno=128[0m
+[0;31mE (3388) lwmb: r_recv(55), im->b=-1, errno=128[0m
+[0;31mE (3388) lwmb: r_shutdown(55), b=-1, err0;31mE (3398) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3398) lwmb: r_connect(55), b=-1, errno=119[0m
+[0;31mE (3408) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3418) lwmb: r_send(57), r->ob=18, b=-1, errno=104[0m
+[0;31mE (3418) lwmb: r_shutdown(57), b=-1, errno=128[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (3438) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (3548) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3548) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3558) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3568) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (3668) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3678) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3688) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3688) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3698) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3708) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3708) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3718) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3718) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3728) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3738) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3738) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3748) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3758) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3758) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3768) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3768) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3778) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (3858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3868) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (3878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4228) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4348) lwmb: r_send(r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4578) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4628) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4678) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4868) lwmb: r_send(55), r->ob=17, b=-1, errn r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5098) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (5208) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5218) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5228) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5228) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5238) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5238) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5248) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5258) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5258) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5268) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5278) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5278) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5288) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5288) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5298) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5308) lwmb: r_proc: received an improperly formatted adu[0m
+r->s=56, r->ib=224, r->ob=0
+im: 0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0 |0x00 |0x02 |[0;31mE (5348) lwmb: r_proc: received an improperly formatted adu[0m
+0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x0b |0xff |0x10 |[0;31mE (5348) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |
+om: [0;31mE (5378) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |[0;31mE (5468) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |[0;31mE (5568) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |
+[0;31mE (5588) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (5598) lwmb: hw: 2000
+[0m
+[0;31mE (5598) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (5598) lwmb: Largest free block: 147456
+[0m
+adu: [0;32mI (5608) lwmb: Free heap: 277656
+[0m
+0x01 |0x00 |0xff |0xff |0x00 |0x00 |[0;32mI (5608) lwmb: time_elapsed: 2230 ms[0m
+
+[0;31mE (5618) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5618) lwmb: r_send(55), r->ob=17, b=-1, errno=128[0m
+[0;31mE (5628) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5628) lwmb: r_shutdown(55), b=-1, errno=128[0m
+[0;31mE (5638) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5648) lwmb: r_bind(55), b=-1, errno=112[0m
+[0;31mE (5648) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5658) lwmb: r_connect(55), b=-1, errno=119[0m
+[0;31mE (5658) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5678) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5678) lwmb: r_send(56), r->ob=9, b=-1, errno=104[0m
+[0;31mE (5688) lwmb: r_shutdown(56), b=-1, errno=128[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (5698) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (5808) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5818) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5818) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5828) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5848) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (5848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5878) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (5878) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5888) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5898) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5898) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5908) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5918) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5918) lwmb: r_proc: recei
+[0;31mE (5928) lwmb: r_proc: received an improperly formattedadu[0m
+[0;31mE (5938) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5948) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0xff |0x00 |0x00 |0x00 |0x00 |0x00 |
+[0;31mE (5958) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (5958) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x1 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (6068) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6078) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6088) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6088) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6098) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6098) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6108) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (6118) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6128) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6128) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6138) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6148) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6148) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6158) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6158) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6168) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6178) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6178) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6188) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6198) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6198) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6208) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6208) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6218) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6228) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6238) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6258) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (6348) lwmb: r_proc: received an improperly formatted adu[0m
+r->s=57, r->ib=123, r->ob=0
+[0;31mE (6358) lwmb: r_proc: received an improperly formatted adu[0m
+im: 
+om: [0;31mE (6368) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |
+[0;31mE (6378) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (6508) lwmb: hw: 2000
+[0m
+[0;31mE (6518) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (6518) lwmb: Largest free block: 139264
+[0m
+[0;31mE (6518) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (6528) lwmb: Free heap: 274196
+[0m
+[0;31mE (6538) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (6538) lwmb: time_elapsed: 920 ms[0m
+[0;31mE (6548) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6548) lwmb: r_send(55), r->ob=17, b=-1, errno=128[0m
+[0;31mE (6558) lwmb: r_recv(55), im->b=-1, errno=128[0m
+[0;31mE (6558) lwmb: r_shutdown(55), b=-1, errno=128[0m
+[0;31mE (6568) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6578) lwmb: r_connect(55), b=-1, errno=119[0m
+[0;31mE (6578) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6588) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6598) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (6708) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6708) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6718) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6718) lwmb: r_send(57), r->ob=9, b=-1, errno=104[0m
+[0;31mE (6728) lwmb: r_shutdown(57), b=-1, errno=128[0m
+[0;31mE (6738) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6738) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6748) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6758) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6758) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6768) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (6778) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6778) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6788) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6798) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (6798) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6808) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6818) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6828) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6828) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6878) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6888) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6888) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6898) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6908) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6908) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (6948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7228) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7228) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7578) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7578) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7628) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7628) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7678) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7678) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7868) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8098) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8098) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8118) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8128) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8138) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8148) lwmb: r_proc: received an improperly formatted adu[0m
+r->s=56, r->ib=256, r->ob=9
+im: [0;31mE (8158) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |
+om: [0;31mE (8168) lwmb: r_proc: received an improperly formatted adu[0m
+0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x8b |0x01 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x82 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |[0;31mE (8178) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |[0;31mE (8198) lwmb: r_proc: received an improperly formatted adu[0m
+0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |[0;31mE (8218) lwmb: r_proc: received an improperly formatted adu[0m
+
+[0;32mI (8328) lwmb: hw: 2000
+[0m
+[0;31mE (8328) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (8328) lwmb: Largest free block: 139264
+[0m
+[0;31mE (8338) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (8338) lwmb: Free heap: 274140
+[0m
+[0;31mE (8348) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (8348) lwmb: time_elapsed: 1800 ms[0m
+[0;31mE (8358) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8358) lwmb: r_send(55), r->ob=17, b=-1, errno=128[0m
+[0;31mE (8368) lwmb: r_recv(55), im->b=-1, errno=128[0m
+[0;31mE (8368) lwmb: r_shutdown(55), b=-1, errno=128[0m
+[0;31mE (8378) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8388) lwmb: r_connect(55), b=-1, errno=119[0m
+[0;31mE (8388) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8398) lwmb: r_send(56), r->ob=18, b=-1, errno=104[0m
+[0;31mE (8408) lwmb: r_shutdown(56), b=-1, errno=128[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (8418) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (8528) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8538) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8538) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8548) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x80 |0x01 |0x00 |0x00 |0x00 |
+[0;31mE (8618) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8628) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8628) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8638) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8638) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8648) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8658) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8658) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (8668) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8678) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8688) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8688) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (8698) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8708) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8708) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8718) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8728) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8728) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8738) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8748) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8748) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8758) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8758) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8768) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8778) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (8778) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0xff |0x00 |0x00 |0x00 |0x00 |0x00 |
+adu: 0x0b |0x7f |0x01 |0x00 |0x00 |0x00 |
+[0;31mE (8798) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (8878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9228) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9578) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9628) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9678) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9868) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9868) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10098) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+r->s=57, r->ib=256, r->ob=0
+im: adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |
+om: adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;32mI (10458) lwmb: hw: 2000
+[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;32mI (10468) lwmb: Largest free block: 131072
+[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;32mI (10478) lwmb: Free heap: 274164
+[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;32mI (10488) lwmb: time_elapsed: 2130 ms[0m
+[0;31mE (10498) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10498) lwmb: r_send(55), r->ob=17, b=-1, errno=128[0m
+[0;31mE (10508) lwmb: r_recv(55), im->b=-1, errno=128[0m
+[0;31mE (10508) lwmb: r_shutdown(55), b=-1, errno=128[0m
+[0;31mE (10518) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10518) lwmb: r_bind(55), b=-1, errno=112[0m
+[0;31mE (10528) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10538) lwmb: r_connect(55), b=-1, errno=119[0m
+[0;31mE (10538) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10548) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (10558) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10568) lwmb: r_send(57), r->ob=18, b=-1, errno=104[0m
+[0;31mE (10578) lwmb: r_shutdown(57), b=-1, errno=128[0m
+[0;31mE (10578) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (10688) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10698) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10698) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10708) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10718) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10718) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10728) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (10738) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10748) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10748) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10758) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (10768) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10768) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10778) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10788) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10788) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10798) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10808) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10808) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10818) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10828) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10828) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10838) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (10908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11228) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11578) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11628) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11678) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11678) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11828) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11838) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11848) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11858) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11868) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11868) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11878) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12098) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12108) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12108) lwmb: r_proc: received an improperly formatted adu[0m
+r->s=56, r->ib=256, r->ob=9
+im: [0;31mE (12118) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |
+om: [0;31mE (12128) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x80 |0x01 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |[0;31mE (12138) lwmb: r_proc: received an improperly formatted adu[0m
+0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |0x00 |[0;31mE (12248) lwmb: r_proc: received an improperly formatted adu[0m
+
+[0;32mI (12278) lwmb: hw: 2000
+[0m
+[0;31mE (12278) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (12278) lwmb: Largest free block: 139264
+[0m
+[0;31mE (12288) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (12298) lwmb: Free heap: 272604
+[0m
+[0;31mE (12298) lwmb: r_proc: received an improperly formatted adu[0m
+[0;32mI (12308) lwmb: time_elapsed: 1810 ms[0m
+[0;31mE (12308) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12318) lwmb: r_send(55), r->ob=17, b=-1, errno=128[0m
+[0;31mE (12318) lwmb: r_recv(55), im->b=-1, errno=128[0m
+[0;31mE (12328) lwmb: r_shutdown(55), b=-1, errno=128[0m
+[0;31mE (12328) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12338) lwmb: r_connect(55), b=-1, errno=119[0m
+[0;31mE (12348) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12358) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12358) lwmb: r_send(56), r->ob=18, b=-1, errno=104[0m
+[0;31mE (12368) lwmb: r_shutdown(56), b=-1, errno=128[0m
+[0;31mE (12378) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (12478) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12488) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12498) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12498) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12508) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12518) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12518) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x01 |0x00 |0xff |0xff |0x00 |0x00 |
+[0;31mE (12528) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12538) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12548) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12548) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |
+[0;31mE (12558) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12568) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12578) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12578) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12588) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12598) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12598) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12608) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12608) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12618) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12618) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0xff |0x00 |0x00 |0x00 |0x00 |0x00 |
+[0;31mE (12628) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12638) lwmb: r_proc: received an improperly formatted adu[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+[0;31mE (12748) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12758) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12758) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12768) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12778) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12778) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12788) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12798) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12798) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12808) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12808) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12818) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12848) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12858) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12868) lwmb: r_proc: received an improperly formatted adu[0m
+[0;31mE (12888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12888) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12898) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12908) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12908) lwmb: r_snd(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12918) lwmb: r_s), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12918) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12928) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12938) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12948) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12958) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12968) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12978) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12988) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12998) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13008) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13018) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13028) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13038) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13048) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13058) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13068) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13078) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13088) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13098) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13108) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13118) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13128) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13138) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13148) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13158) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13168) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13178) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13188) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13198) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13208) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13218) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13228) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13228) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13238) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13248) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13258) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13268) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13278) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13288) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13298) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13308) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13318) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13328) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13338) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13348) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13358) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13368) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13378) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13388) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13398) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13408) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13418) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13428) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13438) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13448) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13458) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13468) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13478) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13488) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13498) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13508) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13518) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13528) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13538) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13548) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13558) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13568) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13578) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13578) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13588) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13598) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13608) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13618) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13628) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13628) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13638) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13648) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13658) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13668) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13678) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13688) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13698) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13708) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13718) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13728) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13738) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13748) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13758) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13768) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13778) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13788) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13798) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13808) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13818) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+r->s=57, r->ib=80, r->ob=0
+im: 0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |0x00 |0x00 |0x00 |0x00 |0x00 |0x0b |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |0x04 |0x00 |0x00 |0xff |0xff |

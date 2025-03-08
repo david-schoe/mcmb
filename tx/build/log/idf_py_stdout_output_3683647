@@ -1,0 +1,320 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb_tx_dv3/build/mcmb_tx_dv3.elf /home/davey_schoe/esp/mcmb_tx_dv3/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/esp-idf/tools/idf.py'
+K calibration value:�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1428-g0f0068fff3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  4 2025 09:17:33[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=10d88h ( 69000) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=00020db0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020dd4 vaddr=3ffb0000 size=023f0h (  9200) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=000231cc vaddr=40080000 size=0ce4ch ( 52812) load[0m
+[0;32mI (144) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=2b6a8h (177832) map[0m
+[0;32mI (205) esp_image: segment 5: paddr=0005b6d0 vaddr=4008ce4c size=004ach (  1196) load[0m
+[0;32mI (212) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (212) boot: Disabling RNG early entropy source...[0m
+[0;32mI (223) cpu_start: Multicore app[0m
+D (223) cpu_start: Pro cpu up[0m
+D (223) cpu_start: Starting app cpu, entry point is 0x400810dc[0m
+D (0) cpu_start: App cpu up[0m
+D (234) clk: RTC_SLOW_CLK calibration value: 3322496[0m
+D (246) cpu_start: calling init function: 0x400d1f48 on core: 0[0m
+D (246) cpu_start: calling init function: 0x400d2070 on core: 0[0m
+[0;32mI (248) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+D (258) cpu_start: calling init function: 0x400d1e88 on core: 0[0m
+[0;32mI (264) app_init: Application information:[0m
+[0;32mI (268) app_init: Project name:     mcmb_tx_dv3[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (278) app_init: Compile time:     Mar  4 2025 09:17:31[0m
+[0;32mI (284) app_init: ELF file SHA256:  80c875533...[0m
+[0;32mI (289) app_init: ESP-IDF:          v5.5-dev-1428-g0f0068fff3-dirty[0m
+D (296) cpu_start: calling init function: 0x400d1f5c on core: 0[0m
+[0;32mI (302) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (307) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (312) efuse_init: Chip rev:         v3.1[0m
+D (317) cpu_start: calling init function: 0x400d38ac on core: 0[0m
+D (323) memory_layout: Checking 9 reserved memory ranges:[0m
+D (328) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000[0m
+D (335) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0[0m
+D (341) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb37d8[0m
+D (347) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440[0m
+D (354) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350[0m
+D (360) memory_layout: Reserved memory range 0x40070000 - 0x40078000[0m
+D (367) memory_layout: Reserved memory range 0x40078000 - 0x40080000[0m
+D (373) memory_layout: Reserved memory range 0x40080000 - 0x4008d2f8[0m
+D (380) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000[0m
+D (386) memory_layout: Building list of available memory regions:[0m
+D (392) memory_layout: Available memory region 0x3ffae6e0 - 0x3ffb0000[0m
+D (399) memory_layout: Available memory region 0x3ffb37d8 - 0x3ffb8000[0m
+D (405) memory_layout: Available memory region 0x3ffb8000 - 0x3ffc0000[0m
+D (412) memory_layout: Available memory region 0x3ffc0000 - 0x3ffc2000[0m
+D (419) memory_layout: Available memory region 0x3ffc2000 - 0x3ffc4000[0m
+D (425) memory_layout: Available memory region 0x3ffc4000 - 0x3ffc6000[0m
+D (432) memory_layout: Available memory region 0x3ffc6000 - 0x3ffc8000[0m
+D (438) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000[0m
+D (445) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000[0m
+D (452) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000[0m
+D (458) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000[0m
+D (465) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000[0m
+D (471) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000[0m
+D (478) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000[0m
+D (485) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000[0m
+D (491) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000[0m
+D (498) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000[0m
+D (504) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000[0m
+D (511) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000[0m
+D (517) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20[0m
+D (524) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000[0m
+D (531) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000[0m
+D (537) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000[0m
+D (544) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000[0m
+D (550) memory_layout: Available memory region 0x3fffc000 - 0x40000000[0m
+D (557) memory_layout: Available memory region 0x4008d2f8 - 0x4008e000[0m
+D (564) memory_layout: Available memory region 0x4008e000 - 0x40090000[0m
+D (570) memory_layout: Available memory region 0x40090000 - 0x40092000[0m
+D (577) memory_layout: Available memory region 0x40092000 - 0x40094000[0m
+D (583) memory_layout: Available memory region 0x40094000 - 0x40096000[0m
+D (590) memory_layout: Available memory region 0x40096000 - 0x40098000[0m
+D (597) memory_layout: Available memory region 0x40098000 - 0x4009a000[0m
+D (603) memory_layout: Available memory region 0x4009a000 - 0x4009c000[0m
+D (610) memory_layout: Available memory region 0x4009c000 - 0x4009e000[0m
+D (616) memory_layout: Available memory region 0x4009e000 - 0x400a0000[0m
+[0;32mI (623) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (630) heap_init: New heap initialised at 0x3ffae6e0[0m
+[0;32mI (635) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+D (641) heap_init: New heap initialised at 0x3ffb37d8[0m
+[0;32mI (647) heap_init: At 3FFB37D8 len 0002C828 (178 KiB): DRAM[0m
+[0;32mI (653) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (659) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (666) heap_init: New heap initialised at 0x4008d2f8[0m
+[0;32mI (671) heap_init: At 4008D2F8 len 00012D08 (75 KiB): IRAM[0m
+D (677) cpu_start: calling init function: 0x400d4bac on core: 0[0m
+D (683) cpu_start: calling init function: 0x400d4614 on core: 0[0m
+D (689) cpu_start: calling init function: 0x400d20b4 on core: 0[0m
+D (695) intr_alloc: Connected src 46 to int 1 (cpu 0)[0m
+D (700) cpu_start: calling init function: 0x400d20c0 on core: 0[0m
+D (706) cpu_start: calling init function: 0x400d5d98 on core: 0[0m
+D (712) cpu_start: calling init function: 0x400d7f44 on core: 0[0m
+D (718) cpu_start: calling init function: 0x400d677c on core: 0[0m
+D (724) cpu_start: calling init function: 0x400d4620 on core: 0[0m
+D (730) cpu_start: calling init function: 0x400d20cc on core: 0[0m
+D (736) spi_flash: trying chip: issi[0m
+D (740) spi_flash: trying chip: gd[0m
+D (743) spi_flash: trying chip: mxic[0m
+D (747) spi_flash: trying chip: winbond[0m
+D (751) spi_flash: trying chip: generic[0m
+[0;32mI (754) spi_flash: detected chip: generic[0m
+[0;32mI (759) spi_flash: flash io: dio[0m
+[0;33mW (763) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (776) cpu_start: calling init function: 0x400d1fe8 on core: 0[0m
+D (782) cpu_start: calling init function: 0x40085538[0m
+D (787) cpu_start: calling init function: 0x400d2f90[0m
+D (792) cpu_start: calling init function: 0x400f997c on core: 0[0m
+D (798) cpu_start: calling init function: 0x400d20fc on core: 0[0m
+D (805) intr_alloc: Connected src 24 to int 2 (cpu 0)[0m
+D (809) app_start: Starting scheduler on CPU0[0m
+[0;32D (814) intr_alloc: Connected src 25 to int 1 (cpu 1)[0m
+D (814) app_start: Starting scheduler on CPU1[0m
+mI (814) main_task: Started on CPU0[0m
+D (834) heap_init: New heap initialised at 0x3ffe0440[0m
+D (834) heap_init: New heap initialised at 0x3ffe4350[0m
+D (834) intr_alloc: Connected src 16 to int 3 (cpu 0)[0m
+[0;32mI (834) main_task: Calling app_main()[0m
+D (844) esp_netif_lwip: LwIP stack has been initialized[0m
+D (844) esp_netif_lwip: esp-netif has been successfully initialized[0m
+D (854) event: running task for loop 0x3ffb6858[0m
+D (854) event: created task for loop 0x3ffb6858[0m
+D (864) event: created event loop 0x3ffb6858[0m
+D (864) lwmb: h_create: calloc(0x3ffb78a4)[0m
+D (874) lwmb: rt_push: calloc(0x3ffb79c8)[0m
+D (874) lwmb: rt_push: calloc(0x3ffb7a04)[0m
+D (884) lwip: lwip_socket(PF_INET, SOCK_STREAM, 6) = [0m
+D (884) lwip: 54
+[0m
+D (884) lwip: lwip_bind(54, addr=[0m
+D (894) lwip: 127.0.0.1[0m
+D (894) lwip:  port=502)
+[0m
+D (894) lwip: lwip_bind(54) succeeded
+[0m
+D (904) lwip: lwip_listen(54, backlog=2)
+[0m
+D (904) lwip: lwip_socket(PF_INET, SOCK_STREAM, 6) = [0m
+D (904) lwip: 55
+[0m
+D (914) lwip: lwip_connect(55, addr=[0m
+D (914) lwip: 127.0.0.1[0m
+D (914) lwip:  port=502)
+[0m
+D (924) lwip: lwip_connect(55) succeeded
+[0m
+[0;32mI (924) lwmb: s_conn: connect(55)[0m
+D (924) lwip: lwip_setsockopt(55, IPPROTO_TCP, TCP_NODELAY) -> on
+[0m
+D (934) lwip: lwip_select(56, 0x3ffb8f74, 0x0, 0x0, tvsec=4 tvusec=0)
+[0m
+D (944) lwip: lwip_selscan: fd=54 ready for reading
+[0m
+D (944) lwip: lwip_select: nready=1
+[0m
+D (954) lwip: lwip_accept(54)...
+[0m
+D (954) lwip: lwip_accept(54) returning new sock=56
+[0m
+D (954) lwip: lwip_setsockopt(56, IPPROTO_TCP, TCP_NODELAY) -> on
+[0m
+D (964) lwmb: r_send_req: malloc(0x3ffb7d5c)[0m
+[0;32mI (964) lwmb: r_select_task: opened socket: 56[0m
+D (974) lwmb: r_select_task: calloc(0x3ffb7d74)[0m
+D (984) lwmb: rt_push: calloc(0x3ffb7da0)[0m
+D (984) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=4 tvusec=0)
+[0m
+D (994) lwip: lwip_send(55, data=0x3ffb7d64, size=12, flags=0x0)
+[0m
+D (994) lwip: lwip_send(55) err=0 written=12
+[0m
+D (994) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (1004) lwip: lwip_select: nready=1
+[0m
+D (1014) lwmb: r_select_task: calloc(0x3ffbbb94)[0m
+D (1014) lwip: lwip_recvfrom(56, 0x3ffbbb9c, 256, 0x0, ..)
+[0m
+D (1024) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1024) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbb3c
+[0m
+D (1034) lwip: lwip_recv_tcp: buflen=12 recv_left=256 off=0
+[0m
+D (1034) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbb3c
+[0m
+D (1044) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1044) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (1054) lwip: lwip_recvfrom(56):  addr=[0m
+D (1054) lwip: 127.0.0.1[0m
+D (1064) lwip:  port=49591 len=12
+[0m
+D (1064) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=4 tvusec=0)
+[0m
+D (1024) lwmb: m_send_task: free(0x3ffb7d5c)[0m
+D (1074) lwmb: m_process_task: malloc(0x3ffb7d5c)[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x05 |0xff |0x03 |0x54 |0x12 |0x34 |
+D (1084) lwmb: m_process_task: free(0x3ffbbb94)[0m
+D (1094) lwip: lwip_send(56, data=0x3ffb7d64, size=11, flags=0x0)
+[0m
+D (1104) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (1104) lwip: lwip_select: nready=1
+[0m
+D (1104) lwmb: r_select_task: calloc(0x3ffbb520)[0m
+D (1114) lwip: lwip_recvfrom(55, 0x3ffbb528, 256, 0x0, ..)
+[0m
+D (1114) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1124) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc158
+[0m
+D (1134) lwip: lwip_recv_tcp: buflen=11 recv_left=256 off=0
+[0m
+D (1134) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc158
+[0m
+D (1144) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1144) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (1154) lwip: lwip_recvfrom(55):  addr=[0m
+D (1154) lwip: 127.0.0.1[0m
+D (1154) lwip:  port=502 len=11
+[0m
+D (1164) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=4 tvusec=0)
+[0m
+D (1104) lwip: lwip_send(56) err=0 written=11
+[0m
+D (1174) lwmb: m_send_task: free(0x3ffb7d5c)[0m
+D (1174) lwmb: r_send_req: malloc(0x3ffbb648)[0m
+adu: 0x00 |0x00 |0x00 |0x00 |0x00 |0x05 |0xff |0x03 |0x54 |0x12 |0x34 |
+D (1184) lwmb: m_process_task: free(0x3ffbb520)[0m
+D (1194) lwip: lwip_send(55, data=0x3ffbb650, size=17, flags=0x0)
+[0m
+D (1204) lwip: lwip_send(55) err=0 written=17
+[0m
+D (1204) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (1214) lwip: lwip_select: nready=1
+[0m
+D (1214) lwmb: r_select_task: calloc(0x3ffbbc6c)[0m
+D (1214) lwip: lwip_recvfrom(56, 0x3ffbbc74, 256, 0x0, ..)
+[0m
+D (1224) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1234) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb520
+[0m
+D (1234) lwip: lwip_recv_tcp: buflen=17 recv_left=256 off=0
+[0m
+D (1244) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb520
+[0m
+D (1244) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1254) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (1254) lwip: lwip_recvfrom(56):  addr=[0m
+D (1264) lwip: 127.0.0.1[0m
+D (1264) lwip:  port=49591 len=17
+[0m
+D (1274) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=4 tvusec=0)
+[0m
+D (1224) lwmb: m_send_task: free(0x3ffbb648)[0m
+D (1284) lwmb: m_process_task: malloc(0x3ffbb520)[0m
+D (1284) lwmb: m_process_task: free(0x3ffbbc6c)[0m
+D (1294) lwip: lwip_send(56, data=0x3ffbb528, size=12, flags=0x0)
+[0m
+D (1294) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (1304) lwip: lwip_select: nready=1
+[0m
+D (1304) lwmb: r_select_task: calloc(0x3ffbb668)[0m
+D (1314) lwip: lwip_recvfrom(55, 0x3ffbb670, 256, 0x0, ..)
+[0m
+D (1314) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1324) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb538
+[0m
+D (1324) lwip: lwip_recv_tcp: buflen=12 recv_left=256 off=0
+[0m
+D (1334) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb538
+[0m
+D (1334) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1344) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (1354) lwip: lwip_recvfrom(55):  addr=[0m
+D (1354) lwip: 127.0.0.1[0m
+D (1354) lwip:  port=502 len=12
+[0m
+D (1364) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=4 tvusec=0)
+[0m
+D (1294) lwip: lwip_send(56) err=0 written=12
+[0m
+D (1374) lwmb: m_send_task: free(0x3ffbb520)[0m
+adu: 0x03 |0xe8 |0x00 |0x00 |0x00 |0x06 |0xff |0x10 |0x00 |0x02 |0x00 |0x02 |
+D (1384) lwmb: m_process_task: free(0x3ffbb668)[0m

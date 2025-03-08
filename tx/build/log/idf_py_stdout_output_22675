@@ -1,0 +1,610 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb_tx_dv3/build/mcmb_tx_dv3.elf /home/davey_schoe/esp/mcmb_tx_dv3/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/esp-idf/tools/idf.py'
+ing RNG early entropy source...�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1428-g0f0068fff3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  7 2025 18:07:42[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=10878h ( 67704) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=000208a0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=000208c4 vaddr=3ffb0000 size=0238ch (  9100) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00022c58 vaddr=40080000 size=0d28ch ( 53900) load[0m
+[0;32mI (144) esp_image: segment 4: paddr=0002feec vaddr=00000000 size=0012ch (   300) [0m
+[0;32mI (144) esp_image: segment 5: paddr=00030020 vaddr=400d0020 size=2b714h (177940) map[0m
+[0;32mI (215) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (215) boot: Disabling RNG early entropy source...[0m
+[0;32mI (225) cpu_start: Multicore app[0m
+[0;32mI (234) cpu_start: Pro cpu start user code[0m
+[0;32mI (234) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (234) app_init: Application information:[0m
+[0;32mI (237) app_init: Project name:     mcmb_tx_dv3[0m
+[0;32mI (242) app_init: App version:      1[0m
+[0;32mI (246) app_init: Compile time:     Mar  7 2025 18:07:41[0m
+[0;32mI (252) app_init: ELF file SHA256:  570ec9dd5...[0m
+[0;32mI (257) app_init: ESP-IDF:          v5.5-dev-1428-g0f0068fff3-dirty[0m
+[0;32mI (264) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (269) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (274) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (279) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (286) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFB3780 len 0002C880 (178 KiB): DRAM[0m
+[0;32mI (298) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (305) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (311) heap_init: At 4008D28C len 00012D74 (75 KiB): IRAM[0m
+[0;32mI (319) spi_flash: detected chip: generic[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (326) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+[0;31mE (350) lwmb: r_connect(55), b=-1, errno=119[0m
+[0;32mI (350) lwmb: hw: 2064
+[0m
+[0;32mI (350) lwmb: Largest free block: 155648
+[0m
+[0;32mI (360) lwmb: Free heap: 284852
+[0m
+[0;32mI (360) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;32mI (370) lwmb: r_proc: ii=12, r->ib=12[0m
+[0;32mI (370) lwmb: r_proc: ii=17, r->ib=102[0m
+[0;32mI (370) lwmb: r_proc: ii=34, rlwmb: r_proc: ii=51, r->ib=102[0m
+[0;32mI (380) lwmb: r_proc: ii=68, r->ib=102[0m
+[0;32mI (390) lwmb: r_proc: ii=85, r->ib=102[0m
+[0;32mI (390) lwmb: r_proc: ii=102, r->ib=102[0m
+[0;31mE (390) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (400) lwmb: r_proc: ii=12, r->ib=72[0m
+[0;32mI (400) lwmb: r_proc: ii=24, r->ib=72[0m
+[0;32mI (410) lwmb: r_proc: ii=36, r->ib=72[0m
+[0;32mI (410) lwmb: r_proc: ii=48, r->ib=72[0m
+[0;32mI (420) lwmb: r_proc: ii=60, r->ib=72[0m
+[0;32mI (420) lwmb: r_proc: ii=72, r->ib=72[0m
+[0;32mI (430) lwmb: r_proc: ii=17, r->ib=102[0m
+[0;32mI (430) lwmb: r_proc: ii=34, r->ib=102[0m
+[0;32mI (440) lwmb: r_proc: ii=51, r->ib=102[0m
+[0;32mI (440) lwmb: r_proc: ii=68, r->ib=102[0m
+[0;32mI (440) lwmb: r_proc: ii=85, r->ib=102[0m
+[0;32mI (450) lwmb: r_proc: ii=102, r->ib=102[0m
+[0;32mI (500) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;31mE (500) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (500) lwmb: r_proc: ii=12, r->ib=72[0m
+[0;32mI (500) lwmb: r_proc: ii=24, r->ib=72[0m
+[0;32mI (500) lwmb: r_proc: ii=36, r->ib=72[0m
+[0;32mI (510) lwmb: r_proc: ii=48, r->ib=72[0m
+[0;32mI (510) lwmb: r_proc: ii=60, r->ib=72[0m
+[0;32mI (520) lwmb: r_proc: ii=72, r->ib=72[0m
+[0;31mE (600) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (600) lwmb: r_proc: ii=12, r->ib=12[0m
+[0;31mE (700) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (800) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (900) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1000) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1100) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1200) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1300) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1400) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (1500) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (1600) lwmb: r_proc: ii=17, r->ib=256[0m
+[0;32mI (1600) lwmb: r_proc: ii=34, r->ib=256[0m
+[0;32mI (1600) lwmb: r_proc: ii=51, r->ib=256[0m
+[0;32mI (1600) lwmb: r_proc: ii=68, r->ib=256[0m
+[0;32mI (1610) lwmb: r_proc: ii=85, r->ib=256[0m
+[0;31mE (1610) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (1610) lwmb: r_proc: ii=102, r->ib=256[0m
+[0;32mI (1620) lwmb: r_proc: ii=119, r->ib=256[0m
+[0;32mI (1630) lwmb: r_proc: ii=136, r->ib=256[0m
+[0;32mI (1630) lwmb: r_proc: ii=153, r->ib=256[0m
+[0;32mI (1640) lwmb: r_proc: ii=170, r->ib=256[0m
+[0;32mI (1640) lwmb: r_proc: ii=187, r->ib=256[0m
+[0;32mI (1650) lwmb: r_proc: ii=204, r->ib=256[0m
+[0;32mI (1650) lwmb: r_proc: ii=221, r->ib=256[0m
+[0;32mI (1660) lwmb: r_proc: ii=238, r->ib=256[0m
+[0;32mI (1660) lwmb: r_proc: ii=255, r->ib=256[0m
+[0;32mI (1660) lwmb: r_proc: ii=261, r->ib=256[0m
+[0;31mE (1670) lwmb: r_proc: ii=261, r->ib=256[0m
+[0;32mI (1680) lwmb: r_proc: ii=12, r->ib=180[0m
+[0;32mI (1680) lwmb: r_proc: ii=24, r->ib=180[0m
+[0;32mI (1680) lwmb: r_proc: ii=36, r->ib=180[0m
+[0;90) lwmb: r_proc: ii=60, r->ib=180[0m
+[0;32mI (1700) lwmb: r_proc: ii=72, r->ib=180[0m
+[0;32mI (1700) lwmb: r_proc: ii=84, r->ib=180[0m
+[0;32mI (1710) lwmb: r_proc: ii=96, r->ib=180[0m
+[0;32mI (1710) lwmb: r_proc: ii=108, r->ib=180[0m
+[0;32mI (1710) lwmb: r_proc: ii=120, r->ib=180[0m
+[0;31mE (1720) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (1720) lwmb: r_proc: ii=132, r->ib=180[0m
+[0;32mI (1730) lwmb: r_proc: ii=144, r->ib=180[0m
+[0;32mI (1730) lwmb: r_proc: ii=156, r->ib=180[0m
+[0;32mI (1740) lwmb: r_proc: ii=168, r->ib=180[0m
+[0;32mI (1740) lwmb: r_proc: ii=180, r->ib=180[0m
+[0;32mI (1750) lwmb: r_proc: ii=3077, r->ib=118[0m
+[0;31mE (1750) lwmb: r_proc: ii=3077, r->ib=118[0m
+[0;31mE (1820) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (1850) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;31mE (1920) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2020) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2120) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2220) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2320) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2420) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2520) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2620) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2720) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2820) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (2920) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3020) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (3100) lwmb: r_proc: ii=17, r->ib=119[0m
+[0;32mI (3100) lwmb: r_proc: ii=34, r->ib=119[0m
+[0;32mI (3100) lwmb: r_proc: ii=51, r->ib=119[0m
+[0;32mI (3100) lwmb: r_proc: ii=68, r->ib=119[0m
+[0;32mI (3110) lwmb: r_proc: ii=85, r->ib=119[0m
+[0;32mI (3110) lwmb: r_proc: ii=102, r->ib=119[0m
+[0;32mI (3120) lwmb: r_proc: ii=119, r->ib=119[0m
+[0;31mE (3120) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (3120) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (3130) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (3140) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (3140) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (3140) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (3150) lwmb: r_proc: ii=72, r->ib=96[0m
+[0;32mI (3150) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (3160) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;32mI (3160) lwmb: r_proc: ii=17, r->ib=102[0m
+[0;32mI (3170) lwmb: r_proc: ii=34, r->ib=102[0m
+[0;32mI (3170) lwmb: r_proc: ii=51, r->ib=102[0m
+[0;32mI (3180) lwmb: r_proc: ii=68, r->ib=102[0m
+[0;32mI (3180) lwmb: r_proc: ii=85, r->ib=102[0m
+[0;32mI (3180) lwmb: r_proc: ii=102, r->ib=102[0m
+[0;32mI (3230) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;31mE (3230) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (3230) lwmb: r_proc: ii=12, r->ib=72[0m
+[0;32mI (3230) lwmb: r_proc: ii=24, r->ib=72[0m
+[0;32mI (3240) lwmb: r_proc: ii=36, r->ib=72[0m
+[0;32mI (3240) lwmb: r_proc: ii=48, r->ib=72[0m
+[0;32mI (3240) lwmb: r_proc: ii=60, r->ib=72[0m
+[0;32mI (3250) lwmb: r_proc: ii=72, r->ib=72[0m
+[0;31mE (3330) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (3350) lwmb: r_proc: ii=12, r->ib=12[0m
+[0;31mE (3430) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3530) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3630) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3730) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3830) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (3930) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4030) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4130) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4230) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4330) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4430) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4530) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (4600) lwmb: r_proc: ii=17, r->ib=136[0m
+[0;32mI (4600) lwmb: r_proc: ii=34, r->ib=136[0m
+[0;32mI (4600) lwmb: r_proc: ii=51, r->ib=136[0m
+[0;32mI (4600) lwmb: r_proc: ii=68, r->ib=136[0m
+[0;32mI (4610) lwmb: r_proc: ii=85, r->ib=136[0m
+[0;32mI (4610) lwmb: r_proc: ii=102, r->ib=136[0m
+[0;32mI (4620) lwmb: r_proc: ii=119, r->ib=136[0m
+[0;32mI (4620) lwmb: r_proc: ii=136, r->ib=136[0m
+[0;32mI (4630) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (4630) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (4630) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (4640) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (4640) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (4650) lwmb: r_proc: ii=72, r->ib=96[0m
+[0;32mI (4650) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (4660) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;32mI (4660) lwmb: r_proc: ii=17, r->ib=102[0m
+[0;32mI (4670) lwmb: r_proc: ii=34, r->ib=102[0m
+[0;32mI (4670) lwmb: r_proc: ii=51, r->ib=102[0m
+[0;31mE (4670) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (4670) lwmb: r_proc: ii=68, r->ib=102[0m
+[0;32mI (4680) lwmb: r_proc: ii=85, r->ib=102[0m
+[0;32mI (4690) lwmb: r_proc: ii=102, r->ib=102[0m
+[0;32mI (4700) lwmb: r_proc: ii=12, r->ib=72[0m
+[0;32mI (4700) lwmb: r_proc: ii=24, r->ib=72[0m
+[0;32mI (4700) lwmb: r_proc: ii=36, r->ib=72[0m
+[0;32mI (4710) lwmb: r_proc: ii=48, r->ib=72[0m
+[0;32mI (4710) lwmb: r_proc: ii=60, r->ib=72[0m
+[0;32mI (4720) lwmb: r_proc: ii=72, r->ib=72[0m
+[0;32mI (4720) lwmb: r_proc: ii=17, r->ib=85[0m
+[0;32mI (4720) lwmb: r_proc: ii=34, r->ib=85[0m
+[0;32mI (4730) lwmb: r_proc: ii=51, r->ib=85[0m
+[0;32mI (4730) lwmb: r_proc: ii=68, r->ib=85[0m
+[0;32mI (4740[0;31mE (4780) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (4780) lwmb: r_proc: ii=12, r->ib=60[0m
+[0;32mI (4780) lwmb: r_proc: ii=24, r->ib=60[0m
+[0;32mI (4780) lwmb: r_proc: ii=36, r->ib=60[0m
+[0;32mI (4790) lwmb: r_proc: ii=48, r->ib=60[0m
+[0;32mI (4790) lwmb: r_proc: ii=60, r->ib=60[0m
+[0;31mE (4880) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (4980) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5080) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5180) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5280) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5380) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5480) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5580) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5680) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5780) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5880) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (5980) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6080) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (6100) lwmb: r_proc: ii=17, r->ib=136[0m
+[0;32mI (6100) lwmb: r_proc: ii=34, r->ib=136[0m
+[0;32mI (6100) lwmb: r_proc: ii=51, r->ib=136[0m
+[0;32mI (6100) lwmb: r_proc: ii=68, r->ib=136[0m
+[0;32mI (6110) lwmb: r_proc: ii=85, r->ib=136[0m
+[0;32mI (6110) lwmb: r_proc: ii=102, r->ib=136[0m
+[0;32mI (6120) lwmb: r_proc: ii=119, r->ib=136[0m
+[0;32mI (6120) lwmb: r_proc: ii=136, r->ib=136[0m
+[0;32mI (6130) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (6130) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (6130) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (6140) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (6140) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (6150) lwmb: r_proc: ii=72, r->ib=96[0m
+[0;32mI (6150) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (6160) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;32mI (6160) lwmb: r_proc: ii=17, r->ib=102[0m
+[0;32mI (6170) lwmb: r_proc: ii=34, r->ib=102[0m
+[0;32mI (6170) lwmb: r_proc: ii=51, r->ib=102[0m
+[0;32mI (6170) lwmb: r_proc: ii=68, r->ib=102[0m
+[0;32mI (6180) lwmb: r_proc: ii=85, r->ib=102[0m
+[0;32mI (6180) lwmb: r_proc: ii=102, r->ib=102[0m
+[0;31mE (6190) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (6190) lwmb: r_proc: ii=12, r->ib=72[0m
+[0;32mI (6200) lwmb: r_proc: ii=24, r->ib=72[0m
+[0;32mI (6200) lwmb: r_proc: ii=36, r->ib=72[0m
+[0;32mI (6210) lwmb: r_proc: ii=48, r->ib=72[0m
+[0;32mI (6210) lwmb: r_proc: ii=60, r->ib=72[0m
+[0;32mI (6220) lwmb: r_proc: ii=72, r->ib=72[0m
+[0;32mI (6220) lwmb: r_proc: ii=17, r->ib=153[0m
+[0;32mI (6220) lwmb: r_proc: ii=34, r->ib=153[0m
+[0;32mI (6230) lwmb: r_proc: ii=51, r->ib=153[0m
+[0;32mI (6230) lwmb: r_proc: ii=68, r->ib=153[0m
+[0;32mI (6240) lwmb: r_proc: ii=85, r->ib=153[0m
+[0;32mI (6240) lwmb: r_proc: ii=102, r->ib=153[0m
+[0;32mI (6250) lwmb: r_proc: ii=119, r->ib=153[0m
+[0;32mI (6250) lwmb: r_proc: ii=136, r->ib=153[0m
+[0;32mI (6260) lwmb: r_proc: ii=153, r->ib=153[0m
+[0;31mE (6290) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (6350) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;32mI (6350) lwmb: r_proc: ii=12, r->ib=108[0m
+[0;32mI (6350) lwmb: r_proc: ii=24, r->ib=108[0m
+[0;32mI (6350) lwmb: r_proc: ii=36, r->ib=108[0m
+[0;32mI (6350) lwmb: r_proc: ii=48, r->ib=108[0m
+[0;32mI (6360) lwmb: r_proc: ii=60, r->ib=108[0m
+[0;32mI (6360) lwmb: r_proc: ii=72, r->ib=108[0m
+[0;32mI (6370) lwmb: r_proc: ii=84, r->ib=108[0m
+[0;32mI (6370) lwmb: r_proc: ii=96, r->ib=108[0m
+[0;32mI (6380) lwmb: r_proc: ii=108, r->ib=108[0m
+[0;31mE (6390) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6490) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6590) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (6600) lwmb: r_proc: ii=12, r->ib=12[0m
+[0;31mE (6690) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6790) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6890) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (6990) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7090) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7190) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7290) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7390) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7490) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (7590) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (7600) lwmb: r_proc: ii=17, r->ib=119[0m
+[0;32mI (7600) lwmb: r_proc: ii=34, r->ib=119[0m
+[0;32mI (7600) lwmb: r_proc: ii=51, r->ib=119[0m
+[0;32mI (7600) lwmb: r_proc: ii=68, r->ib=119[0m
+[0;32mI (7610) lwmb: r_proc: ii=85, r->ib=119[0m
+[0;32mI (7610) lwmb: r_proc: ii=102, r->ib=119[0m
+[0;32mI (7620) lwmb: r_proc: ii=119, r->ib=119[0m
+[0;32mI (7620) lwmb: r_proc: ii=12, r->ib=84[0m
+[0;32mI (7630) lwmb: r_proc: ii=24, r->ib=84[0m
+[0;32mI (7630) lwmb: r_proc: ii=36, r->ib=84[0m
+[0;32mI (7630) lwmb: r_proc: ii=48, r->ib=84[0m
+[0;32mI (7640) lwmb: r_proc: ii=60, r->ib=84[0m
+[0;32mI (7640) lwmb: r_proc: ii=72, r->ib=84[0m
+[0;32mI (7650) lwmb: r_proc: ii=84, r->ib=84[0m
+[0;32mI (7650) lwmb: r_proc: ii=17, r->ib=85[0m
+[0;32mI (7660) lwmb: r_proc: ii=34, r->ib=85[0m
+[0;32mI (7660) lwmb: r_proc: ii=51, r->ib=85[0m
+[0;32mI (7670) lwmb: r_proc: ii=68, r->ib=85[0m
+[0;32mI (7670) lwmb: r_proc: ii=85, r->ib=85[0m
+[0;32mI (7690) lwmb: r_proc: ii=12, r->ib=60[0m
+[0;32mI (7690) lwmb: r_proc: ii=24, r->ib=60[0m
+[0;32mI (7690) lwmb: r_proc: ii=36, r->ib=60[0m
+[0;32mI (7690) lwmb: r_proc: ii=48, r->ib=60[0m
+[0;32mI (7690) lwmb: r_proc: ii=60, r->ib=60[0m
+[0;31mE (7700) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (7700) lwmb: r_proc: ii=17, r->ib=136[0m
+[0;32mI (7710) lwmb: r_proc: ii=34, r->ib=136[0m
+[0;32mI (7710) lwmb: r_proc: ii=51, r->ib=136[0m
+[0;32mI (7720) lwmb: r_proc: ii=68, r->ib=136[0m
+[0;32mI (7720) lwmb: r_proc: ii=85, r->ib=136[0m
+[0;32mI (7730) lwmb: r_proc: ii=102, r->ib=136[0m
+[0;32mI (7730) lwmb: r_proc: ii=119, r->ib=136[0m
+[0;32mI (7740) lwmb: r_proc: ii=136, r->ib=136[0m
+[0;32mI (7740) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (7750) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (7750) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (7750) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (7760) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (7760) lwmb: r_proc: imI (7770) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (7770) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;32mI (7800) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;31mE (7800) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (7800) lwmb: r_proc: ii=12, r->ib=12[0m
+[0;31mE (7900) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8000) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8100) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8200) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8300) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8400) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8500) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8600) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8700) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8800) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (8900) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9000) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (9100) lwmb: r_proc: ii=17, r->ib=119[0m
+[0;32mI (9100) lwmb: r_proc: ii=34, r->ib=119[0m
+[0;32mI (9100) lwmb: r_proc: ii=51, r->ib=119[0m
+[0;32mI (9100) lwmb: r_proc: ii=68, r->ib=119[0m
+[0;32mI (9110) lwmb: r_proc: ii=85, r->ib=119[0m
+[0;32mI (9110) lwmb: r_proc: ii=102, r->ib=119[0m
+[0;31mE (9110) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (9120) lwmb: r_proc: ii=119, r->ib=119[0m
+[0;32mI (9130) lwmb: r_proc: ii=12, r->ib=84[0m
+[0;32mI (9130) lwmb: r_proc: ii=24, r->ib=84[0m
+[0;32mI (9140) lwmb: r_proc: ii=36, r->ib=84[0m
+[0;32mI (9140) lwmb: r_proc: ii=48, r->ib=84[0m
+[0;32mI (9140) lwmb: r_proc: ii=60, r->ib=84[0m
+[0;32mI (9150) lwmb: r_proc: ii=72, r->ib=84[0m
+[0;32mI (9150) lwmb: r_proc: ii=84, r->ib=84[0m
+[0;32mI (9160) lwmb: r_proc: ii=17, r->ib=136[0m
+[0;32mI (9160) lwmb: r_proc: ii=34, r->ib=136[0m
+[0;32mI (9170) lwmb: r_proc: ii=51, r->ib=136[0m
+[0;32mI (9170) lwmb: r_proc: ii=68, r->ib=136[0m
+[0;32mI (9180) lwmb: r_proc: ii=85, r->ib=136[0m
+[0;32mI (9180) lwmb: r_proc: ii=102, r->ib=136[0m
+[0;32mI (9190) lwmb: r_proc: ii=119, r->ib=136[0m
+[0;32mI (9190) lwmb: r_proc: ii=136, r->ib=136[0m
+[0;31mE (9220) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9320) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (9350) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (9350) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (9350) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (9350) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (9360) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (9360) lwmb: r_proc: ii=72, r->ib=96[0m
+[0;32mI (9360) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (9370) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;31mE (9420) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9520) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9620) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9720) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9820) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (9920) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10020) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10120) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10220) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10320) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10420) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (10520) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (10600) lwmb: r_proc: ii=17, r->ib=136[0m
+[0;32mI (10600) lwmb: r_proc: ii=34, r->ib=136[0m
+[0;32mI (10600) lwmb: r_proc: ii=51, r->ib=136[0m
+[0;32mI (10600) lwmb: r_proc: ii=68, r->ib=136[0m
+[0;32mI (10610) lwmb: r_proc: ii=85, r->ib=136[0m
+[0;32mI (10610) lwmb: r_proc: ii=102, r->ib=136[0m
+[0;32mI (10620) lwmb: r_proc: ii=119, r->ib=136[0m
+[0;31mE (10620) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (10620) lwmb: r_proc: ii=136, r->ib=136[0m
+[0;32mI (10630) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (10640) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (10640) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (10650) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (10650) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (10650) lwmb: r_proc: ii=72, r->ib=96[0m
+[0;32mI (10660) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (10660) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;32mI (10670) lwmb: r_proc: ii=17, r->ib=102[0m
+[0;32mI (10670) lwmb: r_proc: ii=34, r->ib=102[0m
+[0;32mI (10680) lwmb: r_proc: ii=51, r->ib=102[0m
+[0;32mI (10680) lwmb: r_proc: ii=68, r->ib=102[0m
+[0;32mI (10690) lwmb: r_proc: ii=85, r->ib=102[0m
+[0;32mI (10690) lwmb: r_proc: ii=102, r->ib=102[0m
+[0;32mI (10730) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;31mE (10730) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (10730) lwmb: r_proc: ii=12, r->ib=72[0m
+[0;32mI (10730) lwmb: r_proc: ii=24, r->ib=72[0m
+[0;32mI (10740) lwmb: r_proc: ii=36, r->ib=72[0m
+[0;32mI (10740) lwmb: r_proc: ii=48, r->ib=72[0m
+[0;32mI (10740) lwmb: r_proc: ii=60, r->ib=72[0m
+[0;32mI (10750) lwmb: r_proc: ii=72, r->ib=72[0m
+[0;31mE (10830) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (10850) lwmb: r_proc: ii=12, r->ib=12[0m
+[0;31mE (10930) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11030) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11130) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11230) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11330) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11430) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11530) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11630) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11730) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11830) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (11930) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12030) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (12100) lwmb: r_proc: ii=17, r->ib=136[0m
+[0;32mI (12100) lwmb: r_proc: ii=34, r->ib=136[0m
+[0;32mI (12100) lwmb: r_proc: ii=51, r->ib=136[0m
+[0;32mI (12100) lwmb: r_proc: ii=68, r->ib=136[0m
+[0;32mI (12110) lwmb: r_proc: ii=85, r->ib=136[0m
+[0;32mI (12110) lwmb: r_proc: ii=102, r->ib=136[0m
+[0;32mI (12120) lwmb: r_proc: ii=119, r->ib=136[0m
+[0;32mI (12120) lwmb: r_proc: ii=136, r->ib=136[0m
+[0;32mI (12130) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (12130) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (12140) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (12140) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (12140) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (12150) lwmb: r_proc: ii=72, r->ib=96[0m
+[0;32mI (12150) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (12160) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;32mI (12170) lwmb: r_proc: ii=17, r->ib=102[0m
+[0;32mI (12170) lwmb: r_proc: ii=34, r->ib=102[0m
+[0;32mI (12170) lwmb: r_proc: ii=51, r->ib=102[0m
+[0;32mI (12180) lwmb: r_proc: ii=68, r->ib=102[0m
+[0;31mE (12180) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (12180) lwmb: r_proc: ii=85, r->ib=102[0m
+[0;32mI (12190) lwmb: r_proc: ii=102, r->ib=102[0m
+[0;32mI (12200) lwmb: r_proc: ii=12, r->ib=72[0m
+[0;32mI (12200) lwmb: r_proc: ii=24, r->ib=72[0m
+[0;32mI (12200) lwmb: r_proc: ii=36, r->ib=72[0m
+[0;32mI (12210) lwmb: r_proc: ii=48, r->ib=72[0m
+[0;32mI (12210) lwmb: r_proc: ii=60, r->ib=72[0m
+[0;32mI (12220) lwmb: r_proc: ii=72, r->ib=72[0m
+[0;32mI (12220) lwmb: r_proc: ii=17, r->ib=68[0m
+[0;32mI (12230) lwmb: r_proc: ii=34, r->ib=68[0m
+[0;32mI (12230) lwmb: r_proc: ii=51, r->ib=68[0m
+[0;32mI (12240) lwmb: r_proc: ii=68, r->ib=68[0m
+[0;31mE (12290) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (12290) lwmb: r_proc: ii=12, r->ib=48[0m
+[0;32mI (12290) lwmb: r_proc: ii=24, r->ib=48[0m
+[0;32mI (12290) lwmb: r_proc: ii=36, r->ib=48[0m
+[0;32mI (12300) lwmb: r_proc: ii=48, r->ib=48[0m
+[0;31mE (12390) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12490) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12590) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12690) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12790) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12890) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (12990) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13090) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13190) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13290) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13390) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13490) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (13590) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (13600) lwmb: r_proc: ii=17, r->ib=119[0m
+[0;32mI (13600) lwmb: r_proc: ii=34, r->ib=119[0m
+[0;32mI (13600) lwmb: r_proc: ii=51, r->ib=119[0m
+[0;32mI (13600) lwmb: r_proc: ii=68, r->ib=119[0m
+[0;32mI (13610) lwmb: r_proc: ii=85, r->ib=119[0m
+[0;32mI (13610) lwmb: r_proc: ii=102, r->ib=119[0m
+[0;32mI (13620) lwmb: r_proc: ii=119, r->ib=119[0m
+[0;32mI (13620) lwmb: r_proc: ii=12, r->ib=84[0m
+[0;32mI (13630) lwmb: r_proc: ii=24, r->ib=84[0m
+[0;32mI (13630) lwmb: r_proc: ii=36, r->ib=84[0m
+[0;32mI (13640) lwmb: r_proc: ii=48, r->ib=84[0m
+[0;32mI (13640) lwmb: r_proc: ii=60, r->ib=84[0m
+[0;32mI (13640) lwmb: r_proc: ii=72, r->ib=84[0m
+[0;32mI (13650) lwmb: r_proc: ii=84, r->ib=84[0m
+[0;32mI (13650) lwmb: r_proc: ii=17, r->ib=85[0m
+[0;32mI (13660) lwmb: r_proc: ii=34, r->ib=85[0m
+[0;32mI (13660) lwmb: r_proc: ii=51, r->ib=85[0m
+[0;32mI (13670) lwmb: r_proc: ii=68, r->ib=85[0m
+[0;32mI (13670) lwmb: r_proc: ii=85, r->ib=85[0m
+[0;32mI (13690) lwmb: r_proc: ii=12, r->ib=60[0m
+[0;32mI (13690) lwmb: r_proc: ii=24, r->ib=60[0m
+[0;32mI (13690) lwmb: r_proc: ii=36, r->ib=60[0m
+[0;32mI (13690) lwmb: r_proc: ii=48, r->ib=60[0m
+[0;32mI (13700) lwmb: r_proc: ii=60, r->ib=60[0m
+[0;31mE (13700) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (13700) lwmb: r_proc: ii=17, r->ib=136[0m
+[0;32mI (13710) lwmb: r_proc: ii=34, r->ib=136[0m
+[0;32mI (13720) lwmb: r_proc: ii=51, r->ib=136[0m
+[0;32mI (13720) lwmb: r_proc: ii=68, r->ib=136[0m
+[0;32mI (13720) lwmb: r_proc: ii=85, r->ib=136[0m
+[0;32mI (13730) lwmb: r_proc: ii=102, r->ib=136[0m
+[0;32mI (13730) lwmb: r_proc: ii=119, r->ib=136[0m
+[0;32mI (13740) lwmb: r_proc: ii=136, r->ib=136[0m
+[0;32mI (13750) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (13750) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (13750) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (13760) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (13760) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (13770) lwmb: r_proc: ii=72, r->ib=96[0m
+[0;32mI (13770) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (13770) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;32mI (13810) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;31mE (13810) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (13810) lwmb: r_proc: ii=12, r->ib=12[0m
+[0;31mE (13910) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14010) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14110) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14210) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14310) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14410) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14510) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14610) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14710) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14810) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (14910) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (15010) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (15100) lwmb: r_proc: ii=17, r->ib=136[0m
+[0;32mI (15100) lwmb: r_proc: ii=34, r->ib=136[0m
+[0;32mI (15100) lwmb: r_proc: ii=51, r->ib=136[0m
+[0;32mI (15100) lwmb: r_proc: ii=68, r->ib=136[0m
+[0;32mI (15110) lwmb: r_proc: ii=85, r->ib=136[0m
+[0;32mI (15110) lwmb: r_proc: ii=102, r->ib=136[0m
+[0;31mE (15110) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (15120) lwmb: r_proc: ii=119, r->ib=136[0m
+[0;32mI (15130) lwmb: r_proc: ii=136, r->ib=136[0m
+[0;32mI (15140) lwmb: r_proc: ii=12, r->ib=96[0m
+[0;32mI (15140) lwmb: r_proc: ii=24, r->ib=96[0m
+[0;32mI (15140) lwmb: r_proc: ii=36, r->ib=96[0m
+[0;32mI (15150) lwmb: r_proc: ii=48, r->ib=96[0m
+[0;32mI (15150) lwmb: r_proc: ii=60, r->ib=96[0m
+[0;32mI (15150) lwmb: r_proc: ii=72, r->ib=96[0m
+[0;32mI (15160) lwmb: r_proc: ii=84, r->ib=96[0m
+[0;32mI (15160) lwmb: r_proc: ii=96, r->ib=96[0m
+[0;32mI (15170) lwmb: r_proc: ii=17, r->ib=170[0m
+[0;32mI (15170) lwmb: r_proc: ii=34, r->ib=170[0m
+[0;32mI (15180) lwmb: r_proc: ii=51, r->ib=170[0m
+[0;32mI (15180) lwmb: r_proc: ii=68, r->ib=170[0m
+[0;32mI (15190) lwmb: r_proc: ii=85, r->ib=170[0m
+[0;32mI (15190) lwmb: r_proc: ii=102, r->ib=170[0m
+[0;32mI (15200) lwmb: r_proc: ii=119, r->ib=170[0m
+[0;32mI (15200) lwmb: r_proc: ii=136, r->ib=170[0m
+[0;32mI (15210) lwmb: r_proc: ii=153, r->ib=170[0m
+[0;32mI (15210) lwmb: r_proc: ii=170, r->ib=170[0m
+[0;31mE (15220) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (15220) lwmb: r_proc: ii=17, r->ib=17[0m
+[0;32mI (15230) lwmb: r_proc: ii=12, r->ib=120[0m
+[0;32mI (15230) lwmb: r_proc: ii=24, r->ib=120[0m
+[0;32mI (15230) lwmb: r_proc: ii=36, r->ib=120[0m
+[0;32mI (15240) lwmb: r_proc: ii=48, r->ib=120[0m
+[0;32mI (15240) lwmb: r_proc: ii=60, r->ib=120[0m
+[0;32mI (15250) lwmb: r_proc: ii=72, r->ib=120[0m
+[0;32mI (15250) lwmb: r_proc: ii=84, r->ib=120[0m
+[0;32mI (15260) lwmb: r_proc: ii=96, r->ib=120[0m
+[0;32mI (15260) lwmb: r_proc: ii=108, r->ib=120[0m
+[0;32mI (15270) lwmb: r_proc: ii=120, r->ib=120[0m
+[0;31mE (15320) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;32mI (15350) lwmb: r_proc: ii=12, r->ib=12[0m
+[0;31mE (15420) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (15520) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (15620) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (15720) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (15820) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (15920) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m
+[0;31mE (16020) lwmb: r_send(55), r->ob=17, b=-1, errno=11[0m

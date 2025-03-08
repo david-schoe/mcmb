@@ -1,0 +1,9 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/davey_schoe/esp/mcmb_tx_dv3/build/bootloader/esp-idf/esptool_py && /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/davey_schoe/esp/mcmb_tx_dv3/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/src/CMakeFiles/__idf_src.dir/r.c.obj
+[5/10] Linking C static library esp-idf/src/libsrc.a
+[6/10] Generating ld/sections.ld

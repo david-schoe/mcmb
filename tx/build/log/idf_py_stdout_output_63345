@@ -1,0 +1,3241 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb_tx_dv3/build/mcmb_tx_dv3.elf /home/davey_schoe/esp/mcmb_tx_dv3/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1428-g0f0068fff3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  4 2025 13:42:42[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=102d8h ( 66264) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00020300 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=00020324 vaddr=3ffb0000 size=023f0h (  9200) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=0002271c vaddr=40080000 size=0d330h ( 54064) load[0m
+[0;32mI (144) esp_image: segment 4: paddr=0002fa54 vaddr=00000000 size=005c4h (  1476) [0m
+[0;32mI (144) esp_image: segment 5: paddr=00030020 vaddr=400d0020 size=2ab5ch (174940) map[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Multicore app[0m
+D (224) cpu_start: Pro cpu up[0m
+D (224) cpu_start: Starting app cpu, entry point is 0x400810dc[0m
+D (0) cpu_start: App cpu up[0m
+D (234) clk: RTC_SLOW_CLK calibration value: 3303629[0m
+D (246) cpu_start: calling init function: 0x400d1ed0 on core: 0[0m
+D (247) cpu_start: calling init function: 0x400d1ff8 on core: 0[0m
+[0;32mI (249) cpu_start: Pro cpu start user code[0m
+[0;32mI (254) cpu_start: cpu freq: 160000000 Hz[0m
+D (258) cpu_start: calling init function: 0x400d1e10 on core: 0[0m
+[0;32mI (264) app_init: Application information:[0m
+[0;32mI (269) app_init: Project name:     mcmb_tx_dv3[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (279) app_init: Compile time:     Mar  4 2025 13:42:38[0m
+[0;32mI (285) app_init: ELF file SHA256:  f77fcb5a7...[0m
+[0;32mI (290) app_init: ESP-IDF:          v5.5-dev-1428-g0f0068fff3-dirty[0m
+D (297) cpu_start: calling init function: 0x400d1ee4 on core: 0[0m
+[0;32mI (303) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (308) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (313) efuse_init: Chip rev:         v3.1[0m
+D (317) cpu_start: calling init function: 0x400d3860 on core: 0[0m
+D (324) memory_layout: Checking 9 reserved memory ranges:[0m
+D (329) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000[0m
+D (335) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0[0m
+D (342) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb37d8[0m
+D (348) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440[0m
+D (355) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350[0m
+D (361) memory_layout: Reserved memory range 0x40070000 - 0x40078000[0m
+D (367) memory_layout: Reserved memory range 0x40078000 - 0x40080000[0m
+D (374) memory_layout: Reserved memory range 0x40080000 - 0x4008d330[0m
+D (380) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000[0m
+D (387) memory_layout: Building list of available memory regions:[0m
+D (393) memory_layout: Available memory region 0x3ffae6e0 - 0x3ffb0000[0m
+D (399) memory_layout: Available memory region 0x3ffb37d8 - 0x3ffb8000[0m
+D (406) memory_layout: Available memory region 0x3ffb8000 - 0x3ffc0000[0m
+D (413) memory_layout: Available memory region 0x3ffc0000 - 0x3ffc2000[0m
+D (419) memory_layout: Available memory region 0x3ffc2000 - 0x3ffc4000[0m
+D (426) memory_layout: Available memory region 0x3ffc4000 - 0x3ffc6000[0m
+D (432) memory_layout: Available memory region 0x3ffc6000 - 0x3ffc8000[0m
+D (439) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000[0m
+D (446) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000[0m
+D (452) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000[0m
+D (459) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000[0m
+D (465) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000[0m
+D (472) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000[0m
+D (479) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000[0m
+D (485) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000[0m
+D (492) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000[0m
+D (498) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000[0m
+D (505) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000[0m
+D (512) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000[0m
+D (518) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20[0m
+D (525) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000[0m
+D (531) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000[0m
+D (538) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000[0m
+D (545) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000[0m
+D (551) memory_layout: Available memory region 0x3fffc000 - 0x40000000[0m
+D (558) memory_layout: Available memory region 0x4008d330 - 0x4008e000[0m
+D (564) memory_layout: Available memory region 0x4008e000 - 0x40090000[0m
+D (571) memory_layout: Available memory region 0x40090000 - 0x40092000[0m
+D (578) memory_layout: Available memory region 0x40092000 - 0x40094000[0m
+D (584) memory_layout: Available memory region 0x40094000 - 0x40096000[0m
+D (591) memory_layout: Available memory region 0x40096000 - 0x40098000[0m
+D (597) memory_layout: Available memory region 0x40098000 - 0x4009a000[0m
+D (604) memory_layout: Available memory region 0x4009a000 - 0x4009c000[0m
+D (611) memory_layout: Available memory region 0x4009c000 - 0x4009e000[0m
+D (617) memory_layout: Available memory region 0x4009e000 - 0x400a0000[0m
+[0;32mI (624) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (631) heap_init: New heap initialised at 0x3ffae6e0[0m
+[0;32mI (636) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+D (642) heap_init: New heap initialised at 0x3ffb37d8[0m
+[0;32mI (647) heap_init: At 3FFB37D8 len 0002C828 (178 KiB): DRAM[0m
+[0;32mI (654) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (660) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (666) heap_init: New heap initialised at 0x4008d330[0m
+[0;32mI (671) heap_init: At 4008D330 len 00012CD0 (75 KiB): IRAM[0m
+D (678) cpu_start: calling init function: 0x400d4b60 on core: 0[0m
+D (684) cpu_start: calling init function: 0x400d45c8 on core: 0[0m
+D (690) cpu_start: calling init function: 0x400d203c on core: 0[0m
+D (696) intr_alloc: Connected src 46 to int 1 (cpu 0)[0m
+D (701) cpu_start: calling init function: 0x400d2048 on core: 0[0m
+D (707) cpu_start: calling init function: 0x400d5d4c on core: 0[0m
+D (713) cpu_start: calling init function: 0x400d7ef8 on core: 0[0m
+D (719) cpu_start: calling init function: 0x400d6730 on core: 0[0m
+D (725) cpu_start: calling init function: 0x400d45d4 on core: 0[0m
+D (731) cpu_start: calling init function: 0x400d2054 on core: 0[0m
+D (737) spi_flash: trying chip: issi[0m
+D (740) spi_flash: trying chip: gd[0m
+D (744) spi_flash: trying chip: mxic[0m
+D (747) spi_flash: trying chip: winbond[0m
+D (751) spi_flash: trying chip: generic[0m
+[0;32mI (755) spi_flash: detected chip: generic[0m
+[0;32mI (760) spi_flash: flash io: dio[0m
+[0;33mW (764) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (777) cpu_start: calling init function: 0x400d1f70 on core: 0[0m
+D (783) cpu_start: calling init function: 0x40085538[0m
+D (788) cpu_start: calling init function: 0x400d2f18[0m
+D (793) cpu_start: calling init function: 0x400f8f38 on core: 0[0m
+D (799) cpu_start: calling init function: 0x400d2084 on core: 0[0m
+D (805) intr_alloc: Connected src 24 to int 2 (cpu 0)[0m
+D (810) app_start: Starting scheduler on CPU0[0m
+[0;32D (815) intr_alloc: Connected src 25 to int 1 (cpu 1)[0m
+D (815) app_start: Starting scheduler on CPU1[0m
+mI (815) main_task: Started on CPU0[0m
+D (835) heap_init: New heap initialised at 0x3ffe0440[0m
+D (835) heap_init: New heap initialised at 0x3ffe4350[0m
+D (835) intr_alloc: Connected src 16 to int 3 (cpu 0)[0m
+[0;32mI (835) main_task: Calling app_main()[0m
+D (845) esp_netif_lwip: LwIP stack has been initialized[0m
+D (845) esp_netif_lwip: esp-netif has been successfully initialized[0m
+D (855) event: running task for loop 0x3ffb6858[0m
+D (855) event: created task for loop 0x3ffb6858[0m
+D (865) event: created event loop 0x3ffb6858[0m
+D (865) lwmb: h_create: calloc(0x3ffb78a4)[0m
+D (875) lwmb: rt_push: calloc(0x3ffb79c8)[0m
+D (875) lwmb: rt_push: calloc(0x3ffb7a04)[0m
+D (885) lwip: lwip_socket(PF_INET, SOCK_STREAM, 6) = [0m
+D (885) lwip: 54
+[0m
+D (885) lwip: lwip_bind(54, addr=[0m
+D (895) lwip: 127.0.0.1[0m
+D (895) lwip:  port=502)
+[0m
+D (895) lwip: lwip_bind(54) succeeded
+[0m
+D (905) lwip: lwip_listen(54, backlog=2)
+[0m
+D (905) lwip: lwip_socket(PF_INET, SOCK_STREAM, 6) = [0m
+D (905) lwip: 55
+[0m
+D (915) lwip: lwip_bind(55, addr=[0m
+D (915) lwip: 127.0.0.1[0m
+D (915) lwip:  port=1024)
+[0m
+D (925) lwip: lwip_bind(55) succeeded
+[0m
+D (925) lwip: lwip_connect(55, addr=[0m
+D (925) lwip: 127.0.0.1[0m
+D (935) lwip:  port=502)
+[0m
+D (935) lwip: lwip_connect(55) failed, err=-5
+[0m
+[0;32mI (935) lwmb: s_conn: connect(55) success[0m
+D (945) lwip: lwip_select(56, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (955) lwip: lwip_selscan: fd=54 ready for reading
+[0m
+D (955) lwip: lwip_select: nready=1
+[0m
+D (955) lwip: lwip_accept(54)...
+[0m
+[0;32mI (965) lwmb: hw: 2008
+[0m
+D (965) lwip: lwip_accept(54) returning new sock=56
+[0m
+[0;32mI (965) lwmb: Largest free block: 147456
+[0m
+[0;32mI (975) lwmb: r_select_task: opened socket: 56[0m
+[0;32mI (975) lwmb: Free heap: 278236
+[0m
+D (985) lwmb: r_select_task: calloc(0x3ffb7d5c)[0m
+[0;33mW (985) lwmb: hw: 2008
+[0m
+D (985) lwmb: rt_push: calloc(0x3ffb7d88)[0m
+[0;33mW (995) lwmb: Largest free block: 147456
+[0m
+D (995) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+[0;33mW (1005) lwmb: Free heap: 278028
+[0m
+D (1015) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1015) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+[0;33mW (1015) lwmb: hw: 2008
+[0m
+D (1025) lwip: lwip_select: timeout expired
+[0m
+D (1025) lwip: lwip_send(55) err=0 written=12
+[0m
+D (1035) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (1035) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+[0;33mW (1025) lwmb: Largest free block: 147456
+[0m
+D (1045) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+[0;33mW (1055) lwmb: Free heap: 276240ip_select: nready=1
+[0m
+D (1065) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1065) lwmb: r_select_task: calloc(0x3ffbbb98)[0m
+[0;33mW (1065) lwmb: hw: 2008
+[0m
+D (1065) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1075) lwip: lwip_recvfrom(56, 0x3ffbbba0, 256, 0x0, ..)
+[0m
+D (1085) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1085) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (1075) lwmb: Largest free block: 147456
+[0m
+D (1095) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbb40
+[0m
+D (1095) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (1105) lwmb: Free heap: 274524
+[0m
+D (1115) lwip: lwip_recv_tcp: buflen=12 recv_left=256 off=0
+[0m
+D (1115) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1125) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbb40
+[0m
+[0;33mW (1125) lwmb: hw: 2008
+[0m
+D (1125) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1135) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1155) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (1145) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (1135) lwmb: Largest free block: 139264
+[0m
+D (1155) lwip: lwip_recvfrom(56):  addr=[0m
+D (1165) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (1165) lwmb: Free heap: 274612
+[0m
+D (1165) lwip: 127.0.0.1[0m
+D (1185) lwip:  port=1024 len=12
+[0m
+D (1175) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1185) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (1185) lwip: lwip_send(56, data=0x3ffbbba0, size=12, flags=0x0)
+[0m
+[0;33mW (1185) lwmb: hw: 2008
+[0m
+D (1205) lwip: lwip_send(56) err=0 written=12
+[0m
+[0;33mW (1205) lwmb: Largest free block: 139264
+[0m
+D (1195) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (1205) lwmb: m_send_task: free(0x3ffbbb98)[0m
+D (1225) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1215) lwip: lwip_select: nready=1
+[0m
+[0;33mW (1215) lwmb: Free heap: 275848
+[0m
+D (1235) lwip: lwip_send(55) err=0 written=12
+[0m
+D (1235) lwmb: r_select_task: calloc(0x3ffbbc64)[0m
+D (1245) lwip: lwip_recvfrom(56, 0x3ffbbc6c, 256, 0x0, ..)
+[0m
+D (1245) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (1235) lwmb: r_send_req: malloc(0x3ffbb524)[0m
+D (1255) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (1265) lwmb: hw: 2008
+[0m
+D (1265) lwip: lwip_send(55, data=0x3ffbb52c, size=12, flags=0x0)
+[0m
+D (1265) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7f10
+[0m
+D (1285) lwip: lwip_recv_tcp: buflen=24 recv_left=256 off=0
+[0m
+D (1275) lwip: lwip_send(55) err=0 written=12
+[0m
+D (1285) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7f10
+[0m
+D (1295) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1295) lwmb: m_send_task: free(0x3ffbb524)[0m
+[0;33mW (1275) lwmb: Largest free block: 147456
+[0m
+D (1305) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc0c
+[0m
+[0;33mW (1315) lwmb: Free heap: 274460
+[0m
+D (1325) lwip: lwip_recv_tcp: buflen=12 recv_left=232 off=24
+[0m
+D (1325) lwmb: r_send_req: malloc(0x3ffb7f10)[0m
+D (1335) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc0c
+[0m
+[0;33mW (1335) lwmb: hw: 2008
+[0m
+D (1335) lwip: lwip_send(55, data=0x3ffb7f18, size=12, flags=0x0)
+[0m
+D (1345) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1355) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (1355) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (1345) lwmb: Largest free block: 139264
+[0m
+D (1365) lwip: lwip_recvfrom(56):  addr=[0m
+D (1365) lwmb: m_send_task: free(0x3ffb7f10)[0m
+[0;33mW (1375) lwmb: Free heap: 274524
+[0m
+D (1375) lwip: 127.0.0.1[0m
+D (1385) lwmb: r_send_req: malloc(0x3ffbbc0c)[0m
+D (1385) lwip:  port=1024 len=36
+[0m
+[0;33mW (1395) lwmb: hw: 2008
+[0m
+D (1395) lwip: lwip_send(55, data=0x3ffbbc14, size=12, flags=0x0)
+[0m
+D (1395) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (1415) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (1405) lwip: lwip_send(55) err=0 written=12
+[0m
+D (1415) lwip: lwip_select: nready=1
+[0m
+D (1425) lwmb: r_select_task: calloc(0x3ffbc37c)[0m
+D (1425) lwmb: m_send_task: free(0x3ffbbc0c)[0m
+D (1425) lwip: lwip_recvfrom(55, 0x3ffbc384, 256, 0x0, ..)
+[0m
+D (1435) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1435) lwip: lwip_send(56, data=0x3ffbbc6c, size=36, flags=0x0)
+[0m
+[0;33mW (1395) lwmb: Largest free block: 139264
+[0m
+D (1445) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb5b0
+[0m
+D (1455) lwip: lwip_send(56) err=0 written=36
+[0m
+D (1465) lwmb: m_send_task: free(0x3ffbbc64)[0m
+D (1465) lwip: lwip_recv_tcp: buflen=12 recv_left=256 off=0
+[0m
+[0;33mW (1455) lwmb: Free heap: 275600
+[0m
+D (1475) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb5b0
+[0m
+D (1485) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1485) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (1495) lwmb: hw: 2008
+[0m
+D (1495) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1495) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc490
+[0m
+D (1515) lwip: lwip_recv_tcp: buflen=36 recv_left=244 off=12
+[0m
+D (1505) lwip: lwip_send(55) err=0 written=12
+[0m
+D (1515) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc490
+[0m
+D (1525) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1525) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (1505) lwmb: Largest free block: 139264
+[0m
+D (1535) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+[0;33mW (1545) lwmb: Free heap: 275988
+[0m
+D (1545) lwip: lwip_recvfrom(55):  addr=[0m
+D (1555) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1555) lwip: 127.0.0.1[0m
+[0;33mW (1565) lwmb: hw: 2008
+[0m
+D (1565) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1565) lwip:  port=502 len=48
+[0m
+D (1575) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (1575) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (1565) lwmb: Largest free block: 139264
+[0m
+D (1585) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (1585) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (1605) lwip: lwip_send(55, data=0x3ffbc384, size=48, flags=0x0)
+[0m
+D (1595) lwip: lwip_select: nready=1
+[0m
+[0;33mW (1595) lwmb: Free heap: 274264
+[0m
+D (1615) lwip: lwip_send(55) err=0 written=48
+[0m
+D (1615) lwmb: r_select_task: calloc(0x3ffbc210)[0m
+D (1625) lwip: lwip_recvfrom(56, 0x3ffbc218, 256, 0x0, ..)
+[0m
+D (1625) lwmb: m_send_task: free(0x3ffbc37c)[0m
+D (1615) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1635) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (1645) lwmb: hw: 2008
+[0m
+D (1645) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1645) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7efc
+[0m
+D (1665) lwip: lwip_recv_tcp: buflen=36 recv_left=256 off=0
+[0m
+D (1655) lwip: lwip_send(55) err=0 written=12
+[0m
+D (1665) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7efc
+[0m
+D (1675) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1675) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (1655) lwmb: Largest free block: 139264
+[0m
+D (1685) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb584
+[0m
+[0;33mW (1695) lwmb: Free heap: 275964
+[0m
+D (1705) lwip: lwip_recv_tcp: buflen=12 recv_left=220 off=36
+[0m
+D (1705) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1715) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb584
+[0m
+[0;33mW (1715) lwmb: hw: 2008
+[0m
+D (1715) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1725) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1735) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc0c
+[0m
+D (1735) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (1725) lwmb: Largest free block: 139264
+[0m
+D (1745) lwip: lwip_recv_tcp: buflen=72 recv_left=208 off=48
+[0m
+D (1745) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (1755) lwmb: Free heap: 274464
+[0m
+D (1755) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc0c
+[0m
+D (1765) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1775) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (1775) lwmb: hw: 2008
+[0m
+D (1775) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1785) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+[0;33mW (1785) lwmb: Largest free block: 139264
+[0m
+D (1795) lwip: lwip_send(55) err=0 written=12
+[0m
+D (1805) lwip: lwip_recvfrom(56):  addr=[0m
+D (1815) lwip: 127.0.0.1[0m
+D (1805) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (1815) lwip:  port=1024 len=120
+[0m
+D (1825) lwip: lwip_send(56, data=0x3ffbc218, size=120, flags=0x0)
+[0m
+D (1825) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (1835) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (1825) lwip: lwip_send(56) err=0 written=120
+[0m
+D (1835) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (1845) lwip: lwip_select: nready=2
+[0m
+D (1845) lwmb: m_send_task: free(0x3ffbc210)[0m
+[0;33mW (1805) lwmb: Free heap: 274612
+[0m
+D (1855) lwmb: r_select_task: calloc(0x3ffbb5a0)[0m
+D (1865) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1865) lwip: lwip_recvfrom(55, 0x3ffbb5a8, 256, 0x0, ..)
+[0m
+[0;33mW (1875) lwmb: hw: 2008
+[0m
+D (1875) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1875) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (1895) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc928
+[0m
+D (1885) lwip: lwip_send(55) err=0 written=12
+[0m
+D (1895) lwip: lwip_recv_tcp: buflen=120 recv_left=256 off=0
+[0m
+D (1905) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc928
+[0m
+D (1905) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (1875) lwmb: Largest free block: 139264
+[0m
+D (1915) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (1925) lwmb: Free heap: 274532
+[0m
+D (1925) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (1935) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (1935) lwip: lwip_recvfrom(55):  addr=[0m
+[0;33mW (1945) lwmb: hw: 2008
+[0m
+D (1945) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (1945) lwip: 127.0.0.1[0m
+D (1955) lwip:  port=502 len=120
+[0m
+D (1955) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (1955) lwmb: Largest free block: 147456
+[0m
+D (1965) lwmb: r_select_task: calloc(0x3ffbc2bc)[0m
+D (1965) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (1985) lwip: lwip_send(55, data=0x3ffbb5a8, size=120, flags=0x0)
+[0m
+D (1975) lwip: lwip_recvfrom(56, 0x3ffbc2c4, 256, 0x0, ..)
+[0m
+[0;33mW (1975) lwmb: Free heap: 274132
+[0m
+D (1985) lwip: lwip_send(55) err=0 written=120
+[0m
+D (1995) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2005) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb53c
+[0m
+D (2005) lwmb: m_send_task: free(0x3ffbb5a0)[0m
+D (1995) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (2015) lwip: lwip_recv_tcp: buflen=24 recv_left=256 off=0
+[0m
+[0;33mW (2025) lwmb: hw: 2008
+[0m
+D (2025) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (2025) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb53c
+[0m
+D (2045) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2035) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (2035) lwmb: Largest free block: 139264
+[0m
+D (2055) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7f14
+[0m
+D (2055) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (2055) lwmb: Free heap: 274508
+[0m
+D (2065) lwip: lwip_recv_tcp: buflen=12 recv_left=232 off=24
+[0m
+D (2075) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (2085) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7f14
+[0m
+[0;33mW (2085) lwmb: hw: 2008
+[0m
+D (2085) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (2085) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2105) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (2095) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (2095) lwmb: Largest free block: 139264
+[0m
+D (2115) lwip: lwip_recvfrom(56):  addr=[0m
+D (2115) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (2125) lwmb: Free heap: 274608
+[0m
+D (2125) lwip: 127.0.0.1[0m
+D (2135) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (2135) lwip:  port=1024 len=36
+[0m
+[0;33mW (2145) lwmb: hw: 2008
+[0m
+D (2145) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (2145) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+[0;33mW (2145) lwmb: Largest free block: 139264
+[0m
+D (2155) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (2165) lwmb: Free heap: 274472
+[0m
+D (2165) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (2175) lwmb: r_send_req: malloc(0x3ffb7f14)[0m
+D (2175) lwip: lwip_send(56, data=0x3ffbc2c4, size=36, flags=0x0)
+[0m
+D (2185) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (2195) lwip: lwip_select: nready=1
+[0m
+D (2185) lwip: lwip_send(56) err=0 written=36
+[0m
+D (2195) lwmb: r_select_task: calloc(0x3ffbbca8)[0m
+D (2205) lwip: lwip_recvfrom(56, 0x3ffbbcb0, 256, 0x0, ..)
+[0m
+D (2205) lwmb: m_send_task: free(0x3ffbc2bc)[0m
+[0;33mW (2185) lwmb: hw: 2008
+[0m
+D (2215) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2215) lwip: lwip_send(55, data=0x3ffb7f1c, size=12, flags=0x0)
+[0m
+[0;33mW (2225) lwmb: Largest free block: 139264
+[0m
+D (2235) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (2235) lwmb: Free heap: 275724
+[0m
+D (2225) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb5b0
+[0m
+D (2245) lwmb: m_send_task: free(0x3ffb7f14)[0m
+D (2245) lwmb: r_send_req: malloc(0x3ffb7efc)[0m
+D (2255) lwip: lwip_recv_tcp: buflen=168 recv_left=256 off=0
+[0m
+[0;33mW (2265) lwmb: hw: 2008
+[0m
+D (2265) lwip: lwip_send(55, data=0x3ffb7f04, size=12, flags=0x0)
+[0m
+D (2265) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb5b0
+[0m
+D (2285) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2275) lwip: lwip_send(55) err=0 written=12
+[0m
+D (2285) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb53c
+[0m
+D (2295) lwip: lwip_recv_tcp: buflen=12 recv_left=88 off=168
+[0m
+D (2295) lwmb: m_send_task: free(0x3ffb7efc)[0m
+[0;33mW (2275) lwmb: Largest free block: 139264
+[0m
+D (2305) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb53c
+[0m
+[0;33mW (2315) lwmb: Free heap: 274424
+[0m
+D (2315) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2325) lwmb: r_send_req: malloc(0x3ffbb53c)[0m
+D (2325) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+[0;33mW (2335) lwmb: hw: 2008
+[0m
+D (2335) lwip: lwip_send(55, data=0x3ffbb544, size=12, flags=0x0)
+[0m
+D (2335) lwip: lwip_recvfrom(56):  addr=[0m
+D (2355) lwip: 127.0.0.1[0m
+D (2345) lwip: lwip_send(55) err=0 written=12
+[0m
+D (2355) lwip:  port=1024 len=180
+[0m
+D (2365) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (2365) lwmb: m_send_task: free(0x3ffbb53c)[0m
+[0;33mW (2345) lwmb: Largest free block: 139264
+[0m
+D (2375) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (2375) lwip: lwip_send(56, data=0x3ffbbcb0, size=180, flags=0x0)
+[0m
+[0;33mW (2385) lwmb: Free heap: 274368
+[0m
+D (2395) lwip: lwip_send(56) err=0 written=180
+[0m
+D (2395) lwmb: r_send_req: malloc(0x3ffb7d98)[0m
+D (2385) lwip: lwip_select: nready=1
+[0m
+D (2405) lwmb: m_send_task: free(0x3ffbbca8)[0m
+D (2415) lwip: lwip_send(55, data=0x3ffb7da0, size=12, flags=0x0)
+[0m
+D (2405) lwmb: r_select_task: calloc(0x3ffbc440)[0m
+[0;33mW (2405) lwmb: hw: 2008
+[0m
+D (2415) lwip: lwip_send(55) err=0 written=12
+[0m
+D (2425) lwip: lwip_recvfrom(55, 0x3ffbc448, 256, 0x0, ..)
+[0m
+D (2435) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2435) lwmb: m_send_task: free(0x3ffb7d98)[0m
+[0;33mW (2425) lwmb: Largest free block: 139264
+[0m
+D (2445) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc3d0
+[0m
+[0;33mW (2455) lwmb: Free heap: 275632
+[0m
+D (2455) lwip: lwip_recv_tcp: buflen=36 recv_left=256 off=0
+[0m
+D (2465) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (2465) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc3d0
+[0m
+[0;33mW (2475) lwmb: hw: 2008
+[0m
+D (2475) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (2475) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2495) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbca44
+[0m
+D (2485) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (2485) lwmb: Largest free block: 139264
+[0m
+D (2505) lwip: lwip_recv_tcp: buflen=180 recv_left=220 off=36
+[0m
+D (2505) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (2505) lwmb: Free heap: 274156
+[0m
+D (2515) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbca44
+[0m
+D (2525) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (2525) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (2535) lwmb: hw: 2008
+[0m
+D (2535) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (2535) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+[0;33mW (2545) lwmb: Largest free block: 139264
+[0m
+D (2545) lwip: lwip_send(55) err=0 written=12
+[0m
+D (2565) lwip: lwip_recvfrom(55):  addr=[0m
+D (2565) lwip: 127.0.0.1[0m
+D (2565) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (2565) lwmb: Free heap: 274416
+[0m
+D (2575) lwip:  port=502 len=216
+[0m
+D (2575) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (2585) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (2585) lwip: lwip_send(55, data=0x3ffbc448, size=216, flags=0x0)
+[0m
+[0;33mW (2585) lwmb: hw: 2008
+[0m
+D (2605) lwip: lwip_send(55) err=0 written=216
+[0m
+[0;33mW (2605) lwmb: Largest free block: 139264
+[0m
+D (2595) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (2605) lwmb: m_send_task: free(0x3ffbc440)[0m
+D (2625) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (2615) lwip: lwip_select: nready=1
+[0m
+[0;33mW (2615) lwmb: Free heap: 274272
+[0m
+D (2635) lwip: lwip_send(55) err=0 written=12
+[0m
+D (2635) lwmb: r_select_task: calloc(0x3ffbc2ac)[0m
+D (2645) lwip: lwip_recvfrom(56, 0x3ffbc2b4, 256, 0x0, ..)
+[0m
+D (2645) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (2635) lwmb: r_send_req: malloc(0x3ffb7efc)[0m
+D (2655) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (2665) lwmb: hw: 2008
+[0m
+D (2665) lwip: lwip_send(55, data=0x3ffb7f04, size=12, flags=0x0)
+[0m
+D (2665) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb5b0
+[0m
+D (2685) lwip: lwip_recv_tcp: buflen=24 recv_left=256 off=0
+[0m
+D (2675) lwip: lwip_send(55) err=0 written=12
+[0m
+D (2685) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb5b0
+[0m
+D (2695) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2695) lwmb: m_send_task: free(0x3ffb7efc)[0m
+[0;33mW (2675) lwmb: Largest free block: 139264
+[0m
+D (2705) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb554
+[0m
+[0;33mW (2715) lwmb: Free heap: 275764
+[0m
+D (2725) lwip: lwip_recv_tcp: buflen=12 recv_left=232 off=24
+[0m
+D (2725) lwmb: r_send_req: malloc(0x3ffbb53c)[0m
+D (2735) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb554
+[0m
+[0;33mW (2735) lwmb: hw: 2008
+[0m
+D (2735) lwip: lwip_send(55, data=0x3ffbb544, size=12, flags=0x0)
+[0m
+D (2745) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2755) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc64
+[0m
+D (2755) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (2745) lwmb: Largest free block: 139264
+[0m
+D (2765) lwip: lwip_recv_tcp: buflen=264 recv_left=220 off=36
+[0m
+D (2765) lwmb: m_send_task: free(0x3ffbb53c)[0m
+[0;33mW (2775) lwmb: Free heap: 274268
+[0m
+D (2775) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbbc64
+[0m
+D (2785) lwmb: r_send_req: malloc(0x3ffbbc18)[0m
+D (2795) lwip: lwip_recvfrom(56):  addr=[0m
+[0;33mW (2795) lwmb: hw: 2008
+[0m
+D (2795) lwip: lwip_send(55, data=0x3ffbbc20, size=12, flags=0x0)
+[0m
+D (2795) lwip: 127.0.0.1[0m
+D (2815) lwip:  port=1024 len=256
+[0m
+D (2805) lwip: lwip_send(55) err=0 written=12
+[0m
+D (2815) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (2825) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (2825) lwmb: m_send_task: free(0x3ffbbc18)[0m
+[0;33mW (2805) lwmb: Largest free block: 139264
+[0m
+D (2835) lwip: lwip_select: nready=1
+[0m
+D (2835) lwip: lwip_send(56, data=0x3ffbc2b4, size=256, flags=0x0)
+[0m
+[0;33mW (2845) lwmb: Free heap: 274152
+[0m
+D (2855) lwip: lwip_send(56) err=0 written=256
+[0m
+D (2855) lwmb: r_send_req: malloc(0x3ffb7f60)[0m
+D (2845) lwmb: r_select_task: calloc(0x3ffbbdb8)[0m
+D (2865) lwmb: m_send_task: free(0x3ffbc2ac)[0m
+D (2875) lwip: lwip_send(55, data=0x3ffb7f68, size=12, flags=0x0)
+[0m
+D (2875) lwip: lwip_recvfrom(56, 0x3ffbbdc0, 256, 0x0, ..)
+[0m
+[0;33mW (2865) lwmb: hw: 2008
+[0m
+D (2885) lwip: lwip_send(55) err=0 written=12
+[0m
+D (2885) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbbc64
+[0m
+D (2905) lwip: lwip_recv_tcp: buflen=44 recv_left=256 off=0
+[0m
+D (2895) lwmb: m_send_task: free(0x3ffb7f60)[0m
+D (2905) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc64
+[0m
+D (2915) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2925) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7efc
+[0m
+D (2925) lwip: lwip_recv_tcp: buflen=24 recv_left=212 off=44
+[0m
+D (2935) lwip: lwip_recv_tcp: deleting[0m
+D (2935) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2945) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbb28
+[0m
+D (2955) lwip: lwip_recv_tcp: buflen=12 recv_left=188 off=68
+[0m
+D (2955) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbb28
+[0m
+D (2965) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (2965) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+[0;33mW (2885) lwmb: Largest free block: 139264
+[0m
+[0;33mW (2975) lwmb: Free heap: 275860
+[0m
+D (2985) lwip: lwip_recvfrom(56):  addr=[0m
+D (2985) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (2985) lwip: 127.0.0.1[0m
+[0;33mW (2995) lwmb: hw: 2008
+[0m
+D (2995) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (2995) lwip:  port=1024 len=80
+[0m
+D (3005) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (3005) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (2995) lwmb: Largest free block: 139264
+[0m
+D (3015) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (3015) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (3035) lwip: lwip_send(56, data=0x3ffbbdc0, size=80, flags=0x0)
+[0m
+D (3025) lwip: lwip_select: nready=1
+[0m
+[0;33mW (3025) lwmb: Free heap: 274136
+[0m
+D (3045) lwip: lwip_send(56) err=0 written=80
+[0m
+D (3045) lwmb: r_select_task: calloc(0x3ffbb524)[0m
+D (3055) lwip: lwip_recvfrom(55, 0x3ffbb52c, 256, 0x0, ..)
+[0m
+D (3055) lwmb: m_send_task: free(0x3ffbbdb8)[0m
+D (3045) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3065) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (3075) lwmb: hw: 2008
+[0m
+D (3075) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3075) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbecc
+[0m
+D (3095) lwip: lwip_recv_tcp: buflen=256 recv_left=256 off=0
+[0m
+D (3085) lwip: lwip_send(55) err=0 written=12
+[0m
+D (3095) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbecc
+[0m
+[0;33mW (3085) lwmb: Largest free block: 139264
+[0m
+D (3105) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (3115) lwip: lwip_recvfrom(55):  addr=[0m
+D (3125) lwip: 127.0.0.1[0m
+D (3125) lwip:  port=502 len=256
+[0m
+D (3125) lwip: lwip_send(55, data=0x3ffbb52c, size=256, flags=0x0)
+[0m
+D (3125) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (3145) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (3135) lwip: lwip_send(55) err=0 written=256
+[0m
+D (3145) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (3155) lwip: lwip_select: nready=2
+[0m
+D (3155) lwmb: m_send_task: free(0x3ffbb524)[0m
+[0;33mW (3115) lwmb: Free heap: 274356
+[0m
+D (3165) lwmb: r_select_task: calloc(0x3ffbbcc8)[0m
+D (3165) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3175) lwip: lwip_recvfrom(55, 0x3ffbbcd0, 256, 0x0, ..)
+[0m
+[0;33mW (3175) lwmb: hw: 2008
+[0m
+D (3175) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3185) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (3195) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc2c
+[0m
+D (3195) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (3185) lwmb: Largest free block: 139264
+[0m
+D (3205) lwip: lwip_recv_tcp: buflen=80 recv_left=256 off=0
+[0m
+D (3215) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (3215) lwmb: Free heap: 274000
+[0m
+D (3225) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc2c
+[0m
+D (3225) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3235) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (3235) lwmb: hw: 2008
+[0m
+D (3235) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3245) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+[0;33mW (3245) lwmb: Largest free block: 139264
+[0m
+[0;33mW (3265) lwmb: Free heap: 274156
+[0m
+D (3255) lwip: lwip_send(55) err=0 written=12
+[0m
+D (3265) lwip: lwip_recvfrom(55):  addr=[0end_task: free(0x3ffbb484)[0m
+end_req: malloc(0x3ffb7efc)[0m
+D (3285) lwip:  port=502 len=80
+[0m
+[0;33mW (3285) lwmb: hw: 2008
+[0m
+D (3285) lwip: lwip_send(55, data=0x3ffb7f04, size=12, flags=0x0)
+[0m
+D (3295) lwmb: r_select_task: calloc(0x3ffbc3e0)[0m
+D (3305) lwip: lwip_recvfrom(56, 0x3ffbc3e8, 256, 0x0, ..)
+[0m
+D (3305) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (3295) lwmb: Largest free block: 139264
+[0m
+D (3315) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (3315) lwmb: m_send_task: free(0x3ffb7efc)[0m
+D (3335) lwip: lwip_send(55, data=0x3ffbbcd0, size=80, flags=0x0)
+[0m
+D (3325) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbb9c
+[0m
+[0;33mW (3325) lwmb: Free heap: 273880
+[0m
+D (3335) lwip: lwip_send(55) err=0 written=80
+[0m
+D (3345) lwip: lwip_recv_tcp: buflen=12 recv_left=256 off=0
+[0m
+D (3355) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbb9c
+[0m
+D (3355) lwmb: m_send_task: free(0x3ffbbcc8)[0m
+D (3345) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3365) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (3375) lwmb: hw: 2008
+[0m
+D (3375) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3375) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb524
+[0m
+D (3395) lwip: lwip_recv_tcp: buflen=268 recv_left=244 off=12
+[0m
+D (3385) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (3385) lwmb: Largest free block: 139264
+[0m
+D (3405) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb524
+[0m
+D (3405) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (3415) lwmb: Free heap: 274244
+[0m
+D (3415) lwip: lwip_recvfrom(56):  addr=[0m
+D (3425) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3425) lwip: 127.0.0.1[0m
+[0;33mW (3435) lwmb: hw: 2008
+[0m
+D (3435) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3435) lwip:  port=1024 len=256
+[0m
+[0;33mW (3435) lwmb: Largest free block: 139264
+[0m
+D (3445) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+[0;33mW (3455) lwmb: Free heap: 273916
+[0m
+D (3445) lwip: lwip_send(55) err=0 written=12
+[0m
+D (3465) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (3475) lwip: lwip_select: nready=1
+[0m
+D (3475) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (3475) lwmb: r_select_task: calloc(0x3ffbb688)[0m
+D (3485) lwip: lwip_recvfrom(56, 0x3ffbb690, 256, 0x0, ..)
+[0m
+D (3485) lwip: lwip_send(56, data=0x3ffbc3e8, size=256, flags=0x0)
+[0m
+D (3465) lwmb: r_send_req: malloc(0x3ffb7f14)[0m
+D (3495) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb524
+[0m
+D (3505) lwip: lwip_send(56) err=0 written=256
+[0m
+D (3515) lwmb: m_send_task: free(0x3ffbc3e0)[0m
+D (3515) lwip: lwip_recv_tcp: buflen=24 recv_left=256 off=0
+[0m
+[0;33mW (3505) lwmb: hw: 2008
+[0m
+D (3525) lwip: lwip_send(55, data=0x3ffb7f1c, size=12, flags=0x0)
+[0m
+D (3525) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb524
+[0m
+D (3545) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (3535) lwip: lwip_send(55) err=0 written=12
+[0m
+D (3545) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc2c
+[0m
+D (3555) lwip: lwip_recv_tcp: buflen=128 recv_left=232 off=24
+[0m
+D (3555) lwmb: m_send_task: free(0x3ffb7f14)[0m
+[0;33mW (3525) lwmb: Largest free block: 139264
+[0m
+D (3565) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc2c
+[0m
+[0;33mW (3575) lwmb: Free heap: 274004
+[0m
+D (3575) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (3585) lwmb: r_send_req: malloc(0x3ffb7d98)[0m
+D (3585) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb8f0
+[0m
+[0;33mW (3595) lwmb: hw: 2008
+[0m
+D (3595) lwip: lwip_send(55, data=0x3ffb7da0, size=12, flags=0x0)
+[0m
+D (3595) lwip: lwip_recv_tcp: buflen=12 recv_left=104 off=152
+[0m
+D (3615) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb8f0
+[0m
+D (3605) lwip: lwip_send(55) err=0 written=12
+[0m
+D (3615) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (3605) lwmb: Largest free block: 139264
+[0m
+[0;33mW (3635) lwmb: Free heap: 274272
+[0m
+D (3635) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (3625) lwmb: m_send_task: free(0x3ffb7d98)[0m
+D (3635) lwmb: r_send_req: malloc(0x3ffb7f14)[0m
+D (3645) lwip: lwip_recvfrom(56):  addr=[0m
+[0;33mW (3655) lwmb: hw: 2008
+[0m
+D (3655) lwip: lwip_send(55, data=0x3ffb7f1c, size=12, flags=0x0)
+[0m
+D (3655) lwip: 127.0.0.1[0m
+D (3665) lwip:  port=1024 len=164
+[0m
+D (3665) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (3665) lwmb: Largest free block: 139264
+[0m
+D (3675) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (3675) lwmb: m_send_task: free(0x3ffb7f14)[0m
+D (3695) lwip: lwip_send(56, data=0x3ffbb690, size=164, flags=0x0)
+[0m
+D (3685) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+[0;33mW (3685) lwmb: Free heap: 275584
+[0m
+D (3705) lwip: lwip_send(56) err=0 written=164
+[0m
+D (3705) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (3715) lwip: lwip_select: nready=2
+[0m
+D (3715) lwmb: m_send_task: free(0x3ffbb688)[0m
+D (3705) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3725) lwmb: r_select_task: calloc(0x3ffbb8f0)[0m
+[0;33mW (3735) lwmb: hw: 2008
+[0m
+D (3735) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3735) lwip: lwip_recvfrom(55, 0x3ffbb8f8, 256, 0x0, ..)
+[0m
+D (3755) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (3745) lwip: lwip_send(55) err=0 written=12
+[0m
+D (3755) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb79c
+[0m
+D (3765) lwip: lwip_recv_tcp: buflen=256 recv_left=256 off=0
+[0m
+D (3765) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (3745) lwmb: Largest free block: 139264
+[0m
+D (3775) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb79c
+[0m
+[0;33mW (3785) lwmb: Free heap: 275412
+[0m
+D (3785) lwip: lwip_recvfrom(55):  addr=[0m
+D (3795) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3795) lwip: 127.0.0.1[0m
+[0;33mW (3805) lwmb: hw: 2008
+[0m
+D (3805) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3805) lwip:  port=502 len=256
+[0m
+D (3815) lwmb: r_select_task: calloc(0x3ffbba04)[0m
+D (3815) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (3805) lwmb: Largest free block: 139264
+[0m
+D (3825) lwip: lwip_recvfrom(56, 0x3ffbba0c, 256, 0x0, ..)
+[0m
+D (3825) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (3845) lwip: lwip_send(55, data=0x3ffbb8f8, size=256, flags=0x0)
+[0m
+D (3835) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (3845) lwip: lwip_send(55) err=0 written=256
+[0m
+D (3855) lwmb: m_send_task: free(0x3ffbb8f0)[0m
+D (3855) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb524
+[0m
+[0;33mW (3835) lwmb: Free heap: 273888
+[0m
+D (3865) lwip: lwip_recv_tcp: buflen=36 recv_left=256 off=0
+[0m
+D (3875) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3875) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb524
+[0m
+[0;33mW (3885) lwmb: hw: 2008
+[0m
+D (3885) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3885) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (3905) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc2c
+[0m
+D (3895) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (3895) lwmb: Largest free block: 139264
+[0m
+D (3915) lwip: lwip_recv_tcp: buflen=12 recv_left=220 off=36
+[0m
+D (3915) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (3925) lwmb: Free heap: 274268
+[0m
+D (3925) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc2c
+[0m
+D (3935) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3945) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (3945) lwmb: hw: 2008
+[0m
+D (3945) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (3955) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb688
+[0m
+D (3965) lwip: lwip_recv_tcp: buflen=280 recv_left=208 off=48
+[0m
+D (3965) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (3955) lwmb: Largest free block: 139264
+[0m
+D (3975) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb688
+[0m
+D (3975) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (3985) lwmb: Free heap: 274004
+[0m
+D (3985) lwip: lwip_recvfrom(56):  addr=[0m
+D (3995) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (3995) lwip: 127.0.0.1[0m
+[0;33mW (4005) lwmb: hw: 2008
+[0m
+D (4005) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (4005)port=1024 len=256
+[0m
+D (4025wip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0man: fd=55 ready for reading
+[0elscan: fd=56 ready for reading
+[0m
+D (4035) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (4015) lwmb: Largest free block: 139264
+[0m
+D (4045) lwip: lwip_select: nready=2
+[0m
+D (4045) lwip: lwip_send(56, data=0x3ffbba0c, size=256, flags=0x0)
+[0m
+[0;33mW (4055) lwmb: Free heap: 273884
+[0m
+D (4065) lwip: lwip_send(56) err=0 written=256
+[0m
+D (4065) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (4055) lwmb: r_select_task: calloc(0x3ffbbb18)[0m
+D (4075) lwmb: m_send_task: free(0x3ffbba04)[0m
+D (4085) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (4075) lwip: lwip_recvfrom(55, 0x3ffbbb20, 256, 0x0, ..)
+[0m
+[0;33mW (4075) lwmb: hw: 2008
+[0m
+D (4095) lwip: lwip_send(55) err=0 written=12
+[0m
+D (4095) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (4105) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb594
+[0m
+D (4105) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (4095) lwmb: Largest free block: 139264
+[0m
+D (4115) lwip: lwip_recv_tcp: buflen=164 recv_left=256 off=0
+[0m
+[0;33mW (4125) lwmb: Free heap: 273576
+[0m
+D (4135) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb594
+[0m
+D (4135) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (4145) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (4145) lwmb: hw: 2008
+[0m
+D (4145) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (4155) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb7ec
+[0m
+D (4165) lwip: lwip_recv_tcp: buflen=256 recv_left=92 off=164
+[0m
+D (4165) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (4155) lwmb: Largest free block: 139264
+[0m
+D (4175) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb7ec
+[0m
+D (4175) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (4185) lwmb: Free heap: 275260
+[0m
+D (4185) lwip: lwip_recvfrom(55):  addr=[0m
+D (4195) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (4205) lwip: 127.0.0.1[0m
+[0;33mW (4205) lwmb: hw: 2008
+[0m
+D (4205) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (4205) lwip:  port=502 len=256
+[0m
+D (4225) lwmb: r_select_task: calloc(0x3ffbb940)[0m
+D (4215) lwip: lwip_send(55) err=0 written=12
+[0m
+D (4225) lwip: lwip_recvfrom(56, 0x3ffbb948, 256, 0x0, ..)
+[0m
+D (4235) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb688
+[0m
+D (4225) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (4215) lwmb: Largest free block: 139264
+[0m
+D (4245) lwip: lwip_recv_tcp: buflen=72 recv_left=256 off=0
+[0m
+D (4245) lwip: lwip_send(55, data=0x3ffbbb20, size=256, flags=0x0)
+[0m
+[0;33mW (4255) lwmb: Free heap: 273444
+[0m
+D (4265) lwip: lwip_send(55) err=0 written=256
+[0m
+D (4265) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (4255) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb688
+[0m
+D (4275) lwmb: m_send_task: free(0x3ffbbb18)[0m
+D (4285) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (4285) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (4275) lwmb: hw: 2008
+[0m
+D (4295) lwip: lwip_send(55) err=0 written=12
+[0m
+D (4295) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc2c
+[0m
+D (4315) lwip: lwip_recv_tcp: buflen=24 recv_left=184 off=72
+[0m
+D (4305) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (4315) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc2c
+[0m
+D (4325) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (4335) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb570
+[0m
+D (4345) lwip: lwip_recv_tcp: buflen=24 recv_left=160 off=96
+[0m
+D (4345) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb570
+[0m
+D (4355) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (4355) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+[0;33mW (4305) lwmb: Largest free block: 139264
+[0m
+[0;33mW (4365) lwmb: Free heap: 275496
+[0m
+D (4375) lwip: lwip_recvfrom(56):  addr=[0m
+D (4375) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (4375) lwip: 127.0.0.1[0m
+[0;33mW (4385) lwmb: hw: 2008
+[0m
+D (4385) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (4385) lwip:  port=1024 len=120
+[0m
+D (4395) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (4395) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (4385) lwmb: Largest free block: 139264
+[0m
+D (4405) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (4405) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (4425) lwip: lwip_send(56, data=0x3ffbb948, size=120, flags=0x0)
+[0m
+D (4415) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+[0;33mW (4415) lwmb: Free heap: 273764
+[0m
+D (4425) lwip: lwip_send(56) err=0 written=120
+[0m
+D (4435) lwip: lwip_select: nready=2
+[0m
+D (4445) lwmb: r_select_task: calloc(0x3ffbb5e8)[0m
+D (4445) lwmb: m_send_task: free(0x3ffbb940)[0m
+D (4435) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (4455) lwip: lwip_recvfrom(55, 0x3ffbb5f0, 256, 0x0, ..)
+[0m
+[0;33mW (4455) lwmb: hw: 2008
+[0m
+D (4465) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (4465) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb7ec
+[0m
+D (4485) lwip: lwip_recv_tcp: buflen=164 recv_left=256 off=0
+[0m
+D (4475) lwip: lwip_send(55) err=0 written=12
+[0m
+D (4485) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb7ec
+[0m
+D (4495) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (4495) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (4465) lwmb: Largest free block: 147456
+[0m
+D (4505) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb524
+[0m
+[0;33mW (4515) lwmb: Free heap: 275460
+[0m
+D (4515) lwip: lwip_recv_tcp: buflen=120 recv_left=92 off=164
+[0m
+D (4525) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (4525) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb524
+[0m
+[0;33mW (4535) lwmb: hw: 2008
+[0m
+D (4535) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (4535) lwip: lwip_recvfrom(55):  addr=[0m
+D (4555) lwip: 127.0.0.1[0m
+D (4545) lwip: lwip_send(55) err=0 written=12
+[0m
+D (4555) lwip:  port=502 len=256
+[0m
+D (4565) lwmb: r_select_task: calloc(0x3ffbb6fc)[0m
+D (4555) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (4565) lwip: lwip_recvfrom(56, 0x3ffbb704, 256, 0x0, ..)
+[0m
+D (4575) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (4575) lwip: lwip_send(55, data=0x3ffbb5f0, size=256, flags=0x0)
+[0m
+[0;33mW (4545) lwmb: Largest free block: 139264
+[0m
+D (4585) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbaa0
+[0m
+D (4595) lwip: lwip_send(55) err=0 written=256
+[0m
+D (4605) lwmb: m_send_task: free(0x3ffbb5e8)[0m
+D (4605) lwip: lwip_recv_tcp: buflen=280 recv_left=256 off=0
+[0m
+[0;33mW (4595) lwmb: Free heap: 273608
+[0m
+D (4615) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbbaa0
+[0m
+D (4625) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (4625) lwip: lwip_recvfrom(56):  addr=[0m
+[0;33mW (4635) lwmb: hw: 2008
+[0m
+D (4635) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (4635) lwip: 127.0.0.1[0m
+D (4645) lwip:  port=1024 len=256
+[0m
+D (4645) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (4635) lwmb: Largest free block: 139264
+[0m
+D (4655) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (4655) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (4675) lwip: lwip_send(56, data=0x3ffbb704, size=256, flags=0x0)
+[0m
+D (4665) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+[0;33mW (4655) lwmb: Free heap: 273724
+[0m
+D (4675) lwip: lwip_send(56) err=0 written=256
+[0m
+D (4685) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (4695) lwip: lwip_select: nready=2
+[0m
+D (4695) lwmb: m_send_task: free(0x3ffbb6fc)[0m
+D (4685) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (4705) lwmb: r_select_task: calloc(0x3ffbb5e8)[0m
+[0;33mW (4705) lwmb: hw: 2008
+[0m
+D (4705) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (4715) lwip: lwip_recvfrom(55, 0x3ffbb5f0, 256, 0x0, ..)
+[0m
+D (4725) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb524
+[0m
+D (4725) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (4715) lwmb: Largest free block: 147456
+[0m
+D (4735) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (4745) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (4745) lwmb: Free heap: 274640
+[0m
+D (4755) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb524
+[0m
+D (4755) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (4765) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (4765) lwmb: hw: 2008
+[0m
+D (4765) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (4775) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb810
+[0m
+D (4795) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (4785) lwip: lwip_send(55) err=0 written=12
+[0m
+D (4795) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb810
+[0m
+[0;33mW (4775) lwmb: Largest free block: 139264
+[0m
+D (4805) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (4815) lwip: lwip_recvfrom(55):  addr=[0m
+D (4825) lwip: 127.0.0.1[0m
+D (4825) lwip:  port=502 len=256
+[0m
+D (4825) lwip: lwip_send(55, data=0x3ffbb5f0, size=256, flags=0x0)
+[0m
+D (4825) lwmb: r_select_task: calloc(0x3ffbb964)[0m
+D (4835) lwip: lwip_recvfrom(56, 0x3ffbb96c, 256, 0x0, ..)
+[0m
+D (4835) lwip: lwip_send(55) err=0 written=256
+[0m
+[0;33mW (4815) lwmb: Free heap: 273272
+[0m
+D (4845) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbbaa0
+[0m
+D (4845) lwmb: m_send_task: free(0x3ffbb5e8)[0m
+D (4855) lwmb: r_send_req: malloc(0x3ffbba78)[0m
+D (4855) lwip: lwip_recv_tcp: buflen=24 recv_left=256 off=0
+[0m
+[0;33mW (4865) lwmb: hw: 2008
+[0m
+D (4865) lwip: lwip_send(55, data=0x3ffbba80, size=12, flags=0x0)
+[0m
+D (4875) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbaa0
+[0m
+D (4885) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (4885) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (4875) lwmb: Largest free block: 139264
+[0m
+D (4895) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc04
+[0m
+D (4895) lwmb: m_send_task: free(0x3ffbba78)[0m
+[0;33mW (4905) lwmb: Free heap: 273632
+[0m
+D (4905) lwip: lwip_recv_tcp: buflen=12 recv_left=232 off=24
+[0m
+D (4915) lwmb: r_send_req: malloc(0x3ffbbc5c)[0m
+D (4925) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc04
+[0m
+[0;33mW (4925) lwmb: hw: 2008
+[0m
+D (4925) lwip: lwip_send(55, data=0x3ffbbc64, size=12, flags=0x0)
+[0m
+D (4935) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (4945) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7efc
+[0m
+D (4945) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (4935) lwmb: Largest free block: 139264
+[0m
+D (4955) lwip: lwip_recv_tcp: buflen=12 recv_left=220 off=36
+[0m
+D (4965) lwmb: m_send_task: free(0x3ffbbc5c)[0m
+[0;33mW (4965) lwmb: Free heap: 273380
+[0m
+D (4975) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7efc
+[0m
+D (4975) lwmb: r_send_req: malloc(0x3ffb7f54)[0m
+D (4985) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (4985) lwmb: hw: 2008
+[0m
+D (4985) lwip: lwip_send(55, data=0x3ffb7f5c, size=12, flags=0x0)
+[0m
+D (4995) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbcb8
+[0m
+D (5015) lwip: lwip_recv_tcp: buflen=280 recv_left=208 off=48
+[0m
+D (5005) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5015) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbbcb8
+[0m
+[0;33mW (4995) lwmb: Largest free block: 139264
+[0m
+D (5025) lwmb: m_send_task: free(0x3ffb7f54)[0m
+D (5035) lwip: lwip_recvfrom(56):  addr=[0m
+D (5045) lwip: 127.0.0.1[0m
+D (5045) lwip:  port=1024 len=256
+[0m
+D (5045) lwip: lwip_send(56, data=0x3ffbb96c, size=256, flags=0x0)
+[0m
+D (5045) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+[0;33mW (5035) lwmb: Free heap: 273456
+[0m
+D (5065) lwmb: r_send_req: malloc(0x3ffbbc9c)[0m
+D (5065) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (5055) lwip: lwip_send(56) err=0 written=256
+[0m
+D (5075) lwmb: m_send_task: free(0x3ffbb964)[0m
+D (5075) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+[0;33mW (5065) lwmb: hw: 2008
+[0m
+D (5085) lwip: lwip_send(55, data=0x3ffbbca4, size=12, flags=0x0)
+[0m
+D (5085) lwip: lwip_select: nready=2
+[0m
+D (5105) lwmb: r_select_task: calloc(0x3ffbb964)[0m
+D (5095) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5105) lwip: lwip_recvfrom(55, 0x3ffbb96c, 256, 0x0, ..)
+[0m
+D (5115) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb810
+[0m
+D (5115) lwmb: m_send_task: free(0x3ffbbc9c)[0m
+[0;33mW (5095) lwmb: Largest free block: 139264
+[0m
+D (5125) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+[0;33mW (5135) lwmb: Free heap: 273040
+[0m
+D (5135) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb810
+[0m
+D (5145) lwmb: r_send_req: malloc(0x3ffbbc88)[0m
+D (5145) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (5155) lwmb: hw: 2008
+[0m
+D (5155) lwip: lwip_send(55, data=0x3ffbbc90, size=12, flags=0x0)
+[0m
+D (5155) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb524
+[0m
+D (5175) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (5165) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5175) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb524
+[0m
+[0;33mW (5165) lwmb: Largest free block: 139264
+[0m
+D (5185) lwmb: m_send_task: free(0x3ffbbc88)[0m
+D (5195) lwip: lwip_recvfrom(55):  addr=[0m
+D (5205) lwip: 127.0.0.1[0m
+D (5205) lwip:  port=502 len=256
+[0m
+D (5205) lwip: lwip_send(55, data=0x3ffbb96c, size=256, flags=0x0)
+[0m
+D (5205) lwmb: r_select_task: calloc(0x3ffbb754)[0m
+D (5225) lwip: lwip_recvfrom(56, 0x3ffbb75c, 256, 0x0, ..)
+[0m
+D (5215) lwip: lwip_send(55) err=0 written=256
+[0m
+D (5225) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbbcb8
+[0m
+D (5235) lwip: lwip_recv_tcp: buflen=72 recv_left=256 off=0
+[0m
+D (5235) lwmb: m_send_task: free(0x3ffbb964)[0m
+[0;33mW (5195) lwmb: Free heap: 274816
+[0m
+D (5245) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbcb8
+[0m
+D (5255) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (5255) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (5265) lwmb: hw: 2008
+[0m
+D (5265) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (5265) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb6fc
+[0m
+D (5285) lwip: lwip_recv_tcp: buflen=12 recv_left=184 off=72
+[0m
+D (5275) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5285) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb6fc
+[0m
+D (5295) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (5295) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (5265) lwmb: Largest free block: 139264
+[0m
+D (5305) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbba78
+[0m
+[0;33mW (5315) lwmb: Free heap: 273720
+[0m
+D (5315) lwip: lwip_recv_tcp: buflen=280 recv_left=172 off=84
+[0m
+D (5325) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (5325) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbba78
+[0m
+[0;33mW (5335) lwmb: hw: 2008
+[0m
+D (5335) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (5345) lwip: lwip_recvfrom(56):  addr=[0m
+D (5355) lwip: 127.0.0.1[0m
+D (5345) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5355) lwip:  port=1024 len=256
+[0m
+D (5365) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (5365) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (5345) lwmb: Largest free block: 139264
+[0m
+D (5375) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (5375) lwip: lwip_send(56, data=0x3ffbb75c, size=256, flags=0x0)
+[0m
+[0;33mW (5385) lwmb: Free heap: 273584
+[0m
+D (5395) lwip: lwip_send(56) err=0 written=256
+[0m
+D (5395) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (5385) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (5405) lwmb: m_send_task: free(0x3ffbb754)[0m
+D (5415) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (5415) lwip: lwip_select: nready=2
+[0m
+[0;33mW (5405) lwmb: hw: 2008
+[0m
+D (5425) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5425) lwmb: r_select_task: calloc(0x3ffbb6fc)[0m
+D (5435) lwip: lwip_recvfrom(55, 0x3ffbb704, 256, 0x0, ..)
+[0m
+D (5435) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (5425) lwmb: Largest free block: 139264
+[0m
+D (5445) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb524
+[0m
+[0;33mW (5455) lwmb: Free heap: 274496
+[0m
+D (5455) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (5465) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (5465) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb524
+[0m
+[0;33mW (5475) lwmb: hw: 2008
+[0m
+D (5475) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (5475) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (5495) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbcb8
+[0m
+D (5485) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (5485) lwmb: Largest free block: 139264
+[0m
+D (5505) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (5505) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (5505) lwmb: Free heap: 273248
+[0m
+D (5515) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbbcb8
+[0m
+D (5525) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (5535) lwip: lwip_recvfrom(55):  addr=[0m
+[0;33mW (5535) lwmb: hw: 2008
+[0m
+D (5535) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (5535) lwip: 127.0.0.1[0m
+D (5555) lwip:  port=502 len=256
+[0m
+D (5545) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5555) lwmb: r_select_task: calloc(0x3ffbb524)[0m
+D (5565) lwip: lwip_recvfrom(56, 0x3ffbb52c, 256, 0x0, ..)
+[0m
+D (5555) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (5565) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbba78
+[0m
+D (5575) lwip: lwip_recv_tcp: buflen=108 recv_left=256 off=0
+[0m
+D (5575) lwip: lwip_send(55, data=0x3ffbb704, size=256, flags=0x0)
+[0m
+[0;33mW (5545) lwmb: Largest free block: 139264
+[0m
+D (5585) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbba78
+[0m
+D (5595) lwip: lwip_send(55) err=0 written=256
+[0m
+D (5605) lwmb: m_send_task: free(0x3ffbb6fc)[0m
+D (5605) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (5595) lwmb: Free heap: 272996
+[0m
+D (5615) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb68c
+[0m
+D (5625) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (5625) lwip: lwip_recv_tcp: buflen=24 recv_left=148 off=108
+[0m
+[0;33mW (5635) lwmb: hw: 2008
+[0m
+D (5635) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (5635) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb68c
+[0m
+D (5655) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (5645) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5655) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7efc
+[0m
+D (5665) lwip: lwip_recv_tcp: buflen=24 recv_left=124 off=132
+[0m
+D (5665) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (5645) lwmb: Largest free block: 139264
+[0m
+D (5675) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7efc
+[0m
+[0;33mW (5685) lwmb: Free heap: 274932
+[0m
+D (5695) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (5695) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (5705) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb868
+[0m
+[0;33mW (5705) lwmb: hw: 2008
+[0m
+D (5705) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (5715) lwip: lwip_recv_tcp: buflen=280 recv_left=100 off=156
+[0m
+D (5725) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb868
+[0m
+D (5725) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (5715) lwmb: Largest free block: 139264
+[0m
+D (5735) lwip: lwip_recvfrom(56):  addr=[0m
+D (5735) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (5745) lwmb: Free heap: 273444
+[0m
+D (5745) lwip: 127.0.0.1[0m
+D (5755) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (5755) lwip:  port=1024 len=256
+[0m
+[0;33mW (5765) lwmb: hw: 2008
+[0m
+D (5765) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (5765) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (5785) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (5775) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5785) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (5795) lwip: lwip_select: nready=2
+[0m
+D (5795) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (5765) lwmb: Largest free block: 139264
+[0m
+D (5805) lwmb: r_select_task: calloc(0x3ffbba2c)[0m
+D (5805) lwip: lwip_send(56, data=0x3ffbb52c, size=256, flags=0x0)
+[0m
+[0;33mW (5805) lwmb: Free heap: 273192
+[0m
+D (5825) lwip: lwip_send(56) err=0 written=256
+[0m
+D (5825) lwmb: r_send_req: malloc(0x3ffb7f60)[0m
+D (5815) lwip: lwip_recvfrom(55, 0x3ffbba34, 256, 0x0, ..)
+[0m
+D (5825) lwmb: m_send_task: free(0x3ffbb524)[0m
+D (5845) lwip: lwip_send(55, data=0x3ffb7f68, size=12, flags=0x0)
+[0m
+D (5835) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbbcb8
+[0m
+[0;33mW (5835) lwmb: hw: 2008
+[0m
+D (5855) lwip: lwip_send(55) err=0 written=12
+[0m
+D (5855) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (5875) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbcb8
+[0m
+D (5865) lwmb: m_send_task: free(0x3ffb7f60)[0m
+D (5875) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (5885) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbb40
+[0m
+D (5895) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (5895) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbbb40
+[0m
+[0;33mW (5855) lwmb: Largest free block: 139264
+[0m
+[0;33mW (5905) lwmb: Free heap: 273372
+[0m
+D (5915) lwip: lwip_recvfrom(55):  addr=[0m
+D (5915) lwmb: r_send_req: malloc(0x3ffb7f60)[0m
+D (5915) lwip: 127.0.0.1[0m
+[0;33mW (5925) lwmb: hw: 2008
+[0m
+D (5925) lwip: lwip_send(55, data=0x3ffb7f68, size=12, flags=0x0)
+[0m
+D (5925) lwip:  port=502 len=256
+[0m
+D (5935) lwmb: r_select_task: calloc(0x3ffbb524)[0m
+D (5935) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (5925) lwmb: Largest free block: 139264
+[0m
+D (5945) lwip: lwip_recvfrom(56, 0x3ffbb52c, 256, 0x0, ..)
+[0m
+D (5945) lwmb: m_send_task: free(0x3ffb7f60)[0m
+D (5965) lwip: lwip_send(55, data=0x3ffbba34, size=256, flags=0x0)
+[0m
+D (5955) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb868
+[0m
+[0;33mW (5955) lwmb: Free heap: 272984
+[0m
+D (5965) lwip: lwip_send(55) err=0 written=256
+[0m
+D (5975) lwip: lwip_recv_tcp: buflen=180 recv_left=256 off=0
+[0m
+D (5985) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb868
+[0m
+D (5985) lwmb: m_send_task: free(0x3ffbba2c)[0m
+D (5975) lwmb: r_send_req: malloc(0x3ffb7f60)[0m
+D (5995) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (6005) lwmb: hw: 2008
+[0m
+D (6005) lwip: lwip_send(55, data=0x3ffb7f68, size=12, flags=0x0)
+[0m
+D (6005) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb9cc
+[0m
+D (6025) lwip: lwip_recv_tcp: buflen=12 recv_left=76 off=180
+[0m
+D (6015) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (6015) lwmb: Largest free block: 139264
+[0m
+D (6035) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb9cc
+[0m
+D (6035) lwmb: m_send_task: free(0x3ffb7f60)[0m
+[0;33mW (6035) lwmb: Free heap: 273616
+[0m
+D (6045) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (6055) lwmb: r_send_req: malloc(0x3ffb7f60)[0m
+D (6055) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb6e4
+[0m
+[0;33mW (6065) lwmb: hw: 2008
+[0m
+D (6065) lwip: lwip_send(55, data=0x3ffb7f68, size=12, flags=0x0)
+[0m
+D (6075) lwip: lwip_recv_tcp: buflen=292 recv_left=64 off=192
+[0m
+D (6085) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb6e4
+[0m
+D (6075) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (6075) lwmb: Largest free block: 139264
+[0m
+D (6095) lwip: lwip_recvfrom(56):  addr=[0m
+D (6095) lwmb: m_send_task: free(0x3ffb7f60)[0m
+[0;33mW (6105) lwmb: Free heap: 273712
+[0m
+D (6105) lwip: 127.0.0.1[0m
+D (6115) lwmb: r_send_req: malloc(0x3ffb7f60)[0m
+D (6115) lwip:  port=1024 len=256
+[0m
+[0;33mW (6125) lwmb: hw: 2008
+[0m
+D (6125) lwip: lwip_send(55, data=0x3ffb7f68, size=12, flags=0x0)
+[0m
+D (6125) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (6145) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (6135) lwip: lwip_send(55) err=0 written=12
+[0m
+D (6145) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (6155) lwip: lwip_select: nready=2
+[0m
+D (6155) lwmb: m_send_task: free(0x3ffb7f60)[0m
+D (6155) lwmb: r_select_task: calloc(0x3ffbb858)[0m
+D (6165) lwip: lwip_recvfrom(55, 0x3ffbb860, 256, 0x0, ..)
+[0m
+D (6165) lwip: lwip_send(56, data=0x3ffbb52c, size=256, flags=0x0)
+[0m
+D (6185) lwip: lwip_send(56) err=0 written=256
+[0m
+D (6175) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbbb40
+[0m
+D (6195) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (6185) lwmb: m_send_task: free(0x3ffbb524)[0m
+D (6195) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbb40
+[0m
+D (6205) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (6215) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbca14
+[0m
+D (6215) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (6225) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbca14
+[0m
+[0;33mW (6125) lwmb: Largest free block: 139264
+[0m
+[0;33mW (6235) lwmb: Free heap: 274912
+[0m
+D (6235) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (6245) lwip: lwip_recvfrom(55):  addr=[0m
+[0;33mW (6245) lwmb: hw: 2008
+[0m
+D (6245) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (6245) lwip: 127.0.0.1[0m
+D (6265) lwip:  port=502 len=256
+[0m
+D (6255) lwip: lwip_send(55) err=0 written=12
+[0m
+D (6265) lwmb: r_select_task: calloc(0x3ffbbaf0)[0m
+D (6275) lwip: lwip_recvfrom(56, 0x3ffbbaf8, 256, 0x0, ..)
+[0m
+D (6265) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (6275) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb6e4
+[0m
+D (6285) lwip: lwip_recv_tcp: buflen=228 recv_left=256 off=0
+[0m
+D (6285) lwip: lwip_send(55, data=0x3ffbb860, size=256, flags=0x0)
+[0m
+[0;33mW (6255) lwmb: Largest free block: 139264
+[0m
+D (6295) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb6e4
+[0m
+D (6305) lwip: lwip_send(55) err=0 written=256
+[0m
+D (6315) lwmb: m_send_task: free(0x3ffbb858)[0m
+D (6315) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (6305) lwmb: Free heap: 272976
+[0m
+D (6325) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7efc
+[0m
+D (6335) lwmb: r_send_req: malloc(0x3ffb7f60)[0m
+D (6335) lwip: lwip_recv_tcp: buflen=24 recv_left=28 off=228
+[0m
+[0;33mW (6345) lwmb: hw: 2008
+[0m
+D (6345) lwip: lwip_send(55, data=0x3ffb7f68, size=12, flags=0x0)
+[0m
+D (6345) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7efc
+[0m
+D (6365) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (6355) lwip: lwip_send(55) err=0 written=12
+[0m
+D (6365) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbd54
+[0m
+D (6375) lwip: lwip_recv_tcp: buflen=12 recv_left=4 off=252
+[0m
+D (6375) lwmb: m_send_task: free(0x3ffb7f60)[0m
+[0;33mW (6355) lwmb: Largest free block: 139264
+[0m
+D (6385) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbbd54
+[0m
+[0;33mW (6395) lwmb: Free heap: 273724
+[0m
+D (6405) lwip: lwip_recvfrom(56):  addr=[0m
+D (6405) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (6405) lwip: 127.0.0.1[0m
+[0;33mW (6415) lwmb: hw: 2008
+[0m
+D (6415) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (6415) lwip:  port=1024 len=256
+[0m
+D (6425) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (6425) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (6415) lwmb: Largest free block: 139264
+[0m
+D (6435) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (6445) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (6455) lwip: lwip_send(56, data=0x3ffbbaf8, size=256, flags=0x0)
+[0m
+D (6455) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+[0;33mW (6445) lwmb: Free heap: 274668
+[0m
+D (6465) lwip: lwip_send(56) err=0 written=256
+[0m
+D (6465) lwip: lwip_select: nready=2
+[0m
+D (6475) lwmb: r_select_task: calloc(0x3ffbb7dc)[0m
+D (6475) lwmb: m_send_task: free(0x3ffbbaf0)[0m
+D (6475) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (6485) lwip: lwip_recvfrom(55, 0x3ffbb7e4, 256, 0x0, ..)
+[0m
+[0;33mW (6495) lwmb: hw: 2008
+[0m
+D (6495) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (6495) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbca14
+[0m
+D (6515) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (6505) lwip: lwip_send(55) err=0 written=12
+[0m
+D (6515) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbca14
+[0m
+D (6525) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (6525) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (6505) lwmb: Largest free block: 139264
+[0m
+D (6535) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb688
+[0m
+[0;33mW (6545) lwmb: Free heap: 274740
+[0m
+D (6555) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (6555) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (6565) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb688
+[0m
+[0;33mW (6565) lwmb: hw: 2008
+[0m
+D (6565) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (6575) lwip: lwip_recvfrom(55):  addr=[0m
+D (6585) lwip: 127.0.0.1[0m
+D (6585) lwip: lwip_send(55) err=0 written=12
+[0m
+D (6585) lwip:  port=502 len=256
+[0m
+D (6595) lwmb: r_select_task: calloc(0x3ffbbaf0)[0m
+D (6595) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (6575) lwmb: Largest free block: 139264
+[0m
+D (6605) lwip: lwip_recvfrom(56, 0x3ffbbaf8, 256, 0x0, ..)
+[0m
+D (6605) lwip: lwip_send(55, data=0x3ffbb7e4, size=256, flags=0x0)
+[0m
+[0;33mW (6605) lwmb: Free heap: 272900
+[0m
+D (6625) lwip: lwip_send(55) err=0 written=256
+[0m
+D (6625) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (6615) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbbd54
+[0m
+D (6635) lwmb: m_send_task: free(0x3ffbb7dc)[0m
+D (6645) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (6645) lwip: lwip_recv_tcp: buflen=8 recv_left=256 off=0
+[0m
+[0;33mW (6635) lwmb: hw: 2008
+[0m
+D (6655) lwip: lwip_send(55) err=0 written=12
+[0m
+D (6655) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbd54
+[0m
+D (6675) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (6665) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (6675) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb96c
+[0m
+[0;33mW (6665) lwmb: Largest free block: 139264
+[0m
+D (6685) lwip: lwip_recv_tcp: buflen=304 recv_left=248 off=8
+[0m
+[0;33mW (6695) lwmb: Free heap: 274480
+[0m
+D (6695) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb96c
+[0m
+D (6705) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (6705) lwip: lwip_recvfrom(56):  addr=[0m
+[0;33mW (6715) lwmb: hw: 2008
+[0m
+D (6715) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (6715) lwip: 127.0.0.1[0m
+D (6725) lwip:  port=1024 len=256
+[0m
+D (6725) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (6715) lwmb: Largest free block: 139264
+[0m
+D (6735) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (6735) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (6755) lwip: lwip_send(56, data=0x3ffbbaf8, size=256, flags=0x0)
+[0m
+D (6745) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (6765) lwip: lwip_send(56) err=0 written=256
+[0m
+D (6765) lwmb: m_send_task: free(0x3ffbbaf0)[0m
+D (6765) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+[0;33mW (6745) lwmb: Free heap: 272748
+[0m
+D (6775) lwip: lwip_select: nready=2
+[0m
+D (6785) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (6785) lwmb: r_select_task: calloc(0x3ffbbaf0)[0m
+[0;33mW (6795) lwmb: hw: 2008
+[0m
+D (6795) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (6795) lwip: lwip_recvfrom(55, 0x3ffbbaf8, 256, 0x0, ..)
+[0m
+D (6815) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb688
+[0m
+D (6805) lwip: lwip_send(55) err=0 written=12
+[0m
+D (6815) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (6825) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb688
+[0m
+D (6825) lwmb: m_send_task: free(0x3ffb7dac)[0m
+[0;33mW (6795) lwmb: Largest free block: 139264
+[0m
+D (6835) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (6845) lwmb: Free heap: 272824
+[0m
+D (6845) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc514
+[0m
+D (6855) lwmb: r_send_req: malloc(0x3ffbc358)[0m
+D (6855) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+[0;33mW (6865) lwmb: hw: 2008
+[0m
+D (6865) lwip: lwip_send(55, data=0x3ffbc360, size=12, flags=0x0)
+[0m
+D (6865) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbc514
+[0m
+[0;33mW (6875) lwmb: Largest free block: 139264
+[0m
+[0;33mW (6885) lwmb: Free heap: 272800
+[0m
+D (6875) lwip: lwip_send(55) err=0 written=12
+[0m
+D (6885) lwip: lwip_recvfrom(55):  addr=[0m
+D (6905) lwip: 127.0.0.1[0m
+D (6895) lwmb: m_send_task: free(0x3ffbc358)[0m
+D (6905) lwip:  port=502 len=256
+[0m
+D (6915) lwip: lwip_send(55, data=0x3ffbbaf8, size=256, flags=0x0)
+[0m
+D (6915) lwmb: r_select_task: calloc(0x3ffbb688)[0m
+D (6925) lwip: lwip_recvfrom(56, 0x3ffbb690, 256, 0x0, ..)
+[0m
+D (6915) lwip: lwip_send(55) err=0 written=256
+[0m
+D (6925) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb96c
+[0m
+D (6945) lwip: lwip_recv_tcp: buflen=56 recv_left=256 off=0
+[0m
+D (6935) lwmb: m_send_task: free(0x3ffbbaf0)[0m
+D (6945) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb96c
+[0m
+D (6955) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (6965) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc9b4
+[0m
+D (6965) lwip: lwip_recv_tcp: buflen=12 recv_left=200 off=56
+[0m
+D (6975) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc9b4
+[0m
+D (6975) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (6985) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb524
+[0m
+D (6995) lwip: lwip_recv_tcp: buflen=268 recv_left=188 off=68
+[0m
+D (6995) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb524
+[0m
+D (6895) lwmb: r_send_req: malloc(0x3ffbc370)[0m
+D (7005) lwip: lwip_recvfrom(56):  addr=[0m
+[0;33mW (7005) lwmb: hw: 2008
+[0m
+D (7005) lwip: lwip_send(55, data=0x3ffbc378, size=12, flags=0x0)
+[0m
+D (7015) lwip: 127.0.0.1[0m
+D (7025) lwip:  port=1024 len=256
+[0m
+D (7025) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7025) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (7035) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (7035) lwmb: m_send_task: free(0x3ffbc370)[0m
+[0;33mW (7015) lwmb: Largest free block: 139264
+[0m
+D (7045) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (7045) lwip: lwip_send(56, data=0x3ffbb690, size=256, flags=0x0)
+[0m
+[0;33mW (7055) lwmb: Free heap: 272808
+[0m
+D (7065) lwip: lwip_send(56) err=0 written=256
+[0m
+D (7065) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7055) lwip: lwip_select: nready=2
+[0m
+D (7075) lwmb: m_send_task: free(0x3ffbb688)[0m
+D (7085) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7085) lwmb: r_select_task: calloc(0x3ffbb95c)[0m
+[0;33mW (7075) lwmb: hw: 2008
+[0m
+D (7095) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7095) lwip: lwip_recvfrom(55, 0x3ffbb964, 256, 0x0, ..)
+[0m
+D (7115) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbc514
+[0m
+D (7105) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (7115) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (7125) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc514
+[0m
+D (7135) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (7135) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb79c
+[0m
+D (7145) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (7155) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb79c
+[0m
+[0;33mW (7105) lwmb: Largest free block: 139264
+[0m
+D (7165) lwip: lwip_recvfrom(55):  addr=[0m
+[0;33mW (7165) lwmb: Free heap: 272864
+[0m
+D (7165) lwip: 127.0.0.1[0m
+D (7165) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7175) lwip:  port=502 len=256
+[0m
+D (7185) lwmb: r_select_task: calloc(0x3ffbb688)[0m
+D (7175) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+[0;33mW (7175) lwmb: hw: 2008
+[0m
+D (7195) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (7195) lwmb: Largest free block: 139264
+[0m
+D (7185) lwip: lwip_recvfrom(56, 0x3ffbb690, 256, 0x0, ..)
+[0m
+D (7195) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (7215) lwip: lwip_send(55, data=0x3ffbb964, size=256, flags=0x0)
+[0m
+D (7205) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb524
+[0m
+[0;33mW (7205) lwmb: Free heap: 272476
+[0m
+D (7225) lwip: lwip_send(55) err=0 written=256
+[0m
+D (7225) lwip: lwip_recv_tcp: buflen=80 recv_left=256 off=0
+[0m
+D (7245) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb524
+[0m
+D (7235) lwmb: m_send_task: free(0x3ffbb95c)[0m
+D (7245) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (7255) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbcf4
+[0m
+D (7265) lwip: lwip_recv_tcp: buflen=12 recv_left=176 off=80
+[0m
+D (7265) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbcf4
+[0m
+D (7275) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (7285) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb8f0
+[0m
+D (7285) lwip: lwip_recv_tcp: buflen=12 recv_left=164 off=92
+[0m
+D (7295) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb8f0
+[0m
+D (7295) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (7305) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc3b0
+[0m
+D (7305) lwip: lwip_recv_tcp: buflen=280 recv_left=152 off=104
+[0m
+D (7315) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbc3b0
+[0m
+D (7235) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7325) lwip: lwip_recvfrom(56):  addr=[0m
+[0;33mW (7325) lwmb: hw: 2008
+[0m
+D (7325) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7335) lwip: 127.0.0.1[0m
+D (7345) lwip:  port=1024 len=256
+[0m
+D (7335) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7345) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (7355) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (7355) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (7335) lwmb: Largest free block: 139264
+[0m
+D (7365) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (7365) lwip: lwip_send(56, data=0x3ffbb690, size=256, flags=0x0)
+[0m
+[0;33mW (7375) lwmb: Free heap: 273180
+[0m
+D (7385) lwip: lwip_send(56) err=0 written=256
+[0m
+D (7385) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7375) lwip: lwip_select: nready=2
+[0m
+D (7395) lwmb: m_send_task: free(0x3ffbb688)[0m
+D (7405) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7405) lwmb: r_select_task: calloc(0x3ffbb8f0)[0m
+[0;33mW (7395) lwmb: hw: 2008
+[0m
+D (7415) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7415) lwip: lwip_recvfrom(55, 0x3ffbb8f8, 256, 0x0, ..)
+[0m
+D (7425) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb79c
+[0m
+D (7425) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (7415) lwmb: Largest free block: 139264
+[0m
+D (7435) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+[0;33mW (7445) lwmb: Free heap: 274084
+[0m
+D (7455) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb79c
+[0m
+D (7455) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7465) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (7465) lwmb: hw: 2008
+[0m
+D (7465) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7475) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc514
+[0m
+D (7485) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (7485) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (7475) lwmb: Largest free block: 139264
+[0m
+D (7495) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbc514
+[0m
+D (7495) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (7505) lwmb: Free heap: 272836
+[0m
+D (7505) lwip: lwip_recvfrom(55):  addr=[0m
+D (7515) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7525) lwip: 127.0.0.1[0m
+[0;33mW (7525) lwmb: hw: 2008
+[0m
+D (7525) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7525) lwip:  port=502 len=256
+[0m
+D (7545) lwmb: r_select_task: calloc(0x3ffbb72c)[0m
+D (7535) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7545) lwip: lwip_recvfrom(56, 0x3ffbb734, 256, 0x0, ..)
+[0m
+D (7555) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbc3b0
+[0m
+D (7545) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (7535) lwmb: Largest free block: 139264
+[0m
+D (7565) lwip: lwip_recv_tcp: buflen=128 recv_left=256 off=0
+[0m
+D (7565) lwip: lwip_send(55, data=0x3ffbb8f8, size=256, flags=0x0)
+[0m
+[0;33mW (7575) lwmb: Free heap: 272584
+[0m
+D (7585) lwip: lwip_send(55) err=0 written=256
+[0m
+D (7585) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7575) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc3b0
+[0m
+D (7595) lwmb: m_send_task: free(0x3ffbb8f0)[0m
+D (7605) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7605) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (7595) lwmb: hw: 2008
+[0m
+D (7615) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7615) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc04
+[0m
+D (7635) lwip: lwip_recv_tcp: buflen=12 recv_left=128 off=128
+[0m
+D (7625) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (7635) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc04
+[0m
+D (7645) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (7655) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc668
+[0m
+D (7665) lwip: lwip_recv_tcp: buflen=280 recv_left=116 off=140
+[0m
+D (7665) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbc668
+[0m
+[0;33mW (7625) lwmb: Largest free block: 139264
+[0m
+[0;33mW (7675) lwmb: Free heap: 273304
+[0m
+D (7685) lwip: lwip_recvfrom(56):  addr=[0m
+D (7685) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7685) lwip: 127.0.0.1[0m
+[0;33mW (7685) lwmb: hw: 2008
+[0m
+D (7685) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7695) lwip:  port=1024 len=256
+[0m
+D (7705) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (7705) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (7695) lwmb: Largest free block: 139264
+[0m
+D (7715) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (7715) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (7735) lwip: lwip_send(56, data=0x3ffbb734, size=256, flags=0x0)
+[0m
+D (7725) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+[0;33mW (7725) lwmb: Free heap: 272772
+[0m
+D (7735) lwip: lwip_send(56) err=0 written=256
+[0m
+D (7745) lwip: lwip_select: nready=2
+[0m
+D (7755) lwmb: r_select_task: calloc(0x3ffbb9ec)[0m
+D (7755) lwmb: m_send_task: free(0x3ffbb72c)[0m
+D (7745) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7765) lwip: lwip_recvfrom(55, 0x3ffbb9f4, 256, 0x0, ..)
+[0m
+[0;33mW (7765) lwmb: hw: 2008
+[0m
+D (7765) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7775) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbc514
+[0m
+D (7795) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (7785) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7795) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc514
+[0m
+D (7805) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (7805) lwmb: m_sefree(0x3ffbb484)[0m
+[0;33mW (7775) lwmb: Largest free block: 139264
+[0m
+D (7815) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb840
+[0m
+[0;33mW (7825) lwmb: Free heap: 272844
+[0m
+D (7825) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (7835) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7835) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb840
+[0m
+[0;33mW (7845) lwmb: hw: 2008
+[0m
+D (7845) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7845) lwip: lwip_recvfrom(55):  addr=[0m
+D (7865) lwip: 127.0.0.1[0m
+D (7855) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7865) lwip:  port=502 len=256
+[0m
+D (7875) lwmb: r_select_task: calloc(0x3ffbb72c)[0m
+D (7865) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (7875) lwip: lwip_recvfrom(56, 0x3ffbb734, 256, 0x0, ..)
+[0m
+D (7885) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbc668
+[0m
+D (7885) lwip: lwip_send(55, data=0x3ffbb9f4, size=256, flags=0x0)
+[0m
+[0;33mW (7855) lwmb: Largest free block: 139264
+[0m
+D (7895) lwip: lwip_recv_tcp: buflen=164 recv_left=256 off=0
+[0m
+D (7895) lwip: lwip_send(55) err=0 written=256
+[0m
+D (7915) lwmb: m_send_task: free(0x3ffbb9ec)[0m
+D (7915) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc668
+[0m
+[0;33mW (7905) lwmb: Free heap: 272572
+[0m
+D (7925) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (7925) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (7935) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbc5c
+[0m
+[0;33mW (7935) lwmb: hw: 2008
+[0m
+D (7935) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (7945) lwip: lwip_recv_tcp: buflen=12 recv_left=92 off=164
+[0m
+D (7965) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbc5c
+[0m
+D (7955) lwip: lwip_send(55) err=0 written=12
+[0m
+D (7965) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (7975) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7efc
+[0m
+D (7975) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (7945) lwmb: Largest free block: 139264
+[0m
+D (7985) lwip: lwip_recv_tcp: buflen=12 recv_left=80 off=176
+[0m
+[0;33mW (7995) lwmb: Free heap: 272932
+[0m
+D (7995) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7efc
+[0m
+D (8005) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (8005) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (8015) lwmb: hw: 2008
+[0m
+D (8015) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (8015) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb524
+[0m
+D (8035) lwip: lwip_recv_tcp: buflen=280 recv_left=68 off=188
+[0m
+D (8025) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8035) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb524
+[0m
+[0;33mW (8025) lwmb: Largest free block: 139264
+[0m
+[0;33mW (8055) lwmb: Free heap: 272996
+[0m
+D (8045) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (8055) lwip: lwip_recvfrom(56):  addr=[0m
+D (8065) lwip: 127.0.0.1[0m
+D (8065) lwip:  port=1024 len=256
+[0m
+D (8075) lwip: lwip_send(56, data=0x3ffbb734, size=256, flags=0x0)
+[0m
+D (8075) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (8085) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (8085) lwip: lwip_send(56) err=0 written=256
+[0m
+D (8055) lwmb: r_send_req: malloc(0x3ffbb688)[0m
+D (8095) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (8095) lwmb: m_send_task: free(0x3ffbb72c)[0m
+D (8115) lwip: lwip_send(55, data=0x3ffbb690, size=12, flags=0x0)
+[0m
+D (8105) lwip: lwip_select: nready=2
+[0m
+[0;33mW (8105) lwmb: hw: 2008
+[0m
+D (8115) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8125) lwmb: r_select_task: calloc(0x3ffbb72c)[0m
+D (8135) lwip: lwip_recvfrom(55, 0x3ffbb734, 256, 0x0, ..)
+[0m
+D (8125) lwmb: m_send_task: free(0x3ffbb688)[0m
+D (8135) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb840
+[0m
+D (8155) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (8155) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb840
+[0m
+D (8165) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (8165) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbbb50
+[0m
+D (8175) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (8175) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbbb50
+[0m
+[0;33mW (8125) lwmb: Largest free block: 139264
+[0m
+[0;33mW (8185) lwmb: Free heap: 274408
+[0m
+D (8195) lwip: lwip_recvfrom(55):  addr=[0m
+D (8195) lwmb: r_send_req: malloc(0x3ffb7f54)[0m
+D (8195) lwip: 127.0.0.1[0m
+[0;33mW (8205) lwmb: hw: 2008
+[0m
+D (8205) lwip: lwip_send(55, data=0x3ffb7f5c, size=12, flags=0x0)
+[0m
+D (8205) lwip:  port=502 len=256
+[0m
+D (8215) lwmb: r_select_task: calloc(0x3ffbb840)[0m
+D (8215) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (8205) lwmb: Largest free block: 139264
+[0m
+D (8225) lwip: lwip_recvfrom(56, 0x3ffbb848, 256, 0x0, ..)
+[0m
+D (8225) lwmb: m_send_task: free(0x3ffb7f54)[0m
+D (8245) lwip: lwip_send(55, data=0x3ffbb734, size=256, flags=0x0)
+[0m
+D (8235) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbb524
+[0m
+[0;33mW (8235) lwmb: Free heap: 272532
+[0m
+D (8245) lwip: lwip_send(55) err=0 written=256
+[0m
+D (8255) lwip: lwip_recv_tcp: buflen=212 recv_left=256 off=0
+[0m
+D (8265) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb524
+[0m
+D (8265) lwmb: m_send_task: free(0x3ffbb72c)[0m
+D (8255) lwmb: r_send_req: malloc(0x3ffb7f54)[0m
+D (8275) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;33mW (8285) lwmb: hw: 2008
+[0m
+D (8285) lwip: lwip_send(55, data=0x3ffb7f5c, size=12, flags=0x0)
+[0m
+D (8285) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb6d4
+[0m
+D (8305) lwip: lwip_recv_tcp: buflen=12 recv_left=44 off=212
+[0m
+D (8295) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (8295) lwmb: Largest free block: 139264
+[0m
+D (8315) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb6d4
+[0m
+D (8315) lwmb: m_send_task: free(0x3ffb7f54)[0m
+[0;33mW (8325) lwmb: Free heap: 273164
+[0m
+D (8325) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (8335) lwmb: r_send_req: malloc(0x3ffb7f54)[0m
+D (8345) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc364
+[0m
+[0;33mW (8345) lwmb: hw: 2008
+[0m
+D (8345) lwip: lwip_send(55, data=0x3ffb7f5c, size=12, flags=0x0)
+[0m
+D (8355) lwip: lwip_recv_tcp: buflen=292 recv_left=32 off=224
+[0m
+D (8365) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbc364
+[0m
+D (8365) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;33mW (8355) lwmb: Largest free block: 139264
+[0m
+D (8375) lwip: lwip_recvfrom(56):  addr=[0m
+D (8375) lwmb: m_send_task: free(0x3ffb7f54)[0m
+[0;33mW (8385) lwmb: Free heap: 274444
+[0m
+D (8385) lwip: 127.0.0.1[0m
+D (8395) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (8395) lwip:  port=1024 len=256
+[0m
+[0;33mW (8405) lwmb: hw: 2008
+[0m
+D (8405) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (8405) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (8425) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (8415) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8425) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (8435) lwip: lwip_select: nready=2
+[0m
+D (8435) lwmb: m_send_task: free(0x3ffbb484)[0m
+[0;33mW (8405) lwmb: Largest free block: 139264
+[0m
+D (8445) lwmb: r_select_task: calloc(0x3ffbb584)[0m
+D (8445) lwip: lwip_send(56, data=0x3ffbb848, size=256, flags=0x0)
+[0m
+[0;33mW (8445) lwmb: Free heap: 274092
+[0m
+D (8465) lwip: lwip_send(56) err=0 written=256
+[0m
+D (8465) lwmb: r_send_req: malloc(0x3ffbb828)[0m
+D (8455) lwip: lwip_recvfrom(55, 0x3ffbb58c, 256, 0x0, ..)
+[0m
+D (8465) lwmb: m_send_task: free(0x3ffbb840)[0m
+D (8485) lwip: lwip_send(55, data=0x3ffbb830, size=12, flags=0x0)
+[0m
+D (8475) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbbb50
+[0m
+[0;33mW (8475) lwmb: hw: 2008
+[0m
+D (8495) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8495) lwip: lwip_recv_tcp: buflen=28 recv_left=256 off=0
+[0m
+D (8515) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbbb50
+[0m
+D (8505) lwmb: m_send_task: free(0x3ffbb828)[0m
+D (8515) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (8525) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbcb40
+[0m
+D (8535) lwip: lwip_recv_tcp: buflen=256 recv_left=228 off=28
+[0m
+D (8535) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbcb40
+[0m
+[0;33mW (8505) lwmb: Largest free block: 139264
+[0m
+[0;33mW (8545) lwmb: Free heap: 274292
+[0m
+D (8555) lwip: lwip_recvfrom(55):  addr=[0m
+D (8555) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (8555) lwip: 127.0.0.1[0m
+[0;32mI (8565) lwmb: time_elapsed: 7580 ms[0m
+D (8565) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (8565) lwip:  port=502 len=256
+[0m
+D (8575) lwmb: r_select_task: calloc(0x3ffbc154)[0m
+D (8575) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8565) lwip: lwip_close(55)
+[0m
+D (8585) lwip: lwip_recvfrom(56, 0x3ffbc15c, 256, 0x0, ..)
+[0m
+D (8585) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (8605) lwip: lwip_send(55, data=0x3ffbb58c, size=256, flags=0x0)
+[0m
+D (8595) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbc364
+[0m
+[0;31mE (8605) lwmb: m_send_task: send(55), b=-1, errno=9[0m
+D (8595) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (8615) lwip: lwip_recv_tcp: buflen=260 recv_left=256 off=0
+[0m
+D (8625) lwip: lwip_socket(PF_INET, SOCK_STREAM, 6) = [0m
+D (8635) lwip: 55
+[0m
+D (8625) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbc364
+[0m
+D (8635) lwip: lwip_bind(55, addr=[0m
+D (8645) lwip: 127.0.0.1[0m
+D (8645) lwip: lwip_recvfrom(56):  addr=[0m
+D (8645) lwip:  port=1024)
+[0m
+D (8625) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (8655) lwip: 105.200.13.128[0m
+D (8655) lwmb: r_send_req: malloc(0x3ffb7f54)[0m
+D (8665) lwip: lwip_bind(55) succeeded
+[0m
+D (8665) lwip:  port=56 len=256
+[0m
+D (8675) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (8675) lwip: lwip_connect(55, addr=[0m
+D (8665) lwmb: r_send_req: malloc(0x3ffb7c78)[0m
+D (8685) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (8685) lwip: 127.0.0.1[0m
+D (8695) lwip:  port=502)
+[0m
+D (8695) lwip: lwip_select: nready=1
+[0m
+D (8695) lwmb: r_send_req: malloc(0x3ffb7d18)[0m
+D (8705) lwip: lwip_connect(55) failed, err=-5
+[0m
+D (8705) lwmb: r_select_task: calloc(0x3ffbbbc0)[0m
+[0;32mI (8715) lwmb: s_conn: connect(55) success[0m
+D (8715) lwip: lwip_recvfrom(56, 0x3ffbbbc8, 256, 0x0, ..)
+[0m
+D (8725) lwmb: m_send_task: free(0x3ffbb584)[0m
+D (8725) lwip: lwip_recv_tcp: top while sock->lastdata=0x3ffbc364
+[0m
+D (8735) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (8735) lwip: lwip_recv_tcp: buflen=4 recv_left=256 off=0
+[0m
+D (8755) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc364
+[0m
+D (8745) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8755) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (8765) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb994
+[0m
+D (8765) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (8735) lwmb: r_send_req: malloc(0x3ffb7d30)[0m
+D (8775) lwip: lwip_recv_tcp: buflen=12 recv_left=252 off=4
+[0m
+D (8775) lwip: 55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (8785) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (8795) lwip: lwip_send(55)  written=12
+[0m
+D (8785) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb994
+[0m
+D (8805) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (8805) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (8815) lwip: lwip_send(55, data=0x3ffb7f5c, size=12, flags=0x0)
+[0m
+D (8815) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb9ec
+[0m
+D (8835) lwip: lwip_recv_tcp: buflen=280 recv_left=240 off=16
+[0m
+D (8825) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8835) lwip: lwip_recv_tcp: lastdata now pbuf=0x3ffbb9ec
+[0m
+D (8815) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (8845) lwmb: m_send_task: free(0x3ffb7f54)[0m
+D (8855) lwip: lwip_recvfrom(56):  addr=[0m
+D (8855) lwip: lwip_send(56, data=0x3ffbc15c, size=256, flags=0x0)
+[0m
+D (8865) lwip: 105.200.13.128[0m
+D (8875) lwip:  port=56 len=256
+[0m
+D (8865) lwip: lwip_send(56) err=-14 written=0
+[0m
+D (8865) lwmb: r_send_req: malloc(0x3ffb7d00)[0m
+[0;31mE (8875) lwmb: m_send_task: send(56), b=-1, errno=104[0m
+D (8885) lwip: lwip_close(56)
+[0m
+[0;32mI (8895) lwmb: rt_remove(0x3ffb7d5c): removed remote entry w/ s=56[0m
+D (8895) lwmb: st_pop: free(0x3ffb7a04)[0m
+D (8905) lwmb: r_disconn(0x3ffb7d5c): free(0x3ffb7d5c)[0m
+D (8905) lwmb: m_send_task: free(0x3ffbc154)[0m
+D (8915) lwip: lwip_send(55, data=0x3ffb7c80, size=12, flags=0x0)
+[0m
+D (8915) lwip: lwip_select(56, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (8915) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8925) lwip: lwip_selscan: fd=54 ready for reading
+[0m
+D (8935) lwmb: m_send_task: free(0x3ffb7c78)[0m
+D (8935) lwip: lwip_select: nready=1
+[0m
+D (8935) lwip: lwip_send(55, data=0x3ffb7d20, size=12, flags=0x0)
+[0m
+D (8945) lwip: lwip_accept(54)...
+[0m
+D (8955) lwip: lwip_accept(54) returning new sock=56
+[0m
+D (8945) lwip: lwip_send(55) err=0 written=12
+[0m
+[0;32mI (8955) lwmb: r_select_task: opened socket: 56[0m
+D (8965) lwmb: r_select_task: calloc(0x3ffb7efc)[0m
+D (8965) lwmb: m_send_task: free(0x3ffb7d18)[0m
+D (8945) lwmb: r_send_req: malloc(0x3ffb7c78)[0m
+D (8975) lwmb: rt_push: calloc(0x3ffb7a04)[0m
+D (8975) lwip: lwip_send(55, data=0x3ffb7d38, size=12, flags=0x0)
+[0m
+D (8985) lwmb: r_send_req: malloc(0x3ffb7d18)[0m
+D (8995) lwip: lwip_send(55) err=0 written=12
+[0m
+D (8985) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (9005) lwmb: m_send_task: free(0x3ffb7d30)[0m
+D (9005) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (9015) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (9015) lwip: lwip_select: nready=1
+[0m
+D (9025) lwmb: r_select_task: calloc(0x3ffbb8e8)[0m
+D (9025) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9015) lwmb: r_send_req: malloc(0x3ffb7d30)[0m
+D (9035) lwip: lwip_recvfrom(56, 0x3ffbb8f0, 256, 0x0, ..)
+[0m
+D (9035) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (9045) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (9055) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (9055) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (9065) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9055) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7c90
+[0m
+D (9075) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (9075) lwip: lwip_recv_tcp: buflen=12 recv_left=256 off=0
+[0m
+D (9085) lwip: lwip_send(0, data=0x3ffbbbc8, size=256, flags=0x0)
+[0m
+D (9085) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7c90
+[0m
+D (9105) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (9095) lwip: tryget_socket_unconn(0): invalid
+[0m
+D (9105) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7f48
+[0m
+D (9115) lwip: lwip_recv_tcp: buflen=48 recv_left=244 off=12
+[0m
+D (9115) lwip: get_socket(0): invalid
+[0m
+D (9085) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (9125) lwip: lwip_recv_tcp: deleting pbuf=0x3ffb7f48
+[0m
+[0;31mE (9125) lwmb: m_send_task: send(0), b=-1, errno=9[0m
+D (9135) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+[0;31mE (9145) lwmb: rt_remove(0x3ffb7d5c): no matching entry found[0m
+D (9145) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (9155) lwmb: m_send_task: free(0x3ffbbbc0)[0m
+D (9165) lwip: lwip_recvfrom(56):  addr=[0m
+D (9165) lwip: lwip_send(55, data=0x3ffb7d08, size=12, flags=0x0)
+[0m
+D (9165) lwmb: r_send_req: malloc(0x3ffb7c90)[0m
+D (9165) lwip: 127.0.0.1[0m
+D (9185) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9185) lwip:  port=1024 len=60
+[0m
+D (9185) lwmb: m_send_task: free(0x3ffb7d00)[0m
+D (9195) lwip: lwip_send(55, data=0x3ffb7c80, size=12, flags=0x0)
+[0m
+D (9205) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9205) lwmb: m_send_task: free(0x3ffb7c78)[0m
+D (9215) lwip: lwip_send(55, data=0x3ffb7d20, size=12, flags=0x0)
+[0m
+D (9215) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (9215) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9225) lwmb: m_send_task: free(0x3ffb7d18)[0m
+D (9225) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (9205) lwmb: r_send_req: malloc(0x3ffb7d70)[0m
+D (9235) lwip: lwip_send(55, data=0x3ffb7d38, size=12, flags=0x0)
+[0m
+D (9235) lwip: lwip_select: nready=1
+[0m
+D (9255) lwmb: r_select_task: calloc(0x3ffbb524)[0m
+D (9245) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9255) lwip: lwip_recvfrom(56, 0x3ffbb52c, 256, 0x0, ..)
+[0m
+D (9265) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (9265) lwmb: m_send_task: free(0x3ffb7d30)[0m
+D (9245) lwmb: r_send_req: malloc(0x3ffb7cc0)[0m
+D (9275) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbb9fc
+[0m
+D (9275) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (9285) lwmb: r_send_req: malloc(0x3ffb7c78)[0m
+D (9295) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9285) lwip: lwip_recv_tcp: buflen=48 recv_left=256 off=0
+[0m
+D (9305) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (9305) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbb9fc
+[0m
+D (9315) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (9315) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (9335) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (9325) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9315) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (9335) lwip: lwip_recvfrom(56):  addr=[0m
+D (9345) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (9355) lwip: 127.0.0.1[0m
+D (9355) lwip: lwip_send(55, data=0x3ffb7c98, size=12, flags=0x0)
+[0m
+D (9355) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (9365) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9355) lwip:  port=1024 len=48
+[0m
+D (9375) lwmb: m_send_task: free(0x3ffb7c90)[0m
+D (9385) lwip: lwip_send(56, data=0x3ffbb8f0, size=60, flags=0x0)
+[0m
+D (9385) lwmb: r_send_req: malloc(0x3ffb7c90)[0m
+D (9385) lwip: lwip_send(56) err=0 written=60
+[0m
+D (9395) lwmb: m_send_task: free(0x3ffbb8e8)[0m
+D (9405) lwip: lwip_send(55, data=0x3ffb7d78, size=12, flags=0x0)
+[0m
+D (9405) lwip: lwip_select(57, 0x3ffb8f74, 0x0, 0x0, tvsec=0 tvusec=10000)
+[0m
+D (9405) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9415) lwip: lwip_selscan: fd=55 ready for reading
+[0m
+D (9415) lwmb: m_send_task: free(0x3ffb7d70)[0m
+D (9425) lwip: lwip_selscan: fd=56 ready for reading
+[0m
+D (9425) lwip: lwip_send(55, data=0x3ffb7cc8, size=12, flags=0x0)
+[0m
+D (9435) lwip: lwip_select: nready=2
+[0m
+D (9445) lwmb: r_select_task: calloc(0x3ffbb638)[0m
+D (9435) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9445) lwip: lwip_recvfrom(55, 0x3ffbb640, 256, 0x0, ..)
+[0m
+D (9455) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (9455) lwmb: m_send_task: free(0x3ffb7cc0)[0m
+D (9435) lwmb: r_send_req: malloc(0x3ffb7d70)[0m
+D (9465) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffbc1c4
+[0m
+D (9465) lwip: lwip_send(55, data=0x3ffb7c80, size=12, flags=0x0)
+[0m
+D (9475) lwmb: r_send_req: malloc(0x3ffbc250)[0m
+D (9485) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9475) lwip: lwip_recv_tcp: buflen=60 recv_left=256 off=0
+[0m
+D (9495) lwmb: m_send_task: free(0x3ffb7c78)[0m
+D (9505) lwip: lwip_recv_tcp: deleting pbuf=0x3ffbc1c4
+[0m
+D (9505) lwip: lwip_send(55, data=0x3ffb7db4, size=12, flags=0x0)
+[0m
+D (9505) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (9525) lwip: lwip_recv_tcp: netconn_recv err=-7, pbuf=0x0
+[0m
+D (9515) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9515) lwmb: r_send_req: malloc(0x3ffb7c78)[0m
+D (9525) lwip: lwip_recvfrom(55):  addr=[0m
+D (9535) lwmb: m_send_task: free(0x3ffb7dac)[0m
+D (9545) lwip: 127.0.0.1[0m
+D (9545) lwip: lwip_send(55, data=0x3ffbb48c, size=12, flags=0x0)
+[0m
+D (9545) lwmb: r_send_req: malloc(0x3ffb7dac)[0m
+D (9555) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9545) lwip:  port=502 len=60
+[0m
+D (9565) lwmb: m_send_task: free(0x3ffbb484)[0m
+D (9575) lwip: lwip_send(56, data=0x3ffbb52c, size=48, flags=0x0)
+[0m
+D (9575) lwmb: r_send_req: malloc(0x3ffbb484)[0m
+D (9575) lwip: lwip_send(56) err=0 written=48
+[0m
+D (9585) lwmb: m_send_task: free(0x3ffbb524)[0m
+D (9595) lwip: lwip_send(55, data=0x3ffb7c98, size=12, flags=0x0)
+[0m
+D (9595) lwmb: r_select_task: calloc(0x3ffbb524)[0m
+D (9595) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9605) lwip: lwip_recvfrom(56, 0x3ffbb52c, 256, 0x0, ..)
+[0m
+D (9605) lwmb: m_send_task: free(0x3ffb7c90)[0m
+D (9615) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (9615) lwip: lwip_send(55, data=0x3ffb7d78, size=12, flags=0x0)
+[0m
+D (9625) lwip: lwip_recv_tcp: netconn_recv err=0, pbuf=0x3ffb7f28
+[0m
+D (9635) lwip: lwip_recv_tcp: buflen=72 recv_left=256 off=0
+[0m
+D (9625) lwip: lwip_send(55) err=0 written=12
+[0m
+D (9625) lwmb: r_send_req: malloc(0x3ffb7c90)[0m
+D (9645) lwip: lwip_recv_tcpd_task: free(0x3ffb7d70)[0m
+D (9655) lwip: lwip_recv_tcp: top while sock->lastdata=0x0
+[0m
+D (9655) lwip: lwip_send(55, data=0x3ffbc258, size=12, flags=0x0)
+[0m
+D (9655) lwmb: r_send_req: malloc(0x3ffb7d70)[0m

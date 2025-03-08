@@ -1,0 +1,536 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb_tx_dv3/build/mcmb_tx_dv3.elf /home/davey_schoe/esp/mcmb_tx_dv3/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/esp-idf/tools/idf.py'
+18) spi_flash: detected ch�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1428-g0f0068fff3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  4 2025 13:12:12[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=10778h ( 67448) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=000207a0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=000207c4 vaddr=3ffb0000 size=0238ch (  9100) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00022b58 vaddr=40080000 size=0d28ch ( 53900) load[0m
+[0;32mI (144) esp_image: segment 4: paddr=0002fdec vaddr=00000000 size=0022ch (   556) [0m
+[0;32mI (144) esp_image: segment 5: paddr=00030020 vaddr=400d0020 size=2b380h (177024) map[0m
+[0;32mI (214) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (214) boot: Disabling RNG early entropy source...[0m
+[0;32mI (225) cpu_start: Multicore app[0m
+[0;32mI (233) cpu_start: Pro cpu start user code[0m
+[0;32mI (233) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (233) app_init: Application information:[0m
+[0;32mI (236) app_init: Project name:     mcmb_tx_dv3[0m
+t: App version:      1[0m
+[0;32mI (246) app_init: Compile time:     Mar  4 2025 13:12:11[0m
+[0;32mI (252) app_init: ELF file SHA256:  0f95d9487...[0m
+[0;32mI (257) app_init: ESP-IDF:          v5.5-dev-1428-g0f0068fff3-dirty[0m
+[0;32mI (264) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (269) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (274) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (279) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (286) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFB3778 len 0002C888 (178 KiB): DRAM[0m
+[0;32mI (298) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+I (304) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (311) heap_init: At 4008D28C len 00012D74 (75 KiB): IRAM[0m
+[0;32mI (318) spi_flash: detected chip: generic[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (326) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (339) main_task: Started on CPU0[0m
+[0;32mI (349) main_task: Calling app_main()[0m
+[0;32mI (349) lwmb: s_conn: connect(55)[0m
+[0;32mI (349) lwmb: r_select_task: opened socket: 56[0m
+[0;32mI (359) lwmb: hw: 2088
+[0m
+[0;32mI (359) lwmb: Largest free block: 147456
+[0m
+[0;32mI (359) lwmb: Free heap: 278124
+[0m
+[0;32mI (359) lwmb: hw: 2088
+[0m
+[0;32mI (369) lwmb: Largest free block: 139264
+[0m
+[0;32mI (369) lwmb: Free heap: 276140
+[0m
+[0;32mI (379) lwmb: hw: 2088
+[0m
+[0;32mI (379) lwmb: Largest free block: 147456
+[0m
+[0;32mI (379) lwmb: Free heap: 277804
+[0m
+[0;32mI (389) lwmb: hw: 2088
+[0m
+[0;32mI (389) lwmb: Largest free block: 139264
+[0m
+[0;32mI (399) lwmb: Free heap: 277656
+[0m
+[0;32mI (399) lwmb: hw: 2088
+[0m
+[0;32mI (399) lwmb: Largest free block: 147456
+[0m
+[0;32mI (409) lwmb: Free heap: 274400
+[0m
+[0;32mI (409) lwmb: hw: 2088
+[0m
+[0;32mI (419) lwmb: Largest free block: 147456
+[0m
+[0;32mI (419) lwmb: Free heap: 277604
+[0m
+[0;32mI (419) lwmb: hw: 2088
+[0m
+[0;32mI (429) lwmb: Largest free block: 147456
+[0m
+[0;32mI (429) lwmb: Free 
+[0m
+[0;32mI (439) lwmb: hw: 
+[0m
+[0;32mI (439) lwmb: Larg439) lwmb: Free heap: 277284
+[32mI (449) lwmb: hw: 2088
+[0m9264
+[0m
+[0;32mI (459) lwmb: Free heap: 275640
+[0m
+[0;32mI (459) lwmb: hw: 2088
+[0m
+[0;32mI (469) lwmb: Largest free block: 139264
+[0m
+[0;32mI (469) lwmb: Free heap: 274128
+[0m
+[0;32mI (469) lwmb: hw: 2088
+[0m
+[0;32mI (479) lwmb: Largest free block: 147456
+[0m
+[0;32mI (479) lwmb: Free heap: 276832
+[0m
+[0;32mI (479) lwm 1992
+[0m
+[0;32mI (489) lwmblwmb: Free heap: 276772
+[0m
+[0;32mI (499) lwmb: hw: 1992
+[0m
+[0;32mI (499) lwmb: Largest free block: 139264
+[0m
+[0;32mI (509) lwmb: Free heap: 274740
+[0m
+[0;32mI (509) lwmb: hw: 1992
+[0m
+[0;32mI (509) lwmb: Largest free block: 139264
+[0m
+[0;32mI (519) lwmb: Free heap: 276404
+[0m
+[0;32mI (519) lwmb: hw: 1992
+[0m
+[0;32mI (529) lwmb: Largest free block: 139264
+[0m
+[0;32mI (529) lwmb: Free heap: 274340
+[0m
+[0;32mI (529) lwmb: hw: 1992
+[0m
+[0;32mI (529) lwmb: Largest free block: 139264
+[0m
+[0;32mI (539) lwmb: Free heap: 274408
+[0m
+[0;32mI (539) lwmb: hw: 1992
+[0m
+[0;32mI (549) lwmb: Largest free block: 139264
+[0m
+[0;32mI (549) lwmb: Free heap: 272804
+[0m
+[0;32mI (559) lwmb: hw: 1992
+[0m
+[0;32mI (559) lwmb: Largest free block: 139264
+[0m
+[0;32mI (559) lwmb: Free heap: 274424
+[0m
+[0;32mI (569) lwmb: hw: 1992
+[0m
+[0;32mI (569) lwmb: Largest free block: 139264
+[0m
+[0;32mI (579) lwmb: Free heap: 274400
+[0m
+[0;32mI (579) lwmb: hw: 1992
+[0m
+[0;32mI (579) lwmb: Largest free block: 139264
+[0m
+[0;32mI (589) lwmb: Free heap: 274372
+[0m
+[0;32mI (599) lwmb: hw: 1992
+[0m
+[0;32mI (599) lwmb: Largest free block: 139264
+[0m
+[0;32mI (599) lwmb: Free heap: 272864
+[0m
+[0;32mI (599) lwmb: hw: 1992
+[0m
+[0;32mI (609) lwmb: Largest free block: 139264
+[0m
+[0;32mI (609) lwmb: Free heap: 276024
+[0m
+[0;32mI (619) lwmb: hw: 1992
+[0m
+[0;32mI (619) lwmb: Largest free block: 139264
+[0m
+[0;32mI (619) lwmb: Free heap: 274388
+[0m
+[0;32mI (629) lwmb: hw: 1992
+[0m
+[0;32mI (629) lwmb: Largest free block: 139264
+[0m
+[0;32mI (639) lwmb: Free heap: 274148
+[0m
+[0;32mI (639) lwmb: hw: 1992
+[0m
+[0;32mI (639) lwmb: Largest free block: 139264
+[0m
+[0;32mI (649) lwmb: Free heap: 272696
+[0m
+[0;32mI (649) lwmb: hw: 1992
+[0m
+[0;32mI (649) lwmb: Largest free block: 139264
+[0m
+[0;32mI (659) lwmb: Free heap: 273988
+[0m
+[0;32mI (669) lwmb: hw: 1992
+[0m
+[0;32mI (669) lwmb: Largest free block: 139264
+[0m
+[0;32mI (669) lwmb: Free heap: 274084
+[0m
+[0;32mI (679) lwmb: hw: 1992
+[0m
+[0;32mI (679) lwmb: Largest free block: 147456
+[0m
+[0;32mI (679) lwmb: Free heap: 272948
+[0m
+[0;32mI (689) lwmb: hw: 1992
+[0m
+[0;32mI (689) lwmb: Largest free block: 139264
+[0m
+[0;32mI (699) lwmb: Free heap: 274272
+[0m
+[0;32mI (719) lwmb: hw: 1992
+[0m
+[0;32mI (719) lwmb: Largest free block: 139264
+[0m
+[0;32mI (729) lwmb: Free heap: 274184
+[0m
+[0;32mI (729) lwmb: hw: 1992
+[0m
+[0;32mI (729) lwmb: Largest free block: 139264
+[0m
+[0;32mI (729) lwmb: Free heap: 275636
+[0m
+[0;32mI (739) lwmb: hw: 1992
+[0m
+[0;32mI (739) lwmb: Largest free block: 139264
+[0m
+[0;32mI (749) lwmb: Free heap: 270940
+[0m
+[0;32mI (749) lwmb: hw: 1992
+[0m
+[0;32mI (749) lwmb: Largest free block: 147456
+[0m
+[0;32mI (759) lwmb: Free heap: 275592
+[0m
+[0;32mI (759) lwmb: hw: 1992
+[0m
+[0;32mI (769) lwmb: Largest free block: 139264
+[0m
+[0;32mI (769) lwmb: Free heap: 274100
+[0m
+[0;32mI (769) lwmb: hw: 1992
+[0m
+[0;32mI (779) lwmb: Largest free block: 139264
+[0m
+[0;32mI (779) lwmb: Free heap: 275328
+[0m
+[0;32mI (789) lwmb: hw: 1992
+[0m
+[0;32mI (789) lwmb: Largest free block: 147456
+[0m
+[0;32mI (789) lwmb: Free heap: 272460
+[0m
+[0;32mI (799) lwmb: hw: 1992
+[0m
+[0;32mI (799) lwmb: Largest free block: 139264
+[0m
+[0;32mI (809) lwmb: Free heap: 273740
+[0m
+[0;32mI (809) lwmb: hw: 1992
+[0m
+[0;32mI (809) lwmb: Largest free block: 139264
+[0m
+[0;32mI (819) lwmb: Free heap: 273772
+[0m
+[0;32mI (819) lwmb: hw: 1992
+[0m
+[0;32mI (829) lwmb: Largest free block: 139264
+[0m
+[0;32mI (829) lwmb: Free heap: 272684
+[0m
+[0;32mI (829) lwmb: hw: 1992
+[0m
+[0;32mI (839) lwmb: Largest free block: 139264
+[0m
+[0;32mI (839) lwmb: Free heap: 273892
+[0m
+[0;32mI (849) lwmb: hw: 1992
+[0m
+[0;32mI (849) lwmb: Largest free block: 139264
+[0m
+[0;32mI (849) lwmb: Free heap: 274064
+[0m
+[0;32mI (859) lwmb: hw: 1992
+[0m
+[0;32mI (859) lwmb: Largest free block: 139264
+[0m
+[0;32mI (869) lwmb: Free heap: 273920
+[0m
+[0;32mI (869) lwmb: hw: 1992
+[0m
+[0;32mI (869) lwmb: Largest free block: 139264
+[0m
+[0;32mI (879) lwmb: Free heap: 271948
+[0m
+[0;32mI (879) lwmb: hw: 1992
+[0m
+[0;32mI (889) lwmb: Largest free block: 139264
+[0m
+[0;32mI (889) lwmb: Free heap: 268860
+[0m
+[0;32mI (899) lwmb: hw: 1992
+[0m
+[0;32mI (909) lwmb: Largest free block: 139264
+[0m
+[0;32mI (909) lwmb: Free heap: 272500
+[0m
+[0;32mI (909) lwmb: hw: 1992
+[0m
+[0;32mI (909) lwmb: Largest free block: 139264
+[0m
+[0;32mI (919) lwmb: Free heap: 273784
+[0m
+[0;32mI (929) lwmb: hw: 1992
+[0m
+[0;32mI (929) lwmb: Largest free block: 139264
+[0m
+[0;32mI (929) lwmb: Free heap: 275240
+[0m
+[0;32mI (929) lwmb: hw: 1992
+[0m
+[0;32mI (939) lwmb: Largest free block: 139264
+[0m
+[0;32mI (939) lwmb: Free heap: 275340
+[0m
+[0;32mI (939) lwmb: hw: 1992
+[0m
+[0;32mI (949) lwmb: Largest free block: 139264
+[0m
+[0;32mI (949) lwmb: Free heap: 273808
+[0m
+[0;32mI (959) lwmb: hw: 1992
+[0m
+[0;32mI (959) lwmb: Largest free block: 139264
+[0m
+[0;32mI (959) lwmb: Free heap: 275132
+[0m
+[0;32mI (969) lwmb: hw: 1992
+[0m
+[0;32mI (969) lwmb: Largest free block: 139264
+[0m
+[0;32mI (979) lwmb: Free heap: 274976
+[0m
+[0;32mI (999) lwmb: hw: 1992
+[0m
+[0;32mI (1009) lwmb: Largest free block: 139264
+[0m
+[0;32mI (1009) lwmb: Free heap: 273840
+[0m
+[0;32mI (1009) lwmb: hw: 1992
+[0m
+[0;32mI (1009) lwmb: Largest free block: 139264
+[0m
+[0;32mI (1009) lwmb: Free heap: 268872
+[0m
+[0;32mI (1029) lwmb: hw: 1992
+[0m
+[0;32mI (1029) lwmb: Largest free block: 131072
+[0m
+[0;32mI (1029) lwmb: Free heap: 267376
+[0m
+[0;32mI (1029) lwmb: hw: 1992
+[0m
+[0;32mI (1029) lwmb: Largest free block: 131072
+[0m
+[0;32mI (1039) lwmb: Free heap: 257700
+[0m
+[0;32mI (1049) lwmb: hw: 1992
+[0m
+[0;32mI (1049) lwmb: Largest free block: 122880
+[0m
+[0;32mI (1049) lwmb: Free heap: 257948
+[0m
+[0;32mI (1059) lwmb: hw: 1992
+[0m
+[0;32mI (1069) lwmb: Largest free block: 118784
+[0m
+[0;32mI (1069) lwmb: Free heap: 250332
+[0m
+[0;32mI (2099) lwmb: hw: 1992
+[0m
+[0;32mI (2099) lwmb: Largest free block: 118784
+[0m
+[0;32mI (2099) lwmb: Free heap: 260792
+[0m
+[0;32mI (2099) lwmb: hw: 1992
+[0m
+[0;32mI (2099) lwmb: Largest free block: 118784
+[0m
+[0;32mI (2109) lwmb: Free heap: 251392
+[0m
+[0;32mI (2109) lwmb: hw: 1992
+[0m
+[0;32mI (2119) lwmb: Largest free block: 118784
+[0m
+[0;32mI (2119) lwmb: Free heap: 250016
+[0m
+[0;32mI (3609) lwmb: hw: 1992
+[0m
+[0;32mI (3609) lwmb: Largest free block: 118784
+[0m
+[0;32mI (3609) lwmb: Free heap: 250344
+[0m
+[0;32mI (5099) lwmb: hw: 1992
+[0m
+[0;32mI (5099) lwmb: Largest free block: 118784
+[0m
+[0;32mI (5099) lwmb: Free heap: 257604
+[0m
+[0;32mI (5099) lwmb: hw: 1992
+[0m
+[0;32mI (5109) lwmb: Largest free block: 118784
+[0m
+[0;32mI (5109) lwmb: Free heap: 249324
+[0m
+[0;32mI (6599) lwmb: hw: 1992
+[0m
+[0;32mI (6599) lwmb: Largest free block: 118784
+[0m
+[0;32mI (6599) lwmb: Free heap: 257980
+[0m
+[0;32mI (6599) lwmb: hw: 1992
+[0m
+[0;32mI (6609) lwmb: Largest free block: 118784
+[0m
+[0;32mI (6609) lwmb: Free heap: 248644
+[0m
+[0;32mI (8109) lwmb: hw: 1992
+[0m
+[0;32mI (8109) lwmb: Largest free block: 118784
+[0m
+[0;32mI (8109) lwmb: Free heap: 250492
+[0m
+[0;32mI (9599) lwmb: hw: 1992
+[0m
+[0;32mI (9599) lwmb: Largest free block: 114688
+[0m
+[0;32mI (9599) lwmb: Free heap: 259220
+[0m
+[0;32mI (9609) lwmb: hw: 1992
+[0m
+[0;32mI (9609) lwmb: Largest free block: 114688
+[0m
+[0;32mI (9609) lwmb: Free heap: 248084
+[0m
+[0;32mI (9619) lwmb: hw: 1992
+[0m
+[0;32mI (9619) lwmb: Largest free block: 110592
+[0m
+[0;32mI (9619) lwmb: Free heap: 235680
+[0m
+[0;32mI (9629) lwmb: hw: 1992
+[0m
+[0;32mI (9629) lwmb: Largest free block: 110592
+[0m
+[0;32mI (9639) lwmb: Free heap: 239028
+[0m
+[0;32mI (11099) lwmb: hw: 1992
+[0m
+[0;32mI (11099) lwmb: Largest free block: 110592
+[0m
+[0;32mI (11099) lwmb: Free heap: 248956
+[0m
+[0;32mI (11109) lwmb: hw: 1992
+[0m
+[0;32mI (11109) lwmb: Largest free block: 110592
+[0m
+[0;32mI (11109) lwmb: Free heap: 244144
+[0m
+[0;32mI (11119) lwmb: hw: 1992
+[0m
+[0;32mI (11119) lwmb: La: Free heap: 238808
+[0m
+[0;32mI (12609) lwmb: hw: 1992
+[0m
+[0;32mI (12609) lwmb: Largest free block: 110592
+[0m
+[0;32mI (12609) lwmb: Free heap: 245312
+[0m
+[0;32mI (12609) lwmb: hw: 1992
+[0m
+[0;32mI (12609) lwmb: Largest free block: 110592
+[0m
+[0;32mI (12619) lwmb: Free heap: 240460
+[0m
+[0;32mI (14099) lwmb: hw: 1992
+[0m
+[0;32mI (14099) lwmb: Largest free block: 110592
+[0m
+[0;32mI (14099) lwmb: Free heap: 259012
+[0m
+[0;32mI (14109) lwmb: hw: 1992
+[0m
+[0;32mI (14109) lwmb: Largest free block: 110592
+[0m
+[0;32mI (14109) lwmb: Free heap: 250460
+[0m
+[0;32mI (15599) lwmb: hw: 1992
+[0m
+[0;32mI (15599) lwmb: Largest free block: 114688
+[0m
+[0;32mI (15599) lwmb: Free heap: 245484
+[0m
+[0;32mI (15599) lwmb: hw: 1992
+[0m
+[0;32mI (15609) lwmb: Largest free block: 110592
+[0m
+[0;32mI (15609) lwmb: Free heap: 240712
+[0m
+[0;32mI (17099) lwmb: hw: 1992
+[0m
+[0;32mI (17099) lwmb: Largest free block: 110592
+[0m
+[0;32mI (17099) lwmb: Free heap: 256440
+[0m
+[0;32mI (17099) lwmb: hw: 1992
+[0m
+[0;32mI (17109) lwmb: Largest free block: 110592
+[0m
+[0;32mI (17109) lwmb: Free heap: 249768
+[0m

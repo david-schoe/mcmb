@@ -1,0 +1,27 @@
+menu "Configuration"
+	config ESP_WIFI_SSID
+		string "WiFi SSID"
+		default "MASTER"
+		help
+			SSID to connect to.
+
+	config ESP_WIFI_PASS
+		string "WiFi Password"
+		default ".',/;[=-]'"
+		help
+			WiFi password (WPA or WPA2) to use.
+
+	config ESP_WIFI_CHAN
+		int "WiFi Channel"
+		range 1 14
+		default 1
+		help
+			WiFi channel (frequency band) to use.
+
+	config ESP_MAX_STA
+		int "Maximum STA connections"
+		default 4
+		help
+			Max number of STAs that can connect to the AP
+
+endmenu
