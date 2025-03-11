@@ -1,14 +1,7 @@
-#ifndef START_UP_ETH_H
-#define START_UP_ETH_H
+#ifndef ETH_H
+#define ETH_H
 
-#include "esp_netif.h"
-#include "esp_eth_netif_glue.h"
-#include "driver/gpio.h"
-#include "esp_eth_mac_spi.h"
-#include "esp_eth_phy.h"
-#include "esp_log.h"
-#include "esp_mac.h"
-#include "lwip/ip4_addr.h"
+#include "esp.h"
 
 #define SPI_BUS SPI2_HOST
 #define MISO_IO_NUM 12
@@ -26,6 +19,6 @@
 
 
 
-esp_netif_t *start_up_eth(void);
+esp_netif_t *start_eth(void);
 
 #endif

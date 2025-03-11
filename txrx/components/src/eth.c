@@ -1,8 +1,8 @@
-#include "start_up_eth.h"
+#include "eth.h"
 
-#define TAG "start_up_eth"
+#define TAG "eth"
 
-esp_netif_t *start_up_eth(void){
+esp_netif_t *start_eth(void){
 
     eth_mac_config_t eth_mac_cfg = ETH_MAC_DEFAULT_CONFIG();
     eth_phy_config_t eth_phy_cfg = ETH_PHY_DEFAULT_CONFIG();

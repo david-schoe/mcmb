@@ -1,7 +1,12 @@
-#include "start_up_netif.h"
-#include "start_up_eth.h"
-#include "start_up_wifi.h"
+#include "netif.h"
+#include "eth.h"
+#include "wlan.h"
+#include "httpd.h"
+#include "html.h"
+#include "nvs.h"
 #include "h.h"
+
+#define TAG "mcmb"
 
 struct h *h;
 struct r *rl;
@@ -20,12 +25,16 @@ void recvd_resp_cb(struct a *ia) {
         time_elapsed = pdTICKS_TO_MS(xTaskGetTickCount());
     }
     // r_send_req(rc,ntohs(ia->tid)+1,w_pdu1,10);
-    // a_dump(ia);
+    a_dump(ia);
     free(ia);
 }
 
 void app_main(void){
-    start_up_netif();
+    start_netif();
+    start_nvs();
+    start_wlan();
+    start_httpd();
+
     //start_up_wifi();
     //esp_netif_t *eth = start_up_eth();
 
