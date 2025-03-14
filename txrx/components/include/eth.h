@@ -10,7 +10,7 @@
 #define SPICS_IO_NUM 15
 #define INT_IO_NUM 16
 #define RST_IO_NUM 17
-#define CLOCK_SPEED_HZ 8000000
+#define CLOCK_SPEED_HZ 16000000
 
 #define ETH_MAC_ADDR_ESP_32 "daveys"
 #define ETH_IP_ADDR_ESP_32 "192.168.1.1"

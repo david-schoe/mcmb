@@ -67,7 +67,7 @@ esp_netif_t *start_eth(void){
     ip4addr_aton(ETH_NM_ESP_32,(ip4_addr_t*)&eth_ip_info.netmask);
     esp_netif_set_ip_info(eth,&eth_ip_info);
 
-    // start up ethernet
+    // start ethernet
     esp_eth_start(eth_hdl);
 
 

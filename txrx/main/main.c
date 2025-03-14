@@ -31,16 +31,16 @@ void recvd_resp_cb(struct a *ia) {
 
 void app_main(void){
     start_netif();
-    start_nvs();
-    start_wlan();
-    start_httpd();
+    // start_nvs();
+    // start_wlan();
+    // start_httpd();
+    // start_eth();
 
-    //start_up_wifi();
-    //esp_netif_t *eth = start_up_eth();
+
+
+
 
     //start up modbus
-
-
     // create a read request pdu
     r_pdu0 = (uint8_t*)malloc(5);
     uint8_t f0 = 3;

@@ -496,32 +496,34 @@ void r_dump(struct r *r) {
 
 int r_conn(struct r *r) {
 
+    conn:
+
     if ((r->ba[0] == 16) || (r->ca[0] == 16)) {
 
         // remote is user created
         if (r_socket(r) < 0) {
-            return -1;
+            goto conn;
         }
     }
     if (r->ba[0] == 16) {
 
         // remote has a binding address
         if (r_bind(r) < 0) {
-            return -1;
+            goto conn;
         }
     }
     if (r->ca[0] == 16) {
 
         // remote has a connecting address
         if (r_connect(r) < 0) {
-            return -1;
+            goto conn;
         }
     }
     if ((r->ba[0] == 16) && (r->ca[0] == 0)) {
 
         // remote is for listening
         if (r_listen(r) < 0) {
-            return -1;
+            goto conn;
         }
     }
 
@@ -661,10 +663,10 @@ int r_connect(struct r *r) {
                 r->s = 0;
                 return -1;
             case (EINPROGRESS):
-                ESP_LOGD(TAG,"r_conn: connect(%d) pending",r->s);
+                ESP_LOGD(TAG,"r_connect(%d) pending",r->s);
                 return 0;
             case (EISCONN):
-                ESP_LOGD(TAG,"r_conn: connect(%d) already connected",r->s);
+                ESP_LOGD(TAG,"r_connect(%d) already connected",r->s);
                 return 0;
             default:
                 r_close(r);
