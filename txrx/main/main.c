@@ -25,6 +25,7 @@ void recvd_resp_cb(struct a *ia) {
         time_elapsed = pdTICKS_TO_MS(xTaskGetTickCount());
     }
     // r_send_req(rc,ntohs(ia->tid)+1,w_pdu1,10);
+    // r_send_req(rc,ntohs(ia->tid)+1,r_pdu0,5);
     a_dump(ia);
     free(ia);
 }
@@ -34,7 +35,7 @@ void app_main(void){
     // start_nvs();
     // start_wlan();
     // start_httpd();
-    // start_eth();
+    start_eth();
 
 
 
@@ -44,8 +45,8 @@ void app_main(void){
     // create a read request pdu
     r_pdu0 = (uint8_t*)malloc(5);
     uint8_t f0 = 3;
-    uint16_t a0 = 1;
-    uint16_t q0 = 1;
+    uint16_t a0 = 41;
+    uint16_t q0 = 4;
 
     // ensure network byte ordering
     a0 = htons(a0);
@@ -84,10 +85,10 @@ void app_main(void){
     *(h->hr+1) = 0x1234;
 
     // attach a listening remote on loopback interface and bind to 502
-    rl = r_create("127.0.0.1",502,NULL,0);
+    // rl = r_create(ETH_IP_ADDR_ESP_32,502,NULL,0);
 
     // create a remote that will request a connection on loopback interface, port 502
-    rc = r_create("127.0.0.1",1024,"127.0.0.1",502);
+    rc = r_create(ETH_IP_ADDR_ESP_32,1024,ETH_IP_ADDR_DAT_8024,502);
 
     // register recvd_resp_cb
     h->recvd_resp_cb = recvd_resp_cb;
@@ -100,12 +101,10 @@ void app_main(void){
     // for (;;) {
         // start timer
         time_elapsed = pdTICKS_TO_MS(xTaskGetTickCount());
-        for (int j=0;j<0xffffffff;j++) {
-            r_send_req(rc,j,w_pdu1,10);
+        for (int j=0;j<0x8fffffff;j++) {
+            r_send_req(rc,j,r_pdu0,5);
+            vTaskDelay(1);
         }
-
-        // dump last im and om of slave
-        r_dump(h->rt->n->n->r);
 
         // check state of heap and task
         ESP_LOGI(TAG,"hw: %d\n",uxTaskGetStackHighWaterMark(NULL));

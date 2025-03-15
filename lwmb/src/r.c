@@ -502,6 +502,7 @@ int r_conn(struct r *r) {
 
         // remote is user created
         if (r_socket(r) < 0) {
+            vTaskDelay(100);
             goto conn;
         }
     }
@@ -509,6 +510,7 @@ int r_conn(struct r *r) {
 
         // remote has a binding address
         if (r_bind(r) < 0) {
+            vTaskDelay(100);
             goto conn;
         }
     }
@@ -516,6 +518,7 @@ int r_conn(struct r *r) {
 
         // remote has a connecting address
         if (r_connect(r) < 0) {
+            vTaskDelay(100);
             goto conn;
         }
     }
@@ -523,6 +526,7 @@ int r_conn(struct r *r) {
 
         // remote is for listening
         if (r_listen(r) < 0) {
+            vTaskDelay(100);
             goto conn;
         }
     }
