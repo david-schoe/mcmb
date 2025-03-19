@@ -1,4 +1,4 @@
-idf_component_register(SRCS "src/eth.c" "src/netif.c" "src/wlan.c" "src/nvs.c" "src/httpd.c" "src/html.c"
+idf_component_register(SRCS "src/eth.c" "src/netif.c" "src/wifi.c" "src/nvs.c" "src/httpd.c" "src/html.c" "src/mb.c"
                         INCLUDE_DIRS "include"
                         REQUIRES esp_driver_gpio
                         REQUIRES esp_event
@@ -6,4 +6,5 @@ idf_component_register(SRCS "src/eth.c" "src/netif.c" "src/wlan.c" "src/nvs.c" "
                         REQUIRES esp_netif
                         REQUIRES esp_wifi
                         REQUIRES esp_http_server
-                        REQUIRES nvs_flash)
+                        REQUIRES nvs_flash
+                        REQUIRES lwmb)

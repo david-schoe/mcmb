@@ -3,8 +3,9 @@
 
 
 #define A_ERROR(N) \
-    oi += 9; \
+    oi = 9; \
     memcpy(oa,ia,9); \
+    oa->l = htons(3); \
     oa->p[0] += 0x80; \
     oa->p[1] = N
 

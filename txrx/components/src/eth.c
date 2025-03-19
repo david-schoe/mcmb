@@ -48,7 +48,7 @@ esp_netif_t *start_eth(void){
     esp_eth_driver_install(&eth_cfg,&eth_hdl);
 
     // set mac address for eth_hdl (eth driver) which, more importantly, will set the mac of eth netif (set later with esp_eth_new_netif_glue)
-    char *eth_mac_addr = ETH_MAC_ADDR_ESP_32;
+    char *eth_mac_addr = ESP_32_MAC_ADDR;
     esp_eth_ioctl(eth_hdl,ETH_CMD_S_MAC_ADDR,(void*)eth_mac_addr);
 
 
@@ -63,8 +63,8 @@ esp_netif_t *start_eth(void){
 
     // set a static ip address for the eth netif
     esp_netif_ip_info_t eth_ip_info = { 0 };
-    ip4addr_aton(ETH_IP_ADDR_ESP_32,(ip4_addr_t*)&eth_ip_info.ip);
-    ip4addr_aton(ETH_NM_ESP_32,(ip4_addr_t*)&eth_ip_info.netmask);
+    ip4addr_aton(ESP_32_IP4_ADDR,(ip4_addr_t*)&eth_ip_info.ip);
+    ip4addr_aton(ESP_32_NET_MASK,(ip4_addr_t*)&eth_ip_info.netmask);
     esp_netif_set_ip_info(eth,&eth_ip_info);
 
     // start ethernet

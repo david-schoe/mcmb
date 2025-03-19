@@ -214,7 +214,7 @@ void r_proc(struct r *r) {
                     // ensure the registers are in network byte order
                     v16 = (uint16_t*)(oa->p+2);
                     for(j=0;j<q;j++){
-                        v16[j] = htons(p16[sa]);
+                        v16[j] = htons(p16[sa+j]);
                     }
                     break;
                 case 5:
