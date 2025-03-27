@@ -2,10 +2,11 @@
 
 #define TAG "httpd"
 
-char control_0[MAXB] = "0000";
-char control_1[MAXB] = "0000";
-char control_2[MAXB] = "0000";
-char control_3[MAXB] = "0000";
+// changing control names
+char output_ip1[MAXB] = "0000";
+char output_ip2[MAXB] = "0000";
+char output_ip3[MAXB] = "0000";
+char output_ip4[MAXB] = "0000";
 
 int err;
 
