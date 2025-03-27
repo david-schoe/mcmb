@@ -7,10 +7,11 @@
 #define MAXB 64
 #define MAXR 2048
 
-extern char control_0[MAXB];
-extern char control_1[MAXB];
-extern char control_2[MAXB];
-extern char control_3[MAXB];
+// replace old variables
+extern char output_ip1[MAXB];
+extern char output_ip2[MAXB];
+extern char output_ip3[MAXB];
+extern char output_ip3[MAXB];
 
 extern int err;
 
