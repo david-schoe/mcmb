@@ -1,12 +1,11 @@
+// updated validate_body() and validate_control() logic
+// connects to new html_post_handler() system
+// uses update_root_html() and HTML rendering in root_get_handler()
+
 #include "httpd.h"
+#include "html.h"
 
 #define TAG "httpd"
-
-// changing control names
-char output_ip1[MAXB] = "0000";
-char output_ip2[MAXB] = "0000";
-char output_ip3[MAXB] = "0000";
-char output_ip4[MAXB] = "0000";
 
 int err;
 
@@ -87,23 +86,13 @@ esp_err_t root_get_handler(httpd_req_t *req){
 
 
 esp_err_t root_post_handler(httpd_req_t *req){
-	char bod_buf[MAXB];
-	validate_body(req,bod_buf);
-	validate_control(req,bod_buf,control_0,"control_0",0);
-	validate_control(req,bod_buf,control_1,"control_1",1);
-	validate_control(req,bod_buf,control_2,"control_2",2);
-	validate_control(req,bod_buf,control_3,"control_3",3);
-	update_root_html();
-	err=httpd_resp_send(req,root_html,HTTPD_RESP_USE_STRLEN);
-	ESP_LOGI(TAG,"root_post_handler: sent response");
-	return err;
+	return html_post_handler(req);  // redirect to html.c logic
 }
 
-
-esp_err_t fake_handler(httpd_req_t *req){return ESP_OK;}
-
-
-
+// dummy favicon handler
+esp_err_t fake_handler(httpd_req_t *req){
+	return ESP_OK;
+}
 
 
 httpd_uri_t root_get_uri = {
@@ -134,6 +123,7 @@ httpd_handle_t start_httpd(void) {
 	httpd_config_t config = HTTPD_DEFAULT_CONFIG();
 	update_root_html();
 	config.max_uri_handlers = 3;
+	
 	httpd_handle_t server = NULL;
 	if (httpd_start(&server,&config) == ESP_OK){
 		httpd_register_uri_handler(server,&root_get_uri);
