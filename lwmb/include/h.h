@@ -1,8 +1,6 @@
 #ifndef LWMB_H_H
 #define LWMB_H_H
 
-#define TAG "lwmb"
-
 #ifndef H_TASK_STACK_SIZE
 #define H_TASK_STACK_SIZE (2048)
 #endif
@@ -19,6 +17,11 @@
 #include "lwip/sockets.h"
 #include "a.h"
 #include "r.h"
+
+#ifdef TAG
+#undef TAG
+#endif
+#define TAG "lwmb"
 
 
 struct h {

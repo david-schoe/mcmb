@@ -5,15 +5,24 @@
 #include "html.h"
 #include "nvs.h"
 #include "mb.h"
+#include "evhdlr.h"
 
-#define TAG "mcmb"
+#ifdef TAG
+#undef TAG
+#endif
+#define TAG "main"
+
+
 
 void app_main(void){
     start_netif();
     start_nvs();
+    start_evhdlr();
+    start_mb();
     start_wifi();
     start_httpd();
     // start_eth();
-    start_mb();
-    for (;;){}
+    for (;;){
+        vTaskDelay(100);
+    }
 }

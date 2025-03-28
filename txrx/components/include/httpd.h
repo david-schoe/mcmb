@@ -7,6 +7,12 @@
 #define MAXB 64
 #define MAXR 2048
 
+
+#ifdef TAG
+#undef TAG
+#endif
+#define TAG "httpd"
+
 extern char control_0[MAXB];
 extern char control_1[MAXB];
 extern char control_2[MAXB];

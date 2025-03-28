@@ -13,8 +13,7 @@ void h_create(struct h **ah) {
     // create a remote semaphore and remote table
     h->re = xSemaphoreCreateBinary();
     xSemaphoreGive(h->re);
-    h->rt = (struct rt*)calloc(sizeof(struct rt),sizeof(char));
-    ESP_LOGD(TAG,"h_create: calloc(%p)",h->rt);
+    h->rt = NULL;
 
     // save the host onto the memory location pointed to by **ah
     *ah = h;
@@ -23,16 +22,18 @@ void h_create(struct h **ah) {
 
 void h_start(struct h *h) {
 
+#if R_SEL_VERIFY_TC
+#elif
     struct rt *c = h->rt;       // current remote table entry
-
     // listen on and connect to the remotes created by r_create()
     while(1) {
-        if (c->n == NULL) {
+        if (c == NULL) {
             break;
         }
         r_conn(c->r);
         c = c->n;
     }
+#endif // elif
 
     // start the socket selecting task
     xTaskCreate(r_select_task,"r_select_task",H_TASK_STACK_SIZE*2,h,1,NULL);

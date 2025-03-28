@@ -2,6 +2,19 @@
 
 #define TAG "eth"
 
+
+esp_netif_t *eth;
+
+void connect_eth(void) {
+
+    // set a static ip address for the eth netif
+    esp_netif_ip_info_t eth_ip_info = { 0 };
+    ip4addr_aton(eth_ip4_str,(ip4_addr_t*)&eth_ip_info.ip);
+    ip4addr_aton(ETH_GATEWAY,(ip4_addr_t*)&eth_ip_info.gw);
+    ip4addr_aton(ETH_NET_MASK,(ip4_addr_t*)&eth_ip_info.netmask);
+    esp_netif_set_ip_info(eth,&eth_ip_info);
+}
+
 esp_netif_t *start_eth(void){
 
     eth_mac_config_t eth_mac_cfg = ETH_MAC_DEFAULT_CONFIG();
@@ -16,7 +29,6 @@ esp_netif_t *start_eth(void){
 
 
     // initialize spi bus on SPI2_HOST
-    spi_device_handle_t spi = NULL;
     spi_bus_config_t spi_bus_cfg = {
         .miso_io_num = MISO_IO_NUM,
         .mosi_io_num = MOSI_IO_NUM,
@@ -48,24 +60,21 @@ esp_netif_t *start_eth(void){
     esp_eth_driver_install(&eth_cfg,&eth_hdl);
 
     // set mac address for eth_hdl (eth driver) which, more importantly, will set the mac of eth netif (set later with esp_eth_new_netif_glue)
-    char *eth_mac_addr = ESP_32_MAC_ADDR;
+    char *eth_mac_addr = ETH_MAC_ADDR;
     esp_eth_ioctl(eth_hdl,ETH_CMD_S_MAC_ADDR,(void*)eth_mac_addr);
 
 
     // create ethernet network interface
     esp_netif_config_t netif_cfg = ESP_NETIF_DEFAULT_ETH();
-    esp_netif_t *eth = esp_netif_new(&netif_cfg);
+    eth = esp_netif_new(&netif_cfg);
     esp_netif_attach(eth, esp_eth_new_netif_glue(eth_hdl));
 
 
     // in order to set a static ip address for the eth netif, Dynamic Host Configuration Protocol Client (dhcpc) must be stopped on the eth netif
     esp_netif_dhcpc_stop(eth);
 
-    // set a static ip address for the eth netif
-    esp_netif_ip_info_t eth_ip_info = { 0 };
-    ip4addr_aton(ESP_32_IP4_ADDR,(ip4_addr_t*)&eth_ip_info.ip);
-    ip4addr_aton(ESP_32_NET_MASK,(ip4_addr_t*)&eth_ip_info.netmask);
-    esp_netif_set_ip_info(eth,&eth_ip_info);
+    // connect ethernet
+    connect_eth();
 
     // start ethernet
     esp_eth_start(eth_hdl);

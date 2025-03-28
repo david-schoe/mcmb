@@ -2,8 +2,6 @@
 
 void r_select_task(void *pvParameters) {
 
-    int b;                                      // return value
-
     struct h *h = (struct h*)pvParameters;      // host
     struct r *r;                                // remote
 
@@ -26,7 +24,7 @@ void r_select_task(void *pvParameters) {
 
             // avoid data races for rt
             xSemaphoreTake(h->re,portMAX_DELAY);
-            if (c->n == NULL) {
+            if (c == NULL) {
 
                 // if we are at the end of the list, break out of the while loop
                 xSemaphoreGive(h->re);
@@ -38,6 +36,23 @@ void r_select_task(void *pvParameters) {
             c = c->n;
             xSemaphoreGive(h->re);
 
+#if R_SEL_VERIFY_NC
+            if (!r->nc) {
+                ESP_LOGE(TAG,"r_select_task(), r->b_ip4_str=%s, no network connection",r->b_ip4_str);
+                if (r->tc) {
+                    r_dconn(r);
+                }
+                continue;
+            }
+#if R_SEL_VERIFY_TC
+            if (r->tc < 1) {
+                ESP_LOGE(TAG,"r_select task(), r->b_ip4_str=%s, r->c_ip4_str=%s, no tcp connection",r->b_ip4_str,r->c_ip4_str);
+                r_conn(r);
+                continue;
+            }
+#endif // R_SEL_VERIFY_TC
+#endif // R_SEL_VERIFY_NC
+
             // only continue if this socket has been set by the select() function
             if (FD_ISSET(r->s,&sss)) {
 
@@ -47,21 +62,15 @@ void r_select_task(void *pvParameters) {
                 if (r->ba[0] == 16 && r->ca[0] == 0) {
 
                     // listening socket has a connection that is ready to be received
-                    if ((b=r_accept(r)) > 0) {
+                    r_accept(r);
 
-                        struct r* nr;      // new remote
-
-                        nr = r_create(NULL,0,NULL,0);
-                        nr->s = b;
-                        r_conn(nr);
-                    }
                 } else {
 
                     // socket associated with an external slave/master has received a message
                     if (r_recv(r) == 0) {
 
                         // message was received
-                        r_proc(r);
+                        r_recv_req(r);
 
                         // message was processed
                         if (r->ca[0] == 0) {
@@ -77,7 +86,63 @@ void r_select_task(void *pvParameters) {
 }
 
 
-void r_proc(struct r *r) {
+struct r* r_create(char *b_ip4_str, uint16_t bp, char *c_ip4_str, uint16_t cp) {
+
+    ip4_addr_t ip4;          // ip4 address to be used in sockaddr
+
+    // ensure the binding address and connecting address are alligned to 4 bytes
+    struct r *r = (struct r*)aligned_alloc(4,sizeof(struct r));
+    memset(r,0,sizeof(struct r));
+
+    if ((b_ip4_str != NULL) && (bp != 0)) {
+
+#if R_SEL_VERIFY_NC
+        if (!strcmp(b_ip4_str,"127.0.0.1")) {
+            r->nc = 1;
+        }
+#endif
+
+        // ensure network byte ordering
+        bp = htons(bp);
+
+        // convert ip4 string to ip4 struct
+        ip4addr_aton(b_ip4_str,&ip4);
+
+        // save the ip4 address of the netif to the binding address
+        r->ba[0] = 16;
+        r->ba[1] = AF_INET;
+        memcpy(r->ba+2,&bp,2);
+        memcpy(r->ba+4,&ip4,4);
+
+        // save the ip4 string of the netif to the binding ip4 string
+        strcpy(r->b_ip4_str,b_ip4_str);
+    }
+
+    if ((c_ip4_str != NULL) && (cp != 0)) {
+
+        // ensure network byte ordering
+        cp = htons(cp);
+
+        // convert ip4 string to ip4 struct
+        ip4addr_aton(c_ip4_str,&ip4);
+
+        // save the ip4 address given by ip4_str to the connecting address
+        r->ca[0] = 16;
+        r->ca[1] = AF_INET;
+        memcpy(r->ca+2,&cp,2);
+        memcpy(r->ca+4,&ip4,4);
+
+        // save the ip4 string of the netif to the connecting ip4 string
+        strcpy(r->c_ip4_str,c_ip4_str);
+    }
+
+    ESP_LOGI(TAG,"created remote, r->b_ip4_str=%s, r->c_ip4_str=%s",r->b_ip4_str,r->c_ip4_str);
+    rt_push(r);
+    return r;
+}
+
+
+void r_recv_req(struct r *r) {
 
     struct a    *ia;        // inbound modbus adu
     struct a    *oa;        // outbound modbus adu
@@ -421,49 +486,6 @@ void r_proc(struct r *r) {
 }
 
 
-struct r* r_create(char *b_ip4_str, uint16_t bp, char *c_ip4_str, uint16_t cp) {
-
-    ip4_addr_t ip4;          // ip4 address to be used in sockaddr
-
-    // ensure the binding address and connecting address are alligned to 4 bytes
-    struct r *r = (struct r*)aligned_alloc(4,sizeof(struct r));
-    memset(r,0,sizeof(struct r));
-
-    if ((b_ip4_str != NULL) && (bp != 0)) {
-
-        // ensure network byte ordering
-        bp = htons(bp);
-
-        // convert ip4 string to ip4 struct
-        ip4addr_aton(b_ip4_str,&ip4);
-
-        // save the ip4 address of the netif to the binding address
-        r->ba[0] = 16;
-        r->ba[1] = AF_INET;
-        memcpy(r->ba+2,&bp,2);
-        memcpy(r->ba+4,&ip4,4);
-    }
-
-    if ((c_ip4_str != NULL) && (cp != 0)) {
-
-        // ensure network byte ordering
-        cp = htons(cp);
-
-        // convert ip4 string to ip4 struct
-        ip4addr_aton(c_ip4_str,&ip4);
-
-        // save the ip4 address given by ip4_str to the connecting address
-        r->ca[0] = 16;
-        r->ca[1] = AF_INET;
-        memcpy(r->ca+2,&cp,2);
-        memcpy(r->ca+4,&ip4,4);
-    }
-
-    rt_push(r);
-    return r;
-}
-
-
 void r_send_req(struct r *r, uint16_t tid, uint8_t *pdu, size_t sz) {
     struct a *oa = (struct a*)r->om;
     r->ob = sz+7;
@@ -496,7 +518,9 @@ void r_dump(struct r *r) {
 
 int r_conn(struct r *r) {
 
-    conn:
+    if (r->tc < 0) {
+        goto connect;
+    }
 
     if ((r->ba[0] == 16) || (r->ca[0] == 16)) {
 
@@ -514,6 +538,7 @@ int r_conn(struct r *r) {
             goto conn;
         }
     }
+    connect:
     if (r->ca[0] == 16) {
 
         // remote has a connecting address
@@ -531,24 +556,23 @@ int r_conn(struct r *r) {
         }
     }
 
-    // change the connection state
-    r->c = 1;
-
     // add the socket to the socket set
     FD_SET(r->s,&h->ss);
+
+    conn:
     return 0;
 }
 
 
 int r_dconn(struct r *r) {
 
-    if (!r->c) {
-        ESP_LOGD(TAG,"it's working");
+    if (r->tc < 1) {
+        ESP_LOGD(TAG,"r_dconn(): remote is already disconnected");
         return -1;
     }
 
     // change the connection state
-    r->c = 0;
+    r->tc = 0;
 
     // remove the socket from the socket set
     FD_CLR(r->s,&h->ss);
@@ -567,11 +591,8 @@ int r_dconn(struct r *r) {
         }
     } else {
 
-        // remote is associated with an external slave or is listening
+        // remote is associated with an external slave or is listening (user created)
         r->s = 0;
-        #ifdef R_RECONN
-        r_conn(r);
-        #endif
     }
     return 0;
 }
@@ -584,17 +605,15 @@ int r_socket(struct r *r) {
 
     // open a socket for communication
     if ((b=socket(AF_INET,SOCK_STREAM,IPPROTO_TCP)) < 0) {
-        ESP_LOGE(TAG,"r_conn: socket(), b=%d, errno=%d",b,errno);
+        ESP_LOGE(TAG,"r_socket(), r->b_ip4_str=%s, b=%d, errno=%d",r->b_ip4_str,b,errno);
         switch (errno) {
             default:
                 return -1;
         }
     }
-    ESP_LOGD(TAG,"r_conn: socket(), b=%d, errno=%d",b,errno);
-    // assign the socket to the remote
-    r->s = b;
+    ESP_LOGD(TAG,"r_socket(), r->b_ip4_str=%s, b=%d, errno=%d",r->b_ip4_str,b,errno);
 
-    // make the socket non-blocking
+     // make the socket non-blocking
     f = fcntl(b,F_GETFL,0);
     f |= O_NONBLOCK;
     fcntl(b,F_SETFL,f);
@@ -603,7 +622,9 @@ int r_socket(struct r *r) {
     f = 1;
     setsockopt(r->s,IPPROTO_TCP,TCP_NODELAY,(void*)&f,sizeof(int));
 
-    return b;
+    // assign the socket to the remote
+    r->s = b;
+    return 0;
 }
 
 
@@ -613,7 +634,7 @@ int r_bind(struct r *r) {
 
     // bind the remote socket to ensure it uses the appropriate network interface
     if ((b=bind(r->s,(struct sockaddr*)r->ba,r->ba[0])) < 0) {
-        ESP_LOGE(TAG,"r_bind(%d), b=%d, errno=%d",r->s,b,errno);
+        ESP_LOGE(TAG,"r_bind(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
         switch (errno) {
 
             case (EBADF):
@@ -624,7 +645,7 @@ int r_bind(struct r *r) {
                 return 0;
         }
     }
-    ESP_LOGD(TAG,"r_bind(%d), b=%d, errno=%d",r->s,b,errno);
+    ESP_LOGD(TAG,"r_bind(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
     return 0;
 }
 
@@ -635,7 +656,7 @@ int r_listen(struct r *r) {
 
     // listen for connections on this socket with a queue size of 2
     if ((b=listen(r->s,2)) < 0) {
-        ESP_LOGE(TAG,"r_listen(%d), b=%d, errno=%d",r->s,b,errno);
+        ESP_LOGE(TAG,"r_listen(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
         switch (errno) {
             case (EBADF):
                 r->s = 0;
@@ -646,7 +667,10 @@ int r_listen(struct r *r) {
                 return -1;
         }
     }
-    ESP_LOGD(TAG,"r_listen(%d), b=%d, errno=%d",r->s,b,errno);
+    ESP_LOGD(TAG,"r_listen(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
+
+    // set the tcp connection
+    r->tc = 1;
     return 0;
 }
 
@@ -656,29 +680,37 @@ int r_connect(struct r *r) {
     int b;              // return value
 
     // connect to the remote address
+
     if ((b=connect(r->s,(struct sockaddr*)r->ca,r->ca[0])) < 0) {
-        ESP_LOGE(TAG,"r_connect(%d), b=%d, errno=%d",r->s,b,errno);
+        ESP_LOGE(TAG,"r_connect(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
         switch (errno) {
             case (EAGAIN):
             case (EALREADY):
-                ESP_LOGD(TAG,"r_connect(%d) pending",r->s);
+                ESP_LOGD(TAG,"r_connect(%d), pending",r->s);
+                r->tc = -1;
                 return 0;
             case (EBADF):
                 r->s = 0;
+                r->tc = 0;
                 return -1;
             case (EINPROGRESS):
-                ESP_LOGD(TAG,"r_connect(%d) pending",r->s);
+                ESP_LOGD(TAG,"r_connect(%d), pending",r->s);
+                r->tc = -1;
                 return 0;
             case (EISCONN):
-                ESP_LOGD(TAG,"r_connect(%d) already connected",r->s);
-                return 0;
+                break;
             default:
+                r_shutdown(r);
                 r_close(r);
                 r->s = 0;
+                r->tc = 0;
                 return -1;
         }
     }
-    ESP_LOGD(TAG,"r_connect(%d), b=%d, errno=%d",r->s,b,errno);
+    ESP_LOGD(TAG,"r_connect(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
+
+    // set the tcp connection
+    r->tc = 1;
     return 0;
 }
 
@@ -690,7 +722,7 @@ int r_accept(struct r *r) {
 
     // accept the new connection
     if ((b=accept(r->s,NULL,NULL)) < 0) {
-        ESP_LOGE(TAG,"r_accept(%d), b=%d, errno=%d",r->s,b,errno);
+        ESP_LOGE(TAG,"r_accept(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
         switch (errno) {
             case (EWOULDBLOCK):
                 break;
@@ -703,12 +735,23 @@ int r_accept(struct r *r) {
                 return -1;
         }
     }
+    ESP_LOGD(TAG,"r_accept(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
 
     // make the socket non-blocking
     f = fcntl(b,F_GETFL,0);
     f |= O_NONBLOCK;
     fcntl(b,F_SETFL,f);
-    ESP_LOGD(TAG,"r_accept(%d), b=%d, errno=%d",r->s,b,errno);
+
+    // create a new remote
+    struct r* nr = r_create(NULL,0,NULL,0);
+
+    // attach the b_ip4_str of the listening socket so that the new remote may be properly disconnected
+    // logic for disconnection uses ba[0] not b_ip4_str, therefore, we will not bind this socket.
+    strcpy(nr->b_ip4_str,r->b_ip4_str);
+    nr->s = b;
+    nr->nc = 1;
+    nr->tc = 1;
+    r_conn(nr);
     return b;
 }
 
@@ -720,7 +763,7 @@ int r_recv(struct r *r) {
 
     // receive the inbound message
     if ((r->ib=recv(r->s,(void*)r->im,R_IM_SIZE,0)) < 0) {
-        ESP_LOGE(TAG,"r_recv(%d), im->b=%d, errno=%d",r->s,r->ib,errno);
+        ESP_LOGE(TAG,"r_recv(%d), r->b_ip4_str=%s, im->b=%d, errno=%d",r->s,r->b_ip4_str,r->ib,errno);
         switch (errno) {
             case (EWOULDBLOCK):
                 return -1;
@@ -739,7 +782,7 @@ int r_recv(struct r *r) {
         r_dconn(r);
         return -1;
     }
-    ESP_LOGD(TAG,"r_recv(%d), r->ib=%d, errno=%d",r->s,r->ib,errno);
+    ESP_LOGD(TAG,"r_recv(%d), r->b_ip4_str=%s, r->ib=%d, errno=%d",r->s,r->b_ip4_str,r->ib,errno);
     return 0;
 }
 
@@ -750,7 +793,7 @@ int r_send(struct r *r) {
 
     // send the outbound message
     if ((b=send(r->s,r->om,r->ob,0)) < 0) {
-        ESP_LOGE(TAG,"r_send(%d), r->ob=%d, b=%d, errno=%d",r->s,r->ob,b,errno);
+        ESP_LOGE(TAG,"r_send(%d), r->b_ip4_str=%s, r->ob=%d, b=%d, errno=%d",r->s,r->b_ip4_str,r->ob,b,errno);
         switch (errno) {
             case (EWOULDBLOCK):
 
@@ -770,7 +813,7 @@ int r_send(struct r *r) {
                 return -1;
         }
     }
-    ESP_LOGD(TAG,"r_send(%d), r->ob=%d, b=%d, errno=%d",r->s,r->ob,b,errno);
+    ESP_LOGD(TAG,"r_send(%d), r->b_ip4_str=%s, r->ob=%d, b=%d, errno=%d",r->s,r->b_ip4_str,r->ob,b,errno);
 
     // zero the outbound message
     memset(&r->ob,0,sizeof(int)+R_OM_SIZE);
@@ -784,14 +827,14 @@ int r_shutdown(struct r *r) {
 
     // shutdown the socket
     if ((b=shutdown(r->s,SHUT_RDWR)) < 0) {
-        ESP_LOGE(TAG,"r_shutdown(%d), b=%d, errno=%d",r->s,b,errno);
+        ESP_LOGE(TAG,"r_shutdown(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
         switch (errno) {
             case (EBADF):
             default:
                 return -1;
         }
     }
-    ESP_LOGD(TAG,"r_shutdown(%d), b=%d, errno=%d",r->s,b,errno);
+    ESP_LOGD(TAG,"r_shutdown(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
     return 0;
 }
 
@@ -802,7 +845,7 @@ int r_close(struct r *r) {
 
     // close the socket
     if ((b=close(r->s)) < 0) {
-        ESP_LOGE(TAG,"r_close: close(%d), b=%d, errno=%d",r->s,b,errno);
+        ESP_LOGE(TAG,"r_close(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
         switch (errno) {
             case (EBADF):
                 return -1;
@@ -810,26 +853,18 @@ int r_close(struct r *r) {
                 return -1;
         }
     }
-    ESP_LOGD(TAG,"r_close: close(%d), b=%d, errno=%d",r->s,b,errno);
+    ESP_LOGD(TAG,"r_close(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
     return 0;
 }
 
 
 void rt_push(struct r *r) {
-    struct rt *c = h->rt;
+    struct rt *c = (struct rt*) calloc(sizeof(struct rt),sizeof(char));
     xSemaphoreTake(h->re,portMAX_DELAY);
-
-    while(1){
-        if (c->n == NULL){
-            c->r = r;
-            c->n = (struct rt*) calloc(sizeof(struct rt),sizeof(char));
-            ESP_LOGD(TAG,"rt_push: calloc(%p)",c->n);
-            xSemaphoreGive(h->re);
-            break;
-        } else {
-            c = c->n;
-        }
-    }
+    c->r = r;
+    c->n = h->rt;
+    h->rt = c;
+    xSemaphoreGive(h->re);
 }
 
 
@@ -838,13 +873,13 @@ struct r* rt_peek(int s) {
     xSemaphoreTake(h->re,portMAX_DELAY);
 
     while(1){
-        if (c->r->s == s){
-            xSemaphoreGive(h->re);
-            return c->r;
-        } else if (c->n == NULL) {
+        if (c == NULL) {
             ESP_LOGE(TAG,"rt_peek(%s): no associated remote");
             xSemaphoreGive(h->re);
             return NULL;
+        } else if (c->r->s == s){
+            xSemaphoreGive(h->re);
+            return c->r;
         } else {
             c = c->n;
         }
@@ -859,7 +894,7 @@ int rt_remove(struct r *r) {
     struct rt *p = h->rt;          // previous entry
 
     while (1) {
-        if (c->n == NULL) {
+        if (c == NULL) {
             ESP_LOGE(TAG,"rt_remove(%p): no matching entry found",r);
             xSemaphoreGive(h->re);
             return -1;
@@ -895,7 +930,7 @@ void rt_clean(void) {
         c = c->n;
         ESP_LOGD(TAG,"rt_clean: free(%p)",p);
         free(p);
-        if (c->n == NULL) {
+        if (c == NULL) {
             xSemaphoreGive(h->re);
             return;
         }
@@ -907,7 +942,7 @@ int rt_max(void) {
     struct rt *c = h->rt;           // current entry in socket table
     int s = 0;                      // highest numbered socket in table
     while (1) {
-        if (c->n == NULL)
+        if (c == NULL)
             return s;
         else {
             if (c->r->s > s) {
