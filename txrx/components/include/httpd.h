@@ -11,7 +11,7 @@
 extern char output_ip1[MAXB];
 extern char output_ip2[MAXB];
 extern char output_ip3[MAXB];
-extern char output_ip3[MAXB];
+extern char output_ip4[MAXB];
 
 extern int err;
 
