@@ -21,9 +21,11 @@
 #define MAX_FIELD_LEN 64
 #define ROOT_HTML_SZ 4096
 
+// buffer to hold the entire HTML response string
 char root_html[ROOT_HTML_SZ];
 
 // UI Variables
+// updated via POST, displayed in GET, and stored in NVS
 char ip_eth[MAX_FIELD_LEN] = "";
 char ip_wlan0[MAX_FIELD_LEN] = "";
 char ip_wlan1[MAX_FIELD_LEN] = "";
