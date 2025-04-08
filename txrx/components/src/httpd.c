@@ -4,8 +4,7 @@
 
 #include "httpd.h"
 #include "html.h"
-
-#define TAG "httpd"
+#include "nvs.h"
 
 int err;
 
@@ -33,7 +32,7 @@ esp_err_t root_post_handler(httpd_req_t *req) {
 
     nvs_handle_t nvs;
     if (nvs_open("storage", NVS_READWRITE, &nvs) == ESP_OK) {
-        #define HANDLE(k, v) if (httpd_query_key_value(content, k, v, MAX_FIELD_LEN) == ESP_OK) { \
+        #define HANDLE(k, v) if (httpd_query_key_value(content, k, v, 17) == ESP_OK) { \
             nvs_set_str(nvs, k, v); }
 
         HANDLE("eth_ip4_str", eth_ip4_str); HANDLE("wlan0_ip4_str", wlan0_ip4_str); HANDLE("wlan1_ip4_str", wlan1_ip4_str);
@@ -122,7 +121,6 @@ httpd_handle_t start_httpd(void) {
 	if (httpd_start(&server,&config) == ESP_OK){
 		httpd_register_uri_handler(server,&root_get_uri);
 		httpd_register_uri_handler(server,&root_post_uri);
-		httpd_register_uri_handler(server,&fake_uri);
 	}
 	return server;
 }

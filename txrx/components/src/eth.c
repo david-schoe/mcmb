@@ -10,8 +10,8 @@ void connect_eth(void) {
     // set a static ip address for the eth netif
     esp_netif_ip_info_t eth_ip_info = { 0 };
     ip4addr_aton(eth_ip4_str,(ip4_addr_t*)&eth_ip_info.ip);
-    ip4addr_aton(ETH_GATEWAY,(ip4_addr_t*)&eth_ip_info.gw);
-    ip4addr_aton(ETH_NET_MASK,(ip4_addr_t*)&eth_ip_info.netmask);
+    ip4addr_aton(eth_gw_str,(ip4_addr_t*)&eth_ip_info.gw);
+    ip4addr_aton(eth_nm_str,(ip4_addr_t*)&eth_ip_info.netmask);
     esp_netif_set_ip_info(eth,&eth_ip_info);
 }
 
