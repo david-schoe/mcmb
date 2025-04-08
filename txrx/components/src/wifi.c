@@ -14,8 +14,8 @@ void init_wifi(void) {
 	// set a static ip address for the wlan1 netif
 	esp_netif_ip_info_t wlan1_ip_info = { 0 };
     ip4addr_aton(wlan1_ip4_str,(ip4_addr_t*)&wlan1_ip_info.ip);
-	ip4addr_aton(WLAN1_GATEWAY,(ip4_addr_t*)&wlan1_ip_info.gw);
-    ip4addr_aton(WLAN1_NET_MASK,(ip4_addr_t*)&wlan1_ip_info.netmask);
+	ip4addr_aton(wlan1_gw_str,(ip4_addr_t*)&wlan1_ip_info.gw);
+    ip4addr_aton(wlan1_gw_str,(ip4_addr_t*)&wlan1_ip_info.netmask);
     esp_netif_set_ip_info(wlan1,&wlan1_ip_info);
 }
 
@@ -62,8 +62,8 @@ void start_wifi(void) {
     // set a static ip address for the wlan0 netif
     esp_netif_ip_info_t wlan0_ip_info = { 0 };
     ip4addr_aton(wlan0_ip4_str,(ip4_addr_t*)&wlan0_ip_info.ip);
-	ip4addr_aton(WLAN0_GATEWAY,(ip4_addr_t*)&wlan0_ip_info.gw);
-    ip4addr_aton(WLAN0_NET_MASK,(ip4_addr_t*)&wlan0_ip_info.netmask);
+	ip4addr_aton(wlan1_gw_str,(ip4_addr_t*)&wlan0_ip_info.gw);
+    ip4addr_aton(wlan0_nm_str,(ip4_addr_t*)&wlan0_ip_info.netmask);
     esp_netif_set_ip_info(wlan0,&wlan0_ip_info);
 
 	// resume dhcps

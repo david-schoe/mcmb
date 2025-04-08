@@ -18,13 +18,13 @@
 #define CLOCK_SPEED_HZ 16000000
 
 #define ETH_MAC_ADDR "daveys"
-#define ETH_GATEWAY "192.168.2.1"
-#define ETH_NET_MASK "255.255.255.0"
 #define DAT_8024_IP4_STR "192.168.1.174"
 
 
 extern esp_netif_t *eth;
 extern char eth_ip4_str[16];
+extern char eth_gw_str[16];
+extern char eth_nm_str[16];
 
 void connect_eth(void);
 esp_netif_t *start_eth(void);

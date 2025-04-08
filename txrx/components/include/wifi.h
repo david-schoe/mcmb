@@ -8,13 +8,9 @@
 #define WLAN0_CHAN		1
 #define WLAN0_STA		4
 #define WLAN0_HID       0
-#define WLAN0_GATEWAY  "192.168.1.1"
-#define WLAN0_NET_MASK  "255.255.255.0"
 
 #define WLAN1_PASS      ""
 #define WLAN1_CHAN      1
-#define WLAN1_GATEWAY  "192.168.2.1"
-#define WLAN1_NET_MASK  "255.255.255.0"
 
 #ifdef TAG
 #undef TAG
@@ -29,6 +25,10 @@ extern esp_netif_t *wlan0;
 extern esp_netif_t *wlan1;
 extern char wlan0_ip4_str[16];
 extern char wlan1_ip4_str[16];
+extern char wlan0_gw_str[16];
+extern char wlan1_gw_str[16];
+extern char wlan0_nm_str[16];
+extern char wlan1_nm_str[16];
 extern char wlan0_ssid_str[32];
 extern char wlan1_ssid_str[32];
 
