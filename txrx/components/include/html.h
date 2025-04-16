@@ -29,4 +29,10 @@ bool ip_str_to_u32(const char *ip_str, uint32_t *ip_u32);
 // checks whether two IP addresses belong to the same subnet
 bool is_same_subnet(uint32_t ip1, uint32_t ip2, uint32_t mask);
 
+// handler for GET /reset_confirm - shows confirmation screen
+esp_err_t reset_confirm_handler(httpd_req_t *req);
+
+// handler for POST /reset - clears all NVS + memory fields
+esp_err_t reset_all_handler(httpd_req_t *req);
+
 #endif
