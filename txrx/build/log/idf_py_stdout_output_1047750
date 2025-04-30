@@ -1,0 +1,4329 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,h div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+loa080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 30 2025 03:58:07[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27798h (161688) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=000377c0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (144) esp_image: segment 2: paddr=000377e4 vaddr=3ffb0000 size=04148h ( 16712) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=0003b934 vaddr=40080000 size=046e4h ( 18148) load[0m
+[0;32mI (162) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=93118h (602392) map[0m
+[0;32mI (368) esp_image: segment 5: paddr=000d3140 vaddr=400846e4 size=15530h ( 87344) load[0m
+[0;32mI (415) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+D (426) cpu_start: Pro cpu up
+D (426) cpu_start: Starting app cpu, entry point is 0x40081384
+D (0) cpu_start: App cpu up
+D (434) clk: RTC_SLOW_CLK calibration value: 3077299
+D (446) cpu_start: calling init tion: 0x400d3370 on core: 0
+D (446) cpu_start: calling init fun0x400d3898 on core: 0
+[0;32mI (448) cpu_start: Pro cpu start user code[0m
+[0;32mI (451) cpu_start: cpu freq: 160000000 Hz[0m
+D (455) cpu_start: calling init function: 0x400d32b0 on core: 0
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (465) app_init: Project name:     txrx[0m
+[0;32mI (468) app_init: App version:      e7e3d0c-dirty[0m
+[0;32mI (473) app_init: Compile time:     Apr 30 2025 05:56:55[0m
+[0;32mI (478) app_init: ELF file SHA256:  c07b4bdc9...[0m
+[0;32mI (482) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+D (488) cpu_start: calling init function: 0x400d3384 on core: 0
+[0;32mI (494) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (497) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (501) efuse_init: Chip rev:         v3.1[0m
+D (505) cpu_start: calling init function: 0x400d534c on core: 0
+D (511) memory_layout: Checking 9 reserved memory ranges:
+D (516) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000
+D (522) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0
+D (528) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb9138
+D (534) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440
+D (540) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350
+D (546) memory_layout: Reserved memory range 0x40070000 - 0x40078000
+D (552) memory_layout: Reserved memory range 0x40078000 - 0x40080000
+D (559) memory_layout: Reserved memory range 0x40080000 - 0x40099c14
+D (565) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000
+D (571) memory_layout: Building list of available memory regions:
+D (577) memory_layout: Available memory region 0x3ffae6e0 - 0x3ffb0000
+D (583) memory_layout: Available memory region 0x3ffb9138 - 0x3ffc0000
+D (589) memory_layout: Available memory region 0x3ffc0000 - 0x3ffc2000
+D (595) memory_layout: Available memory region 0x3ffc2000 - 0x3ffc4000
+D (602) memory_layout: Available memory region 0x3ffc4000 - 0x3ffc6000
+D (608) memory_layout: Available memory region 0x3ffc6000 - 0x3ffc8000
+D (614) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000
+D (620) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000
+D (627) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000
+D (633) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000
+D (639) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000
+D (645) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000
+D (652) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000
+D (658) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000
+D (664) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000
+D (670) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000
+D (677) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000
+D (683) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000
+D (689) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20
+D (695) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000
+D (702) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000
+D (708) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000
+D (714) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000
+D (720) memory_layout: Available memory region 0x3fffc000 - 0x40000000
+D (727) memory_layout: Available memory region 0x40099c14 - 0x4009a000
+D (733) memory_layout: Available memory region 0x4009a000 - 0x4009c000
+D (739) memory_layout: Available memory region 0x4009c000 - 0x4009e000
+D (745) memory_layout: Available memory region 0x4009e000 - 0x400a0000
+[0;32mI (752) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (758) heap_init: New heap initialised at 0x3ffae6e0
+[0;32mI (763) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+D (768) heap_init: New heap initialised at 0x3ffb9138
+[0;32mI (772) heap_init: At 3FFB9138 len 00026EC8 (155 KiB): DRAM[0m
+[0;32mI (778) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (783) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (789) heap_init: New heap initialised at 0x40099c14
+[0;32mI (793) heap_init: At 40099C14 len 000063EC (24 KiB): IRAM[0m
+D (799) cpu_start: calling init function: 0x400d6a70 on core: 0
+D (804) cpu_start: calling init function: 0x400d6478 on core: 0
+D (810) cpu_start: calling init function: 0x400d38dc on core: 0
+D (816) intr_alloc: Connected src 46 to int 1 (cpu 0)
+D (820) cpu_start: calling init function: 0x400d38e8 on core: 0
+D (826) cpu_start: calling init function: 0x400d7d68 on core: 0
+D (832) cpu_start: calling init function: 0x400d9f84 on core: 0
+D (837) cpu_start: calling init function: 0x400d8794 on core: 0
+D (843) cpu_start: calling init function: 0x400d6484 on core: 0
+D (849) cpu_start: calling init function: 0x400d38f4 on core: 0
+D (854) spi_flash: trying chip: issi
+D (857) spi_flash: trying chip: gd
+D (861) spi_flash: trying chip: mxic
+D (864) spi_flash: trying chip: winbond
+D (867) spi_flash: trying chip: generic
+[0;32mI (871) spi_flash: detected chip: generic[0m
+[0;32mI (875) spi_flash: flash io: dio[0m
+[0;33mW (878) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (890) cpu_start: calling init function: 0x400d3410 on core: 0
+D (895) cpu_start: calling init function: 0x40145f30
+D (900) cpu_start: calling init function: 0x400f9c7c
+D (905) cpu_start: calling init function: 0x400e6dcc
+D (910) cpu_start: calling init function: 0x40089c7c
+D (914) cpu_start: calling init function: 0x400d4868
+D (919) cpu_start: calling init function: 0x400e3d68 on core: 0
+D (925) intr_alloc: Connected src 17 to int 2 (cpu 0)
+D (929) cpu_start: calling init function: 0x40159fcc on core: 0
+D (935) cpu_start: calling init function: 0x400d3924 on core: 0
+D (941) intr_alloc: Connected src 24 to int 3 (cpu 0)
+D (945) app_start: Starting scheduler on CPU0
+I (950D (950) intr_alloc: Connected src 25 to int 1 (cpu 1)
+D (950) app_start: Starting scheduler on CPU1
+) main_task: Started on CPU0
+D (960) heap_init: New heap initialised at 0x3ffe0440
+D (960) heap_init: New heap initialised at 0x3ffe4350
+D (970) intr_alloc: Connected src 16 to int 5 (cpu 0)
+[0;32mI (970) main_task: Calling app_main()[0m
+D (980) lwip: netif: netmask of interface    set to 255.0.0.0
+
+D (980) lwip: netif: GW address of interface    set to 127.0.0.1
+
+D (990) lwip: netif_set_ipaddr: netif address being changed
+
+D (990) lwip: netif: added interface lo IP
+D (1000) lwip:  addr 
+D (1000) lwip: 127.0.0.1
+D (1000) lwip:  netmask 
+D (1000) lwip: 255.0.0.0
+D (1000) lwip:  gw 
+D (1010) lwip: 127.(1010) esp_netif_lwip: LwIP stack has been initialized
+D (1020) esp_netif_lwip: esp-netif has been successfully initialized
+D (1020) event: running task for loop 0x3ffbd36c
+D (1030) event: created task for loop 0x3ffbd36c
+D (1030) event: created event loop 0x3ffbd36c
+D (1080) nvs: nvs_open_from_partition storage 0
+D (1080) nvs: nvs_get_str_or_blob eth_ip4_str
+D (1080) nvs: nvs_get_str_or_blob eth_ip4_str
+D (1080) nvs: nvs_close 1
+D (1080) nvs: nvs_open_from_partition storage 0
+D (1090) nvs: nvs_get_str_or_blob ap_ip4_str
+D (1090) nvs: nvs_get_str_or_blob ap_ip4_str
+D (1100) nvs: nvs_close 2
+D (1100) nvs: nvs_open_from_partition storage 0
+D (1100) nvs: nvs_get_str_or_blob sta_ip4_str
+D (1110) nvs: nvs_get_str_or_blob sta_ip4_str
+D (1110) nvs: nvs_close 3
+D (1110) nvs: nvs_open_from_partition storage 0
+D (1120) nvs: nvs_get_str_or_blob eth_gw_str
+D (1120) nvs: nvs_get_str_or_blob eth_gw_str
+D (1130) nvs: nvs_close 4
+D (1130) nvs: nvs_open_from_partition storage 0
+D (1130) nvs: nvs_get_str_or_blob ap_gw_str
+D (1140) nvs: nvs_get_str_or_blob ap_gw_str
+D (1140) nvs: nvs_close 5
+D (1140) nvs: nvs_open_from_partition storage 0
+D (1150) nvs: nvs_get_str_or_blob sta_gw_str
+D (1150) nvs: nvs_get_str_or_blob sta_gw_str
+D (1160) nvs: nvs_close 6
+D (1160) nvs: nvs_open_from_partition storage 0
+D (1160) nvs: nvs_get_str_or_blob eth_nm_str
+D (1170) nvs: nvs_get_str_or_blob eth_nm_str
+D (1170) nvs: nvs_close 7
+D (1170) nvs: nvs_open_from_partition storage 0
+D (1180) nvs: nvs_get_str_or_blob ap_nm_str
+D (1180) nvs: nvs_get_str_or_blob ap_nm_str
+D (1180) nvs: nvs_close 8
+D (1190) nvs: nvs_open_from_partition storage 0
+D (1190) nvs: nvs_get_str_or_blob sta_nm_str
+D (1190) nvs: nvs_get_str_or_blob sta_nm_str
+D (1200) nvs: nvs_close 9
+D (1200) nvs: nvs_open_from_partition storage 0
+D (1200) nvs: nvs_get_str_or_blob ap_ssid_str
+D (1210) nvs: nvs_get_str_or_blob ap_ssid_str
+D (1210) nvs: nvs_close 10
+D (1220) nvs: nvs_open_from_partition storage 0
+D (1220) nvs: nvs_get_str_or_blob sta_ssid_str
+D (1220) nvs: nvs_get_str_or_blob sta_ssid_str
+D (1230) nvs: nvs_close 11
+D (1230) nvs: nvs_open_from_partition storage 0
+D (1230) nvs: nvs_get_str_or_blob r_reg_str0
+D (1240) nvs: nvs_get_str_or_blob r_reg_str0
+D (1240) nvs: nvs_close 12
+D (1250) nvs: nvs_open_from_partition storage 0
+D (1250) nvs: nvs_get_str_or_blob r_reg_lo_str0
+D (1250) nvs: nvs_get_str_or_blob r_reg_lo_str0
+D (1260) nvs: nvs_close 13
+D (1260) nvs: nvs_open_from_partition storage 0
+D (1260) nvs: nvs_get_str_or_blob r_reg_hi_str0
+D (1270) nvs: nvs_get_str_or_blob r_reg_hi_str0
+D (1270) nvs: nvs_close 14
+D (1280) nvs: nvs_open_from_partition storage 0
+D (1280) nvs: nvs_get_str_or_blob r_reg_str1
+D (1280) nvs: nvs_get_str_or_blob r_reg_str1
+D (1290) nvs: nvs_close 15
+D (1290) nvs: nvs_open_from_partition storage 0
+D (1290) nvs: nvs_get_str_or_blob r_reg_lo_str1
+D (1300) nvs: nvs_get_str_or_blob r_reg_lo_str1
+D (1300) nvs: nvs_close 16
+D (1310) nvs: nvs_open_from_partition storage 0
+D (1310) nvs: nvs_get_str_or_blob r_reg_hi_str1
+D (1310) nvs: nvs_get_str_or_blob r_reg_hi_str1
+D (1320) nvs: nvs_close 17
+D (1320) nvs: nvs_open_from_partition storage 0
+D (1320) nvs: nvs_get_str_or_blob r_reg_str2
+D (1330) nvs: nvs_get_str_or_blob r_reg_str2
+D (1330) nvs: nvs_close 18
+D (1340) nvs: nvs_open_from_partition storage 0
+D (1340) nvs: nvs_get_str_or_blob r_reg_lo_str2
+D (1340) nvs: nvs_get_str_or_blob r_reg_lo_str2
+D (1350) nvs: nvs_close 19
+D (1350) nvs: nvs_open_from_partition storage 0
+D (1350) nvs: nvs_get_str_or_blob r_reg_hi_str2
+D (1360) nvs: nvs_get_str_or_blob r_reg_hi_str2
+D (1360) nvs: nvs_close 20
+D (1370) nvs: nvs_open_from_partition storage 0
+D (1370) nvs: nvs_get_str_or_blob r_reg_str3
+D (1370) nvs: nvs_get_str_or_blob r_reg_str3
+D (1380) nvs: nvs_close 21
+D (1380) nvs: nvs_open_from_partition storage 0
+D (1380) nvs: nvs_get_str_or_blob r_reg_lo_str3
+D (1390) nvs: nvs_get_str_or_blob r_reg_lo_str3
+D (1390) nvs: nvs_close 22
+D (1400) nvs: nvs_open_from_partition storage 0
+D (1400) nvs: nvs_get_str_or_blob r_reg_hi_str3
+D (1400) nvs: nvs_get_str_or_blob r_reg_hi_str3
+D (1410) nvs: nvs_close 23
+D (1410) nvs: nvs_open_from_partition storage 0
+D (1410) nvs: nvs_get_str_or_blob rb_ip4_str
+D (1420) nvs: nvs_get_str_or_blob rb_ip4_str
+D (1420) nvs: nvs_close 24
+D (1430) nvs: nvs_open_from_partition storage 0
+D (1430) nvs: nvs_get_str_or_blob rc_ip4_str
+D (1430) nvs: nvs_get_str_or_blob rc_ip4_str
+D (1440) nvs: nvs_close 25
+D (1440) nvs: nvs_open_from_partition storage 0
+D (1440) nvs: nvs_get_str_or_blob w_reg_str0
+D (1450) nvs: nvs_get_str_or_blob w_reg_str0
+D (1450) nvs: nvs_close 26
+D (1450) nvs: nvs_open_from_partition storage 0
+D (1460) nvs: nvs_get_str_or_blob w_reg_lo_str0
+D (1460) nvs: nvs_get_str_or_blob w_reg_lo_str0
+D (1470) nvs: nvs_close 27
+D (1470) nvs: nvs_open_from_partition storage 0
+D (1470) nvs: nvs_get_str_or_blob w_reg_hi_str0
+D (1480) nvs: nvs_get_str_or_blob w_reg_hi_str0
+D (1480) nvs: nvs_close 28
+D (1490) nvs: nvs_open_from_partition storage 0
+D (1490) nvs: nvs_get_str_or_blob w_reg_str1
+D (1490) nvs: nvs_get_str_or_blob w_reg_str1
+D (1500) nvs: nvs_close 29
+D (1500) nvs: nvs_open_from_partition storage 0
+D (1500) nvs: nvs_get_str_or_blob w_reg_lo_str1
+D (1510) nvs: nvs_get_str_or_blob w_reg_lo_str1
+D (1510) nvs: nvs_close 30
+D (1510) nvs: nvs_open_from_partition storage 0
+D (1520) nvs: nvs_get_str_or_blob w_reg_hi_str1
+D (1520) nvs: nvs_get_str_or_blob w_reg_hi_str1
+D (1530) nvs: nvs_close 31
+D (1530) nvs: nvs_open_from_partition storage 0
+D (1530) nvs: nvs_get_str_or_blob w_reg_str2
+D (1540) nvs: nvs_get_str_or_blob w_reg_str2
+D (1540) nvs: nvs_close 32
+D (1540) nvs: nvs_open_from_partition storage 0
+D (1550) nvs: nvs_get_str_or_blob w_reg_lo_str2
+D (1550) nvs: nvs_get_str_or_blob w_reg_lo_str2
+D (1560) nvs: nvs_close 33
+D (1560) nvs: nvs_open_from_partition storage 0
+D (1560) nvs: nvs_get_str_or_blob w_reg_hi_str2
+D (1570) nvs: nvs_get_str_or_blob w_reg_hi_str2
+D (1570) nvs: nvs_close 34
+D (1580) nvs: nvs_open_from_partition storage 0
+D (1580) nvs: nvs_get_str_or_blob w_reg_str3
+D (1580) nvs: nvs_get_str_or_blob w_reg_str3
+D (1590) nvs: nvs_close 35
+D (1590) nvs: nvs_open_from_partition storage 0
+D (1590) nvs: nvs_get_str_or_blob w_reg_lo_str3
+D (1600) nvs: nvs_get_str_or_blob w_reg_lo_str3
+D (1600) nvs: nvs_close 36
+D (1610) nvs: nvs_open_from_partition storage 0
+D (1610) nvs: nvs_get_str_or_blob w_reg_hi_str3
+D (1610) nvs: nvs_get_str_or_blob w_reg_hi_str3
+D (1620) nvs: nvs_close 37
+D (1620) nvs: nvs_open_from_partition storage 0
+D (1620) nvs: nvs_get_str_or_blob wb_ip4_str
+D (1630) nvs: nvs_get_str_or_blob wb_ip4_str
+D (1630) nvs: nvs_close 38
+D (1630) nvs: nvs_open_from_partition storage 0
+D (1640) nvs: nvs_get_str_or_blob wc_ip4_str
+D (1640) nvs: nvs_get_str_or_blob wc_ip4_str
+D (1650) nvs: nvs_close 39
+[0;32mI (1650) lwmb: created remote, r->b_ip4_str=192.168.2.1, r->c_ip4_str=[0m
+[0;32mI (1660) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+D (1660) nvs: nvs_open_from_partition misc 1
+[1;31mE (1680) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=, no tcp connection[0m
+[0;32mI (1680) wifi:wifi driver task: 3ffc2700, prio:23, stack:6656, core=0[0m
+D (1680) efuse: BLK0 REG2 [8-15], len=8 bits
+D (1680) efuse: BLK0 REG2 [0-7], len=8 bits
+D (1690) efuse: BLK0 REG1 [24-31], len=8 bits
+D (1690) efuse: BLK0 REG1 [16-23], len=8 bits
+D (1700) efuse: BLK0 REG1 [8-15], len=8 bits
+D (1700) efuse: BLK0 REG1 [0-7], len=8 bits
+D (1700) efuse: BLK0 REG2 [16-23], len=8 bits
+D (1680) lwmb: r_socket(), r->b_ip4_str=127.0.0.1, b=54, errno=0
+D (1710) nvs: nvs_open_from_partition nvs.net80211 1
+D (1710) lwmb: r_bind(54), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (1720) nvs: nvs_get opmode 1
+D (1720) lwmb: r_listen(54), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (1730) nvs: nvs_get_str_or_blob sta.ssid
+[1;31mE (1730) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1740) nvs: nvs_get sta.authmode 1
+D (1750) nvs: nvs_get_str_or_blob sta.pswd
+D (1750) nvs: nvs_get_str_or_blob sta.pmk
+D (1750) nvs: nvs_get sta.chan 1
+D (1760) nvs: nvs_get auto.conn 1
+[1;31mE (1760) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1760) nvs: nvs_get bssid.set 1
+D (1770) nvs: nvs_get_str_or_blob sta.bssid
+D (1770) nvs: nvs_get sta.lis_intval 2
+D (1780) nvs: nvs_get sta.phym 1
+D (1780) nvs: nvs_get sta.phybw 1
+D (1780) nvs: nvs_get_str_or_blob sta.apsw
+[1;31mE (1790) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1790) nvs: nvs_get_str_or_blob sta.apinfo
+D (1800) nvs: nvs_get sta.scan_method 1
+D (1800) nvs: nvs_get sta.sort_method 1
+D (1810) nvs: nvs_get sta.minrssi 1
+D (1810) nvs: nvs_get sta.minauth 1
+D (1810) nvs: nvs_get sta.pmf_e 1
+D (1820) nvs: nvs_get sta.pmf_r 1
+[1;31mE (1820) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1820) nvs: nvs_get sta.btm_e 1
+D (1830) nvs: nvs_get sta.rrm_e 1
+D (1830) nvs: nvs_get sta.mbo_e 1
+D (1830) nvs: nvs_get_str_or_blob ap.ssid
+D (1840) nvs: nvs_get_str_or_blob ap.passwd
+D (1840) nvs: nvs_get_str_or_blob ap.pmk
+D (1850) nvs: nvs_get ap.chan 1
+D (1850) nvs: nvs_get ap.authmode 1
+[1;31mE (1850) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1850) nvs: nvs_get ap.hidden 1
+D (1860) nvs: nvs_get ap.max.conn 1
+D (1870) nvs: nvs_get bcn.interval 2
+D (1870) nvs: nvs_get ap.phym 1
+D (1870) nvs: nvs_get ap.phybw 1
+D (1870) nvs: nvs_get ap.sndchan 1
+D (1880) nvs: nvs_get ap.pmf_e 1
+[1;31mE (1880) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1880) nvs: nvs_get ap.pmf_r 1
+D (1890) nvs: nvs_get ap.p_cipher 1
+D (1890) nvs: nvs_get lorate 1
+D (1900) nvs: nvs_get_str_or_blob country
+D (1900) nvs: nvs_get ap.ftm_r 1
+D (1900) nvs: nvs_get sta.ft 1 sta.owe 1
+[1;31mE (1910) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1910) nvs: nvs_get sta.trans_d 1
+D (1920) nvs: nvs_get sta.sae_h2e 1
+D (1920) nvs: nvs_get sta.sae_pk_mode 1
+D (1930) nvs: nvs_get sta.bss_retry 1
+D (1930) nvs: nvs_get_str_or_blob sta.owe_data
+D (1930) nvs: nvs_get sta.he_dcm 1
+D (1940) nvs: nvs_get sta.he_dcm_c_tx 1
+D (1940) nvs 1
+D (1940) nvs: nvs_get sta.he_mcs9_d 1
+[1;31mE (1940) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1950) nvs: nvs_get sta.he_su_b_d 1
+D (1960) nvs: nvs_get sta.he_su_b_f_d 1
+D (1960) nvs: nvs_get sta.he_mu_b_f_d 1
+D (1960) nvs: nvs_get sta.he_cqi_f_d 1
+D (1970) nvs: nvs_get_str_or_blob sta.sae_h2e_id
+[1;31mE (1970) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1970) nvs: nvs_get ap.sae_h2e 1
+D (1980) nvs: nvs_get_str_or_blob ap.pmk_info
+D (1990) nvs: nvs_get nan.phym 1
+D (1990) nvs: nvs_get sta.pwr_reset 1
+D (1990) nvs: nvs_get band_mode 1
+D (2000) nvs: nvs_get sta.phym5g 1
+D (2000) nvs: nvs_get ap.phym5g 1
+D (2000) nvs: nvs_get sta.phybw5g 1
+[1;31mE (2000) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2000) nvs: nvs_get ap.phybw5g 1
+D (2010) lwip: etharp_timer
+
+D (2020) nvs: nvs_get ap.sndchan5g 1
+D (2020) nvs: nvs_get ap.chan5g 1
+D (2020) nvs: nvs_get ap.chanisset 1
+D (2030) nvs: nvs_get ap.chan5gisset 1
+[1;31mE (2030) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2030) nvs: nvs_get sta.rssi_5g_adj 1
+D (2040) nvs: nvs_get ap.csa_count 1
+D (2040) nvs: nvs_get ap.dtim_period 1
+D (2050) nvs: nvs_get ap.trans_d 1
+D (2050) nvs: nvs_set ap.sndchan 1 1
+[0;32mI (2060) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (2060) wifi:wifi certification version: v7.0[0m
+[0;32mI (2060) wifi:config NVSh: enabled[0m
+[1;31mE (2060) lwmb: r_select_task(), r->b_ip4_str=192.168(2070) wifi:config nano formatting: disabled[0m
+[0;32mI (2080) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2080) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2090) wifi:Init management short buffer num: 32[0m
+[0;32mI (2090) wifi:Init dynamic tx buffer num: 32[0m
+[1;31mE (2090) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (2100) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2110) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2110) wifi:Init dynamic rx buffer num: 32[0m
+D (2120) wifi:Reset scan defaults in ms : min,max,passive,chan_dwell :(0,120,360,30)
+[1;31mE (2120) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (2130) wifi_init: rx ba win: 6[0m
+[0;32mI (2130) wifi_init: accept mbox: 6[0m
+[0;32mI (2140) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2140) wifi_init: udp mbox: 6[0m
+[0;32mI (2140) wifi_init: tcp mbox: 6[0m
+[0;32mI (2140) wifi_init: tcp tx win: 5760[0m
+[1;31mE (2150) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (2150) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2160) wifi_init: tcp mss: 1440[0m
+[0;32mI (2160) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2160) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;31mE (2170) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2170) esp_netif_lwip: check: remote, if=0x3ffbb160 fn=0x400f7550
+D (2180) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 1)
+D (2190) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (2200) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2200) esp_netif_lwip: check: remote, if=0x3ffbb160 fn=0x400f7550
+D (2210) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 2)
+D (2220) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (2220) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2230) esp_netif_lwip: check: remote, if=0x3ffc8b18 fn=0x400f7144
+D (2240) esp_netif_lwip: esp_netif_dhcps_stop_api esp_netif:0x3ffc8b18
+D (2240) esp_netif_lwip: dhcp server stop successfully
+D (2250) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (2250) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2260) esp_netif_lwip: check: remote, if=0x3ffc8b18 fn=0x400f7a68
+D (2270) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8b18
+D (2270) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (2280) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2280) esp_netif_lwip: check: remote, if=0x3ffc8b18 fn=0x400f6fd0
+D (2290) esp_netif_lwip: esp_netif_dhcps_start_api esp_netif:0x3ffc8b18
+D (2300) esp_netif_lwip: dhcp server re init
+D (2300) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (2300) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2310) nvs: nvs_get opmode 1
+D (2320) nvs: nvs_set ap.authmode 1 0
+D (2320) nvs: nvs_set ap.sae_h2e 1 4
+D (2320) nvs: nvs_set ap.chanisset 1 1
+D (2330) nvs: nvs_set ap.chan 1 1
+[1;31mE (2330) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2330) nvs: nvs_set ap.sndchan 1 1
+D (2340) nvs: nvs_set_blob ap.ssid 36
+D (2340) nvs: nvs_set_blob ap.passwd 65
+D (2350) nvs: nvs_set ap.hidden 1 0
+D (2350) nvs: nvs_set ap.max.conn 1 4
+D (2350) nvs: nvs_set bcn.interval 2 100
+D (2360) nvs: nvs_set ap.p_cipher 1 0
+[1;31mE (2360) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2360) nvs: nvs_set ap.trans_d 1 0
+D (2370) nvs: nvs_set ap.ftm_r 1 0
+D (2370) nvs: nvs_set ap.csa_count 1 3
+D (2380) nvs: nvs_set ap.dtim_period 1 1
+D (2380) wifi:clear blacklist
+D (2380) nvs: nvs_set_blob sta.ssid 36
+[1;31mE (2390) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2390) nvs: nvs_set_blob sta.pswd 65
+D (2400) nvs: nvs_set bssid.set 1 0
+D (2400) nvs: nvs_set sta.lis_intval 2 3
+D (2400) nvs: nvs_set sta.chan 1 1
+D (2410) nvs: nvs_set sta.scan_method 1 0
+[1;31mE (2410) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2410) nvs: nvs_set sta.sort_method 1 0
+D (2420) nvs: nvs_set sta.minrssi 1 -127
+D (2430) nvs: nvs_set sta.minauth 1 0
+D (2430) nvs: nvs_set_blob sta.apsw 2
+D (2430) nvs: nvs_set sta.pmf_e 1 1
+D (2440) nvs: nvs_set sta.pmf_r 1 0
+D (2440) nvs: nvs_set sta.rrm_e 1 0
+[1;31mE (2440) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2440) nvs: nvs_set sta.btm_e 1 0
+D (2450) nvs: nvs_set sta.mbo_e 1 0
+D (2450) nvs: nvs_set sta.ft 1 0
+D (2460) nvs: nvs_set sta.owe 1 0
+D (2460) nvs: nvs_set sta.bss_retry 1 0
+D (2460) nvs: nvs_set sta.trans_d 1 0
+D (2470) nvs: nvs_set sta.sae_h2e 1 2
+[1;31mE (2470) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no net_set_blob sta.apinfo 700[0m
+[0;32mI (2490) wifi: ap_init (ap) finished. SSID:192.168.2.1 password: channel:1[0m
+[1;31mE (2500) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (2500) wifi: sta_init (sta) finished. SSID:192.168.2.11 password: channel:1[0m
+[0;32mI (2510) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+D (2520) phy_init: loading PHY init data from application binary
+D (2520) nvs: nvs_open
+[1;31mE (2520) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2530) nvs: nvs_get cal_version 4
+D (2540) nvs: nvs_get_str_or_blob cal_mac
+D (2540) efuse: BLK0 REG2 [8-15], len=8 bits
+D (2540) efuse: BLK0 REG2 [0-7], len=8 bits
+D (2550) efuse: BLK0 REG1 [24-31], len=8 bits
+D (2550) efuse: BLK0 REG1 [16-23], len=8 bits
+D (2560) efuse: BLK0 REG1 [8-15], len=8 bits
+D (2560) efuse: BLK0 REG1 [0-7], len=8 bits
+D (2560) efuse: BLK0 REG2 [16-23], len=8 bits
+[1;31mE (2550) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2570) nvs: nvs_get_str_or_blob cal_data
+D (2580) nvs: nvs_close 42
+D (2580) efuse: BLK0 REG2 [8-15], len=8 bits
+D (2580) efuse: BLK0 REG2 [0-7], len=8 bits
+D (2590) efuse: BLK0 REG1 [24-31], len=8 bits
+D (2590) efuse: BLK0 REG1 [16-23], len=8 bits
+D (2600) efuse: BLK0 REG1 [8-15], len=8 bits
+D (2600) efuse: BLK0 REG1 [0-7], len=8 bits
+D (2600) efuse: BLK0 REG2 [16-23], len=8 bits
+[1;31mE (2590) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[1;31mE (2640) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[1;31mE (2670) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2680) wifi:filter: set rx policy=0
+[0;32mI (2690) wifi:mode : sta (a0:dd:6c:86:19:00) + softAP (a0:dd:6c:86:19:01)[0m
+[0;32mI (2690) wifi:enable tsf[0m
+D (2690) wifi:filter: set rx policy=1
+D (2690) wifi:connect status 0 -> 0
+D (2690) wifi:filter: set rx policy=9
+[0;32mI (2700) wifi:Total power save buffer number: 16[0m
+[0;32mI (2700) wifi:Init max length of beacon: 752/752[0m
+[1;31mE (2700) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (2710) wifi:Init max length of beacon: 752/752[0m
+D (2710) event: running post WIFI_EVENT:43 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+D (2730) event: running post WIFI_EVENT:2 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+[1;31mE (2730) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2730) event: running post WIFI_EVENT:2 with handler 0x400f9ef4 and context 0x3ffc8c74 on loop 0x3ffbd36c
+D (2750) wifi_init_default: wifi_start esp-netif:0x3ffc8dc8 event-id2
+D (2760) wifi_init_default: WIFI mac address: a0 dd 6c 86 19 0
+D (2760) esp_netif_lwip: check: remote, if=0x3ffc8dc8 fn=0x400f6c50
+[1;31mE (2760) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2770) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2780) esp_netif_handlers: esp_netif action has started with netif0x3ffc8dc8 from event_id=2
+D (2790) esp_netif_lwip: check: remote, if=0x3ffc8dc8 fn=0x400f7770
+D (2800) esp_netif_lwip: esp_netif_start_api 0x3ffc8dc8
+[1;31mE (2800) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2800) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffc8dc8
+D (2810) lwip: netif: added interface st IP
+D (2820) lwip:  addr 
+D (2820) lwip: 0.0.0.0
+D (2820) lwip:  netmask 
+D (2820) lwip: 0.0.0.0
+D (2830) lwip:  gw 
+D (2830) lwip: 0.0.0.0
+D (2830) lwip: 
+
+D (2830) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (2830) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2840) event: running post WIFI_EVENT:43 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+D (2850) event: running post WIFI_EVENT:12 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+[1;31mE (2860) evhdlr: ip4_str=192.168.2.1, state=1[0m
+[0;32mI (2870) evhdlr: ip4_str=192.168.2.1, state=1[0m
+D (2870) event: running post WIFI_EVENT:12 with handler 0x400f9edc and context 0x3ffc8d34 on loop 0x3ffbd36c
+[1;31mE (2870) lwmb: r_select task(), r->b_ip4_str=192.168.2.1, r->c_ip4_str=, no tcp connection[0m
+D (2880) wifi_init_default: wifi_start esp-netif:0x3ffc8b18 event-id12
+D (2900) wifi_init_default: WIFI mac address: a0 dd 6c 86 19 1
+D (2890) lwmb: r_socket(), r->b_ip4_str=192.168.2.1, b=55, errno=9
+D (2900) esp_netif_lwip: check: remote, if=0x3ffc8b18 fn=0x400f6c50
+D (2740) esp_netif_lwip: check: remote, if=0x3ffc8dc8 fn=0x400f71e4
+D (2910) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2910) lwmb: r_bind(55), r->b_ip4_str=192.168.2.1, b=0, errno=9
+D (2920) esp_netif_handlers: esp_netif action has started with netif0x3ffc8b18 from event_id=12
+D (2920) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8dc8
+D (2940) esp_netif_lwip: check: remote, if=0x3ffc8b18 fn=0x400f7770
+D (2940) esp_netif_lwip: dhcp client stop successfully
+D (2960) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2960) esp_netif_lwip: esp_netif_start_api 0x3ffc8b18
+D (2960) esp_netif_lwip: check: remote, if=0x3ffc8dc8 fn=0x400f7a68
+D (2970) lwip: netif: netmask of interface    set to 255.255.255.0
+
+D (2960) lwmb: r_listen(55), r->b_ip4_str=192.168.2.1, b=0, errno=9
+D (2980) lwip: netif: GW address of interface    set to 192.168.2.1
+
+D (2990) lwip: netif_set_ipaddr: netif address being changed
+
+D (3000) esp_netif_lwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffc8b84
+D (3000) esp_netif_lwip: if0x3ffc8b18 ip unchanged
+D (3010) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffc8b18
+D (3010) lwip: netif: added interface ap IP
+D (3020) lwip:  addr 
+D (3020) lwip: 192.168.2.1
+D (3020) lwip:  netmask 
+D (3020) lwip: 255.255.255.0
+D (3030) lwip:  gw 
+D (3030) lwip: 192.168.2.1
+D (3030) lwip: 
+
+D (3030) esp_netif_lwip: esp_netif_start_api Setting the lwip netif0x3ffc8b84 UP
+[0;32mI (3040) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.1[0m
+D (3050) esp_netif_lwip: check: local, if=0x3ffc8b18 fn=0x400f7ef0
+D (3050) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8b18
+D (3060) lwip: netif: setting default interface ap
+
+D (3060) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3070) lwip: etharp_timer
+
+D (3070) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8dc8
+D (3080) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3080) wifi:Start wifi connect
+D (3090) wifi:connect status 0 -> 0
+D (3090) wifi:connect chan=0
+D (3090) wifi:first chan=1
+D (3090) wifi:connect status 0 -> 1
+D (3100) wifi:filter: set rx policy=3
+D (3100) wifi:clear scan ap list
+D (3100) wifi:start scan: type=0x50f, priority=2, cb=0x40115964, arg=0x0, ss_state=0x1, time=421396, index=0
+D (3110) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (3120) wifi:profile match: ss_state=0x7
+D (3130) wifi:profile match: ss_state=0x7
+D (3130) wifi:scan end: arg=0x3ffb6310, status=0, ss_state=0x7
+D (3130) wifi:find first mathched ssid, scan done
+D (3140) wifi:filter: set rx policy=4
+D (3140) wifi:first chan=1
+D (3140) wifi:handoff_cb: status=0
+D (3150) wifi:ap found, mac=a0:dd:6c:10:24:cd
+D (3150) wifi:going for connection with bssid=a0:dd:6c:10:24:cd
+D (3160) wifi:new_bss=0x3ffb7128, cur_bss=0x0, new_chan=<1,0>, cur_chan=1
+D (3160) wifi:filter: set rx policy=5same channel, but ap is ht40, use ht40
+[0;32mI (3170) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+D (3180) wifi:connect_op: status=0, auth=1, cipher=0 
+D (3180) wifi:connect_bss: auth=1, reconnect=0
+[0;32mI (3190) wifi:state: init -> auth (0xb0)[0m
+D (3190) nvs: nvs_get sta.pwr_reset 1
+D (3200) wifi:start 1s AUTH timer
+D (3200) wifi:clear scan ap list
+D (3210) httpd: httpd_thread: web server started
+D (3210) httpd: httpd_server: doing select maxfd+1 = 58
+D (3210) event: running post ESP_HTTP_SERVER_EVENT:1 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+D (3220) httpd_uri: httpd_register_uri_handler: [0] installed /
+D (3230) wifi:recv auth: seq=2, status=0, algo=0
+[0;32mI (3230) wifi:state: auth -> assoc (0x0)[0m
+D (3230) nvs: nvs_get sta.pwr_reset 1
+D (3240) wifi:restart connect 1s timer for assoc
+D (3240) httpd_uri: httpd_find_uri_handler: [0] = /
+D (3250) httpd_uri: httpd_register_uri_handler: [0] exists /
+D (3250) httpd_uri: httpd_register_uri_handler: [1] installed /
+D (3260) httpd_uri: httpd_find_uri_handler: [0] = /
+D (3260) httpd_uri: httpd_find_uri_handler: [1] = /
+D (3270) httpd_uri: httpd_register_uri_handler: [0] exists /
+D (3270) wifi:recv assoc: type=0x10
+D (3280) wifi:filter: set rx policy=6
+[0;32mI (3280) wifi:state: assoc -> run (0x10)[0m
+D (3280) nvs: nvs_get sta.pwr_reset 1
+D (3290) wifi:start 10s connect timer for 4 way handshake
+[0;32mI (3290) wifi:connected with 192.168.2.11, aid = 2, channel 1, BW20, bssid = a0:dd:6c:10:24:cd[0m
+[0;32mI (3300) wifi:security: Open Auth, phy: bgn, rssi: -53[0m
+D (3300) wifi:remove all except a0:dd:6c:10:24:cd from rc list
+D (3310) wifi:clear blacklist
+D (3310) nvs: nvs_set sta.chan 1 1
+D (3320) nvs: nvs_set_blob sta.apinfo 700
+D (3320) wifi:filter: set rx policy=7
+[0;32mI (3320) wifi:pm start, type: 1[0m
+
+[0;32mI (3330) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+D (3330) wifi:Send sta connected event
+D (3340) wifi:connect status 1 -> 5
+D (3340) wifi:obss scan is disabled
+D (3340) wifi:start obss scan: obss scan is stopped
+[0;32mI (3350) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+D (3350) event: running post WIFI_EVENT:4 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+D (3360) esp_netif_lwip: check: remote, if=0x3ffc8dc8 fn=0x400f71e4
+D (3370) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8dc8
+D (3370) httpd_uri: httpd_register_uri_handler: [1] exists /
+D (3370) esp_netif_lwip: dhcp client already stopped
+D (3380) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (3380) httpd_uri: httpd_register_uri_handler: [2] installed /restart
+D (3390) esp_netif_lwip: check: remote, if=0x3ffc8dc8 fn=0x400f7a68
+D (3400) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8dc8
+D (3400) httpd_uri: httpd_find_uri_handler: [0] = /
+D (3410) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (3420) evhdlr: ip4_str=192.168.2.2, state=1[0m
+D (3420) event: running post WIFI_EVENT:4 with handler 0x400f9f24 and context 0x3ffc8cd4 on loop 0x3ffbd36c
+D (3430) esp_netif_handlers: esp_netif action connected with netif0x3ffc8dc8 from event_id=4
+D (3440) esp_netif_lwip: check: remote, if=0x3ffc8dc8 fn=0x400f798c
+D (3450) esp_netif_lwip: esp_netif_up_api esp_netif:0x3ffc8dc8
+D (3450) httpd_uri: httpd_find_uri_handler: [1] = /
+D (3450) lwip: netif: netmask of interface st set to 255.255.255.0
+
+D (3460) lwip: netif: GW address of interface st set to 192.168.2.11
+
+D (3470) lwip: netif_set_ipaddr: netif address being changed
+
+D (3480) esp_netif_lwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffc8e54
+D (3480) esp_netif_lwip: if0x3ffc8dc8 ip unchanged
+D (3490) esp_netif_lwip: check: local, if=0x3ffc8dc8 fn=0x400f7ef0
+D (3490) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8dc8
+D (3500) lwip: netif: setting default interface st
+
+D (3500) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3510) esp_netif_lwip: esp_netif_get_ip_info esp_netif:0x3ffc8dc8
+D (3510) esp_netif_lwip: esp_netif_get_old_ip_info esp_netif:0x3ffc8dc8
+D (3520) esp_netif_lwip: check: remote, if=0x3ffc8dc8 fn=0x400f6c78
+D (3530) esp_netif_lwip: esp_netif_set_ip_old_info_api esp_netif:0x3ffc8dc8
+D (3530) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3530) httpd_uri: httpd_find_uri_handler: [2] = /restart
+D (3540) esp_netif_handlers: static ip: ip changed=true
+D (3550) event: running post IP_EVENT:0 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+D (3560) event: running post IP_EVENT:0 with handler 0x400f9d50 and context 0x3ffc8da8 on loop 0x3ffbd36c
+D (3570) wifi_init_default: Got IP wifi default handler entered
+D (3570) esp_netif_handlers: esp_netif action got_ip with netif0x3ffc8dc8 from event_id=0
+[0;32mI (3580) esp_netif_handlers: sta ip: 192.168.2.2, mask: 255.255.255.0, gw: 192.168.2.11[0m
+D (3590) httpd_uri: httpd_register_uri_handler: [0] exists /
+D (3590) httpd_uri: httpd_register_uri_handler: [1] exists /
+D (3600) httpd_uri: httpd_register_uri_handler: [2] exists /restart
+D (3610) httpd_uri: httpd_register_uri_handler: [3] installed /restart
+D (3610) httpd_uri: httpd_find_uri_handler: [0] = /
+D (3620) httpd_uri: httpd_find_uri_handler: [1] = /
+D (3620) httpd_uri: httpd_find_uri_handler: [2] = /restart
+D (3630) httpd_uri: httpd_find_uri_handler: [3] = /restart
+D (3630) httpd_uri: httpd_register_uri_handler: [0] exists /
+D (3640) httpd_uri: httpd_register_uri_handler: [1] exists /
+D (3640) httpd_uri: httpd_register_uri_handler: [2] exists /restart
+D (3650) httpd_uri: httpd_register_uri_handler: [3] exists /restart
+D (3650) httpd_uri: httpd_register_uri_handler: [4] installed /favicon.ico
+D (3660) intr_alloc: Connected src 22 to int 8 (cpu 0)
+D (3670) spi: SPI2 use gpio matrix.
+D (3670) w5500.mac: Using default SPI Driver
+D (3670) intr_alloc: Connected src 30 to int 9 (cpu 0)
+D (3680) spi_hal: eff: 16000, limit: 26666k(/2), 0 dummy, 0 delay
+D (3680) spi_master: SPI2: New device added to CS0, effective clock: 16000000 Hz
+[1;31mE (3690) gpio: gpio_pullup_en(78): GPIO number error[0m
+D (3700) w5500.mac: Waiting W5500 to start & verify version...
+D (3710) esp_eth: new ethernet driver @0x3ffcde64
+D (3710) esp_netif_lwip: check: remote, if=0x3ffbb2d0 fn=0x400f7550
+D (3710) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 3)
+D (3720) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[0;32mI (3730) esp_eth.netif.netif_glue: 64:61:76:65:79:73[0m
+D (3730) esp_netif_lwip: check: remote, if=0x3ffcdee4 fn=0x400f6c50
+D (3740) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[0;32mI (3740) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+D (3750) esp_netif_lwip: check: remote, if=0x3ffcdee4 fn=0x400f71e4
+D (3750) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffcdee4
+D (3760) esp_netif_lwip: dhcp client stop successfully
+D (3760) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3770) esp_netif_lwip: check: remote, if=0x3ffcdee4 fn=0x400f7a68
+D (3780) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffcdee4
+D (3780) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3800) event: running post ETH_EVENT:0 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+D (3800) event: running post ETH_EVENT:0 with handler 0x400de578 and context 0x3ffce040 on loop 0x3ffbd36c
+D (3810) esp_eth.netif.netif_glue: eth_action_start: 0x3ffcdff8, 0x3f405990, 0, 0x3ffce120, 0x3ffcde64
+D (3810) esp_netif_handlers: esp_netif action has started with netif0x3ffcdee4 from event_id=0
+D (3820) esp_netif_lwip: check: remote, if=0x3ffcdee4 fn=0x400f7770
+D (3830) esp_netif_lwip: esp_netif_start_api 0x3ffcdee4
+D (3830) lwip: netif: netmask of interface    set to 255.255.255.0
+
+D (3840) lwip: netif: GW address of interface    set to 192.168.1.1
+
+D (3850) lwip: netif_set_ipaddr: netif address being changed
+
+D (3850) esp_netif_lwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffcdf70
+D (3860) esp_netif_lwip: if0x3ffcdee4 ip unchanged
+D (3860) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffcdee4
+D (3870) lwip: netif: added interface en IP
+D (3870) lwip:  addr 
+D (3870) lwip: 192.168.1.1
+D (3880) lwip:  netmask 
+D (3880) lwip: 255.255.255.0
+D (3880) lwip:  gw 
+D (3880) lwip: 192.168.1.1
+D (3890) lwip: 
+
+D (3890) esp_netif_lwip: check: local, if=0x3ffcdee4 fn=0x400f7ef0
+D (3890) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffcdee4
+D (3900) lwip: netif: setting default interface st
+
+D (3910) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (4010) lwip: etharp_timer
+
+D (5010) lwip: etharp_timer
+
+D (6010) lwip: etharp_timer
+
+D (7010) lwip: etharp_timer
+
+D (8010) lwip: etharp_timer
+
+D (9010) lwip: etharp_timer
+
+D (10010) lwip: etharp_timer
+
+D (11010) lwip: etharp_timer
+
+D (12010) lwip: etharp_timer
+
+D (13010) lwip: etharp_timer
+
+D (14010) lwip: etharp_timer
+
+D (15010) lwip: etharp_timer
+
+D (16010) lwip: etharp_timer
+
+D (17010) lwip: etharp_timer
+
+D (18010) lwip: etharp_timer
+
+D (19010) lwip: etharp_timer
+
+D (20010) lwip: etharp_timer
+
+D (21010) lwip: etharp_timer
+
+D (21860) lwip: pbuf_alloced_custom(length=188)
+
+D (21860) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:800
+
+D (21870) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (21870) lwip: pbuf_alloced_custom(length=188)
+
+D (21870) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x202a8c0 (0xffffff, 0x2a8c0, 0xff000000)
+
+D (21890) lwip: ip4_input: packet accepted on interface st
+
+D (21890) lwip: ip4_input: 
+
+D (21890) lwip: IP header:
+
+D (21900) lwip: +-------------------------------+
+
+D (21900) lwip: | 4 | 5 |  0x00 |       174     | (v, hl, tos, len)
+
+D (21910) lwip: +-------------------------------+flags, offset)
+
+D (21920) lwip: +-------------------------------+
+
+D (21920) lwip: |   64  |   17  |    0xb752     | (ttl, proto, chksum)
+
+D (21930) lwip: +-------------------------------+
+
+D (21930) lwip: |  192  |  168  |    2  |   12  | (src)
+
+D (21940) lwip: +-------------------------------+
+
+D (21940) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (21950) lwipen 174 p->tot_len 174
+
+D (21960) lwip: pbuf_remove_header: old 0x3ffce1f0 new 0x3ffce204 (20)
+
+D (21970) lwip: pbuf_free(0x3ffce81c)
+
+D (21970) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (21970) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:800
+
+D (21980) lwip: pbuf_remove_header:
+
+D (21990) lwip: ip_input: iphdr->dest 0xff02a8c0 netif->ip_addr 0x202a8c0 (0x2a8c0, 0x2a8c0, 0xff000000)
+
+D (22000) lwip: ip4_input: packet accepted on interface st
+
+D (22000) lwip: ip4_input: 
+
+D (22010) lwip: IP header:
+
+D (22010) lwip: +-------------------------------+
+
+D (22010) lwip: | 4 | 5 |  0x00 |       174     | (v, hl, tos, len)
+
+D (22020) lwip: +-------------------------------+
+
+D (22020) lwip: |    19054      |000|       0   | (id, flags, offset)
+
+D (22030) lwip: +-------------------------------+
+
+D (22030) lwip: |   64  |   17  |    0xa975     | (ttl, proto, chksum)
+
+D (22040) lwip: +-------------------------------+
+
+D (22040) lwip: |  192  |  168  |    2  |   12  | (src)
+
+D (22050) lwip: +-------------------------------+
+
+D (22050) lwip: |  192  |  168  |    2  |  255  | (dest)
+
+D (22060) lwip: +-------------------------------+
+
+D (22060) lwip: ip4_input: p->len 174 p->tot_len 174
+
+D (22070) lwip: pbuf_remove_header: old 0x3ffce8e8 new 0x3ffce8fc (20)
+
+D (22080) lwip: pbuf_free(0x3ffcef14)
+
+D (22080) lwip: pbuf_free: deallocating 0x3ffcef14
+
+D (22080) lwip: etharp_timer
+
+D (23010) lwip: etharp_timer
+
+D (24010) lwip: etharp_timer
+
+D (25010) lwip: etharp_timer
+
+D (26010) lwip: etharp_timer
+
+D (27010) lwip: etharp_timer
+
+D (27600) lwip: pbuf_alloced_custom(length=42)
+
+D (27600) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (27600) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (27610) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (27610) lwip: etharp_find_entry: found empty entry 0
+
+D (27620) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (27630) lwip: etharp_input: incoming ARP request
+
+D (27630) lwip: etharp_input: ARP request was not for : pbuf_free(0x3ffce81c)
+
+D (27640) lwip: pbuf_free: deallocatiD (28010) lwip: etharp_timer
+
+D (28620) lwip: pbuf_alloced_custom(length=42)
+
+D (28620) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (28620) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (28630) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (28640) lwip: etharp_find_entry: found empty entry 0
+
+D (28640) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (28650) lwip: etharp_input: incoming ARP request
+
+D (28650) lwip: etharp_input: ARP request was not for ) lwip: pbuf_free(0x3ffce81c)
+buf_free: deallocating 0x3ffce81c
+
+D (29010) lwip: etharp_timer
+
+D (29540) lwip: pbuf_alloced_custom(length=42)
+
+D (29540) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (29550) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (29550) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (29560) lwip: etharp_find_entry: found empty entry 0
+
+D (29560) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (29570) lwip: etharp_input: incoming ARP request
+
+D (29580) lwip: etharp_input: ARP request was not for us.
+
+D (29580) lwip: pbuf_free
+D (29580) lwip: pbuf_free: dealD (30010) lwip: etharp_timer
+
+D (30570) lwip: pbuf_alloced_custom(length=42)
+
+D (30570) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (30570) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (30580) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (30580) lwip: etharp_find_entry: found empty entry 0
+
+D (30590) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (30590) lwip: etharp_input: incoming ARP r30600) lwip: etharp_input: ARP request was not for us.
+
+D (30600) lwip: pbuf_free(0x3ffce81c)
+
+D (30610) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (31010) lwip: etharp_timer
+
+D (31590) lwip: pbuf_alloced_custom(length=42)
+
+D (31590) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (31600) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (31600) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (31610) lwip: etharp_find_entry: found empty entry 0
+
+D (31610) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (31620) lwip: etharp_input: incoming ARP request
+
+D (31630) lwip: etharp_input: ARP request was not for us.
+
+D (31630) lwip: pbuf_free(0x3ffce81c)
+
+D (31630) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (32010) lwip: etharp_timer
+
+D (32010) lwip: pbuf_alloced_custom(length=456)
+
+D (32010) lwip: ethernet_input: dest:01:00:5e:00:00:fb, src:4c:32:75:9a:e9:f7, type:800
+
+D (32010) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (32010) lwip: pbuf_alloced_custom(length=476)
+
+D (32020) lwip: ip4_input: UDP packet to DHCP client ip: ip4_input: packet not for us lwip: pbuf_free: deallocating 0_input: dest:33:33:00:00:00:fb, src:4c:32:75:9a:e9:f7, type:86dd
+
+D (32050) lwip: pbuf_free(0x3ffcef14)
+
+D (32050) lwip: pbuD (32620) lwip: pbuf_alloced_custom(length=42)
+
+D (32620) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (32620) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (32630) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (32630) lwip: etharp_find_entry: found empty entry 0
+
+D (32640) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (32640) lwip: etharp_input: incoming ARP request
+
+D (32650) lwip: etharp_input: ARP request was not for us.
+
+D (32650) lwip: pbuf_free(0x3ffce81c)
+
+D (32660) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (33010) lwip: etharp_timer
+
+D (33640) lwip: pbuf_alloced_custom(length=42)
+
+D (33640) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (33640) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (33650) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (33650) lwip: etharp_find_entry: found empty entry 0
+
+D (33660) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (33670) lwip: etharp_input: incoming ARP request
+
+D (33670) lwip: etharp_input: ARP request was not for us.
+
+D (33680) lwip: pbuf_free(0x3ffce81c)
+
+D (33680) lwip: pbuf_free: deallocating 0x3ffce8
+
+D (34010) lwip: etharp_timer
+
+D (34560) lwip: pbuf_alloced_custom(length=42)
+
+D (34560) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (34560) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (34570) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (34580) lwip: etharp_find_entry: found empty entry 0
+
+D (34580) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (34590) lwip: etharp_input: incoming ARP request
+
+D (34590) lwip: etharp_input: ARP request was not for us.
+
+D (34600) lwip: pbuf_free(0x3ffce81c)
+
+D (34600) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (35010) lwip: etharp_timer
+
+D (35590) lwip: pbuf_alloced_custom(length=42)
+
+D (35590) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (35590) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (35590) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (35600) lwip: etharp_find_entry: found empty entry 0
+
+D (35600) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (35610) lwip: etharp_input: incoming ARP request
+
+D (35620) lwip: etharp_input: ARP request was not for us.
+
+D (35620) lwip: pbuf_free(0x3ffce81c)
+
+D (35630) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (36010) lwip: etharp_timer
+
+D (36610) lwip: pbuf_alloced_custom(length=42)
+
+D (36610) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (36610) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (36620) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (36620) lwip: etharp_find_entry: found empty entry 0
+
+D (36630) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (36640) lwip: etharp_input: incoming ARP request
+
+D (36640) lwip: etharp_input: ARP request was not for us.
+
+D (36650) lwip: pbuf_free(0x3ffce81c)
+
+D (36650) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (37010) lwip: etharp_timer
+
+D (37630) lwip: pbuf_alloced_custom(length=42)
+
+D (37630) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (37630) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (37640) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (37650) lwip: etharp_find_entry: found empty entry 0
+
+D (37650) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (37660) lwip: etharp_input: incoming ARP request
+
+D (37660) lwip: etharp_input: ARP request was not for us.
+
+D (37670) lwip: pbuf_free(0x3ffce81c)
+
+D (37670) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (38010) lwip: etharp_timer
+
+D (38660) lwip: pbuf_alloced_custom(length=42)
+
+D (38660) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (38660) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (38670) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (38670) lwip: etharp_find_entry: found empty entry 0
+
+D (38680) lwip: etharp_find_entry: no empty entry found and not alD (38680) lwip: etharp_input: incoming ARP request
+
+D (38690) lwip: etharp_input: ARP request was not for us.
+
+D (38690) lwip: pbuf_free(0x3ffce81c)
+
+D (38700) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (39010) lwip: etharp_timer
+
+D (39580) lwip: pbuf_alloced_custom(length=42)
+
+D (39580) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (39580) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (39590) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (39590) lwip: etharp_find_entry: found empty entry 0
+
+D (39600) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (39610) lwip: etharp_input: incoming ARP request
+
+D (39610) lwip: etharp_input: ARP request was not for us.
+
+D (39620) lwip: pbuf_free(0x3ffce81c)
+
+D (39620) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (40010) lwip: etharp_timer
+
+D (40600) lwip: pbuf_alloced_custom(length=42)
+
+D (40600) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (40600) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (40610) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (40620) lwip: etharp_find_entry: found empty entry 0
+
+D (40620) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (40630) lwip: etharp_input: incoming ARP request
+
+D (40630) lwip: etharp_input: ARP request was not for us.
+
+D (40640) lwip: pbuf_free(0x3ffce81c)
+
+D (40640) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (41010) lwip: etharp_timer
+
+D (41630) lwip: pbuf_alloced_custom(length=42)
+
+D (41630) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (41630) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (41640) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (41640) lwip: etharp_find_entry: found empty entry 0
+
+D (41650) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (41660) lwip: etharp_input: incoming ARP request
+
+D (41660) lwip: etharp_input: ARP request was not for us.
+
+D (41670) lwip: pbuf_free(0x3ffce81c)
+
+D (41670) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (42010) lwip: etharp_timer
+
+D (42650) lwip: pbuf_alloced_custom(length=42)
+
+D (42650) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (42650) lwip: pbuf_remove_header: old 0x3ffce1e2 new 0x3ffce1f0 (14)
+
+D (42660) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (42660) lwip: etharp_find_entry: found empty entry 0
+
+D (42670) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (42680) lwip: etharp_input: incoming ARP request
+
+D (42680) lwip: etharp_input: ARP request was not for us.
+
+D (42690) lwip: pbuf_free(0x3ffce81c)
+
+D (42690) lwip: pbuf_free: deallocating 0x3ffce81c
+
+D (43010) lwip: etharp_timer
+
+D (43270) lwip: pbuf_alloced_custom(length=54)
+
+D (43270) lwip: ethernet_input: dest:a0:dd:6c:86:19:00, src:4c:32:75:9a:e9:f7, type:800
+
+[0;32mI (43270) wifi:D (43270) lwip: pbuf_remove_header: old 0x3ffce2b8 new 0x3ffce2c6 (14)[0m
+
+<ba-add>idx:0 (ifx:0, a0:dd:6c:10:24:cd), tid:0, ssn:0, winSize:64D (43280) lwip: ip_input: iphdr->dest 0x202a8c0 netif->ip_addr 0x202a8c0 (0x2a8c0, 0x2a8c0, 0x2000000)
+
+
+D (43290) lwip: ip4_input: packet accepted on interface st
+
+D (43300) lwip: ip4_input: 
+
+D (43300) lwip: IP header:
+
+D (43310) lwip: +-------------------------------+
+
+D (43310) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (43320) lwip: +-------------------------------+
+
+D (43320) lwip: |    48183      |000|       0   | (id, flags, offset)
+
+D (43330) lwip: +-------------------------------+
+
+D (43330) lwip: |   64  |    6  |    0x393a     | (ttl, proto, chksum)
+
+D (43340) lwip: +-------------------------------+
+
+D (43340) lwip: |  192  |  168  |    2  |   12  | (src)
+
+D (43350) lwip: +-------------------------------+
+
+D (43350) lwip: |  192  |  168  |    2  |    2  | (dest)
+
+D (43360) lwip: +-------------------------------+
+
+D (43360) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (43370) lwip: pbuf_remove_header: old 0x3ffce2c6 new 0x3ffce2da (20)
+
+D (43370) lwip: pbuf_remove_header: old 0x3ffce2da new 0x3ffce2ee (20)
+
+D (43380) lwip: pbuf_alloc(length=20)
+
+D (43380) lwip: pbuf_alloc(length=20) == 0x3ffce1a0
+
+D (43390) lwip: pbuf_add_header: old 0x3ffce1d4 new 0x3ffce1c0 (20)
+
+D (43390) lwip: ip4_output_if: st1
+
+D (43400) lwip: IP header:
+
+D (43400) lwip: +-------------------------------+
+
+D (43400) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (43410) lwip: +-------------------------------+
+
+D (43420) lwip: |        0      |000|       0   | (id, flags, offset)
+
+D (43420) lwip: +-------------------------------+
+
+D (43430) lwip: |   64  |    6  |    0xf571     | (ttl, proto, chksum)
+
+D (43430) lwip: +-------------------------------+
+
+D (43440) lwip: |  192  |  168  |    2  |    2  | (src)
+
+D (43440) lwip: +-------------------------------+
+
+D (43450) lwip: |  192  |  168  |    2  |   12  | (dest)
+
+D (43450) lwip: +-------------------------------+
+
+D (43460) lwip: ip4_output_if: call netif->output()
+
+D (43460) lwip: etharp_find_entry: found empty entry 0
+
+D (43470) lwip: etharp_find_entry: selecting empty entry 0
+
+D (43470) lwip: etharp_request: sending ARP request.
+
+D (43480) lwip: pbuf_alloc(length=28)
+
+D (43480) lwip: pbuf_alloc(length=28) == 0x3ffce1ec
+
+D (43490) lwip: etharp_raw: sending raw ARP packet.
+
+D (43490) lwip: pbuf_add_header: old 0x3ffce20c new 0x3ffce1fe (14)
+
+D (43500) lwip: ethernet_output: sending packet 0x3ffce1ec
+
+D (43500) lwip: pbuf_free(0x3ffce1ec)
+
+D (43510) lwip: pbuf_free: deallocating 0x3ffce1ec
+
+D (43510) lwip: etharp_query: queued packet 0x3ffce1a0 on ARP entry 0
+
+D (43520) lwip: pbuf_free(0x3ffce1a0)
+
+D (43520) lwip: pbuf_free: 0x3ffce1a0 has ref 1, ending here.
+
+D (43530) lwip: pbuf_free(0x3ffce8f0)
+
+D (43530) lwip: pbuf_free: deallocating 0x3ffce8f0
+
+D (43670) lwip: pbuf_alloced_custom(length=42)
+
+D (43670) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (43680) lwip: pbuf_alloced_custom(length=42)
+
+D (43680) lwip: pbuf_remove_header: old 0x3ffce2f2 new 0x3ffce300 (14)
+
+D (43690) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (43690) lwip: etharp_find_entry: found mpdate_arp_entry: updating stable entry 0
+
+D (43700) lwip: pbuf_add_header: old 0x3ffce1c0 new 0x3ffce1b2 (14)
+
+D (43710) lwip: ethernet_output: sending pack3720) lwip: pbuf_free(0x3ffce1a0)
+
+D (43720) lwip: pbuf_free: deallocating 0x3ffce1a0
+
+D (43720) lwip: etharp_input: incoming ARP request
+
+D (43730) lwip: etharp_input: ARP request was nffce92c)
+
+D (43740) lwip: pbufc:4c:32:75:9a:e9:f7, type:806
+)
+
+D (43760) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (43760) lwip: etharp_find_entry: found matching entry 0
+
+D (43770) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (43770) lwip: etharp_input: incoming ARP reply
+
+D (43780) lwip: pbuf_free(0x3ffca43c)
+
+D (43780) lwip: pbuf_free: deallocating 0x3ffca43c
+
+D (44010) lwip: etharp_timer
+
+D (44600) lwip: pbuf_alloced_custom(length=42)
+
+D (44600) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (44600) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (44600) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (44610) lwip: etharp_find_entry: found matching entry 0
+
+D (44620) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (44620) lwip: etharp_input: incoming ARP request
+
+D (44630) lwip: etharp_input: ARP request was not for us.
+
+D (44630) lwip: pbuf_free(0x3ffce864)
+ (44640) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (45010) lwip: etharp_timer
+
+D (45620) lwip: pbuf_alloced_custom(length=42)
+
+D (45620) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (45620) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (45630) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (45630) lwip: etharp_find_entry: found matching entry 0
+
+D (45640) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (45650) lwip: etharp_input: incoming ARP request
+
+D (45650) lwip: etharp_input: ARP request was not for us.
+
+D (45660) lwip: pbuf_free(0x3ffce864)
+
+D (45660) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (46010) lwip: etharp_timer
+
+D (46640) lwip: pbuf_alloced_custom(length=42)
+
+D (46650) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (46650) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (46650)rp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (46660) lwip: etharp_find_entry: found matching entry 0
+
+D (46660) lwip: etharp_update_arp_entry: uD (46670) lwip: etharp_input: inharp_input: ARP request was not for us.
+
+D (46680) lwip: pbuf_free(0x3ffce864)
+
+D (46680) lwip: pbuf_free: deallocating 0x3f4
+
+D (47010) lwip: etharp_timer
+
+D (47670) lwip: pbuf_alloced_custom(length=42)
+
+D (47670) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (47670) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (47680) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (47680) lwip: etharp_find_entry: found matching entry 0
+
+D (47690) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (47690) lwip: etharp_input: incoming ARP request
+
+D (47700) lwip: etharp_input: ARP request was not for us.
+
+D (47700) lwip: pbuf_free(0x3ffce864)
+
+D (47710) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (48010) lwip: etharp_timer
+
+D (49010) lwip: etharp_timer
+
+D (49610) lwip: pbuf_alloced_custom(length=42)
+
+D (49620) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (49620) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (49620) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (49630) lwip: etharp_find_entry: found matching entry 0
+
+D (49630) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (49640) lwip: etharp_input: incoming ARP request
+
+D (49640) lwip: etharp_input: ARP request was not for us.
+
+D (49650) lwip: pbuf_free(0x3ffce864)
+
+D (49650) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (49720) lwip: pbuf_alloced_custom(length=42)
+
+D (49720) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:a0:dd:6c:02:d7:98, type:806
+
+D (49720) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (49720) lwip: etharp_update_arp_entry: 192.168.2.22 - a0:dd:6c:02:d7:98
+
+D (49730) lwip: etharp_find_entry: found empty entry 1
+
+D (49740) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (49740) lwip: etharp_input: incoming ARP request
+
+D (49750) lwip: etharp_input: ARP request was not for us.
+
+D (49750) lwip: pbuf_free(0x3ffce864)
+
+D (49760) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (50010) lwip: etharp_timer
+
+D (50640) lwip: pbuf_alloced_custom(length=42)
+
+D (50640) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (50650) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (50650) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (50660) lwip: etharp_find_entry: found matching entry 0
+
+D (50660) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (50670) lwip: etharp_input: incoming ARP request
+
+D (50670) lwip: etharp_input: ARP request was not for us.
+
+D (50680) lwip: pbuf_free(0x3ffce864)
+
+D (50680) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (51010) lwip: etharp_timer
+
+D (51660) lwip: pbuf_alloced_custom(length=42)
+
+D (51660) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (51660) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (51670) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (51680) lwip: etharp_find_entry: found matching entry 0
+
+D (51680) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (51690) lwip: etharp_input: incoming ARP request
+
+D (51690) lwip: etharp_input: ARP request was not for us.
+
+D (51700) lwip: pbuf_free(0x3ffce864)
+
+D (51700) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (51970) lwip: pbuf_alloced_custom(length=188)
+
+D (51970) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:800
+
+D (51970) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (51980) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x202a8c lwip: IP header:
+
+D (52000) lflags, offset)
+
+D (52020) lwip: +-------------------------------+
+
+D (52020) lwip: |   64  |   17  |    0x0621     | (ttl, p------+
+
+D (52050) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (52050) lwip: +-------------------------------+
+
+D (52050) lwip: ip4_input: p->len 17n 174
+
+D (52060) lwip: pbuf_reader: old 0x3ffce238 new 0x3ffce24c (20)
+
+D (52070) lwip: pbuf_free(0x3ffce864)
+
+D (52070) lf_free: deallocating 0x3ffce864
+
+D (52070) lwip: etharp_timerD (52690) lwip: pbuf_alloced_custom(length=42)
+
+D (52690) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (52690) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (52690) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (52700) lwip: etharp_find_entry: found matching entry 0
+
+D (52710) lwip: etharp_update_a20) lwip: etharp_input: ARP requD (53010) lwip: etharp_timer
+
+D (53710) lwip: pbuf_alloced_custom(length=42)
+
+D (53710) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (53710) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (53720) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (53720) lwip: etharp_find_entry: found matching entry 0
+
+D (53730) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (53740) lwip: etharp_input: incoming ARP request
+
+D (53740) lwip: etharp_input: ARP request was not for us.
+
+D (53750) lwip: pbuf_free(0x3ffce864)
+
+D (53750) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (54010) lwip: etharp_timer
+
+D (54630) lwip: pbuf_alloced_custom(length=42)
+
+D (54630) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (54630) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (54640) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (54650) lwip: etharp_find_entry: found matching entry 0
+
+D (54650) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (54660) lwip: etharp_input: incoming ARP request
+
+D (54660) lwip: etharp_input: ARP request was not for us.
+
+D (54670) lwip: pbuf_free(0x3ffce864)
+
+D (54670) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (55010) lwip: etharp_timer
+
+D (55660) lwip: pbuf_alloced_custom(length=42)
+
+D (55660) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (55660) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (55660) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (55670) lwip: etharp_find_entry: found matching entry 0
+
+D (55680) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (55680) lwip: etharp_inpu lwip: etharp_input: ARP request was not for us.
+
+D (55690) lwuf_free: deallocating 0x3ffce864
+
+D (56010) lwip: etharp_timer
+
+D (56680) lwip: pbuf_alloced_custom(length=42)
+
+D (56680) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (56680) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (56690) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (56690) lwip: etharp_find_entry: found matching entry 0
+
+D (56700) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (56700) lwip: etharp_input: incoming ARP request
+
+D (56710) lwip: etharp_input: ARP request was not for us.
+
+D (56710) lwip: pbuf_free(0x3ffce864)
+f_free: deallocating 0x3ffce864
+
+D (57010) lwip: etharp_timer
+
+D (57700) lwip: pbuf_alloced_custom(length=42)
+
+D (57700) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (57700) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (57710) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (57720) lwip: etharp_find_entry: found matching entry 0
+
+D (57720) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (57730) lwip: etharp_input: incoming ARP request
+
+D (57730) lwip: etharp_input: ARP request was not for us.
+
+D (57740) lwip: pbuf_free(0x3ffce864)
+
+D (57740) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (58010) lwip: etharp_timer
+
+D (58730) lwip: pbuf_alloced_custom(length=42)
+
+D (58730) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (58730) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (58730)date_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (58740) lwip: etharp_find_entry: found matching entry 0
+
+D (58750) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (58750) lwip: etharp_input: incoming ARP request
+
+D (58760) lwip: etharp_input: ARP request was not for us.
+
+D (58760) lwip: pbuf_free(0x3ffce864)
+
+D (58770) lwip:deallocating 0x3ffce864
+
+D (59010) lwip: etharp_timer
+
+D (59750) lwip: pbuf_alloced_custom(length=42)
+
+D (59750) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (59750) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (59760) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (59770) lwip: etharp_find_entry: found matching entry 0
+
+D (59770) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (59780) lwip: etharp_input: incoming ARP request
+
+D (59780) lwip: etharp_input: ARP request was not for us.
+
+D (59790) lwip: pbuf_free(0x3ffce864)
+
+D (59790) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (60010) lwip: etharp_timer
+
+D (60670) lwip: pbuf_alloced_custom(length=42)
+
+D (60680) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (60680) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (60680) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (60690) lwip: etharp_find_entry: found matching entry 0
+
+D (60690) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (60700) lwip: etharp_input: incoming ARP request
+
+D (60710) lwip: etharp_input: ARP request was not for us.
+
+D (60710) lwip: pbuf_free(0x3ffce864)
+710) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (61010) lwip: etharp_timer
+
+D (61700) lwip: pbuf_alloced_custom(length=42)
+
+D (61700) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (61700) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (61700) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (61710) lwip: etharp_find_entry: found matching entry 0
+
+D (61720) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (61720) lwip: etharp_input: incoming ARP request
+
+D (61730) lwip: etharp_input: ARP request was not for us.
+
+D (61730) lwip: pbuf_free(0x3ffce864)
+
+D (61740) lwip: pbuf_free: deal 0x3ffce864
+
+D (62010) lwip: etharp_timer
+
+D (62720) lwip: pbuf_alloced_custom(length=42)
+
+D (62720) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (62720) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (62730) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (62740) lwip: etharp_find_entry: found matching entry 0
+
+D (62740) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (62750) lwip: etharp_input: incoming ARP request
+
+D (62750) lwip: etharp_input: ARP request was not for us.
+
+D (62760) lwip: pbuf_free(0x3ffce864)
+
+D (62760) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (62830) lwip: etharp_request: sending ARP request.
+
+D (62830) lwip: pbuf_alloc(length=28)
+
+D (62830) lwip: pbuf_alloc(length=28) == 0x3ffce1a0
+
+D (62830) lwip: etharp_raw: sending raw ARP packet.
+
+D (62830) lwip: pbuf_add_header: old 0x3ffce1c0 new 0x3ffce1b2 (14)
+
+D (62840) lwip: ethernet_output: sending packet 0x3ffce1a0
+
+D (62850) lwing 0x3ffce1a0
+
+D (63010) lwip: etharp_timer
+
+D (63740) lwip: pbuf_alloced_custom(length=42)
+
+D (63740) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (63750) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (63750) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (63760) lwip: etharp_find_entry: found matching entry 0
+
+D (63760) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (63770) lwip: etharp_input: incoming ARP request
+
+D (63770) lwip: etharp_input: ARP request was not for us.
+
+D (63780) lwip: pbuf_free(0x3ffce864)
+
+D (63780) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (63890) lwip: etharp_request: sending ARP request.
+
+D (63890) lwip: pbuf_alloc(length=28)
+
+D (63890) lwip: pbuf_alloc(length=28) == 0x3ffce1a0
+
+D (63890) lwip: etharp_raw: sending raw ARP packet.
+
+D (63890) lwip: pbuf_add_header: old 0x3ffce1c0 new 0x3ffce1b2 (14)
+
+D (63900) lwip: ethernet_output: sending packet 0x3ffce1a0
+
+D (63900) esp_eth: Ethernet link is not up, can't transmit
+D (63910) lwip: pbuf_free(0x3ffce1a0)
+
+D (63910) lwip: pbuf_free: deallocating 0x3ffce1a0
+
+D (64010) lwip: etharp_timer
+
+D (64770) lwip: pbuf_alloced_custom(length=42)
+
+D (64770) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (64770) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (64780) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (64780) lwip: etharp_find_entry: found matching entry 0
+
+D (64790) lwip: etharp_update_arp_entry: updating stable entry  incoming ARP request
+
+D (6480 ARP request was not for us.
+
+D (64800) lwip: pbuf_free(0x3ffce864)
+
+D (64810) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (65010) lwip: etharp_timer
+
+D (65700) lwip: pbuf_alloced_custom(length=42)
+
+D (65700) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (65700) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (65710) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (65720) lwip: etharp_find_entry: found matching entry 0
+
+D (65720) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (65730) lwip: etharp_input: incoming ARP request
+
+D (65730) lwip: etharp_input: ARP request was not for us.
+
+D (65740) lwip: pbuf_free(0x3ffce864)
+
+D (65740) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (66010) lwip: etharp_timer
+
+D (66710) lwip: pbuf_alloced_custom(length=42)
+
+D (66720) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (66720) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (66720) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (66730) lwip: etharp_find_entry: found matching entry 0
+equest was not for us.
+
+D (66750) lwip: pbuf_free(0x3ffce864)
+
+D (66750) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (67010) lwip: etharp_timer
+
+D (67740) lwip: pbuf_alloced_custom(length=42)
+
+D (67740) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (67740) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (67750) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (67750) lwip: etharp_find_entry: found matching entry 0
+
+D (67760) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (67760) lwip: etharp_inpu
+D (67770) lwip: etharp_input: ARP request was not for us.
+
+D (67770) lwip: pbuf_free(0x3ffce864)
+
+D (67780) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (68010) lwip: etharp_timer
+
+D (68760) lwip: pbuf_alloced_custom(length=42)
+
+D (68760) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (68760) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (68770) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (68780) lwip: etharp_find_entry: found matching entry 0
+
+D (68780) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (68790) lwip: etharp_input: incoming ARP request
+
+D (68790) lwip: etharp_input: ARP request was not for us.
+
+D (68800) lwip: pbuf_free(0x3ffce864)
+
+D (68800) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (69010) lwip: etharp_timer
+
+D (69790) lwip: pbuf_alloced_custom(length=42)
+
+D (69790) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (69790) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (69790) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (69800) lwip: etharp_find_entry: found matching entry 0
+
+D (69810) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (69810) lwip: etharp_input: incoming ARP request
+
+D (69820) lwip: etharp_input: ARP request was not for us.
+
+D (69820) lwip: pbuf_free(0x3ffce864)
+
+D (69830) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (70010) lwip: etharp_timer
+
+D (70810) lwip: pbuf_alloced_custom(length=42)
+
+D (70810) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (70810) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (70820) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (70820) lwip: etharp_find_entry: found matching entry 0
+
+D (70830) lwip: etharp_update_arp_entry: updating stable entry 
+
+D (70840) lwip: etharp_input: ARP request was not for us.
+
+D (70850) lwip: pbuf_free(0x3ffce864)
+
+D (70850) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (71010) lwip: etharp_timer
+
+D (71730) lwip: pbuf_alloced_custom(length=42)
+
+D (71730) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (71730) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (71740) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (71750) lwip: etharp_find_entry: found matching entry 0
+
+D (71750) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (71760) lwip: etharp_input: incoming ARP request
+
+D (71760) lwip: etharp_input: ARP request was not for us.
+
+D (71770) lwip: pbuf_free(0x3ffce864)
+
+D (71770) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (72010) lwip: etharp_timer
+
+D (72760) lwip: pbuf_alloced_custom(length=42)
+
+D (72760) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (72760) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (72760) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (72770) lwip: etharp_find_entry: found matching entry 0
+
+D (72780) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (72780) lwip: etharp_input: incoming ARP request
+
+D (72790) lwip: etharp_input: ARP request was not for us.
+
+D (72790) lwip: pbuf_free(0x3ffce864)
+
+D (72790) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (73010) lwip: etharp_timer
+
+D (73780) lwip: pbuf_alloced_custom(length=42)
+
+D (73780) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (73780) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (73790) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (73790) lwip: etharp_find_entry: found matching entry 0
+
+D (73800) lwip: etharp_update_arp_entry: updating stable entry 73820) lwip: pbuf_free(0x3ffce864)
+
+D (73820) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (74010) lwip: etharp_timer
+
+D (74800) lwip: pbuf_alloced_custom(length=42)
+
+D (74800) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (74810) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (74810) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (74820) lwip: etharp_find_entry: found matching entry 0
+
+D (74820) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (74830) lwip: etharp_input: incoming ARP request
+
+D (74830) lwip: etharp_input: ARP request was not for us.
+
+D (74840) lwip: pbuf_free(0x3ffce864)
+
+D (74840) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (75010) lwip: etharp_timer
+
+D (75320) lwip: pbuf_alloced_custom(length=225)
+
+D (75320) lwip: ethernet_input: dest:01:00:5e:00:00:fb, src:4c:32:75:9a:e9:f7, type:800
+
+D (75320) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (75320) lwip: pbuf_alloced_custom(length=245)
+
+D (75330) lwip: ip4_input: UDP packet to DHCP client port 5353
+
+D (75340) lwip: ip4_input: packet not for us.
+
+D (75340) lwip: pbuf_free(0x3ffce864)
+
+D (75340) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (75350) lwip: ethernet_input: dest:33:33:00:00:00:fb, src:4c:32:75:9a:e9:f7, type:86dd
+
+D (75360) lwip: pbuf_free(0x3ffce898)
+ip: pbuf_free: deallocating 0x3ffce898
+
+D (75830) lwip: pbuf_alloced_custom(length=42)
+
+D (75830) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (75830) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (75840) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (75840) lwip: etharp_find_entry: found matching entry 0
+
+D (75850) lwip: etharp_update_alwip: etharp_input: incoming ARP request
+
+D (75860) lwip: etharp_input: ARP request was not for us.
+
+D (75860) lwip: pbuf_free(0x3ffce864)
+
+D (75870) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (76010) lwip: etharp_timer
+
+D (76340) lwip: pbuf_alloced_custom(length=225)
+
+D (76340) lwip: ethernet_input: dest:01:00:5e:00:00:fb, src:4c:32:75:9a:e9:f7, type:800
+
+D (76340) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (76340) lwip: pbuf_alloced_custom(length=245)
+
+D (76350) lwip: ip4_input: UDP packet to DHCP client port 5353
+
+D (76360) lwip: ip4_input: packet not for us.
+
+D (76360) lwip: pbuf_free(0x3ffce864)
+
+D (76370) lwip: pbuf_freece864
+
+D (76370) lwip: etherne00:fb, src:4c:32:75:9a:e9:f7, type:86dd
+
+D (76380) lwip: pbuf_free(0x3ffce898)
+
+D (76380) lwip: pbuf_free: deallocating 0x3ffce898
+
+D (76850) lwip: pbuf_alloced_custom(length=42)
+
+D (76850) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (76850) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (76860) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (76870) lwip: etharp_find_entry: found matching entry 0
+
+D (76870) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (76880) lwip: etharp_input: incoming ARP request
+
+D (76880) lwip: etharp_input: ARP request was not for us.
+
+D (76890) lwip: pbuf_free(0x3ffce864)
+
+D (76890) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (77010) lwip: etharp_timer
+
+D (77780) lwip: pbuf_alloced_custom(length=42)
+
+D (77780) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (77780) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (77780) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (77790) lwip: etharp_find_entry: found matching entry 0
+
+D (77800) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (77800) lwip: etharp_input: incoming ARP request
+
+D (77810) lwip: etharp_input: ARP request was not for us.
+
+D (77810) lwip: pbuf_free(0x3ffce864)
+
+D (77820) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (78010) lwip: etharp_timer
+
+D (78390) lwip: pbuf_alloced_custom(length=225)
+
+D (78390) lwip: ethernet_input: dest:01:00:5e:00:00:fb, src:4c:32:75:9a:e9:f7, type:800
+
+D (78390) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (78390) lwip: pbuf_alloced_custom(length=245)
+
+D (78400) lwip: ip4_input: UDP packet to DHCP client port 5353
+
+D (78410) lwip: ip4_input: packet not for us.
+
+D (78410) lwip: pbuf_free(0x3ffce864)
+
+D (78420) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (78420) lwip: ethernet_input: desD (78800) lwip: pbuf_alloced_custom(length=42)
+
+D (78800) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (78800) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (78810) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (78810) lwip: etharp_find_entry: found matching entry 0
+
+D (78820) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (78820) lwip: etharp_input: incoming ARP request
+
+D (78830) lwip: etharp_input: ARP request was not for us.
+
+D (78830) lwip: pbuf_free(0x3ffce864)
+
+D (78840) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (79010) lwip: etharp_timer
+
+D (79820) lwip: pbuf_alloced_custom(length=42)
+
+D (79820) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (79820) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (79830) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (79840) lwip: etharp_find_entry: found matching entry 0
+
+D (79840) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (79850) lwip: etharp_input: incoming ARP request
+
+D (79850) lwip: etharp_input: ARP request was not for us.
+
+D (79860) lwip: pbuf_free(0x3ffce864)
+
+D (79860) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (80010) lwip: etharp_timer
+
+D (80840) lwip: pbuf_alloced_custom(length=42)
+
+D (80850) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (80850) lwip: pbuip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (80860) lwip: etharp_find_entry: found matching entry 0
+
+D able entry 0
+
+D (80870) lwip:  (80880) lwip: pbuf_free(0x3ffce864)
+
+D (80880) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (81010) lwip: etharp_timer
+
+D (81870) lwip: pbuf_alloced_custom(length=42)
+
+D (81870) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (81870) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (81880) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (81880) lwip: etharp_find_entry: found matching entry 0
+
+D (81890) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (81900) lwip: etharp_input: incoming ARP request
+
+D (81900) lwip: etharp_input: ARP request was not for us.
+
+D (81910) lwip: pbuf_free(0x3ffce864)
+
+D (81910) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (82010) lwip: etharp_timer
+
+D (82080) lwip: pbuf_alloced_custom(length=188)
+
+D (82080) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:800
+
+D (82080) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (82080) lwip: pbuf_alloced_custom(length=188)
+
+D (82080) lwip: ip_in: iphdr->dest 0xffffffff netif->ip_addr 0x202a8c0 (0xffffff, 0x2a8c0, 0xff000000)
+
+D (82100) lwip: ip4_input: packet accepted on interface st
+
+D (82100) lwi10) lwip: +-------------------------------+
+
+D (82110) lwip: | 4 | 5 |  0x00 |       174     | (v, hl, tos, len)
+
+D (82120) lwip: +-------------------------   | (id, flags, offset)
+
+D (8-----------------------+
+
+D (82130) lwip: |   64  |   17  |    0xb301     | (ttl, proto, chksum)
+
+D (82140) lwip: +-------------------------------+
+
+D (82150) lwip: |  192  |  168  |    2  |   12  | (src)
+
+D (82150)  lwip: pbuf_remove_header: old 0x3ffce238 new 0x3ffce24c (20)
+
+D (82180) lwip: pbuf_free(0x3ffca43c)
+
+D (82180) lwip: pbuf_free: deallocating 0x3ffca43c
+
+D (82180) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:800
+
+D (82190) lwip: pbuf_remove_header: old 0x3ffcebee new 0x3ffcebfc (14)
+
+D (82200) lwip: ip_input: iphdr->dest 0xff02a8c0 netif->ip_addr 0x202a8c0 (0x2a8c0, 0x2a8c0, 0xff000000)
+
+D (82210) lwip: ip4_input: packet accepted on interface st
+
+D (82210) lwip: ip4_input: 
+
+D (82220) lwip: IP header:
+
+D (82220) lwip: +-------------------------------+
+
+D (82220) lwip: | 4 | 5 |  0x00 |       174     | (v, hl, tos, len)
+
+D (82230) lwip: +-------------------------------+
+
+D (82230) lwip: |    52977      |000|       0   | (id, flags, offset)
+
+D (82240) lwip: +-------------------------------+
+
+D (82240) lwip: |   64  |   17  |    0x24f2     | (ttl, proto, chksum)
+
+D (82250) lwip: +-------------------------------+
+
+D (8228  |    2  |   12  | (src)
+
+D (82260) lwip: +-------------------------------+
+
+D (82270) lwip: |  192  |  168  |    2  |  255  | (dest)
+
+D (82270) lwip: +-------------------------------+
+
+D (82280) lwip: ip4_input: p->len 174 p->tot_len 174
+
+D (82280) lwip: pbuf_remove_header: old 0x3ffcebfc new 0x3ffcec10 (20)
+
+D (82290) lwip: pbuf_free(0x3ffca470)
+
+D (82290) lwip: pD (82380) lwip: pbuf_alloced_custom(length=225)
+
+D (82380) lwip: ethernet_input: dest:01:00:5e:00:00:fb, src:4c:32:75:9a:e9:f7, type:800
+
+D (82380) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (82380) lwip: pbuf_alloced_custom(length=245)
+
+D (82390) lwip: ip4_input: UDP packet to DHCP client port 5353
+
+D (82400) lwip: ip4_input: packet not for us.
+
+D (82400) lwip: pbuf_free(0x3ffce864)
+
+D (82410) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (82410) lwip: ethernet_input: dest:33:33:00:00:00:fb, src:4c:32:75:9a:e9:f7, type:86dd
+
+D (82420) lwip: pbuf_free(0x3ffce898)
+
+D (82420) lwip: pbuf_free: deallocating 0x3ffce898
+
+D (82800) lwip: pbuf_alloced_custom(length=42)
+
+D (82800) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (82800) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (82800) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (82810) lwip: etharp_find_entry: found matching entry 0
+
+D (82820) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (82820) lwip: etharp_input: incoming ARP request
+
+D (82830) lwip: etharp_input: ARP request was not for us.
+
+D (82830) lwip: pbuf_free(0x3ffce864)
+
+D (82840) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (83010) lwip: etharp_timer
+
+D (83810) lwip: pbuf_alloced_custom(length=42)
+
+D (83820) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (83820) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (83820) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (83830) lwip: etharp_find_entry: found matching entry 0
+
+D (83830) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (83840) lwip: etharp_input: incoming ARP request
+
+D (83850) lwip: etharp_input: ARP request was not for us.
+
+D (83850) lwip: pbuf_free(0x3ffce864)
+
+D (83850) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (84010) lwip: etharp_timer
+
+D (84840) lwip: pbuf_alloced_custom(length=42)
+
+D (84840) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (84840) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (84850) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7arp_find_entry: found matching entry 0
+
+D (84860) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (84870) lwip: etharp_input: incoming ARP request
+
+D (84870) lwip: etharp_input: ARP request was not for us.
+
+D (84880) lwip: pbuf_free(0x3ffce864)
+
+D (84880) lwip: pbuf_fallocating 0x3ffce864
+
+D (85010) lwip: etharp_timer
+
+D (85860) lwip: pbuf_alloced_custom(length=42)
+
+D (85860) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (85860) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (85870) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (85880) lwip: etharp_find_
+D (85880) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (85890) lwip: etharp_input: incoming ARP request
+
+D (85890) lwip: etharp_input: ARP request was not for us.
+
+D (85900) lwip: pbuf_free(0x3ffce864)
+
+D (85900) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (86010) lwip: etharp_timer
+
+D (86890) lwip: pbuf_alloced_custom(length=42)
+
+D (86890) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (86890) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (86900) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (86900) lwip: etharp_find_entry: found matching entry 0
+
+D (86910) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (86910) lwip: etharp_input: incoming ARP request
+
+D (86920) lwip: etharp_input: ARP request was not for us.
+
+D (86920) lwip: pbuf_free(0x3ffce864)
+
+D (86930) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (87010) lwip: etharp_timer
+
+D (88010) lwip: etharp_timer
+
+D (89010) lwip: etharp_timer
+
+D (90010) lwip: etharp_timer
+
+D (91010) lwip: etharp_timer
+
+D (92010) lwip: etharp_timer
+
+D (93010) lwip: etharp_timer
+
+D (94010) lwip: etharp_timer
+
+D (95010) lwip: etharp_timer
+
+D (96010) lwip: etharp_timer
+
+D (97010) lwip: etharp_timer
+
+D (98010) lwip: etharp_timer
+
+D (99010) lwip: etharp_timer
+
+D (100010) lwip: etharp_timer
+
+D (101010) lwip: etharp_timer
+
+D (102010) lwip: etharp_timer
+
+D (103010) lwip: etharp_timer
+
+D (104010) lwip: etharp_timer
+
+D (105010) lwip: etharp_timer
+
+D (106010) lwip: etharp_timer
+
+D (107010) lwip: etharp_timer
+
+D (108010) lwip: etharp_timer
+
+D (109010) lwip: etharp_timer
+
+D (110010) lwip: etharp_timer
+
+D (111010) lwip: etharp_timer
+
+D (112010) lwip: etharp_timer
+
+D (112180) lwip: pbuf_alloced_custom(length=188)
+
+D (112180) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:800
+
+D (112180) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (112180) lwip: pbuf_alloced_custom(length=188)
+
+D (112190) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x202a8c0 (0xffffff, 0x2a8c0, 0xff000000)
+
+D (112200) lwip: ip4_input: packet accepted on interface st
+
+D (112210) lwip: ip4_input: 
+
+D (112210) lwip: IP header:
+
+D (112210) lwip: +-------------------------------+
+
+D (112220) lwip: | 4 | 5 |  0x00 |       174     | (v, hl, tos, len)
+
+D (1122------+
+
+D (112230) lwip: |   000|       0   | (id, flags, offset)
+
+D (112240) lwip: +-------------------------------+
+
+D (112240) lwip: |   64  |   17  |    0x14c6     | (ttl, proto, chksum)
+
+D (112250) lwip: +-------------------------------+
+
+D (112250) lwip: |  192  |  168  |    2  |   12  | (src)
+
+D (112260) lwip: +-------------------------------+
+
+D (112260) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (112270) lwip: +-------------------------------+
+
+D (112270) lwip: ip4_input: p->len 174 p->tot_len 174
+
+D (112280) lwip: pbuf_remove_header: old 0x3ffce238 new 0x3ffce24c (20)
+
+D (112280) lwip: pbuf_free(0x3ffce864)
+
+D (112290) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (112290) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ffe:800
+
+D (112300) lwip: pbuf_remove_header: old 0x3ffcebee new 0x3ffcebfc (14)
+
+D (112310) lwip: ip_input: iphdr->dest 0xff02a8c0 netif->ip_addr 0x202a8c0 (0x2a8c0, 0x2a8c0, 0xff000000)
+
+D (112320) lwip: ip4_input: packet accepted on interface st
+
+D (112320) lwip: ip4_input: 
+
+D (112320) lwip: IP header:
+
+D (112330) lwip: +-------------------------------+
+
+D (112330) lwip: | 4 | 5 |  0x00 |       174     | (v, hl, tos, len)
+
+D (112340) lwip: +-------------------------------+
+
+D (112340) lwip: |     8910      |000|       0   | (id, flags, offset)
+
+D (112350) lwip: +-------------------------------+
+
+D (112350) lwip: |   64  |   17  |    0xd115     | (ttl, proto, chksum)
+
+D (112360) lwip: +-------------------------------+
+
+D (112360) lwip: |  192  |  168  |    2  |   12  | (src)
+
+D (112370) lwip: +-------------------------------+
+
+D (112370) lwip: |  192  |  168  |    2  |  255  | (dest)
+
+D (112380) lwip: +-------------------------------+
+
+D (112380) lwip: ip4_input: p->len 174 p->tot_len 174
+
+D (112390) lwip: pbuf_remove_header: old 0x3ffcebfc new 0x3ffcec10 (20)
+
+D (112400) lwip: pbuf_free(0x3ffce898)
+
+D (112400) lwip: pbuf_free: deallocating 0x3ffce898
+
+D (113010) lwip: etharp_timer
+
+D (114010) lwip: etharp_timer
+
+D (115010) lwip: etharp_timer
+
+D (116010) lwip: etharp_timer
+
+D (117010) lwip: etharp_timer
+
+D (118010) lwip: etharp_timer
+
+D (119010) lwip: etharp_timer
+
+D (120010) lwip: etharp_timer
+
+D (121010) lwip: etharp_timer
+
+D (122010) lwip: etharp_timer
+
+D (122850) lwip: etharp_request: sending ARP request.
+
+D (122850) lwip: pbuf_alloc(length=28)
+
+D (122850) lwip: pbuf_alloc(length=28) == 0x3ffce1a0
+
+D (122850) lwip: etharp_raw: sending raw ARP packet.
+
+D (122850) lwip: pbuf_add_header: old 0x3ffce1c0 new 0x3ffce1b2 (14)
+
+D (122860) lwip: ethernet_output: sending packet 0x3ffce1a0
+
+D (122870) lwip: pbuf_free(0x3ffce1a0)
+
+D (122870) lwip: pbuf_free: deallocating 0x3ffce1a0
+
+D (123010) lwip: etharp_timer
+
+D (123920) lwip: etharp_request: sending ARP request.
+
+D (123920) lwip: pbuf_alloc(length=28)
+
+D (123920) lwip: pbuf_alloc(length=28) == 0x3ffce1a0
+
+D (123920) lwip: etharp_raw: sending raw ARP packet.
+
+D (123920) lwip: pbuf_add_header: old 0x3ffce1c0 new 0x3ffce1b2 (14)
+
+D (123930) lwip: ethernet_output: sending packet 0x3ffce1a0
+
+D (123930) esp_eth: Ethernet link is not up, can't transmit
+D (123940) lwip: pbuf_free(0x3ffce1a0)
+940) lwip: pbuf_free: deallocating 0x3ffce1a0
+
+D (124010) lwip: etharp_timer
+
+D (125010) lwip: etharp_timer
+
+D (126010) lwip: etharp_timer
+
+D (126310) lwip: pbuf_alloced_custom(length=42)
+
+D (126310) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:a0:dd:6c:02:d7:98, type:806
+
+D (126310) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (126320) lwip: etharp_update_arp_entry: 192.168.2.22 - a0:dd:6c:02:d7:98
+
+D (126330) lwip: etharp_find_entry: found empty entry 1
+
+D (126330) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (126340) lwip: etharp_input: incoming ARP request
+
+D (126340) lwip: etharp_input: ARP request was not for us.
+
+D (126350) lwip: pbuf_free(0x3ffce864)
+
+D (126350) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (127010) lwip: etharp_timer
+
+D (127830) w5500.mac: working in 100Mbps
+D (127830) w5500.mac: working in full duplex
+D (127830) w5500.mac: link is up
+D (127830) event: running post ETH_EVENT:2 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+[1;31mE (127840) evhdlr: ip4_str=192.168.1.1, state=1[0m
+D (127840) esp_netif_lwip: check: remote, if=0x3ffcdee4 fn=0x400f7a68
+D (127850) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffcdee4
+D (127860) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (127860) event: running post ETH_EVENT:2 with handler 0x400de4e4 and context 0x3ffce0a0 on loop 0x3ffbd36c
+D (127870) esp_eth.netif.netif_glue: eth_action_connected: 0x3ffcdff8, 0x3f405990, 2, 0x3ffce120, 0x3ffcde64
+D (127880) esp_netif_handlers: esp_netif action connected with netif0x3ffcdee4 from event0x3ffcdee4 fn=0x400f798c
+D (127890) esp_netif_lwip: esp_netif_u3ffcdee4
+D (127900) esp_netif_lwip: check: local, if=0x3ffcdee4 fn=0x400f7ef0
+D (127910) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffcdee4
+D (127910) lwip: netif: setting default interface st
+
+D (127920) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (127920) esp_netif_lwip: esp_netif_get_ip_info esp_netif:0x3ffcdee4
+D (127930) esp_netif_lwip: esp_netif_get_old_ip_info esp_netif:0x3ffcdee4
+D (127940) esp_netif_lwip: check: remote, if=0x3ffcdee4 fn=0x400f6c78
+D (127940) esp_netif_lwip: esp_netif_set_ip_old_info_api esp_netif:0x3ffcdee4
+D (127950) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (127960) esp_netif_handlers: static ip: ip changed=true
+D (127960) event: running post IP_EVENT:4 with handler 0x400dbf70 and context 0x3ffbeb4c on loop 0x3ffbd36c
+D (127970) event: running post IP_EVENT:4 with handler 0x400de474 and context 0x3ffce100 on loop 0x3ffbd36c
+D (127980) esp_eth.netif.netif_glue: eth_action_got_ip: 0x3ffcdff8, 0x3f410cec, 4, 0x3ffce1a0, 0x3ffcdee4
+D (127990) esp_netif_handlers: esp_netif action got_ip with netif0x3ffcdee4 from event_id=4
+[0;32mI (128000) esp_netif_handlers: eth ip: 192.168.1.1, mask: 255.255.255.0, gw: 192.168.1.1[0m
+D (128010) lwip: etharp_timer
+
+D (128410) w5500.mac: receive len=342
+D (128410) lwip: pbuf_alloced_custom(length=342)
+
+D (128410) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (128410) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (128420) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (128430) lwip: ip4_input: packet accepted on interface en
+
+D (128440) lwip: ip4_input: 
+
+D (128440) lwip: IP header:
+
+D (128440) lwip: +-------------------------------+
+
+D (128450) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (128450) lwip: +-------------------------------+
+
+D (128460) lwip: |      620      |000|       0   | (id, flags, offset)
+
+D (128460) lwip: +-------------------------------+
+
+D (128470) lwip: |  100  |   17  |    0x533a     | (ttl, proto, chksum)
+
+D (128470) lwip: +-------------------------------+
+
+D (128480) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (128480) lwip: +-------------------------------+
+
+D (128490) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (128490) lwip: +-------------------------------+
+
+D (128500) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (128500) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (128510) lwip: pbuf_free(0x3ffce304)
+
+D (128510) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (129010) lwip: etharp_timer
+
+D (130010) lwip: etharp_timer
+
+D (130410) w5500.mac: receive len=342
+D (130410) lwip: pbuf_alloced_custom(length=342)
+
+D (130410) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (130420) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (130420) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (130430) lwip: ip4_input: packet accepted on interface en
+
+D (130440) lwip: ip4_input: 
+
+D (130440) lwip: IP header:
+
+D (130440) lwip: +-------------------------------+
+
+D (130450) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (130450) lwip: +-------------------------------+
+
+D (130460) lwip: |      621      |000|       0   | (id, flags, offset)
+
+D (130470) lwip: +-------------------------------+
+
+D (130470) lwip: |  100  |   17  |    0x5339     | (ttl, proto, chksum)
+
+D (130480) lwip: +-------------------------------+
+
+D (130480) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (130490) lwip: +-------------------------------+
+
+D (130490) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (130500) lwip: +-------------------------------+
+
+D (130500) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (130510) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (130510) lwip: pbuf_free(0x3ffce304)
+
+D (130520) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (131010) lwip: etharp_timer
+
+D (132010) lwip: etharp_timer
+
+D (132410) w5500.mac: receive len=342
+D (132410) lwip: pbuf_alloced_custom(length=342)
+
+D (132410) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (132420) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (132430) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (132430) lwip: ip4_input: packet accepted on interface en
+
+D (132440) lwip: ip4_input: 
+
+D (132440) lwip: IP header:
+
+D (132450) lwip: +-------------------------------+
+
+D (132450) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (132460) lwip: +-------------------------------+
+
+D (132460) lwip: |      622      |000|       0   | (id, flags, offset)
+
+D (132470) lwip: +-------------------------------+
+
+D (132470) lwip: |  100  |   17  |    0x5338     | (ttl, proto, chksum)
+
+D (132480) lwip: +-------------------------------+
+
+D (132480) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (132490) lwip: +-------------------------------+
+
+D (132490) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (132500) lwip: +-------------------------------+
+
+D (132500) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (132510) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (132510) lwip: pbuf_free(0x3ffce304)
+
+D (132520) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (133010) lwip: etharp_timer
+
+D (134010) lwip: etharp_timer
+
+D (134420) w5500.mac: receive len=342
+D (134420) lwip: pbuf_alloced_custom(length=342)
+
+D (134420) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (134420) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (134430) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (134440) lwip: ip4_input: packet accepted on interface en
+
+D (134440) lwip: ------------------------+
+
+D (134450) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (134460) lwip: +-------------------------------+
+
+D (134460) lwip: |      623      |000|       0   | (id, flags, offset)
+
+D (134470) lwip: +----------------+
+
+D (134470) lwip: |  100  |   17  |    0x5337     | (ttl, proto, chksum)
+
+D (134480) lwip: +-------------------------------+
+
+D (134490) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (134490) lwip: +-------------------------------+
+
+D (134500) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (134500) lwip: +-------------------------------+
+
+D (134510) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (134510) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (134520) lwip: pbuf_free(0x3ffce304)
+
+D (134520) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (135010) lwip: etharp_timer
+
+D (136010) lwip: etharp_timer
+
+D (136420) w5500.mac: receive len=342
+D (136420) lwip: pbuf_alloced_custom(length=342)
+
+D (136420) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (136420) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (136430) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (136440) lwip: ip4_input: packet accepted on interface en
+
+D (136440) lwip: ip4_input: 
+
+D (136450) lwip: IP header:
+
+D (136450) lwip: +-------------------------------+
+
+D (136450) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (136460) lwip: +-------------------------------+
+
+D (136470) lwip: |      624      |000|       0   | (id, flags, offset)
+
+D (136470) lwip: +-------------------------------+
+
+D (136480) lwip: |  100  |   17  |    0x5336     | (ttl, proto, chksum)
+
+D (136480) lwip: +-------------------------------+
+
+D (136490) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (136490) lwip: +-------------------------------+
+
+D (136500) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (136500) lwip: +-------------------------------+
+
+D (136510) lwip: ip4_input: p->len 328 p->tot_len 328
+e_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (136520) lwip: pbuf_free(0x3ffce304)
+
+D (136520) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (137010) lwip: etharp_timer
+
+D (138010) lwip: etharp_timer
+
+D (138420) w5500.mac: receive len=342
+D (138420) lwip: pbuf_alloced_custom(length=342)
+
+D (138420) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (138420) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (138430) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (138440) lwip: ip4_input: packet accepted on interface en
+
+D (138450) lwip: ip4_input: 
+
+D (138450) lwip: IP header:
+
+D (138450) lwip: +-------------------------------+
+
+D (138460) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, t--------------------------+
+
+D (138470) lwip: |      625      |000|       0   | (id, flags, offset)
+
+D (138470) lwip: +-------------------------------+
+
+D |    0x5335     | (ttl, proto, chksum)
+
+D (138480) lwip: +-------------------------------+
+
+D (138490) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (138490) lwip: +-------------------------------+
+
+D (138500) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (138500) lwip: +-------------------------------+
+
+D (138510) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (138510) lwip: pbuf_remove_head3ffce1ae new 0x3ffce1c2 (20)
+
+D (138520) lwip: pbuf_free(0x3ffce304)
+
+D (138520) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (139010) lwip: etharp_timer
+
+D (140010) lwip: etharp_timer
+
+D (140420) w5500.mac: receive len=342
+D (140420) lwip: pbuf_alloced_custom(length=342)
+
+D (140420) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (140430) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (140430) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (140440) lwip: ip4_input: packet accepted on interface en
+
+D (140450) lwip: ip4_input: 
+
+D (140450) lwip: IP header:
+
+D (140450) lwip: +-------------------------------+    | (v, hl, tos, len)
+
+D (14-------+
+
+D (140470) lwip: |      626      |000|       0   | (0) lwip: |  100  |   17  |    0x5334     | (ttl, proto, chksum)
+
+D (140490) lwip: +-------------------------------+
+
+D (140490) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (140500) lwip: +------------------------- |  255  |  255  | (dest)
+
+D (140510) lwip: +-------------------------------+
+
+D (140510) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (140520) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (140520) lwip: pbuf_free(0x3ffce304)
+
+D (140530) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (141010) lwip: etharp_timer
+
+D (142010) lwip: etharp_timer
+
+D (142290) lwip: pbuf_alloced_custom(length=188)
+
+D (142290) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:800
+
+D (142290) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (142290) lwip: pbuf_alloced_custom(length=188)
+
+D (142290) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x202a8c0 (0xffffff, 0x2a8c0, 0xff000000)
+
+D (142310) lwip: ip4_input: packet accepted on interface st
+
+D (142310) lwip: ip4_input: 
+
+D (142320) lwip: IP header:
+
+D (142320) lwip: +-------------------------------+
+
+D (142320) lwip: | 4 | 5 |  0x00 |       174     | (v, hl, tos, len)
+
+D (142330) lwip: +-------------------------------+
+
+D (142330) lwip: |    11988      |000|       0   | (id, flags, offset)
+
+D (142340) lwip: +-------------------------------+
+
+D (142350) lwip: )
+
+D (142350) lwip: +-------------------------------+
+
+D (142360) lwip: |  192  |  168  |    2  |   12  | (src)
+
+D (142360) lwip: +-------------------------------+
+
+D (142370) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (142370) lwip: +-------------------------------+
+
+D (142380) lwip: ip4_input: p->len 174 p->tot_len 174
+
+D (142380) lwip: pbuf_remove_header: old 0x3ffce238 new 0x3ffce24c (20)
+
+D (142390) lwip: pbuf_free(0x3ffce864)
+
+D (142390) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (142400) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:800
+
+D (142400) lwip: pbuf_remove_header: old 0x3ffcebee new 0x3ffcebfc (14)
+
+D (142410) lwip: ip_input: iphdr->dest 0xff02a8c0 netif->ip_addr 0x202a8c0 (0x2a8c0, 0x2a8c0, 0xff000000)
+
+D (142420) lwip: ip4_input: packet accepted on interface st
+
+D (142420) w5500.mac: receive len=342
+D (142430) lwip: ip4_input: 
+
+D (142430) lwip: IP header:
+
+D (142430) lwip: pbuf_alloced_custom(length=342)
+
+D (142430) lwip: +-------------------------------+
+
+D (142440) lwip: | 4 | 5 |  0x00 |       174     | (v, hl, tos, len)
+
+D (142450) lwip: +-------------------------------+
+
+D (142450) lwip: |    53687      |000|       0   | (id, flags, offset)
+
+D (142460) lwip: +-------------------------------+
+
+D (142470) lwip: |   64  |   17  |    0x222c     | (ttl, proto, chksum)
+
+D (142470) lwip: +-------------------------------+
+
+D (142480) lwip: |  192  |  168  |    2  |   12  | (src)
+
+D (142480) lwip: +-------------------------------+
+
+D (142490) lwip: |  192  |  168  |    2  |  255  | (dest)
+
+D (142490) lwip: +-------------------------------+
+
+D (142500) lwip: ip4_input: p->len 174 p->tot_len 174
+
+D (142500) lwip: pbuf_remove_header: old 0x3ffcebfc new 0x3ffcec10 (20)
+
+D (142510) lwip: pbuf_free(0x3ffce898)
+
+D (142510) lwip: pbuf_free: deallocating 0x3ffce898
+
+D (142520) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (142520) lwip: pbuf_remove_header: old 0x3ffce8dc new 0x3ffce8ea (14)
+
+D (142530) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (142540) lwip: ip4_input: packet accepted on interface en
+
+D (142550) lwip: ip4_input: 
+
+D (142550) lwip: IP header:
+
+D (142550) lwip: +-------------------------------+
+
+D (142560) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (142560) lwip: +-------------------------------+
+
+D (142570) lwip: |      627      |000|       0   | (id, flags, offset)
+
+D (142570) lwip: +-------------------------------+
+
+D (142580) lwip: |  100  |   17  |    0x5333     | (ttl, proto, chksum)
+
+D (142590) lwip: +-------------------------------+
+
+D (142590) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (142600) lwip: +-------------------------------+
+
+D (142600) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (142610) lwip: +-------------------------------+
+
+D (142610) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (142610) lwip: pbuf_remove_header: old 0x3ffce8ea new 0x3ffce8fe (20)
+
+D (142620) lwip: pbuf_free(0x3ffcea40)
+
+D (142620) lwip: pbuf_free: deallocating 0x3ffcea40
+
+D (143010) lwip: etharp_timer
+
+D (144010) lwip: etharp_timer
+
+D (144430) w5500.mac: receive len=342
+D (144430) lwip: pbuf_alloced_custom(length=342)
+
+D (144430) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (144430) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (144440) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (144450) lwip: ip4_input: packet accepted on interface en
+
+D (144450) lwip: ip4_input: 
+
+D (144450) lwip: IP header:
+
+D (144460) lwip: +-------------------------------+
+
+D (144460) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, t: +-----------------------------470) lwip: |      628      |000|       0   | (id, flags, offset)p: +----------------------------
+D (144480) lwip: |  100  |   1ksum)
+
+D (144490) lwip: +-------------------------------+
+
+D (144500) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (144500) lwip: +-------------------------------+
+
+D (144510) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (144510) lwip: +-------------------------------+
+
+D (144520) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (144520) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (144530) lwip: pbuf_free(0x3ffce304)
+
+D (144530) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (145010) lwip: etharp_timer
+
+D (146010) lwip: etharp_timer
+
+D (146430) w5500.mac: receive len=342
+D (146430) lwip: pbuf_alloced_custom(length=342)
+
+D (146430) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (146430) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (146440) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (146450) lwip: ip4_input: packet accepted on interface en
+
+D (146450) lwip: ip4_input: 
+
+D (146460) lwip: IP header:
+
+D (146460) lwip: +-------------------------------+
+
+D (146460) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (146470) lwip: +-------------------------------+
+
+D (146480) lwip: |      629      |000|       0   | (id, flags, offset)
+
+D (146480) lwip: +-------------------------------+
+
+D (146490) lwip: |  100  |   17  |    0x5331     | (ttl, proto, chksum)
+
+D (146490) lwip: +-------------------------------+
+
+D (146500) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (146500) lwip: +-------------------------------+
+
+D (146510) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (146510) lwip: +-------------------------------+
+
+D (146520) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (146520) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (146530) lwip: pbueallocating 0x3ffce304
+
+D (147010) lwip: etharp_timer
+
+D (147810) lwip: pbuf_alloced_custom(length=42)
+
+D (147810) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (147820) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (147820) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (147830) lwip: etharp_find_entry: found matching entry 0
+
+D (147830) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (147840) lwip: etharp_input: incoming ARP request
+
+D (147850) lwip: etharp_input: ARP request was not for us.
+
+cating 0x3ffce864
+
+D (148010) lwip: etharp_timer
+
+D (148430) w5500.mac: receive len=342
+D (148430) lwip: pbuf_alloced_custom(length=342)
+
+D (148430) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (148430) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (148440) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (148450) lwip: ip4_input: packet accepted on interface en
+
+D (148460) lwip: ip4_input: 
+
+D (148460) lwip: IP header:
+
+D (148460) lwip: +-------------------------------+
+
+D (148470) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (148470) lwip: +-------------------------------+
+
+D (148480) lwip: |      630      |000|       0   | (id, flags, offset)
+
+D (148480) lwip: +-------------------------------+
+
+D (148490) lwip: |  100  |   17  |    0x5330     | (ttl, proto, chksum)
+
+D (148490) lwip: +-------------------------------+
+
+D (148500) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (148500) lwip: +-------------------------------+
+
+D (148510) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (148510) lwip: +-------------------------------+
+
+D (148520) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (148520) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (148530) lwip: pbuf_free(0x3ffce304)
+
+D (148530) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (148840) lwip: pbuf_alloced_custom(length=42)
+
+D (148840) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (148840) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (148850) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (148850) lwip: etharp_find_entry: found matching entry 0
+
+D (148860) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (148870) lwip: etharp_input: incoming ARP request
+
+D (148870) lwip: etharp_input: ARP request was not for us.
+
+D (148880) lwip: pbuf_free(0x3ffce864)
+
+D (148880) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (149010) lwip: etharp_timer
+
+D (150010) lwip: etharp_timer
+
+D (150430) w5500.mac: receive len=342
+D (150430) lwip: pbuf_alloced_custom(length=342)
+
+D (150430) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (150440) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (150440) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (150450) lwip: ip4_input: packet accepted on interface en
+
+D (150460) lwip: ip4_input: 
+
+D (150460) lwip: IP header:
+
+D (150460) lwip: +-------------------------------+
+
+D (150470) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (150470) lwip: +-------------------------------+
+
+D (150480) lwip: |      631      |000|       0   | (id, flags, offset)
+
+D (150490) lwip: +-------------------------------+
+
+D (150490) lwip: |  100  |   17  |    0x532f     | (ttl, proto, chksum)
+
+D (150500) lwip: +-------------------------------+
+
+D (150500) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (150510) lwip: +-------------------------------+
+
+D (150510) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (150520) lwip: +-------------------------------+
+
+D (150520) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (150530) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (150530) lwip: pbuf_free(0x3ffce304)
+
+D (150540) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (150890) lwip: pbuf_alloced_custom(length=42)
+
+D (150890) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (150890) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (150890) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (150900) lwip: etharp_find_entry: found matching entry 0
+
+D (150910) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (150910) lwip: etharp_input: incoming ARP request
+
+D (150920) lwip: etharp_input: ARP request was not for us.
+
+D (150920) lwip: pbuf_free(0x3ffce864)
+
+D (150930) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (151010) lwip: etharp_timer
+
+D (151910) lwip: pbuf_alloced_custom(length=42)
+
+D (151910) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (151910) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (151920) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (151930) lwip: etharp_find_entry: found matching entry 0
+
+D (151930) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (151940) lwip: etharp_input: incoming ARP request
+
+D (151940) lwip: etharp_input: ARP request was not for us.
+
+D (151950) lwip: pbuf_free(0x3ffce864)
+
+D (151950) lwip: pbuf_: deallocating 0x3ffce864
+
+D (152010) lwip: etharp_timer
+
+D (152430) w5500.mac: receive len=342
+D (152430) lwip: pbuf_alloced_custom(length=342)
+
+D (152430) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (152440) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (152450) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (152450) lwip: ip4_input: packet accepted on interface en
+
+D (152460) lwip: ip4_input: 
+
+D (152460) lwip: IP header:
+
+D (152470) lwip: +-------------------------------+
+
+D (152470) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (152480) lwip: +-------------------------------+
+
+D (152480) lwip: |      632      |000|       0   | (id, flags, offset)
+
+D (152490) lwip: +-------------------------------+
+
+D (152490) lwip: |  100  |   17  |    0x532e     | (ttl, proto, chksum)
+
+D (152500) lwip: +-------------------------------+
+
+D (152500) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (152510) lwip: +-------------------------------+
+
+D (152510) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (152520) lwip: +-------------------------------+
+
+D (152520) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (152530) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (152530) lwip: pbuf_free(0x3ffce304)
+
+D (152540) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (152830) lwip: pbuf_alloced_custom(length=42)
+
+D (152830) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (152830) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (152840) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (152850) lwip: etharp_find_entry: found matching entry 0
+
+D (152850) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (152860) lwip: etharp_input: incoming ARP request
+
+D (152860) lwip: etharp_input: (152870) lwip: pbuf_free: deall64
+
+D (153010) lwip: etharp_timer
+
+D (153860) lwip: pbuf_alloced_custom(length=42)
+
+D (153860) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (153860) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (153860) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (153870) lwip: etharp_find_entry: found matching entry 0
+
+D (153880) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (153880) lwip: etharp_input: incoming ARP request
+
+D (153890) lwip: etharp_input:cating 0x3ffce864
+
+D (154010) lwip: etharp_timer
+
+D (154440) w5500.mac: receive len=342
+D (154440) lwip: pbuf_alloced_custom(length=342)
+
+D (154440) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (154440) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (154450) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (154460) lwip: ip4_input: packet accepted on interface en
+
+D (154460) lwip: ip4_input: 
+
+D (154460) lwip: IP header:
+
+D (154470) lwip: +-------------------------------+
+
+D (154470) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (154480) lwip: +-------------------------------+
+
+D (154480) lwip: |      633      |000|       0   | (id, flags, offset)
+
+D (154490) lwip: +-------------------------------+
+
+D (154490) lwip: |  100  |   17  |    0x532d     | (ttl, proto, chksum)
+
+D (154500) lwip: +-------------------------------+
+
+D (154510) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (154510) lwip: +-------------------------------+
+
+D (154520) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (154520) lwip: +-------------------------------+
+
+D (154530) lwip: ip4_input: p->len 328 p->tot_len 328
+ove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (154540) lwi pbuf_free(0x3ffce304)
+
+D (154540) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (154880) lwip: pbuf_alloced_custom(length=42)
+
+D (154880) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (154880) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (154890) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (154890) lwip: etharp_find_entry: found matching entry 0
+
+D (154900) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (154910) lwip: etharp_input: incoming ARP request
+
+D (154910) lwip: etharp_input: ARP request was not for us.
+
+D (154920) lwip: pbuf_free(0x3ffce864)
+
+D (154920) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (155010) lwip: etharp_timer
+
+D (155900) lwip: pbuf_alloced_custom(length=42)
+
+D (155900) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (155910) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (155910) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (155920) lwip: etharp_find_entry: found matching entry 0
+
+D (155920) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (155930) lwip: etharp_input: incoming ARP request
+
+D (155930) lwip: etharp_input: ARP request was not for us.
+
+x3ffce864
+
+D (156010) lwip: etharp_timer
+
+D (156440) w5500.mac: receive len=342
+D (156440) lwip: pbuf_alloced_custom(length=342)
+
+D (156440) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (156440) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (156450) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (156460) lwip: ip4_input: packet accepted on interface en
+
+D (156460) lwip: ip4_input: 
+
+D (156470) lwip: IP header:
+
+D (156470) lwip: +-------------------------------+
+
+D (156470) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (156480) lwip: +-------------------------------+
+
+D (156490) lwip: |      634      |000|       0   | (id, flags, offset)
+
+D (156490) lwip: +-------------------------------+
+
+D (156500) lwip: |  100  |   17  |    0x532c     | (ttl, proto, chksum)
+
+D (156500) lwip: +---------------+
+
+D (156510) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (156510) lwip: +-------------------------------+
+
+D (156520) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (156520) lwip: +-------------------------------+
+
+D (156530) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (156530) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (156540) lwip: pbuf_free(0x3ffce304)
+
+D (156540) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (156930) lwip: pbuf_alloced_custom(length=42)
+
+D (156930) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (156930) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (156940) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (156940) lwip: etharp_find_entry: found matching entry 0
+
+D (156950) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (156950) lwip: etharp_input: incoming ARP request
+
+D (156960) lwip: etharp_input: ARP request was not for us.
+
+D (156960) lwip: pbuf_free(0x3ffce864)
+
+D (156970) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (157010) lwip: etharp_timer
+
+D (157950) lwip: pbuf_alloced_custom(length=42)
+
+D (157950) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (157950) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (157960) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (157970) lwip: etharp_find_entry: found matching entry 0
+
+D (157970) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (157980) lwip: etharp_input: incoming ARP request
+
+D (157980) lwip: etharp_input: ARP request was not for us.
+
+D (157990) lwip: pbuf_free(0x3ffce864)
+
+D (157990) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (158010) lwip: etharp_timer
+
+D (158440) w5500.mac: receive len=342
+D (158440) lwip: pbuf_alloced_custom(length=342)
+
+D (158440) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (158440) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (158450) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_adfffff, 0x1a8c0, 0xff000000)
+
+D (158460) lwip: ip4_input: packet accepted on interface en
+
+D (158470) lwip: ip4_input: 
+
+D (158470) lwip: IP header:
+
+D (158470) lwip: +-------------------------------+
+
+D (158480) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (158480) lwip: +-------------------------------+
+
+D (158490) lwip: |      635      |000|       0   | (id, flags, offset)
+
+D (158490) lwip: +-------------------------------+
+
+D (158500) lwip: |  100  |   17  |    0x532b     | (ttl, proto, chksum)
+
+D (158500) lwip: +-------------------------------+
+
+D (158510) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (158510) lwip: +-------------------------------+
+
+D (158520) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (158520) lwip: +-------------------------------+
+
+D (158530) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (158530) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (158540) lwip: pbuf_free(0x3ffce304)
+
+D (158540) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (158980) lwip: pbuf_alloced_custom(length=42)
+
+D (158980) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (158980) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (158980) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (158990) lwip: etharp_find_entry: found matching entry 0
+
+D (159000) lwip: etharp_up_entry: updating stable entry 0
+
+D (159000) lwip: etharp_inputput: ARP request was not for us.
+
+D (159010) lwip: pbuf_free(0x3ffce864)
+
+D (159020) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (159020) lwip: etharp_timer
+
+D (159900) lwip: pbuf_alloced_custom(length=42)
+
+D (159900) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (159900) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (159910) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (159920) lwip: etharp_find_entry: found matching entry 0
+
+D (159920) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (159930) lwip: etharp_input: incoming ARP request
+
+D (159930) lwip: etharp_input: ARP request was not for us.
+
+D (159940) lwip: pbuf_free(0x3ffce864)
+
+D (159940) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (160010) lwip: etharp_timer
+
+D (160440) w5500.mac: receive len=342
+D (160440) lwip: pbuf_alloced_custom(length=342)
+
+D (160440) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (160450) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (160450) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (160460) lwip: ip4_input: packet accepted on interface en
+
+D (160470) lwip: ip4_input: 
+
+D (160470) lwip: IP header:
+
+D (160470) lwip: +-------------------------------+
+
+D (160480) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (160480) lwip: +-------------------------------+
+
+D (160490) lwip: |      636      |000|       0   | (id, flags, offset)
+
+D (160500) lwip: +-------------------------------+
+
+D (160500) lwip: |  100  |   17  |    0x532a     | (ttl, proto, chksum)
+
+D (160510) lwip: +-------------------------------+
+
+D (160510) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (160520) lwip: +-------------------------------+
+
+D (160520) lwip: |  255  |  255  |  255  | -------+
+
+D (160530) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (160540) lwip: pbuf_remov3ffce1ae new 0x3ffce1c2 (20)
+
+D (160540) lwip: pbuf_free(0x3ffce304)
+
+D (160550) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (160920) lwip: pbuf_alloced_custom(length=42)
+
+D (160920) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (160920) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (160930) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (160940) lwip: etharp_find_entry: found matching entry 0
+
+D (160940) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (160950) lwip: etharp_input: incoming ARP request
+960) lwip: pbuf_free(0x3ffce864)
+
+D (160960) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (161010) lwip: etharp_timer
+
+D (161950) lwip: pbuf_alloced_custom(length=42)
+
+D (161950) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (161950) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (161950) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (161960) lwip: etharp_find_entry: found matching entry 0
+
+D (161970) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (161970) lwip: etharp_input: incoming ARP request
+
+D (161980) lwip: etharp_input: ARP request was not for us.
+
+D (161980) lwip: pbuf_free(0x3ffce864)
+
+D (161990) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (162010) lwip: etharp_timer
+
+D (162440) w5500.mac: receive len=342
+D (162440) lwip: pbuf_alloced_custom(length=342)
+
+D (162440) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (162450) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (162460) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (162460) lwip: ip4_input: packet accepted on interface en
+
+D (162470) lwip: ip4_input: 
+
+D (162470) lwip: ---------------------+
+
+D (162p: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (162490) lwip: +-------------------------------+
+
+D (162490) lwip: |      637      |000|       0   flags, offset)
+
+D (162500) lwip: +-------------------------------+
+
+D (162500) lwip: |  100  |   17  |    0x5329     | (ttl, proto, chksum)
+
+D (162510) l-----------+
+
+D (162510) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (162520) lwip: +-------------------------------+
+
+D (162520) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (162530) lwip: +-------------------------------+
+
+D (162530) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (162540) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (162540) lwip: pbuf_free(0x3ffce304)
+
+D (162550) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (162970) lwip: pbuf_alloced_custom(length=42)
+
+D (162970) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (162970) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (162980) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (162980) lwip: etharp_find_entry: found matching entry 0
+
+D (162990) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (163000) lwip: etharp_input: incoming ARP request
+
+D (163000) lwip: etharp_input: ARP request was not for us.
+
+D (163010) lwip: pbuf_free(0x3ffce864)
+
+D (163010) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (163010) lwip: etharp_timer
+
+D (163890) lwip: pbuf_alloced_custom(length=42)
+
+D (163890) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (163890) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (163900) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (163910) lwip: etharp_find_entry: found matching entry 0
+
+D (163910) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (163920) lwip: etharp_input: incoming ARP request
+
+D (163920) lwip: etharp_input: ARP request was not for us.
+
+D (163930) lwip: pbuf_free(0x3ffce864)
+
+D (163930) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (164010) lwip: etharp_timer
+
+D (164450) w5500.mac: receive len=342
+D (164450) lwip: pbuf_alloced_custom(length=342)
+
+D (164450) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (164450) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (164460) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (164470) lwip: ip4_input: packet accepted on interface en
+
+D (164470) lwip: ip4_input: 
+
+D (164480) lwip: IP header:
+
+D (164480) lwip: +-------------------------------+
+
+D (164480) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (164490) lwip: +-------------------------------+
+
+D (164490) lwip: |      638      |000|       0   | (id, flags, offset)
+
+D (164500) lwip: +-------------------------------+
+
+D (164500) lwip: |  100  |   17  |    0x5328     | (ttl, proto, chksum)
+
+D (164510) lwip: +-------------------------------+
+
+D (164520) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (164520) lwip: +-------------------------------+
+
+D (164530) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (164530) lwip: +-------------------------------+
+
+D (164540) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (164540) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (164550) lwip: pbuf_free(0x3ffca43c)
+
+D (164550) lwip: pbuf_free: deallocating 0x3ffca43c
+
+D (164910) lwip: pbuf_alloced_custom(length=42)
+
+D (164920) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (164920) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (164920) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (164930) lwip: etharp_find_entry: found matching entry 0
+
+D (164940) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (164940) lwip: ethaetharp_input: ARP request was not for us.
+
+D (164950) lwip: pbuf_free(0x3ffce864)
+
+D (164960) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (165010) lwip: etharp_timer
+
+D (165940) lwip: pbuf_alloced_custom(length=42)
+
+D (165940) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (165940) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (165950) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (165950) lwip: etharp_find_entry: found matching entryte_arp_entry: updating stable entry 0
+
+D (165960) lwip: etharp_input: incoming ARP request
+
+D (165970) lwip: etharp_input: ARP request was not for us.
+
+D (165980) lwip: pbuf_free(0x3ffce864)
+
+D (165980) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (166010) lwip: etharp_timer
+
+D (166450) w5500.mac: receive len=342
+D (166450) lwip: pbuf_alloced_custom(length=342)
+
+D (166450) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (166450) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (166460) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (166470) lwip: ip4_input: packet accepted on interface en
+
+D (166470) lwip: ip4_input: 
+
+D (166480) lwip: IP header:
+
+D (166480) lwip: +-------------------------------+
+
+D (166480) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (166490) lwip: +-------------------------------+
+
+D (166500) lwip: |      639      |000|       0   | (id, flags, offset)
+
+D (166500) lwip: +-------------------------------+
+
+D (166510) lwip: |  100  |   17  |    0x5327     | (ttl, proto, chksum)
+
+D (166510) lwip: +-------------------------------+
+
+D (166520) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (166520) lwip: +-------------------------------+
+
+D (166530) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (166530) lwip: +-------------------------------+
+
+D (166540) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (166540) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (166550) lwip: pbuf_free(0x3ffce304)
+
+D (166550) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (166960) lwip: pbuf_alloced_custom(length=42)
+
+D (166960) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (166960) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (166970) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (166980) lwip: etharp_find_entry: found matching entry 0
+
+D (166980) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (166990) lwip: etharp_input: incoming ARP request
+
+D (166990) lwip: etharp_input: ARP request was not for us.
+
+D (167000) lwip: pbuf_free(0x3ffce864)
+
+D (167000) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (167010) lwip: etharp_timer
+
+D (167990) lwip: pbuf_alloced_custom(length=42)
+
+D (167990) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (167990) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (168000) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (168000) lwip: etharp_find_entry: found matching entry 0
+
+D (168010) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (168020) lwip: etharp_input: incoming ARP request
+
+D (168020) lwip: etharp_input: ARP request was not for us.
+
+D (168030) lwip: pbuf_free(0x3ffce864)
+
+D (168030) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (168030) lwip: etharp_timer
+
+D (168450) w5500.mac: receive len=342
+D (168450) lwip: pbuf_alloced_custom(length=342)
+
+D (168450) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (168460) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (168460) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (168470) lwip: ip4_input: packet accepted on interface en
+
+D (168480) lwip: ip4_input: 
+
+D (168480) lwip: IP header:
+
+D (168480) lwip: +-------------------------------+
+
+D (168490) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (168490) lwip: +-------------------------------+
+ 640      |000|       0   | (id, flags, offset)
+
+D (168500) lwip: +-------------------------------+
+
+D (168510) lwip: |  100  |   17  |    0x5326     | (ttl, proto, chksum)
+
+D (168520) lwip: +-------------------------------+
+
+D (168520) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (168530) lwip: +-------------------------------+
+
+D (168530) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (168540) lwip: +-------------------------------+
+
+D (168540) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (168540) lwip: pbuf_re (168550) lwip: pbuf_free(0x3ffce304)
+
+D (168560) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (168910) lwip: pbuf_alloced_custom(length=42)
+
+D (168910) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (168910) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (168920) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (168920) lwip: etharp_find_entry: found matching entry 0
+
+D (168930) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (168940) lwip: etharp_input: incoming ARP request
+
+D (168940) lwip: etharp_input: ARP request was not for us.
+
+D (168950) lwip: pbuf_free(0x3ffce864)
+
+D (168950) lwip: pbuf_free: deallocating 0x3ffce864
+
+D (169010) lwip: etharp_timer
+
+D (169930) lwip: pbuf_alloced_custom(length=42)
+
+D (169930) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (169930) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (169940) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (169950) lwip: etharp_find_entry: found matching entry 0
+
+D (169950) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (169960) lwip: etharp_input: incoming ARP request
+wip: etharp_input: ARP request w
+D (170010) lwip: etharp_timer
+
+D (170450) w5500.mac: receive len=342
+D (170450) lwip: pbuf_alloced_custom(length=342)
+
+D (170450) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:9c:95:6e:8f:3b:06, type:800
+
+D (170460) lwip: pbuf_remove_header: old 0x3ffce1a0 new 0x3ffce1ae (14)
+
+D (170460) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x101a8c0 (0xffffff, 0x1a8c0, 0xff000000)
+
+D (170470) lwip: ip4_input: packet accepted on interface en
+
+D (170480) lwip: ip4_input: 
+
+D (170480) lwip: IP header:
+
+D (170480) lwip: +-------------------------------+
+
+D (170490) lwip: | 4 | 5 |  0x00 |       328     | (v, hl, tos, len)
+
+D (170490) lwip: +-------------------------------+
+
+D (170500) lwip: |      641      |000|       0   | (id, flags, offset)
+
+D (170510) lwip: +-------------------------------+
+
+D (170510) lwip: |  100  |   17  |    0x5325     | (ttl, proto, chksum)
+
+D (170520) lwip: +-------------------------------+
+
+D (170520) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (170530) lwip: +-------------------------------+
+
+D (170530) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (170540) lwip: +-------------------------------+
+
+D (170540) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (170550) lwip: pbuf_remove_header: old 0x3ffce1ae new 0x3ffce1c2 (20)
+
+D (170550) lwip: pbuf_free(0x3ffce304)
+
+D (170560) lwip: pbuf_free: deallocating 0x3ffce304
+
+D (170960) lwip: pbuf_alloced_custom(length=42)
+
+D (170960) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:4c:32:75:9a:e9:f7, type:806
+
+D (170960) lwip: pbuf_remove_header: old 0x3ffce22a new 0x3ffce238 (14)
+
+D (170960) lwip: etharp_update_arp_entry: 192.168.2.12 - 4c:32:75:9a:e9:f7
+
+D (170970) lwip: etharp_find_entry: found matching entry 0
+
+D (170980) lwip: etharp_update_arp_entry: updating stable etharp_input: incoming ARP reque43c)
+
+D (171000) lwip: pbuf_free: deallocating 0x3ffca43c
+
+D (171010) lwip: etharp_timer
+

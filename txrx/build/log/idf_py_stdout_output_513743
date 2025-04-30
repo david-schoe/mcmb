@@ -1,0 +1,556 @@
+Command: ninja flash
+[1/12] Performing build step for 'bootloader'
+[1/1] cd /home/davey_schoe/esp/mcmb/txrx/build/bootloader/esp-idf/esptool_py && /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.bin
+Bootloader binary size 0x6650 bytes. 0x9b0 bytes (9%) free.
+[2/12] No install step for 'bootloader'
+[3/12] Completed 'bootloader'
+[4/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[5/12] Building C object esp-idf/components/CMakeFiles/__idf_components.dir/src/httpd.c.obj
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c: In function 'root_post_handler':
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:48:9: note: in expansion of macro 'HANDLE'
+   48 |         HANDLE("eth_ip4_str", eth_ip4_str); HANDLE("ap_ip4_str", ap_ip4_str); HANDLE("sta_ip4_str", sta_ip4_str);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:48:9: note: in expansion of macro 'HANDLE'
+   48 |         HANDLE("eth_ip4_str", eth_ip4_str); HANDLE("ap_ip4_str", ap_ip4_str); HANDLE("sta_ip4_str", sta_ip4_str);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:48:45: note: in expansion of macro 'HANDLE'
+   48 |         HANDLE("eth_ip4_str", eth_ip4_str); HANDLE("ap_ip4_str", ap_ip4_str); HANDLE("sta_ip4_str", sta_ip4_str);
+      |                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:48:45: note: in expansion of macro 'HANDLE'
+   48 |         HANDLE("eth_ip4_str", eth_ip4_str); HANDLE("ap_ip4_str", ap_ip4_str); HANDLE("sta_ip4_str", sta_ip4_str);
+      |                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:48:79: note: in expansion of macro 'HANDLE'
+   48 |         HANDLE("eth_ip4_str", eth_ip4_str); HANDLE("ap_ip4_str", ap_ip4_str); HANDLE("sta_ip4_str", sta_ip4_str);
+      |                                                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:48:79: note: in expansion of macro 'HANDLE'
+   48 |         HANDLE("eth_ip4_str", eth_ip4_str); HANDLE("ap_ip4_str", ap_ip4_str); HANDLE("sta_ip4_str", sta_ip4_str);
+      |                                                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:49:17: note: in expansion of macro 'HANDLE'
+   49 |                 HANDLE("eth_gw_str", eth_gw_str); HANDLE("ap_gw_str", ap_gw_str); HANDLE("sta_gw_str", sta_gw_str);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:49:17: note: in expansion of macro 'HANDLE'
+   49 |                 HANDLE("eth_gw_str", eth_gw_str); HANDLE("ap_gw_str", ap_gw_str); HANDLE("sta_gw_str", sta_gw_str);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:49:51: note: in expansion of macro 'HANDLE'
+   49 |                 HANDLE("eth_gw_str", eth_gw_str); HANDLE("ap_gw_str", ap_gw_str); HANDLE("sta_gw_str", sta_gw_str);
+      |                                                   ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:49:51: note: in expansion of macro 'HANDLE'
+   49 |                 HANDLE("eth_gw_str", eth_gw_str); HANDLE("ap_gw_str", ap_gw_str); HANDLE("sta_gw_str", sta_gw_str);
+      |                                                   ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:49:83: note: in expansion of macro 'HANDLE'
+   49 |                 HANDLE("eth_gw_str", eth_gw_str); HANDLE("ap_gw_str", ap_gw_str); HANDLE("sta_gw_str", sta_gw_str);
+      |                                                                                   ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:49:83: note: in expansion of macro 'HANDLE'
+   49 |                 HANDLE("eth_gw_str", eth_gw_str); HANDLE("ap_gw_str", ap_gw_str); HANDLE("sta_gw_str", sta_gw_str);
+      |                                                                                   ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:50:17: note: in expansion of macro 'HANDLE'
+   50 |                 HANDLE("eth_nm_str", eth_nm_str); HANDLE("ap_nm_str", ap_nm_str); HANDLE("sta_nm_str", sta_nm_str);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:50:17: note: in expansion of macro 'HANDLE'
+   50 |                 HANDLE("eth_nm_str", eth_nm_str); HANDLE("ap_nm_str", ap_nm_str); HANDLE("sta_nm_str", sta_nm_str);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:50:51: note: in expansion of macro 'HANDLE'
+   50 |                 HANDLE("eth_nm_str", eth_nm_str); HANDLE("ap_nm_str", ap_nm_str); HANDLE("sta_nm_str", sta_nm_str);
+      |                                                   ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:50:51: note: in expansion of macro 'HANDLE'
+   50 |                 HANDLE("eth_nm_str", eth_nm_str); HANDLE("ap_nm_str", ap_nm_str); HANDLE("sta_nm_str", sta_nm_str);
+      |                                                   ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:50:83: note: in expansion of macro 'HANDLE'
+   50 |                 HANDLE("eth_nm_str", eth_nm_str); HANDLE("ap_nm_str", ap_nm_str); HANDLE("sta_nm_str", sta_nm_str);
+      |                                                                                   ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:50:83: note: in expansion of macro 'HANDLE'
+   50 |                 HANDLE("eth_nm_str", eth_nm_str); HANDLE("ap_nm_str", ap_nm_str); HANDLE("sta_nm_str", sta_nm_str);
+      |                                                                                   ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:51:17: note: in expansion of macro 'HANDLE'
+   51 |                 HANDLE("ap_ssid_str",ap_ssid_str); HANDLE("sta_ssid_str",sta_ssid_str);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:51:17: note: in expansion of macro 'HANDLE'
+   51 |                 HANDLE("ap_ssid_str",ap_ssid_str); HANDLE("sta_ssid_str",sta_ssid_str);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:51:52: note: in expansion of macro 'HANDLE'
+   51 |                 HANDLE("ap_ssid_str",ap_ssid_str); HANDLE("sta_ssid_str",sta_ssid_str);
+      |                                                    ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:51:52: note: in expansion of macro 'HANDLE'
+   51 |                 HANDLE("ap_ssid_str",ap_ssid_str); HANDLE("sta_ssid_str",sta_ssid_str);
+      |                                                    ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:52:9: note: in expansion of macro 'HANDLE'
+   52 |         HANDLE("r_reg_str[0]", r_reg_str[0]); HANDLE("r_reg_str[1]", r_reg_str[1]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:52:9: note: in expansion of macro 'HANDLE'
+   52 |         HANDLE("r_reg_str[0]", r_reg_str[0]); HANDLE("r_reg_str[1]", r_reg_str[1]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:52:47: note: in expansion of macro 'HANDLE'
+   52 |         HANDLE("r_reg_str[0]", r_reg_str[0]); HANDLE("r_reg_str[1]", r_reg_str[1]);
+      |                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:52:47: note: in expansion of macro 'HANDLE'
+   52 |         HANDLE("r_reg_str[0]", r_reg_str[0]); HANDLE("r_reg_str[1]", r_reg_str[1]);
+      |                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:53:9: note: in expansion of macro 'HANDLE'
+   53 |         HANDLE("r_reg_str[2]", r_reg_str[2]); HANDLE("r_reg_str[3]", r_reg_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:53:9: note: in expansion of macro 'HANDLE'
+   53 |         HANDLE("r_reg_str[2]", r_reg_str[2]); HANDLE("r_reg_str[3]", r_reg_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:53:47: note: in expansion of macro 'HANDLE'
+   53 |         HANDLE("r_reg_str[2]", r_reg_str[2]); HANDLE("r_reg_str[3]", r_reg_str[3]);
+      |                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:53:47: note: in expansion of macro 'HANDLE'
+   53 |         HANDLE("r_reg_str[2]", r_reg_str[2]); HANDLE("r_reg_str[3]", r_reg_str[3]);
+      |                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:54:17: note: in expansion of macro 'HANDLE'
+   54 |                 HANDLE("r_reg_lo_str[0]", r_reg_lo_str[0]); HANDLE("r_reg_lo_str[1]", r_reg_lo_str[1]);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:54:17: note: in expansion of macro 'HANDLE'
+   54 |                 HANDLE("r_reg_lo_str[0]", r_reg_lo_str[0]); HANDLE("r_reg_lo_str[1]", r_reg_lo_str[1]);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:54:61: note: in expansion of macro 'HANDLE'
+   54 |                 HANDLE("r_reg_lo_str[0]", r_reg_lo_str[0]); HANDLE("r_reg_lo_str[1]", r_reg_lo_str[1]);
+      |                                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:54:61: note: in expansion of macro 'HANDLE'
+   54 |                 HANDLE("r_reg_lo_str[0]", r_reg_lo_str[0]); HANDLE("r_reg_lo_str[1]", r_reg_lo_str[1]);
+      |                                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:55:9: note: in expansion of macro 'HANDLE'
+   55 |         HANDLE("r_reg_lo_str[2]", r_reg_lo_str[2]); HANDLE("r_reg_lo_str[3]", r_reg_lo_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:55:9: note: in expansion of macro 'HANDLE'
+   55 |         HANDLE("r_reg_lo_str[2]", r_reg_lo_str[2]); HANDLE("r_reg_lo_str[3]", r_reg_lo_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:55:53: note: in expansion of macro 'HANDLE'
+   55 |         HANDLE("r_reg_lo_str[2]", r_reg_lo_str[2]); HANDLE("r_reg_lo_str[3]", r_reg_lo_str[3]);
+      |                                                     ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:55:53: note: in expansion of macro 'HANDLE'
+   55 |         HANDLE("r_reg_lo_str[2]", r_reg_lo_str[2]); HANDLE("r_reg_lo_str[3]", r_reg_lo_str[3]);
+      |                                                     ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:56:17: note: in expansion of macro 'HANDLE'
+   56 |                 HANDLE("r_reg_hi_str[0]", r_reg_hi_str[0]); HANDLE("r_reg_hi_str[1]", r_reg_hi_str[1]);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:56:17: note: in expansion of macro 'HANDLE'
+   56 |                 HANDLE("r_reg_hi_str[0]", r_reg_hi_str[0]); HANDLE("r_reg_hi_str[1]", r_reg_hi_str[1]);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:56:61: note: in expansion of macro 'HANDLE'
+   56 |                 HANDLE("r_reg_hi_str[0]", r_reg_hi_str[0]); HANDLE("r_reg_hi_str[1]", r_reg_hi_str[1]);
+      |                                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:56:61: note: in expansion of macro 'HANDLE'
+   56 |                 HANDLE("r_reg_hi_str[0]", r_reg_hi_str[0]); HANDLE("r_reg_hi_str[1]", r_reg_hi_str[1]);
+      |                                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:57:9: note: in expansion of macro 'HANDLE'
+   57 |         HANDLE("r_reg_hi_str[2]", r_reg_hi_str[2]); HANDLE("r_reg_hi_str[3]", r_reg_hi_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:57:9: note: in expansion of macro 'HANDLE'
+   57 |         HANDLE("r_reg_hi_str[2]", r_reg_hi_str[2]); HANDLE("r_reg_hi_str[3]", r_reg_hi_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:57:53: note: in expansion of macro 'HANDLE'
+   57 |         HANDLE("r_reg_hi_str[2]", r_reg_hi_str[2]); HANDLE("r_reg_hi_str[3]", r_reg_hi_str[3]);
+      |                                                     ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:57:53: note: in expansion of macro 'HANDLE'
+   57 |         HANDLE("r_reg_hi_str[2]", r_reg_hi_str[2]); HANDLE("r_reg_hi_str[3]", r_reg_hi_str[3]);
+      |                                                     ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:58:9: note: in expansion of macro 'HANDLE'
+   58 |         HANDLE("rc_ip4_str", rc_ip4_str); HANDLE("rb_ip4_str", rb_ip4_str);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:58:9: note: in expansion of macro 'HANDLE'
+   58 |         HANDLE("rc_ip4_str", rc_ip4_str); HANDLE("rb_ip4_str", rb_ip4_str);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:58:43: note: in expansion of macro 'HANDLE'
+   58 |         HANDLE("rc_ip4_str", rc_ip4_str); HANDLE("rb_ip4_str", rb_ip4_str);
+      |                                           ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:58:43: note: in expansion of macro 'HANDLE'
+   58 |         HANDLE("rc_ip4_str", rc_ip4_str); HANDLE("rb_ip4_str", rb_ip4_str);
+      |                                           ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:59:9: note: in expansion of macro 'HANDLE'
+   59 |         HANDLE("w_reg_str[0]", w_reg_str[0]); HANDLE("w_reg_str[1]", w_reg_str[1]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:59:9: note: in expansion of macro 'HANDLE'
+   59 |         HANDLE("w_reg_str[0]", w_reg_str[0]); HANDLE("w_reg_str[1]", w_reg_str[1]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:59:47: note: in expansion of macro 'HANDLE'
+   59 |         HANDLE("w_reg_str[0]", w_reg_str[0]); HANDLE("w_reg_str[1]", w_reg_str[1]);
+      |                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:59:47: note: in expansion of macro 'HANDLE'
+   59 |         HANDLE("w_reg_str[0]", w_reg_str[0]); HANDLE("w_reg_str[1]", w_reg_str[1]);
+      |                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:60:9: note: in expansion of macro 'HANDLE'
+   60 |         HANDLE("w_reg_str[2]", w_reg_str[2]); HANDLE("w_reg_str[3]", w_reg_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:60:9: note: in expansion of macro 'HANDLE'
+   60 |         HANDLE("w_reg_str[2]", w_reg_str[2]); HANDLE("w_reg_str[3]", w_reg_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:60:47: note: in expansion of macro 'HANDLE'
+   60 |         HANDLE("w_reg_str[2]", w_reg_str[2]); HANDLE("w_reg_str[3]", w_reg_str[3]);
+      |                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:60:47: note: in expansion of macro 'HANDLE'
+   60 |         HANDLE("w_reg_str[2]", w_reg_str[2]); HANDLE("w_reg_str[3]", w_reg_str[3]);
+      |                                               ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:61:17: note: in expansion of macro 'HANDLE'
+   61 |                 HANDLE("w_reg_lo_str[0]", w_reg_lo_str[0]); HANDLE("w_reg_lo_str[1]", w_reg_lo_str[1]);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:61:17: note: in expansion of macro 'HANDLE'
+   61 |                 HANDLE("w_reg_lo_str[0]", w_reg_lo_str[0]); HANDLE("w_reg_lo_str[1]", w_reg_lo_str[1]);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:61:61: note: in expansion of macro 'HANDLE'
+   61 |                 HANDLE("w_reg_lo_str[0]", w_reg_lo_str[0]); HANDLE("w_reg_lo_str[1]", w_reg_lo_str[1]);
+      |                                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:61:61: note: in expansion of macro 'HANDLE'
+   61 |                 HANDLE("w_reg_lo_str[0]", w_reg_lo_str[0]); HANDLE("w_reg_lo_str[1]", w_reg_lo_str[1]);
+      |                                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:62:9: note: in expansion of macro 'HANDLE'
+   62 |         HANDLE("w_reg_lo_str[2]", w_reg_lo_str[2]); HANDLE("w_reg_lo_str[3]", w_reg_lo_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:62:9: note: in expansion of macro 'HANDLE'
+   62 |         HANDLE("w_reg_lo_str[2]", w_reg_lo_str[2]); HANDLE("w_reg_lo_str[3]", w_reg_lo_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:62:53: note: in expansion of macro 'HANDLE'
+   62 |         HANDLE("w_reg_lo_str[2]", w_reg_lo_str[2]); HANDLE("w_reg_lo_str[3]", w_reg_lo_str[3]);
+      |                                                     ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:62:53: note: in expansion of macro 'HANDLE'
+   62 |         HANDLE("w_reg_lo_str[2]", w_reg_lo_str[2]); HANDLE("w_reg_lo_str[3]", w_reg_lo_str[3]);
+      |                                                     ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:63:17: note: in expansion of macro 'HANDLE'
+   63 |                 HANDLE("w_reg_hi_str[0]", w_reg_hi_str[0]); HANDLE("w_reg_hi_str[1]", w_reg_hi_str[1]);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:63:17: note: in expansion of macro 'HANDLE'
+   63 |                 HANDLE("w_reg_hi_str[0]", w_reg_hi_str[0]); HANDLE("w_reg_hi_str[1]", w_reg_hi_str[1]);
+      |                 ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:63:61: note: in expansion of macro 'HANDLE'
+   63 |                 HANDLE("w_reg_hi_str[0]", w_reg_hi_str[0]); HANDLE("w_reg_hi_str[1]", w_reg_hi_str[1]);
+      |                                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:63:61: note: in expansion of macro 'HANDLE'
+   63 |                 HANDLE("w_reg_hi_str[0]", w_reg_hi_str[0]); HANDLE("w_reg_hi_str[1]", w_reg_hi_str[1]);
+      |                                                             ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:64:9: note: in expansion of macro 'HANDLE'
+   64 |         HANDLE("w_reg_hi_str[2]", w_reg_hi_str[2]); HANDLE("w_reg_hi_str[3]", w_reg_hi_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:64:9: note: in expansion of macro 'HANDLE'
+   64 |         HANDLE("w_reg_hi_str[2]", w_reg_hi_str[2]); HANDLE("w_reg_hi_str[3]", w_reg_hi_str[3]);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:64:53: note: in expansion of macro 'HANDLE'
+   64 |         HANDLE("w_reg_hi_str[2]", w_reg_hi_str[2]); HANDLE("w_reg_hi_str[3]", w_reg_hi_str[3]);
+      |                                                     ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:64:53: note: in expansion of macro 'HANDLE'
+   64 |         HANDLE("w_reg_hi_str[2]", w_reg_hi_str[2]); HANDLE("w_reg_hi_str[3]", w_reg_hi_str[3]);
+      |                                                     ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:65:9: note: in expansion of macro 'HANDLE'
+   65 |         HANDLE("wc_ip4_str", wc_ip4_str); HANDLE("wb_ip4_str", wb_ip4_str);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:65:9: note: in expansion of macro 'HANDLE'
+   65 |         HANDLE("wc_ip4_str", wc_ip4_str); HANDLE("wb_ip4_str", wb_ip4_str);
+      |         ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:43:33: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   43 |                                 printf("ESP_ERR_HTTPD_RESULT_TRUNC\n"); \
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:65:43: note: in expansion of macro 'HANDLE'
+   65 |         HANDLE("wc_ip4_str", wc_ip4_str); HANDLE("wb_ip4_str", wb_ip4_str);
+      |                                           ^~~~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:44:25: note: here
+   44 |                         case ESP_ERR_NOT_FOUND: \
+      |                         ^~~~
+/home/davey_schoe/esp/mcmb/txrx/components/src/httpd.c:65:43: note: in expansion of macro 'HANDLE'
+   65 |         HANDLE("wc_ip4_str", wc_ip4_str); HANDLE("wb_ip4_str", wb_ip4_str);
+      |                                           ^~~~~~
+[6/12] Linking C static library esp-idf/components/libcomponents.a
+[7/12] Linking C static library esp-idf/main/libmain.a
+[8/12] Generating ld/sections.ld
+[9/12] Linking CXX executable txrx.elf
+[10/12] Generating binary image from built executable
+esptool.py v4.9.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/davey_schoe/esp/mcmb/txrx/build/txrx.bin
+[11/12] cd /home/davey_schoe/esp/mcmb/txrx/build/esp-idf/esptool_py && /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/davey_schoe/esp/mcmb/txrx/build/partition_table/partition-table.bin /home/davey_schoe/esp/mcmb/txrx/build/txrx.bin
+txrx.bin binary size 0xd0f40 bytes. Smallest app partition is 0x100000 bytes. 0x2f0c0 bytes (18%) free.
+[11/12] cd /home/davey_schoe/esp/mcmb/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/davey_schoe/esp/mcmb/esp-idf -D "SERIAL_TOOL=/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python;;/home/davey_schoe/esp/mcmb/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/davey_schoe/esp/mcmb/txrx/build -P /home/davey_schoe/esp/mcmb/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 txrx.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.dev5
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: a0:dd:6c:86:19:00
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26192 bytes to 16510...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075aa... (100 %)
+Wrote 26192 bytes (16510 compressed) at 0x00001000 in 0.5 seconds (effective 382.1 kbit/s)...
+Hash of data verified.
+Compressed 855872 bytes to 525959...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001e19e... (6 %)
+Writing at 0x00029e11... (9 %)
+Writing at 0x000332bb... (12 %)
+Writing at 0x0003b16f... (15 %)
+Writing at 0x00040b04... (18 %)
+Writing at 0x000466dc... (21 %)
+Writing at 0x0004cc11... (24 %)
+Writing at 0x00052ea1... (27 %)
+Writing at 0x00058bf0... (30 %)
+Writing at 0x0005e60c... (33 %)
+Writing at 0x00063f7f... (36 %)
+Writing at 0x00069d67... (39 %)
+Writing at 0x0006fc71... (42 %)
+Writing at 0x0007598a... (45 %)
+Writing at 0x0007bd1b... (48 %)
+Writing at 0x00080ed3... (51 %)
+Writing at 0x000862cc... (54 %)
+Writing at 0x0008b9a0... (57 %)
+Writing at 0x000911d9... (60 %)
+Writing at 0x000964a0... (63 %)
+Writing at 0x0009bbb3... (66 %)
+Writing at 0x000a19ef... (69 %)
+Writing at 0x000a71f3... (72 %)
+Writing at 0x000acf2e... (75 %)
+Writing at 0x000b31e8... (78 %)
+Writing at 0x000b8a8d... (81 %)
+Writing at 0x000bfbda... (84 %)
+Writing at 0x000c92fe... (87 %)
+Writing at 0x000cf149... (90 %)
+Writing at 0x000d522f... (93 %)
+Writing at 0x000dac86... (96 %)
+Writing at 0x000e0273... (100 %)
+Wrote 855872 bytes (525959 compressed) at 0x00010000 in 12.2 seconds (effective 563.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 1115.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

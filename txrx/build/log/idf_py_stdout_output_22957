@@ -1,0 +1,752 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 30 2025 12:39:31[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=227b8h (141240) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000327e0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00032804 vaddr=3ffb0000 size=040b0h ( 16560) load[0m
+[0;32mI (147) esp_image: segment 3: paddr=000368bc vaddr=40080000 size=0975ch ( 38748) load[0m
+[0;32mI (163) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=911c8h (594376) map[0m
+[0;32mI (366) esp_image: segment 5: paddr=000d11f0 vaddr=4008975c size=10398h ( 66456) load[0m
+[0;32mI (405) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (405) boot: Disabling RNG early entropy source...[0m
+[0;32mI (416) cpu_start: Multicore app[0m
+[0;32mI (424) cpu_start: Pro cpu start user code[0m
+[0;32mI (424) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (424) app_init: Application information:[0m
+[0;32mI (424) app_init: Project name:     txrx[0m
+[0;32mI (428) app_init: App version:      e7e3d0c-dirty[0m
+[0;32mI (432) app_init: Compile time:     Apr 30 2025 12:39:30[0m
+[0;32mI (437) app_init: ELF file SHA256:  7d67b34a1...[0m
+[0;32mI (442) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (448) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (451) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (455) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (459) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (466) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (471) heap_init: At 3FFB90A0 len 00026F60 (155 KiB): DRAM[0m
+[0;32mI (476) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (481) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (487) heap_init: At 40099AF4 len 0000650C (25 KiB): IRAM[0m
+[0;32mI (494) spi_flash: detected chip: generic[0m
+[0;32mI (496) spi_flash: flash io: dio[0m
+[0;33mW (499) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (512) main_task: Started on CPU0[0m
+[0;32mI (522) main_task: Calling app_main()[0m
+[0;32mI (592) lwmb: created remote, r->b_ip4_str=192.168.2.11, r->c_ip4_str=[0m
+[0;32mI (592) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+[0;32mI (592) lwmb: created remote, r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22[0m
+[0;32mI (602) lwmb: created remote, r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174[0m
+r_reg[0]=0
+r_reg_lo[0]=0
+reg_hi[0]=65535
+w_reg[0]=2800
+w_reg_lo[0]=4000
+weg_hi[0]=20000
+r_reg[1]=100
+r_reg_lo[1]=0
+reg_hi[1]=65535
+w_reg[1]=2900
+w_reg_lo[1]=4000
+weg_hi[1]=20000
+r_reg[2]=200
+r_reg_lo[2]=0
+reg_hi[2]=65535
+[1;31mE (632) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+w_reg[2]=2a00
+w_reg_lo[2]=4000
+[1;31mE (632) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+weg_hi[2]=20000
+[1;31mE (642) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=, no tcp connection[0m
+r_reg[3]=300
+r_reg_lo[3]=0
+reg_hi[3]=65535
+[1;31mE (652) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+w_reg[3]=2b00
+w_reg_lo[3]=4000
+weg_hi[3]=20000
+[0;32mI (672) mb: idle[0m
+[1;31mE (682) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connectiolwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[1;31mE (682) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[0;32mI (692) wifi:wifi driver task: 3ffc3d44, prio:23, stack:6656, core=0[0m
+[1;31mE (712) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+[1;31mE (712) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[1;31mE (712) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[0;32mI (712) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (722) wifi:wifi certification version: v7.0[0m
+[0;32mI (732) wifi:config NVS flash: enabled[0m
+[0;32mI (732) wifi:config nano formatting: disabled[0m
+[0;32mI (732) wifi:Init data frame dynamic rx buffer num: 32[0m
+[1;31mE (742) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+[0;32mI (742) wifi:E (742) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+Init static rx mgmt buffer num: 5E (752) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection
+
+[0;32mI (762) wifi:Init management short buffer num: 32[0m
+[0;32mI (772) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (772) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (782) wifi:Init static rx buffer num: 10[0m
+[1;31mE (782) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+[0;32mI (782) wifi:E (792) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+Init dynamic rx buffer num: 32E (792) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection
+
+[0;32mI (812) wifi_init: rx ba win: 6[0m
+[0;32mI (812) wifi_init: accept mbox: 6[0m
+[0;32mI (812) wifi_init: tcpip mbox: 32[0m
+[0;32mI (812) wifi_init: udp mbox: 6[0m
+[1;31mE (822) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+[0;32mI (822) wifi_init: tcp mbox: 6[0m
+[1;31mE (822) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[0;32mI (832) wifi_init: tcp tx win: 5760[0m
+[1;31mE (832) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[0;32mI (842) wifi_init: tcp rx win: 5760[0m
+[0;32mI (852) wifi_init: tcp mss: 1440[0m
+[0;32mI (852) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (852) wifi_init:  lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network cor_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[0;32mI (872) wifi: ap_init (ap) finished. SSID:192.168.2.11 password: channel:1[0m
+[0;32mI (882) wifi: sta_init (sta) finished. SSID:192.168.2.1 password: channel:1[0m
+I (87
+[1;31mE (902) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+[1;31mE (902) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[1;31mE (912) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[1;31mE (942) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+[1;31mE (942) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[1;31mE (942) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[1;31mE (972) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+[1;31mE (972) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[1;31mE (972) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[0;32mI (982) wifi:mode : sta (a0:dd:6c:10:24:cc) + softAP (a0:dd:6c:10:24:cd)[0m
+[0;32mI (982) wifi:enable tsf[0m
+[0;32mI (992) wifi:Total power save buffer number: 16[0m
+[0;32mI (992) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (992) wifi:Init max length of beacon: 752/752[0m
+[1;31mE (1002) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+[1;31mE (1002) evhdlr: ip4_str=192.168.2.11, state=1[0m
+[0;32mI (1012) evhdlr: ip4_str=192.168.2.11, state=1[0m
+[0;32mI (1012) evhdlr: ip4_str=192.168.2.11, state=1[0m
+[1;31mE (1022) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[0;32mI (1012) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (1032) lwmb: r_connect(58), r->b_ip4_str=192.168.2.11, b=-1, errno=118[0m
+[0;32mI (1032) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1052) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.11[0m
+[0;32mI (1062) wtate: auth -> assoc (0x0)[0m
+[0;32mI (1072) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1072) wifi:connected with 192.168.2.1, aid = 1, channel 1, BW20, bssid = a0:dd:6c:86:19:01[0m
+[0;32mI (1082) wifi:security: Open Auth, phy: bgn, rssi: -63[0m
+[0;32mI (1082) wifi:pm start, type: 1[0m
+
+[0;32mI (1082) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1092) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[1;31mE (1102) evhdlr: ip4_str=192.168.2.12, state=1[0m
+[0;32mI (1102) evhdlr: ip4_str=192.168.2.12, state=1[0m
+[0;32mI (1112) esp_netif_handlers: sta ip: 192.168.2.12, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[1;31mE (2042) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=, no tcp connection[0m
+[1;31mE (2062) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2062) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=119[0m
+[1;31mE (2062) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[0;32mI (2062) wifi:<ba-add>idx:0 (ifx:0, a0:dd:6c:86:19:01), tid:0, ssn:0, winSize:64[0m
+[1;31mE (2082) lwmb: r_onnect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (2102) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2102) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2102) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2112) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2142) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2142) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2142) lwmb: r_select task(), r->b_ip4_str2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2152) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2182) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2182) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2182) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2192) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2222) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2222) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2222) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2232) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2262) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2262) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2262) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2272) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2302) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2302) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2302) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2312) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2342) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2342) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2342) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2352) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2382) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2382) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2382) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2392) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2422) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2422) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2422) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2432) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2462) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2462) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2462) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2472) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2502) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2502) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2502) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2512) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2542) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2542) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2542) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2552) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2582) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2582) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2582) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2592) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2622) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2622) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2622) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2632) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2662) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2662) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2662) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[0;32mI (2672) mb: idle[0m
+[1;31mE (2672) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2702) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2702) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2702) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2712) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2742) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2742) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2742) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2752) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2782) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2782) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2782) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2792) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2822) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2822) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2822) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2832) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2862) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2862) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2862) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2872) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2902) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2902) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2902) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2912) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2942) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2942) lwmb: r_connect(59), r->b_ip4_str=192.168.2.142) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_sonnect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (2982) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (2982) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (2982) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (2992) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3022) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (3022) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (3022) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3032) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3062) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (3062) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (3062) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3072) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3102) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (3102) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (3102) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3112) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[0;32mI (3122) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3122) wifi:station: a0:dd:6c:02:d7:98 join, AID=1, bgn, 40U[0m
+[1;31mE (3142) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (3142) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (3142) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3152) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3182) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (3182) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (3182) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3192) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3222) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (3222) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (3222) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3232) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3262) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (3262) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (3262) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3272) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3302) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (3302) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (3302) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3312) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3342) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+tcp_connect: can only connect from state CLOSED
+[1;31mE (3342) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=127[0m
+[1;31mE (3352) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3352) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3382) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3382) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3402) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3402) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3422) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3422) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3442) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3442) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3462) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3462) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3482) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3482) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3502) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3502) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3522) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3522) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3542) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3542) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (3562) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3562) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[0;32mI (3572) wifi:<ba-add>idx:2 (ifx:1, a0:dd:6c:02:d7:98), tid:0, ssn:0, winSize:64[0m
+[1;31mE (3582) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (3582) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (3592) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (4612) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (4612) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (4632) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (4632) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (4652) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (4652) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[0;32mI (4672) mb: idle[0m
+[1;31mE (4672) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (4672) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (4692) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (4692) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (4692) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (4702) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (4712) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (5732) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (5732) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (5752) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (5752) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11-1, errno=120[0m
+[1;31mE (5772) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (5772) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (5792) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (5792) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (5812) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (5812) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (5822) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (5822) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (5832) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (6672) mb: idle[0m
+[1;31mE (6852) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (6852) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (6872) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (6872) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (6892) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (6892) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (6912) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (6912) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (6932) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (6932) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (6952) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (6952) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (6952) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (7982) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (7982) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (8002) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (8002) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (8022) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (8022) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (8042) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (8042) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (8062) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (8062) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (8082) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (8082) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (8082) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (8672) mb: idle[0m
+[1;31mE (9112) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (9112) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (9132) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (9132) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (9152) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (9152) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (9172) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (9172) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (9192) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (9192) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (9202) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (9202) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (9212) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (10232) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (10232) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (10252) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (10252) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (10272) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (10272) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (10292) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (10292) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (10312) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (10312) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (10332) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (10332) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (10332) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (10342) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (10352) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (10672) mb: idle[0m
+[1;31mE (11372) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (11372) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (11392) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (11392) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (11412) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (11412) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (11432) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (11432) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (11452) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (11452) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (11452) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (11462) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (11472) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (12492) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (12492) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (12512) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (12512) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (12532) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (12532) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (12552) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (12552) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (12572) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (12572) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (12582) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (12582) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (12592) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (12672) mb: idle[0m
+[1;31mE (13612) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (13612) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (13632) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (13632) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (13652) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (13652) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (13672) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (13672) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (13692) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (13692) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (13712) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (13712) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (13712) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (13722) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (13732) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (14672) mb: idle[0m
+[1;31mE (14752) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (14752) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (14772) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (14772) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (14792) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (14792) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (14812) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (14812) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (14832) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (14832) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (14832) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (14842) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (14852) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (15872) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (15872) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (15892) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (15892) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (15912) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (15912) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (15932) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (15932) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (15952) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (15952) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (15962) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (15962) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (15972) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (16672) mb: idle[0m
+[1;31mE (16992) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (16992) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (17012) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (17012) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (17032) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (17032) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (17052) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (17052) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (17072) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (17072) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (17092) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (17092) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (17102) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (17102) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (17112) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (18132) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (18132) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (18152) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp conection[0m
+[1;31mE (18152) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (18172) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (18172) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (18192) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (18192) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (18212) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (18212) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (18222) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (18222) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (18232) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (18672) mb: idle[0m
+[1;31mE (19252) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (19252) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (19272) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (19272) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (19292) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (19292) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (19312) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (19312) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (19332) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (19332) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (19342) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (19342) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (19352) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (20372) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (20372) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (20392) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (20392) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (20412) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (20412) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (20432) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (20432) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (20452) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (20452) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (20462) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (20462) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (20472) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (20672) mb: idle[0m
+[1;31mE (21502) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (21502) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (21522) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (21522) lwmb: r_connect(60), r->b_ip4_str=192.168.2.E (21542) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (21542) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (21562) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (21562) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (21582) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (21582) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (21592) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (21592) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (21602) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (22622) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (22622) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (22642) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (22642) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (22662) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (22662) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[0;32mI (22672) mb: idle[0m
+[1;31mE (22682) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (22682) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (22702) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (22702) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (22722) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (22722) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (22722) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (23752) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (23752) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (23772) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (23772) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (23792) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (23792) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (23812) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (23812) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (23832) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (23832) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (23842) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (23842) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (23852) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (24672) mb: idle[0m
+[1;31mE (24882) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (24882) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (24902) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (24902) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (24922) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (24922) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (24942) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (24942) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (24962) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (24962) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (24972) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (24972) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (24982) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (26002) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (26002) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (26022) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (26022) lwmb: r_connect(60), r->b_ip4_str=192.168.2.[0m
+[1;31mE (26042) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (26042) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (26062) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (26062) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (26082) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (26082) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (26102) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (26102) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (26102) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (26672) mb: idle[0m
+[1;31mE (27132) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (27132) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (27152) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (27152) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (27172) lwmb: r_select task(),ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (27172) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (27192) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (27192) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (27212) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (27212) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (27222) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (27222) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (27232) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (28262) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (28262) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (28282) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (28282) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (28302) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (28302) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (28322) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (28322) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (28342) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (28342) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (28352) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (28352) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (28362) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (28672) mb: idle[0m
+[1;31mE (29382) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (29382) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (29402) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (29402) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (29422) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (29422) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (29442) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (29442) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (29462) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (29462) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (29482) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (29482) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (29482) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (30512) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (30512) lwmb: r_conn2.22, no tcp connection[0m
+[1;31mE (30532) lwmb: r_connect(60), r->b_ip4.168.2.11, b=-1, errno=120[0m
+[1;31mE (30572) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (30572) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (30592) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (30592) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (30602) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (30602) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (30612) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (30672) mb: idle[0m
+[1;31mE (31632) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (31632) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (31652) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (31652) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (31672) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (31672) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (31692) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (31692) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (31712) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (31712) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (31732) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (31732) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (31732) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (31742) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (31752) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (32672) mb: idle[0m
+[1;31mE (32772) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (32772) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (32792) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (32792) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (32812) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (32812) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (32832) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (32832) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (32852) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (32852) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (32852) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (32862) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (32872) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (33892) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (33892) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (33892) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (33902) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (33912) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (34672) mb: idle[0m
+[1;31mE (34932) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (34932) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (34952) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (34952) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (34972) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (34972) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (34992) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (34992) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (35002) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (35002) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (35012) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (36042) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (36042) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (36062) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (36062) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (36082) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (36082) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (36102) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (36102) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (36122) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (36122) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (36132) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (36132) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (36142) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (36672) mb: idle[0m
+[1;31mE (37162) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (37162) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (37182) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (37182) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (37202) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (37202) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (37222) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (37222) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (37242) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (37242) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (37262) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (37262) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (37262) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (37272) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (37282) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2, errno=128[0m
+[1;31mE (38302) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (38302) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (38322) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (38322) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (38342) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (38342) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (38362) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (38362) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (38382) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (38382) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (38392) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (38392) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (38402) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[0;32mI (38672) mb: idle[0m
+[1;31mE (39422) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (39422) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (39442) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (39442) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (39462) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (39462) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (39482) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (39482) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (39502) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (39502) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+[1;31mE (39512) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.2.22, no tcp connection[0m
+[1;31mE (39512) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m
+[1;31mE (39522) lwmb: r_shutdown(60), r->b_ip4_str=192.168.2.11, b=-1, errno=128[0m

@@ -1,0 +1,35 @@
+
+FLASHING
+
+1. Refer to the documentation here: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html to setup esp-idf on any OS.
+2. Modify your/path/to/esp-idf/components/lwip/lwip/src/core:513 to be "if (force || IP_FORWARD) {"
+3. Navigate into mcmb/txrx
+4. Execute idf.py build
+5. Execute idf.py flash
+
+
+CONFIGURING TX/RX
+
+1. Connect to the wifi
+2. If first config, in a web-browser, type "192.168.2.1" into the URL bar, otherwise, type the configured ip
+3. Adjust network settings as needed
+
+
+THEORY OF OPERATION
+
+This project uses ip4 networking fundamentals to acheive modbus communication using both ethernet and wifi connections. tx and rx both host wifi access points
+to allow for interconnection (tx and rx) and configuration (user to device). tx and rx may connect succesfully using any of three methods: tx sta may connect to
+rx ap; rx sta may connect to tx ap; tx eth may connect to rx eth. Once tx and rx have established a connection, careful networking may be used to allow tx/rx
+to read/write messages to any device that is connected to tx/rx eth/ap/sta (those slashes are correct! all devices connected to tx and rx [including tx and rx]
+can be accessed by either device if the configuration is set up properly).
+
+
+
+BARE MINIMUM TX/RX CONFIG FOR PROPER FUNCTION
+
+1. tx/rx's eth/ap/sta ip4 must be unique ip4 addresses; likewise dat-8024 ip4 must be unique
+2. eth ip4 must be in a different subnet than ap/sta ip4 on tx/rx
+3. rx's eth ip4 must be in the same subnet as dat-8024's ip4
+4. every netif must have a valid ip4 as it's gw and every netif must have a valid nm
+5. tx's sta gw must be set with rx's ap ip4
+!!! pay careful attention to the subnets being properly differentiated by each netif's nm !!!

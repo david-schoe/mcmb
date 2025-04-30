@@ -1,0 +1,164 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 15 2025 07:54:45[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e128h (123176) map[0m
+[0;32mI (130) esp_image: segment 1: paddr=0002e150 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e174 vaddr=3ffb0000 size=01ea4h (  7844) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=88ac8h (559816) map[0m
+[0;32mI (333) esp_image: segment 4: paddr=000b8af0 vaddr=3ffb1ea4 size=0203ch (  8252) load[0m
+[0;32mI (336) esp_image: segment 5: paddr=000bab34 vaddr=40080000 size=17b34h ( 97076) load[0m
+[0;32mI (386) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (386) boot: Disabling RNG early entropy source...[0m
+[0;32mI (397) cpu_start: Multicore app[0m
+[0;32mI (405) cpu_start: Pro cpu start user code[0m
+[0;32mI (405) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (405) app_init: Application information:[0m
+[0;32mI (405) app_init: Project name:     txrx[0m
+[0;32mI (409) app_init: App version:      e7e3d0c-dirty[0m
+[0;32mI (413) app_init: Compile time:     Apr 15 2025 07:54:35[0m
+[0;32mI (418) app_init: ELF file SHA256:  1cc604a43...[0m
+[0;32mI (423) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (429) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (433) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (441) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (447) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB8E18 len 000271E8 (156 KiB): DRAM[0m
+[0;32mI (457) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (462) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (468) heap_init: At 40097B34 len 000084CC (33 KiB): IRAM[0m
+[0;32mI (475) spi_flash: detected chip: generic[0m
+[0;32mI (477) spi_flash: flash io: dio[0m
+[0;33mW (480) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (493) main_task: Started on CPU0[0m
+[0;32mI (503) main_task: Calling app_main()[0m
+[0;32mI (533) lwmb: created remote, r->b_ip4_str=192.168.2.11, r->c_ip4_str=[0m
+[0;32mI (533) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+[0;32mI (533) lwmb: created remote, r->b_ip4_str=192.168.2.2, r->c_ip4_str=192.168.1.174[0m
+[0;32mI (543) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1[0m
+[0;32mI (543) mb: idle[0m
+[0;32mI (553) wifi:wifi driver task: 3ffc3908, prio:23, stack:6656, core=0[0m
+[1;31mE (563) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[1;31mE (573) lwmb: r_connect(54), r->b_ip4_str=127.0.0.1, b=-1, errno=119[0m
+[1;31mE (573) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (573) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=, no tcp connection[0m
+[0;32mI (583) wifi:wifi firmware version: 3a3aca644[0m
+[1;31mE (583) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[0;32mI (583) wifi:wifi certification version: v7.0[0m
+[1;31mE (593) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[0;32mI (603) wifi:config NVS flash: enabled[0m
+[1;31mE (603) lwmb: r_connect(54), r->b_ip4_str=127.0.0.1, b=-1, errno=128[0m
+[0;32mI (613) wifi:config nano formatting: disabled[0m
+[1;31mE (613) lwmb: r_shutdown(54), r->b_ip4_str=127.0.0.1, b=-1, errno=128[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (703) wifi: wlan0_init (ap) finished. SSID:192.168.2.11 password: channel:1[0m
+[0;32mI (703) wifi: wlan1_init (sta) finished. SSID:192.168.2.1 password: channel:1[0m
+[0;32mI (703) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (793) wifi:mode : sta (ac:15:18:e4:de:80) + softAP (ac:15:18:e4:de:81)[0m
+[0;32mI (793) wifi:enable tsf[0m
+[0;32mI (803) wifi:Total power save buffer number: 16[0m
+[0;32mI (803) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (803) wifi:Init max length of beacon: 752/752[0m
+[1;31mE (813) evhdlr: ip4_str=192.168.2.11, state=1[0m
+[0;32mI (813) evhdlr: ip4_str=192.168.2.11, state=1[0m
+[0;32mI (813) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.11[0m
+[0;32mI (1543) mb: idle[0m
+[1;31mE (1623) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1623) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=, no tcp connection[0m
+[1;31mE (1643) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[1;31mE (1643) lwmb: r_connect(59), r->b_ip4_str=127.0.0.1, b=-1, errno=119[0m
+[1;31mE (1643) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1653) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+tcp_connect: can only connect from state CLOSED
+[1;31mE (1663) lwmb: r_connect(59), r->b_ip4_str=127.0.0.1, b=-1, errno=127[0m
+[1;31mE (1673) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[0;32mI (1673) lwmb: created remote, r->b_ip4_str=, r->c_ip4_str=[0m
+[1;31mE (1703) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1723) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1743) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1763) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1783) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1803) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1823) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1843) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1863) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1883) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1903) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1923) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1943) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1963) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (1983) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2003) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2023) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2043) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2063) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2083) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2103) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2123) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2143) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2163) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2183) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2203) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2223) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2243) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2263) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2283) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2303) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2323) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2343) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2363) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2383) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2403) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2423) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2443) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2463) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2483) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2503) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2523) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[0;32mI (2543) mb: idle[0m
+[1;31mE (2543) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2563) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2583) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2603) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2623) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2643) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2663) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m
+[1;31mE (2683) lwmb: r_select_task(), r->b_ip4_str=192.168.2.2, no network connection[0m

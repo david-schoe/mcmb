@@ -1,0 +1,5704 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 30 2025 12:39:31[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=227b8h (141240) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000327e0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00032804 vaddr=3ffb0000 size=040b0h ( 16560) load[0m
+[0;32mI (147) esp_image: segment 3: paddr=000368bc vaddr=40080000 size=0975ch ( 38748) load[0m
+[0;32mI (163) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=911d4h (594388) map[0m
+[0;32mI (366) esp_image: segment 5: paddr=000d11fc vaddr=4008975c size=10398h ( 66456) load[0m
+[0;32mI (405) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (405) boot: Disabling RNG early entropy source...[0m
+[0;32mI (416) cpu_start: Multicore app[0m
+[0;32mI (424) cpu_start: Pro cpu start user code[0m
+[0;32mI (424) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (424) app_init: Application information:[0m
+[0;32mI (424) app_init: Project name:     txrx[0m
+[0;32mI (428) app_init: App version:      e7e3d0c-dirty[0m
+[0;32mI (432) app_init: Compile time:     Apr 30 2025 12:39:30[0m
+[0;32mI (437) app_init: ELF file SHA256:  eb31a91e7...[0m
+[0;32mI (442) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (448) efusechip rev:     v3.99 [0m
+[0;32mI (455) efuse_init: Chip rev:         v3.1_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (466) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (471) heap_init: At 3FFB90A0 len 00026F60 (155 KiB): DRAM[0m
+[0;32mI (476) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (481) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (487) heap_init: At 40099AF4 len 0000650C (25 KiB): IRAM[0m
+[0;32mI (494) spi_flash: detected chip: generic[0m
+[0;32mI (496) spi_flash: flash io: dio[0m
+[0;33mW (499) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (512) main_task: Started on CPU0[0m
+[0;32mI (522) main_task: Calling app_main()[0m
+[0;32mI (592) lwmb: created remote, r->b_ip4_str=192.168.2.11, r->c_ip4_str=[0m
+[0;32mI (592) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+[0;32mI (592) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1[0m
+[0;32mI (602) lwmb: created remote, r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174[0m
+r_reg[0]=0
+r_reg_lo[0]=0
+reg_hi[0]=65535
+w_reg[0]=2800
+w_reg_lo[0]=4000
+weg_hi[0]=20000
+r_reg[1]=100
+r_reg_lo[1]=0
+reg_hi[1]=65535
+w_reg[1]=2900
+w_reg_lo[1]=4000
+weg_hi[1]=20000
+r_reg[2]=200
+r_reg_lo[2]=0
+reg_hi[2]=65535
+[1;31mE (632) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection[0m
+w_reg[2]=2a00
+w_reg_lo[2]=4000
+weg_hi[2]=20000
+[1;31mE (632) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+r_reg[3]=300
+r_reg_lo[3]=0
+reg_hi[3]=65535
+w_reg[3]=2b00
+w_=127.0.0.1, b=-1, errno=119
+[0;32mI (652) mb: idle[0m
+[0;32mI (662) wifi:E (6.1, r->c_ip4_str=, no tcp connection[0m
+wifi driver task: 3ffc3cac, prio:23, stack:6656, core=0
+[1;31mE (672) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[1;31mE (692) lwmb: r_select_task(), r->b_ip4_str=192.168.2.12, no network connection lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[0;32mI (692) wifi:E (702) lwmb: r_connect(54), r->b_ip4_str=127.0.0.1, b=-1, errno=128[0m
+wifi firmware version: 3a3aca644
+[1;31mE (702) lwmb: r_shutdown(54), r->b_ip4_str=127.0.0.1, b=-1, errno=128[0m
+[0;32mI (712) wbled[0m
+[0;32mI (722) wifi:config nano formatting: disabled[0m
+[0;32mI (732) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (732) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (732) wifi:Init management short buffer num: 32[0m
+[0;32mI (742) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (742) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (752) wifi:Init static rx buffer num: 10[0m
+[0;32mI (752) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (762) wifi_init: rx ba win: 6[0m
+[0;32mI (762) wifi_init: accept mbox: 6[0m
+[0;32mI (762) wifi_init: tcpip mbox: 32[0m
+[0;32mI (762) wifi_init: udp mbox: 6[0m
+[0;32mI (772) wifi_init: tcp mbox: 6[0m
+[0;32mI (772) wifi_init: tcp tx win: 5760[0m
+[0;32mI (772) wifi_init: tcp rx win: 5760[0m
+[0;32mI (782) wifi_init: tcp mss: 1440[0m
+[0;32mI (782) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (782) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (802) wifi: ap_init (ap) finished. SSID:192.168.2.11 password: channel:1[0m
+[0;32mI (802) wifi: sta_init (sta) finished. SSID:192.168.2.1 password: channel:1[0m
+[0;32mI (802) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (892) wifi:mode : sta (a0:dd:6c:10:24:cc) + softAP (a0:dd:6c:10:24:cd)[0m
+[0;32mI (902) wifi:enable tsf[0m
+[0;32mI (902) wifi:Total power save buffer number: 16[0m
+[0;32mI (902) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (902) wifi:Init max length of beacon: 752/752[0m
+[1;31mE (912) evhdlr: ip4_str=192.168.2.11, state=1[0m
+[0;32mI (912) evhdlr: ip4_str=192.168.2.11, state=1[0m
+[0;32mI (912) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.11[0m
+[0;32mI (932) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (932) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (952) wifi:state: auth -> assoI (962) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (972) wifi:connected with 192.168.2.1, aid = 1, channel 1, 40U, bssid = a0:dd:6c:86:19:01[0m
+[0;32mI (972) wifi:security: Open Auth, phy: bgn, rssi: -42[0m
+[0;32mI (972) wifi:pm start, type: 1[0m
+
+[0;32mI (972) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[1;31mE (982) evhdlr: ip4_str=192.168.2.12, state=1[0m
+[0;32mI (992) evhdlr: ip4_str=192.168.2.12, state=1[0m
+[0;32mI (982) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1002) esp_netif_handlers: sta ip: 192.168.2.12, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[1;31mE (1712) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=, no tcp connection[0m
+[1;31mE (1732) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (1732) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=119[0m
+[1;31mE (1732) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[0;32mI (1732) wifi:<ba-add>idx:0 (ifx:0, a0:dd:6c:86:19:01), tid:0, ssn:0, winSize:64[0m
+[1;31mE (1742) lwmb: r_connect(60), r->b_ip4_str=127.0.0.1, b=-1, errno=119[0m
+[1;31mE (1752) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (1762) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=120[0m
+[1;31mE (1772) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+tcp_connect: can only connect from state CLOSED
+[1;31mE (1782) lwmb: r_connect(60), r->b_ip4_str=127.0.0.1, b=-1, errno=127[0m
+[0;32mI (1792) lwmb: created remote, r->b_ip4_str=, r->c_ip4_str=[0m
+[1;31mE (1812) lwmb: r_select task(), r->b_ip4_str=192.168.2.12, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+tcp_connect: can only connect from state CLOSED
+[1;31mE (1812) lwmb: r_connect(59), r->b_ip4_str=192.168.2.12, b=-1, errno=127[0m
+[0;32mI (2662) mb: hw: 2284[0m
+
+[0;32mI (2662) mb: Largest free block: 110592[0m
+
+[0;32mI (2662) mb: Free heap: 200912[0m
+
+[0;32mI (2662) mb: hw: 2284[0m
+
+[0;32mI (2662) mb: Largest free block: 110592[0m
+
+[0;32mI (2662) mb: Free heap: 200892[0m
+
+[0;32mI (2662) mb: hw: 2284[0m
+
+[0;32mI (2662) mb: Largest free block: 110592[0m
+
+[0;32mI (2672) mb: Free heap: 200892[0m
+
+[0;32mI (2672) mb: hw: 2284[0m
+
+[0;32mI (2672) mb: Largest free block: 110592[0m
+
+[0;32mI (2682) mb: Free heap: 200892[0m
+
+[0;32mI (2682) mb: hw: 2252[0m
+
+[0;32mI (2682) mb: Largest free block: 110592[0m
+
+[0;32mI (2692) mb: Free heap: 200892[0m
+
+[0;32mI (2692) mb: hw: 2252[0m
+
+[0;32mI (2692) mb: Largest free block: 110592[0m
+
+[0;32mI (2692) mb: Free heap: 200892[0m
+
+[0;32mI (2702) mb: hw: 2252[0m
+
+[0;32mI (2702) mb: Largest free block: 110592[0m
+
+[0;32mI (2702) mb: Free heap: 200892[0m
+
+[0;32mI (2712) mb: hw: 2252[0m
+
+[0;32mI (2712) mb: Largest free block: 110592[0m
+
+[0;32mI (2712) mb: Free heap: 200892[0m
+
+[0;32mI (2722) mb: hw: 2252[0m
+
+[0;32mI (2722) mb: Largest free block: 110592[0m
+
+[0;32mI (2722) mb: Free heap: 200892[0m
+
+[0;32mI (2722) mb: hw: 2252[0m
+
+[0;32mI (2732) mb: Largest free block: 110592[0m
+
+[0;32mI (2732) mb: Free heap: 200892[0m
+
+[0;32mI (2732) mb: hw: 2252[0m
+
+[0;32mI (2742) mb: Largest free block: 110592[0m
+
+[0;32mI (2742) mb: Free heap: 200892[0m
+
+[0;32mI (2742) mb: hw: 2252[0m
+
+[0;32mI (2742) mb: Largest free block: 110592[0m
+
+[0;32mI (2752) mb: Free heap: 200892[0m
+
+[0;32mI (2752) mb: hw: 2252[0m
+
+[0;32mI (2752) mb: Largest free block: 110592[0m
+
+[0;32mI (2762) mb: Free heap: 200892[0m
+
+[0;32mI (2762) mb: hw: 2252[0m
+
+[0;32mI (2762) mb: Largest free block: 110592[0m
+
+[0;32mI (2772) mb: Free heap: 200892[0m
+
+[0;32mI (2772) mb: hw: 2252[0m
+
+[0;32mI (2772) mb: Largest free block: 110592[0m
+
+[0;32mI (2772) mb: Free heap: 200892[0m
+
+[0;32mI (2782) mb: hw: 2252[0m
+
+[0;32mI (2782) mb: Largest free block: 110592[0m
+
+[0;32mI (2782) mb: Free heap: 200892[0m
+
+[0;32mI (2792) mb: hw: 2252[0m
+
+[0;32mI (2792) mb: Largest free block: 110592[0m
+
+[0;32mI (2792) mb: Free heap: 200892[0m
+
+[0;32mI (2802) mb: hw: 2252[0m
+
+[0;32mI (2802) mb: Largest free block: 110592[0m
+
+[0;32mI (2802) mb: Free heap: 200892[0m
+
+[0;32mI (2802) mb: hw: 2252[0m
+
+[0;32mI (2812) mb: Largest free block: 110592[0m
+
+[0;32mI (2812) mb: Free heap: 200892[0m
+
+[0;32mI (2812) mb: hw: 2252[0m
+
+[0;32mI (2812) mb: Largest free block: 110592[0m
+
+[0;32mI (2822) mb: Free heap: 200892[0m
+
+[0;32mI (2822) mb: hw: 2252[0m
+
+[0;32mI (2822) mb: Largest free block: 110592[0m
+
+[0;32mI (2832) mb: Free heap: 200892[0m
+
+[0;32mI (2832) mb: hw: 2252[0m
+
+[0;32mI (2832) mb: Largest free block: 110592[0m
+
+[0;32mI (2842) mb: Free heap: 200892[0m
+
+[0;32mI (2842) mb: hw: 2252[0m
+
+[0;32mI (2842) mb: Largest free block: 110592[0m
+
+[0;32mI (2852) mb: Free heap: 200892[0m
+
+[0;32mI (2852) mb: hw: 2252[0m
+
+[0;32mI (2852) mb: Largest free block: 110592[0m
+
+[0;32mI (2852) mb: Free heap: 200892[0m
+
+[0;32mI (2862) mb: hw: 2252[0m
+
+[0;32mI (2862) mb: Largest free block: 110592[0m
+
+[0;32mI (2862) mb: Free heap: 200892[0m
+
+[0;32mI (2872) mb: hw: 2252[0m
+
+[0;32mI (2872) mb: Largest free block: 110592[0m
+
+[0;32mI (2872) mb: Free heap: 200892[0m
+
+[0;32mI (2872) mb: hw: 2252[0m
+
+[0;32mI (2882) mb: Largest free block: 110592[0m
+
+[0;32mI (2882) mb: Free heap: 200892[0m
+
+[0;32mI (2882) mb: hw: 2252[0m
+
+[0;32mI (2892) mb: Largest free block: 110592[0m
+
+[0;32mI (2892) mb: Free heap: 200892[0m
+
+[0;32mI (2892) mb: hw: 2252[0m
+
+[0;32mI (2892) mb: Largest free block: 110592[0m
+
+[0;32mI (2902) mb: Free heap: 200892[0m
+
+[0;32mI (2902) mb: hw: 2252[0m
+
+[0;32mI (2902) mb: Largest free block: 110592[0m
+
+[0;32mI (2912) mb: Free heap: 200892[0m
+
+[0;32mI (2912) mb: hw: 2252[0m
+
+[0;32mI (2912) mb: Largest free block: 110592[0m
+
+[0;32mI (2922) mb: Free heap: 200892[0m
+
+[0;32mI (2922) mb: hw: 2252[0m
+
+[0;32mI (2922) mb: Largest free block: 110592[0m
+
+[0;32mI (2922) mb: Free heap: 200892[0m
+
+[0;32mI (2932) mb: hw: 2252[0m
+
+[0;32mI (2932) mb: Largest free block: 110592[0m
+
+[0;32mI (2932) mb: Free heap: 200892[0m
+
+[0;32mI (2942) mb: hw: 2252[0m
+
+[0;32mI (2942) mb: Largest free block: 110592[0m
+
+[0;32mI (2942) mb: Free heap: 200892[0m
+
+[0;32mI (2952) mb: hw: 2252[0m
+
+[0;32mI (2952) mb: Largest free block: 110592[0m
+
+[0;32mI (2952) mb: Free heap: 200892[0m
+
+[0;32mI (2952) mb: hw: 2252[0m
+
+[0;32mI (2962) mb: Largest free block: 110592[0m
+
+[0;32mI (2962) mb: Free heap: 200892[0m
+
+[0;32mI (2962) mb: hw: 2252[0m
+
+[0;32mI (2972) mb: Largest free block: 110592[0m
+
+[0;32mI (2972) mb: Free heap: 200892[0m
+
+[0;32mI (2972) mb: hw: 2252[0m
+
+[0;32mI (2972) mb: Largest free block: 110592[0m
+
+[0;32mI (2982) mb: Free heap: 200892[0m
+
+[0;32mI (2982) mb: hw: 2252[0m
+
+[0;32mI (2982) mb: Largest free block: 110592[0m
+
+[0;32mI (2992) mb: Free heap: 200892[0m
+
+[0;32mI (2992) mb: hw: 2252[0m
+
+[0;32mI (2992) mb: Largest free block: 110592[0m
+
+[0;32mI (3002) mb: Free heap: 200912[0m
+
+[0;32mI (3002) mb: hw: 2252[0m
+
+[0;32mI (3002) mb: Largest free block: 110592[0m
+
+[0;32mI (3002) mb: Free heap: 200892[0m
+
+[0;32mI (3012) mb: hw: 2252[0m
+
+[0;32mI (3012) mb: Largest free block: 110592[0m
+
+[0;32mI (3012) mb: Free heap: 200892[0m
+
+[0;32mI (3022) mb: hw: 2252[0m
+
+[0;32mI (3022) mb: Largest free block: 110592[0m
+
+[0;32mI (3022) mb: Free heap: 200892[0m
+
+[0;32mI (3032) mb: hw: 2252[0m
+
+[0;32mI (3032) mb: Largest free block: 110592[0m
+
+[0;32mI (3032) mb: Free heap: 200892[0m
+
+[0;32mI (3032) mb: hw: 2252[0m
+
+[0;32mI (3042) mb: Largest free block: 110592[0m
+
+[0;32mI (3042) mb: Free heap: 200892[0m
+
+[0;32mI (3042) mb: hw: 2252[0m
+
+[0;32mI (3052) mb: Largest free block: 110592[0m
+
+[0;32mI (3052) mb: Free heap: 200892[0m
+
+[0;32mI (3052) mb: hw: 2252[0m
+
+[0;32mI (3052) mb: Largest free block: 110592[0m
+
+[0;32mI (3062) mb: Free heap: 200892[0m
+
+[0;32mI (3062) mb: hw: 2252[0m
+
+[0;32mI (3062) mb: Largest free block: 110592[0m
+
+[0;32mI (3072) mb: Free heap: 200892[0m
+
+[0;32mI (3072) mb: hw: 2252[0m
+
+[0;32mI (3072) mb: Largest free block: 110592[0m
+
+[0;32mI (3082) mb: Free heap: 200912[0m
+
+[0;32mI (3082) mb: hw: 2252[0m
+
+[0;32mI (3082) mb: Largest free block: 110592[0m
+
+[0;32mI (3082) mb: Free heap: 200892[0m
+
+[0;32mI (3092) mb: hw: 2252[0m
+
+[0;32mI (3092) mb: Largest free block: 110592[0m
+
+[0;32mI (3092) mb: Free heap: 200892[0m
+
+[0;32mI (3102) mb: hw: 2252[0m
+
+[0;32mI (3102) mb: Largest free block: 110592[0m
+
+[0;32mI (3102) mb: Free heap: 200892[0m
+
+[0;32mI (3102) mb: hw: 2252[0m
+
+[0;32mI (3112) mb: Largest free block: 110592[0m
+
+[0;32mI (3112) mb: Free heap: 200892[0m
+
+[0;32mI (3112) mb: hw: 2252[0m
+
+[0;32mI (3122) mb: Largest free block: 110592[0m
+
+[0;32mI (3122) mb: Free heap: 200892[0m
+
+[0;32mI (3122) mb: hw: 2252[0m
+
+[0;32mI (3122) mb: Largest free block: 110592[0m
+
+[0;32mI (3132) mb: Free heap: 200892[0m
+
+[0;32mI (3132) mb: hw: 2252[0m
+
+[0;32mI (3132) mb: Largest free block: 110592[0m
+
+[0;32mI (3142) mb: Free heap: 200892[0m
+
+[0;32mI (3142) mb: hw: 2252[0m
+
+[0;32mI (3142) mb: Largest free block: 110592[0m
+
+[0;32mI (3152) mb: Free heap: 200892[0m
+
+[0;32mI (3152) mb: hw: 2252[0m
+
+[0;32mI (3152) mb: Largest free block: 110592[0m
+
+[0;32mI (3162) mb: Free heap: 200892[0m
+
+[0;32mI (3162) mb: hw: 2252[0m
+
+[0;32mI (3162) mb: Largest free block: 110592[0m
+
+[0;32mI (3162) mb: Free heap: 200892[0m
+
+[0;32mI (3172) mb: hw: 2252[0m
+
+[0;32mI (3172) mb: Largest free block: 110592[0m
+
+[0;32mI (3172) mb: Free heap: 200892[0m
+
+[0;32mI (3182) mb: hw: 2252[0m
+
+[0;32mI (3182) mb: Largest free block: 110592[0m
+
+[0;32mI (3182) mb: Free heap: 200892[0m
+
+[0;32mI (3182) mb: hw: 2252[0m
+
+[0;32mI (3192) mb: Largest free block: 110592[0m
+
+[0;32mI (3192) mb: Free heap: 200892[0m
+
+[0;32mI (3192) mb: hw: 2252[0m
+
+[0;32mI (3202) mb: Largest free block: 110592[0m
+
+[0;32mI (3202) mb: Free heap: 200892[0m
+
+[0;32mI (3202) mb: hw: 2252[0m
+
+[0;32mI (3202) mb: Largest free block: 110592[0m
+
+[0;32mI (3212) mb: Free heap: 200892[0m
+
+[0;32mI (3212) mb: hw: 2252[0m
+
+[0;32mI (3212) mb: Largest free block: 110592[0m
+
+[0;32mI (3222) mb: Free heap: 200892[0m
+
+[0;32mI (3222) mb: hw: 2252[0m
+
+[0;32mI (3222) mb: Largest free block: 110592[0m
+
+[0;32mI (3232) mb: Free heap: 200892[0m
+
+[0;32mI (3232) mb: hw: 2252[0m
+
+[0;32mI (3232) mb: Largest free block: 110592[0m
+
+[0;32mI (3232) mb: Free heap: 200892[0m
+
+[0;32mI (3242) mb: hw: 2252[0m
+
+[0;32mI (3242) mb: Largest free block: 110592[0m
+
+[0;32mI (3242) mb: Free heap: 200892[0m
+
+[0;32mI (3252) mb: hw: 2252[0m
+
+[0;32mI (3252) mb: Largest free block: 110592[0m
+
+[0;32mI (3252) mb: Free heap: 200892[0m
+
+[0;32mI (3262) mb: hw: 2252[0m
+
+[0;32mI (3262) mb: Largest free block: 110592[0m
+
+[0;32mI (3262) mb: Free heap: 200876[0m
+
+[0;32mI (3262) mb: hw: 2252[0m
+
+[0;32mI (3272) mb: Largest free block: 110592[0m
+
+[0;32mI (3272) mb: Free heap: 200892[0m
+
+[0;32mI (3272) mb: hw: 2252[0m
+
+[0;32mI (3282) mb: Largest free block: 110592[0m
+
+[0;32mI (3282) mb: Free heap: 200892[0m
+
+[0;32mI (3282) mb: hw: 2252[0m
+
+[0;32mI (3282) mb: Largest free block: 110592[0m
+
+[0;32mI (3292) mb: Free heap: 200892[0m
+
+[0;32mI (3292) mb: hw: 2252[0m
+
+[0;32mI (3292) mb: Largest free block: 110592[0m
+
+[0;32mI (3302) mb: Free heap: 200892[0m
+
+[0;32mI (3302) mb: hw: 2252[0m
+
+[0;32mI (3302) mb: Largest free block: 110592[0m
+
+[0;32mI (3312) mb: Free heap: 200892[0m
+
+[0;32mI (3312) mb: hw: 2252[0m
+
+[0;32mI (3312) mb: Largest free block: 110592[0m
+
+[0;32mI (3312) mb: Free heap: 200892[0m
+
+[0;32mI (3322) mb: hw: 2252[0m
+
+[0;32mI (3322) mb: Largest free block: 110592[0m
+
+[0;32mI (3322) mb: Free heap: 200892[0m
+
+[0;32mI (3332) mb: hw: 2252[0m
+
+[0;32mI (3332) mb: Largest free block: 110592[0m
+
+[0;32mI (3332) mb: Free heap: 200892[0m
+
+[0;32mI (3342) mb: hw: 2252[0m
+
+[0;32mI (3342) mb: Largest free block: 110592[0m
+
+[0;32mI (3342) mb: Free heap: 200892[0m
+
+[0;32mI (3342) mb: hw: 2252[0m
+
+[0;32mI (3352) mb: Largest free block: 110592[0m
+
+[0;32mI (3352) mb: Free heap: 200892[0m
+
+[0;32mI (3352) mb: hw: 2252[0m
+
+[0;32mI (3352) mb: Largest free block: 110592[0m
+
+[0;32mI (3362) mb: Free heap: 200892[0m
+
+[0;32mI (3362) mb: hw: 2252[0m
+
+[0;32mI (3362) mb: Largest free block: 110592[0m
+
+[0;32mI (3372) mb: Free heap: 200892[0m
+
+[0;32mI (3372) mb: hw: 2252[0m
+
+[0;32mI (3372) mb: Largest free block: 110592[0m
+
+[0;32mI (3382) mb: Free heap: 200892[0m
+
+[0;32mI (3382) mb: hw: 2252[0m
+
+[0;32mI (3382) mb: Largest free block: 110592[0m
+
+[0;32mI (3392) mb: Free heap: 200892[0m
+
+[0;32mI (3392) mb: hw: 2252[0m
+
+[0;32mI (3392) mb: Largest free block: 110592[0m
+
+[0;32mI (3392) mb: Free heap: 200892[0m
+
+[0;32mI (3402) mb: hw: 2252[0m
+
+[0;32mI (3402) mb: Largest free block: 110592[0m
+
+[0;32mI (3402) mb: Free heap: 200892[0m
+
+[0;32mI (3412) mb: hw: 2252[0m
+
+[0;32mI (3412) mb: Largest free block: 110592[0m
+
+[0;32mI (3412) mb: Free heap: 200892[0m
+
+[0;32mI (3412) mb: hw: 2252[0m
+
+[0;32mI (3422) mb: Largest free block: 110592[0m
+
+[0;32mI (3422) mb: Free heap: 200892[0m
+
+[0;32mI (3422) mb: hw: 2252[0m
+
+[0;32mI (3432) mb: Largest free block: 110592[0m
+
+[0;32mI (3432) mb: Free heap: 200892[0m
+
+[0;32mI (3432) mb: hw: 2252[0m
+
+[0;32mI (3432) mb: Largest free block: 110592[0m
+
+[0;32mI (3442) mb: Free heap: 200892[0m
+
+[0;32mI (3442) mb: hw: 2252[0m
+
+[0;32mI (3442) mb: Largest free block: 110592[0m
+
+[0;32mI (3452) mb: Free heap: 200892[0m
+
+[0;32mI (3452) mb: hw: 2252[0m
+
+[0;32mI (3452) mb: Largest free block: 110592[0m
+
+[0;32mI (3462) mb: Free heap: 200892[0m
+
+[0;32mI (3462) mb: hw: 2252[0m
+
+[0;32mI (3462) mb: Largest free block: 110592[0m
+
+[0;32mI (3462) mb: Free heap: 200892[0m
+
+[0;32mI (3472) mb: hw: 2252[0m
+
+[0;32mI (3472) mb: Largest free block: 110592[0m
+
+[0;32mI (3472) mb: Free heap: 200892[0m
+
+[0;32mI (3482) mb: hw: 2252[0m
+
+[0;32mI (3482) mb: Largest free block: 110592[0m
+
+[0;32mI (3482) mb: Free heap: 200892[0m
+
+[0;32mI (3492) mb: hw: 2252[0m
+
+[0;32mI (3492) mb: Largest free block: 110592[0m
+
+[0;32mI (3492) mb: Free heap: 200892[0m
+
+[0;32mI (3492) mb: hw: 2252[0m
+
+[0;32mI (3502) mb: Largest free block: 110592[0m
+
+[0;32mI (3502) mb: Free heap: 200892[0m
+
+[0;32mI (3502) mb: hw: 2252[0m
+
+[0;32mI (3512) mb: Largest free block: 110592[0m
+
+[0;32mI (3512) mb: Free heap: 200892[0m
+
+[0;32mI (3512) mb: hw: 2252[0m
+
+[0;32mI (3512) mb: Largest free block: 110592[0m
+
+[0;32mI (3522) mb: Free heap: 200892[0m
+
+[0;32mI (3522) mb: hw: 2252[0m
+
+[0;32mI (3522) mb: Largest free block: 110592[0m
+
+[0;32mI (3532) mb: Free heap: 200892[0m
+
+[0;32mI (3532) mb: hw: 2252[0m
+
+[0;32mI (3532) mb: Largest free block: 110592[0m
+
+[0;32mI (3542) mb: Free heap: 200892[0m
+
+[0;32mI (3542) mb: hw: 2252[0m
+
+[0;32mI (3542) mb: Largest free block: 110592[0m
+
+[0;32mI (3542) mb: Free heap: 200892[0m
+
+[0;32mI (3552) mb: hw: 2252[0m
+
+[0;32mI (3552) mb: Largest free block: 110592[0m
+
+[0;32mI (3552) mb: Free heap: 200892[0m
+
+[0;32mI (3562) mb: hw: 2252[0m
+
+[0;32mI (3562) mb: Largest free block: 110592[0m
+
+[0;32mI (3562) mb: Free heap: 200892[0m
+
+[0;32mI (3572) mb: hw: 2252[0m
+
+[0;32mI (3572) mb: Largest free block: 110592[0m
+
+[0;32mI (3572) mb: Free heap: 200892[0m
+
+[0;32mI (3572) mb: hw: 2252[0m
+
+[0;32mI (3582) mb: Largest free block: 110592[0m
+
+[0;32mI (3582) mb: Free heap: 200892[0m
+
+[0;32mI (3582) mb: hw: 2252[0m
+
+[0;32mI (3592) mb: Largest free block: 110592[0m
+
+[0;32mI (3592) mb: Free heap: 200892[0m
+
+[0;32mI (3592) mb: hw: 2252[0m
+
+[0;32mI (3592) mb: Largest free block: 110592[0m
+
+[0;32mI (3602) mb: Free heap: 200892[0m
+
+[0;32mI (3602) mb: hw: 2252[0m
+
+[0;32mI (3602) mb: Largest free block: 110592[0m
+
+[0;32mI (3612) mb: Free heap: 200892[0m
+
+[0;32mI (3612) mb: hw: 2252[0m
+
+[0;32mI (3612) mb: Largest free block: 110592[0m
+
+[0;32mI (3622) mb: Free heap: 200912[0m
+
+[0;32mI (3622) mb: hw: 2252[0m
+
+[0;32mI (3622) mb: Largest free block: 110592[0m
+
+[0;32mI (3622) mb: Free heap: 200892[0m
+
+[0;32mI (3632) mb: hw: 2252[0m
+
+[0;32mI (3632) mb: Largest free block: 110592[0m
+
+[0;32mI (3632) mb: Free heap: 200892[0m
+
+[0;32mI (3642) mb: hw: 2252[0m
+
+I (364292
+
+[0;32mI (3652) mb: hw: 2252[0m
+
+[0;32mI (3652) mb: Largest free block: 110592[0m
+
+[0;32mI (3652) mb: Free heap: 200892[0m
+
+[0;32mI (3652) mb: hw: 2252[0m
+
+[0;32mI (3662) mb: Largest free block: 110592[0m
+
+[0;32mI (3662) mb: Free heap: 200892[0m
+
+[0;32mI (3662) mb: hw: 2252[0m
+
+[0;32mI (3662) mb: Largest free block: 110592[0m
+
+[0;32mI (3672) mb: Free heap: 200892[0m
+
+[0;32mI (3672) mb: hw: 2252[0m
+
+[0;32mI (3672) mb: Largest free block: 110592[0m
+
+[0;32mI (3682) mb: Free heap: 200892[0m
+
+[0;32mI (3682) mb: hw: 2252[0m
+
+[0;32mI (3682) mb: Largest free block: 110592[0m
+
+[0;32mI (3692) mb: Free heap: 200892[0m
+
+[0;32mI (3692) mb: hw: 2252[0m
+
+[0;32mI (3692) mb: Largest free block: 110592[0m
+
+[0;32mI (3702) mb: Free heap: 201040[0m
+
+[0;32mI (3702) mb: hw: 2252[0m
+
+[0;32mI (3702) mb: Largest free block: 110592[0m
+
+[0;32mI (3702) mb: Free heap: 200892[0m
+
+[0;32mI (3712) mb: hw: 2252[0m
+
+[0;32mI (3712) mb: Largest free block: 110592[0m
+
+[0;32mI (3712) mb: Free heap: 200892[0m
+
+[0;32mI (3722) mb: hw: 2252[0m
+
+[0;32mI (3722) mb: Largest free block: 110592[0m
+
+[0;32mI (3722) mb: Free heap: 200892[0m
+
+[0;32mI (3722) mb: hw: 2252[0m
+
+[0;32mI (3732) mb: Largest free block: 110592[0m
+
+[0;32mI (3732) mb: Free heap: 200892[0m
+
+[0;32mI (3732) mb: hw: 2252[0m
+
+[0;32mI (3742) mb: Largest free block: 110592[0m
+
+[0;32mI (3742) mb: Free heap: 200892[0m
+
+[0;32mI (3742) mb: hw: 2252[0m
+
+[0;32mI (3742) mb: Largest free block: 110592[0m
+
+[0;32mI (3752) mb: Free heap: 200892[0m
+
+[0;32mI (3752) mb: hw: 2252[0m
+
+[0;32mI (3752) mb: Largest free block: 110592[0m
+
+[0;32mI (3762) mb: Free heap: 200892[0m
+
+[0;32mI (3762) mb: hw: 2252[0m
+
+[0;32mI (3762) mb: Largest free block: 110592[0m
+
+[0;32mI (3772) mb: Free heap: 200892[0m
+
+[0;32mI (3772) mb: hw: 2252[0m
+
+[0;32mI (3772) mb: Largest free block: 110592[0m
+
+[0;32mI (3772) mb: Free heap: 200892[0m
+
+[0;32mI (3782) mb: hw: 2252[0m
+
+[0;32mI (3782) mb: Largest free block: 110592[0m
+
+[0;32mI (3782) mb: Free heap: 200892[0m
+
+[0;32mI (3792) mb: hw: 2252[0m
+
+[0;32mI (3792) mb: Largest free block: 110592[0m
+
+[0;32mI (3792) mb: Free heap: 200892[0m
+
+[0;32mI (3802) mb: hw: 2252[0m
+
+[0;32mI (3802) mb: Largest free block: 110592[0m
+
+[0;32mI (3802) mb: Free heap: 200892[0m
+
+[0;32mI (3802) mb: hw: 2252[0m
+
+[0;32mI (3812) mb: Largest free block: 110592[0m
+
+[0;32mI (3812) mb: Free heap: 200892[0m
+
+[0;32mI (3812) mb: hw: 2252[0m
+
+[0;32mI (3822) mb: Largest free block: 110592[0m
+
+[0;32mI (3822) mb: Free heap: 200892[0m
+
+[0;32mI (3822) mb: hw: 2252[0m
+
+[0;32mI (3822) mb: Largest free block: 110592[0m
+
+[0;32mI (3832) mb: Free heap: 200892[0m
+
+[0;32mI (3832) mb: hw: 2252[0m
+
+[0;32mI (3832) mb: Largest free block: 110592[0m
+
+[0;32mI (3842) mb: Free heap: 200892[0m
+
+[0;32mI (3842) mb: hw: 2252[0m
+
+[0;32mI (3842) mb: Largest free block: 110592[0m
+
+[0;32mI (3852) mb: Free heap: 200892[0m
+
+[0;32mI (3852) mb: hw: 2252[0m
+
+[0;32mI (3852) mb: Largest free block: 110592[0m
+
+[0;32mI (3852) mb: Free heap: 200892[0m
+
+[0;32mI (3862) mb: hw: 2252[0m
+
+[0;32mI (3862) mb: Largest free block: 110592[0m
+
+[0;32mI (3862) mb: Free heap: 200892[0m
+
+[0;32mI (3872) mb: hw: 2252[0m
+
+[0;32mI (3872) mb: Largest free block: 110592[0m
+
+[0;32mI (3872) mb: Free heap: 200892[0m
+
+[0;32mI (3882) mb: hw: 2252[0m
+
+[0;32mI (3882) mb: Largest free block: 110592[0m
+
+[0;32mI (3882) mb: Free heap: 200892[0m
+
+[0;32mI (3882) mb: hw: 2252[0m
+
+[0;32mI (3892) mb: Largest free block: 110592[0m
+
+[0;32mI (3892) mb: Free heap: 200892[0m
+
+[0;32mI (3892) mb: hw: 2252[0m
+
+[0;32mI (3902) mb: Largest free block: 110592[0m
+
+[0;32mI (3902) mb: Free heap: 200892[0m
+
+[0;32mI (3902) mb: hw: 2252[0m
+
+[0;32mI (3902) mb: Largest free block: 110592[0m
+
+[0;32mI (3912) mb: Free heap: 200892[0m
+
+[0;32mI (3912) mb: hw: 2252[0m
+
+[0;32mI (3912) mb: Largest free block: 110592[0m
+
+[0;32mI (3922) mb: Free heap: 200892[0m
+
+[0;32mI (3922) mb: hw: 2252[0m
+
+[0;32mI (3922) mb: Largest free block: 110592[0m
+
+[0;32mI (3932) mb: Free heap: 200892[0m
+
+[0;32mI (3932) mb: hw: 2252[0m
+
+[0;32mI (3932) mb: Largest free block: 110592[0m
+
+[0;32mI (3932) mb: Free heap: 200892[0m
+
+[0;32mI (3942) mb: hw: 2252[0m
+
+[0;32mI (3942) mb: Largest free block: 110592[0m
+
+[0;32mI (3942) mb: Free heap: 200892[0m
+
+[0;32mI (3952) mb: hw: 2252[0m
+
+[0;32mI (3952) mb: Largest free block: 110592[0m
+
+[0;32mI (3952) mb: Free heap: 200892[0m
+
+[0;32mI (3952) mb: hw: 2252[0m
+
+[0;32mI (3962) mb: Largest free block: 110592[0m
+
+[0;32mI (3962) mb: Free heap: 200892[0m
+
+[0;32mI (3962) mb: hw: 2252[0m
+
+[0;32mI (3972) mb: Largest free block: 110592[0m
+
+[0;32mI (3972) mb: Free heap: 200892[0m
+
+[0;32mI (3972) mb: hw: 2252[0m
+
+[0;32mI (3972) mb: Largest free block: 110592[0m
+
+[0;32mI (3982) mb: Free heap: 200892[0m
+
+[0;32mI (3982) mb: hw: 2252[0m
+
+[0;32mI (3982) mb: Largest free block: 110592[0m
+
+[0;32mI (3992) mb: Free heap: 200892[0m
+
+[0;32mI (3992) mb: hw: 2252[0m
+
+[0;32mI (3992) mb: Largest free block: 110592[0m
+
+[0;32mI (4002) mb: Free heap: 200892[0m
+
+[0;32mI (4002) mb: hw: 2252[0m
+
+[0;32mI (4002) mb: Largest free block: 110592[0m
+
+[0;32mI (4012) mb: Free heap: 200892[0m
+
+[0;32mI (4012) mb: hw: 2252[0m
+
+[0;32mI (4012) mb: Largest free block: 110592[0m
+
+[0;32mI (4012) mb: Free heap: 200892[0m
+
+[0;32mI (4022) mb: hw: 2252[0m
+
+[0;32mI (4022) mb: Largest free block: 110592[0m
+
+[0;32mI (4022) mb: Free heap: 200892[0m
+
+[0;32mI (4032) mb: hw: 2252[0m
+
+[0;32mI (4032) mb: Largest free block: 110592[0m
+
+[0;32mI (4032) mb: Free heap: 200892[0m
+
+[0;32mI (4032) mb: hw: 2252[0m
+
+[0;32mI (4042) mb: Largest free block: 110592[0m
+
+[0;32mI (4042) mb: Free heap: 200892[0m
+
+[0;32mI (4042) mb: hw: 2252[0m
+
+[0;32mI (4052) mb: Largest free block: 110592[0m
+
+[0;32mI (4052) mb: Free heap: 200892[0m
+
+[0;32mI (4052) mb: hw: 2252[0m
+
+[0;32mI (4052) mb: Largest free block: 110592[0m
+
+[0;32mI (4062) mb: Free heap: 200892[0m
+
+[0;32mI (4062) mb: hw: 2252[0m
+
+[0;32mI (4062) mb: Largest free block: 110592[0m
+
+[0;32mI (4072) mb: Free heap: 200892[0m
+
+[0;32mI (4072) mb: hw: 2252[0m
+
+[0;32mI (4072) mb: Largest free block: 110592[0m
+
+[0;32mI (4082) mb: Free heap: 200892[0m
+
+[0;32mI (4082) mb: hw: 2252[0m
+
+[0;32mI (4082) mb: Largest free block: 110592[0m
+
+[0;32mI (4082) mb: Free heap: 200892[0m
+
+[0;32mI (4092) mb: hw: 2252[0m
+
+[0;32mI (4092) mb: Largest free block: 110592[0m
+
+[0;32mI (4092) mb: Free heap: 200892[0m
+
+[0;32mI (4102) mb: hw: 2252[0m
+
+[0;32mI (4102) mb: Largest free block: 110592[0m
+
+[0;32mI (4102) mb: Free heap: 200892[0m
+
+[0;32mI (4112) mb: hw: 2252[0m
+
+[0;32mI (4112) mb: Largest free block: 110592[0m
+
+[0;32mI (4112) mb: Free heap: 200892[0m
+
+[0;32mI (4112) mb: hw: 2252[0m
+
+[0;32mI (4122) mb: Largest free block: 110592[0m
+
+[0;32mI (4122) mb: Free heap: 200892[0m
+
+[0;32mI (4122) mb: hw: 2252[0m
+
+[0;32mI (4132) mb: Largest free block: 110592[0m
+
+[0;32mI (4132) mb: Free heap: 200892[0m
+
+[0;32mI (4132) mb: hw: 2252[0m
+
+[0;32mI (4132) mb: Largest free block: 110592[0m
+
+[0;32mI (4142) mb: Free heap: 200892[0m
+
+[0;32mI (4142) mb: hw: 2252[0m
+
+[0;32mI (4142) mb: Largest free block: 110592[0m
+
+[0;32mI (4152) mb: Free heap: 200892[0m
+
+[0;32mI (4152) mb: hw: 2252[0m
+
+[0;32mI (4152) mb: Largest free block: 110592[0m
+
+[0;32mI (4162) mb: Free heap: 200912[0m
+
+[0;32mI (4162) mb: hw: 2252[0m
+
+[0;32mI (4162) mb: Largest free block: 110592[0m
+
+[0;32mI (4162) mb: Free heap: 200892[0m
+
+[0;32mI (4172) mb: hw: 2252[0m
+
+[0;32mI (4172) mb: Largest free block: 110592[0m
+
+[0;32mI (4172) mb: Free heap: 200892[0m
+
+[0;32mI (4182) mb: hw: 2252[0m
+
+[0;32mI (4182) mb: Largest free block: 110592[0m
+
+[0;32mI (4182) mb: Free heap: 200892[0m
+
+[0;32mI (4192) mb: hw: 2252[0m
+
+[0;32mI (4192) mb: Largest free block: 110592[0m
+
+[0;32mI (4192) mb: Free heap: 200892[0m
+
+[0;32mI (4192) mb: hw: 2252[0m
+
+[0;32mI (4202) mb: Largest free block: 110592[0m
+
+[0;32mI (4202) mb: Free heap: 200892[0m
+
+[0;32mI (4202) mb: hw: 2252[0m
+
+[0;32mI (4202) mb: Largest free block: 110592[0m
+
+[0;32mI (4212) mb: Free heap: 200892[0m
+
+[0;32mI (4212) mb: hw: 2252[0m
+
+[0;32mI (4212) mb: Largest free block: 110592[0m
+
+[0;32mI (4222) mb: Free heap: 200892[0m
+
+[0;32mI (4222) mb: hw: 2252[0m
+
+[0;32mI (4222) mb: Largest free block: 110592[0m
+
+[0;32mI (4232) mb: Free heap: 200892[0m
+
+[0;32mI (4232) mb: hw: 2252[0m
+
+[0;32mI (4232) mb: Largest free block: 110592[0m
+
+[0;32mI (4242) mb: Free heap: 200912[0m
+
+[0;32mI (4242) mb: hw: 2252[0m
+
+[0;32mI (4242) mb: Largest free block: 110592[0m
+
+[0;32mI (4242) mb: Free heap: 200892[0m
+
+[0;32mI (4252) mb: hw: 2252[0m
+
+[0;32mI (4252) mb: Largest free block: 110592[0m
+
+[0;32mI (4252) mb: Free heap: 200892[0m
+
+[0;32mI (4262) mb: hw: 2252[0m
+
+[0;32mI (4262) mb: Largest free block: 110592[0m
+
+[0;32mI (4262) mb: Free heap: 200892[0m
+
+[0;32mI (4262) mb: hw: 2252[0m
+
+[0;32mI (4272) mb: Largest free block: 110592[0m
+
+[0;32mI (4272) mb: Free heap: 200892[0m
+
+[0;32mI (4272) mb: hw: 2252[0m
+
+[0;32mI (4282) mb: Largest free block: 110592[0m
+
+[0;32mI (4282) mb: Free heap: 200892[0m
+
+[0;32mI (4282) mb: hw: 2252[0m
+
+[0;32mI (4282) mb: Largest free block: 110592[0m
+
+[0;32mI (4292) mb: Free heap: 200892[0m
+
+[0;32mI (4292) mb: hw: 2252[0m
+
+[0;32mI (4292) mb: Largest free block: 110592[0m
+
+[0;32mI (4302) mb: Free heap: 200892[0m
+
+[0;32mI (4302) mb: hw: 2252[0m
+
+[0;32mI (4302) mb: Largest free block: 110592[0m
+
+[0;32mI (4312) mb: Free heap: 200892[0m
+
+[0;32mI (4312) mb: hw: 2252[0m
+
+[0;32mI (4312) mb: Largest free block: 110592[0m
+
+[0;32mI (4312) mb: Free heap: 200892[0m
+
+[0;32mI (4322) mb: hw: 2252[0m
+
+[0;32mI (4322) mb: Largest free block: 110592[0m
+
+[0;32mI (4322) mb: Free heap: 200892[0m
+
+[0;32mI (4332) mb: hw: 2252[0m
+
+[0;32mI (4332) mb: Largest free block: 110592[0m
+
+[0;32mI (4332) mb: Free heap: 200892[0m
+
+[0;32mI (4342) mb: hw: 2252[0m
+
+[0;32mI (4342) mb: Largest free block: 110592[0m
+
+[0;32mI (4342) mb: Free heap: 200892[0m
+
+[0;32mI (4342) mb: hw: 2252[0m
+
+[0;32mI (4352) mb: Largest free block: 110592[0m
+
+[0;32mI (4352) mb: Free heap: 200892[0m
+
+[0;32mI (4352) mb: hw: 2252[0m
+
+[0;32mI (4362) mb: Largest free block: 110592[0m
+
+[0;32mI (4362) mb: Free heap: 200892[0m
+
+[0;32mI (4362) mb: hw: 2252[0m
+
+[0;32mI (4362) mb: Largest free block: 110592[0m
+
+[0;32mI (4372) mb: Free heap: 200892[0m
+
+[0;32mI (4372) mb: hw: 2252[0m
+
+[0;32mI (4372) mb: Largest free block: 110592[0m
+
+[0;32mI (4382) mb: Free heap: 200892[0m
+
+[0;32mI (4382) mb: hw: 2252[0m
+
+[0;32mI (4382) mb: Largest free block: 110592[0m
+
+[0;32mI (4392) mb: Free heap: 200892[0m
+
+[0;32mI (4392) mb: hw: 2252[0m
+
+[0;32mI (4392) mb: Largest free block: 110592[0m
+
+[0;32mI (4392) mb: Free heap: 200892[0m
+
+[0;32mI (4402) mb: hw: 2252[0m
+
+[0;32mI (4402) mb: Largest free block: 110592[0m
+
+[0;32mI (4402) mb: Free heap: 200892[0m
+
+[0;32mI (4412) mb: hw: 2252[0m
+
+[0;32mI (4412) mb: Largest free block: 110592[0m
+
+[0;32mI (4412) mb: Free heap: 200892[0m
+
+[0;32mI (4422) mb: hw: 2252[0m
+
+[0;32mI (4422) mb: Largest free block: 110592[0m
+
+[0;32mI (4422) mb: Free heap: 200892[0m
+
+[0;32mI (4422) mb: hw: 2252[0m
+
+[0;32mI (4432) mb: Largest free block: 110592[0m
+
+[0;32mI (4432) mb: Free heap: 200892[0m
+
+[0;32mI (4432) mb: hw: 2252[0m
+
+[0;32mI (4442) mb: Largest free block: 110592[0m
+
+[0;32mI (4442) mb: Free heap: 200892[0m
+
+[0;32mI (4442) mb: hw: 2252[0m
+
+[0;32mI (4442) mb: Largest free block: 110592[0m
+
+[0;32mI (4452) mb: Free heap: 200892[0m
+
+[0;32mI (4452) mb: hw: 2252[0m
+
+[0;32mI (4452) mb: Largest free block: 110592[0m
+
+[0;32mI (4462) mb: Free heap: 200892[0m
+
+[0;32mI (4462) mb: hw: 2252[0m
+
+[0;32mI (4462) mb: Largest free block: 110592[0m
+
+[0;32mI (4472) mb: Free heap: 200892[0m
+
+[0;32mI (4472) mb: hw: 2252[0m
+
+[0;32mI (4472) mb: Largest free block: 110592[0m
+
+[0;32mI (4472) mb: Free heap: 200892[0m
+
+[0;32mI (4482) mb: hw: 2252[0m
+
+[0;32mI (4482) mb: Largest free block: 110592[0m
+
+[0;32mI (4482) mb: Free heap: 200892[0m
+
+[0;32mI (4492) mb: hw: 2252[0m
+
+[0;32mI (4492) mb: Largest free block: 110592[0m
+
+[0;32mI (4492) mb: Free heap: 200892[0m
+
+[0;32mI (4492) mb: hw: 2252[0m
+
+[0;32mI (4502) mb: Largest free block: 110592[0m
+
+[0;32mI (4502) mb: Free heap: 200892[0m
+
+[0;32mI (4502) mb: hw: 2252[0m
+
+[0;32mI (4512) mb: Largest free block: 110592[0m
+
+[0;32mI (4512) mb: Free heap: 200892[0m
+
+[0;32mI (4512) mb: hw: 2252[0m
+
+[0;32mI (4512) mb: Largest free block: 110592[0m
+
+[0;32mI (4522) mb: Free heap: 200892[0m
+
+[0;32mI (4522) mb: hw: 2252[0m
+
+[0;32mI (4522) mb: Largest free block: 110592[0m
+
+[0;32mI (4532) mb: Free heap: 200892[0m
+
+[0;32mI (4532) mb: hw: 2252[0m
+
+[0;32mI (4532) mb: Largest free block: 110592[0m
+
+[0;32mI (4542) mb: Free heap: 200892[0m
+
+[0;32mI (4542) mb: hw: 2252[0m
+
+[0;32mI (4542) mb: Largest free block: 110592[0m
+
+[0;32mI (4552) mb: Free heap: 200892[0m
+
+[0;32mI (4552) mb: hw: 2252[0m
+
+[0;32mI (4552) mb: Largest free block: 110592[0m
+
+[0;32mI (4552) mb: Free heap: 200892[0m
+
+[0;32mI (4562) mb: hw: 2252[0m
+
+[0;32mI (4562) mb: Largest free block: 110592[0m
+
+[0;32mI (4562) mb: Free heap: 200892[0m
+
+[0;32mI (4572) mb: hw: 2252[0m
+
+[0;32mI (4572) mb: Largest free block: 110592[0m
+
+[0;32mI (4572) mb: Free heap: 200892[0m
+
+[0;32mI (4572) mb: hw: 2252[0m
+
+[0;32mI (4582) mb: Largest free block: 110592[0m
+
+[0;32mI (4582) mb: Free heap: 200892[0m
+
+[0;32mI (4582) mb: hw: 2252[0m
+
+[0;32mI (4592) mb: Largest free block: 110592[0m
+
+[0;32mI (4592) mb: Free heap: 200892[0m
+
+[0;32mI (4592) mb: hw: 2252[0m
+
+[0;32mI (4592) mb: Largest free block: 110592[0m
+
+[0;32mI (4602) mb: Free heap: 200892[0m
+
+[0;32mI (4602) mb: hw: 2252[0m
+
+[0;32mI (4602) mb: Largest free block: 110592[0m
+
+[0;32mI (4612) mb: Free heap: 200892[0m
+
+[0;32mI (4612) mb: hw: 2252[0m
+
+[0;32mI (4612) mb: Largesee block: 110592[0m
+
+[0;32mI (4632) mb: Free heap: 200892[0m
+
+[0;32mI (4642) mb: hw: 2076[0m
+
+[0;32mI (4642) mb: Largest free block: 110592[0m
+
+[0;32mI (4642) mb: Free heap: 200892[0m
+
+[0;32mI (4652) mb: hw: 2076[0m
+
+[0;32mI (4652) mb: Largest free block: 110592[0m
+
+[0;32mI (4652) mb: Free heap: 200892[0m
+
+[0;32mI (4652) mb: hw: 2076[0m
+
+[0;32mI (4662) mb: Largest free block: 1105) mb: hw: 2076[0m
+
+[0;32mI (4672) mb: Largest free block: 110592[0m
+
+[0;32mI (4672) mb: Free heap: 200892[0m
+
+[0;32mI (4672) mb: hw: 2076[0m
+
+[0;32mI (4672) mb: Largest free block: 110592[0m
+
+[0;32mI (4682) mb: Free heap: 200892[0m
+
+[0;32mI (4682) mb: hw: 2076[0m
+
+[0;32mI (4682) mb: Largest free block: 110592[0m
+
+[0;32mI (4692) mb: Free heap: 200892[0m
+
+[0;32mI (4692) mb: hw: 2076[0m
+
+[0;32mI (4692) mb: Largest free block: 110592[0m
+
+[0;32mI (4702) mb: Free heap: 200912[0m
+
+[0;32mI (4702) mb: hw: 2076[0m
+
+[0;32mI (4702) mb: Largest free block: 110592[0m
+
+[0;32mI (4702) mb: Free heap: 200892[0m
+
+[0;32mI (4712) mb: hw: 2076[0m
+
+[0;32mI (4712) mb: Largest free block: 110592[0m
+
+[0;32mI (4712) mb: Free heap: 200892[0m
+
+[0;32mI (4722) mb: hw: 2076[0m
+
+[0;32mI (4722) mb: Largest free block: 110592[0m
+
+[0;32mI (4722) mb: Free heap: 200892[0m
+
+[0;32mI (4732) mb: hw: 2076[0m
+
+[0;32mI (4732) mb: Largest free block: 110592[0m
+
+[0;32mI (4732) mb: Free heap: 200892[0m
+
+[0;32mI (4732) mb: hw: 2076[0m
+
+[0;32mI (4742) mb: Largest free block: 110592[0m
+
+[0;32mI (4742) mb: Free heap: 200892[0m
+
+[0;32mI (4742) mb: hw: 2076[0m
+
+[0;32mI (4752) mb: Largest free block: 110592[0m
+
+[0;32mI (4752) mb: Free heap: 200892[0m
+
+[0;32mI (4752) mb: hw: 2076[0m
+
+[0;32mI (4752) mb: Largest free block: 110592[0m
+
+[0;32mI (4762) mb: Free heap: 200892[0m
+
+[0;32mI (4762) mb: hw: 2076[0m
+
+[0;32mI (4762) mb: Largest free block: 110592[0m
+
+[0;32mI (4772) mb: Free heap: 200892[0m
+
+[0;32mI (4772) mb: hw: 2076[0m
+
+[0;32mI (4772) mb: Largest free block: 110592[0m
+
+[0;32mI (4782) mb: Free heap: 200912[0m
+
+[0;32mI (4782) mb: hw: 2076[0m
+
+[0;32mI (4782) mb: Largest free block: 110592[0m
+
+[0;32mI (4782) mb: Free heap: 200892[0m
+
+[0;32mI (4792) mb: hw: 2076[0m
+
+[0;32mI (4792) mb: Largest free block: 110592[0m
+
+[0;32mI (4792) mb: Free heap: 200892[0m
+
+[0;32mI (4802) mb: hw: 2076[0m
+
+[0;32mI (4802) mb: Largest free block: 110592[0m
+
+[0;32mI (4802) mb: Free heap: 200892[0m
+
+[0;32mI (4802) mb: hw: 2076[0m
+
+[0;32mI (4812) mb: Largest free block: 110592[0m
+
+[0;32mI (4812) mb: Free heap: 200892[0m
+
+[0;32mI (4812) mb: hw: 2076[0m
+
+[0;32mI (4822) mb: Largest free block: 110592[0m
+
+[0;32mI (4822) mb: Free heap: 200892[0m
+
+[0;32mI (4822) mb: hw: 2076[0m
+
+[0;32mI (4822) mb: Largest free block: 110592[0m
+
+[0;32mI (4832) mb: Free heap: 200892[0m
+
+[0;32mI (4832) mb: hw: 2076[0m
+
+[0;32mI (4832) mb: Largest free block: 110592[0m
+
+[0;32mI (4842) mb: Free heap: 200892[0m
+
+[0;32mI (4842) mb: hw: 2076[0m
+
+[0;32mI (4842) mb: Largest free block: 110592[0m
+
+[0;32mI (4852) mb: Free heap: 200892[0m
+
+[0;32mI (4852) mb: hw: 2076[0m
+
+[0;32mI (4852) mb: Largest free block: 110592[0m
+
+[0;32mI (4862) mb: Free heap: 200892[0m
+
+[0;32mI (4862) mb: hw: 2076[0m
+
+[0;32mI (4862) mb: Largest free block: 110592[0m
+
+[0;32mI (4862) mb: Free heap: 200892[0m
+
+[0;32mI (4872) mb: hw: 2076[0m
+
+[0;32mI (4872) mb: Largest free block: 110592[0m
+
+[0;32mI (4872) mb: Free heap: 200892[0m
+
+[0;32mI (4882) mb: hw: 2076[0m
+
+[0;32mI (4882) mb: Largest free block: 110592[0m
+
+[0;32mI (4882) mb: Free heap: 200892[0m
+
+[0;32mI (4882) mb: hw: 2076[0m
+
+[0;32mI (4892) mb: Largest free block: 110592[0m
+
+[0;32mI (4892) mb: Free heap: 200892[0m
+
+[0;32mI (4892) mb: hw: 2076[0m
+
+[0;32mI (4902) mb: Largest free block: 110592[0m
+
+[0;32mI (4902) mb: Free heap: 200892[0m
+
+[0;32mI (4902) mb: hw: 2076[0m
+
+[0;32mI (4902) mb: Largest free block: 110592[0m
+
+[0;32mI (4912) mb: Free heap: 200892[0m
+
+[0;32mI (4912) mb: hw: 2076[0m
+
+[0;32mI (4912) mb: Largest free block: 110592[0m
+
+[0;32mI (4922) mb: Free heap: 200892[0m
+
+[0;32mI (4922) mb: hw: 2076[0m
+
+[0;32mI (4922) mb: Largest free block: 110592[0m
+
+[0;32mI (4932) mb: Free heap: 200892[0m
+
+[0;32mI (4932) mb: hw: 2076[0m
+
+[0;32mI (4932) mb: Largest free block: 110592[0m
+
+[0;32mI (4932) mb: Free heap: 200892[0m
+
+[0;32mI (4942) mb: hw: 2076[0m
+
+[0;32mI (4942) mb: Largest free block: 110592[0m
+
+[0;32mI (4942) mb: Free heap: 200892[0m
+
+[0;32mI (4952) mb: hw: 2076[0m
+
+[0;32mI (4952) mb: Largest free block: 110592[0m
+
+[0;32mI (4952) mb: Free heap: 200892[0m
+
+[0;32mI (4962) mb: hw: 2076[0m
+
+[0;32mI (4962) mb: Largest free block: 110592[0m
+
+[0;32mI (4962) mb: Free heap: 200892[0m
+
+[0;32mI (4962) mb: hw: 2076[0m
+
+[0;32mI (4972) mb: Largest free block: 110592[0m
+
+[0;32mI (4972) mb: Free heap: 200892[0m
+
+[0;32mI (4972) mb: hw: 2076[0m
+
+[0;32mI (4982) mb: Largest free block: 110592[0m
+
+[0;32mI (4982) mb: Free heap: 200892[0m
+
+[0;32mI (4982) mb: hw: 2076[0m
+
+[0;32mI (4982) mb: Largest free block: 110592[0m
+
+[0;32mI (4992) mb: Free heap: 200892[0m
+
+[0;32mI (4992) mb: hw: 2076[0m
+
+[0;32mI (4992) mb: Largest free block: 110592[0m
+
+[0;32mI (5002) mb: Free heap: 200892[0m
+
+[0;32mI (5002) mb: hw: 2076[0m
+
+[0;32mI (5002) mb: Largest free block: 110592[0m
+
+[0;32mI (5012) mb: Free heap: 200892[0m
+
+[0;32mI (5012) mb: hw: 2076[0m
+
+[0;32mI (5012) mb: Largest free block: 110592[0m
+
+[0;32mI (5012) mb: Free heap: 200892[0m
+
+[0;32mI (5022) mb: hw: 2076[0m
+
+[0;32mI (5022) mb: Largest free block: 110592[0m
+
+[0;32mI (5022) mb: Free heap: 200892[0m
+
+[0;32mI (5032) mb: hw: 2076[0m
+
+[0;32mI (5032) mb: Largest free block: 110592[0m
+
+[0;32mI (5032) mb: Free heap: 200892[0m
+
+[0;32mI (5042) mb: hw: 2076[0m
+
+[0;32mI (5042) mb: Largest free block: 110592[0m
+
+[0;32mI (5042) mb: Free heap: 200892[0m
+
+[0;32mI (5042) mb: hw: 2076[0m
+
+[0;32mI (5052) mb: Largest free block: 110592[0m
+
+[0;32mI (5052) mb: Free heap: 200892[0m
+
+[0;32mI (5052) mb: hw: 2076[0m
+
+[0;32mI (5052) mb: Largest free block: 110592[0m
+
+[0;32mI (5062) mb: Free heap: 200892[0m
+
+[0;32mI (5062) mb: hw: 2076[0m
+
+[0;32mI (5062) mb: Largest free block: 110592[0m
+
+[0;32mI (5072) mb: Free heap: 200892[0m
+
+[0;32mI (5072) mb: hw: 2076[0m
+
+[0;32mI (5072) mb: Largest free block: 110592[0m
+
+[0;32mI (5082) mb: Free heap: 200892[0m
+
+[0;32mI (5082) mb: hw: 2076[0m
+
+[0;32mI (5082) mb: Largest free block: 110592[0m
+
+[0;32mI (5092) mb: Free heap: 200892[0m
+
+[0;32mI (5092) mb: hw: 2076[0m
+
+[0;32mI (5092) mb: Largest free block: 110592[0m
+
+[0;32mI (5092) mb: Free heap: 200892[0m
+
+[0;32mI (5102) mb: hw: 2076[0m
+
+[0;32mI (5102) mb: Largest free block: 110592[0m
+
+[0;32mI (5102) mb: Free heap: 200892[0m
+
+[0;32mI (5112) mb: hw: 2076[0m
+
+[0;32mI (5112) mb: Largest free block: 110592[0m
+
+[0;32mI (5112) mb: Free heap: 200892[0m
+
+[0;32mI (5112) mb: hw: 2076[0m
+
+[0;32mI (5122) mb: Largest free block: 110592[0m
+
+[0;32mI (5122) mb: Free heap: 200892[0m
+
+[0;32mI (5122) mb: hw: 2076[0m
+
+[0;32mI (5132) mb: Largest free block: 110592[0m
+
+[0;32mI (5132) mb: Free heap: 200892[0m
+
+[0;32mI (5132) mb: hw: 2076[0m
+
+[0;32mI (5132) mb: Largest free block: 110592[0m
+
+[0;32mI (5142) mb: Free heap: 200892[0m
+
+[0;32mI (5142) mb: hw: 2076[0m
+
+[0;32mI (5142) mb: Largest free block: 110592[0m
+
+[0;32mI (5152) mb: Free heap: 200892[0m
+
+[0;32mI (5152) mb: hw: 2076[0m
+
+[0;32mI (5152) mb: Largest free block: 110592[0m
+
+[0;32mI (5162) mb: Free heap: 200892[0m
+
+[0;32mI (5162) mb: hw: 2076[0m
+
+[0;32mI (5162) mb: Largest free block: 110592[0m
+
+[0;32mI (5162) mb: Free heap: 200892[0m
+
+[0;32mI (5172) mb: hw: 2076[0m
+
+[0;32mI (5172) mb: Largest free block: 110592[0m
+
+[0;32mI (5172) mb: Free heap: 200892[0m
+
+[0;32mI (5182) mb: hw: 2076[0m
+
+[0;32mI (5182) mb: Largest free block: 110592[0m
+
+[0;32mI (5182) mb: Free heap: 200892[0m
+
+[0;32mI (5192) mb: hw: 2076[0m
+
+[0;32mI (5192) mb: Largest free block: 110592[0m
+
+[0;32mI (5192) mb: Free heap: 200892[0m
+
+[0;32mI (5192) mb: hw: 2076[0m
+
+[0;32mI (5202) mb: Largest free block: 110592[0m
+
+[0;32mI (5202) mb: Free heap: 200892[0m
+
+[0;32mI (5202) mb: hw: 2076[0m
+
+[0;32mI (5212) mb: Largest free block: 110592[0m
+
+[0;32mI (5212) mb: Free heap: 200892[0m
+
+[0;32mI (5212) mb: hw: 2076[0m
+
+[0;32mI (5212) mb: Largest free block: 110592[0m
+
+[0;32mI (5222) mb: Free heap: 200892[0m
+
+[0;32mI (5222) mb: hw: 2076[0m
+
+[0;32mI (5222) mb: Largest free block: 110592[0m
+
+[0;32mI (5232) mb: Free heap: 200892[0m
+
+[0;32mI (5232) mb: hw: 2076[0m
+
+[0;32mI (5232) mb: Largest free block: 110592[0m
+
+[0;32mI (5242) mb: Free heap: 200912[0m
+
+[0;32mI (5242) mb: hw: 2076[0m
+
+[0;32mI (5242) mb: Largest free block: 110592[0m
+
+[0;32mI (5242) mb: Free heap: 200892[0m
+
+[0;32mI (5252) mb: hw: 2076[0m
+
+[0;32mI (5252) mb: Largest free block: 110592[0m
+
+[0;32mI (5252) mb: Free heap: 200892[0m
+
+[0;32mI (5262) mb: hw: 2076[0m
+
+[0;32mI (5262) mb: Largest free block: 110592[0m
+
+[0;32mI (5262) mb: Free heap: 200892[0m
+
+[0;32mI (5272) mb: hw: 2076[0m
+
+[0;32mI (5272) mb: Largest free block: 110592[0m
+
+[0;32mI (5272) mb: Free heap: 200892[0m
+
+[0;32mI (5272) mb: hw: 2076[0m
+
+[0;32mI (5282) mb: Largest free block: 110592[0m
+
+[0;32mI (5282) mb: Free heap: 200892[0m
+
+[0;32mI (5282) mb: hw: 2076[0m
+
+[0;32mI (5292) mb: Largest free block: 110592[0m
+
+[0;32mI (5292) mb: Free heap: 200892[0m
+
+[0;32mI (5292) mb: hw: 2076[0m
+
+[0;32mI (5292) mb: Largest free block: 110592[0m
+
+[0;32mI (5302) mb: Free heap: 200892[0m
+
+[0;32mI (5302) mb: hw: 2076[0m
+
+[0;32mI (5302) mb: Largest free block: 110592[0m
+
+[0;32mI (5312) mb: Free heap: 200892[0m
+
+[0;32mI (5312) mb: hw: 2076[0m
+
+[0;32mI (5312) mb: Largest free block: 110592[0m
+
+[0;32mI (5322) mb: Free heap: 200912[0m
+
+[0;32mI (5322) mb: hw: 2076[0m
+
+[0;32mI (5322) mb: Largest free block: 110592[0m
+
+[0;32mI (5322) mb: Free heap: 200892[0m
+
+[0;32mI (5332) mb: hw: 2076[0m
+
+[0;32mI (5332) mb: Largest free block: 110592[0m
+
+[0;32mI (5332) mb: Free heap: 200892[0m
+
+[0;32mI (5342) mb: hw: 2076[0m
+
+[0;32mI (5342) mb: Largest free block: 110592[0m
+
+[0;32mI (5342) mb: Free heap: 200892[0m
+
+[0;32mI (5342) mb: hw: 2076[0m
+
+[0;32mI (5352) mb: Largest free block: 110592[0m
+
+[0;32mI (5352) mb: Free heap: 200892[0m
+
+[0;32mI (5352) mb: hw: 2076[0m
+
+[0;32mI (5362) mb: Largest free block: 110592[0m
+
+[0;32mI (5362) mb: Free heap: 200892[0m
+
+[0;32mI (5362) mb: hw: 2076[0m
+
+[0;32mI (5362) mb: Largest free block: 110592[0m
+
+[0;32mI (5372) mb: Free heap: 200892[0m
+
+[0;32mI (5372) mb: hw: 2076[0m
+
+[0;32mI (5372) mb: Largest free block: 110592[0m
+
+[0;32mI (5382) mb: Free heap: 200892[0m
+
+[0;32mI (5382) mb: hw: 2076[0m
+
+[0;32mI (5382) mb: Largest free block: 110592[0m
+
+[0;32mI (5392) mb: Free heap: 200892[0m
+
+[0;32mI (5392) mb: hw: 2076[0m
+
+[0;32mI (5392) mb: Largest free block: 110592[0m
+
+[0;32mI (5402) mb: Free heap: 200892[0m
+
+[0;32mI (5402) mb: hw: 2076[0m
+
+[0;32mI (5402) mb: Largest free block: 110592[0m
+
+[0;32mI (5402) mb: Free heap: 200892[0m
+
+[0;32mI (5412) mb: hw: 2076[0m
+
+[0;32mI (5412) mb: Largest free block: 110592[0m
+
+[0;32mI (5412) mb: Free heap: 200892[0m
+
+[0;32mI (5422) mb: hw: 2076[0m
+
+[0;32mI (5422) mb: Largest free block: 110592[0m
+
+[0;32mI (5422) mb: Free heap: 200892[0m
+
+[0;32mI (5422) mb: hw: 2076[0m
+
+[0;32mI (5432) mb: Largest free block: 110592[0m
+
+[0;32mI (5432) mb: Free heap: 200892[0m
+
+[0;32mI (5432) mb: hw: 2076[0m
+
+[0;32mI (5442) mb: Largest free block: 110592[0m
+
+[0;32mI (5442) mb: Free heap: 200892[0m
+
+[0;32mI (5442) mb: hw: 2076[0m
+
+[0;32mI (5442) mb: Largest free block: 110592[0m
+
+[0;32mI (5452) mb: Free heap: 200892[0m
+
+[0;32mI (5452) mb: hw: 2076[0m
+
+[0;32mI (5452) mb: Largest free block: 110592[0m
+
+[0;32mI (5462) mb: Free heap: 200892[0m
+
+[0;32mI (5462) mb: hw: 2076[0m
+
+[0;32mI (5462) mb: Largest free block: 110592[0m
+
+[0;32mI (5472) mb: Free heap: 200892[0m
+
+[0;32mI (5472) mb: hw: 2076[0m
+
+[0;32mI (5472) mb: Largest free block: 110592[0m
+
+[0;32mI (5472) mb: Free heap: 200892[0m
+
+[0;32mI (5482) mb: hw: 2076[0m
+
+[0;32mI (5482) mb: Largest free block: 110592[0m
+
+[0;32mI (5482) mb: Free heap: 200892[0m
+
+[0;32mI (5492) mb: hw: 2076[0m
+
+[0;32mI (5492) mb: Largest free block: 110592[0m
+
+[0;32mI (5492) mb: Free heap: 200892[0m
+
+[0;32mI (5502) mb: hw: 2076[0m
+
+[0;32mI (5502) mb: Largest free block: 110592[0m
+
+[0;32mI (5502) mb: Free heap: 200892[0m
+
+[0;32mI (5502) mb: hw: 2076[0m
+
+[0;32mI (5512) mb: Largest free block: 110592[0m
+
+[0;32mI (5512) mb: Free heap: 200892[0m
+
+[0;32mI (5512) mb: hw: 2076[0m
+
+[0;32mI (5522) mb: Largest free block: 110592[0m
+
+[0;32mI (5522) mb: Free heap: 200892[0m
+
+[0;32mI (5522) mb: hw: 2076[0m
+
+[0;32mI (5522) mb: Largest free block: 110592[0m
+
+[0;32mI (5532) mb: Free heap: 200892[0m
+
+[0;32mI (5532) mb: hw: 2076[0m
+
+[0;32mI (5532) mb: Largest free block: 110592[0m
+
+[0;32mI (5542) mb: Free heap: 200892[0m
+
+[0;32mI (5542) mb: hw: 2076[0m
+
+[0;32mI (5542) mb: Largest free block: 110592[0m
+
+[0;32mI (5552) mb: Free heap: 200892[0m
+
+[0;32mI (5552) mb: hw: 2076[0m
+
+[0;32mI (5552) mb: Largest free block: 110592[0m
+
+[0;32mI (5552) mb: Free heap: 200892[0m
+
+[0;32mI (5562) mb: hw: 2076[0m
+
+[0;32mI (5562) mb: Largest free block: 110592[0m
+
+[0;32mI (5562) mb: Free heap: 200892[0m
+
+[0;32mI (5572) mb: hw: 2076[0m
+
+[0;32mI (5572) mb: Largest free block: 110592[0m
+
+[0;32mI (5572) mb: Free heap: 200892[0m
+
+[0;32mI (5582) mb: hw: 2076[0m
+
+[0;32mI (5582) mb: Largest free block: 110592[0m
+
+[0;32mI (5582) mb: Free heap: 200892[0m
+
+[0;32mI (5582) mb: hw: 2076[0m
+
+[0;32mI (5592) mb: Largest free block: 110592[0m
+
+[0;32mI (5592) mb: Free heap: 200892[0m
+
+[0;32mI (5592) mb: hw: 2076[0m
+
+[0;32mI (5602) mb: Largest free block: 110592[0m
+
+[0;32mI (5602) mb: Free heap: 200892[0m
+
+[0;32mI (5602) mb: hw: 2076[0m
+
+[0;32mI (5602) mb: Largest free block: 110592[0m
+
+[0;32mI (5612) mb: Free heap: 200892[0m
+
+[0;32mI (5612) mb: hw: 2076[0m
+
+[0;32mI (5612) mb: Largest free block: 110592[0m
+
+[0;32mI (5622) mb: Free heap: 200892[0m
+
+[0;32mI (5622) mb: hw: 2076[0m
+
+[0;32mI (5622) mb: Largest free block: 110592[0m
+
+[0;32mI (5632) mb: Free heap: 200892[0m
+
+[0;32mI (5632) mb: hw: 2076[0m
+
+[0;32mI (5632) mb: Largest free block: 110592[0m
+
+[0;32mI (5632) mb: Free heap: 200892[0m
+
+[0;32mI (5642) mb: hw: 2076[0m
+
+[0;32mI (5642) mb: Largest free block: 110592[0m
+
+[0;32mI (5642) mb: Free heap: 200892[0m
+
+[0;32mI (5652) mb: hw: 2076[0m
+
+[0;32mI (5652) mb: Largest free block: 110592[0m
+
+[0;32mI (5652) mb: Free heap: 200892[0m
+
+[0;32mI (5652) mb: hw: 2076[0m
+
+[0;32mI (5662) mb: Largest free block: 110592[0m
+
+[0;32mI (5662) mb: Free heap: 200892[0m
+
+[0;32mI (5662) mb: hw: 2076[0m
+
+[0;32mI (5672) mb: Largest free block: 110592[0m
+
+[0;32mI (5672) mb: Free heap: 200892[0m
+
+[0;32mI (5672) mb: hw: 2076[0m
+
+[0;32mI (5672) mb: Largest free block: 110592[0m
+
+[0;32mI (5682) mb: Free heap: 200892[0m
+
+[0;32mI (5682) mb: hw: 2076[0m
+
+[0;32mI (5682) mb: Largest free block: 110592[0m
+
+[0;32mI (5692) mb: Free heap: 200892[0m
+
+[0;32mI (5692) mb: hw: 2076[0m
+
+[0;32mI (5692) mb: Largest free block: 110592[0m
+
+[0;32mI (5702) mb: Free heap: 200892[0m
+
+[0;32mI (5702) mb: hw: 2076[0m
+
+[0;32mI (5702) mb: Largest free block: 110592[0m
+
+[0;32mI (5712) mb: Free heap: 200892[0m
+
+[0;32mI (5712) mb: hw: 2076[0m
+
+[0;32mI (5712) mb: Largest free block: 110592[0m
+
+[0;32mI (5712) mb: Free heap: 200892[0m
+
+[0;32mI (5722) mb: hw: 2076[0m
+
+[0;32mI (5722) mb: Largest free block: 110592[0m
+
+[0;32mI (5722) mb: Free heap: 200892[0m
+
+[0;32mI (5732) mb: hw: 2076[0m
+
+[0;32mI (5732) mb: Largest free block: 110592[0m
+
+[0;32mI (5732) mb: Free heap: 200892[0m
+
+[0;32mI (5732) mb: hw: 2076[0m
+
+[0;32mI (5742) mb: Largest free block: 110592[0m
+
+[0;32mI (5742) mb: Free heap: 200892[0m
+
+[0;32mI (5742) mb: hw: 2076[0m
+
+[0;32mI (5752) mb: Largest free block: 110592[0m
+
+[0;32mI (5752) mb: Free heap: 200892[0m
+
+[0;32mI (5752) mb: hw: 2076[0m
+
+[0;32mI (5752) mb: Largest free block: 110592[0m
+
+[0;32mI (5762) mb: Free heap: 200892[0m
+
+[0;32mI (5762) mb: hw: 2076[0m
+
+[0;32mI (5762) mb: Largest free block: 110592[0m
+
+[0;32mI (5772) mb: Free heap: 200892[0m
+
+[0;32mI (5772) mb: hw: 2076[0m
+
+[0;32mI (5772) mb: Largest free block: 110592[0m
+
+[0;32mI (5782) mb: Free heap: 200892[0m
+
+[0;32mI (5782) mb: hw: 2076[0m
+
+[0;32mI (5782) mb: Largest free block: 110592[0m
+
+[0;32mI (5782) mb: Free heap: 200892[0m
+
+[0;32mI (5792) mb: hw: 2076[0m
+
+[0;32mI (5792) mb: Largest free block: 110592[0m
+
+[0;32mI (5792) mb: Free heap: 200892[0m
+
+[0;32mI (5802) mb: hw: 2076[0m
+
+[0;32mI (5802) mb: Largest free block: 110592[0m
+
+[0;32mI (5802) mb: Free heap: 200892[0m
+
+[0;32mI (5812) mb: hw: 2076[0m
+
+[0;32mI (5812) mb: Largest free block: 110592[0m
+
+[0;32mI (5812) mb: Free heap: 200892[0m
+
+[0;32mI (5812) mb: hw: 2076[0m
+
+[0;32mI (5822) mb: Largest free block: 110592[0m
+
+[0;32mI (5822) mb: Free heap: 200892[0m
+
+[0;32mI (5822) mb: hw: 2076[0m
+
+[0;32mI (5832) mb: Largest free block: 110592[0m
+
+[0;32mI (5832) mb: Free heap: 200892[0m
+
+[0;32mI (5832) mb: hw: 2076[0m
+
+[0;32mI (5832) mb: Largest free block: 110592[0m
+
+[0;32mI (5842) mb: Free heap: 200892[0m
+
+[0;32mI (5842) mb: hw: 2076[0m
+
+[0;32mI (5842) mb: Largest free block: 110592[0m
+
+[0;32mI (5852) mb: Free heap: 200892[0m
+
+[0;32mI (5852) mb: hw: 2076[0m
+
+[0;32mI (5852) mb: Largest free block: 110592[0m
+
+[0;32mI (5862) mb: Free heap: 200912[0m
+
+[0;32mI (5862) mb: hw: 2076[0m
+
+[0;32mI (5862) mb: Largest free block: 110592[0m
+
+[0;32mI (5862) mb: Free heap: 200892[0m
+
+[0;32mI (5872) mb: hw: 2076[0m
+
+[0;32mI (5872) mb: Largest free block: 110592[0m
+
+[0;32mI (5872) mb: Free heap: 200892[0m
+
+[0;32mI (5882) mb: hw: w: 2076[0m
+
+[0;32mI (5892) mb: Largest 2) mb: Free heap: 200892[0m
+
+I (5 hw: 2076
+
+[0;32mI (5902) mb: Largest free block: 110592[0m
+
+[0;32mI (5902) mb: Free heap: 200892[0m
+
+[0;32mI (5902) mb: hw: 2076[0m
+
+[0;32mI (5902) mb: Largest free block: 110592[0m
+
+[0;32mI (5912) mb: Free heap: 200892[0m
+
+[0;32mI (5912) mb: hw: 2076[0m
+
+[0;32mI (5912) mb: Largest free block: 110592[0m
+
+[0;32mI (5922) mb: Free heap: 200892[0m
+
+[0;32mI (5922) mb: hw: 2076[0m
+
+[0;32mI (5922) mb: Largest free block: 110592[0m
+
+[0;32mI (5932) mb: Free heap: 200892[0m
+
+[0;32mI (5932) mb: hw: 2076[0m
+
+[0;32mI (5932) mb: Largest free block: 110592[0m
+
+[0;32mI (5942) mb: Free heap: 201040[0m
+
+[0;32mI (5942) mb: hw: 2076[0m
+
+[0;32mI (5942) mb: Largest free block: 110592[0m
+
+[0;32mI (5942) mb: Free heap: 200892[0m
+
+[0;32mI (5952) mb: hw: 2076[0m
+
+[0;32mI (5952) mb: Largest free block: 110592[0m
+
+[0;32mI (5952) mb: Free heap: 200892[0m
+
+[0;32mI (5962) mb: hw: 2076[0m
+
+[0;32mI (5962) mb: Largest free block: 110592[0m
+
+[0;32mI (5962) mb: Free heap: 200892[0m
+
+[0;32mI (5962) mb: hw: 2076[0m
+
+[0;32mI (5972) mb: Largest free block: 110592[0m
+
+[0;32mI (5972) mb: Free heap: 200892[0m
+
+[0;32mI (5972) mb: hw: 2076[0m
+
+[0;32mI (5982) mb: Largest free block: 110592[0m
+
+[0;32mI (5982) mb: Free heap: 200892[0m
+
+[0;32mI (5982) mb: hw: 2076[0m
+
+[0;32mI (5982) mb: Largest free block: 110592[0m
+
+[0;32mI (5992) mb: Free heap: 200892[0m
+
+[0;32mI (5992) mb: hw: 2076[0m
+
+[0;32mI (5992) mb: Largest free block: 110592[0m
+
+[0;32mI (6002) mb: Free heap: 200892[0m
+
+[0;32mI (6002) mb: hw: 2076[0m
+
+[0;32mI (6002) mb: Largest free block: 110592[0m
+
+[0;32mI (6012) mb: Free heap: 200892[0m
+
+[0;32mI (6012) mb: hw: 2076[0m
+
+[0;32mI (6012) mb: Largest free block: 110592[0m
+
+[0;32mI (6012) mb: Free heap: 200892[0m
+
+[0;32mI (6022) mb: hw: 2076[0m
+
+[0;32mI (6022) mb: Largest free block: 110592[0m
+
+[0;32mI (6022) mb: Free heap: 200892[0m
+
+[0;32mI (6032) mb: hw: 2076[0m
+
+[0;32mI (6032) mb: Largest free block: 110592[0m
+
+[0;32mI (6032) mb: Free heap: 200892[0m
+
+[0;32mI (6042) mb: hw: 2076[0m
+
+[0;32mI (6042) mb: Largest free block: 110592[0m
+
+[0;32mI (6042) mb: Free heap: 200892[0m
+
+[0;32mI (6042) mb: hw: 2076[0m
+
+[0;32mI (6052) mb: Largest free block: 110592[0m
+
+[0;32mI (6052) mb: Free heap: 200892[0m
+
+[0;32mI (6052) mb: hw: 2076[0m
+
+[0;32mI (6062) mb: Largest free block: 110592[0m
+
+[0;32mI (6062) mb: Free heap: 200892[0m
+
+[0;32mI (6062) mb: hw: 2076[0m
+
+[0;32mI (6062) mb: Largest free block: 110592[0m
+
+[0;32mI (6072) mb: Free heap: 200892[0m
+
+[0;32mI (6072) mb: hw: 2076[0m
+
+[0;32mI (6072) mb: Largest free block: 110592[0m
+
+[0;32mI (6082) mb: Free heap: 200892[0m
+
+[0;32mI (6082) mb: hw: 2076[0m
+
+[0;32mI (6082) mb: Largest free block: 110592[0m
+
+[0;32mI (6092) mb: Free heap: 200892[0m
+
+[0;32mI (6092) mb: hw: 2076[0m
+
+[0;32mI (6092) mb: Largest free block: 110592[0m
+
+[0;32mI (6092) mb: Free heap: 200892[0m
+
+[0;32mI (6102) mb: hw: 2076[0m
+
+[0;32mI (6102) mb: Largest free block: 110592[0m
+
+[0;32mI (6102) mb: Free heap: 200892[0m
+
+[0;32mI (6112) mb: hw: 2076[0m
+
+[0;32mI (6112) mb: Largest free block: 110592[0m
+
+[0;32mI (6112) mb: Free heap: 200892[0m
+
+[0;32mI (6122) mb: hw: 2076[0m
+
+[0;32mI (6122) mb: Largest free block: 110592[0m
+
+[0;32mI (6122) mb: Free heap: 200892[0m
+
+[0;32mI (6122) mb: hw: 2076[0m
+
+[0;32mI (6132) mb: Largest free block: 110592[0m
+
+[0;32mI (6132) mb: Free heap: 200892[0m
+
+[0;32mI (6132) mb: hw: 2076[0m
+
+[0;32mI (6142) mb: Largest free block: 110592[0m
+
+[0;32mI (6142) mb: Free heap: 200892[0m
+
+[0;32mI (6142) mb: hw: 2076[0m
+
+[0;32mI (6142) mb: Largest free block: 110592[0m
+
+[0;32mI (6152) mb: Free heap: 200892[0m
+
+[0;32mI (6152) mb: hw: 2076[0m
+
+[0;32mI (6152) mb: Largest free block: 110592[0m
+
+[0;32mI (6162) mb: Free heap: 200892[0m
+
+[0;32mI (6162) mb: hw: 2076[0m
+
+[0;32mI (6162) mb: Largest free block: 110592[0m
+
+[0;32mI (6172) mb: Free heap: 200892[0m
+
+[0;32mI (6172) mb: hw: 2076[0m
+
+[0;32mI (6172) mb: Largest free block: 110592[0m
+
+[0;32mI (6172) mb: Free heap: 200892[0m
+
+[0;32mI (6182) mb: hw: 2076[0m
+
+[0;32mI (6182) mb: Largest free block: 110592[0m
+
+[0;32mI (6182) mb: Free heap: 200892[0m
+
+[0;32mI (6192) mb: hw: 2076[0m
+
+[0;32mI (6192) mb: Largest free block: 110592[0m
+
+[0;32mI (6192) mb: Free heap: 200892[0m
+
+[0;32mI (6192) mb: hw: 2076[0m
+
+[0;32mI (6202) mb: Largest free block: 110592[0m
+
+[0;32mI (6202) mb: Free heap: 200892[0m
+
+[0;32mI (6202) mb: hw: 2076[0m
+
+[0;32mI (6212) mb: Largest free block: 110592[0m
+
+[0;32mI (6212) mb: Free heap: 200892[0m
+
+[0;32mI (6212) mb: hw: 2076[0m
+
+[0;32mI (6212) mb: Largest free block: 110592[0m
+
+[0;32mI (6222) mb: Free heap: 200892[0m
+
+[0;32mI (6222) mb: hw: 2076[0m
+
+[0;32mI (6222) mb: Largest free block: 110592[0m
+
+[0;32mI (6232) mb: Free heap: 200892[0m
+
+[0;32mI (6232) mb: hw: 2076[0m
+
+[0;32mI (6232) mb: Largest free block: 110592[0m
+
+[0;32mI (6242) mb: Free heap: 200892[0m
+
+[0;32mI (6242) mb: hw: 2076[0m
+
+[0;32mI (6242) mb: Largest free block: 110592[0m
+
+[0;32mI (6252) mb: Free heap: 200892[0m
+
+[0;32mI (6252) mb: hw: 2076[0m
+
+[0;32mI (6252) mb: Largest free block: 110592[0m
+
+[0;32mI (6252) mb: Free heap: 200892[0m
+
+[0;32mI (6262) mb: hw: 2076[0m
+
+[0;32mI (6262) mb: Largest free block: 110592[0m
+
+[0;32mI (6262) mb: Free heap: 200892[0m
+
+[0;32mI (6272) mb: hw: 2076[0m
+
+[0;32mI (6272) mb: Largest free block: 110592[0m
+
+[0;32mI (6272) mb: Free heap: 200892[0m
+
+[0;32mI (6272) mb: hw: 2076[0m
+
+[0;32mI (6282) mb: Largest free block: 110592[0m
+
+[0;32mI (6282) mb: Free heap: 200892[0m
+
+[0;32mI (6282) mb: hw: 2076[0m
+
+[0;32mI (6292) mb: Largest free block: 110592[0m
+
+[0;32mI (6292) mb: Free heap: 200892[0m
+
+[0;32mI (6292) mb: hw: 2076[0m
+
+[0;32mI (6292) mb: Largest free block: 110592[0m
+
+[0;32mI (6302) mb: Free heap: 200892[0m
+
+[0;32mI (6302) mb: hw: 2076[0m
+
+[0;32mI (6302) mb: Largest free block: 110592[0m
+
+[0;32mI (6312) mb: Free heap: 200892[0m
+
+[0;32mI (6312) mb: hw: 2076[0m
+
+[0;32mI (6312) mb: Largest free block: 110592[0m
+
+[0;32mI (6322) mb: Free heap: 200892[0m
+
+[0;32mI (6322) mb: hw: 2076[0m
+
+[0;32mI (6322) mb: Largest free block: 110592[0m
+
+[0;32mI (6322) mb: Free heap: 200892[0m
+
+[0;32mI (6332) mb: hw: 2076[0m
+
+[0;32mI (6332) mb: Largest free block: 110592[0m
+
+[0;32mI (6332) mb: Free heap: 200892[0m
+
+[0;32mI (6342) mb: hw: 2076[0m
+
+[0;32mI (6342) mb: Largest free block: 110592[0m
+
+[0;32mI (6342) mb: Free heap: 200892[0m
+
+[0;32mI (6352) mb: hw: 2076[0m
+
+[0;32mI (6352) mb: Largest free block: 110592[0m
+
+[0;32mI (6352) mb: Free heap: 200892[0m
+
+[0;32mI (6352) mb: hw: 2076[0m
+
+[0;32mI (6362) mb: Largest free block: 110592[0m
+
+[0;32mI (6362) mb: Free heap: 200892[0m
+
+[0;32mI (6362) mb: hw: 2076[0m
+
+[0;32mI (6372) mb: Largest free block: 110592[0m
+
+[0;32mI (6372) mb: Free heap: 200892[0m
+
+[0;32mI (6372) mb: hw: 2076[0m
+
+[0;32mI (6372) mb: Largest free block: 110592[0m
+
+[0;32mI (6382) mb: Free heap: 200892[0m
+
+[0;32mI (6382) mb: hw: 2076[0m
+
+[0;32mI (6382) mb: Largest free block: 110592[0m
+
+[0;32mI (6392) mb: Free heap: 200892[0m
+
+[0;32mI (6392) mb: hw: 2076[0m
+
+[0;32mI (6392) mb: Largest free block: 110592[0m
+
+[0;32mI (6402) mb: Free heap: 200912[0m
+
+[0;32mI (6402) mb: hw: 2076[0m
+
+[0;32mI (6402) mb: Largest free block: 110592[0m
+
+[0;32mI (6402) mb: Free heap: 200892[0m
+
+[0;32mI (6412) mb: hw: 2076[0m
+
+[0;32mI (6412) mb: Largest free block: 110592[0m
+
+[0;32mI (6412) mb: Free heap: 200892[0m
+
+[0;32mI (6422) mb: hw: 2076[0m
+
+[0;32mI (6422) mb: Largest free block: 110592[0m
+
+[0;32mI (6422) mb: Free heap: 200892[0m
+
+[0;32mI (6432) mb: hw: 2076[0m
+
+[0;32mI (6432) mb: Largest free block: 110592[0m
+
+[0;32mI (6432) mb: Free heap: 200892[0m
+
+[0;32mI (6432) mb: hw: 2076[0m
+
+[0;32mI (6442) mb: Largest free block: 110592[0m
+
+[0;32mI (6442) mb: Free heap: 200892[0m
+
+[0;32mI (6442) mb: hw: 2076[0m
+
+[0;32mI (6452) mb: Largest free block: 110592[0m
+
+[0;32mI (6452) mb: Free heap: 200892[0m
+
+[0;32mI (6452) mb: hw: 2076[0m
+
+[0;32mI (6452) mb: Largest free block: 110592[0m
+
+[0;32mI (6462) mb: Free heap: 200892[0m
+
+[0;32mI (6462) mb: hw: 2076[0m
+
+[0;32mI (6462) mb: Largest free block: 110592[0m
+
+[0;32mI (6472) mb: Free heap: 200892[0m
+
+[0;32mI (6472) mb: hw: 2076[0m
+
+[0;32mI (6472) mb: Largest free block: 110592[0m
+
+[0;32mI (6482) mb: Free heap: 200892[0m
+
+[0;32mI (6482) mb: hw: 2076[0m
+
+[0;32mI (6482) mb: Largest free block: 110592[0m
+
+[0;32mI (6482) mb: Free heap: 200892[0m
+
+[0;32mI (6492) mb: hw: 2076[0m
+
+[0;32mI (6492) mb: Largest free block: 110592[0m
+
+[0;32mI (6492) mb: Free heap: 200892[0m
+
+[0;32mI (6502) mb: hw: 2076[0m
+
+[0;32mI (6502) mb: Largest free block: 110592[0m
+
+[0;32mI (6502) mb: Free heap: 200892[0m
+
+[0;32mI (6502) mb: hw: 2076[0m
+
+[0;32mI (6512) mb: Largest free block: 110592[0m
+
+[0;32mI (6512) mb: Free heap: 200892[0m
+
+[0;32mI (6512) mb: hw: 2076[0m
+
+[0;32mI (6522) mb: Largest free block: 110592[0m
+
+[0;32mI (6522) mb: Free heap: 200892[0m
+
+[0;32mI (6522) mb: hw: 2076[0m
+
+[0;32mI (6522) mb: Largest free block: 110592[0m
+
+[0;32mI (6532) mb: Free heap: 200892[0m
+
+[0;32mI (6532) mb: hw: 2076[0m
+
+[0;32mI (6532) mb: Largest free block: 110592[0m
+
+[0;32mI (6542) mb: Free heap: 200892[0m
+
+[0;32mI (6542) mb: hw: 2076[0m
+
+[0;32mI (6542) mb: Largest free block: 110592[0m
+
+[0;32mI (6552) mb: Free heap: 200892[0m
+
+[0;32mI (6552) mb: hw: 2076[0m
+
+[0;32mI (6552) mb: Largest free block: 110592[0m
+
+[0;32mI (6562) mb: Free heap: 200892[0m
+
+[0;32mI (6562) mb: hw: 2076[0m
+
+[0;32mI (6562) mb: Largest free block: 110592[0m
+
+[0;32mI (6562) mb: Free heap: 200892[0m
+
+[0;32mI (6572) mb: hw: 2076[0m
+
+[0;32mI (6572) mb: Largest free block: 110592[0m
+
+[0;32mI (6572) mb: Free heap: 200892[0m
+
+[0;32mI (6582) mb: hw: 2076[0m
+
+[0;32mI (6582) mb: Largest free block: 110592[0m
+
+[0;32mI (6582) mb: Free heap: 200892[0m
+
+[0;32mI (6582) mb: hw: 2076[0m
+
+[0;32mI (6592) mb: Largest free block: 110592[0m
+
+[0;32mI (6592) mb: Free heap: 200892[0m
+
+[0;32mI (6592) mb: hw: 2076[0m
+
+[0;32mI (6602) mb: Largest free block: 110592[0m
+
+[0;32mI (6602) mb: Free heap: 200892[0m
+
+[0;32mI (6602) mb: hw: 2076[0m
+
+[0;32mI (6602) mb: Largest free block: 110592[0m
+
+[0;32mI (6612) mb: Free heap: 200892[0m
+
+[0;32mI (6612) mb: hw: 2076[0m
+
+[0;32mI (6612) mb: Largest free block: 110592[0m
+
+[0;32mI (6622) mb: Free heap: 200892[0m
+
+[0;32mI (6622) mb: hw: 2076[0m
+
+[0;32mI (6622) mb: Largest free block: 110592[0m
+
+[0;32mI (6632) mb: Free heap: 200892[0m
+
+[0;32mI (6632) mb: hw: 2076[0m
+
+[0;32mI (6632) mb: Largest free block: 110592[0m
+
+[0;32mI (6632) mb: Free heap: 200892[0m
+
+[0;32mI (6642) mb: hw: 2076[0m
+
+[0;32mI (6642) mb: Largest free block: 110592[0m
+
+[0;32mI (6642) mb: Free heap: 200892[0m
+
+[0;32mI (6652) mb: hw: 2076[0m
+
+[0;32mI (6652) mb: Largest free block: 110592[0m
+
+[0;32mI (6652) mb: Free heap: 200892[0m
+
+[0;32mI (6662) mb: hw: 2076[0m
+
+[0;32mI (6662) mb: Largest free block: 110592[0m
+
+[0;32mI (6662) mb: Free heap: 200892[0m
+
+[0;32mI (6662) mb: hw: 2076[0m
+
+[0;32mI (6672) mb: Largest free block: 110592[0m
+
+[0;32mI (6672) mb: Free heap: 200892[0m
+
+[0;32mI (6672) mb: hw: 2076[0m
+
+[0;32mI (6682) mb: Largest free block: 110592[0m
+
+[0;32mI (6682) mb: Free heap: 200892[0m
+
+[0;32mI (6682) mb: hw: 2076[0m
+
+[0;32mI (6682) mb: Largest free block: 110592[0m
+
+[0;32mI (6692) mb: Free heap: 200892[0m
+
+[0;32mI (6692) mb: hw: 2076[0m
+
+[0;32mI (6692) mb: Largest free block: 110592[0m
+
+[0;32mI (6702) mb: Free heap: 200892[0m
+
+[0;32mI (6702) mb: hw: 2076[0m
+
+[0;32mI (6702) mb: Largest free block: 110592[0m
+
+[0;32mI (6712) mb: Free heap: 200892[0m
+
+[0;32mI (6712) mb: hw: 2076[0m
+
+[0;32mI (6712) mb: Largest free block: 110592[0m
+
+[0;32mI (6712) mb: Free heap: 200892[0m
+
+[0;32mI (6722) mb: hw: 2076[0m
+
+[0;32mI (6722) mb: Largest free block: 110592[0m
+
+[0;32mI (6722) mb: Free heap: 200892[0m
+
+[0;32mI (6732) mb: hw: 2076[0m
+
+[0;32mI (6732) mb: Largest free block: 110592[0m
+
+[0;32mI (6732) mb: Free heap: 200892[0m
+
+[0;32mI (6742) mb: hw: 2076[0m
+
+[0;32mI (6742) mb: Largest free block: 110592[0m
+
+[0;32mI (6742) mb: Free heap: 200892[0m
+
+[0;32mI (6742) mb: hw: 2076[0m
+
+[0;32mI (6752) mb: Largest free block: 110592[0m
+
+[0;32mI (6752) mb: Free heap: 200892[0m
+
+[0;32mI (6752) mb: hw: 2076[0m
+
+[0;32mI (6752) mb: Largest free block: 110592[0m
+
+[0;32mI (6762) mb: Free heap: 200892[0m
+
+[0;32mI (6762) mb: hw: 2076[0m
+
+[0;32mI (6762) mb: Largest free block: 110592[0m
+
+[0;32mI (6772) mb: Free heap: 200892[0m
+
+[0;32mI (6772) mb: hw: 2076[0m
+
+[0;32mI (6772) mb: Largest free block: 110592[0m
+
+[0;32mI (6782) mb: Free heap: 200892[0m
+
+[0;32mI (6782) mb: hw: 2076[0m
+
+[0;32mI (6782) mb: Largest free block: 110592[0m
+
+[0;32mI (6792) mb: Free heap: 200892[0m
+
+[0;32mI (6792) mb: hw: 2076[0m
+
+[0;32mI (6792) mb: Largest free block: 110592[0m
+
+[0;32mI (6792) mb: Free heap: 200892[0m
+
+[0;32mI (6802) mb: hw: 2076[0m
+
+[0;32mI (6802) mb: Largest free block: 110592[0m
+
+[0;32mI (6802) mb: Free heap: 200892[0m
+
+[0;32mI (6812) mb: hw: 2076[0m
+
+[0;32mI (6812) mb: Largest free block: 110592[0m
+
+[0;32mI (6812) mb: Free heap: 200892[0m
+
+[0;32mI (6812) mb: hw: 2076[0m
+
+[0;32mI (6822) mb: Largest free block: 110592[0m
+
+[0;32mI (6822) mb: Free heap: 200892[0m
+
+[0;32mI (6822) mb: hw: 2076[0m
+
+[0;32mI (6832) mb: Largest free block: 110592[0m
+
+[0;32mI (6832) mb: Free heap: 200892[0m
+
+[0;32mI (6832) mb: hw: 2076[0m
+
+[0;32mI (6832) mb: Largest free block: 110592[0m
+
+[0;32mI (6842) mb: Free heap: 200892[0m
+
+[0;32mI (6842) mb: hw: 2076[0m
+
+[0;32mI (6842) mb: Largest free block: 110592[0m
+
+[0;32mI (6852) mb: Free heap: 200892[0m
+
+[0;32mI (6852) mb: hw: 2076[0m
+
+[0;32mI (6852) mb: Largest free block: 110592[0m
+
+[0;32mI (6862) mb: Free heap: 200892[0m
+
+[0;32mI (6862) mb: hw: 2076[0m
+
+[0;32mI (6862) mb: Largest free block: 110592[0m
+
+[0;32mI (6862) mb: Free heap: 200892[0m
+
+[0;32mI (6872) mb: hw: 2076[0m
+
+[0;32mI (6872) mb: Largest free block: 110592[0m
+
+[0;32mI (6872) mb: Free heap: 200892[0m
+
+[0;32mI (6882) mb: hw: 2076[0m
+
+[0;32mI (6882) mb: Largest free block: 110592[0m
+
+[0;32mI (6882) mb: Free heap: 200892[0m
+
+[0;32mI (6892) mb: hw: 2076[0m
+
+[0;32mI (6892) mb: Largest free block: 110592[0m
+
+[0;32mI (6892) mb: Free heap: 200892[0m
+
+[0;32mI (6892) mb: hw: 2076[0m
+
+[0;32mI (6902) mb: Largest free block: 110592[0m
+
+[0;32mI (6902) mb: Free heap: 200892[0m
+
+[0;32mI (6902) mb: hw: 2076[0m
+
+[0;32mI (6912) mb: Largest free block: 110592[0m
+
+[0;32mI (6912) mb: Free heap: 200892[0m
+
+[0;32mI (6912) mb: hw: 2076[0m
+
+[0;32mI (6912) mb: Largest free block: 110592[0m
+
+[0;32mI (6922) mb: Free heap: 200892[0m
+
+[0;32mI (6922) mb: hw: 2076[0m
+
+[0;32mI (6922) mb: Largest free block: 110592[0m
+
+[0;32mI (6932) mb: Free heap: 200892[0m
+
+[0;32mI (6932) mb: hw: 2076[0m
+
+[0;32mI (6932) mb: Largest free block: 110592[0m
+
+[0;32mI (6942) mb: Free heap: 200912[0m
+
+[0;32mI (6942) mb: hw: 2076[0m
+
+[0;32mI (6942) mb: Largest free block: 110592[0m
+
+[0;32mI (6942) mb: Free heap: 200892[0m
+
+[0;32mI (6952) mb: hw: 2076[0m
+
+[0;32mI (6952) mb: Largest free block: 110592[0m
+
+[0;32mI (6952) mb: Free heap: 200892[0m
+
+[0;32mI (6962) mb: hw: 2076[0m
+
+[0;32mI (6962) mb: Largest free block: 110592[0m
+
+[0;32mI (6962) mb: Free heap: 200892[0m
+
+[0;32mI (6972) mb: hw: 2076[0m
+
+[0;32mI (6972) mb: Largest free block: 110592[0m
+
+[0;32mI (6972) mb: Free heap: 200892[0m
+
+[0;32mI (6972) mb: hw: 2076[0m
+
+[0;32mI (6982) mb: Largest free block: 110592[0m
+
+[0;32mI (6982) mb: Free heap: 200892[0m
+
+[0;32mI (6982) mb: hw: 2076[0m
+
+[0;32mI (6992) mb: Largest free block: 110592[0m
+
+[0;32mI (6992) mb: Free heap: 200892[0m
+
+[0;32mI (6992) mb: hw: 2076[0m
+
+[0;32mI (6992) mb: Largest free block: 110592[0m
+
+[0;32mI (7002) mb: Free heap: 200892[0m
+
+[0;32mI (7002) mb: hw: 2076[0m
+
+[0;32mI (7002) mb: Largest free block: 1105mb: hw: 2076[0m
+
+[0;32mI (7012) mb: Largest free block: 110592[0m
+
+[0;32mI (7022) mb: Free heap: 200912[0m
+
+I (mb: Largest free block: 110592
+
+[0;32mI (7032) mb: Largest free block: 110592[0m
+
+[0;32mI (7032) mb: Free h592[0m
+
+[0;32mI (7042) mb: Free heap: 200892[0m
+
+[0;32mI (7042) mb: hw: 2076[0m
+
+[0;32mI (7052) mb: Largest free block: 110592[0m
+
+[0;32mI (7052) mb: Free hblock: 110592[0m
+
+[0;32mI (7062) mb: Free heap: 200892[0m
+
+[0;32mI (7062) mb: hw: 2076[0m
+
+[0;32mI (7062) mb: Largest free block: 110592[0m
+
+[0;32mI (7072) mb: Free heap: 200892[0m
+
+[0;32mI (7072) mb: Largest free block: 110592[0m
+
+[0;32mI (7082) mb: Free heap: 200892[0m
+
+[0;32mI (7082) mb: hw: 2076[0m
+
+[0;32mI (7082) mb: Largest free block: 110592[0m
+
+[0;32mI (7092) mb: Free heap: 200892[0m
+
+[0;32mI (7092) mb: hw: 2076[0m
+
+[0;32mI (7092) mb: Largest free block: 110592[0m
+
+[0;32mI (7102) mb: Free heap: 200892[0m
+
+[0;32mI (7102) mb: hw: 2076[0m
+
+[0;32mI (7102) mb: Largest free block: 110592[0m
+
+[0;32mI (7102) m: 200892[0m
+
+[0;32mI (7112) mb: hw: 2076[0m
+
+[0;32mI (7112) mb: Largest free b10592[0m
+
+[0;32mI (7112) mb: Free heap: 200892[0m
+
+[0;32mI (7122) mb: hw: 2076[0m
+
+[0;32mI (7122) mb: Largest free bl2[0m
+
+[0;32mI (7122) mb: Free heap: 200[0m
+
+[0;32mI (7132) mb: Largest free block: 110592[0m
+
+[0;32mI (7132) mb: Free heap: 200892[0m
+
+[0;32mI (7132) mb: hw: 2076[0m
+
+[0;32mI (7142) mb: Largest fr (7152) mb: Largest free block: 110592[0m
+
+[0;32mI (7162) mb: Free heap free block: 110592[0m
+
+[0;32mI (7172) mb: Free heap: 200892[0m
+
+I (7172ck: 110592
+
+[0;32mI (7172) mb: Free heap: 200892[0m
+
+[0;32mI (7182) mb: hw: 2076[0m
+
+[0;32mI (7182) mb: Largest free block: 110592[0m
+
+[0;32mI (7182) mb: Free heap: 200892[0m
+
+[0;32mI (7192) mb: hw: 2076[0m
+
+[0;32mI (7192) mb: Largest free block: 110592[0m
+
+[0;32mI (7192) mb: Free heap: 200892[0m
+
+[0;32mI (7202) mb: hw: 2076[0m
+
+[0;32mI (7202) mb: Largest free block: 110592[0m
+
+[0;32mI (7202) mb: Free heap: 200892[0m
+
+[0;32mI (7202) mb: hw: 2076[0m
+
+[0;32mI (7212) mb: Largest free block: 110592[0m
+
+[0;32mI (7212) mb: Free heap: 200892[0m
+
+[0;32mI (7212) mb: hw: 2076[0m
+
+[0;32mI (7222) mb: Largest free block: 110592[0m
+
+[0;32mI (7222) mb: Free heap: 200892[0m
+
+[0;32mI (7222) mb: hw: 2076[0m
+
+[0;32mI (7222) mb: Largest free block: 110592[0m
+
+[0;32mI (7232) mb: Fb: Largest free block: 110592[0m
+
+[0;32mI (7252) mb: Free heap: 200892[0m
+
+[0;32mI (7262) mb: hw: 2076[0m
+
+[0;32mI (7262) mb: Largest free block: 110592[0m
+
+[0;32mI (7262) mb: Free heap: 200892[0m
+
+[0;32mI (7272) mb: hw: 2076[0m
+
+[0;32mI (7272) mb: Largest free block: 110592[0m
+
+[0;32mI (7272) mb: Free heap: 200892[0m
+
+[0;32mI (7282) mb: hw: 2076[0m
+
+[0;32mI (7282) mb: Largest free block: 110592[0m
+
+[0;32mI (7282) mb: Free heap: 200892[0m
+
+[0;32mI (7282) mb: hw: 2076[0m
+
+[0;32mI (7292) mb: Largest free block: 110592[0m
+
+[0;32mI (7292) mb: Free heap: 200892[0m
+
+[0;32mI (7292) mb: hw: 2076[0m
+
+[0;32mI (7302) mb: Largest free block: 110592[0m
+
+[0;32mI (7302) mb: Free heap: 200892[0m
+
+[0;32mI (7302) mb: hw: 2076[0m
+
+[0;32mI (7302) mb: Largest free block: 1105912) mb: Free heap: 200892[0m
+
+[0;32mI (7312) mb: hw: 2076[0m
+
+[0;32mI (7312) m Free heap: 200892[0m
+
+[0;32mI (7332) mb: hw: 2076[0m
+
+[0;32mI (7332) mb: Largest free block: 110592[0m
+
+[0;32mI (7332) mb: Free heap: 200892[0m
+
+[0;32mI (7342) mb: hw: 2076[0m
+
+[0;32mI (7342) mb: Largest free block: 110592[0m
+
+[0;32mI (7342) mb: Free heap: 200892[0m
+
+[0;32mI (7352) mb: hw: 2076[0m
+
+[0;32mI (7352) mb: Largest free block: 110592[0m
+
+[0;32mI (7352) mb: Free heap: 200892[0m
+
+[0;32mI (7352) mb: hw: 2076[0m
+
+[0;32mI (7362) mb: Largest free block: 110592[0m
+
+[0;32mI (7362) mb: Free heap: 200892[0m
+
+[0;32mI (7362) mb: hw: 2076[0m
+
+[0;32mI (7372) mb: Largest free block: 110592[0m
+
+[0;32mI (7372) mb: Free heap: 200892[0m
+
+[0;32mI (7372) mb: hw: 2076[0m
+
+[0;32mI (7372) mb: Largest free block: 110592[0m
+
+[0;32mI (7382) mb: Free heap: 200892[0m
+
+[0;32mI (7382) mb: hw: 2076[0m
+
+[0;32mI (7382) mb: Largest free block: 110592[0m
+
+[0;32mI (7392) mb: Free heap: 200892[0m
+
+[0;32mI (7392) mb: hw: 2076[0m
+
+[0;32mI (7392) mb: Largest free block: 110592[0m
+
+[0;32mI (7402) mb: Free heap: 200892[0m
+
+[0;32mI (7402) mb: hw: 2076[0m
+
+[0;32mI (7402) mb: Largest free block: 110592[0m
+
+[0;32mI (7412) mb: Free heap: 200892[0m
+
+[0;32mI (7412) mb: hw: 2076[0m
+
+[0;32mI (7412) mb: Largest free block: 110592[0m
+
+[0;32mI (7412) mb: Free heap: 200892[0m
+
+[0;32mI (7422) mb: hw: 2076[0m
+
+[0;32mI (7422) mb: Largest free block: 110592[0m
+
+[0;32mI (7422) mb: Free heap: 200892[0m
+
+[0;32mI (7432) mb: hw: 2076[0m
+
+[0;32mI (7432) mb: Largest free block: 110592[0m
+
+[0;32mI (7432) mb: Free heap: 200892[0m
+
+[0;32mI (7432) mb: hw: 2076[0m
+
+[0;32mI (7442) mb: Largest free block: 110592[0m
+
+[0;32mI (7442) mb: Free heap: 200892[0m
+
+[0;32mI (7442) mb: hw: 2076[0m
+
+[0;32mI (7452) mb: Largest free block: 110592[0m
+
+[0;32mI (7452) mb: Free heap: 200892[0m
+
+[0;32mI (7452) mb: hw: 2076[0m
+
+[0;32mI (7452) mb: Largest free block: 110592[0m
+
+[0;32mI (7462) mb: Free heap: 200892[0m
+
+[0;32mI (7462) mb: hw: 2076[0m
+
+[0;32mI (7462) mb: Largest free block: 110592[0m
+
+[0;32mI (7472) mb: Free heap: 200892[0m
+
+[0;32mI (7472) mb: hw: 2076[0m
+
+[0;32mI (7472) mb: Largest free block: 110592[0m
+
+[0;32mI (7482) mb: Free heap: 200912[0m
+
+[0;32mI (7482) mb: hw: 2076[0m
+
+[0;32mI (7482) mb: Largest free block: 110592[0m
+
+[0;32mI (7482) mb: Free heap: 200892[0m
+
+[0;32mI (7492) mb: hw: 2076[0m
+
+[0;32mI (7492) mb: Largest free block: 110592[0m
+
+[0;32mI (7492) mb: Free heap: 200892[0m
+
+[0;32mI (7502) mb: hw: 2076[0m
+
+[0;32mI (7502) mb: Largest free block: 110592[0m
+
+[0;32mI (7502) mb: Free heap: 200892[0m
+
+[0;32mI (7512) mb: hw: 2076[0m
+
+[0;32mI (7512) mb: Largest free block: 110592[0m
+
+[0;32mI (7512) mb: Free heap: 200892[0m
+
+[0;32mI (7512) mb: hw: 2076[0m
+
+[0;32mI (7522) mb: Largest free block: 110592[0m
+
+[0;32mI (7522) mb: Free heap: 200892[0m
+
+[0;32mI (7522) mb: hw: 2076[0m
+
+[0;32mI (7532) mb: Largest free block: 110592[0m
+
+[0;32mI (7532) mb: Free heap: 200892[0m
+
+[0;32mI (7532) mb: hw: 2076[0m
+
+[0;32mI (7532) mb: Largest free block: 110592[0m
+
+[0;32mI (7542) mb: Free heap: 200892[0m
+
+[0;32mI (7542) mb: hw: 2076[0m
+
+[0;32mI (7542) mb: Largest free block: 110592[0m
+
+[0;32mI (7552) mb: Free heap: 200892[0m
+
+[0;32mI (7552) mb: hw: 2076[0m
+
+[0;32mI (7552) mb: Largest free block: 110592[0m
+
+[0;32mI (7562) mb: Free heap: 200912[0m
+
+[0;32mI (7562) mb: hw: 2076[0m
+
+[0;32mI (7562) mb: Largest free block: 110592[0m
+
+[0;32mI (7562) mb: Free heap: 200892[0m
+
+[0;32mI (7572) mb: hw: 2076[0m
+
+[0;32mI (7572) mb: Largest free block: 110592[0m
+
+[0;32mI (7572) mb: Free heap: 200892[0m
+
+[0;32mI (7582) mb: hw: 2076[0m
+
+[0;32mI (7582) mb: Largest free block: 110592[0m
+
+[0;32mI (7582) mb: Free heap: 200892[0m
+
+[0;32mI (7592) mb: hw: 2076[0m
+
+[0;32mI (7592) mb: Largest free block: 110592[0m
+
+[0;32mI (7592) mb: Free heap: 200892[0m
+
+[0;32mI (7592) mb: hw: 2076[0m
+
+[0;32mI (7602) mb: Largest free block: 110592[0m
+
+[0;32mI (7602) mb: Free heap: 200892[0m
+
+[0;32mI (7602) mb: hw: 2076[0m
+
+[0;32mI (7602) mb: Largest free block: 110592[0m
+
+[0;32mI (7612) mb: Free heap: 200892[0m
+
+[0;32mI (7612) mb: hw: 2076[0m
+
+[0;32mI (7612) mb: Largest free block: 110592[0m
+
+[0;32mI (7622) mb: Free heap: 200892[0m
+
+[0;32mI (7622) mb: hw: 2076[0m
+
+[0;32mI (7622) mb: Largest free block: 110592[0m
+
+[0;32mI (7632) mb: Free heap: 200892[0m
+
+[0;32mI (7632) mb: hw: 2076[0m
+
+[0;32mI (7632) mb: Largest free block: 110592[0m
+
+[0;32mI (7642) mb: Free heap: 200892[0m
+
+[0;32mI (7642) mb: hw: 2076[0m
+
+[0;32mI (7642) mb: Largest free block: 110592[0m
+
+[0;32mI (7642) mb: Free heap: 200892[0m
+
+[0;32mI (7652) mb: hw: 2076[0m
+
+[0;32mI (7652) mb: Largest free block: 110592[0m
+
+[0;32mI (7652) mb: Free heap: 200892[0m
+
+[0;32mI (7662) mb: hw: 2076[0m
+
+[0;32mI (7662) mb: Largest free block: 110592[0m
+
+[0;32mI (7662) mb: Free heap: 200892[0m
+
+[0;32mI (7662) mb: hw: 2076[0m
+
+[0;32mI (7672) mb: Largest free block: 110592[0m
+
+[0;32mI (7672) mb: Free heap: 200892[0m
+
+[0;32mI (7672) mb: hw: 2076[0m
+
+I (76E (7682) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:
+[1;31mE (7682) task_wdt:  - IDLE1 (CPU 1)[0m
+[1;31mE (7682) task_wdt: Tasks currently running:[0m
+[1;31mE (7682) task_wdt: CPU 0: r_select_task[0m
+[1;31mE (7682) task_wdt: CPU 1: mb_send_task[0m
+[1;31mE (7682) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x400848A6:0x3FFB2680 0x4008361D:0x3FFB26A0 0x400D709D:0x3FFC12C0 0x400D77C4:0x3FFC12F0 0x400D8BDA:0x3FFC1320 0x4000BD83:0x3FFC1340 0x4000182A:0x3FFC1360 0x400D8111:0x3FFC1380 0x400D8BDA:0x3FFC13A0 0x4000BD83:0x3FFC13C0 0x4000117D:0x3FFC13E0 0x400592FE:0x3FFC1400 0x4005937A:0x3FFC1420 0x4014B681:0x3FFC1440 0x401526E3:0x3FFC1470 0x401520FA:0x3FFC1490 0x4014BAFD:0x3FFC17B0 0x4009131F:0x3FFC17E0 0x400DB632:0x3FFC1840 0x4008ABC1:0x3FFC1860
+
+82) mb: Largest free block: 110592
+
+[0;32mI (7752) mb: Free heap: 200892[0m
+
+[0;32mI (7752) mb: hw: 2076[0m
+
+[0;32mI (7752) mb: Largest free block: 110592[0m
+
+[0;32mI (7762) mb: Free heap: 200912[0m
+
+[0;32mI (7762) mb: hw: 2076[0m
+
+[0;32mI (7762) mb: Largest free block: 110592[0m
+
+[0;32mI (7762) mb: Free heap: 200892[0m
+
+[0;32mI (7772) mb: hw: 2076[0m
+
+[0;32mI (7772) mb: Largest free block: 110592[0m
+
+[0;32mI (7772) mb: Free heap: 200892[0m
+
+[0;32mI (7782) mb: hw: 2076[0m
+
+[0;32mI (7782) mb: Largest free block: 110592[0m
+
+[0;32mI (7782) mb: Free heap: 200892[0m
+
+[0;32mI (7792) mb: hw: 2076[0m
+
+[0;32mI (7792) mb: Largest free block: 110592[0m
+
+[0;32mI (7792) mb: Free heap: 200892[0m
+
+[0;32mI (7792) mb: hw: 2076[0m
+
+[0;32mI (7802) mb: Largest free block: 110592[0m
+
+[0;32mI (7802) mb: Free heap: 200892[0m
+
+[0;32mI (7802) mb: hw: 2076[0m
+
+[0;32mI (7802) mb: Largest free block: 110592[0m
+
+[0;32mI (7812) mb: Free heap: 200892[0m
+
+[0;32mI (7812) mb: hw: 2076[0m
+
+[0;32mI (7812) mb: Largest free block: 110592[0m
+
+[0;32mI (7822) mb: Free heap: 200892[0m
+
+[0;32mI (7822) mb: hw: 2076[0m
+
+[0;32mI (7822) mb: Largest free block: 110592[0m
+
+[0;32mI (7832) mb: Free heap: 200892[0m
+
+[0;32mI (7832) mb: hw: 2076[0m
+
+[0;32mI (7832) mb: Largest free block: 110592[0m
+
+[0;32mI (7842) mb: Free heap: 200912[0m
+
+[0;32mI (7842) mb: hw: 2076[0m
+
+[0;32mI (7842) mb: Largest free block: 110592[0m
+
+[0;32mI (7842) mb: Free heap: 200892[0m
+
+[0;32mI (7852) mb: hw: 2076[0m
+
+[0;32mI (7852) mb: Largest free block: 110592[0m
+
+[0;32mI (7852) mb: Free heap: 200892[0m
+
+[0;32mI (7862) mb: hw: 2076[0m
+
+[0;32mI (7862) mb: Largest free block: 110592[0m
+
+[0;32mI (7862) mb: Free heap: 200892[0m
+
+[0;32mI (7862) mb: hw: 2076[0m
+
+[0;32mI (7872) mb: Largest free block: 110592[0m
+
+[0;32mI (7872) mb: Free heap: 200892[0m
+
+[0;32mI (7872) mb: hw: 2076[0m
+
+[0;32mI (7882) mb: Largest free block: 110592[0m
+
+[0;32mI (7882) mb: Free heap: 200892[0m
+
+[0;32mI (7882) mb: hw: 2076[0m
+
+[0;32mI (7882) mb: Largest free block: 110592[0m
+
+[0;32mI (7892) mb: Free heap: 200892[0m
+
+[0;32mI (7892) mb: hw: 2076[0m
+
+[0;32mI (7892) mb: Largest free block: 110592[0m
+
+[0;32mI (7902) mb: Free heap: 200892[0m
+
+[0;32mI (7902) mb: hw: 2076[0m
+
+[0;32mI (7902) mb: Largest free block: 110592[0m
+
+[0;32mI (7912) mb: Free heap: 200892[0m
+
+[0;32mI (7912) mb: hw: 2076[0m
+
+[0;32mI (7912) mb: Largest free block: 110592[0m
+
+[0;32mI (7912) mb: Free heap: 200892[0m
+
+[0;32mI (7922) mb: hw: 2076[0m
+
+[0;32mI (7922) mb: Largest free block: 110592[0m
+
+[0;32mI (7922) mb: Free heap: 200892[0m
+
+[0;32mI (7932) mb: hw: 2076[0m
+
+[0;32mI (7932) mb: Largest free block: 110592[0m
+
+[0;32mI (7932) mb: Free heap: 200892[0m
+
+[0;32mI (7942) mb: hw: 2076[0m
+
+[0;32mI (7942) mb: Largest free block: 110592[0m
+
+[0;32mI (7942) mb: Free heap: 200892[0m
+
+[0;32mI (7942) mb: hw: 2076[0m
+
+[0;32mI (7952) mb: Largest free block: 110592[0m
+
+[0;32mI (7952) mb: Free heap: 200892[0m
+
+[0;32mI (7952) mb: hw: 2076[0m
+
+[0;32mI (7962) mb: Largest free block: 110592[0m
+
+[0;32mI (7962) mb: Free heap: 200892[0m
+
+[0;32mI (7962) mb: hw: 2076[0m
+
+[0;32mI (7962) mb: Largest free block: 110592[0m
+
+[0;32mI (7972) mb: Free heap: 200892[0m
+
+[0;32mI (7972) mb: hw: 2076[0m
+
+[0;32mI (7972) mb: Largest free block: 110592[0m
+
+[0;32mI (7982) mb: Free heap: 200892[0m
+
+[0;32mI (7982) mb: hw: 2076[0m
+
+[0;32mI (7982) mb: Largest free block: 110592[0m
+
+[0;32mI (7992) mb: Free heap: 200892[0m
+
+[0;32mI (7992) mb: hw: 2076[0m
+
+[0;32mI (7992) mb: Largest free block: 110592[0m
+
+[0;32mI (7992) mb: Free heap: 200892[0m
+
+[0;32mI (8002) mb: hw: 2076[0m
+
+[0;32mI (8002) mb: Largest free block: 110592[0m
+
+[0;32mI (8002) mb: Free heap: 200892[0m
+
+[0;32mI (8012) mb: hw: 2076[0m
+
+[0;32mI (8012) mb: Largest free block: 110592[0m
+
+[0;32mI (8012) mb: Free heap: 200892[0m
+
+[0;32mI (8022) mb: hw: 2076[0m
+
+[0;32mI (8022) mb: Largest free block: 110592[0m
+
+[0;32mI (8022) mb: Free heap: 200892[0m
+
+[0;32mI (8022) mb: hw: 2076[0m
+
+[0;32mI (8032) mb: Largest free block: 110592[0m
+
+[0;32mI (8032) mb: Free heap: 200892[0m
+
+[0;32mI (8032) mb: hw: 2076[0m
+
+[0;32mI (8042) mb: Largest free block: 110592[0m
+
+[0;32mI (8042) mb: Free heap: 200892[0m
+
+[0;32mI (8042) mb: hw: 2076[0m
+
+[0;32mI (8042) mb: Largest free block: 110592[0m
+
+[0;32mI (8052) mb: Free heap: 200892[0m
+
+[0;32mI (8052) mb: hw: 2076[0m
+
+[0;32mI (8052) mb: Largest free block: 110592[0m
+
+[0;32mI (8062) mb: Free heap: 200892[0m
+
+[0;32mI (8062) mb: hw: 2076[0m
+
+[0;32mI (8062) mb: Largest free block: 110592[0m
+
+[0;32mI (8072) mb: Free heap: 200892[0m
+
+[0;32mI (8072) mb: hw: 2076[0m
+
+[0;32mI (8072) mb: Largest free block: 110592[0m
+
+[0;32mI (8072) mb: Free heap: 200892[0m
+
+[0;32mI (8082) mb: hw: 2076[0m
+
+[0;32mI (8082) mb: Largest free block: 110592[0m
+
+[0;32mI (8082) mb: Free heap: 200892[0m
+
+[0;32mI (8092) mb: hw: 2076[0m
+
+[0;32mI (8092) mb: Largest free block: 110592[0m
+
+[0;32mI (8092) mb: Free heap: 200892[0m
+
+[0;32mI (8092) mb: hw: 2076[0m
+
+[0;32mI (8102) mb: Largest free block: 110592[0m
+
+[0;32mI (8102) mb: Free heap: 200892[0m
+
+[0;32mI (8102) mb: hw: 2076[0m
+
+[0;32mI (8112) mb: Largest free block: 110592[0m
+
+[0;32mI (8112) mb: Free heap: 200892[0m
+
+[0;32mI (8112) mb: hw: 2076[0m
+
+[0;32mI (8112) mb: Largest free block: 110592[0m
+
+[0;32mI (8122) mb: Free heap: 200892[0m
+
+[0;32mI (8122) mb: hw: 2076[0m
+
+[0;32mI (8122) mb: Largest free block: 110592[0m
+
+[0;32mI (8132) mb: Free heap: 200892[0m
+
+[0;32mI (8132) mb: hw: 2076[0m
+
+[0;32mI (8132) mb: Largest free block: 110592[0m
+
+[0;32mI (8142) mb: Free heap: 200892[0m
+
+[0;32mI (8142) mb: hw: 2076[0m
+
+[0;32mI (8142) mb: Largest free block: 110592[0m
+
+[0;32mI (8152) mb: Free heap: 200892[0m
+
+[0;32mI (8152) mb: hw: 2076[0m
+
+[0;32mI (8152) mb: Largest free block: 110592[0m
+
+[0;32mI (8152) mb: Free heap: 200892[0m
+
+[0;32mI (8162) mb: hw: 2076[0m
+
+[0;32mI (8162) mb: Largest free block: 110592[0m
+
+[0;32mI (8162) mb: Free heap: 200892[0m
+
+[0;32mI (8172) mb: hw: 2076[0m
+
+[0;32mI (8172) mb: Largest free block: 110592[0m
+
+[0;32mI (8172) mb: Free heap: 200892[0m
+
+[0;32mI (8172) mb: hw: 2076[0m
+
+[0;32mI (8182) mb: Largest free block: 110592[0m
+
+[0;32mI (8182) mb: Free heap: 200892[0m
+
+[0;32mI (8182) mb: hw: 2076[0m
+
+[0;32mI (8192) mb: Largest free block: 110592[0m
+
+[0;32mI (8192) mb: Free heap: 200892[0m
+
+[0;32mI (8192) mb: hw: 2076[0m
+
+[0;32mI (8192) mb: Largest free block: 110592[0m
+
+[0;32mI (8202) mb: Free heap: 200892[0m
+
+[0;32mI (8202) mb: hw: 2076[0m
+
+[0;32mI (8202) mb: Largest free block: 110592[0m
+
+[0;32mI (8212) mb: Free heap: 200892[0m
+
+[0;32mI (8212) mb: hw: 2076[0m
+
+[0;32mI (8212) mb: Largest free block: 110592[0m
+
+[0;32mI (8222) mb: Free heap: 200892[0m
+
+[0;32mI (8222) mb: hw: 2076[0m
+
+[0;32mI (8222) mb: Largest free block: 110592[0m
+
+[0;32mI (8222) mb: Free heap: 200892[0m
+
+[0;32mI (8232) mb: hw: 2076[0m
+
+[0;32mI (8232) mb: Largest free block: 110592[0m
+
+[0;32mI (8232) mb: Free heap: 200892[0m
+
+[0;32mI (8242) mb: hw: 2076[0m
+
+[0;32mI (8242) mb: Largest free block: 110592[0m
+
+[0;32mI (8242) mb: Free heap: 200892[0m
+
+[0;32mI (8252) mb: hw: 2076[0m
+
+[0;32mI (8252) mb: Largest free block: 110592[0m
+
+[0;32mI (8252) mb: Free heap: 200892[0m
+
+[0;32mI (8252) mb: hw: 2076[0m
+
+[0;32mI (8262) mb: Largest free block: 110592[0m
+
+[0;32mI (8262) mb: Free heap: 200892[0m
+
+[0;32mI (8262) mb: hw: 2076[0m
+
+[0;32mI (8272) mb: Largest free block: 110592[0m
+
+[0;32mI (8272) mb: Free heap: 200892[0m
+
+[0;32mI (8272) mb: hw: 2076[0m
+
+[0;32mI (8272) mb: Largest free block: 110592[0m
+
+[0;32mI (8282) mb: Free heap: 200892[0m
+
+[0;32mI (8282) mb: hw: 2076[0m
+
+[0;32mI (8282) mb: Largest free block: 110592[0m
+
+[0;32mI (8292) mb: Free heap: 200892[0m
+
+[0;32mI (8292) mb: hw: 2076[0m
+
+[0;32mI (8292) mb: Largest free block: 110592[0m
+
+[0;32mI (8302) mb: Free heap: 200912[0m
+
+[0;32mI (8302) mb: hw: 2076[0m
+
+[0;32mI (8302) mb: Largest free block: 110592[0m
+
+[0;32mI (8302) mb: Free heap: 200892[0m
+
+[0;32mI (8312) mb: hw: 2076[0m
+
+[0;32mI (8312) mb: Largest free block: 110592[0m
+
+[0;32mI (8312) mb: Free heap: 200892[0m
+
+[0;32mI (8322) mb: hw: 2076[0m
+
+[0;32mI (8322) mb: Largest free block: 110592[0m
+
+[0;32mI (8322) mb: Free heap: 200892[0m
+
+[0;32mI (8332) mb: hw: 2076[0m
+
+[0;32mI (8332) mb: Largest free block: 110592[0m
+
+[0;32mI (8332) mb: Free heap: 200892[0m
+
+[0;32mI (8332) mb: hw: 2076[0m
+
+[0;32mI (8342) mb: Largest free block: 110592[0m
+
+[0;32mI (8342) mb: Free heap: 200892[0m
+
+[0;32mI (8342) mb: hw: 2076[0m
+
+[0;32mI (8352) mb: Largest free block: 110592[0m
+
+[0;32mI (8352) mb: Free heap: 200892[0m
+
+[0;32mI (8352) mb: hw: 2076[0m
+
+[0;32mI (8352) mb: Largest free block: 110592[0m
+
+[0;32mI (8362) mb: Free heap: 200892[0m
+
+[0;32mI (8362) mb: hw: 2076[0m
+
+[0;32mI (8362) mb: Largest free block: 110592[0m
+
+[0;32mI (8372) mb: Free heap: 200892[0m
+
+[0;32mI (8372) mb: hw: 2076[0m
+
+[0;32mI (8372) mb: Largest free block: 110592[0m
+
+[0;32mI (8382) mb: Free heap: 200912[0m
+
+[0;32mI (8382) mb: hw: 2076[0m
+
+[0;32mI (8382) mb: Largest free block: 110592[0m
+
+[0;32mI (8382) mb: Free heap: 200892[0m
+
+[0;32mI (8392) mb: hw: 2076[0m
+
+[0;32mI (8392) mb: Largest free block: 110592[0m
+
+[0;32mI (8392) mb: Free heap: 200892[0m
+
+[0;32mI (8402) mb: hw: 2076[0m
+
+[0;32mI (8402) mb: Largest free block: 110592[0m
+
+[0;32mI (8402) mb: Free heap: 200892[0m
+
+[0;32mI (8402) mb: hw: 2076[0m
+
+[0;32mI (8412) mb: Largest free block: 110592[0m
+
+[0;32mI (8412) mb: Free heap: 200892[0m
+
+[0;32mI (8412) mb: hw: 2076[0m
+
+[0;32mI (8422) mb: Largest free block: 110592[0m
+
+[0;32mI (8422) mb: Free heap: 200892[0m
+
+[0;32mI (8422) mb: hw: 2076[0m
+
+[0;32mI (8422) mb: Largest free block: 110592[0m
+
+[0;32mI (8432) mb: Free heap: 200892[0m
+
+[0;32mI (8432) mb: hw: 2076[0m
+
+[0;32mI (8432) mb: Largest free block: 110592[0m
+
+[0;32mI (8442) mb: Free heap: 200892[0m
+
+[0;32mI (8442) mb: hw: 2076[0m
+
+[0;32mI (8442) mb: Largest free block: 110592[0m
+
+[0;32mI (8452) mb: Free heap: 200892[0m
+
+[0;32mI (8452) mb: hw: 2076[0m
+
+[0;32mI (8452) mb: Largest free block: 110592[0m
+
+[0;32mI (8452) mb: Free heap: 200892[0m
+
+[0;32mI (8462) mb: hw: 2076[0m
+
+[0;32mI (8462) mb: Largest free block: 110592[0m
+
+[0;32mI (8462) mb: Free heap: 200892[0m
+
+[0;32mI (8472) mb: hw: 2076[0m
+
+[0;32mI (8472) mb: Largest free block: 110592[0m
+
+[0;32mI (8472) mb: Free heap: 200892[0m
+
+[0;32mI (8482) mb: hw: 2076[0m
+
+[0;32mI (8482) mb: Largest free block: 110592[0m
+
+[0;32mI (8482) mb: Free heap: 200892[0m
+
+[0;32mI (8482) mb: hw: 2076[0m
+
+[0;32mI (8492) mb: Largest free block: 110592[0m
+
+[0;32mI (8492) mb: Free heap: 200892[0m
+
+[0;32mI (8492) mb: hw: 2076[0m
+
+[0;32mI (8502) mb: Largest free block: 110592[0m
+
+[0;32mI (8502) mb: Free heap: 200892[0m
+
+[0;32mI (8502) mb: hw: 2076[0m
+
+[0;32mI (8502) mb: Largest free block: 110592[0m
+
+[0;32mI (8512) mb: Free heap: 200892[0m
+
+[0;32mI (8512) mb: hw: 2076[0m
+
+[0;32mI (8512) mb: Largest free block: 110592[0m
+
+[0;32mI (8522) mb: Free heap: 200892[0m
+
+[0;32mI (8522) mb: hw: 2076[0m
+
+[0;32mI (8522) mb: Largest free block: 110592[0m
+
+[0;32mI (8532) mb: Free heap: 200892[0m
+
+[0;32mI (8532) mb: hw: 2076[0m
+
+[0;32mI (8532) mb: Largest free block: 110592[0m
+
+[0;32mI (8532) mb: Free heap: 200892[0m
+
+[0;32mI (8542) mb: hw: 2076[0m
+
+[0;32mI (8542) mb: Largest free block: 110592[0m
+
+[0;32mI (8542) mb: Free heap: 200892[0m
+
+[0;32mI (8552) mb: hw: 2076[0m
+
+[0;32mI (8552) mb: Largest free block: 110592[0m
+
+[0;32mI (8552) mb: Free heap: 200892[0m
+
+[0;32mI (8562) mb: hw: 2076[0m
+
+[0;32mI (8562) mb: Largest free block: 110592[0m
+
+[0;32mI (8562) mb: Free heap: 200892[0m
+
+[0;32mI (8562) mb: hw: 2076[0m
+
+[0;32mI (8572) mb: Largest free block: 110592[0m
+
+[0;32mI (8572) mb: Free heap: 200892[0m
+
+[0;32mI (8572) mb: hw: 2076[0m
+
+[0;32mI (8582) mb: Largest free block: 110592[0m
+
+I 
+[0;32mI (8582) mb: hw: 2076[0m
+
+[0;32mI (8582) mb: Largest free block: 110592[0m
+
+[0;32mI (8592) mb: Free heap: 200892[0m
+
+[0;32mI (8592) mb: hw: 2076[0m
+
+[0;32mI (8592) mb: Largest free block: 110592[0m
+
+[0;32mI (8602) mb: Free heap: 200892[0m
+
+[0;32mI (8602) mb: hw: 2076[0m
+
+[0;32mI (8602) mb: Largest free block: 110592[0m
+
+[0;32mI (8612) mb: Free heap: 200892[0m
+
+[0;32mI (8612) mb: hw: 2076[0m
+
+[0;32mI (8612) mb: Largest free block: 110592[0m
+
+[0;32mI (8612) mb: Free heap: 200892[0m
+
+[0;32mI (8622) mb: hw: 2076[0m
+
+[0;32mI (8622) mb: Largest free block: 110592[0m
+
+[0;32mI (8622) mb: Free heap: 200892[0m
+
+[0;32mI (8632) mb: hw: 2076[0m
+
+[0;32mI (8632) mb: Largest free block: 110592[0m
+
+[0;32mI (8632) mb: Free heap: 200892[0m
+
+[0;32mI (8642) mb: hw: 2076[0m
+
+[0;32mI (8642) mb: Largest free block: 110592[0m
+
+[0;32mI (8642) mb: Free heap: 200892[0m
+
+[0;32mI (8642) mb: hw: 2076[0m
+
+[0;32mI (8652) mb: Largest free block: 110592[0m
+
+[0;32mI (8652) mb: Free heap: 200892[0m
+
+[0;32mI (8652) mb: hw: 2076[0m
+
+[0;32mI (8652) mb: Largest free block: 110592[0m
+
+[0;32mI (8662) mb: Free heap: 200892[0m
+
+[0;32mI (8662) mb: hw: 2076[0m
+
+[0;32mI (8662) mb: Largest free block: 110592[0m
+
+[0;32mI (8672) mb: Free heap: 200892[0m
+
+[0;32mI (8672) mb: hw: 2076[0m
+
+[0;32mI (8672) mb: Largest free block: 110592[0m
+
+[0;32mI (8682) mb: Free heap: 200892 2076[0m
+
+[0;32mI (8682) mb: Largest free block: 110592[0m
+
+[0;32mI (8692) mb: Free heap: 200892[0m
+
+[0;32mI (8692) mb: hw: 2076[0m
+
+[0;32mI (8692) mb: Largest free block: 110592[0m
+
+[0;32mI (8692) mb: Free heap: 200892[0m
+
+[0;32mI (8702) mb: hw: 2076[0m
+
+[0;32mI (8702) mb: Largest free block: 110592[0m
+
+[0;32mI (8702) mb: Free heap: 200892[0m
+
+[0;32mI (8712) mb: hw: 2076[0m
+
+[0;32mI (8712) mb: Largest free block: 110592[0m
+
+[0;32mI (8712) mb: Free heap: 200892[0m
+
+[0;32mI (8712) mb: hw: 2076[0m
+
+[0;32mI (8722) mb: Largest free block: 110592[0m
+
+[0;32mI (8722) mb: Free heap: 200892[0m
+
+[0;32mI (8722) mb: hw: 2076[0m
+
+[0;32mI (8732) mb: Largest free block: 110592[0m
+
+[0;32mI (8732) mb: Free heap: 200892[0m
+
+[0;32mI (8732) mb: hw: 2076[0m
+
+[0;32mI (8732) mb: Largest free block: 110592[0m
+
+[0;32mI (8742) mb: Free heap: 200892[0m
+
+[0;32mI (8742) mb: hw: 2076[0m
+
+[0;32mI (8742) mb: Largest free block: 110592[0m
+
+[0;32mI (8752) mb: Free heap: 200892[0m
+
+[0;32mI (8752) mb: hw: 2076[0m
+
+[0;32mI (8752) mb: Largest free block: 110592[0m
+
+[0;32mI (8762) mb: Free heap: 200892[0m
+
+[0;32mI (8762) mb: hw: 2076[0m
+
+[0;32mI (8762) mb: Largest free block: 110592[0m
+
+[0;32mI (8762) mb: Free heap: 200892[0m
+
+[0;32mI (8772) mb: hw: 2076[0m
+
+[0;32mI (8772) mb: Largest free block: 110592[0m
+
+[0;32mI (8772) mb: Free heap: 200892[0m
+
+[0;32mI (8782) mb: hw: 2076[0m
+
+[0;32mI (8782) mb: Largest free block: 110592[0m
+
+[0;32mI (8782) mb: Free heap: 200892[0m
+
+[0;32mI (8792) mb: hw: 2076[0m
+
+[0;32mI (8792) mb: Largest free block: 110592[0m
+
+[0;32mI (8792) mb: Free heap: 200892[0m
+
+[0;32mI (8792) mb: hw: 2076[0m
+
+[0;32mI (8802) mb: Largest free block: 110592[0m
+
+[0;32mI (8802) mb: Free heap: 200892[0m
+
+[0;32mI (8802) mb: hw: 2076[0m
+
+[0;32mI (8812) mb: Largest free block: 110592[0m
+
+[0;32mI (8812) mb: Free heap: 200892[0m
+
+[0;32mI (8812) mb: hw: 2076[0m
+
+[0;32mI (8812) mb: Largest free block: 110592[0m
+
+[0;32mI (8822) mb: Free heap: 200892[0m
+
+[0;32mI (8822) mb: hw: 2076[0m
+
+[0;32mI (8822) mb: Largest free block: 110592[0m
+
+[0;32mI (8832) mb: Free heap: 200892[0m
+
+[0;32mI (8832) mb: hw: 2076[0m
+
+[0;32mI (8832) mb: Largest free block: 110592[0m
+
+[0;32mI (8842) mb: Free heap: 200912[0m
+
+[0;32mI (8842) mb: hw: 2076[0m
+
+[0;32mI (8842) mb: Largest free block: 110592[0m
+
+[0;32mI (8842) mb: Free heap: 200892[0m
+
+[0;32mI (8852) mb: hw: 2076[0m
+
+[0;32mI (8852) mb: Largest free block: 110592[0m
+
+[0;32mI (8852) mb: Free heap: 20 Largest free block: 110592[0m
+
+[0;32mI (8862) mb: Free heap: 200892[0m
+
+[0;32mI (8872) mb: hw: 2076[0m
+
+[0;32mI (8872) mb: Largest free block: 110592[0m
+
+[0;32mI (8872) mb: Free heap: 200892[0m
+
+[0;32mI (8872) mb: hw: 2076[0m
+
+[0;32mI (8882) mb: Largest free block: 110592[0m
+
+[0;32mI (8882) mb: Free heap: 200892[0m
+
+[0;32mI (8882) mb: hw: 2076[0m
+
+[0;32mI (8892) mb: Largest free block: 110592[0m
+
+[0;32mI (8892) mb: Free heap: 200892[0m
+
+[0;32mI (8892) mb: hw: 2076[0m
+
+[0;32mI (8892) mb: Largest free block: 110592[0m
+
+[0;32mI (8902) mb: Free heap: 200892[0m
+
+[0;32mI (8902) mb: hw: 2076[0m
+
+[0;32mI (8902) mb: Largest free block: 110592[0m
+
+[0;32mI (8912) mb: Free heap: 200892[0m
+
+[0;32mI (8912) mb: hw: 2076[0m
+
+[0;32mI (8912) mb: Largest free block: 110592[0m
+
+[0;32mI (8922) mb: Free heap: 200912[0m
+
+[0;32mI (8922) mb: hw: 2076[0m
+
+[0;32mI (8922) mb: Largest free block: 110592[0m
+
+[0;32mI (8922) mb: Free heap: 200892[0m
+
+[0;32mI (8932) mb: hw: 2076[0m
+
+[0;32mI (8932) mb: Largest free block: 110592[0m
+
+[0;32mI (8932) mb: Free heap: 200892[0m
+
+[0;32mI (8942) mb: hw: 2076[0m
+
+[0;32mI (8942) mb: Largest free block: 110592[0m
+
+[0;32mI (8942) mb: Free heap: 200892[0m
+
+[0;32mI (8942) mb: hw: 2076[0m
+
+[0;32mI (8952) mb: Largest free block: 110592[0m
+
+[0;32mI (8952) mb: Free heap: 200892[0m
+
+[0;32mI (8952) mb: hw: 2076[0m
+
+[0;32mI (8962) mb: Largest free block: 110592[0m
+
+[0;32mI (8962) mb: Free heap: 200892[0m
+
+[0;32mI (8962) mb: hw: 2076[0m
+
+[0;32mI (8962) mb: Largest free block: 110592[0m
+
+[0;32mI (8972) mb: Free heap: 200892[0m
+
+[0;32mI (8972) mb: hw: 2076[0m
+
+[0;32mI (8972) mb: Largest free block: 110592[0m
+
+[0;32mI (8982) mb: Free heap: 200892[0m
+
+[0;32mI (8982) mb: hw: 2076[0m
+
+[0;32mI (8982) mb: Largest free block: 110592[0m
+
+[0;32mI (8992) mb: Free heap: 200892[0m
+
+[0;32mI (8992) mb: hw: 2076[0m
+
+[0;32mI (8992) mb: Largest free block: 110592[0m
+
+[0;32mI (9002) mb: Free heap: 200892[0m
+
+[0;32mI (9002) mb: hw: 2076[0m
+
+[0;32mI (9002) mb: Largest free block: 110592[0m
+
+[0;32mI (9002) mb: Free heap: 200892[0m
+
+[0;32mI (9012) mb: hw: 2076[0m
+
+[0;32mI (9012) mb: Largest free block: 110592[0m
+
+[0;32mI (9012) mb: Free heap: 200892[0m
+
+[0;32mI (9022) mb: hw: 2076[0m
+
+[0;32mI (9022) mb: Largest free block: 110592[0m
+
+[0;32mI (9022) mb: Free heap: 200892[0m
+
+[0;32mI (9022) mb: hw: 2076[0m
+
+[0;32mI (9032) mb: Largest free block: 110592[0m
+
+[0;32mI (9032) mb: Free heap: 200892[0m
+
+[0;32mI (9032) mb: hw: 2076[0m
+
+[0;32mI (9042) mb: Largest free block: 110592[0m
+
+[0;32mI (9042) mb: Free heap: 200892[0m
+
+[0;32mI (9042) mb: hw: 2076[0m
+
+[0;32mI (9042) mb: Largest free block: 110592[0m
+
+[0;32mI (9052) mb: Free heap: 200892[0m
+
+[0;32mI (9052) mb: hw: 2076[0m
+
+[0;32mI (9052) mb: Largest free block: 110592[0m
+
+[0;32mI (9062) mb: Free heap: 200892[0m
+
+[0;32mI (9062) mb: hw: 2076[0m
+
+[0;32mI (9062) mb: Largest free block: 110592[0m
+
+[0;32mI (9072) mb: Free heap: 200892[0m
+
+[0;32mI (9072) mb: hw: 2076[0m
+
+[0;32mI (9072) mb: Largest free block: 110592[0m
+
+[0;32mI (9072) mb: Free heap: 200892[0m
+
+[0;32mI (9082) mb: hw: 2076[0m
+
+[0;32mI (9082) mb: Largest free block: 110592[0m
+
+[0;32mI (9082) mb: Free heap: 200892[0m
+
+[0;32mI (9092) mb: hw: 2076[0m
+
+[0;32mI (9092) mb: Largest free block: 110592[0m
+
+[0;32mI (9092) mb: Free heap: 200892[0m
+
+[0;32mI (9102) mb: hw: 2076[0m
+
+[0;32mI (9102) mb: Largest free block: 110592[0m
+
+[0;32mI (9102) mb: Free heap: 200892[0m
+
+[0;32mI (9102) mb: hw: 2076[0m
+
+[0;32mI (9112) mb: Largest free block: 110592[0m
+
+[0;32mI (9112) mb: Free heap: 200892[0m
+
+[0;32mI (9112) mb: hw: 2076[0m
+
+[0;32mI (9122) mb: Largest free block: 110592[0m
+
+[0;32mI (9122) mb: Free heap: 200892[0m
+
+[0;32mI (9122) mb: hw: 2076[0m
+
+[0;32mI (9122) mb: Largest free block: 110592[0m
+
+[0;32mI (9132) mb: Free heap: 200892[0m
+
+[0;32mI (9132) mb: hw: 2076[0m
+
+[0;32mI (9132) mb: Largest free block: 110592[0m
+
+[0;32mI (9142) mb: Free heap: 200892[0m
+
+[0;32mI (9142) mb: hw: 2076[0m
+
+[0;32mI (9142) mb: Largest free block: 110592[0m
+
+[0;32mI (9152) mb: Free heap: 200892[0m
+
+[0;32mI (9152) mb: hw: 2076[0m
+
+[0;32mI (9152) mb: Largest free block: 110592[0m
+
+[0;32mI (9152) mb: Free heap: 200892[0m
+
+[0;32mI (9162) mb: hw: 2076[0m
+
+[0;32mI (9162) mb: Largest free block: 110592[0m
+
+[0;32mI (9162) mb: Free heap: 200892[0m
+
+[0;32mI (9172) mb: hw: 2076[0m
+
+[0;32mI (9172) mb: Largest free block: 110592[0m
+
+[0;32mI (9172) mb: Free heap: 200892[0m
+
+[0;32mI (9182) mb: hw: 2076[0m
+
+[0;32mI (9182) mb: Largest free block: 110592[0m
+
+[0;32mI (9182) mb: Free heap: 200892[0m
+
+[0;32mI (9182) mb: hw: 2076[0m
+
+[0;32mI (9192) mb: Largest free block: 110592[0m
+
+[0;32mI (9192) mb: Free heap: 200892[0m
+
+[0;32mI (9192) mb: hw: 2076[0m
+
+[0;32mI (9202) mb: Largest free block: 110592[0m
+
+[0;32mI (9202) mb: Free heap: 200892[0m
+
+[0;32mI (9202) mb: hw: 2076[0m
+
+[0;32mI (9202) mb: Largest free block: 110592[0m
+
+[0;32mI (9212) mb: Free heap: 200892[0m
+
+[0;32mI (9212) mb: hw: 2076[0m
+
+[0;32mI (9212) mb: Largest free block: 110592[0m
+
+[0;32mI (9222) mb: Free heap: 200892[0m
+
+[0;32mI (9222) mb: hw: 2076[0m
+
+[0;32mI (9222) mb: Largest free block: 110592[0m
+
+[0;32mI (9232) mb: Free heap: 200892[0m
+
+[0;32mI (9232) mb: hw: 2076[0m
+
+[0;32mI (9232) mb: Largest free block: 110592[0m
+
+[0;32mI (9232) mb: Free heap: 200892[0m
+
+[0;32mI (9242) mb: hw: 2076[0m
+
+[0;32mI (9242) mb: Largest free block: 110592[0m
+
+[0;32mI (9242) mb: Free heap: 200892[0m
+
+[0;32mI (9252) mb: hw: 2076[0m
+
+[0;32mI (9252) mb: Largest free block: 110592[0m
+
+[0;32mI (9252) mb: Free heap: 200892[0m
+
+[0;32mI (9252) mb: hw: 2076[0m
+
+[0;32mI (9262) mb: Largest free block: 110592[0m
+
+[0;32mI (9262) mb: Free heap: 200892[0m
+
+[0;32mI (9262) mb: hw: 2076[0m
+
+[0;32mI (9272) mb: Largest free block: 110592[0m
+
+[0;32mI (9272) mb: Free heap: 200892[0m
+
+[0;32mI (9272) mb: hw: 2076[0m
+
+[0;32mI (9272) mb: Largest free block: 110592[0m
+
+[0;32mI (9282) mb: Free heap: 200892[0m
+
+[0;32mI (9282) mb: hw: 2076[0m
+
+[0;32mI (9282) mb: Largest free block: 110592[0m
+
+[0;32mI (9292) mb: Free heap: 200892[0m
+
+[0;32mI (9292) mb: hw: 2076[0m
+
+[0;32mI (9292) mb: Largest free block: 110592[0m
+
+[0;32mI (9302) mb: Free heap: 200892[0m
+
+[0;32mI (9302) mb: hw: 2076[0m
+
+[0;32mI (9302) mb: Largest free block: 110592[0m
+
+[0;32mI (9302) mb: Free heap: 200892[0m
+
+[0;32mI (9312) mb: hw: 2076[0m
+
+[0;32mI (9312) mb: Largest free block: 110592[0m
+
+[0;32mI (9312) mb: Free heap: 200892[0m
+
+[0;32mI (9322) mb: hw: 2076[0m
+
+[0;32mI (9322) mb: Largest free block: 110592[0m
+
+[0;32mI (9322) mb: Free heap: 200892[0m
+
+[0;32mI (9332) mb: hw: 2076[0m
+
+[0;32mI (9332) mb: Largest free block: 110592[0m
+
+[0;32mI (9332) mb: Free heap: 200892[0m
+
+[0;32mI (9332) mb: hw: 2076[0m
+
+[0;32mI (9342) mb: Largest free block: 110592[0m
+
+[0;32mI (9342) mb: Free heap: 200892[0m
+
+[0;32mI (9342) mb: hw: 2076[0m
+
+[0;32mI (9352) mb: Largest free block: 110592[0m
+
+[0;32mI (9352) mb: Free heap: 200892[0m
+
+[0;32mI (9352) mb: hw: 2076[0m
+
+[0;32mI (9352) mb: Largest free block: 110592[0m
+
+[0;32mI (9362) mb: Free heap: 200892[0m
+
+[0;32mI (9362) mb: hw: 2076[0m
+
+[0;32mI (9362) mb: Largest free block: 110592[0m
+
+[0;32mI (9372) mb: Free heap: 200892[0m
+
+[0;32mI (9372) mb: hw: 2076[0m
+
+[0;32mI (9372) mb: Largest free block: 110592[0m
+
+[0;32mI (9382) mb: Free heap: 200892[0m
+
+[0;32mI (9382) mb: hw: 2076[0m
+
+[0;32mI (9382) mb: Largest free block: 110592[0m
+
+[0;32mI (9382) mb: Free heap: 200892[0m
+
+[0;32mI (9392) mb: hw: 2076[0m
+
+[0;32mI (9392) mb: Largest free block: 110592[0m
+
+[0;32mI (9392) mb: Free heap: 200892[0m
+
+[0;32mI (9402) mb: hw: 2076[0m
+
+[0;32mI (9402) mb: Largest free block: 110592[0m
+
+[0;32mI (9402) mb: Free heap: 200892[0m
+
+[0;32mI (9412) mb: hw: 2076[0m
+
+[0;32mI (9412) mb: Largest free block: 110592[0m
+
+[0;32mI (9412) mb: Free heap: 200892[0m
+
+[0;32mI (9412) mb: hw: 2076[0m
+
+[0;32mI (9422) mb: Largest free block: 110592[0m
+
+[0;32mI (9422) mb: Free heap: 200892[0m
+
+[0;32mI (9422) mb: hw: 2076[0m
+
+[0;32mI (9432) mb: Largest free block: 110592[0m
+
+[0;32mI (9432) mb: Free heap: 200892[0m
+
+[0;32mI (9432) mb: hw: 2076[0m
+
+[0;32mI (9432) mb: Largest free block: 110592[0m
+
+[0;32mI (9442) mb: Free heap: 200892[0m
+
+[0;32mI (9442) mb: hw: 2076[0m
+
+[0;32mI (9442) mb: Largest free block: 110592[0m
+
+[0;32mI (9452) mb: Free heap: 200892[0m
+
+[0;32mI (9452) mb: hw: 2076[0m
+
+[0;32mI (9452) mb: Largest free block: 110592[0m
+
+[0;32mI (9462) mb: Free heap: 200912[0m
+
+[0;32mI (9462) mb: hw: 2076[0m
+
+[0;32mI (9462) mb: Largest free block: 110592[0m
+
+[0;32mI (9462) mb: Free heap: 200892[0m
+
+[0;32mI (9472) mb: hw: 2076[0m
+
+[0;32mI (9472) mb: Largest free block: 110592[0m
+
+[0;32mI (9472) mb: Free heap: 200892[0m
+
+[0;32mI (9482) mb: hw: 2076[0m
+
+[0;32mI (9482) mb: Largest free block: 110592[0m
+
+[0;32mI (9482) mb: Free heap: 200892[0m
+
+[0;32mI (9492) mb: hw: 2076[0m
+
+[0;32mI (9492) mb: Largest free block: 110592[0m
+
+[0;32mI (9492) mb: Free heap: 200892[0m
+
+[0;32mI (9492) mb: hw: 2076[0m
+
+[0;32mI (9502) mb: Largest free block: 110592[0m
+
+[0;32mI (9502) mb: Free heap: 200892[0m
+
+[0;32mI (9502) mb: hw: 2076[0m
+
+[0;32mI (9502) mb: Largest free block: 110592[0m
+
+[0;32mI (9512) mb: Free heap: 200892[0m
+
+[0;32mI (9512) mb: hw: 2076[0m
+
+[0;32mI (9512) mb: Largest free block: 110592[0m
+
+[0;32mI (9522) mb: Free heap: 200892[0m
+
+[0;32mI (9522) mb: hw: 2076[0m
+
+[0;32mI (9522) mb: Largest free block: 110592[0m
+
+[0;32mI (9532) mb: Free heap: 200892[0m
+
+[0;32mI (9532) mb: hw: 2076[0m
+
+[0;32mI (9532) mb: Largest free block: 110592[0m
+
+[0;32mI (9542) mb: Free heap: 200912[0m
+
+[0;32mI (9542) mb: hw: 2076[0m
+
+[0;32mI (9542) mb: Largest free block: 110592[0m
+
+[0;32mI (9542) mb: Free heap: 200892[0m
+
+[0;32mI (9552) mb: hw: 2076[0m
+
+[0;32mI (9552) mb: Largest free block: 110592[0m
+
+[0;32mI (9552) mb: Free heap: 200892[0m
+
+[0;32mI (9562) mb: hw: 2076[0m
+
+[0;32mI (9562) mb: Largest free block: 110592[0m
+
+[0;32mI (9562) mb: Free heap: 200892[0m
+
+[0;32mI (9562) mb: hw: 2076[0m
+
+[0;32mI (9572) mb: Largest free block: 110592[0m
+
+[0;32mI (9572) mb: Free heap: 200892[0m
+
+[0;32mI (9572) mb: hw: 2076[0m
+
+[0;32mI (9582) mb: Largest free block: 110592[0m
+
+[0;32mI (9582) mb: Free heap: 200892[0m
+
+[0;32mI (9582) mb: hw: 2076[0m
+
+[0;32mI (9582) mb: Largest free block: 110592[0m
+
+[0;32mI (9592) mb: Free heap: 200892[0m
+
+[0;32mI (9592) mb: hw: 2076[0m
+
+[0;32mI (9592) mb: Largest free block: 110592[0m
+
+[0;32mI (9602) mb: Free heap: 200892[0m
+
+[0;32mI (9602) mb: hw: 2076[0m
+
+[0;32mI (9602) mb: Largest free block: 110592[0m
+
+[0;32mI (9612) mb: Free heap: 200892[0m
+
+[0;32mI (9612) mb: hw: 2076[0m
+
+[0;32mI (9612) mb: Largest free block: 110592[0m
+
+[0;32mI (9612) mb: Free heap: 200892[0m
+
+[0;32mI (9622) mb: hw: 2076[0m
+
+[0;32mI (9622) mb: Largest free block: 110592[0m
+
+[0;32mI (9622) mb: Free heap: 200892[0m
+
+[0;32mI (9632) mb: hw: 2076[0m
+
+[0;32mI (9632) mb: Largest free block: 110592[0m
+
+[0;32mI (9632) mb: Free heap: 200892[0m
+
+[0;32mI (9642) mb: hw: 2076[0m
+
+[0;32mI (9642) mb: Largest free block: 110592[0m
+
+[0;32mI (9642) mb: Free heap: 200892[0m
+
+[0;32mI (9642) mb: hw: 2076[0m
+
+[0;32mI (9652) mb: Largest free block: 110592[0m
+
+[0;32mI (9652) mb: Free heap: 200892[0m
+
+[0;32mI (9652) mb: hw: 2076[0m
+
+[0;32mI (9662) mb: Largest free block: 110592[0m
+
+[0;32mI (9662) mb: Free heap: 200892[0m
+
+[0;32mI (9662) mb: hw: 2076[0m
+
+[0;32mI (9662) mb: Largest free block: 110592[0m
+
+[0;32mI (9672) mb: Free heap: 200892[0m
+
+[0;32mI (9672) mb: hw: 2076[0m
+
+[0;32mI (9672) mb: Largest free block: 110592[0m
+
+[0;32mI (9682) mb: Free heap: 200892[0m
+
+[0;32mI (9682) mb: hw: 2076[0m
+
+[0;32mI (9682) mb: Largest free block: 110592[0m
+
+[0;32mI (9692) mb: Free heap: 200892[0m
+
+[0;32mI (9692) mb: hw: [0m
+[0;32mI (9692) mb: Largest free block: 110592[0m
+
+[0;32mI (9692) mb: Free heap: 200892[0m
+
+[0;32mI (9702) mb: hw: 2076[0m
+
+[0;32mI (9702) mb: Largest free block: 110592[0m
+
+[0;32mI (9702) mb: Free heap: 200892[0m
+
+[0;32mI (9712) mb: hw: 2076[0m
+
+[0;32mI (9712) mb: Largest free block: 110592[0m
+
+[0;32mI (9712) mb: Free heap: 200892[0m
+
+[0;32mI (9722) mb: hw: 2076[0m
+
+[0;32mI (9722) mb: Largest free block: 110592[0m
+
+[0;32mI (9722) mb: Free heap: 200892[0m
+
+[0;32mI (9722) mb: hw: 2076[0m
+
+[0;32mI (9732) mb: Largest free block: 110592[0m
+
+[0;32mI (9732) mb: Free heap: 200892[0m
+
+[0;32mI (9732) mb: hw: 2076[0m
+
+[0;32mI (9742) mb: Largest free block: 110592[0m
+
+[0;32mI (9742) mb: Free heap: 200892[0m
+
+[0;32mI (9742) mb: hw: 2076[0m
+
+[0;32mI (9742) mb: Largest free block: 110592[0m
+
+[0;32mI (9752) mb: Free heap: 200892[0m
+
+[0;32mI (9752) mb: hw: 2076[0m
+
+[0;32mI (9752) mb: Largest free block: 110592[0m
+
+[0;32mI (9762) mb: Free heap: 200892[0m
+
+[0;32mI (9762) mb: hw: 2076[0m
+
+[0;32mI (9762) mb: Largest free block: 110592[0m
+
+[0;32mI (9772) mb: Free heap: 200892[0m
+
+[0;32mI (9772) mb: hw: 2076[0m
+
+[0;32mI (9772) mb: Largest free block: 110592[0m
+
+[0;32mI (9772) mb: Free heap: 200892[0m
+
+[0;32mI (9782) mb: hw: 2076[0m
+
+[0;32mI (9782) mb: Largest free block: 110592[0m
+
+[0;32mI (9782) mb: Free heap: 200892[0m
+
+[0;32mI (9792) mb: hw: 2076[0m
+
+[0;32mI (9792) mb: Largest free block: 110592[0m
+
+[0;32mI (9792) mb: Free heap: 200892[0m
+
+[0;32mI (9792) mb: hw: 2076[0m
+
+[0;32mI (9802) mb: Largest free block: 110592[0m
+
+[0;32mI (9802) mb: Free heap: 200892[0m
+
+[0;32mI (9802) mb: hw: 2076[0m
+
+[0;32mI (9812) mb: Largest free block: 110592[0m
+
+[0;32mI (9812) mb: Free heap: 200892[0m
+
+[0;32mI (9812) mb: hw: 2076[0m
+
+[0;32mI (9812) mb: Largest free block: 110592[0m
+
+[0;32mI (9822) mb: Free heap: 200892[0m
+
+[0;32mI (9822) mb: hw: 2076[0m
+
+[0;32mI (9822) mb: Largest free block: 110592[0m
+
+[0;32mI (9832) mb: Free heap: 200892[0m
+
+[0;32mI (9832) mb: hw: 2076[0m
+
+[0;32mI (9832) mb: Largest free block: 110592[0m
+
+[0;32mI (9842) mb: Free heap: 200892[0m
+
+[0;32mI (9842) mb: hw: 2076[0m
+
+[0;32mI (9842) mb: Largest free block: 110592[0m
+
+[0;32mI (9852) mb: Free heap: 200892[0m
+
+[0;32mI (9852) mb: hw: 2076[0m
+
+[0;32mI (9852) mb: Largest free block: 110592[0m
+
+[0;32mI (9852) mb: Free heap: 200892[0m
+
+[0;32mI (9862) mb: hw: 2076[0m
+
+[0;32mI (9862) mb: Largest free block: 110592[0m
+
+[0;32mI (9862) mb: Free heap: 200892[0m
+
+[0;32mI (9872) mb: hw: 2076[0m
+
+[0;32mI (9872) mb: Largest free block: 110592[0m
+
+[0;32mI (9872) mb: Free heap: 200892[0m
+
+[0;32mI (9872) mb: hw: 2076[0m
+
+[0;32mI (9882) mb: Largest free block: 110592[0m
+
+[0;32mI (9882) mb: Free heap: 200892[0m
+
+[0;32mI (9882) mb: hw: 2076[0m
+
+[0;32mI (9892) mb: Largest free block: 110592[0m
+
+[0;32mI (9892) mb: Free heap: 200892[0m
+
+[0;32mI (9892) mb: hw: 2076[0m
+
+[0;32mI (9892) mb: Largest free block: 110592[0m
+
+[0;32mI (9902) mb: Free heap: 200892[0m
+
+[0;32mI (9902) mb: hw: 2076[0m
+
+[0;32mI (9902) mb: Largest free block: 110592[0m
+
+[0;32mI (9912) mb: Free heap: 200892[0m
+
+[0;32mI (9912) mb: hw: 2076[0m
+
+[0;32mI (9912) mb: Largest free block: 110592[0m
+
+[0;32mI (9922) mb: Free heap: 200892[0m
+
+[0;32mI (9922) mb: hw: 2076[0m
+
+[0;32mI (9922) mb: Largest free block: 110592[0m
+
+[0;32mI (9922) mb: Free heap: 200892[0m
+
+[0;32mI (9932) mb: hw: 2076[0m
+
+[0;32mI (9932) mb: Largest free block: 110592[0m
+
+[0;32mI (9932) mb: Free heap: 200892[0m
+
+[0;32mI (9942) mb: hw: 2076[0m
+
+[0;32mI (9942) mb: Largest free block: 110592[0m
+
+[0;32mI (9942) mb: Free heap: 200892[0m
+
+[0;32mI (9952) mb: hw: 2076[0m
+
+[0;32mI (9952) mb: Largest free block: 110592[0m
+
+[0;32mI (9952) mb: Free heap: 200892[0m
+
+[0;32mI (9952) mb: hw: 2076[0m
+
+[0;32mI (9962) mb: Largest free block: 110592[0m
+
+[0;32mI (9962) mb: Free heap: 200892[0m
+
+[0;32mI (9962) mb: hw: 2076[0m
+
+[0;32mI (9972) mb: Largest free block: 110592[0m
+
+[0;32mI (9972) mb: Free heap: 200892[0m
+
+[0;32mI (9972) mb: hw: 2076[0m
+
+[0;32mI (9972) mb: Largest free block: 110592[0m
+
+[0;32mI (9982) mb: Free heap: 200892[0m
+
+[0;32mI (9982) mb: hw: 2076[0m
+
+[0;32mI (9982) mb: Largest free block: 110592[0m
+
+[0;32mI (9992) mb: Free heap: 200892[0m
+
+[0;32mI (9992) mb: hw: 2076[0m
+
+[0;32mI (9992) mb: Largest free block: 110592[0m
+
+[0;32mI (10002) mb: Free heap: 201040[0m
+
+[0;32mI (10002) mb: hw: 2076[0m
+
+[0;32mI (10002) mb: Largest free block: 110592[0m
+
+[0;32mI (10002) mb: Free heap: 200892[0m
+
+[0;32mI (10012) mb: hw: 2076[0m
+
+[0;32mI (10012) mb: Largest free block: 110592[0m
+
+[0;32mI (10012) mb: Free heap: 200892[0m
+
+[0;32mI (10022) mb: hw: 2076[0m
+
+[0;32mI (10022) mb: Largest free block: 110592[0m
+
+[0;32mI (10022) mb: Free heap: 200892[0m
+
+[0;32mI (10032) mb: hw: 2076[0m
+
+[0;32mI (10032) mb: Largest free block: 110592[0m
+
+[0;32mI (10032) mb: Free heap: 200892[0m
+
+[0;32mI (10042) mb: hw: 2076[0m
+
+[0;32mI (10042) mb: Largest free block: 110592[0m
+
+[0;32mI (10042) mb: Free heap: 200892[0m
+
+[0;32mI (10042) mb: hw: 2076[0m
+
+[0;32mI (10052) mb: Largest free block: 110592[0m
+
+[0;32mI (10052) mb: Free heap: 200892[0m
+
+[0;32mI (10052) mb: hw: 2076[0m
+
+[0;32mI (10062) mb: Largest free block: 110592[0m
+
+[0;32mI (10062) mb: Free heap: 200892[0m
+
+[0;32mI (10062) mb: hw: 2076[0m
+
+[0;32mI (10062) mb: Largest free block: 110592[0m
+
+[0;32mI (10072) mb: Free heap: 200892[0m
+
+[0;32mI (10072) mb: hw: 2076[0m
+
+[0;32mI (10072) mb: Largest free block: 110592[0m
+
+[0;32mI (10082) mb: Free heap: 200892[0m
+
+[0;32mI (10082) mb: hw: 2076[0m
+
+[0;32mI (10082) mb: Largest free block: 110592[0m
+
+[0;32mI (10092) mb: Free heap: 200892[0m
+
+[0;32mI (10092) mb: hw: 2076[0m
+
+[0;32mI (10092) mb: Largest free block: 110592[0m
+
+[0;32mI (10102) mb: Free heap: 200892[0m
+
+[0;32mI (10102) mb: hw: 2076[0m
+
+[0;32mI (10102) mb: Largest free block: 110592[0m
+
+[0;32mI (10102) mb: Free heap: 200892[0m
+
+[0;32mI (10112) mb: hw: 2076[0m
+
+[0;32mI (10112) mb: Largest free block: 110592[0m
+
+[0;32mI (10112) mb: Free heap: 200892[0m
+
+[0;32mI (10122) mb: hw: 2076[0m
+
+[0;32mI (10122) mb: Largest free block: 110592[0m
+
+[0;32mI (10122) mb: Free heap: 200892[0m
+
+[0;32mI (10132) mb: hw: 2076[0m
+
+[0;32mI (10132) mb: Largest free block: 110592[0m
+
+[0;32mI (10132) mb: Free heap: 200892[0m
+
+[0;32mI (10142) mb: hw: 2076[0m
+
+[0;32mI (10142) mb: Largest free block: 110592[0m
+
+[0;32mI (10142) mb: Free heap: 200892[0m
+
+[0;32mI (10142) mb: hw: 2076[0m
+
+[0;32mI (10152) mb: Largest free block: 110592[0m
+
+[0;32mI (10152) mb: Free heap: 200892[0m
+
+[0;32mI (10152) mb: hw: 2076[0m
+
+[0;32mI (10162) mb: Largest free block: 110592[0m
+
+[0;32mI (10162) mb: Free heap: 200892[0m
+
+[0;32mI (10162) mb: hw: 2076[0m
+
+[0;32mI (10162) mb: Largest free block: 110592[0m
+
+[0;32mI (10172) mb: Free heap: 200892[0m
+
+[0;32mI (10172) mb: hw: 2076[0m
+
+[0;32mI (10172) mb: Largest free block: 110592[0m
+
+[0;32mI (10182) mb: Free heap: 200892[0m
+
+[0;32mI (10182) mb: hw: 2076[0m
+
+[0;32mI (10182) mb: Largest free block: 110592[0m
+
+[0;32mI (10192) mb: Free heap: 200892[0m
+
+[0;32mI (10192) mb: hw: 2076[0m
+
+[0;32mI (10192) mb: Largest free block: 110592[0m
+
+[0;32mI (10202) mb: Free heap: 200892[0m
+
+[0;32mI (10202) mb: hw: 2076[0m
+
+[0;32mI (10202) mb: Largest free block: 110592[0m
+
+[0;32mI (10212) mb: Free heap: 200892[0m
+
+[0;32mI (10212) mb: hw: 2076[0m
+
+[0;32mI (10212) mb: Largest free block: 110592[0m
+
+[0;32mI (10212) mb: Free heap: 200892[0m
+
+[0;32mI (10222) mb: hw: 2076[0m
+
+[0;32mI (10222) mb: Largest free block: 110592[0m
+
+[0;32mI (10222) mb: Free heap: 200892[0m
+
+[0;32mI (10232) mb: hw: 2076[0m
+
+[0;32mI (10232) mb: Largest free block: 110592[0m
+
+[0;32mI (10232) mb: Free heap: 200892[0m
+
+[0;32mI (10242) mb: hw: 2076[0m
+
+[0;32mI (10242) mb: Largest free block: 110592[0m
+
+[0;32mI (10242) mb: Free heap: 200892[0m
+
+[0;32mI (10242) mb: hw: 2076[0m
+
+[0;32mI (10252) mb: Largest free block: 110592[0m
+
+[0;32mI (10252) mb: Free heap: 200892[0m
+
+[0;32mI (10252) mb: hw: 2076[0m
+
+[0;32mI (10262) mb: Largest free block: 110592[0m
+
+[0;32mI (10262) mb: Free heap: 200892[0m
+
+[0;32mI (10262) mb: hw: 2076[0m
+
+[0;32mI (10272) mb: Largest free block: 110592[0m
+
+[0;32mI (10272) mb: Free heap: 200892[0m
+
+[0;32mI (10272) mb: hw: 2076[0m
+
+[0;32mI (10272) mb: Largest free block: 110592[0m
+
+[0;32mI (10282) mb: Free heap: 200892[0m
+
+[0;32mI (10282) mb: hw: 2076[0m
+
+[0;32mI (10282) mb: Largest free block: 110592[0m
+
+[0;32mI (10292) mb: Free heap: 200892[0m
+
+[0;32mI (10292) mb: hw: 2076[0m
+
+[0;32mI (10292) mb: Largest free block: 110592[0m
+
+[0;32mI (10302) mb: Free heap: 200892[0m
+
+[0;32mI (10302) mb: hw: 2076[0m
+
+[0;32mI (10302) mb: Largest free block: 110592[0m
+
+[0;32mI (10312) mb: Free heap: 200892[0m
+
+[0;32mI (10312) mb: hw: 2076[0m
+
+[0;32mI (10312) mb: Largest free block: 110592[0m
+
+[0;32mI (10312) mb: Free heap: 200892[0m
+
+[0;32mI (10322) mb: hw: 2076[0m
+
+[0;32mI (10322) mb: Largest free block: 110592[0m
+
+[0;32mI (10322) mb: Free heap: 200892[0m
+
+[0;32mI (10332) mb: hw: 2076[0m
+
+[0;32mI (10332) mb: Largest free block: 110592[0m
+
+[0;32mI (10332) mb: Free heap: 200892[0m
+
+[0;32mI (10342) mb: hw: 2076[0m
+
+[0;32mI (10342) mb: Largest free block: 110592[0m
+
+[0;32mI (10342) mb: Free heap: 200892[0m
+
+[0;32mI (10352) mb: hw: 2076[0m
+
+[0;32mI (10352) mb: Largest free block: 110592[0m
+
+[0;32mI (10352) mb: Free heap: 200892[0m
+
+[0;32mI (10352) mb: hw: 2076[0m
+
+[0;32mI (10362) mb: Largest free block: 110592[0m
+
+[0;32mI (10362) mb: Free heap: 200892[0m
+
+[0;32mI (10362) mb: hw: 2076[0m
+
+[0;32mI (10372) mb: Largest free block: 110592[0m
+
+[0;32mI (10372) mb: Free heap: 200892[0m
+
+[0;32mI (10372) mb: hw: 2076[0m
+
+[0;32mI (10372) mb: Largest free block: 110592[0m
+
+[0;32mI (10382) mb: Free heap: 200892[0m
+
+[0;32mI (10382) mb: hw: 2076[0m
+
+[0;32mI (10382) mb: Largest free block: 110592[0m
+
+[0;32mI (10392) mb: Free heap: 200892[0m
+
+[0;32mI (10392) mb: hw: 2076[0m
+
+[0;32mI (10392) mb: Largest free block: 110592[0m
+
+[0;32mI (10402) mb: Free heap: 200892[0m
+
+[0;32mI (10402) mb: hw: 2076[0m
+
+[0;32mI (10402) mb: Largest free block: 110592[0m
+
+[0;32mI (10412) mb: Free heap: 200892[0m
+
+[0;32mI (10412) mb: hw: 2076[0m
+
+[0;32mI (10412) mb: Largest free block: 110592[0m
+
+[0;32mI (10412) mb: Free heap: 200892[0m
+
+[0;32mI (10422) mb: hw: 2076[0m
+
+[0;32mI (10422) mb: Largest free block: 110592[0m
+
+[0;32mI (10422) mb: Free heap: 200892[0m
+
+[0;32mI (10432) mb: hw: 2076[0m
+
+[0;32mI (10432) mb: Largest free block: 110592[0m
+
+[0;32mI (10432) mb: Free heap: 200892[0m
+
+[0;32mI (10442) mb: hw: 2076[0m
+
+[0;32mI (10442) mb: Largest free block: 110592[0m
+
+[0;32mI (10442) mb: Free heap: 200892[0m
+
+[0;32mI (10452) mb: hw: 2076[0m
+
+[0;32mI (10452) mb: Largest free block: 110592[0m
+
+[0;32mI (10452) mb: Free heap: 200892[0m
+
+[0;32mI (10452) mb: hw: 2076[0m
+
+[0;32mI (10462) mb: Largest free block: 110592[0m
+
+[0;32mI (10462) mb: Free heap: 200892[0m
+
+[0;32mI (10462) mb: hw: 2076[0m
+
+[0;32mI (10472) mb: Largest free block: 110592[0m
+
+[0;32mI (10472) mb: Free heap: 200892[0m
+
+[0;32mI (10472) mb: hw: 2076[0m
+
+[0;32mI (10472) mb: Largest free block: 110592[0m
+
+[0;32mI (10482) mb: Free heap: 200892[0m
+
+[0;32mI (10482) mb: hw: 2076[0m
+
+[0;32mI (10482) mb: Largest free block: 110592[0m
+
+[0;32mI (10492) mb: Free heap: 200892[0m
+
+[0;32mI (10492) mb: hw: 2076[0m
+
+[0;32mI (10492) mb: Largest free block: 110592[0m
+
+[0;32mI (10502) mb: Free heap: 200892[0m
+
+[0;32mI (10502) mb: hw: 2076[0m
+
+[0;32mI (10502) mb: Largest free block: 110592[0m
+
+[0;32mI (10512) mb: Free heap: 200892[0m
+
+[0;32mI (10512) mb: hw: 2076[0m
+
+[0;32mI (10512) mb: Largest free block: 110592[0m
+
+[0;32mI (10522) mb: Free heap: 200912[0m
+
+[0;32mI (10522) mb: hw: 2076[0m
+
+[0;32mI (10522) mb: Largest free block: 110592[0m
+
+[0;32mI (10522) mb: Free heap: 200892[0m
+
+[0;32mI (10532) mb: hw: 2076[0m
+
+[0;32mI (10532) mb: Largest free block: 110592[0m
+
+[0;32mI (10532) mb: Free heap: 200892[0m
+
+[0;32mI (10542) mb: hw: 2076[0m
+
+[0;32mI (10542) mb: Largest free block: 110592[0m
+
+[0;32mI (10542) mb: Free heap: 200892[0m
+
+[0;32mI (10552) mb: hw: 2076[0m
+
+[0;32mI (10552) mb: Largest free block: 110592[0m
+
+[0;32mI (10552) mb: Free heap: 200892[0m
+
+[0;32mI (10552) mb: hw: 2076[0m
+
+[0;32mI (10562) mb: Largest free block: 110592[0m
+
+[0;32mI (10562) mb: Free heap: 200892[0m
+
+[0;32mI (10562) mb: hw: 2076[0m
+
+[0;32mI (10572) mb: Largest free block: 110592[0m
+
+[0;32mI (10572) mb: Free heap: 200892[0m
+
+[0;32mI (10572) mb: hw: 2076[0m
+
+[0;32mI (10582) mb: Largest free block: 110592[0m
+
+[0;32mI (10582) mb: Free heap: 200892[0m
+
+[0;32mI (10582) mb: hw: 2076[0m
+
+[0;32mI (10582) mb: Largest free block: 110592[0m
+
+[0;32mI (10592) mb: Free heap: 200892[0m
+
+[0;32mI (10592) mb: hw: 2076[0m
+
+[0;32mI (10592) mb: Largest free block: 110592[0m
+
+[0;32mI (10602) mb: Free heap: 200892[0m
+
+[0;32mI (10602) mb: hw: 2076[0m
+
+[0;32mI (10602) mb: Largest free block: 110592[0m
+
+[0;32mI (10612) mb: Free heap: 200892[0m
+
+[0;32mI (10612) mb: hw: 2076[0m
+
+[0;32mI (10612) mb: Largest free block: 110592[0m
+
+[0;32mI (10622) mb: Free heap: 200912[0m
+
+[0;32mI (10622) mb: hw: 2076[0m
+
+[0;32mI (10622) mb: Largest free block: 110592[0m
+
+[0;32mI (10622) mb: Free heap: 200892[0m
+
+[0;32mI (10632) mb: hw: 2076[0m
+
+[0;32mI (10632) mb: Largest free block: 110592[0m
+
+[0;32mI (10632) mb: Free heap: 200892[0m
+
+[0;32mI (10642) mb: hw: 2076[0m
+
+[0;32mI (10642) mb: Largest free block: 110592[0m
+
+[0;32mI (10642) mb: Free heap: 200892[0m
+
+[0;32mI (10652) mb: hw: 2076[0m
+
+[0;32mI (10652) mb: Largest free block: 110592[0m
+
+[0;32mI (10652) mb: Free heap: 200892[0m
+
+[0;32mI (10652) mb: hw: 2076[0m
+
+[0;32mI (10662) mb: Largest free block: 110592[0m
+
+[0;32mI (10662) mb: Free heap: 200892[0m
+
+[0;32mI (10662) mb: hw: 2block: 110592[0m
+
+[0;32mI (10672) mb: Free heap: 200892[0m
+
+[0;32mI (10672) mb: hw: 2076[0m
+
+[0;32mI (10682) mb: Largest free block: 110592[0m
+
+[0;32mI (10682) mb: Free heap: 200892[0m
+
+[0;32mI (10682) mb: hw: 2076[0m
+
+[0;32mI (10682) mb: Largest free block: 110592[0m
+
+[0;32mI (10692) mb: Free heap: 200892[0m
+
+[0;32mI (10692) mb: hw: 2076[0m
+
+[0;32mI (10692) mb: Largest free block: 110592[0m
+
+[0;32mI (10702) mb: Free heap: 200892[0m
+
+[0;32mI (10702) mb: hw: 2076[0m
+
+[0;32mI (10702) mb: Largest free block: 110592[0m
+
+[0;32mI (10712) mb: Free heap: 200892[0m
+
+[0;32mI (10712) mb: hw: 2076[0m
+
+[0;32mI (10712) mb: Largest free block: 110592[0m
+
+[0;32mI (10722) mb: Free heap: 200912[0m
+
+[0;32mI (10722) mb: hw: 2076[0m
+
+[0;32mI (10722) mb: Largest free block: 110592[0m
+
+[0;32mI (10722) mb: Free heap: 200892[0m
+
+[0;32mI (10732) mb: hw: 2076[0m
+
+[0;32mI (10732) mb: Largest free block: 110592[0m
+
+[0;32mI (10732) mb: Free heap: 200892[0m
+
+[0;32mI (10742) mb: hw: 2076[0m
+
+[0;32mI (10742) mb: Largest free block: 110592[0m
+
+[0;32mI (10742) mb: Free heap: 200892[0m
+
+[0;32mI (10752) mb: hw: 2076[0m
+
+[0;32mI (10752) mb: Largest free block: 110592[0m
+
+[0;32mI (10752) mb: Free heap: 200892[0m
+
+[0;32mI (10762) mb: hw: 2076[0m
+
+[0;32mI (10762) mb: Largest free block: 110592[0m
+
+[0;32mI (10762) mb: Free heap: 200892[0m
+
+[0;32mI (10762) mb: hw: 2076[0m
+
+[0;32mI (10772) mb: Largest free block: 110592[0m
+
+[0;32mI (10772) mb: Free heap: 200892[0m
+
+[0;32mI (10772) mb: hw: 2076[0m
+
+[0;32mI (10782) mb: Largest free block: 110592[0m
+
+[0;32mI (10782) mb: Free heap: 200892[0m
+
+[0;32mI (10782) mb: hw: 2076[0m
+
+[0;32mI (10782) mb: Largest free block: 110592[0m
+
+[0;32mI (10792) mb: Free heap: 200892[0m
+
+[0;32mI (10792) mb: hw: 2076[0m
+
+[0;32mI (10792) mb: Largest free block: 110592[0m
+
+[0;32mI (10802) mb: Free heap: 200892[0m
+
+[0;32mI (10802) mb: hw: 2076[0m
+
+[0;32mI (10802) mb: Largest free block: 110592[0m
+
+[0;32mI (10812) mb: Free heap: 200892[0m
+
+[0;32mI (10812) mb: hw: 2076[0m
+
+[0;32mI (10812) mb: Largest free block: 110592[0m
+
+[0;32mI (10822) mb: Free heap: 200912[0m
+
+[0;32mI (10822) mb: hw: 2076[0m
+
+[0;32mI (10822) mb: Largest free block: 110592[0m
+
+[0;32mI (10832) mb: Free heap: 200892[0m
+
+[0;32mI (10832) mb: hw: 2076[0m
+
+[0;32mI (10832) mb: Largest free block: 110592[0m
+
+[0;32mI (10832) mb: Free heap: 200892[0m
+
+[0;32mI (10842) mb: hw: 2076[0m
+
+[0;32mI (10842) mb: Largest free block: 110592[0m
+
+[0;32mI (10842) mb: Free heap: 200892[0m
+
+[0;32mI (10852) mb: hw: 2076[0m
+
+[0;32mI (10852) mb: Largest free block: 110592[0m
+
+[0;32mI (10852) mb: Free heap: 200892[0m
+
+[0;32mI (10862) mb: hw: 2076[0m
+
+[0;32mI (10862) mb: Largest free block: 110592[0m
+
+[0;32mI (10862) mb: Free heap: 200892[0m
+
+[0;32mI (10862) mb: hw: 2076[0m
+
+[0;32mI (10872) mb: Largest free block: 110592[0m
+
+[0;32mI (10872) mb: Free heap: 200892[0m
+
+[0;32mI (10872) mb: hw: 2076[0m
+
+[0;32mI (10882) mb: Largest free block: 110592[0m
+
+[0;32mI (10882) mb: Free heap: 200892[0m
+
+[0;32mI (10882) mb: hw: 2076[0m
+
+[0;32mI (10892) mb: Largest free block: 110592[0m
+
+[0;32mI (10892) mb: Free heap: 200892[0m
+
+[0;32mI (10892) mb: hw: 2076[0m
+
+[0;32mI (10892) mb: Largest free block: 110592[0m
+
+[0;32mI (10902) mb: Free heap: 200892[0m
+
+[0;32mI (10902) mb: hw: 2076[0m
+
+[0;32mI (10902) mb: Largest free block: 110592[0m
+
+[0;32mI (10912) mb: Free heap: 200892[0m
+
+[0;32mI (10912) mb: hw: 2076[0m
+
+[0;32mI (10912) mb: Largest free block: 110592[0m
+
+[0;32mI (10922) mb: Free heap: 200892[0m
+
+[0;32mI (10922) mb: hw: 2076[0m
+
+[0;32mI (10922) mb: Largest free block: 110592[0m
+
+[0;32mI (10932) mb: Free heap: 200892[0m
+
+[0;32mI (10932) mb: hw: 2076[0m
+
+[0;32mI (10932) mb: Largest free block: 110592[0m
+
+[0;32mI (10932) mb: Free heap: 200892[0m
+
+[0;32mI (10942) mb: hw: 2076[0m
+
+[0;32mI (10942) mb: Largest free block: 110592[0m
+
+[0;32mI (10942) mb: Free heap: 200892[0m
+
+[0;32mI (10952) mb: hw: 2076[0m
+
+[0;32mI (10952) mb: Largest free block: 110592[0m
+
+[0;32mI (10952) mb: Free heap: 200892[0m
+
+[0;32mI (10962) mb: hw: 2076[0m
+
+[0;32mI (10962) mb: Largest free block: 110592[0m
+
+[0;32mI (10962) mb: Free heap: 200892[0m
+
+[0;32mI (10962) mb: hw: 2076[0m
+
+[0;32mI (10972) mb: Largest free block: 110592[0m
+
+[0;32mI (10972) mb: Free heap: 200892[0m
+
+[0;32mI (10972) mb: hw: 2076[0m
+
+[0;32mI (10982) mb: Largest free block: 110592[0m
+
+[0;32mI (10982) mb: Free heap: 200892[0m
+
+[0;32mI (10982) mb: hw: 2076[0m
+
+[0;32mI (10992) mb: Largest free block: 110592[0m
+
+[0;32mI (10992) mb: Free heap: 200892[0m
+
+[0;32mI (10992) mb: hw: 2076[0m
+
+[0;32mI (10992) mb: Largest free block: 110592[0m
+
+[0;32mI (11002) mb: Free heap: 200892[0m
+
+[0;32mI (11002) mb: hw: 2076[0m
+
+[0;32mI (11002) mb: Largest free block: 110592[0m
+
+[0;32mI (11012) mb: Free heap: 200892[0m
+
+[0;32mI (11012) mb: hw: 2076[0m
+
+[0;32mI (11012) mb: Largest free block: 110592[0m
+
+[0;32mI (11022) mb: Free heap: 200892[0m
+
+[0;32mI (11022) mb: hw: 2076[0m
+
+[0;32mI (11022) mb: Largest free block: 110592[0m
+
+[0;32mI (11032) mb: Free heap: 200892[0m
+
+[0;32mI (11032) mb: hw: 2076[0m
+
+[0;32mI (11032) mb: Largest free block: 110592[0m
+
+[0;32mI (11032) mb: Free heap: 200892[0m
+
+[0;32mI (11042) mb: hw: 2076[0m
+
+[0;32mI (11042) mb: Largest free block: 110592[0m
+
+[0;32mI (11042) mb: Free heap: 200892[0m
+
+[0;32mI (11052) mb: hw: 2076[0m
+
+[0;32mI (11052) mb: Largest free block: 110592[0m
+
+[0;32mI (11052) mb: Free heap: 200892[0m
+
+[0;32mI (11062) mb: hw: 2076[0m
+
+[0;32mI (11062) mb: Largest free block: 110592[0m
+
+[0;32mI (11062) mb: Free heap: 200892[0m
+
+[0;32mI (11072) mb: hw: 2076[0m
+
+[0;32mI (11072) mb: Largest free block: 110592[0m
+
+[0;32mI (11072) mb: Free heap: 200892[0m
+
+[0;32mI (11072) mb: hw: 2076[0m
+

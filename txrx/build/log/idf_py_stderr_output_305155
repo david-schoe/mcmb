@@ -1,0 +1,294 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/davey_schoe/esp/mcmb/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081384: call_start_cpu1 at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/port/cpu_start.c:191
+[0m
+[0;33m--- 0x400d3264: __esp_system_init_fn_init_efuse_check at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_startup.c:37
+[0m
+[0;33m--- 0x400d378c: __esp_system_init_fn_init_show_cpu_freq at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:64
+[0m
+[0;33m--- 0x400d3278: __esp_system_init_fn_init_efuse_show_app_info at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_startup.c:47
+[0m
+[0;33m--- 0x400d5240: __esp_system_init_fn_init_heap at /home/davey_schoe/esp/mcmb/esp-idf/components/heap/heap_caps_init.c:25
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/davey_schoe/esp/mcmb/esp-idf/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/davey_schoe/esp/mcmb/esp-idf/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m--- 0x400d6964: __esp_system_init_fn_esp_timer_init_nonos at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_timer/src/esp_timer_init.c:28
+[0m
+[0;33m--- 0x400d636c: __esp_system_init_fn_init_libc at /home/davey_schoe/esp/mcmb/esp-idf/components/newlib/src/init.c:12
+[0m
+[0;33m--- 0x400d37d0: __esp_system_init_fn_init_brownout at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:79
+[0m
+[0;33m--- 0x400d37dc: __esp_system_init_fn_init_newlib_time at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:100
+[0m
+[0;33m--- 0x400d7c5c: __esp_system_init_fn_init_vfs_uart at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_uart/src/uart_vfs.c:1148
+[0m
+[0;33m--- 0x400d9e78: __esp_system_init_fn_init_vfs_nullfs at /home/davey_schoe/esp/mcmb/esp-idf/components/vfs/nullfs.c:322
+[0m
+[0;33m--- 0x400d8688: __esp_system_init_fn_init_vfs_console at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_vfs_console/vfs_console.c:271
+[0m
+[0;33m--- 0x400d6378: __esp_system_init_fn_init_libc_stdio at /home/davey_schoe/esp/mcmb/esp-idf/components/newlib/src/init.c:18
+[0m
+[0;33m--- 0x400d37e8: __esp_system_init_fn_init_flash at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:107
+[0m
+[0;33m--- 0x400d3304: __esp_system_init_fn_init_efuse at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_startup.c:158
+[0m
+[0;33m--- 0x40145128: _GLOBAL__sub_I__ZN17__eh_globals_init7_S_initE at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_globals.cc:162
+[0m
+[0;33m--- 0x400f8e74: s_set_default_wifi_log_level at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_wifi/src/wifi_init.c:93
+[0m
+[0;33m--- 0x400e607c: _GLOBAL__sub_I__ZN3nvs4PageC2Ev at /home/davey_schoe/esp/mcmb/esp-idf/components/nvs_flash/src/nvs_page.cpp:1158
+[0m
+[0;33m--- 0x40089c7c: enable_timer_group0_for_calibration at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:197
+[0m
+[0;33m--- 0x400d475c: esp_ipc_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/esp_ipc.c:107
+[0m
+[0;33m--- 0x400e3018: __esp_system_init_fn_esp_timer_init_os at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_timer/src/esp_timer.c:566
+[0m
+[0;33m--- 0x401591c4: __esp_system_init_fn_esp_security_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_security/src/init.c:38
+[0m
+[0;33m--- 0x400d3818: __esp_system_init_fn_init_disable_rtc_wdt at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:164
+[0m
+[0;33m--- 0x400f6748: esp_netif_new_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:712
+[0m
+[0;33m--- 0x400f6748: esp_netif_new_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:712
+[0m
+[0;33m--- 0x400f633c: esp_netif_dhcps_stop_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1638
+[0m
+[0;33m--- 0x400f6c60: esp_netif_set_ip_info_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1889
+[0m
+[0;33m--- 0x400f61c8: esp_netif_dhcps_start_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1597
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400f90d4: wifi_default_action_ap_start at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_wifi/src/wifi_default.c:147
+[0m
+[0;33m--- 0x400f5e48: esp_netif_set_mac_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1018
+[0m
+[0;33m--- 0x400f6968: esp_netif_start_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1093
+[0m
+[0;33m--- 0x400f70e8: esp_netif_update_default_netif_lwip at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:313
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400f6748: esp_netif_new_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:712
+[0m
+[0;33m--- 0x400f5e48: esp_netif_set_mac_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1018
+[0m
+[0;33m--- 0x400f63dc: esp_netif_dhcpc_stop_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1469
+[0m
+[0;33m--- 0x400f6c60: esp_netif_set_ip_info_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1889
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400dd828: eth_action_start at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c:76
+[0m
+[0;33m--- 0x400f6968: esp_netif_start_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1093
+[0m
+[0;33m--- 0x400f70e8: esp_netif_update_default_netif_lwip at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:313
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400f6c60: esp_netif_set_ip_info_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1889
+[0m
+[0;33m--- 0x400dd794: eth_action_connected at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c:96
+[0m
+[0;33m--- 0x400f6b84: esp_netif_up_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1729
+[0m
+[0;33m--- 0x400f70e8: esp_netif_update_default_netif_lwip at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:313
+[0m
+[0;33m--- 0x400f5e70: esp_netif_set_ip_old_info_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1872
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400dd724: eth_action_got_ip at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c:119
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/davey_schoe/esp/mcmb/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/davey_schoe/esp/mcmb/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081384: call_start_cpu1 at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/port/cpu_start.c:191
+[0m
+[0;33m--- 0x400d3264: __esp_system_init_fn_init_efuse_check at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_startup.c:37
+[0m
+[0;33m--- 0x400d378c: __esp_system_init_fn_init_show_cpu_freq at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:64
+[0m
+[0;33m--- 0x400d31a4: __esp_system_init_fn_init_show_app_info at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_app_format/esp_app_desc.c:123
+[0m
+[0;33m--- 0x400d3278: __esp_system_init_fn_init_efuse_show_app_info at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_startup.c:47
+[0m
+[0;33m--- 0x400d5240: __esp_system_init_fn_init_heap at /home/davey_schoe/esp/mcmb/esp-idf/components/heap/heap_caps_init.c:25
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/davey_schoe/esp/mcmb/esp-idf/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/davey_schoe/esp/mcmb/esp-idf/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m--- 0x400d6964: __esp_system_init_fn_esp_timer_init_nonos at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_timer/src/esp_timer_init.c:28
+[0m
+[0;33m--- 0x400d636c: __esp_system_init_fn_init_libc at /home/davey_schoe/esp/mcmb/esp-idf/components/newlib/src/init.c:12
+[0m
+[0;33m--- 0x400d37d0: __esp_system_init_fn_init_brownout at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:79
+[0m
+[0;33m--- 0x400d37dc: __esp_system_init_fn_init_newlib_time at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:100
+[0m
+[0;33m--- 0x400d7c5c: __esp_system_init_fn_init_vfs_uart at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_uart/src/uart_vfs.c:1148
+[0m
+[0;33m--- 0x400d9e78: __esp_system_init_fn_init_vfs_nullfs at /home/davey_schoe/esp/mcmb/esp-idf/components/vfs/nullfs.c:322
+[0m
+[0;33m--- 0x400d8688: __esp_system_init_fn_init_vfs_console at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_vfs_console/vfs_console.c:271
+[0m
+[0;33m--- 0x400d6378: __esp_system_init_fn_init_libc_stdio at /home/davey_schoe/esp/mcmb/esp-idf/components/newlib/src/init.c:18
+[0m
+[0;33m--- 0x400d37e8: __esp_system_init_fn_init_flash at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:107
+[0m
+[0;33m--- 0x400d3304: __esp_system_init_fn_init_efuse at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_startup.c:158
+[0m
+[0;33m--- 0x40145128: _GLOBAL__sub_I__ZN17__eh_globals_init7_S_initE at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_globals.cc:162
+[0m
+[0;33m--- 0x400f8e74: s_set_default_wifi_log_level at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_wifi/src/wifi_init.c:93
+[0m
+[0;33m--- 0x400e607c: _GLOBAL__sub_I__ZN3nvs4PageC2Ev at /home/davey_schoe/esp/mcmb/esp-idf/components/nvs_flash/src/nvs_page.cpp:1158
+[0m
+[0;33m--- 0x40089c7c: enable_timer_group0_for_calibration at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:197
+[0m
+[0;33m--- 0x400d475c: esp_ipc_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/esp_ipc.c:107
+[0m
+[0;33m--- 0x400e3018: __esp_system_init_fn_esp_timer_init_os at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_timer/src/esp_timer.c:566
+[0m
+[0;33m--- 0x401591c4: __esp_system_init_fn_esp_security_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_security/src/init.c:38
+[0m
+[0;33m--- 0x400d3818: __esp_system_init_fn_init_disable_rtc_wdt at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/startup_funcs.c:164
+[0m
+[0;33m--- 0x400f6748: esp_netif_new_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:712
+[0m
+[0;33m--- 0x400f6748: esp_netif_new_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:712
+[0m
+[0;33m--- 0x400f633c: esp_netif_dhcps_stop_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1638
+[0m
+[0;33m--- 0x400f6c60: esp_netif_set_ip_info_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1889
+[0m
+[0;33m--- 0x400f61c8: esp_netif_dhcps_start_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1597
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400f90d4: wifi_default_action_ap_start at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_wifi/src/wifi_default.c:147
+[0m
+[0;33m--- 0x400f5e48: esp_netif_set_mac_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1018
+[0m
+[0;33m--- 0x400f6968: esp_netif_start_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1093
+[0m
+[0;33m--- 0x400f70e8: esp_netif_update_default_netif_lwip at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:313
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400f6748: esp_netif_new_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:712
+[0m
+[0;33m--- 0x400f5e48: esp_netif_set_mac_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1018
+[0m
+[0;33m--- 0x400f63dc: esp_netif_dhcpc_stop_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1469
+[0m
+[0;33m--- 0x400f6c60: esp_netif_set_ip_info_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1889
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400dd828: eth_action_start at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c:76
+[0m
+[0;33m--- 0x400f6968: esp_netif_start_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1093
+[0m
+[0;33m--- 0x400f70e8: esp_netif_update_default_netif_lwip at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:313
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400f6c60: esp_netif_set_ip_info_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1889
+[0m
+[0;33m--- 0x400dd794: eth_action_connected at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c:96
+[0m
+[0;33m--- 0x400f6b84: esp_netif_up_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1729
+[0m
+[0;33m--- 0x400f70e8: esp_netif_update_default_netif_lwip at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:313
+[0m
+[0;33m--- 0x400f5e70: esp_netif_set_ip_old_info_api at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1872
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400dd724: eth_action_got_ip at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c:119
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0;33m--- 0x400db21c: evhdlr at /home/davey_schoe/esp/mcmb/txrx/components/src/evhdlr.c:24
+[0m
+[0m

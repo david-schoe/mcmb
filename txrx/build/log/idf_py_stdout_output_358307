@@ -1,0 +1,1688 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 15 2025 22:53:45[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27038h (159800) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00037060 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00037084 vaddr=3ffb0000 size=04118h ( 16664) load[0m
+[0;32mI (153) esp_image: segment 3: paddr=0003b1a4 vaddr=40080000 size=04e74h ( 20084) load[0m
+[0;32mI (162) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=922e0h (598752) map[0m
+[0;32mI (367) esp_image: segment 5: paddr=000d2308 vaddr=40084e74 size=14da0h ( 85408) load[0m
+[0;32mI (413) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (413) boot: Disabling RNG early entropy source...[0m
+[0;32mI (424) cpu_start: Multicore app[0m
+D (424) cpu_start: Pro cpu up
+D (424) cpu_start: Starting app cpu, entry point is 0x40081384
+D (0) cpu_start: App cpu up
+D (432) clk: RTC_SLOW_CLK calibration value: 3081882
+D (444) cpu_start: calling init function: 0x400d3270 on core: 0
+D (444) cpu_start: calling init function: 0x400d3798 on core: 0
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+D (453) cpu_start: calling init function: 0x400d31b0 on core: 0
+[0;32mI (459) app_init: Application information:[0m
+[0;32mI (463) app_init: Project name:     txrx[0m
+[0;32mI (466) app_init: App version:      e7e3d0c-dirty[0m
+[0;32mI (471) app_init: Compile time:     Apr 15 2025 22:53:44[0m
+[0;32mI (476) app_init: ELF file SHA256:  4e711a654...[0m
+[0;32mI (480) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+D (486) cpu_start: calling init function: 0x400d3284 on core: 0
+[0;32mI (492) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (499) efuse_init: Chip rev:         v3.1[0m
+D (503) cpu_start: calling init function: 0x400d524c on core: 0
+D (509) memory_layout: Checking 9 reserved memory ranges:
+D (514) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000
+D (520) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0
+D (526) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb9088
+D (532) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440
+D (538) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350
+D (544) memory_layout: Reserved memory range 0x40070000 - 0x40078000
+D (551) memory_layout: Reserved memory range 0x40078000 - 0x40080000
+D (557) memory_layout: Reserved memory range 0x40080000 - 0x40099c14
+D (563) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000
+D (569) memory_layout: Building list of available memory regions:
+D (575) memory_layout: Available memory region 0x3ffae6e0 - 0x3ffb0000
+D (581) memory_layout: Available memory region 0x3ffb9088 - 0x3ffc0000
+D (587) memory_layout: Available memory region 0x3ffc0000 - 0x3ffc2000
+D (593) memory_layout: Available memory region 0x3ffc2000 - 0x3ffc4000
+D (600) memory_layout: Available memory region 0x3ffc4000 - 0x3ffc6000
+D (606) memory_layout: Available memory region 0x3ffc6000 - 0x3ffc8000
+D (612) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000
+D (618) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000
+D (625) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000
+D (631) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000
+D (637) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000
+D (643) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000
+D (650) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000
+D (656) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000
+D (662) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000
+D (668) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000
+D (675) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000
+D (681) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000
+D (687) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20
+D (693) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000
+D (700) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000
+D (706) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000
+D (712) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000
+D (718) memory_layout: Available memory region 0x3fffc000 - 0x40000000
+D (725) memory_layout: Available memory region 0x40099c14 - 0x4009a000
+D (731) memory_layout: Available memory region 0x4009a000 - 0x4009c000
+D (737) memory_layout: Available memory region 0x4009c000 - 0x4009e000
+D (743) memory_layout: Available memory region 0x4009e000 - 0x400a0000
+[0;32mI (750) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (756) heap_init: New heap initialised at 0x3ffae6e0
+[0;32mI (761) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+D (766) heap_init: New heap initialised at 0x3ffb9088
+[0;32mI (771) heap_init: At 3FFB9088 len 00026F78 (155 KiB): DRAM[0m
+[0;32mI (776) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (781) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (787) heap_init: New heap initialised at 0x40099c14
+[0;32mI (791) heap_init: At 40099C14 len 000063EC (24 KiB): IRAM[0m
+D (797) cpu_start: calling init function: 0x400d6970 on core: 0
+D (802) cpu_start: calling init function: 0x400d6378 on core: 0
+D (808) cpu_start: calling init function: 0x400d37dc on core: 0
+D (814) intr_alloc: Connected src 46 to int 1 (cpu 0)
+D (818) cpu_start: calling init function: 0x400d37e8 on core: 0
+D (824) cpu_start: calling init function: 0x400d7c68 on core: 0
+D (830) cpu_start: calling init function: 0x400d9e84 on core: 0
+D (835) cpu_start: calling init function: 0x400d8694 on core: 0
+D (841) cpu_start: calling init function: 0x400d6384 on core: 0
+D (847) cpu_start: calling init function: 0x400d37f4 on core: 0
+D (852) spi_flash: trying chip: issi
+D (856) spi_flash: trying chip: gd
+D (859) spi_flash: trying chip: mxic
+D (862) spi_flash: trying chip: winbond
+D (865) spi_flash: trying chip: generic
+[0;32mI (869) spi_flash: detected chip: generic[0m
+[0;32mI (873) spi_flash: flash io: dio[0m
+[0;33mW (876) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (888) cpu_start: calling init function: 0x400d3310 on core: 0
+D (894) cpu_start: calling init function: 0x40145100
+D (898) cpu_start: calling init function: 0x400f8e4c
+D (903) cpu_start: calling init function: 0x400e6054
+D (908) cpu_start: calling init function: 0x40089c7c
+D (912) cpu_start: calling init function: 0x400d4768
+D (917) cpu_start: calling init function: 0x400e2ff0 on core: 0
+D (923) intr_alloc: Connected src 17 to int 2 (cpu 0)
+D (927) cpu_start: calling init function: 0x4015919c on core: 0
+D (933) cpu_start: calling init function: 0x400d3824 on core: 0
+D (939) intr_alloc: Connected src 24 to int 3 (cpu 0)
+D (943) app_start: Starting scheduler on CPU0
+I (948D (948) intr_alloc: Connected src 25 to int 1 (cpu 1)
+D (948) app_start: Starting scheduler on CPU1
+) main_task: Started on CPU0
+D (958) heap_init: New heap initialised at 0x3ffe0440
+D (958) heap_init: New heap initialised at 0x3ffe4350
+D (968) intr_alloc: Connected src 16 to int 5 (cpu 0)
+[0;32mI (968) main_task: Calling app_main()[0m
+D (978) lwip: netif: netmask of interface    set to 255.0.0.0
+
+D (978) lwip: netif: GW address of interface    set to 127.0.0.1
+
+D (988) lwip: netif_set_ipaddr: netif address being changed
+
+D (988) lwip: netif: added interface lo IP
+D (998) lwip:  addr 
+D (998) lwip: 127.0.0.1
+D (998) lwip:  netmask 
+D (998) lwip: 255.0.0.0
+D (998) lwip:  gw 
+D (1008) lwip: 127.0.0.1
+D (1008) lwip: 
+
+D (1008) esp_netif_lwip: LwIP stack has been initialized
+D (1008) esp_netif_lwip: esp-netif has been successfully initialized
+D (1018) event: running task for loop 0x3ffbd2bc
+D (1028) event: created task for loop 0x3ffbd2bc
+D (1028) event: created event loop 0x3ffbd2bc
+D (1068) nvs: nvs_open_from_partition storage 0
+D (1078) nvs: nvs_get_str_or_blob eth_ip4_str
+D (1078) nvs: nvs_get_str_or_blob eth_ip4_str
+D (1078) nvs: nvs_close 1
+D (1078) nvs: nvs_open_from_partition storage 0
+D (1078) nvs: nvs_get_str_or_blob wlan0_ip4_str
+D (1088) nvs: nvs_get_str_or_blob wlan0_ip4_str
+D (1088) nvs: nvs_close 2
+D (1088) nvs: nvs_open_from_partition storage 0
+D (1098) nvs: nvs_get_str_or_blob wlan1_ip4_str
+D (1098) nvs: nvs_get_str_or_blob wlan1_ip4_str
+D (1108) nvs: nvs_close 3
+D (1108) nvs: nvs_open_from_partition storage 0
+D (1108) nvs: nvs_get_str_or_blob eth_gw_str
+D (1118) nvs: nvs_get_str_or_blob eth_gw_str
+D (1118) nvs: nvs_close 4
+D (1118) nvs: nvs_open_from_partition storage 0
+D (1128) nvs: nvs_get_str_or_blob wlan0_gw_str
+D (1128) nvs: nvs_get_str_or_blob wlan0_gw_str
+D (1138) nvs: nvs_close 5
+D (1138) nvs: nvs_open_from_partition storage 0
+D (1138) nvs: nvs_get_str_or_blob wlan1_gw_str
+D (1148) nvs: nvs_get_str_or_blob wlan1_gw_str
+D (1148) nvs: nvs_close 6
+D (1148) nvs: nvs_open_from_partition storage 0
+D (1158) nvs: nvs_get_str_or_blob eth_nm_str
+D (1158) nvs: nvs_get_str_or_blob eth_nm_str
+D (1168) nvs: nvs_close 7
+D (1168) nvs: nvs_open_from_partition storage 0
+D (1168) nvs: nvs_get_str_or_blob wlan0_nm_str
+D (1178) nvs: nvs_get_str_or_blob wlan0_nm_str
+D (1178) nvs: nvs_close 8
+D (1178) nvs: nvs_open_from_partition storage 0
+D (1188) nvs: nvs_get_str_or_blob wlan1_nm_str
+D (1188) nvs: nvs_get_str_or_blob wlan1_nm_str
+D (1198) nvs: nvs_close 9
+D (1198) nvs: nvs_open_from_partition storage 0
+D (1198) nvs: nvs_get_str_or_blob wlan0_ssid_str
+D (1208) nvs: nvs_get_str_or_blob wlan0_ssid_str
+D (1208) nvs: nvs_close 10
+D (1208) nvs: nvs_open_from_partition storage 0
+D (1218) nvs: nvs_get_str_or_blob wlan1_ssid_str
+D (1218) nvs: nvs_get_str_or_blob wlan1_ssid_str
+D (1228) nvs: nvs_close 11
+D (1228) nvs: nvs_open_from_partition storage 0
+D (1228) nvs: nvs_get_str_or_blob r_reg0_str
+D (1238) nvs: nvs_get_str_or_blob r_reg0_str
+D (1238) nvs: nvs_close 12
+D (1238) nvs: nvs_open_from_partition storage 0
+D (1248) nvs: nvs_get_str_or_blob r_reg1_str
+D (1248) nvs: nvs_get_str_or_blob r_reg1_str
+D (1258) nvs: nvs_close 13
+D (1258) nvs: nvs_open_from_partition storage 0
+D (1258) nvs: nvs_get_str_or_blob r_reg2_str
+D (1268) nvs: nvs_get_str_or_blob r_reg2_str
+D (1268) nvs: nvs_close 14
+D (1268) nvs: nvs_open_from_partition storage 0
+D (1278) nvs: nvs_get_str_or_blob r_reg3_str
+D (1278) nvs: nvs_get_str_or_blob r_reg3_str
+D (1278) nvs: nvs_close 15
+D (1288) nvs: nvs_open_from_partition storage 0
+D (1288) nvs: nvs_get_str_or_blob rb_ip4_str
+D (1298) nvs: nvs_get_str_or_blob rb_ip4_str
+D (1298) nvs: nvs_close 16
+D (1298) nvs: nvs_open_from_partition storage 0
+D (1308) nvs: nvs_get_str_or_blob rc_ip4_str
+D (1308) nvs: nvs_get_str_or_blob rc_ip4_str
+D (1308) nvs: nvs_close 17
+D (1318) nvs: nvs_open_from_partition storage 0
+D (1318) nvs: nvs_get_str_or_blob w_reg0_str
+D (1318) nvs: nvs_get_str_or_blob w_reg0_str
+D (1328) nvs: nvs_close 18
+D (1328) nvs: nvs_open_from_partition storage 0
+D (1338) nvs: nvs_get_str_or_blob w_reg1_str
+D (1338) nvs: nvs_get_str_or_blob w_reg1_str
+D (1338) nvs: nvs_close 19
+D (1348) nvs: nvs_open_from_partition storage 0
+D (1348) nvs: nvs_get_str_or_blob w_reg2_str
+D (1348) nvs: nvs_get_str_or_blob w_reg2_str
+D (1358) nvs: nvs_close 20
+D (1358) nvs: nvs_open_from_partition storage 0
+D (1358) nvs: nvs_get_str_or_blob w_reg3_str
+D (1368) nvs: nvs_get_str_or_blob w_reg3_str
+D (1368) nvs: nvs_close 21
+D (1378) nvs: nvs_open_from_partition storage 0
+D (1378) nvs: nvs_get_str_or_blob wb_ip4_str
+D (1378) nvs: nvs_get_str_or_blob wb_ip4_str
+D (1388) nvs: nvs_close 22
+D (1388) nvs: nvs_open_from_partition storage 0
+D (1388) nvs: nvs_get_str_or_blob wc_ip4_str
+D (1398) nvs: nvs_get_str_or_blob wc_ip4_str
+D (1398) nvs: nvs_close 23
+[0;32mI (1398) lwmb: created remote, r->b_ip4_str=192.168.2.1, r->c_ip4_str=[0m
+[0;32mI (1408) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+[0;32mI (1418) lwmb: created remote, r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174[0m
+[0;32mI (1418) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1[0m
+D (1428) nvs: nvs_open_from_partition misc 1
+[0;32mI (1428) mb: idle[0m
+[1;31mE (1448) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[0;32mI (1448) wifi:wifi driver task: 3ffc3b98, prio:23, stack:6656, core=0[0m
+D (1448) efuse: BLK0 REG2 [8-15], len=8 bits
+D (1458) efuse: BLK0 REG2 [0-7], len=8 bits
+D (1458) efuse: BLK0 REG1 [24-31], len=8 bits
+D (1458) efuse: BLK0 REG1 [16-23], len=8 bits
+D (1468) efuse: BLK0 REG1 [8-15], len=8 bits
+D (1468) efuse: BLK0 REG1 [0-7], len=8 bits
+D (1478) efuse: BLK0 REG2 [16-23], len=8 bits
+D (1448) lwmb: r_socket(), r->b_ip4_str=127.0.0.1, b=54, errno=0
+D (1478) nvs: nvs_open_from_partition nvs.net80211 1
+D (1488) lwmb: r_bind(54), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (1488) nvs: nvs_get opmode 1
+D (1498) lwip: pbuf_alloc(length=4)
+
+D (1498) nvs: nvs_get_str_or_blob sta.ssid
+D (1498) lwip: pbuf_alloc(length=4) == 0x3ffc51a0
+
+D (1508) nvs: nvs_get sta.authmode 1
+D (1508) lwip: pbuf_add_header: old 0x3ffc51e8 new 0x3ffc51d4 (20)
+
+D (1508) nvs: nvs_get_str_or_blob sta.pswd
+D (1518) lwip: pbuf_add_header: old 0x3ffc51d4 new 0x3ffc51c0 (20)
+
+D (1518) nvs: nvs_get_str_or_blob sta.pmk
+D (1528) lwip: ip4_output_if: lo0
+
+D (1528) nvs: nvs_get sta.chan 1
+D (1538) lwip: IP header:
+
+D (1538) nvs: nvs_get auto.conn 1
+D (1538) lwip: +-------------------------------+
+
+D (1538) nvs: nvs_get bssid.set 1
+D (1548) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (1548) nvs: nvs_get_str_or_blob sta.bssid
+D (1558) lwip: +-------------------------------+
+
+D (1558) nvs: nvs_get sta.lis_intval 2
+D (1568) lwip: |        0      |000|       0   | (id, flags, offset)
+
+D (1568) nvs: nvs_get sta.phym 1
+D (1578) lwip: +-------------------------------+
+
+D (1578) nvs: nvs_get sta.phybw 1
+D (1578) lwip: |   64  |    6  |    0x7cca     | (ttl, proto, chksum)
+
+D (1588) nvs: nvs_get_str_or_blob sta.apsw
+D (1588) lwip: +-------------------------------+
+
+D (1598) nvs: nvs_get_str_or_blob sta.apinfo
+D (1598) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (1608) nvs: nvs_get sta.scan_method 1
+D (1608) lwip: +-------------------------------+
+
+D (1608) nvs: nvs_get sta.sort_method 1
+D (1618) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (1618) nvs: nvs_get sta.minrssi 1
+D (1628) lwip: +-------------------------------+
+
+D (1628) nvs: nvs_get sta.minauth 1
+D (1638) lwip: netif_loop_output()
+
+D (1638) nvs: nvs_get sta.pmf_e 1
+D (1638) lwip: pbuf_alloc(length=44)
+
+D (1648) nvs: nvs_get sta.pmf_r 1
+D (1648) lwip: pbuf_alloc(length=44) == 0x3ffc521c
+
+D (1648) nvs: nvs_get sta.btm_e 1
+D (1658) lwip: pbuf_copy(0x3ffc521c, 0x3ffc51a0)
+
+D (1658) nvs: nvs_get sta.rrm_e 1
+D (1658) lwip: pbuf_copy_partial_pbuf(0x3ffc521c, 0x3ffc51a0, 44, 0)
+
+D (1668) nvs: nvs_get sta.mbo_e 1
+D (1668) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (1678) nvs: nvs_get_str_or_blob ap.ssid
+D (1678) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (1688) nvs: nvs_get_str_or_blob ap.passwd
+D (1688) lwip: ip4_input: packet accepted on interface lo
+
+D (1698) nvs: nvs_get_str_or_blob ap.pmk
+D (1698) lwip: ip4_input: 
+
+D (1708) nvs: nvs_get ap.chan 1
+D (1708) lwip: IP header:
+
+D (1708) nvs: nvs_get ap.authmode 1
+D (1708) lwip: +-------------------------------+
+
+D (1718) nvs: nvs_get ap.hidden 1
+D (1718) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (1718) nvs: nvs_get ap.max.conn 1
+D (1728) lwip: +-------------------------------+
+
+D (1728) nvs: nvs_get bcn.interval 2
+D (1738) lwip: |        0      |000|       0   | (id, flags, offset)
+
+D (1738) nvs: nvs_get ap.phym 1
+D (1748) lwip: +-------------------------------+
+
+D (1748) nvs: nvs_get ap.phybw 1
+D (1758) lwip: |   64  |    6  |    0x7cca     | (ttl, proto, chksum)
+
+D (1758) nvs: nvs_get ap.sndchan 1
+D (1758) lwip: +-------------------------------+  |    0  |    1  | (src)
+
+D (1778) nvs: nvs_get ap.pmf_r 1
+D (1778) lwip: +-------------------------------+
+
+D (1778) nvs:nvs_get ap.p_cipher 1
+D (1788) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (1788) nvs: nvs_get lorate 1
+D (1798) lwip: +-------------------------------+
+
+D (1798) nvs: nvs_get_str_or_blob country
+D (1798) lwip: ip4_input: p->len 44 p->tot_len 44
+
+D (1808) nvs: nvs_get ap.ftm_r 1
+D (1808) lwip: pbuf_remove_header: old 0x3ffc523c new 0x3ffc5250 (20)
+
+D (1818) nvs: nvs_get sta.ft 1
+D (1818) lwip: pbuf_remove_header: old 0x3ffc5250 new 0x3ffc5268 (24)
+
+D (1818) nvs: nvs_get sta.owe 1
+D (1828) lwip: pbuf_alloc(length=20)et sta.trans_d 1
+D (1838) lwip: pbuf_alloc(length=20) == 0x3ffc5280
+
+D (1838) nvs: nvs_get stta.sae_pk_mode 1
+D (1848) lwip: ip4_output_if: lo0
+
+D (1858) nvs: nvs_get sta.bss_retry 1
+D (1858) lwip: IP header:
+
+D (18s: nvs_get_str_or_blob sta.owe_data
+D (1868) lwip: +-------------------------------+
+
+D (1868) nvs: nvs_get sta.he_dcm 1
+D (1878) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (1878) nvs: nvs_get sta.he_------------------------------+
+
+D (1888) nvs: nvs_get sta.he_1
+D (1888) lwip: |        1      |000|       0   | (id, flags, 98) nvs: nvs_get sta.he_mcs9_d 1
+D (1898) lwip: +-------------------------------+
+
+D (1908) nvs: nvs_get sta.he_su_b_d 1
+D (1908) lwip: |   64  |    6  |    0x7ccd     | (ttl, proto, chksum)
+
+D (1908) nvs: nvs_get sta.he_su_b_f_d 1
+D (1918) lwip: +-------------------------------+
+
+D (1918) nvs: nvs_get sta.he_mu_b_f_d 1
+D (1928) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (1928) nvs: nvs_get sta.he_cqi_f_d 1
+D (1938) lwip: +-------------------------------+
+
+D (1938) nvs: nvs_get_str_or_blob sta.sae_h2e_id
+D (1938) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (1948) nvs: nvs_get ap.sae_h2e 1
+D (1948) lwip: +-------------------------------+
+
+D (1958) nvs: nvs_get_str_or_blob ap.pmk_info
+D (1958) l68) nvs: nvs_get nan.phym 1
+D (1968) lwip: pbuf_alloc(length=40)
+
+D (1968) nvs: nvs_get sta.pwr_reset 1
+D (1978) lwip: pbuf_alloc(length=40) == 0x3ffc52cc
+
+D (1978) nvs: nvs_get band_mode 1
+D (1978) lwip: pbuf_copy(0x3ffc52cc, 0x3ffc5280)
+
+D (1988) nvs: nvs_get sta.phym5g 1
+D (1988) lwip: pbuf_copy_partial_pbuf(0x3ffc52cc, 0x3ffc5280, 40, 0)
+
+D (1988) nvs: nvs_get ap.phym5g 1
+D (1998) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (1998) nvs: nvs_get sta.phybw5g 1
+D (2008) lwip: pbuf_free(0x3ffc5280)
+
+D (2008) nvs: nvs_get ap.phybw5g 1
+D (2018) lwip: pbuf_free: deallocating 0x3ffc5280
+
+D (2018) nvs: nvs_get ap.sndchan5g 1
+D (2018) lwip: pbuf_free(0x3ffc521c)
+
+D (2028) nvs: nvs_get ap.chan5g 1
+D (2028) lwip: pbuf_free: deallocating 0x3ffc521c
+
+D (2028) nvs: nvs_get ap.chanisset 1
+D (2038) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (2038) nvs: nvs_get ap.chan5gisset 1
+D (2048) lwip: ip4_input: packet accepted on interface lo
+
+D (2048) nvs: nvs_get sta.rssi_5g_adj 1
+D (2058) lwip: ip4_input: 
+
+D (2058) nvs: nvs_get ap.csa_count 1
+D (2058) lwip: IP header:
+
+D (2068) nvs: nvs_get ap.dtim_period 1
+D (2068) lwip: +-------------------------------+
+
+D (2068) nvs: nvs_get ap.trans_d 1
+D (2078) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (2078) nvs: nvs_set ap.sndchan 1 1
+D (2088) lwip: +-------------------------------+
+
+[0;32mI (2088) wifi:D (2088) lwip: |        1      |000|       0   | (id, flags, offset)[0m
+
+wifi firmware version: 3a3aca644D (2098) lwip: +-------------------------------+
+
+
+D (2108) lwip: |   64  |    6  |    0x7ccd     | (ttl, proto, chksum)
+
+[0;32mI (2108) wifi:D (2118) lwip: +-------------------------------+[0m
+
+wifi certification version: v7.0D (2118) lwip: |  127  |    0  |    0  |    1  | (src)
+
+
+D (2128) lwip: +-------------------------------+
+
+[0;32mI (2128) wifi:D (2128) lwip: |  127  |    0  |    0 : ip4_input: p->len 40 p->tot_len 40[0m
+
+[0;32mI (2148) wifi:D (2148) lwip: pbuf_remove_header: old 0x3ffc52ec new 0x3ffc5300 (20)[0m
+
+config nano formatting: disabled
+D (2158) lwip: pbuf_remove_header: old 0x3ffc5300 new 0x3ffc5314 (20)
+
+[0;32mI (2158) wifi:Init data frame dynamic rx buffer num: 32[0m
+D (2168) lwip: pbuf_free(0x3ffc51a0)
+
+[0;32mI (2168) wifi:D (2178buf_free: deallocating 0x3ffc51a0[0m
+
+Init static rx mgmt buffer wip: pbuf_free(0x3ffc52cc)
+
+[0;32mI (2188) wifi:D (2188) lwip: pbuf_free: deallocating 0x3ffc52cc[0m
+
+Init management short buffer num: 32
+D (2198) lwip: etharp_timer
+
+[0;32mI (2198) wifi:Init dynamic tx buffer num: 32[0m
+[1;31mE (1678) lwmb: r_connect(54), r->b_ip4_str=127.0.0.1, b=-1, errno=119[0m
+[0;32mI (2208) wifi:D (2208) lwmb: r_connecstatic rx buffer size: 1600[0m
+[1;31mE (2218) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+[0;32mI (2218) wifi:E (2228) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=, no tcp connection[0m
+Init static rx buffer num: 10
+D (2238) lwmb: r_socket(), r->b_ip4_str=127.0.0.1, b=55, errno=119
+[0;32mI (2238) wifi:Init dynamic rx buffer num: 32[0m
+D (2238) lwmb: r_bind(55), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (2248) wifi:Reset scan defaults in ms : min,max,passive,chan_dwell :(0,120,360,30)
+D (2248) lwmb: r_listen(55), r->bp4_str=127.0.0.1, b=0, errno=9
+68) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection
+[0;32mI (2268) wifi_init: accept mbox: 6[0m
+[1;31mE (2278) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[0;32mI (2278) wifi_init: tcpip mbox: 32[0m
+[1;31mE (2288) lwmb: r_connect(54), r->b_ip4_stit: udp mbox: 6[0m
+[1;31mE (2298) lwmb: r_shutdown(54), r->b_ip4_str=127.0.0.1, b=-1, errno=128[0m
+[0;32mI (2298) wifi_init: tcp mbox: 6[0m
+D (2308) lwmb: r_close(54), r->b_ip4_str=127.0.0.1, b=0, errno=128
+[0;32mI (2308) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2318) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2318) wifi_init: tcp mss: 1440[0m
+[0;32mI (2328) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2328) wifi_init: WiFi RX IRAM OP enabled[0m
+D (2328) esp_netif_lwip: check: remote, if=0x3ffbb0b0 fn=0x400f6720
+D (2338) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 1)
+D (2348) esp_netifbjects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 2)
+D (2368) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2368) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f6314
+D (2378) esp_netif_lwip: esp_netif_dhcps_stoapi esp_netif:0x3ffc05e0
+D (2388) esp_netif_lwip: dhcp server stop successfully
+D (2388) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2398) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f6c38
+D (2398) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc05e0
+D (2408) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2408) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f61a0
+D (2418) esp_netif_lwip: esp_netif_dhcps_start_api esp_netif:0x3ffc05e0
+D (2428) esp_netif_lwip: dhcp server re init
+D (2428) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[0;32mI (2438) mb: idle[0m
+D (2438) nvs: nvs_get opmode 1
+D (2438) nvs: nvs_set ap.authmode 1 0
+D (2438) nvs: nvs_set ap.sae_h2e 1 4
+D (2448) nvs: nvs_set ap.chanisset 1 1
+D (2448) nvs: nvs_set ap.chan 1 1
+D (2448) nvs: nvs_set ap.sndchan 1 1
+D (2458) nvs: nvs_set_blob ap.ssid 36
+D (2458) nvs: nvs_set_blob ap.passwd 65
+D (2458) nvs: nvs_set ap.hidden 1 0
+D (2468) nvs: nvs_set ap.max.conn 1 4
+D (2468) nvs: nvs_set bcn.interval 2 100
+D (2468) nvs: nvs_set ap.p_cipher 1 0
+D (2478) nvs: nvs_set ap.trans_d 1 0
+D (2478) nvs: nvs_set ap.ftm_r 1 0
+D (2478) nvs: nvs_set ap.csa_count 1 3
+D (2488) nvs: nvs_set ap.dtim_period 1 1
+D (2488) wifi:clear blacklist
+D (2488) nvs: nvs_set_blob sta.ssid 36
+D (2498) nvs: nvs_set_blob sta.pswd 65
+D (2498) nvs: nvs_set bssid.set 1 0
+D (2498) nvs: nvs_set sta.lis_intval 2 3
+D (2508) nvs: nvs_set sta.chan 1 1
+D (2508) nvs: nvs_set sta.scan_method 1 0
+D (2508) nvs: nvs_set sta.sort_method 1 0
+D (2518) nvs: nvs_set sta.minrssi 1 -127
+D (2518) nvs: nvs_set sta.minauth 1 0
+D (2518) nvs: nvs_set_blob sta.apsw 2
+D (2528) nvs: nvs_set sta.pmf_e 1 1
+D (2528) nvs: nvs_set sta.pmf_r 1 0
+D (2528) nvs: nvs_set sta.rrm_e 1 0
+D (2538) nvs: nvs_set sta.btm_e 1 0
+D (2538) nvs: nvs_set sta.mbo_e 1 0
+D (2538) nvs: nvs_set sta.ft 1 0
+D (2548) nvs: nvs_set sta.owe 1 0
+D (2548) nvs: nvs_set sta.bss_retry 1 0
+D (2548) nvs: nvs_set sta.trans_d 1 0
+D (2558) nvs: nvs_set sta.sae_h2e 1 2
+D (2558) nvs: nvs_set sta.sae_pk_mode 1 0
+D (2558) nvs: nvs_set_blob sta.sae_h2e_id 32
+D (2568) nvs: nvs_set_blob sta.apinfo 700
+[0;32mI (2568) wifi: wlan0_init (ap) finished. SSID:192.168.2.1 password: channel:1[0m
+[0;32mI (2578) wifi: wlan1_init (sta) finished. SSID:192.168.2.21 password: channel:1[0m
+[0;32mI (2588) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+D (2588) phy_init: loading PHY init data from application binary
+D (2598) nvs: nvs_open_from_partition phy 0
+D (2598) nvs: nvs_get cal_version 4
+D (2598) nvs: nvs_get_str_or_blob cal_mac
+D (2608) efuse: BLK0 REG2 [8-15], len=8 bits
+D (2608) efuse: BLK0 REG2 [0-7], len=8 bits
+D (2618) efuse: BLK0 REG1 [24-31], len=8 bits
+D (2618) efuse: BLK0 REG1 [16-23], len=8 bits
+D (2618) efuse: BLK0 REG1 [8-15], len=8 bits
+D (2628) efuse: BLK0 REG1 [0-7], len=8 bits
+D (2628) efuse: BLK0 REG2 [16-23], len=8 bits
+D (2638) nvs: nvs_get_str_or_blob cal_data
+D (2648) nvs: nvs_close 26
+D (2648) efuse: BLK0 REG2 [8-15], len=8 bits
+D (2648) efuse: BLK0 REG2 [0-7], len=8 bits
+D (2648) efuse: BLK0 REG1 [24-31], len=8 bits
+D (2648) efuse: BLK0 REG1 [16-23], len=8 bits
+D (2658) efuse: BLK0 REG1 [8-15], len=8 bits
+D (2658) efuse: BLK0 REG1 [0-7], len=8 bits
+D (2668) efuse: BLK0 REG2 [16-23], len=8 bits
+D (2738) wifi:filter: set rx policy=0
+[0;32mI (2748) wifi:mode : sta (ac:15:18:e4:de:80) + softAP (ac:15:18:e4:de:81)[0m
+[0;32mI (2748) wifi:enable tsf[0m
+D (2748) wifi:filter: set rx policy=1
+D (2748) wifi:connect status 0 -> 0
+D (2748) wifi:filter: set rx policy=9
+[0;32mI (2758) wifi:Total power save buffer number: 16[0m
+[0;32mI (2758) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (2768) wifi:Init max length of beacon: 752/752[0m
+D (2768) event: running post WIFI_EVENT:43 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (2778) event: running post WIFI_EVENT:2 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (2788) event: running post WIFI_EVENT:2 with handler 0x400f90c4 and context 0x3ffc0680 on loop 0x3ffbd2bc
+D (2798) wifi_init_default: wifi_start esp-netif:0x3ffca1e4 event-id2
+D (2798) wifi_init_default: if_lwip: call api in lwip: ret=0x0, give sem
+D (2818) esp_netif_lwip: check: remote, if=0x3ffca1e4 fn=0x400f63b4
+D (2818) esp_netif_handlers: esp_netif actiontarted with netif0x3ffca1e4 from event_id=2
+D (2838) esp_netif_lwip: check: remote, if=0x3ffca1e4 fn=0x400f6940
+D (2838) esp_netif_lwip: esp_netif_start_api 0x3ffca1e4
+D (2848) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffca1e4
+D (2848) lwip: netif: added interface st IP
+D (2858) lwip:  addr 
+D (2858) lwip: 0.0.0.0
+D (2858) lwip:  netmask 
+D (2858) lwip: 0.0.0.0
+DD (2868) lwip: 0.0.0.0
+D (2868) lwip: 
+
+D (2868) esp_netif_lw 0x3ffbe994 on loop 0x3ffbd2bc
+D (2888) event: running post WIFI_EVENT:12 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+[1;31mE (2898) evhdlr: ip4_str=192.168.2.1, state=1[0m
+[0;32mI (2898) evhdlr: ip4_str=192.168.2.1, state=1[0m
+D (2898) event: running post WIFI_EVENT:12 with handler 0x400f90ac and context 0x3ffca150 on loop 0x3ffbd2bc
+D (2908) wifi_init_default: wifi_startetif:0x3ffc05e0 event-id12
+D (2918) wifi_init_default: WIFI mac address: ac 15 18 e4 de 81
+D (2928) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f5e20
+D (2928) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2938) esp_netif_handlers: esp_netif action has started with netif0x3ffc05e0 from event_id=12
+D (2938) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f6940
+D (2948) esp_netif_lwip: esp_netif_start_api 0x3ffc05e0
+D (2958) lwip: netif: netmask of interface    set to 255.255.255.0
+
+D (2958) lwip: netif: GW address of interface    set to 192.168.0.1
+
+D (2968) lwip: netifwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffca048
+D (2978) esp_netif_lwip: if0x3ffc05e0 ip unchanged
+D (2978) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffc05e0
+D (2988) lwip: netif: added interface ap IP
+D (2988) lwip:  addr 
+D (2998) lwip: 192.168.2.1
+D (2998) lwip:  netmask 
+D (2998) lwip: 255.255.255.0
+D (2998) lwip:  gw 
+D (3008) lwip: 192.168.0.1
+D (3008) lwip: 
+
+D (3008) esp_netif_lwip: esp_netif_start_api Setting the lwip netif0x3ffca048 UP
+[0;32mI (3018) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.1[0m
+D (3018) esp_netif_lwip: check: local, if=0x3ffc05e0 fn=0x400f70c0
+D (3028) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc05e0
+D (3038) lwip: netif: setting default interface ap
+
+D (3038) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3048) lwip: etharp_timer
+
+D (3048) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffca1e4
+D (3058) esp_netif_lwip: dhcp client stop successfully
+D (3058) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3068) esp_netif_lwip: check: remote, if=0x3ffca1e4 fn=0x400f6c38
+D (3068) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffca1e4
+D (3078) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3078) wifi:Start wifi connect
+D (3088) wifi:connect status 0 -> 0
+D (3088) wifi:connect chan=0
+D (3088) wifi:first chan=1
+D (3088) wifi:connect status 0 -> 1
+D (3098) wifi:filter: set rx policy=3
+D (3098) wifi:clear scan ap list
+D (3098) wifi:start scan: type=0x50f, priority=2, cb=0x40114b34, arg=0x0, ss_state=0x1, time=360739, index=0
+D (3108) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (3118) httpd: httpd_thread: web server started
+D (3128) wifi:profile match: ss_state=0x7
+D (3128) wifi:scan end: arg=0x3ffb625c, status=0, ss_state=0x7
+D (3128) wifi:find first mathched ssid, scan done
+D (3128) httpd: httpd_server: doing select maxfd+1 = 57
+D (3138) wifi:filter: set rx policy=4
+D (3148) wifi:first chan=1
+D (3148) wifi:handoff_cb: status=0
+D (3148) wifi:ap found, mac=a0:dd:6c:10:24:cd
+D (3158) wifi:going for connection with bssid=a0:dd:6c:10:24:cd
+D (3158) wifi:new_bss=0x3ffb7078, cur_bss=0x0, new_chan=<1,1>, cur_chan=1
+D (3168) wifi:filter: set rx policy=5
+[0;32mI (3168) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+D (3178) wifi:connect_op: status=0, auth=1, cipher=0 
+D (3178) wifi:connect_bss: auth=1, reconnect=0
+[0;32mI (3188) wifi:state: init -> auth (0xb0)[0m
+D (3188) nvs: nvs_get sta.pwr_reset 1
+D (3198) wifi:start 1s AUTH timer
+D (3198) wifi:clear scan ap list
+D (3138) event: running post ESP_HTTP_SERVER_EVENT:1 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (3138) httpd_uri: httpd_register_uri_handler: [0] installed /
+D (3218) httpd_uri: httpd_find_uri_handler: [0] = /
+D (3218) httpd_uri: httpd_register_uri_handler: [0] exists /
+D (3228) wifi:recv auth: seq=2, status=0, algo=0
+[0;32mI (3228) wifi:state: auth -> assoc (0x0)[0m
+D (3228) nvs: nvs_get sta.pwr_reset 1
+D (3238) wifi:restart connect 1s timer for assoc
+D (3238) httpd_uri: httpd_register_uri_handler: [1] installed /
+D (3248) intr_alloc: Connected src 22 to int 8 (cpu 0)
+D (3248) spi: SPI2 use gpio matrix.
+D (3258) w5500.mac: Using default SPI Driver
+D (3258) intr_alloc: Connected src 30 to int 9 (cpu 0)
+D (3258) spi_hal: eff: 16000, limit: 26666k(/2), 0 dummy, 0 delay
+D (3268) spi_master: SPI2: New device added to CS0, effective clock: 16000000 Hz
+D (3268) wifi:recv assoc: type=0x10
+D (3278) wifi:filter: set rx policy=6
+[0;32mI (3278) wifi:state: assoc -> run (0x10)[0m
+D (3288) nvs: nvs_get sta.pwr_reset 1
+D (3288) wifi:start 10s connect timer for 4 way handshake
+[0;32mI (3298) wifi:connected with 192.168.2.21, aid = 1, channel 1, 40U, bssid = a0:dd:6c:10:24:cd[0m
+[0;32mI (3298) wifi:security: Open Auth, phy: bgn, rssi: -47[0m
+D (3308) wifi:remove all except a0:dd:6c:10:24:cd from rc list
+D (3308) wifi:clear blacklist
+D (3318) nvs: nvs_set sta.chan 1 1
+[1;31mE (3318) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+D (3318) nvs: nvs_set_blob sta.apinfo 700
+D (3328) wifi:E (3328) lwmb: r_select task(), r->b_ip4_str=192.168.2.1, r->c_ip4_str=, no tcp connection
+filter: set rx policy=7
+D (3338) lwmb: r_socket(), r->b_ip4_str=192.168.2.1, b=58, errno=128
+[0;32mI (3338) wifi:pm start, type: 1[0m
+D (3348) lwmb: r_bind(58), r->b_ip4_str=192.168.2.1, b=0, errno=9
+
+[0;32mI (3358) wifi:D (3358) lwmb: r_listen(58), r->b_ip4_str=192.168.2.1, b=0, errno=9[0m
+dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+D (3368) wifi:Send sta connected event
+D (3378) wifi:connect status 1 -> 5
+D (3378) wifi:obss scan is disabled
+D (3378) wifi:stars, DTIM period = 1
+D (3388) event: running post WIFI_EVENT:4 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+[1;31mE (3388) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+D (3398) esp_netif_lwip: check: remote, if=0x3ffca1e4 fn=0x400f63b4
+[1;31mE (3318) gpio: gpio_pullup_en(78): GPIO number error[0m
+D (3418) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffca1e4
+D (3408) lwmb: r_socket(), r->b_ip4_str=127.0.0.1, b=59, errno=9
+D (3428) esp_netif_lwip: dhcp client already stopped
+D (3428) w5500.mac: Waiting W5500 to start & verify version...
+D (3438) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+[0;32mI (3438) mb: idle[0m
+D (3448) esp_netif_lwip: check: remote, if=0x3ffca1e4 fn=0x400f6c38
+D (3448) lwmb: r_bind(59), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (3458) esp_netif_lwip: esp_netif_set__api esp_netif:0x3ffca1e4
+D (3468) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (3468) evhdlr: ip4_str=192.168.2.11, state=1[0m
+D (3468) lwip: pbuf_alloc(length=4)
+
+[0;32mI (3478) evhdlr: ip4_str=192.168.2.11, state=1[0m
+D (3478) lwip: pbuf_alloc(length=4) == 0x3ffcf490
+
+D (3488) event: running post WIFI_EVENT:4 with handler 0x400f90f4 and context 0x3ffca0f0 on loop 0x3ffbd2bc
+D (3488) lwip: pbuf_add_header: old 0x3ffcf4d8 new 0x3ffcf4c4 (20)
+
+D (3498) esp_netif_handlers: esp_netif action connected with netif0x3ffca1e4 from event_id=4
+D (3508) lwip: pbuf_add_header: old 0x3ffcf4c4 new 0x3ffcf4b0 (20)
+
+D (3508) esp_netif_lwip: check: remote, if=0x3ffca1e4 fn=0x400f6b5c
+D (3518) lwip: ip4_output_if: lo0
+
+D (3528) lwip: IP header:
+
+D (3528) lwip: +-------------------------------+
+
+D (3538) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (3538) lwip: +-------------------------------+
+
+D (3548) lwip: |        2      |000|       0   | (id, flags, offset)
+
+D (3548) lwip: +-------------------------------+
+
+[1;31mE (3558) w5500.mac: W5500 version mismatched, expected 0x04, got 0x00[0m
+D (3558) lwip: |   64  |    6  |    0x7cc8     | (ttl, proto, chksum)
+
+D (3568) lwip: +-------------------------------+
+
+D (3568) lwip: |  127  |    0  |    0  |    1  | (src)
+
+[1;31mE (3578) w5500.mac: emac_w5500_init(827): verify chip ID failed[0m
+D (3578) lwip: +-------------------------------+
+
+D (3588) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (3588) lwip: +-------------------------------+
+
+D (3598) lwip: netif_loop_output()
+
+D (3598) lwip: pbuf_alloc(length=44)
+
+D (3608) lwip: pbuf_alloc(length=44) == 0x3ffcf4e0
+
+D (3608) lwip: pbuf_copy(0x3ffcf4e0, 0x3ffcf490)
+
+D (3608) lwip: pbuf_copy_partial_pbuf(0x3ffcf4e0, 0x3ffcf490, 44, 0)
+
+D (3618) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+[1;31mE (3628) lwmb: r_connect(59), r->b_ip4_str=127.0.0.1, b=-1, errno=119[0m
+D (3628) esp_netif_lwip: esp_netif_up_api esp_netif:0x3ffca1e4
+[1;31mE (3628) gpio: gpio_pullup_en(78): GPIO number error[0m
+D (3638) lwip: netif: netmask of interface st set to 255.255.255.0
+
+D (3638) lwmb: r_connect(59), pending
+D (3648) lwip: netif: GW address of interface st set to 192.168.2.11
+
+[0;32mI (3648) gpio: GPIO[34]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0 r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.1674, no tcp connection[0m
+D (3668) esp_netif_lwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffca270
+[1;31mE (3668) esp_eth: esp_eth_driver_install(250): init mac failed[0m
+D (3688) esp_netif_lwip: if0x3ffca1e4 ip unchanged
+D (3698) esp_netif_lwip: check: local, if=0x3ffca1e4 fn=0x400f70c0
+D (3698) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffca1e4
+D (3708) lwip: netif: setting default interface st
+
+D (3718) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3718) esp_netif_lwip: esp_netif_get_ip_info esp_netif:0x3ffca1e4
+D (3718) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (3728) esp_netif_lwip: esp_netif_get_old_ip_info esp_netif:0x3ffca1e4
+D (3738) lwip: ip4_input: packet accepted on interface lo
+
+D (3738) esp_netif_lwip: check: remote, if=0x3ffca1e4 fn=0x400f5e48
+D (3748) lwip: ip4_input: 
+
+[1;31mE (3728) esp_eth: esp_eth_ioctl(438): ethernet driver handle can't be null[0m
+D (3758) lwip: IP header:
+
+D (3758) lwip: +-------------------------------+
+
+D (3768) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (3768) esp_netif_lwip: check: remote, if=0x3ffbb220 fn=0x400f6720
+D (3768) lwip: +-------------------------------+
+
+D (3788) lwip: |        2      |000|       0   | (id, flags, offset)
+
+D (3788) lwip: +-------------------------------+
+
+D (3798) lwip: |   64  |    6  |    0x7cc8     | (ttl, proto, chksum)
+
+D (3798) lwip: +-------------------------------+
+
+D (3808) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (3808) lwip: +-------------------------------+
+
+D (3818) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (3818) lwip: +-------------------------------+
+
+D (3828) lwip: ip4_input: p->len 44 p->tot_len 44
+
+D (3828) lwip: pbuf_remove_header: old 0x3ffcf500 new 0x3ffcf514 (20)
+
+D (3838) lwip: pbuf_remove_header: old 0x3ffcf514 new 0x3ffcf52c (24)
+
+D (3838) lwip: pbuf_alloc(length=4)
+
+D (3848) lwip: pbuf_alloc(length=4) == 0x3ffcf168
+
+D (3848) lwip: pbuf_add_header: old 0x3ffcf1b0 new 0x3ffcf19c (20)
+
+D (3858) lwip: pbuf_add_header: old 0x3ffcf19c new 0x3ffcf188 (20)
+
+D (3858) lwip: ip4_output_if: lo0
+
+D (3868) lwip: IP header:
+
+D (3868) lwip: +-------------------------------+
+
+D (3868) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (3878) lwip: +-------------------------------+
+
+D (387
+
+D (3888) lwip: +-------------------------------+
+
+D (3898) lwip: |   64  |    6  |    0x7cc7     | (ttl, proto, chksum)
+
+D (3898) lwip: +-------------------------------+
+
+D (3908) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (3908) lwip: +-------------------------------+
+
+D (3918) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (3918) lwip: +-------------------------------+
+
+D (3928) lwip: netif_loop_output()
+
+D (3928) lwip: pbuf_alloc(length=44)
+
+D (3928) lwip: pbuf_alloc(length=44) == 0x3ffcf684
+
+D (3938) lwip: pbuf_copy(0x3ffcf684, 0x3ffcf168)
+
+D (3938) lwip: pbuf_copy_partial_pbuf(0x3ffcf684, 0x3ffcf168, 44, 0)
+
+D (3948) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (3948) lwip: pbuf_free(0x3ffcf4e0)
+
+D (3958) lwip: pbuf_free: deallocating 0x3ffcf4e0
+
+D (3958) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (3968) lwip: ip4_input: packet accepted on interface lo
+
+D (3968) lwip: ip4_input: 
+
+D (3978) lwip: IP header:
+
+D (3978) lwip: +-------------------------------+
+
+D (3978) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (3988) lwip: +-------------------------------+
+
+D (3988) lwip: |        3      |000|       0   | (id, flags, offset)
+
+D (3998) lwip: +-------------------------------+
+
+D (4008) lwip: |   64  |    6  |    0x7cc7     | (ttl, proto, chksum)
+
+D (4008) lwip: +-------------------------------+
+
+D (4018) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (4018) lwip: +-------------------------------+
+
+D (4028) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (4028) lwip: +-------------------------------+
+
+D (4038) lwip: ip4_input: p->len 44 p->tot_len 44
+
+D (4038) lwip: pbuf_remove_header: old 0x3ffcf6a4 new 0x3ffcf6b8 (20)
+
+D (4048) lwip: pbuf_remove_header: old 0x3ffcf6b8 new 0x3ffcf6d0 (24)
+
+D (4048) lwip: pbuf_free(0x3ffcf490)
+
+D (4058) lwip: pbuf_free: deallocating 0x3ffcf490
+
+D (4058) lwip: pbuf_alloc(length=20)
+
+D (4058) lwip: pbuf_alloc(length=20) == 0x3ffcf490
+
+D (4068) lwip: pbuf_add_header: old 0x3ffcf4c4 new 0x3ffcf4b0 (20)
+
+D (4078) lwip: ip4_output_if: lo0
+
+D (4078) lwip: IP header:
+
+D (4078) lwip: +-------------------------------+
+
+D (4088) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (4088) lwip: +-------------------------------+
+
+D (4098) lwip: |        4      |000|       0   | (id, flags, offset)
+
+D (4098) lwip: +-------------------------------+
+
+D (4108) lwip: |   64  |    6  |    0x7cca     | (ttl, proto, chksum)
+
+D (4108) lwip: +-------------------------------+
+
+D (4118) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (4118) lwip: +-------------------------------+
+
+D (4128) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (4128) lwip: +-------------------------------+
+
+D (4138) lwip: netif_loop_output()
+
+D (4138) lwip: pbuf_alloc(length=40)
+
+D (4138) lwip: pbuf_alloc(length=40) == 0x3ffcf4dc
+
+D (4148) lwip: pbuf_copy(0x3ffcf4dc, 0x3ffcf490)
+
+D (4148) lwip: pbuf_copy_partial_pbuf(0x3ffcf4dc, 0x3ffcf490, 40, 0)
+
+D (4158) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (4158) lwip: pbuf_free(0x3ffcf490)
+
+D (4168) lwip: pbuf_free: deallocating 0x3ffcf490
+
+D (4168) lwip: pbuf_free(0x3ffcf684)
+
+D (4178) lwip: pbuf_free: deallocating 0x3ffcf684
+
+D (4178) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (4188) lwip: ip4_input: packet accepted on interface lo
+
+D (4188) lwip: ip4_input: 
+
+D (4198) lwip: IP header:
+
+D (4198) lwip: +-------------------------------+
+
+D (4198) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (4208) lwip: +-------------------------------+
+
+D (4208) lwip: |        4      |000|       0   | (id, flags, offset)
+
+D (4218) lwip: +-------------------------------+
+
+D (4218) lwip: |   64  |    6  |    0x7cca     | (ttl, proto, chksum)
+
+D (4228) lwip: +--------------------------(4238) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (4238)(4248) lwip: +-------------------------------+
+
+D (4248) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (4258) lwip: pbuf_remove_header: old 0x3ffcf4fc new 0x3ffcf510 (20)
+
+D (4268) lwip: pf_remove_header: old 0x3ffcf510 new 0x3ffcf524 (20)
+
+D (4268) lwip: pbuf_free(0x3ffcf168)
+
+D (4278) lwip: pbuf_free: deallocating 0x3ffcf168
+
+D (4278) lwip: pbuf_free(0x3ffcf4dc)
+
+D (4278) lwip: pbuf_free: deallocating 0x3ffcf4dc
+
+D (4288) lwip: etharp_timer
+
+D (4288) esp_netif_lwip: esp_netif_set_ip_old_info_api esp_netif:0x3ffca1e4
+D (4288) lwmb: r_socket(), r->b_ip4_str=192.168.2.11, b=60, errno=119
+D (4298) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (4308) esp_netif_handlers: static ip: ip changed=true
+D (4308) event: running post IP_EVENT:0 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (4318) event: running post IP_EVENT:0 with handler 0x400f8f20 and context 0x3ffca1c4 on loop 0x3ffbd2bc
+D (4308) lwmb: r_bind(60), r->b_ip4_str=192.168.2.11, b=0, errno=9
+D (4328) wifi_init_default: Got IP wifi default handler entered
+D (4328) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 3)
+D (4338) esp_netif_handlers: esp_netif action got_ip with netif0x3ffca1e4 from event_id=0
+D (4348) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[0;32mI (4358) esp_netif_handlers: sta ip: 192.168.2.11, mask: 255.255.255.0, gw: 192.168.2.11[0m
+D (4368) lwip: pbuf_alloc(length=4)
+
+[1;31mE (4368) esp_eth: esp_eth_increase_reference(562): ethernet driver handle can't be null[0m
+D (4378) lwip: pbuf_alloc(length=4) == 0x3ffcf4dc
+
+D (4388) lwip: pbuf_add_header: old 0x3ffcf524 new 0x3ffcf510 (20)
+
+D (4398) lwip: pbuf_add_header: old 0x3ffcf510 new 0x3ffcf4fc (20)
+
+D (4398) lwip: ip4_output_if: st1
+
+D (4408) lwip: IP header:
+
+D (4408) lwip: +-------------------------------+
+
+D (4408) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (4418) lwip: +-------------------------------+
+
+D (4418) lwip: |        5      |000|       0   | (id, flags, offset)
+
+D (4428) lwip: +-------------------------------+
+
+D (4428) lwip: |   64  |    6  |    0xf5bd     | (ttl, proto, chksum)
+
+D (4438) lwip: +-------------------------------+
+
+D (4438) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (4448) lwip: +-------------------------------+
+
+D (4448) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+[0;32mI (4448) mb: idle[0m
+D (4458) lwip: +-------------------------------+
+
+[1;31mE (4458) esp_eth: esp_eth_update_input_path_info(369): ethernet driver handle can't be null[0m
+D (4468) lwip: ip4_output_if: call netif->output()
+
+D (4478) lwip: etharp_find_entry: found empty entry 0
+
+D (4478) lwip: etharp_find_entry: selecting empty entry 0
+
+D (4488) lwip: etharp_request: sending ARP request.
+
+D (4488) lwip: pbuf_alloc(length=28)
+
+D (4498) lwip: pbuf_alloc(length=28) == 0x3ffcf914
+
+D (4498) lwip: etharp_raw: sending raw ARP packet.
+
+D (4508) lwip: pbuf_add_header: old 0x3ffcf934 new 0x3ffcf926 (14)
+
+D (4508) lwip: ethernet_output: sending packet 0x3ffcf914
+
+D (4518) lwip: pbuf_free(0x3ffcf914)
+
+D (4518) lwip: pbuf_free: deallocating 0x3ffcf914
+
+D (4528) lwip: etharp_query: queued packet 0x3ffcf4dc on ARP entry 0
+
+[1;31mE (4528) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+[1;31mE (4528) esp_eth: esp_eth_ioctl(438): ethernet driver handle can't be null[0m
+D (4538) lwmb: r_connect(60), pending
+[0;32mI (4538) esp_eth.netif.netif_glue: fc:d6:0d:40:14:df[0m
+[1;31mE (4548) lwmb: r_select task(), r->b_ip4_.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+D (4548) esp_netif_lwip: check: remote, if=0x3ffcf7a0 fn=0x400f5e20
+tcp_connect: can only connect from state CLOSED
+[1;31mE (4568) lwmb: r_connect(59), r->b_ip4_str=127.0.0.1, b=-1, errno=127[0m
+D (4568) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (4578) lwmb: r_connect(59), r->b_ip4_str=127.0.0.1, b=-1, errno=127
+[1;31mE (4588) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4598) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4598) lwmb: r_connect(60), pending
+D (4608) lwmb: r_accept(55), r->b_ip4_str=127.0.0.1, b=61, errno=120
+[0;32mI (4608) lwmb: created remote, r->b_ip4_str=, r->c_ip4_str=[0m
+[0;32mI (4588) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+D (4628) esp_netif_lwip: check: remote, if=0x3ffcf7a0 fn=0x400f63b4
+D (4628) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffcf7a0
+D (4638) esp_netif_lwip: dhcp client stop successfully
+D (4638) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (4638) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (4648) esp_netif_lwip: check: remote, if=0x3ffcf7a0 fn=0x400f6c38
+[1;31mE (4658) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4658) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffcf7a0
+D (4678) lwmb: r_connect(60), pending
+D (4678) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+E (4p_eth_start(304): ethernet driver handle can't be null
+[1;31mE (4708) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4708) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4708) lwmb: r_connect(60), pending
+[1;31mE (4728) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4728) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4728) lwmb: r_connect(60), pending
+[1;31mE (4758) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4758) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4758) lwmb: r_connect(60), pending
+[1;31mE (4778) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4778) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4778) lwmb: r_connect(60), pending
+[1;31mE (4808) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4808) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4808) lwmb: r_connect(60), pending
+[1;31mE (4828) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4828) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4828) lwmb: r_connect(60), pending
+[1;31mE (4858) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4858) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4858) lwmb: r_connect(60), pending
+[1;31mE (4878) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4878) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4878) lwmb: r_connect(60), pending
+[1;31mE (4908) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4908) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4908) lwmb: r_connect(60), pending
+[1;31mE (4928) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4928) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4928) lwmb: r_connect(60), pending
+[1;31mE (4958) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4958) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4958) lwmb: r_connect(60), pending
+[1;31mE (4978) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (4978) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (4978) lwmb: r_connect(60), pending
+D (5008) lwip: etharp_timer
+
+D (5008) lwip: etharp_request: sending ARP request.
+
+D (5008) lwip: pbuf_alloc(length=28)
+
+D (5008) lwip: pbuf_alloc(length=28) == 0x3ffcfc20
+
+D (5008) lwip: etharp_raw: sending raw ARP packet.
+
+D (5008) lwip: pbuf_add_header: old 0x3ffcfc40 new 0x3ffcfc32 (14)
+
+[1;31mE (5008) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (5018) lwip: ethernet_output: sending packet 0x3ffcfc20
+
+D (5038) lwip: pbuf_free(0x3ffcfc20)
+
+D (5038) lwip: pbuf_free: deallocating 0x3ffcfc20
+
+[1;31mE (5038) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5048) lwmb: r_connect(60), pending
+[1;31mE (5068) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5068) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5068) lwmb: r_connect(60), pending
+[1;31mE (5098) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5098) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5098) lwmb: r_connect(60), pending
+[1;31mE (5118) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5118) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5118) lwmb: r_connect(60), pending
+[1;31mE (5148) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5148) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5148) lwmb: r_connect(60), pending
+[1;31mE (5168) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5168) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5168) lwmb: r_connect(60), pending
+[1;31mE (5198) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5198) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5198) lwmb: r_connect(60), pending
+[1;31mE (5218) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5218) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5218) lwmb: r_connect(60), pending
+[1;31mE (5248) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5248) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5248) lwmb: r_connect(60), pending
+[1;31mE (5268) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5268) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5268) lwmb: r_connect(60), pending
+[1;31mE (5298) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5298) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5298) lwmb: r_connect(60), pending
+[1;31mE (5318) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5318) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5318) lwmb: r_connect(60), pending
+[1;31mE (5348) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5348) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5348) lwmb: r_connect(60), pending
+[1;31mE (5368) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5368) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5368) lwmb: r_connect(60), pending
+[1;31mE (5398) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5398) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5398) lwmb: r_connect(60), pending
+[1;31mE (5418) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5418) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5418) lwmb: r_connect(60), pending
+[1;31mE (5448) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5448) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5448) lwmb: r_connect(60), pending
+[0;32mI (5468) mb: idle[0m
+[1;31mE (5468) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5468) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5468) lwmb: r_connect(60), pending
+[1;31mE (5498) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5498) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5498) lwmb: r_connect(60), pending
+[1;31mE (5518) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5518) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5518) lwmb: r_connect(60), pending
+[1;31mE (5548) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5548) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5548) lwming
+[1;31mE (5568) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5568) lwmb: r_conne2.168.2.11, b=-1, errno=120[0m
+D (5568) lwmb: r_connect(60), pending
+[1;31mE (5598) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5598) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5598) lwmb: r_connect(60), pending
+[1;31mE (5618) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5618) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5618) lwmb: r_connect(60), pending
+[1;31mE (5648) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5648) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5648) lwmb: r_connect(60), pending
+[1;31mE (5668) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5668) lwmb: r_connect(60), r->b_ip4_str=192.168.2.1connect(60), pending[0m
+[1;31mE (5698) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5698) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5698) lwmb: r_connect(60), pending
+[1;31mE (5718) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5718) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5718) lwmb: r_connect(60), pending
+[1;31mE (5748) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5748) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5748) lwmb: r_connect(60), pending
+[1;31mE (5768) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5768) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5768) lwmb: r_connect(60), pending
+[1;31mE (5798) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5798) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5798) lwmb: r_connect(60), pending
+[1;31mE (5818) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5818) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5818) lwmb: r_connect(60), pending
+[1;31mE (5848) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5848) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5848) lwmb: r_connect(60), pending
+[1;31mE (5868) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5868) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5868) lwmb: r_connect(60), pending
+[1;31mE (5898) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5898) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5898) lwmb: r_connect(60), pending
+[1;31mE (5918) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5918) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5918) lwmb: r_connect(60), pending
+[1;31mE (5948) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5948) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5948) lwmb: r_connect(60), pending
+[1;31mE (5968) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5968) lwmb: r_conne r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5968) lwmb: r_connect(60), pending
+[1;31mE (5998) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5998) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5998) lwmb: r_connect(60), pending
+D (6008) lwip: etharp_timer
+
+D (6008) lwip: etharp_request: sending ARP request.
+
+D (6008) lwip: pbuf_alloc(length=28)
+
+D (6008) lwip: pbuf_alloc(length=28) == 0x3ffcfc20
+
+D (6018) lwip: etharp_raw: sending raw ARP packet.
+
+D (6018) lwip: pbuf_add_header: old 0x3ffcfc40 new 0x3ffcfc32 (14)
+
+[1;31mE (6018) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (6028) lwip: ethernet_output: sending packet 0x3ffcfc20
+
+D (6038) lwip: pbuf_free(0x3ffcfc20)
+
+D (6048) lwip: pbuf_free: deallocating 0x3ffcfc20
+
+[1;31mE (6048) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6058) lwmb: r_connect(60), pending
+[1;31mE (6078) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6078) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6078) lwmb: r_connect(60), pending
+[1;31mE (6098) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6098) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6098) lwmb: r_connect(60), pending
+[1;31mE (6128) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6128) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6128) lwmb: r_connect(60), pending
+[1;31mE (6148) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6148) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6148) lwmb: r_connect(60), pending
+[1;31mE (6178) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6178) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6178) lwmb: r_connect(60), pending
+[1;31mE (6198) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6198) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6198) lwmb: r_connect(60), pending
+[1;31mE (6228) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6228) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6228) lwmb: r_connect(60), pending
+[1;31mE (6248) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6248) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6248) lwmb: r_connect(60), pending
+[1;31mE (6278) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6278) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6278) lwmb: r_connect(60), pending
+[1;31mE (6298) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6298) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6298) lwmb: r_connect(60), pending
+[1;31mE (6328) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6328) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6328) lwmb: r_connect(60), pending
+E (63: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection
+[1;31mE (6348) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6348) lwmb: r_connect(60), pending
+[1;31mE (6378) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6378) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6378) lwmb: r_connect(60), pending
+[1;31mE (6398) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6398) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6398) lwmb: r_connect(60), pending
+[1;31mE (6428) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6428) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6428) lwmb: r_connect(60), pending
+[1;31mE (6448) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6448) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6448) lwmb: r_connect(60), pending
+[0;32mI (6468) mb: idle[0m
+[1;31mE (6478) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6478) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6478) lwmb: r_connect(60), pending
+[1;31mE (6498) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6498) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6498) lwmb: r_connect(60), pending
+[1;31mE (6528) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6528) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6528) lwmb: r_connect(60), pending
+[1;31mE (6548) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6548) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6548) lwmb: r_connect(60), pending
+[1;31mE (6578) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6578) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6578) lwmb: r_connect(60), pending
+[1;31mE (6598) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6598) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6598) lwmb: r_connect(60), pending
+[1;31mE (6628) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6628) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6628) lwmb: r_connect(60), pending
+[1;31mE (6648) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6648) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6648) lwmb: r_connect(60), pending
+[1;31mE (6678) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6678) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6678) lwmb: r_connect(60), pending
+[1;31mE (6698) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6698) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6698) lwmb: r_connect(60), pending
+[1;31mE (6728) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6728) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6728) lwmb: r_connect(60), pending
+[1;31mE (6748) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6748) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6748) lwmb: r_connect(60), pending
+[1;31mE (6778) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6778) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6778) lwmb: r_connect(60), pending
+[1;31mE (6798) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6798) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6798) lwmb: r_connect(60), pending
+[1;31mE (6828) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6828) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6828) lwmb: r_connect(60), pending
+[1;31mE (6848) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6848) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6848) lwmb: r_connect(60), pending
+[1;31mE (6878) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6878) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6878) lwmb: r_connect(60), pending
+[1;31mE (6898) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6898) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6898) lwmb: r_connect(60), pending
+[1;31mE (6928) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6928) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6928) lwmb: r_connect(60), pending
+[1;31mE (6948) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6948) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6948) lwmb: r_connect(60), pending
+[1;31mE (6978) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6978) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6978) lwmb: r_connect(60), pending
+[1;31mE (6998) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (6998) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (6998) lwmb: r_connect(60), pending
+D (7008) lwip: etharp_timer
+
+D (7008) lwip: etharp_request: sending ARP request.
+
+D (7008) lwip: pbuf_alloc(length=28)
+
+D (7018) lwip: pbuf_alloc(length=28) == 0x3ffcfc0c
+
+D (7018) lwip: etharp_raw: sending raw ARP packet.
+
+D (7028) lwip: pbuf_add_header: old 0x3ffcfc2c new 0x3ffcfc1e (14)
+
+D (7028) lwip: ethernet_output: sending packet 0x3ffcfc0c
+
+[1;31mE (7028) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (7038) lwip: pbuf_free(0x3ffcfc0c)
+
+D (7048) lwip: pbuf_free: deallocating 0x3ffcfc0c
+
+[1;31mE (7048) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7058) lwmb: r_connect(60), pending
+[1;31mE (7078) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7078) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7078) lwmb: r_connect(60), pending
+[1;31mE (7108) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7108) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7108) lwmb: r_connect(60), pending
+[1;31mE (7128) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7128) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7128) lwmb: r_connect(60), pending
+[1;31mE (7158) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7158) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7158) lwmb: r_connect(60), pending
+[1;31mE (7178) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7178) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7178) lwmb: r_connect(60), pending
+[1;31mE (7208) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7208) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7208) lwmb: r_connect(60), pending
+[1;31mE (7228) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7228) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7228) lwmb: r_connect(60), pending
+[1;31mE (7258) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7258) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7258) lwmb: r_connect(60), pending
+[1;31mE (7278) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7278) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7278) lwmb: r_connect(60), pending
+[1;31mE (7308) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7308) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7308) lwmb: r_connect(60), pending
+[1;31mE (7328) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7328) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7328) lwmb: r_connect(60), pending
+[1;31mE (7358) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7358) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7358) lwmb: r_connect(60), pending
+[1;31mE (7388) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7388) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7388) lwmb: r_connect(60), pending
+[1;31mE (7408) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7408) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7408) lwmb: r_connect(60), pending
+[1;31mE (7438) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7438) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7438) lwmb: r_connect(60), pending
+[1;31mE (7458) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7458) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7458) lwmb: r_connect(60), pending
+[0;32mI (7468) mb: idle[0m
+[1;31mE (7488) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7488) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7488) lwmb: r_connect(60), pending
+[1;31mE (7508) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7508) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7508) lwmb: r_connect(60), pending
+[1;31mE (7538) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7538) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7538) lwmb: r_connect(60), pending
+[1;31mE (7558) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7558) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7558) lwmb: r_connect(60), pending
+[1;31mE (7588) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7588) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7588) lwmb: r_connect(60), pending
+[1;31mE (7608) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7608) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7608) lwmb: r_connect(60), pending
+[1;31mE (7638) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7638) lwmb: r_conne, r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7638) lwmb: r_connect(60), pending
+[1;31mE (7658) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7658) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7658) lwmb: r_connect(60), pending
+[1;31mE (7688) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7688) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7688) lwmb: r_connect(60), pending
+[1;31mE (7708) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7708) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7708) lwmb: r_connect(60), pending
+[1;31mE (7738) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7738) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7738) lwmb: r_connect(60), pending
+[1;31mE (7758) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7758) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7758) lwmb: r_connect(60), pending
+[1;31mE (7788) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7788) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7788) lwmb: r_connect(60), pending
+[1;31mE (7808) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7808) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7808) lwmb: r_connect(60), pending
+[1;31mE (7838) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7838) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7838) lwmb: r_connect(60), pending
+[1;31mE (7858) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7858) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7858) lwmb: r_connect(60), pending
+[1;31mE (7888) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7888) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7888) lwmb: r_connect(60), pending
+[1;31mE (7908) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7908) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7908) lwmb: r_connect(60), pending
+[1;31mE (7938) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7938) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7938) lwmb: r_connect(60), pending
+[1;31mE (7958) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7958) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7958) lwmb: r_connect(60), pending
+[1;31mE (7988) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (7988) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (7988) lwmb: r_connect(60), pending
+D (8008) lwip: etharp_timer
+
+D (8008) lwip: etharp_request: sending ARP request.
+
+D (8008) lwip: pbuf_alloc(length=28)
+
+D (8008) lwip: pbuf_alloc(length=28) == 0x3ffcfc20
+
+D (8008) lwip: etharp_raw: sending raw ARP packet.
+
+[1;31mE (8008) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (8018) lwip: pbuf_add_header: old 0x3ffcfc40 new 0x3ffcfc32 (14)
+
+D (8028) lwip: ethernet_output: sending packet 0x3ffcfc20
+
+D (8038) lwip: pbuf_free(0x3ffcfc20)
+
+D (8038) lwip: pbuf_free: deallocating 0x3ffcfc20
+
+[1;31mE (8038) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8048) lwmb: r_connect(60), pending
+[1;31mE (8078) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8078) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8078) lwmb: r_connect(60), pending
+[1;31mE (8098) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8098) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8098) lwmb: r_connect(60), pending
+[1;31mE (8128) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8128) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8128) lwmb: r_connect(60), pending
+[1;31mE (8148) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8148) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8148) lwmb: r_connect(60), pending
+[1;31mE (8178) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8178) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8178) lwmb: r_connect(60), pending
+[1;31mE (8198) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8198) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8198) lwmb: r_connect(60), pending
+[1;31mE (8228) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8228) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8228) lwmb: r_connect(60), pending
+[1;31mE (8248) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8248) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8248) lwmb: r_connect(60), pending
+[1;31mE (8278) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8278) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8278) lwmb: r_connect(60), pending
+[1;31mE (8298) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8298) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8298) lwmb: r_connect(60), pending
+[1;31mE (8328) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8328) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8328) lwmE (8348) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection
+[1;31mE (8348) lwmb: r_connect(60), r->b_ip4_str=192.168.2.1E (8378) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8378) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8378) lwmb: r_connect(60), pending
+[1;31mE (8398) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8398) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8398) lwmb: r_connect(60), pending
+[1;31mE (8428) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8428) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8428) lwmb: r_connect(60), pending
+[1;31mE (8448) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8448) lwmb: r_conne.2.11, b=-1, errno=120[0m
+D (8448) lwmb: r_connect(60), pending
+[0;32mI (8468) mb: idle[0m
+[1;31mE (8478) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8478) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8478) lwmb: r_connect(60), pending
+[1;31mE (8498) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8498) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8498) lwmb: r_connect(60), pending
+[1;31mE (8528) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8528) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8528) lwmb: r_connect(60), pending
+E (85_ip4_str=192.168.2.11, b=-1, errno=120
+D (8548) lwmb: r_connect(60), pending
+[1;31mE (8578) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8578) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8578) lwmb: r_connect(60), pending
+[1;31mE (8598) lwmb: r_select task(), 4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8598) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8598) lwmb: r_connect(60), pending
+[1;31mE (8628) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8628) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8628) lwmb: r_connect(60), pending
+[1;31mE (8648) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (8648) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (8648) lwmb: r_connect(60), pending

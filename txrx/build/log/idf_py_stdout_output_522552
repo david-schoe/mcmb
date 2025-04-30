@@ -1,0 +1,1747 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 29 2025 18:10:20[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24ef8h (151288) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=00034f20 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=00034f44 vaddr=3ffb0000 size=04118h ( 16664) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=00039064 vaddr=40080000 size=06fb4h ( 28596) load[0m
+[0;32mI (163) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=917c4h (595908) map[0m
+[0;32mI (367) esp_image: segment 5: paddr=000d17ec vaddr=40086fb4 size=12c60h ( 76896) load[0m
+[0;32mI (409) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (409) boot: Disabling RNG early entropy source...[0m
+[0;32mI (420) cpu_start: Multicore app[0m
+D (420) cpu_start: Pro cpu up
+D (420) cpu_start: Starting app cpu, entry point is 0x40081384
+D (0) cpu_start: App cpu up
+D (429) clk: RTC_SLOW_CLK calibration value: 3082496
+D (440) cpu_start: calling init function: 0x400d2f54 on core: 0
+D (440) cpu_start: calling init function: 0x400d347c on core: 0
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+D (449) cpu_start: calling init function: 0x400d2e94 on core: 0
+[0;32mI (455) app_init: Application information:[0m
+[0;32mI (459) app_init: Project name:     txrx[0m
+[0;32mI (462) app_init: App version:      e7e3d0c-dirty[0m
+[0;32mI (467) app_init: Compile time:     Apr 29 2025 18:10:18[0m
+[0;32mI (472) app_init: ELF file SHA256:  c37764fab...[0m
+[0;32mI (476) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+D (482) cpu_start: calling init function: 0x400d2f68 on core: 0
+[0;32mI (488) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (492) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (496) efuse_init: Chip rev:         v3.1[0m
+D (499) cpu_start: calling init function: 0x400d4f30 on core: 0
+D (505) memory_layout: Checking 9 reserved memory ranges:
+D (510) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000
+D (516) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0
+D (522) memory_layout: Reserved memory range 0x3ffb0000 - 0x3(528) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440
+D (534) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350
+D (541) memory_layout: Reserved memory range 0x40070000 - 0x40078000
+D (547) memory_layout: Reserved memory range 0x40078000 - 0x40080000
+D (553) memory_layout: Reserved memory range 0x40080000 - 0x40099c14
+D (559) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000
+D (565) memory_layout: Building list of available memory regions:
+D (571) memory_layout: Available memory region 0x3ffae6e0 - 0x3ffb0000
+D (577) memory_layout: Available memory region 0x3ffb9108 - 0x3ffc0000
+D (583) memory_layout: Available memory region 0x3ffc0000 - 0x3ffc2000
+D (589) memory_layout: Available memory region 0x3ffc2000 - 0x3ffc4000
+D (596) memory_layout: Available memory region 0x3ffc4000 - 0x3ffc6000
+D (602) memory_layout: Available memory region 0x3ffc6000 - 0x3ffc8000
+D (608) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000
+D (614) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000
+D (621) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000
+D (627) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000
+D (633) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000
+D (639) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000
+D (646) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000
+D (652) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000
+D (658) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000
+D (664) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000
+D (671) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000
+D (677) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000
+D (683) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20
+D (689) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000
+D (696) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000
+D (702) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000
+D (708) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000
+D (714) memory_layout: Available memory region 0x3fffc000 - 0x40000000
+D (721) memory_layout: Available memory region 0x40099c14 - 0x4009a000
+D (727) memory_layout: Available memory region 0x4009a000 - 0x4009c000
+D (733) memory_layout: Available memory region 0x4009c000 - 0x4009e000
+D (739) memory_layout: Available memory region 0x4009e000 - 0x400a0000
+[0;32mI (746) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (752) heap_init: New heap initialised at 0x3ffae6e0
+[0;32mI (757) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+D (762) heap_init: New heap initialised at 0x3ffb9108
+[0;32mI (767) heap_init: At 3FFB9108 len 00026EF8 (155 KiB): DRAM[0m
+[0;32mI (772) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (777) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (783) heap_init: New heap initialised at 0x40099c14
+[0;32mI (788) heap_init: At 40099C14 len 000063EC (24 KiB): IRAM[0m
+D (793) cpu_start: calling init function: 0x400d6654 on core: 0
+D (798) cpu_start: calling init function: 0x400d605c on core: 0
+D (804) cpu_start: calling init function: 0x400d34c0 on core: 0
+D (810) intr_alloc: Connected src 46 to int 1 (cpu 0)
+D (814) cpu_start: calling init function: 0x400d34cc on core: 0
+D (820) cpu_start: calling init function: 0x400d794c on core: 0
+D (826) cpu_start: calling init function: 0x400d9b68 on core: 0
+D (831) cpu_start: calling init function: 0x400d8378 on core: 0
+D (837) cpu_start: calling init function: 0x400d6068 on core: 0
+D (843) cpu_start: calling init function: 0x400d34d8 on core: 0
+D (848) spi_flash: trying chip: issi
+D (852) spi_flash: trying chip: gd
+D (855) spi_flash: trying chip: mxic
+D (858) spi_flash: trying chip: winbond
+D (862) spi_flash: trying chip: generic
+[0;32mI (865) spi_flash: detected chip: generic[0m
+[0;32mI (869) spi_flash: flash io: dio[0m
+[0;33mW (872) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (884) cpu_start: calling init function: 0x400d2ff4 on core: 0
+D (890) cpu_start: calling init function: 0x401445bc
+D (894) cpu_start: calling init function: 0x400f830c
+D (899) cpu_start: calling init function: 0x400e6604
+D (904) cpu_start: calling init function: 0x40089c7c
+D (908) cpu_start: calling init function: 0x400d444c
+D (913) cpu_start: calling init function: 0x400e35a0 on core: 0
+D (919) intr_alloc: Connected src 17 to int 2 (cpu 0)
+D (923) cpu_start: calling init function: 0x40158658 on core: 0
+D (929) cpu_start: calling init function: 0x400d3508 on core: 0
+D (935) intr_alloc: Connected src 24 to int 3 (cpu 0)
+D (940) app_start: Starting scheduler on CPU0
+I (944D (944) intr_alloc: Connected src 25 to int 1 (cpu 1)
+D (944) app_start: Starting scheduler on CPU1
+) main_task: Started on CPU0
+D (954) heap_init: New heap initialised at 0x3ffe0440
+D (954) heap_init:nitialised at 0x3ffe4350
+D (964) intr_alloc: Connected src 16 to int 5 (cpu 0)
+[0;32mI (964) main_task: Calling app_main()[0m
+D (974) esp_netif_lwip: LwIP stack has been initialized
+D (974) esp_netif_lwip: esp-netif has been successfully initialized
+D (984) event: running task for loop 0x3ffbd33c
+D (984) event: created task for loop 0x3ffbd33c
+D (984) event: created event loop 0x3ffbd33c
+D (1034) nvs: nvs_open_from_partition storage 0
+D (1034) nvs: nvs_get_str_or_blob eth_ip4_str
+D (1034) nvs: nvs_get_str_or_blob eth_ip4_str
+D (1034) nvs: nvs_close 1
+D (1034) nvs: nvs_open_from_partition storage 0
+D (1034) nvs: nvs_get_str_or_blob ap_ip4_str
+D (1044) nvs: nvs_get_str_or_blob ap_ip4_str
+D (1044) nvs: nvs_close 2
+D (1044) nvs: nvs_open_from_partition storage 0
+D (1054) nvs: nvs_get_str_or_blob sta_ip4_str
+D (1054) nvs: nvs_get_str_or_blob sta_ip4_str
+D (1064) nvs: nvs_close 3
+D (1064) nvs: nvs_open_from_partition storage 0
+D (1064) nvs: nvs_get_str_or_blob eth_gw_str
+D (1074) nvs: nvs_get_str_or_blob eth_gw_str
+D (1074) nvs: nvs_close 4
+D (1074) nvs: nvs_open_from_partition storage 0
+D (1084) nvs: nvs_get_str_or_blob ap_gw_str
+D (1084) nvs: nvs_get_str_or_blob ap_gw_str
+D (1094) nvs: nvs_close 5
+D (1094) nvs: nvs_open_from_partition storage 0
+D (1094) nvs: nvs_get_str_or_blob sta_gw_str
+D (1104) nvs: nvs_get_str_or_blob sta_gw_str
+D (1104) nvs: nvs_close 6
+D (1104) nvs: nvs_open_from_partition storage 0
+D (1114) nvs: nvs_get_str_or_blob eth_nm_str
+D (1114) nvs: nvs_get_str_or_blob eth_nm_str
+D (1124) nvs: nvs_close 7
+D (1124) nvs: nvs_open_from_partition storage 0
+D (1124) nvs: nvs_get_str_or_blob ap_nm_str
+D (1134) nvs: nvs_get_str_or_blob ap_nm_str
+D (1134) nvs: nvs_close 8
+D (1134) nvs: nvs_open_from_partition storage 0
+D (1144) nvs: nvs_get_str_or_blob sta_nm_str
+D (1144) nvs: nvs_get_str_or_blob sta_nm_str
+D (1144) nvs: nvs_close 9
+D (1154) nvs: nvs_open_from_partition storage 0
+D (1154) nvs: nvs_get_str_or_blob ap_ssid_str
+D (1154) nvs: nvs_get_str_or_blob ap_ssid_str
+D (1164) nvs: nvs_close 10
+D (1164) nvs: nvs_open_from_partition storage 0
+D (1174) nvs: nvs_get_str_or_blob sta_ssid_str
+D (1174) nvs: nvs_get_str_or_blob sta_ssid_str
+D (1174) nvs: nvs_close 11
+[0;32mI (1184) lwmb: created remote, r->b_ip4_str=192.168.2.1, r->c_ip4_str=[0m
+[0;32mI (1184) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+D (1194) nvs: nvs_open_from_partition misc 1
+[0;32mI (1204) wifi:wifi driver task: 3ffc25c8, prio:23, stack:6656, core=0[0m
+D (1204) efuse: BLK0 REG2 [8-15], len=8 bits
+D (1204) efuse: BLK0 REG2 [0-7], len=8 bits
+D (1214) efuse: BLK0 REG1 [24-31], len=8 bits
+D (1214) efuse: BLK0 REG1 [16-23], len=8 bits
+D (1214) efuse: BLK0 REG1 [8-15], len=8 bits
+D (1224) efuse: BLK0 REG1 [0-7], len=8 bits
+D (1224) efuse: BLK0 REG2 [16-23], len=8 bits
+[1;31mE (1214) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=, no tcp connection[0m
+D (1234) nvs: nvs_open_from_partition nvs.net80211 1
+D (1244) lwmb: r_socket(), r->b_ip4_str=127.0.0.1, b=54, errno=0
+D (1244) nvs: nvs_get opmode 1
+D (1254) lwmb: r_bind(54), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (1254) nvs: nvs_get_str_or_blob sta.ssid
+D (1254) lwmb: r_listen(54), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (1264) nvs: nvs_get sta.authmode 1
+[1;31mE (1264) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1274) nvs: nvs_get_str_or_blob sta.pswd
+D (1284) nvs: nvs_get_str_or_blob sta.pmk
+D (1284) nvs: nvs_get sta.chan 1
+D (1284) nvs: nvs_get auto.conn 1
+D (1294) nvs: nvs_get bssid.set 1
+D (1294) nvs: nvs_get_str_or_blob sta.bssid
+[1;31mE (1294) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1294) nvs: nvs_get sta.lis_intval 2
+D (1304) nvs: nvs_get sta.phym 1
+D (1314) nvs: nvs_get sta.phybw 1
+D (1314) nvs: nvs_get_str_or_blob sta.apsw
+D (1314) nvs: nvs_get_str_or_blob sta.apinfo
+[1;31mE (1324) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1324) nvs: nvs_get sta.scan_method 1
+D (1334) nvs: nvs_get sta.sort_method 1
+D (1334) nvs: nvs_get sta.minrssi 1
+D (1344) nvs: nvs_get sta.minauth 1
+D (1344) nvs: nvs_get sta.pmf_e 1
+D (1344) nvs: nvs_get sta.pmf_r 1
+D (1344) nvs: nvs_get sta.btm_e 1
+D (1354) nvs: nvs_get sta.rrm_e 1
+[1;31mE (1354) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1354) nvs: nvs_get sta.mbo_e 1
+D (1364) nvs: nvs_get_str_or_blob ap.ssid
+D (1374) nvs: nvs_get_str_or_blob ap.passwd
+D (1374) nvs: nvs_get_str_or_blob ap.pmk
+D (1374) nvs: nvs_get ap.chan 1
+D (1384) nvs: nvs_get ap.authmode 1
+[1;31mE (1384) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1384) nvs: nvs_get ap.hidden 1
+D (1394) nvs: nvs_get ap.max.conn 1
+D (1394) nvs: nvs_get bcn.interval 2
+D (1394) nvs: nvs_get ap.phym 1
+D (1404) nvs: nvs_get ap.phybw 1
+D (1404) nvs: nvs_get ap.sndchan 1
+D (1404) nvs: nvs_get ap.pmf_e 1
+D (1414) nvs: nvs_get ap.pmf_r 1
+D (1414) nvs: nvs_get ap.p_cipher 1
+D (1414) nvs: nvs_get lorate 1
+[1;31mE (1414) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1424) nvs: nvs_get_str_or_blob country
+D (1434) nvs: nvs_get ap.ftm_r 1
+D (1434) nvs: nvs_get sta.ft 1
+D (1434) nvs: nvs_get sta.owe 1
+D (1444) nvs: nvs_get sta.trans_d 1
+[1;31mE (1444) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1444) nvs: nvs_get sta.sae_h2e 1
+D (1454) nvs: nvs_get sta.sae_pk_mode 1
+D (1454) nvs: nvs_get sta.bss_retry 1
+D (1464) nvs: nvs_get_str_or_blob sta.owe_data
+D (1464) nvs: nvs_get sta.he_dcm 1
+D (1464) nvs: nvs_get sta.he_dcm_c_tx 1
+D (1474) nvs: nvs_get sta.he_dcm_c_rx 1
+D (1474) nvs: nvs_get sta.he_mcs9_d 1
+D (1474) nvs: nvs_get sta.he_su_b_d 1
+[1;31mE (1474) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1484) nvs: nvs_get sta.he_su_b_f_d 1
+D (1494) nvs: nvs_get sta.he_mu_b_f_d 1
+D (1494) nvs: nvs_get st nvs: nvs_get_str_or_blob sta.sa) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection
+D (1504) nvs: nvs_get ap.sae_h2e 1
+D (1514) nvs: nvs_get_str_or_blob ap.pmk_info
+D (1514) nvs: nvs_get nan.phym 1
+D (1524) nvs: nvs_get sta.pwr_reset 1
+D (1524) nvs: nvs_get band_mode 1
+D (1524) nvs: nvs_get sta.phym5g 1
+D (1534) nvs: nvs_get ap.phym5g 1
+D (1534) nvs: nvs_get sta.phybw5g 1
+D (1534) nvs: nvs_get ap.phybw5g 1
+[1;31mE (1534) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1534) nvs: nvs_get ap.sndchan5g 1
+D (1544) nvs: nvs_get ap.chan5g 1
+D (1554) nvs: nvs_get ap.chanisset 1
+D (1554) nvs: nvs_get ap.chan5gisset 1
+D (1554) nvs: nvs_get sta.rssi_5g_adj 1
+D (1564) nvs: nvs_get ap.csa_count 1
+D (1564) nvs: nvs_get ap.dtim_period 1
+[1;31mE (1564) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1574) nvs: nvs_get ap.trans_d 1
+D (1584) nvs: nvs_set ap.sndchan 1 1
+[1;31mE (1594) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (1594) wifi:wifi firmware ifi:wifi certification version: v7.0[0m
+[0;32mI (1594) wifi:config NVS flash: enabled[0m
+[0;32mI (1604) wifi:config nano formatting: disabled[0m
+[0;32mI (1604) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1614) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1614) wifi:Init management short buffer num: 32[0m
+[1;31mE (1614) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (1624) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1634) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1634) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1634) wifi:Init dynamic rx buffer num: 32[0m
+D (1644) wifi:Reset scan defaults in ms : min,max,passive,chan_dwell :(0,120,360,30)
+[1;31mE (1644) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (1654) wifi_init: rx ba win: 6[0m
+[0;32mI (1664) wifi_init: accept mbox: 6[0m
+[0;32mI (1664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1664) wifi_init: udp mbox: 6[0m
+[0;32mI (1664) wifi_init: tcp mbox: 6[0m
+[1;31mE (1674) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (1674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1684) wifi_init: tcp mss: 1440[0m
+[0;32mI (1684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1694) wifi_init: WiFi RX IRAM OP enabled[0m
+D (1694) esp_netif_lwip: check: remote, if=0x3ffbb130 fn=0x400f5c64
+[1;31mE (1704) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1704) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 1)
+D (1714) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (1724) esp_netif_lwi(), r->b_ip4_str=192.168.2.1, no network connection
+D (1734) esp_netif_objects: esp_netif_add_to_list_unsafe netif added succes 2)
+D (1744) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (1754) esp_netif_lwip: check: remote, if=0x3ffc896c fn=0x400f5858
+D (1754) esp_netif_lwip: esp_netif_dhcps_stop_api esp_netif:0x3ffc896c
+D (1764) esp_netif_lwip: dhcp server stop successfully
+D (1764) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (1764) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1774) esp_netif_lwip: check: remote, if=0x3ffc896c fn=0x400f617c
+D (1784) esp_netif_lwip: esp_netif_ssem
+D (1794) esp_netif_lwip: ch400f56e4
+[1;31mE (1804) lwmb: r_selecstr=192.168.2.1, no network connection[0m
+D (1804) esp_netif_lwip: esp_netif_dhcps_start_api esp_netif:0x3ffc896c
+D (1814) esp_netif_lwip: dhcp server re init
+D1824) nvs: nvs_get opmode 1
+D (1834) nvs: nvs_set ap.authmode 1 0
+D (1834) nvs: nvs_set ap.sae_h2e 1 4
+D (1834) nvs: nvs_set ap.chanisset 1 1
+D (1844) nvs: nvs_set ap.chan 1 1
+[1;31mE (1844) lwmb: r_select_task(), r->b_ip4_st844) nvs: nvs_set ap.sndchan 1 1[0m
+D (1854) nvs: nvs_set_blob ap.ssid 36
+D (1854) nvs: nvs_set_blob ap.passwd 65
+D (1864) nvs: nvs_set ap.hidden 1 0
+D (1864) cn.interval 2 100
+D (1874) nvs: nvs_set ap.p_cipher 1 0
+E (187
+D (1894) wifi:clear blacklist
+D (1894) nvs: nvs_set_blob sta.ssid 36
+[1;31mE (1904) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1a.pswd 65[0m
+D (1914) nvs: nvs_set bssid.set 1 0
+D (1914) nvs: nv(1924) nvs: nvs_set sta.scan_method 1 0
+[1;31mE (1924) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1924) nvs: nvs_set sta.sort_method 1 0
+D (1934) nvs: nvs_set sta.minrssi 1 -127
+D (1934) nvs: nvs_set sta.minauth 1 0
+D (1944) nvs: nvs_set_blob sta.apsw 2
+D (1944) nvs: nvs_set sta.pmf_e 1 1
+D (1944) nvs: nvs_set sta.pmf_r 1 0
+D (1954) nvs: nvs_set sta.rrm_e 1 0
+[1;31mE (1954) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1954) nvs: nvs_set sta.btm_e 1 0
+D (1964) nvs: nvs_set sta.mbo_e 1 0
+D (1964) nvs: nvs_set sta.ft 1 0
+D (1974) nvs: nvs_set sta.owe 1 0
+D (1974) nvs: nvs_set sta.bss_retry 1 0
+D (1974) nvs: nvs_set sta.trans_d 1 0
+D (1984) nvs: nvs_set sta.sae_h2e 1 2
+[1;31mE (1984) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (1984) nvs: nvs_set sta.sae_pk_mode 1 0
+D (1994) nvs: nvs_set_blob sta.sae_h2e_id 32
+D (2004) nvs: nvs_set_blob sta.apinfo 700
+[0;32mI (2004) wifi: ap_init (ap) finished. SSrd: channel:1[0m
+[1;31mE (2014) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (2014) wifi: sta_init (sta) fiished. SSID:192.168.2.21 password: channel:1[0m
+[0;32mI (2024) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+D (2034) phy_init: loading PHY init data from application binary
+D (2034) nvs: nvs_open_from_partition phy 0
+[1;31mE (2034) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2044) nvs: nvs_get cal_version 4
+D (2054) nvs: nvs_get_str_or_blob cal_mac
+D (2054) efuse: BLK0 REG2 [8-15], len=8 bits
+D (2054) efuse: BLK0 REG2 [0-7], len=8 bits
+D (2064) efuse: BLK0 REG1 [24-31], len=8 bits
+D (2064) efuse: BLK0 REG1 [16-23], len=8 bits
+D (2064) efuse: BLK0 REG1 [8-15], len=8 bits
+D (2074) efuse: BLK0 REG1 [0-7], len=8 bits
+D (2074) efuse: BLK0 REG2 [16-23], len=8 bits
+[1;31mE (2064) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2084) nvs: nvs_get_str_or_blob cal_data
+D (2094) nvs: nvs_close 14
+D (2094) efuse: BLK0 REG2 [8-15], len=8 bits
+D (2094) efuse: BLK0 REG2 [0-7], len=8 bits
+D (2104) efuse: BLK0 REG1 [24-31], len=8 bits
+D (2104) efuse: BLK0 REG1 [16-23], len=8 bits
+D (2114) efuse: BLK0 REG1 [8-15], len=8 bits
+D (2114) efuse: BLK0 REG1 [0-7], len=8 bits
+D (2114) efuse: BLK0 REG2 [16-23], len=8 bits
+[1;31mE (2104) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[1;31mE (2154) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[1;31mE (2184) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2194) wifi:filter: set rx pola0:dd:6c:86:19:01)
+[0;32mI (2204) wifi:enable tsf[0m
+D (2204) wifi:filtt rx policy=9
+[0;32mI (2214) wifi:Total power save buffer number: 16[0m2214) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection
+[0;32mI (2214) wifi:Init max length of beacon: 752/752[0m
+D (2214) event: running post WIFI_EVENT:43 with handler 0x400db818 and context 0x3ffbea14 on loo
+D (2234) event: running post WIFI_EVENT:2 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (2244) event: running post WIFI_EVENT:2 with handler 0x400f8584 and context 0x3ffc8b4c on loop 0x3ffbd33c
+[1;31mE (2244) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no networktif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f5364[0m
+D (2284) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (2284) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+D (2284) esp_netif_handlers: esp_netif action has started with netif0x3ffc8a30 from event_id=2
+D (2304) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0xapi 0x3ffc8a30
+[1;31mE (2314) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m lwip: ret=0x0, give sem
+D (2334) event: running post WIFI_EVENffbd33c
+D (2344) event: running post WIFI_EVENT:12 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (2344) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[1;31mE (2354) evhdlr: ip4_str=192.168.2.1, state=1[0m
+[0;32mI (2364) evhdlr: ip4_str=192.168.2.1, state=1[0m
+D (2364) event: running post WIFI_EVENT:12 with handler 0xon loop 0x3ffbd33c
+D (2374) wifi_init_default: wifi_start esp-netif:0x3ffc896c event-id12
+D (2384) wifi_init_default: WIFI mac address: a0 dd 6c 86 19 1
+[1;31mE (2384) lwmb: r_select task(), r->b_ip4_str=192.168.2.1, r->c_ip4_str=, no tcp connection[0m
+D (2384) esp_netif_lwip: check: remote, if=0x3ffc896c fn=0x400f5364
+D (2254) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (2404) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2394) lwmb: r_socket(), r->b_ip4_str=192.168.2.1, b=55, errno=9
+D (2414) esp_netif_handlers: esp_netif action has started with netif0x3ffc896c from event_id=12
+D (2414) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (2424) esp_netif_lwip: check: remote, if=0x3ffc896c fn=0x400f5e84
+D (2434) esp_netif_lwip: dhcp client stop successfully
+D (2444) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2454) esp_netif_lwip: esp_netif_start_api 0x3ffc896c
+D (2454) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (2454) esp_netif_lwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffc89d8
+D (2454) lwmb: r_bind(55), r->b_ip4_str=192.168.2.1, b=0, errno=9
+D (2464) esp_netif_lwip: if0x3ffc896c ip unchanged
+D (2474) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffc896c
+D (2484) esp_netif_lwip: esp_netif_start_api Setting the lwip netif0x3ffc89d8 UP
+[0;32mI (2494) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.1[0m
+D (2504) esp_netif_lwip: check: local, if=0x3ffc896c fn=0x400f6604
+D (2504) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc896c
+D (2514) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2514) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (2514) lwmb: r_listen(55), r->b_ip4_str=192.168.2.1, b=0, errno=9
+D (2524) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2534) wifi:Start wifi connect
+D (2534) w4) wifi:connect status 0 -> 1
+D (2554) wifi:filter: set rx policy=3
+D (2554) wifi:clear scan ap list
+D (2554) wifi:start scan cb=0x40113ff4, arg=0x0, ss_state=0x1, time=359212, index=0
+D (2564) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (2574) httpd: httpd_thread: web server started
+D (2574) httpd: httpd_server: doing select maxfd+1 = 58
+D (2584) event: running post ESP_HTTP_SERVER_EVENT:1 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (2594) httpd_uri: httpd_register_uri_handler: [0] installed /
+D (2594) httpd_uri: httpd_find_uri_handler: [0] = /
+D (2604) httpd_uri: httpd_register_uri_handler: [0] exists /
+D (2604) httpd_uri: httpd_register_uri_handler: [1] installed /
+D (2614) intr_alloc: Connected src 22 to int 8 (cpu 0)
+D (2614) spi: SPI2 use gpio matrix.
+D (2624) w5500.mac: Using default SPI Driver
+D (2624) intr_alloc: Connected src 30 to int 9 (cpu 0)
+D (2634) spi_hal: eff: 16000, limit: 26666k(/2), 0 dummy, 0 delay
+D (2634) spi_master: SPI2: New device added to CS0, effective clock: 16000000 Hz
+[1;31mE (2644) gpio: gpio_pullup_en(78): GPIO number error[0m
+D (2644) w5500.mac: Waiting W5500 to start & verify version...
+D (2664) esp_eth: new ethernet driver @0x3ffcdbf4
+D (2664) esp_netif_lwip: check: remote, if=0x3ffbb2a0 fn=0x400f5c64
+D (2664) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 3)
+D (2674) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[0;32mI (2674) esp_eth.netif.netif_glue: 64:61:76:65:79:73[0m
+D (2684) esp_netif_lwip: check: remote, if=0x3ffcdc74 fn=0x400f5364
+D (2684) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2694) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+[0;32mI (2694) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+D (2704) esp_netif_lwip: check: remote, if=0x3ffcdc74 fn=0x400f58f8
+D (2714) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffcdc74
+D (2714) esp_netif_lwip: dhcp client stop successfully
+D (2724) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2724) esp_netif_lwip: check: remote, if=0x3ffcdc74 fn=0x400f617c
+D (2724) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (2744) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffcdc74
+D (2744) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2764) event: running post ETH_EVENT:0 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (2764) event: running post ETH_EVENT:0 with handler 0x400dddb0 and context 0x3ffcddd0 on loop 0x3ffbd33c
+D (2764) esp_eth.netif.netif_glue: eth_action_start: 0x3ffcdd88, 0x3f4057b4, 0, 0x3ffcdeb0, 0x3ffcdbf4
+D (2774) esp_netif_handlers: esp_netif action has started with netif0x3ffcdc74 from event, if=0x3ffcdc74 fn=0x400f5e84
+D (2794) esp_netif_lwip: esp_netif_start_api 0x3ffcdc74
+D (2794) esp_netif_lwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffcdd00
+D (2804) esp_netif_lwip: if0x3ffcdc74 ip unchanged
+D (2804) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffcdc74
+D (2814) esp_netif_lwip: check: local, if=0x3ffcdc74 fn=0x400f6604
+D (2824) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffcdc74
+D (2824) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2864) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (2894) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (3014) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (3044) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (3164) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (3194) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (3314) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (3354) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (3474) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (3504) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (3624) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (3654) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (3774) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (3814) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (3934) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (3964) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (4084) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (4114) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (4234) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (4264) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (4634) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (4664) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (5024) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (5054) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (5414) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (5444) wifi:filter: set rx policy=4
+D (5444) wifi:first chan=1
+D (5444) wifi:handoff_cb: status=0
+D (5444) wifi:clear rc list
+D (5444) wifi:clear blacklist
+D (5444) wifi:Send disconnect event, reason=201
+D (5454) wifi:connect status 1 -> 3
+D (5454) wifi:disable connect timer
+D (5464) wifi:clear scan ap list
+D (5464) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (5474) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (6474) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (6474) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (6474) esp_netif_lwip: dhcp client already stopped
+D (6474) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (6484) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (6484) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (6494) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (6494) wifi:Start wifi connect
+D (6504) wifi:connect status 3 -> 0
+D (6504) wifi:connect chan=0
+D (6504) wifi:first chan=1
+D (6514) wifi:connect status 0 -> 1
+D (6514) wifi:filter: set rx policy=3
+D (6514) wifi:clear scan ap list
+D (6524) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=4322838, index=0
+D (6524) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (6534) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (6544) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (6554) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (6554) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (6564) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (6574) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: interval=120
+D (6574) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (6584) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (6594) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (6654) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (6684) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (6804) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (6844) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (6964) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (6994) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (7114) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (7144) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (7264) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (7304) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (7424) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (7454) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (7574) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (7604) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (7734) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (7764) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (7884) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (7914) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (8034) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (8064) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (8194) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (8224) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (8584) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (8614) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (8974) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (9004) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (9364) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (9394) wifi:filter: set rx policy=4
+D (9404) wifi:first chan=1
+D (9404) wifi:handoff_cb: status=0
+D (9404) wifi:clear rc list
+D (9404) wifi:clear blacklist
+D (9404) wifi:Send disconnect event, reason=201
+D (9404) wifi:connect status 1 -> 3
+D (9414) wifi:disable connect timer
+D (9414) wifi:clear scan ap list
+D (9414) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (9424) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (10434) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (10434) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (10434) esp_netif_lwip: dhcp client already stopped
+D (10434) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (10444) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (10444) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (10454) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (10464) wifi:Start wifi connect
+D (10464) wifi:connect status 3 -> 0
+D (10464) wifi:connect chan=0
+D (10464) wifi:first chan=1
+D (10474) wifi:connect status 0 -> 1
+D (10474) wifi:filter: set rx policy=3
+D (10474) wifi:clear scan ap list
+D (10484) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=8284024, index=0
+D (10494) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (10494) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (10504) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (10514) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (10524) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (10524) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (10534) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (10544) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (10544) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (10554) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (10614) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (10644) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (10774) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (10804) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (10924) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (10954) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (11074) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (11104) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (11224) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (11264) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (11384) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (11414) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (11534) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (11564) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (11684) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (11724) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (11844) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (11874) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (11994) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (12024) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (12144) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (12174) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (12544) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (12574) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (12934) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (12964) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (13324) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (13354) wifi:filter: set rx policy=4
+D (13354) wifi:first chan=1
+D (13354) wifi:handoff_cb: status=0
+D (13354) wifi:clear rc list
+D (13354) wifi:clear blacklist
+D (13364) wifi:Send disconnect event, reason=201
+D (13364) wifi:connect status 1 -> 3
+D (13364) wifi:disable connect timer
+D (13374) wifi:clear scan ap list
+D (13374) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (13384) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (14384) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (14384) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (14384) esp_netif_lwip: dhcp client already stopped
+D (14384) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (14394) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (14394) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (14404) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (14414) wifi:Start wifi connect
+D (14414) wifi:connect status 3 -> 0
+D (14414) wifi:connect chan=0
+D (14414) wifi:first chan=1
+D (14424) wifi:connect status 0 -> 1
+D (14424) wifi:filter: set rx policy=3
+D (14424) wifi:clear scan ap list
+D (14434) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=12234048, index=0
+D (14444) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (14444) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (14454) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (14464) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (14474) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (14474) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (14484) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (14494) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (14494) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (14504) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (14564) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (14594) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (14724) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (14754) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (14874) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (14904) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (15024) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (15054) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (15174) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (15214) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (15334) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (15364) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (15484) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (15514) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (15634) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (15674) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (15794) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (15824) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (15944) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (15974) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (16094) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (16134) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (16494) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (16524) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (16884) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (16914) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (17274) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (17304) wifi:filter: set rx policy=4
+D (17304) wifi:first chan=1
+D (17304) wifi:handoff_cb: status=0
+D (17304) wifi:clear rc list
+D (17304) wifi:clear blacklist
+D (17314) wifi:Send disconnect event, reason=201
+D (17314) wifi:connect status 1 -> 3
+D (17314) wifi:disable connect ter
+D (17324) wifi:clear scan ap list
+D (17324) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (17334) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (18334) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (18334) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (18334) esp_netif_lwip: dhcp client already stopped
+D (18334) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (18344) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (18344) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (18354) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (18364) wifi:Start wifi connect
+D (18364) wifi:connect status 3 -> 0
+D (18364) wifi:connect chan=0
+D (18364) wifi:first chan=1
+D (18374) wifi:connect status 0 -> 1
+D (18374) wifi:filter: set rx policy=3
+D (18374) wifi:clear scan ap list
+D (18384) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=16184008, index=0
+D (18394) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (18394) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (18404) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (18414) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (18424) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (18424) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (18434) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (18444) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (18444) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (18454) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (18514) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (18544) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (18674) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (18704) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (18824) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (18854) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (18974) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (19004) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (19124) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (19164) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (19284) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (19314) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (19434) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (19464) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (19584) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (19624) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (19744) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (19774) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (19894) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (19924) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (20044) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (20074) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (20444) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (20474) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (20834) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (20864) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (21224) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (21254) wifi:filter: set rx policy=4
+D (21254) wifi:first chan=1
+D (21254) wifi:handoff_cb: status=0
+D (21254) wifi:clear rc list
+D (21254) wifi:clear blacklist
+D (21264) wifi:Send disconnect event, reason=201
+D (21264) wifi:connect status 1 -> 3
+D (21264) wifi:disable connect timer
+D (21274) wifi:clear scan ap list
+D (21274) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (21284) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (22144) wifi:ap recv assoc/reassoc request
+D (22144) wifi:bss->bss_channel prim 1 second 0 
+
+D (22144) nvs: nvs_set ap.sndchan 1 0
+[0;32mI (22154) wifi:new:<1,0>, old:<1,1>, ap:<1,0>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+D (22154) wifi:hostap_ht_operation_update current operation mode=0x0
+D (22164) wifi:bss=0x3ffcdf18, resp=16 join
+[0;32mI (22164) wifi:station: 4c:32:75:9a:e9:f7 join, AID=1, bgn, 20[0m
+D (22174) wifi:join success, ap send assoc response
+D (22284) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (22284) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (22284) esp_netif_lwip: dhcp client already stopped
+D (22284) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (22294) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (22294) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (22304) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (22314) wifi:Start wifi connect
+D (22314) wifi:connect status 3 -> 0
+D (22314) wifi:connect chan=0
+D (22314) wifi:first chan=1
+D (22324) wifi:connect status 0 -> 1
+D (22324) wifi:filter: set rx policy=3
+D (22324) wifi:clear scan ap list
+D (22334) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=20134261, index=0
+D (22344) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (22344) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (22354) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (22364) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (22374) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (22374) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (22384) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (22394) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (22394) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (22404) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (22404) event: running post WIFI_EVENT:43 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (22414) event: running post WIFI_EVENT:14 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (22464) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (22494) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (22514) wifi:eb is dhcp or dns sport = 68, dport = 67
+D (22524) wifi:D (22524) esp_netif_lwip: esp_netif_dhcps_cb esp_netif:0x3ffc896c
+eb is dhcp or dns sport = 67, dport = 68I (22524) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.2.2
+
+D (22534) esp_netif_lwip: Client's MAC: 4c:32:75:9a:e9:f7
+D (22534) event: running post IP_EVENT:2 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (22624) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+[0;32mI (22624) wifi:<ba-add>idx:2 (ifx:1, 4c:32:75:9a:e9:f7), tid:6, ssn:0, winSize:64[0m
+D (22654) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (22774) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+[0;32mI (22804) wifi:<ba-add>idx:3 (ifx:1, 4c:32:75:9a:e9:f7), tid:0, ssn:0, winSize:64[0m
+D (22804) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (22924) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (22964) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (23084) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (23114) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (23234) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (23264) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (23384) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (23424) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (23544) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (23574) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (23694) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (23724) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (23844) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (23874) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (24004) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (24034) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (24394) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (24424) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (24784) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (24814) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (25174) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (25204) wifi:filter: set rx policy=4
+D (25214) wifi:first chan=1
+D (25214) wifi:handoff_cb: status=0
+D (25214) wifi:clear rc list
+D (25214) wifi:clear blacklist
+D (25214) wifi:Send disconnect event, reason=201
+D (25214) wifi:connect status 1 -> 3
+D (25224) wifi:disable connect timer
+D (25224) wifi:clear scan ap list
+D (25224) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (25234) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (26104) wifi:eb is dhcp or dns sport = 68, dport = 67
+D (26104) esp_netif_lwip: esp_netif_dhcps_cb esp_netif:0x3ffc896c
+D (26104) wifi:I (26104) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.2.2
+eb is dhcp or dns sport = 67, dport = 68D (26114) esp_netif_lwip: Client's MAC: 4c:32:75:9a:e9:f7
+
+D (26244) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (26244) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (26244) esp_netif_lwip: dhcp client already stopped
+D (26244) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (26254) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (26254) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (26264) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (26274) wifi:Start wifi connect
+D (26274) wifi:connect status 3 -> 0
+D (26274) wifi:connect chan=0
+D (26274) wifi:first chan=1
+D (26284) wifi:connect status 0 -> 1
+D (26284) wifi:filter: set rx policy=3
+D (26284) wifi:clear scan ap list
+D (26294) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=24094078, index=0
+D (26304) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (26304) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (26314) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (26324) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (26334) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (26334) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (26344) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (26354) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (26354) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (26364) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (26364) event: running post IP_EVENT:2 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (26424) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (26454) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (26584) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (26614) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (26734) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (26764) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (26884) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (26914) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (27034) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (27074) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (27194) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (27224) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (27344) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (27374) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (27494) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (27524) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (27654) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (27684) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (27804) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (27834) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (27954) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (27984) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (28344) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (28384) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (28744) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (28774) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (29134) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (29154) httpd: httpd_server: processing listen socket 56
+D (29154) httpd: httpd_accept_conn: newfd = 59
+D (29154) httpd_sess: httpd_sess_new: fd = 59
+D (29154) httpd_sess: httpd_sess_new: active sockets: 1
+D (29164) httpd: httpd_accept_conn: complete
+D (29164) event: running post ESP_HTTP_SERVER_EVENT:2 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (29164) wifi:D (29164) httpd: httpd_server: doing select maxfd+1 = 60
+filter: set rx policy=4
+D (29184) wifi:first chan=1
+D (29184) wifi:handoff_cb: status=0
+D (29184) wifi:clear rc list
+D (29194) wifi:clear blacklist
+D (29194) wifi:Send disconnect event, reason=201
+D (29194) wifi:connect status 1 -> 3
+D (29204) wifi:disable connect timer
+D (29204) wifi:clear scan ap list
+D (29214) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (29214) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (30014) httpd: httpd_server: processing listen socket 56
+D (30014) httpd: httpd_accept_conn: newfd = 60
+D (30014) httpd_sess: httpd_sess_new: fd = 60
+D (30014) httpd_sess: httpd_sess_new: active sockets: 2
+D (30024) httpd: httpd_accept_conn: complete
+D (30024) httpd: httpd_server: doing select maxfd+1 = 61
+D (30224) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (30224) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (30224) esp_netif_lwip: dhcp client already stopped
+D (30224) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (30234) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (30234) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (30244) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (30254) wifi:Start wifi connect
+D (30254) wifi:connect status 3 -> 0
+D (30254) wifi:connect chan=0
+D (30254) wifi:first chan=1
+D (30264) wifi:connect status 0 -> 1
+D (30264) wifi:filter: set rx policy=3
+D (30264) wifi:clear scan ap list
+D (30274) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=28074219, index=0
+D (30284) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (30284) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (30294) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (30304) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (30314) esp_netif_lwip: esp_netif_down_a esp_netif:0x3ffc8a30
+D (30314) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (30324) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (30334) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (30334) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (30344) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (30344) event: running post ESP_HTTP_SERVER_EVENT:2 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (30384) httpd: httpd_process_session: processing socket 60
+D (30384) httpd_sess: httpd_sess_process: httpd_req_new
+D (30384) httpd_parse: scratch buf qsize = 128
+D (30394) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (30394) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (30404) httpd_parse: read_block: received HTTP request block size = 128
+D (30404) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (30404) httpd_parse: cb_url: message begin
+D (30414) httpd_parse: cb_url: processing url = /
+D (30424) httpd_parse: verify_url: received URI = /
+D (30424) httpd_parse: cb_header_field: headers begin
+D (30434) httpd_txrx: httpd_unrecv: length = 111
+D (30434) httpd_parse: pause_parsing: paused
+D (30444) httpd_parse: cb_header_field: processing field = Host
+D (30444) wifi:D (30444) httpd_parse: scratch buf qsize = 128
+perform scan: ss_state=0x9, chan<2,0>, dur<0,120>D (30454) httpd_txrx: httpd_recv_with_opt: requested length = 128
+
+D (30464) httpd_txrx: httpd_recv_with_opt: pending length = 111
+D (30464) httpd_parse: read_block: received HTTP request block size = 111
+D (30474) httpd_parse: continue_parsing: skip pre-parsed data of size = 5
+D (30484) httpd_parse: continue_parsing: un-paused
+D (30484) httpd_parse: cb_header_value: processing value = 192.168.2.1
+D (30494) httpd_parse: cb_header_field: processing field = Connection
+D (30494) httpd_parse: cb_header_value: processing value = keep-alive
+D (30504) httpd_parse: cb_header_field: processing field = Content-Length
+D (30514) httpd_parse: cb_header_value: processing value = 797
+D (30514) httpd_parse: cb_header_field: processing field = Cache-Control
+D (30524) httpd_parse: cb_header_value: processing value = max-age=0
+D (30524) httpd_parse: cb_header_field: processing field = Upgrade-Insecure-Requ
+D (30534) httpd_parse: parse_block: parsed block size = 111
+D (30544) httpd_parse: scratch buf qsize = 239
+D (30544) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (30554) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (30554) httpd_parse: read_block: received HTTP request block size = 128
+D (30564) httpd_parse: cb_header_field: processing field = ests
+D (30564) httpd_parse: cb_header_value: processing value = 1
+D (30574) httpd_parse: cb_header_field: processing field = User-Agent
+D (30574) httpd_parse: cb_header_value: processing value = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Saf
+D (30584) wifi:D (30594) httpd_parse: parse_block: parsed block size = 239
+scan end: arg=0x3ffb62dc, status=0, ss_state=0x3D (30604) httpd_parse: scratch buf qsize = 367
+
+D (30604) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (30614) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (30624) httpd_parse: read_block: received HTTP request block size = 128
+D (30624) httpd_parse: cb_header_value: processing value = ari/537.36
+D (30634) httpd_parse: cb_header_field: processing field = Origin
+D (30634) httpd_parse: cb_header_value: processing value = http://192.168.2.1
+D (30644) wifi:D (30644) httpd_parse: cb_header_field: processing field = Content-Type
+perform scan: ss_state=0x9, chan<3,0>, dur<0,120>D (30654) httpd_parse: cb_header_value: processing value = application/x-www-form-urlencoded
+
+D (30664) httpd_parse: cb_header_field: processing field = Accept
+D (30674) httpd_parse: cb_header_value: processing value = text/html,application/xhtml+xml
+D (30684) httpd_parse: parse_block: parsed block size = 367
+D (30684) httpd_parse: scratch buf qsize = 495
+D (30684) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (30694) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (30704) httpd_parse: read_block: received HTTP request block size = 128
+D (30704) httpd_parse: cb_header_value: processing value = ,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8
+D (30714) httpd_parse: cb_header_field: processing field = Sec-GPC
+D (30724) httpd_parse: cb_header_value: processing value = 1
+D (30734) httpd_parse: cb_header_field: processing field = Accept-Language
+D (30734) httpd_parse: cb_header_value: processing value = en-US,en
+D (30744) httpd_parse: cb_header_field: processing field = Referer
+D (30744) httpd_parse: cb_header_value: processing value = http://192.16
+D (30754) httpd_parse: parse_block: parsed block size = 495
+D (30764) httpd_parse: scratch buf qsize = 623
+D (30764) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (30774) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (30774) httpd_parse: read_block: received HTTP request block size = 128
+D (30784) httpd_parse: cb_header_value: processing value = 8.2.1/
+D (30784) wifi:D (30784) httpd_parse: cb_header_field: processing field = Accept-Encoding
+scan end: arg=0x3ffb62dc, status=0, ss_state=0x3D (30794) httpd_parse: cb_header_value: processing value = gzip, deflate
+
+D (30804) httpd_parse: cb_headers_complete: bytes read     = 558
+D (30814) httpd_parse: cb_headers_complete: content length = 797
+D (30814) httpd_txrx: httpd_unrecv: length = 86
+D (30814) event: running post ESP_HTTP_SERVER_EVENT:3 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (30824) httpd_parse: pause_parsing: paused
+D (30834) httpd_parse: cb_on_body: body begins
+D (30834) wifi:D (30844) httpd_parse: httpd_parse_req: parsing complete
+perform scan: ss_state=0x9, chan<4,0>, dur<0,120>D (30844) httpd_uri: httpd_uri: request for / with type 3
+
+D (30854) httpd_uri: httpd_find_uri_handler: [0] = /
+D (30864) httpd_uri: httpd_find_uri_handler: [1] = /
+D (30864) httpd_txrx: httpd_req_recv: remaining length = 797
+D (30874) httpd_txrx: httpd_recv_with_opt: rehttpd_txrx: httpd_recv_with_opt: pending length = 86
+D (30884) httpd_txrx: httpd_recv_with_opt: received length = 797
+D (30884) httpd_txrx: httpd_req_recv: received length = 797
+D (30894) nvs: nvs_open_from_partition storage 1
+D (30894) event: running post ESP_HTTP_SERVER_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (30894) nvs: nvs_set_str eth_ip4_str 192.168.1.1
+D (30914) nvs: nvs_set_str ap_ip4_str 192.168.2.1
+D (30914) nvs: nvs_set_str sta_ip4_str 192.168.2.11
+D (30924) nvs: nvs_set_str eth_gw_str 192.168.1.1
+D (30924) nvs: nvs_set_str ap_gw_str 192.168.2.1
+D (30934) nvs: nvs_set_str sta_gw_str 192.168.2.21
+D (30934) nvs: nvs_set_str eth_nm_str 255.255.255.0
+D (30944) nvs: nvs_set_str ap_nm_str 255.255.255.0
+D (30944) nvs: nvs_set_str sta_nm_str 255.255.255.0
+D (30954) nvs: nvs_set_str ap_ssid_str 192.168.2.1
+D (30954) nvs: nvs_set_str sta_ssid_str 192.168.2.21
+D (30954) httpd_parse: httpd_query_key_value: key r_reg_str[0] not found
+ESP_ERR_NOT_FOUND
+D (30964) httpd_parse: httpd_query_key_value: key r_reg_str[1] not found
+ESP_ERR_NOT_FOUND
+D (30974) httpd_parse: httpd_query_key_value: key r_reg_str[2] not found
+D (30974) wifi:ESP_ERR_NOT_FOUND
+scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (30984) httpd_parse: httpd_query_key_value: key r_reg_str[3] not found
+Etpd_parse: httpd_query_key_value: key r_reg_lo_str[0] not found
+ESP_ERR_NOT_FOUND
+D (31004) httpd_parse: httpd_query_key_value: key r_reg_lo_str[1] not found
+ESP_ERR_NOT_FOUND
+D (31014) httpd_parse: httpd_query_key_value: key r_reg_lo_str[2] not found
+D (31014) wifi:ESP_ERR_NOT_FOUND
+perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (31024) httpd_parse: httpd_query_key_value: key r_reg_lo_str[3] not found
+ESP_ERR_NOT_FOUND
+D (31034) httpd_parse: httpd_query_key_value: key r_reg_hi_str[0] not found
+ESP_ERR_NOT_FOUND
+D (31044) httpd_parse: httpd_query_key_value: key r_reg_hi_str[1] not found
+ESP_ERR_NOT_FOUND
+D (31054) httpd_parse: httpd_query_key_value: key r_reg_hi_str[2] not found
+ESP_ERR_NOT_FOUND
+D (31064) httpd_parse: httpd_query_key_value: key r_reg_hi_str[3] not found
+ESP_ERR_NOT_FOUND
+D (31064) nvs: nvs_set_str rc_ip4_str 
+D (31074) nvs: nvs_set_str rb_ip4_str 
+D (31074) httpd_parse: httpd_query_key_value: key w_reg_str[0] not found
+ESP_ERR_NOT_FOUND
+D (31084) httpd_parse: httpd_query_key_value: key w_reg_str[1] not found
+ESP_ERR_NOT_FOUND
+D (31094) httpd_parse: httpd_query_key_value: key w_reg_str[2] not found
+ESP_ERR_NOT_FOUND
+D (31104) httpd_parse: httpd_query_key_value: key w_reg_str[3] not found
+ESP_ERR_NOT_FOUND
+D (31104) httpd_parse: httpd_query_key_value: key w_reg_lo_str[0] not found
+ESP_ERR_NOT_FOUND
+D (31114) httpd_parse: httpd_query_key_value: key w_reg_lo_str[1] not found
+ESP_ERR_NOT_FOUND
+D (31124) httpd_parse: httpd_query_key_value: key w_reg_lo_str[2] not found
+ESP_ERR_NOT_FOUND
+D (31134) httpd_parse: httpd_query_key_value: key w_reg_lo_str[3] not found
+ESP_ERR_NOT_FOUND
+D (31144) httpd_parse: httpd_query_key_value: key w_reg_hi_str[0] not found
+ESP_ERR_NOT_FOUND
+D (31144) wifi:D (31154) httpd_parse: httpd_query_key_value: key w_reg_hi_str[1] not found
+scan end: arg=0x3ffb62dc, status=0, ss_state=0x3ESP_ERR_NOT_FOUND
+
+D (31164) httpd_parse: httpd_query_key_value: key w_reg_hi_str[2] not found
+ESP_ERR_NOT_FOUND
+D (31174) httpd_parse: httpd_query_key_value: key w_reg_hi_str[3] not found
+ESP_ERR_NOT_FOUND
+D (31184) nvs: nvs_set_str wc_ip4_str 
+D (31184) nvs: nvs_set_str wb_ip4_str 
+D (31184) nvs: nvs_close 15
+D (31194) httpd_txrx: httpd send buffer size = 64
+D (31194) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (31194) httpd_txrx: httpd_send_all: sent = 64
+D (31204) httpd_txrx: httpd_send_all: sent = 2
+D (31204) event: running post ESP_HTTP_SERVER_EVENT:4 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (31204) httpd_txrx: httpd_send_all: sent = 3051
+D (31224) event: running post ESP_HTTP_SERVER_EVENT:6 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (31224) httpd_sess: httpd_sess_process: httpd_req_delete
+D (31234) httpd_sess: httpd_sess_process: success
+D (31244) httpd: httpd_server: doing select maxfd+1 = 61
+D (31324) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (31354) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (31474) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (31504) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (31624) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (31664) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (31784) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (31814) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (31934) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (31964) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (32084) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (32124) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (32484) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (32514) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (32874) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (32904) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (33264) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (33294) wifi:filter: set rx policy=4
+D (33294) wifi:first chan=1
+D (33294) wifi:handoff_cb: status=0
+D (33294) wifi:clear rc list
+D (33294) wifi:clear blacklist
+D (33304) wifi:Send disconnect event, reason=201
+D (33304) wifi:connect status 1 -> 3
+D (33304) wifi:disable connect timer
+D (33314) wifi:clear scan ap list
+D (33314) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (33324) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (34324) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (34324) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (34324) esp_netif_lwip: dhcp client already stopped
+D (34324) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (34334) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (34334) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (34344) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (34354) wifi:Start wifi connect
+D (34354) wifi:connect status 3 -> 0
+D (34354) wifi:connect chan=0
+D (34354) wifi:first chan=1
+D (34364) wifi:connect status 0 -> 1
+D (34364) wifi:filter: set rx policy=3
+D (34364) wifi:clear scan ap list
+D (34374) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=32174293, index=0
+D (34384) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (34384) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (34394) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (34404) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (34414) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (34414) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (34424) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (34434) esp_ck: local, if=0x3ffc8a30 fn=0x400f6604
+D (34434) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (34444) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (34504) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (34534) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (34664) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (34694) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (34814) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (34844) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (34964) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (34994) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (35114) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (35154) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (35274) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (35304) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (35424) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (35454) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (35574) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (35604) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (35734) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (35764) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (35884) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (35914) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (36034) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (36064) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (36424) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (36464) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (36824) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (36854) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (37214) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (37244) wifi:filter: set rx policy=4
+D (37244) wifi:first chan=1
+D (37244) wifi:handoff_cb: status=0
+D (37244) wifi:clear rc list
+D (37244) wifi:clear blacklist
+D (37244) wifi:Send disconnect event, reason=201
+D (37254) wifi:connect status 1 -> 3
+D (37254) wifi:disable connect timer
+D (37264) wifi:clear scan ap list
+D (37264) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (37274) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (38274) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (38274) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (38274) esp_netif_lwip: dhcp client already stopped
+D (38274) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (38284) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (38284) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (38294) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (38304) wifi:Start wifi connect
+D (38304) wifi:connect status 3 -> 0
+D (38304) wifi:connect chan=0
+D (38304) wifi:first chan=1
+D (38314) wifi:connect status 0 -> 1
+D (38314) wifi:filter: set rx policy=3
+D (38314) wifi:clear scan ap list
+D (38324) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=36124178, index=0
+D (38334) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (38334) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (38344) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (38354) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (38364) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (38364) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (38374) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (38384) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (38384) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (38394) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (38454) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (38484) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (38614) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (38644) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (38764) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (38794) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (38914) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (38944) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (39064) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (39104) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (39224) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (39254) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (39374) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (39404) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (39524) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (39564) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (39684) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (39714) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (39834) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (39864) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (39984) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (40014) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (40384) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (40414) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (40774) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (40804) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (41164) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (41194) wifi:filter: set rx policy=4
+D (41194) wifi:first chan=1
+D (41194) wifi:handoff_cb: status=0
+D (41194) wifi:clear rc list
+D (41194) wifi:clear blacklist
+D (41194) wifi:Send disconnect event, reason=201
+D (41204) wifi:connect status 1 -> 3
+D (41204) wifi:disable connect timer
+D (41214) wifi:clear scan ap list
+D (41214) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (41224) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (42224) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (42224) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (42224) esp_netif_lwip: dhcp client already stopped
+D (42224) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (42234) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (42234) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (42244) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (42254) wifi:Start wifi connect
+D (42254) wifi:connect status 3 -> 0
+D (42254) wifi:connect chan=0
+D (42254) wifi:first chan=1
+D (42264) wifi:connect status 0 -> 1
+D (42264) wifi:filter: set rx policy=3
+D (42264) wifi:clear scan ap list
+D (42274) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=40074110, index=0
+D (42284) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (42284) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (42294) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (42304) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (42314) esp_netif_lwip: esp_netif_down_a:0x3ffc8a30
+D (42314) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (42324) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (42334) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (42334) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (42344) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (42404) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (42434) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (42564) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (42594) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (42714) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (42744) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (42864) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (42894) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (43024) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (43054) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (43174) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (43204) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (43324) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (43354) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (43474) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (43514) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (43634) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (43664) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (43784) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (43814) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (43934) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (43974) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (44334) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (44364) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (44724) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (44754) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (45114) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (45144) wifi:filter: set rx policy=4
+D (45144) wifi:first chan=1
+D (45144) wifi:handoff_cb: status=0
+D (45144) wifi:clear rc list
+D (45144) wifi:clear blacklist
+D (45154) wifi:Send disconnect event, reason=201
+D (45154) wifi:connect status 1 -> 3
+D (45154) wifi:disable connect timer
+D (45164) wifi:clear scan ap list
+D (45164) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (45174) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (46174) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (46174) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (46174) esp_netif_lwip: dhcp client already stopped
+D (46174) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (46184) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (46184) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (46194) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (46204) wifi:Start wifi connect
+D (46204) wifi:connect status 3 -> 0
+D (46204) wifi:connect chan=0
+D (46204) wifi:first chan=1
+D (46214) wifi:connect status 0 -> 1
+D (46214) wifi:filter: set rx policy=3
+D (46214) wifi:clear scan ap list
+D (46224) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=44024210, index=0
+D (46234) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (46234) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (46244) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (46254) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (46264) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (46264) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (46274) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (46284) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (46284) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (46294) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (46354) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (46384) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (46514) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (46544) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (46664) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (46694) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (46814) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (46844) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (46974) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (47004) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (47124) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (47154) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (47274) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (47304) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (47424) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (47464) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (47584) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (47614) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (47734) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (47764) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (47884) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (47924) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (48284) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (48314) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (48674) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (48704) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (49064) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (49094) wifi:filter: set rx policy=4
+D (49094) wifi:first chan=1
+D (49094) wifi:handoff_cb: status=0
+D (49094) wifi:clear rc list
+D (49094) wifi:clear blacklist
+D (49104) wifi:Send disconnect event, reason=201
+D (49104) wifi:connect status 1 -> 3
+D (49104) wifi:disable connect timer
+D (49114) wifi:clear scan ap list
+D (49114) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (49124) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (50124) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (50124) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (50124) esp_netif_lwip: dhcp client already stopped
+D (50124) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (50134) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (50134) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (50144) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (50154) wifi:Start wifi connect
+D (50154) wifi:connect status 3 -> 0
+D (50154) wifi:connect chan=0
+D (50154) wifi:first chan=1
+D (50164) wifi:connect status 0 -> 1
+D (50164) wifi:filter: set rx policy=3
+D (50164) wifi:clear scan ap list
+D (50174) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=47974082, index=0
+D (50184) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (50184) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (50194) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (50204) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (50214) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (50214) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (50224) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (50234) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (50234) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (50244) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (50304) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (50334) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (50464) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (50494) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (50614) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (50644) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (50764) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (50794) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (50914) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (50954) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (51074) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (51104) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (51224) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (51254) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (51374) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (51404) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (51534) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (51564) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (51684) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (51714) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (51834) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (51864) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (52234) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (52264) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (52624) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (52654) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (53014) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (53044) wifi:filter: set rx policy=4
+D (53044) wifi:first chan=1
+D (53044) wifi:handoff_cb: status=0
+D (53044) wifi:clear rc list
+D (53044) wifi:clear blacklist
+D (53054) wifi:Send disconnect event, reason=201
+D (53054) wifi:connect status 1 -> 3
+D (53054) wifi:disable connect timer
+D (53064) wifi:clear scan ap list
+D (53064) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (53074) evhdlr: ip4_str=192.168.2.11, state=0[0m
+D (53404) httpd: httpd_process_session: processing socket 60
+D (53414) httpd_sess: httpd_sess_process: httpd_req_new
+D (53414) httpd_parse: scratch buf qsize = 128
+D (53414) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (53424) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (53424) httpd_parse: read_block: received HTTP request block size = 128
+D (53434) httpd_parse: cb_url: message begin
+D (53434) httpd_parse: cb_url: processing url = /
+D (53444) httpd_parse: verify_url: received URI = /
+D (53444) httpd_parse: cb_header_field: headers begin
+D (53444) httpd_txrx: httpd_unrecv: length = 111
+D (53454) httpd_parse: pause_parsing: paused
+D (53454) httpd_parse: cb_header_field: processing field = Host
+D (53464) httpd_parse: scratch buf qsize = 128
+D (53464) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (53474) httpd_txrx: httpd_recv_with_opt: pending length = 111
+D (53474) httpd_parse: read_block: received HTTP request block size = 111
+D (53484) httpd_parse: continue_parsing: skip pre-parsed data of size = 5
+D (53494) httpd_parse: continue_parsing: un-paused
+D (53494) httpd_parse: cb_header_value: processing value = 192.168.2.1
+D (53504) httpd_parse: cb_header_field: processing field = Connection
+D (53504) httpd_parse: cb_header_value: processing value = keep-alive
+D (53514) httpd_parse: cb_header_field: processing field = Content-Length
+D (53524) httpd_parse: cb_header_value: processing value = 756
+D (53524) httpd_parse: cb_header_field: processing field = Cache-Control
+D (53534) httpd_parse: cb_header_value: processing value = max-age=0
+D (53534) httpd_parse: cb_header_field: processing field = Origin
+D (53544) httpd_parse: cb_header_value: processing value = http://192.16
+D (53554) httpd_parse: parse_block: parsed block size = 111
+D (53554) httpd_parse: scratch buf qsize = 239
+D (53564) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (53564) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (53574) httpd_parse: read_block: received HTTP request block size = 128
+D (53574) httpd_parse: cb_header_value: processing value = 8.2.1
+D (53584) httpd_parse: cb_header_field: processing field = Content-Type
+D (53594) httpd_parse: cb_header_value: processing value = application/x-www-form-urlencoded
+D (53594) httpd_parse: cb_header_field: processing field = Upgrade-Insecure-Requests
+D (53604) httpd_parse: cb_header_value: processing value = 1
+D (53614) httpd_parse: cb_header_field: processing field = User-Agent
+D (53614) httpd_parse: cb_header_value: processing value = Mozilla/5.0 (Macintosh; Intel 
+D (53624) httpd_parse: parse_block: parsed block size = 239
+D (53634) httpd_parse: scratch buf qsize = 367
+D (53634) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (53644) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (53644) httpd_parse: read_block: received HTTP request block size = 128
+D (53654) httpd_parse: cb_header_value: processing value = Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+D (53664) httpd_parse: cb_header_field: processing field = Accept
+D (53674) httpd_parse: cb_header_value: processing value = text/html,application/xhtml+xml
+D (53684) httpd_parse: parse_block: parsed block size = 367
+D (53684) httpd_parse: scratch buf qsize = 495
+D (53694) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (53694) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (53704) httpd_parse: read_block: received HTTP request block size = 128
+D (53704) httpd_parse: cb_header_value: processing value = ,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8
+D (53714) httpd_parse: cb_header_field: processing field = Sec-GPC
+D (53724) httpd_parse: cb_header_value: processing value = 1
+D (53734) httpd_parse: cb_header_field: processing field = Accept-Language
+D (53734) httpd_parse: cb_header_value: processing value = en-US,en
+D (53744) httpd_parse: cb_header_field: processing field = Referer
+D (53744) httpd_parse: cb_header_value: processing value = http://192.16
+D (53754) httpd_parse: parse_block: parsed block size = 495
+D (53764) httpd_parse: scratch buf qsize = 623
+D (53764) httpd_txrx: httpd_recv_with_opt: requested length = 128
+D (53774) httpd_txrx: httpd_recv_with_opt: received length = 128
+D (53774) httpd_parse: read_block: received HTTP request block size = 128
+D (53784) httpd_parse: cb_header_value: processing value = 8.2.1/
+D (53784) httpd_parse: cb_header_field: processing field = Accept-Encoding
+D (53794) httpd_parse: cb_header_value: processing value = gzip, deflate
+D (53804) httpd_parse: cb_headers_complete: bytes read     = 558
+D (53804) httpd_parse: cb_headers_complete: content length = 756
+D (53814) httpd_txrx: httpd_unrecv: length = 86
+D (53814) httpd_parse: pause_parsing: paused
+D (53824) httpd_parse: cb_on_body: body begins
+D (53824) httpd_parse: httpd_parse_req: parsing complete
+D (53834) httpd_uri: httpd_uri: request for / with type 3
+D (53834) httpd_uri: httpd_find_uri_handler: [0] = /
+D (53844) httpd_uri: httpd_find_uri_handler: [1] = /
+D (53844) httpd_txrx: httpd_req_recv: remaining length = 756
+D (53854) httpd_txrx: httpd_recv_with_opt: requested length = 756
+D (53854) httpd_txrx: httpd_recv_with_opt: pending length = 86
+D (53864) httpd_txrx: httpd_recv_with_opt: received length = 756
+D (53864) httpd_txrx: httpd_req_recv: received length = 756
+D (53874) nvs: nvs_open_from_partition storage 1
+D (53874) nvs: nvs_set_str eth_ip4_str 192.168.1.1
+D (53884) nvs: nvs_set_str ap_ip4_str 192.168.2.1
+D (53884) nvs: nvs_set_str sta_ip4_str 
+D (53904) nvs: nvs_set_str eth_gw_str 192.168.1.1
+D (53904) nvs: nvs_set_str ap_gw_str 192.168.2.1
+D (53904) nvs: nvs_set_str sta_gw_str 
+D (53904) nvs: nvs_set_str eth_nm_str 255.255.255.0
+D (53904) nvs: nvs_set_str ap_nm_str 255.255.255.0
+D (53914) nvs: nvs_set_str sta_nm_str 255.255.255.0
+D (53914) nvs: nvs_set_str ap_ssid_str 192.168.2.1
+D (53924) nvs: nvs_set_str sta_ssid_str 
+D (53934) httpd_parse: httpd_query_key_value: key r_reg_str[0] not found
+ESP_ERR_NOT_FOUND
+D (53934) httpd_parse: httpd_query_key_value: key r_reg_str[1] not found
+ESP_ERR_NOT_FOUND
+D (53944) httpd_parse: httpd_query_key_value: key r_reg_str[2] not found
+ESP_ERR_NOT_FOUND
+D (53954) httpd_parse: httpd_query_key_value: key r_reg_str[3] not found
+ESP_ERR_NOT_FOUND
+D (53954) httpd_parse: httpd_query_key_value: key r_reg_lo_str[0] not found
+ESP_ERR_NOT_FOUND
+D (53964) httpd_parse: httpd_query_key_value: key r_reg_lo_str[1] not found
+ESP_ERR_NOT_FOUND
+D (53974) httpd_parse: httpd_query_key_value: key r_reg_lo_str[2] not found
+ESP_ERR_NOT_FOUND
+D (53984) httpd_parse: httpd_query_key_value: key r_reg_lo_str[3] not found
+ESP_ERR_NOT_FOUND
+D (53994) httpd_parse: httpd_query_key_value: key r_reg_hi_str[0] not found
+ESP_ERR_NOT_FOUND
+D (54004) httpd_parse: httpd_query_key_value: key r_reg_hi_str[1] not found
+ESP_ERR_NOT_FOUND
+D (54004) httpd_parse: httpd_query_key_value: key r_reg_hi_str[2] not found
+ESP_ERR_NOT_FOUND
+D (54014) httpd_parse: httpd_query_key_value: key r_reg_hi_str[3] not found
+ESP_ERR_NOT_FOUND
+D (54024) nvs: nvs_set_str rc_ip4_str 
+D (54024) nvs: nvs_set_str rb_ip4_str 
+D (54034) httpd_parse: httpd_query_key_value: key w_reg_str[0] not found
+ESP_ERR_NOT_FOUND
+D (54044) httpd_parse: httpd_query_key_value: key w_reg_str[1] not found
+ESP_ERR_NOT_FOUND
+D (54044) httpd_parse: httpd_query_key_value: key w_reg_str[2] not found
+ESP_ERR_NOT_FOUND
+D (54054) httpd_parse: httpd_query_key_value: key w_reg_str[3] not found
+ESP_ERR_NOT_FOUND
+D (54064) httpd_parse: httpd_query_key_value: key w_reg_lo_str[0] not found
+D (54074) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+ESP_ERR_NOT_FOUND
+D (54074) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (54074) httpd_parse: httpd_query_key_value: key w_reg_lo_str[1] not found
+D (54084) esp_netif_lwip: dhcp client already stopped
+D (54094) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+ESP_ERR_NOT_FOUND
+D (54104) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (54104) httpd_parse: httpd_query_key_value: key w_reg_lo_str[2] not found
+D (54104) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+ESP_ERR_NOT_FOUND
+D (54124) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (54134) httpd_parse: httpd_query_key_value: key w_reg_lo_str[3] not found
+D (54134) wifi:ESP_ERR_NOT_FOUND
+Start wifi connect
+D (54134) httpd_parse: httpd_query_key_value: key w_reg_hi_str[0] not found
+D (54144) wifi:ESP_ERR_NOT_FOUND
+connect status 3 -> 0
+D (54154) httpd_parse: httpd_query_key_value: key w_reg_hi_str[1] not found
+ESP_ERR_NOT_FOUND
+D (54154) wifi:connect chan=0D (54164) httpd_parse: httpd_query_key_value: key w_reg_hi_str[2] not found
+
+ESP_ERR_NOT_FOUND
+D (54174) wifi:first chan=1D (54174) httpd_parse: httpd_query_key_value: key w_reg_hi_str[3] not found
+
+ESP_ERR_NOT_FOUND
+D (54184) wifi:connect status 0 -> 1
+D (54184) nvs: nvs_set_str wc_ip4_str 
+D (54184) wifi:filter: set rx policy=3
+D (54194) nvs: nvs_set_str wb_ip4_str 
+D (54194) wifi:clear scan ap list
+D (54194) nvs: nvs_close 16
+D (54204) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=52002703, index=0
+D (54204) httpd_txrx: httpd send buffer size = 64
+D (54214) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (54214) httpd_txrx: httpd_send_all: sent = 64
+D (54224) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (54224) httpd_txrx: httpd_send_all: sent = 2
+D (54234) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (54244) httpd_txrx: httpd_send_all: sent = 3015
+D (54244) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (54254) httpd_sess: httpd_sess_process: httpd_req_delete
+D (54254) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (54274) httpd_sess: httpd_sess_process: success
+D (54274) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (54274) httpd: httpd_server: doing select maxfd+1 = 61
+D (54284) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (54294) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (54294) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (54304) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (54314) event: running post ESP_HTTP_SERVER_EVENT:3 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (54324) event: running post ESP_HTTP_SERVER_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (54334) event: running post ESP_HTTP_SERVER_EVENT:4 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (54344) event: running post ESP_HTTP_SERVER_EVENT:6 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+D (54344) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (54384) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (54514) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (54544) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (54664) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (54694) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (54814) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (54844) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (54974) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (55004) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (55124) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (55154) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (55274) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (55304) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (55424) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (55464) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (55584) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (55614) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (55734) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (55764) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (55884) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (55914) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (56284) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (56314) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+D (56674) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (56704) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+D (57064) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (57094) wifi:filter: set rx policy=4
+D (57094) wifi:first chan=1
+D (57094) wifi:handoff_cb: status=0
+D (57094) wifi:clear rc list
+D (57094) wifi:clear blacklist
+D (57094) wifi:Send disconnect event, reason=201
+D (57104) wifi:connect status 1 -> 3
+D (57104) wifi:disable connect timer
+D (57114) wifi:clear scan ap list
+D (57114) event: running post WIFI_EVENT:5 with handler 0x400db818 and context 0x3ffbea14 on loop 0x3ffbd33c
+[1;31mE (57124) evhdlr: ip4_str=, state=0[0m
+D (58124) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f58f8
+D (58124) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffc8a30
+D (58124) esp_netif_lwip: dhcp client already stopped
+D (58124) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+D (58134) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f617c
+D (58134) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc8a30
+D (58144) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (58154) wifi:Start wifi connect
+D (58154) wifi:connect status 3 -> 0
+D (58154) wifi:connect chan=0
+D (58154) wifi:first chan=1
+D (58164) wifi:connect status 0 -> 1
+D (58164) wifi:filter: set rx policy=3
+D (58164) wifi:clear scan ap list
+D (58174) wifi:start scan: type=0x50f, priority=2, cb=0x40113ff4, arg=0x0, ss_state=0x1, time=55974050, index=0
+D (58184) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (58184) event: running post WIFI_EVENT:5 with handler 0x400f859c and context 0x3ffc8bdc on loop 0x3ffbd33c
+D (58194) esp_netif_handlers: esp_netif action disconnected with netif0x3ffc8a30 from event_id=5
+D (58204) esp_netif_lwip: check: remote, if=0x3ffc8a30 fn=0x400f6104
+D (58214) esp_netif_lwip: esp_netif_down_api esp_netif:0x3ffc8a30
+D (58214) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffc8a30
+D (58224) esp_netif_lwip: if0x3ffc8a30 start ip lost tmr: already started
+D (58234) esp_netif_lwip: check: local, if=0x3ffc8a30 fn=0x400f6604
+D (58234) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffc8a30
+D (58244) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (58304) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (58334) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+D (58464) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (58494) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+D (58614) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (58644) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+D (58764) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (58794) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+D (58914) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (58954) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+D (59074) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (59104) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+D (59224) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (59254) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+D (59374) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (59404) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+D (59534) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (59564) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+D (59684) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (59714) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+D (59834) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (59864) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+D (60224) wifi:scan end: arg=0x3ffb62dc, status=0, ss_state=0x3
+D (60264) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>

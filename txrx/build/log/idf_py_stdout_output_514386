@@ -1,0 +1,256 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO80
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 28 2025 22:22:17[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : : SPI Flash Size : 2MB[0m
+[0;32mI (45) bffset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=225d8h (140760) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=00032600 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00032624 vaddr=3ffb0000 size=04080h ( 16512) load[0m
+[0;32mI (146) esp_image: segment 3: paddr=000366ac vaddr=40080000 size=0996ch ( 39276) load[0m
+[0;32mI (163) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=90e08h (593416) map[0m
+[0;32mI (366) esp_image: segment 5: paddr=000d0e30 vaddr=4008996c size=10188h ( 65928) load[0m
+[0;32mI (404) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (405) boot: Disabling RNG early entropy source...[0m
+[0;32mI (415) cpu_start: Multicore app[0m
+[0;32mI (423) cpu_start: Pro cpu start user code[0m
+[0;32mI (423) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (424) app_init: Application information:[0m
+[0;32mI (424) app_init: Project name:     txrx[0m
+[0;32mI (427) app_init: App version:      e7e3d0c-dirty[0m
+[0;32mI (432) app_init: Compile time:     Apr 28 2025 22:22:16[0m
+[0;32mI (437) app_init: ELF file SHA256:  41e7f38f3...[0m
+[0;32mI (441) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (447) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (451) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (455) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (459) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (465) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (470) heap_init: At 3FFB9070 len 00026F90 (155 KiB): DRAM[0m
+[0;32mI (475) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (481) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (486) heap_init: At 40099AF4 len 0000650C (25 KiB): IRAM[0m
+[0;32mI (493) spi_flash: detected chip: generic[0m
+[0;32mI (495) spi_flash: flash io: dio[0m
+[0;33mW (498) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (511) main_task: Started on CPU0[0m
+[0;32mI (521) main_task: Calling app_main()[0m
+[0;32mI (561) lwmb: created remote, r->b_ip4_str=192.168.2.1, r->c_ip4_str=[0m
+[0;32mI (571) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+[0;32mI (581) wifi:wifi driver task: 3ffc24ac, prio:23, stack:6656, core=0[0m
+[1;31mE (591) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=, no tcp connection[0m
+[1;31mE (591) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (591) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (601) wifi:wifi certification version: v7.0[0m
+[0;32mI (601) wifi:config NVS flash: enabled[0m
+[0;32mI (601) wifi:config nano formatting: disabled[0m
+[1;31mE (611) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (611) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (621) wifi:Init management short buffer num: 32[0m
+[1;31mE (631) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (641) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[1;31mE (651) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (651) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (661) wifi_init: accept mbox: 6[0m
+[0;32mI (661) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[1;31mE (671) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (671) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;31mE (701) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (711) wifi: ap_init (ap) finished. SSID:192.168.2.1 password: channel:1[0m
+[0;32mI (711) wifi: sta_init (sta) finished. SSID:192.168.2.21 password: channel:1[0m
+[1;31mE (721) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (721) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[1;31mE (741) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[1;31mE (761) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[1;31mE (781) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[1;31mE (801) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (811) wifi:mode : sta (a0:dd:6c:86:19:00) + softAP (a0:dd:6c:86:19:01)[0m
+[0;32mI (811) wifi:enable tsf[0m
+[0;32mI (811) wifi:Total power save buffer number: 16[0m
+[0;32mI (821) wifi:Init max length of beacon: 752/752[0m
+[1;31mE (821) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection[0m
+[0;32mI (821) wifi:Init max length of beacon: 752/752[0m
+[1;31mE (831) evhdlr: ip4_str=192.168.2.1, state=1[0m
+[0;32mI (831) evhdlr: ip4_str=192.168.2.1, state=1[0m
+[0;32mI (841) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.1[0m
+[1;31mE (851) lwmb: r_select task(), r->b_ip4_str=192.168.2.1, r->c_ip4_str=, no tcp connection[0m
+[1;31mE (861) gpio: gpio_pullup_en(78): GPIO number error[0m
+[0;32mI (871) esp_eth.netif.netif_glue: 64:61:76:65:79:73[0m
+[0;32mI (871) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[1;31mE (3691) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (7531) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (11371) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[0;32mI (11491) wifi:new:<1,0>, old:<1,1>, ap:<1,0>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11491) wifi:station: 4c:32:75:9a:e9:f7 join, AID=1, bgn, 20[0m
+[0;32mI (11521) wifi:<ba-add>idx:2 (ifx:1, 4c:32:75:9a:e9:f7), tid:6, ssn:0, winSize:64[0m
+[0;32mI (11521) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.2.2[0m
+[0;32mI (11661) wifi:<ba-add>idx:3 (ifx:1, 4c:32:75:9a:e9:f7), tid:0, ssn:0, winSize:64[0m
+[1;31mE (15211) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (19051) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (22891) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (26731) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (30571) evhdlr: ip4_str=192.168.2.11, state=0[0m
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+ESP_ERR_NOT_FOUND
+[1;31mE (34411) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (38251) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (42091) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (45931) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (49771) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (53611) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (57451) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (61291) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (65131) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (68971) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (72811) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (76651) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (80491) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (84331) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (88171) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (92011) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (95851) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (99691) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (103531) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (107371) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (111211) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (115051) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (118891) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (122731) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (126571) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (130411) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (134251) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (138091) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (141931) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (145771) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (149611) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[0;32mI (150341) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (150341) wifi:<ba-del>idx:3, tid:0[0m
+[0;32mI (152641) wifi:<ba-add>idx:3 (ifx:1, 4c:32:75:9a:e9:f7), tid:0, ssn:347, winSize:64[0m
+[1;31mE (153451) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (157291) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (161131) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[0;32mI (161361) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (161361) wifi:<ba-del>idx:3, tid:0[0m
+[0;32mI (161531) wifi:<ba-add>idx:3 (ifx:1, 4c:32:75:9a:e9:f7), tid:0, ssn:357, winSize:64[0m
+[1;31mE (164971) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (168811) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (172651) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (176491) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (180331) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (184171) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (188011) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (191851) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (195691) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (199531) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (203371) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (207211) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (211051) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (214891) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (218731) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (222571) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (226411) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (230251) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (234091) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (237931) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (241771) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (245611) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (249451) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (253291) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (257131) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (260971) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (264811) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (268651) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (272491) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (276331) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (280171) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (284011) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (287851) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (291691) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (295531) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (299371) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (303211) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (307051) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (310891) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (314731) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (318571) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (322411) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (326251) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (330091) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (333931) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (337771) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (341611) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (345451) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (349291) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (353131) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (356971) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (360811) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (364651) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (368491) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (372331) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (376171) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (380011) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (383851) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (387691) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (391531) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (395371) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (399211) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (403051) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (406891) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (410731) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (414571) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (418411) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (422251) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (426091) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (429931) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (433771) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (437611) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (441451) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (445291) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (449131) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (452971) evhdlr: ip4_str=192.168.2.11, state=0[0m
+[1;31mE (456811) evhdlr: ip4_str=192.168.2.11, state=0[0m

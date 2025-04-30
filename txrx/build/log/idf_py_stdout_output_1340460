@@ -1,0 +1,134 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 30 2025 12:39:31[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=227a8h (141224) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000327d0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000327f4 vaddr=3ffb0000 size=040b0h ( 16560) load[0m
+[0;32mI (147) esp_image: segment 3: paddr=000368ac vaddr=40080000 size=0976ch ( 38764) load[0m
+[0;32mI (163) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=912cch (594636) map[0m
+[0;32mI (367) esp_image: segment 5: paddr=000d12f4 vaddr=4008976c size=10388h ( 66440) load[0m
+[0;32mI (405) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (405) boot: Disabling RNG early entropy source...[0m
+[0;32mI (416) cpu_start: Multicore app[0m
+[0;32mI (424) cpu_start: Pro cpu start user code[0m
+[0;32mI (424) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (424) app_init: Application information:[0m
+[0;32mI (424) app_init: Project name:     txrx[0m
+[0;32mI (428) app_init: App version:      e7e3d0c-dirty[0m
+[0;32mI (432) app_init: Compile time:     Apr 30 2025 12:39:30[0m
+[0;32mI (437) app_init: ELF file SHA256:  e2IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+[0;32mI (448) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (451) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (455) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (460) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (466) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (471) heap_init: At 3FFB90B0 len 00026F50 (155 KiB): DRAM[0m
+[0;32mI (476) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (481) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (487) heap_init: At 40099AF4 len 0000650C (25 KiB): IRAM[0m
+[0;32mI (494) spi_flash: detected chip: generic[0m
+[0;32mI (496) spi_flash: flash io: dio[0m
+[0;33mW (499) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (512) main_task: Started on CPU0[0m
+[0;32mI (522) main_task: Calling app_main()[0m
+[0;32mI (592) lwmb: created remote, r->b_ip4_str=192.168.3.1, r->c_ip4_str=[0m
+[0;32mI (592) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+[0;32mI (602) wifi:wifi driver task: 3ffc25f4, prio:23, stack:6656, core=0[0m
+[1;31mE (612) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=, no tcp connection[0m
+[1;31mE (612)work connection[0m
+[0;32mI (622) wifi:wifi firmware version: 3a3aca644[0m
+[0;32mI (622) wifi:wifi certification version: v7.0[0m
+[0;32mI (622) wifi:config NVS flash: enabled[0m
+[0;32mI (622) wifi:config nano formatting: disabled[0m
+[1;31mE (632) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+[0;32mI (632) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (642) wifi:Init 2) wifi:Init management short buffer num: 32[0m
+[1;31mE (652) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+I it dynamic tx buffer num: 32
+[0;32mI (662) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (662) wifi:Init static rx buffer num: 10[0m
+[1;31mE (672) lwmb: r_select_task(), r->b_ip4connection[0m
+[0;32mI (672) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (682) wifi_init: rx ba win: 6[0m
+[0;32mI (682) wifi_init: accept mbox: 6[0m
+[0;32mI (682) wifi_init: tcpip mbox: 32[0m
+[0;32mI (692) wifi_init: udp mbox: 6[0m
+[1;31mE (692) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+[0;32mI (692) wifi_init: tcp mbox: 6[0m
+[0;32mI (702) wifi_init: tcp tx win: 5760[0m
+[0;32mI (702) wifi_init: tcp rx win: 5760[0m
+[0;32mI (702) wifi_init: tcp mss: 1440[0m
+[0;32mI (712) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (712) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;31mE (722) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+[0;32mI (732) wifi: ap_init (ap) finished. SSID:192.168.3.1 password: channel:1[0m
+[0;32mI (732) wifi: sta_init (sta) finished. SSID:192.168.2.11 password: channel:1[0m
+[1;31mE (742) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+[0;32mI (742) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[1;31mE (762) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+[1;31mE (782) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+[1;31mE (802) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+[1;31mE (822) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no network connection[0m
+[0;32mI (832) wifi:mode : sta (a0:dd:6c:86:19:00) + softAP (a0:dd:6c:86:19:01)[0m
+[0;32mI (832) wifi:enable tsf[0m
+[0;32mI (832) wifi:Total power save buffer number: 16[0m
+[0;32mI (842) wifi:Init max length of beacon: 752/752[0m
+[1;31mE (842) lwmb: r_select_task(), r->b_ip4_str=192.168.3.1, no max length of beacon: 752/752[0m
+68.3.1, state=1
+[0;32mI (852) evhdlr: ip4_str=192.168.3.1, state=1[0m
+[0;32mI (862) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.3.1[0m
+[1;31mE (872) lwmb: r_select task(), r->b_ip4_str=192.168.3.1, r->c_ip4_str=, no tcp connection[0m
+[0;32mI (882) wifi:new:<1,1>, old:<1,1>, ap:<1,1>2) gpio: gpio_pullup_en(78): GPIO number error[0m
+[0;32mI (902) esp_eth.netif.netif_glue: 64:61:76:65:79:73[0m
+[0;32mI (902) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (902) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (912) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (922) wifi:connected with 192.168.2.11, aid = 1, channel 1, 40U, bssid = a0:dd:6c:10:24:cd[0m
+[0;32mI (922) wifi:security: Open Auth, phy: bgn, rssi: -51[0m
+[0;32mI (922) wifi:pm start, type: 1[0m
+
+[0;32mI (922) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[1;31mE (932) evhdlr: ip4_str=192.168.2.2, state=1[0m
+[0;32mI (942) esp_netif_handlers: sta ip: 192.168.2.2, mask: 255.255.255.0, gw: 192.168.2.11[0m
+[0;32mI (942) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[1;31mE (2912) evhdlr: ip4_str=192.168.1.1, state=1[0m
+[0;32mI (2912) esp_netif_handlers: eth ip: 192.168.1.1, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (11192) wifi:new:<1,1>, old:<1,1>, ap:<1,0>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11192) wifi:station: 4c:32:75:9a:e9:f7 join, AID=1, bgn, 20[0m
+[0;32mI (11202) wifi:<ba-add>idx:2 (ifx:1, 4c:32:75:9a:e9:f7), tid:6, ssn:43, winSize:64[0m
+[0;32mI (11212) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.3.2[0m
+[0;32mI (11792) wifi:<ba-add>idx:3 (ifx:1, 4c:32:75:9a:e9:f7), tid:0, ssn:12, winSize:64[0m
+[0;32mI (12272) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.3.2[0m
+i=0, cond1=0, cond2=0, cond3=0
+i=1, cond1=0, cond2=0, cond3=0
+i=2, cond1=0, cond2=0, cond3=0
+i=3, cond1=0, cond2=0, cond3=0
+i=4, cond1=0, cond2=0, cond3=0
+i=5, cond1=0, cond2=0, cond3=0
+i=6, cond1=0, cond2=0, cond3=0
+i=7, cond1=0, cond2=0, cond3=0
+i=8, cond1=0, cond2=0, cond3=0
+i=9, cond1=0, cond2=0, cond3=0
+boo!

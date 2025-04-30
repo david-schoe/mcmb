@@ -1,0 +1,152 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/davey_schoe/esp/mcmb/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/davey_schoe/esp/mcmb/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081384: call_start_cpu1 at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/port/cpu_start.c:227
+[0m
+[0;33m--- 0x400d3370: esp_efuse_utility_fill_buff at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_utility.c:99
+[0m
+[0;33m--- 0x400d3898: esp_perip_clk_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/port/soc/esp32/clk.c:213 (discriminator 1)
+[0m
+[0;33m--- 0x400d32b0: esp_efuse_utility_read_reg at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_utility.c:279 (discriminator 1)
+[0m
+[0;33m--- 0x400d3384: esp_efuse_utility_fill_buff at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/esp_efuse_utility.c:107
+[0m
+[0;33m--- 0x400d534c: is_vect_desc_usable at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_hw_support/intr_alloc.c:302 (discriminator 1)
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/davey_schoe/esp/mcmb/esp-idf/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/davey_schoe/esp/mcmb/esp-idf/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m--- 0x400d6a70: uart_start_select at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_uart/src/uart_vfs.c:540 (discriminator 1)
+[0m
+[0;33m--- 0x400d6478: pthread_setspecific at /home/davey_schoe/esp/mcmb/esp-idf/components/pthread/pthread_local_storage.c:206
+[0m
+[0;33m--- 0x400d38dc: esp_perip_clk_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/port/soc/esp32/clk.c:271
+[0m
+[0;33m--- 0x400d38e8: esp_perip_clk_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/port/soc/esp32/clk.c:289 (discriminator 1)
+[0m
+[0;33m--- 0x400d7d68: uart_wait_tx_done at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_uart/src/uart.c:1371
+[0m
+[0;33m--- 0x400d9f84: start_nvs at /home/davey_schoe/esp/mcmb/txrx/components/src/nvs.c:78 (discriminator 1)
+[0m
+[0;33m--- 0x400d8794: translate_path at /home/davey_schoe/esp/mcmb/esp-idf/components/vfs/vfs.c:801 (discriminator 1)
+[0m
+[0;33m--- 0x400d6484: pthread_setspecific at /home/davey_schoe/esp/mcmb/esp-idf/components/pthread/pthread_local_storage.c:213
+[0m
+[0;33m--- 0x400d38f4: esp_perip_clk_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/port/soc/esp32/clk.c:290
+[0m
+[0;33m--- 0x400d3410: esp_efuse_get_coding_scheme at /home/davey_schoe/esp/mcmb/esp-idf/components/efuse/src/efuse_controller/keys/without_key_purposes/three_key_blocks/esp_efuse_api_key.c:62
+[0m
+[0;33m--- 0x40145f30: set_rx_gain_table at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:2629
+[0m
+[0;33m--- 0x400f9c7c: spi_bus_initialize at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_spi/src/gpspi/spi_common.c:917
+[0m
+[0;33m--- 0x400e6dcc: lwip_selscan at /home/davey_schoe/esp/mcmb/esp-idf/components/lwip/lwip/src/api/sockets.c:1902
+[0m
+[0;33m--- 0x40089c7c: esp_cache_get_alignment at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_mm/esp_cache.c:271 (discriminator 5)
+[0m
+[0;33m--- 0x400d4868: fix_cache_generation_overflow at /home/davey_schoe/esp/mcmb/esp-idf/components/log/src/log_level/tag_log_level/cache/log_binary_heap.c:174
+[0m
+[0;33m--- 0x400e3d68: nvs::Storage::eraseMultiPageBlob(unsigned char, char const*, nvs::VerOffset) at /home/davey_schoe/esp/mcmb/esp-idf/components/nvs_flash/src/nvs_storage.cpp:755
+[0m
+[0;33m--- 0x40159fcc: ieee80211_gettid at ??:?
+[0m
+[0;33m--- 0x400d3924: esp_perip_clk_init at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_system/port/soc/esp32/clk.c:294 (discriminator 1)
+[0m
+[0;33m--- 0x400f7550: aes_128_cbc_encrypt at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls.c:459
+[0m
+[0;33m--- 0x400f7550: aes_128_cbc_encrypt at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls.c:459
+[0m
+[0;33m--- 0x400f7144: ethernet_low_level_output at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/netif/ethernetif.c:86 (discriminator 7)
+[0m
+[0;33m--- 0x400f7a68: shift_right_block at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/aes-gcm.c:47
+[0m
+[0;33m--- 0x400f6fd0: low_level_output at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/netif/wlanif.c:108
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400f9ef4: spi_master_deinit_driver at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:352
+[0m
+[0;33m--- 0x400f6c50: esp_netif_dhcps_stop at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1663
+[0m
+[0;33m--- 0x400f7770: ccmp_aad_nonce at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/ccmp.c:28
+[0m
+[0;33m--- 0x400f71e4: ethernetif_input at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/netif/ethernetif.c:139
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400f9edc: spi_master_deinit_driver at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:349 (discriminator 1)
+[0m
+[0;33m--- 0x400f6c50: esp_netif_dhcps_stop at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1663
+[0m
+[0;33m--- 0x400f7770: ccmp_aad_nonce at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/ccmp.c:28
+[0m
+[0;33m--- 0x400f7a68: shift_right_block at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/aes-gcm.c:47
+[0m
+[0;33m--- 0x400f7ef0: printf_decode at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/utils/common.c:206
+[0m
+[0;33m--- 0x40115964: cnx_auth_done at ??:?
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400f71e4: ethernetif_input at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/netif/ethernetif.c:139
+[0m
+[0;33m--- 0x400f7a68: shift_right_block at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/aes-gcm.c:47
+[0m
+[0;33m--- 0x400f9f24: spi_bus_add_device at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:401 (discriminator 1)
+[0m
+[0;33m--- 0x400f798c: ccmp_encrypt at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/ccmp.c:215
+[0m
+[0;33m--- 0x400f7ef0: printf_decode at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/utils/common.c:206
+[0m
+[0;33m--- 0x400f6c78: esp_netif_get_hostname at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1711
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400f9d50: spi_master_init_driver at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:275 (discriminator 1)
+[0m
+[0;33m--- 0x400f7550: aes_128_cbc_encrypt at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls.c:459
+[0m
+[0;33m--- 0x400f6c50: esp_netif_dhcps_stop at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1663
+[0m
+[0;33m--- 0x400f71e4: ethernetif_input at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/netif/ethernetif.c:139
+[0m
+[0;33m--- 0x400f7a68: shift_right_block at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/aes-gcm.c:47
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400de578: w5500_send_command at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/spi/w5500/esp_eth_mac_w5500.c:203
+[0m
+[0;33m--- 0x400f7770: ccmp_aad_nonce at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/ccmp.c:28
+[0m
+[0;33m--- 0x400f7ef0: printf_decode at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/utils/common.c:206
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400f7a68: shift_right_block at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/aes-gcm.c:47
+[0m
+[0;33m--- 0x400de4e4: emac_w5500_alloc_recv_buf at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/spi/w5500/esp_eth_mac_w5500.c:634
+[0m
+[0;33m--- 0x400f798c: ccmp_encrypt at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/crypto/ccmp.c:215
+[0m
+[0;33m--- 0x400f7ef0: printf_decode at /home/davey_schoe/esp/mcmb/esp-idf/components/wpa_supplicant/src/utils/common.c:206
+[0m
+[0;33m--- 0x400f6c78: esp_netif_get_hostname at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1711
+[0m
+[0;33m--- 0x400dbf70: r_recv_req at /home/davey_schoe/esp/mcmb/lwmb/src/r.c:333
+[0m
+[0;33m--- 0x400de474: emac_w5500_alloc_recv_buf at /home/davey_schoe/esp/mcmb/esp-idf/components/esp_eth/src/spi/w5500/esp_eth_mac_w5500.c:625
+[0m
+[0m

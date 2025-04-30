@@ -9,12 +9,12 @@
 #define TAG "eth"
 
 #define SPI_BUS SPI2_HOST
-#define MISO_IO_NUM 12
-#define MOSI_IO_NUM 26
-#define SCLK_IO_NUM 14
-#define SPICS_IO_NUM 15
-#define INT_IO_NUM 16
-#define RST_IO_NUM 17
+#define MISO_IO_NUM 22
+#define MOSI_IO_NUM 33
+#define SCLK_IO_NUM 32
+#define SPICS_IO_NUM 25
+#define INT_IO_NUM 34
+#define RST_IO_NUM 21
 #define CLOCK_SPEED_HZ 16000000
 
 #define ETH_MAC_ADDR "daveys"

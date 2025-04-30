@@ -4,22 +4,22 @@
 
 // ip4 strings
 char eth_ip4_str[16];
-char wlan0_ip4_str[16];
-char wlan1_ip4_str[16];
+char ap_ip4_str[16];
+char sta_ip4_str[16];
+
+// gateway strings
+char eth_gw_str[16];
+char ap_gw_str[16];
+char sta_gw_str[16];
 
 // netmask strings
 char eth_nm_str[16];
-char wlan0_nm_str[16];
-char wlan1_nm_str[16];
-
-// gateway strings
-char eth_nm_str[16];
-char wlan0_gw_str[16];
-char wlan1_gw_str[16];
+char ap_nm_str[16];
+char sta_nm_str[16];
 
 // ssid strings
-char wlan0_ssid_str[32];
-char wlan1_ssid_str[32];
+char ap_ssid_str[32];
+char sta_ssid_str[32];
 
 // read bind/connect ip4 strings
 char rb_ip4_str[16];
@@ -30,19 +30,17 @@ char wb_ip4_str[16];
 char wc_ip4_str[16];
 
 // read register strings
-char r_reg0_str[6];
-char r_reg1_str[6];
-char r_reg2_str[6];
-char r_reg3_str[6];
+char r_reg_str[4][6];
+char r_reg_lo_str[4][7];
+char r_reg_hi_str[4][7];
 
 // write register strings
-char w_reg0_str[6];
-char w_reg1_str[6];
-char w_reg2_str[6];
-char w_reg3_str[6];
+char w_reg_str[4][6];
+char w_reg_lo_str[4][7];
+char w_reg_hi_str[4][7];
 
 // Load a single field from NVS
-void load_from_nvs(const char *key, char *dest) {
+int load_from_nvs(const char *key, char *dest) {
     nvs_handle_t nvs;
     size_t required_size;
     esp_err_t err = nvs_open("storage", NVS_READONLY, &nvs);
@@ -52,7 +50,9 @@ void load_from_nvs(const char *key, char *dest) {
             nvs_get_str(nvs, key, dest, &required_size);
         }
         nvs_close(nvs);
+        return 0;
     }
+    return -1;
 }
 
 
@@ -63,76 +63,132 @@ void start_nvs(void) {
 		ESP_ERROR_CHECK(nvs_flash_init());
 	}
 
-	//
-	load_from_nvs("eth_ip4_str", eth_ip4_str);
-    load_from_nvs("wlan0_ip4_str", wlan0_ip4_str);
-    load_from_nvs("wlan1_ip4_str", wlan1_ip4_str);
+	// ip4
+	if (load_from_nvs("eth_ip4_str",eth_ip4_str) < 0) {
+        strcpy(eth_ip4_str,"");
+    }
+    if (load_from_nvs("ap_ip4_str",ap_ip4_str) < 0) {
+        strcpy(ap_ip4_str,"192.168.2.1");
+    }
+    if (load_from_nvs("sta_ip4_str",sta_ip4_str) < 0) {
+        strcpy(sta_ip4_str,"");
+    }
 
-	load_from_nvs("eth_nm_str", eth_ip4_str);
-    load_from_nvs("wlan0_nm_str", wlan0_ip4_str);
-    load_from_nvs("wlan1_nm_str", wlan1_ip4_str);
+    // gw
+	if (load_from_nvs("eth_gw_str",eth_gw_str) < 0) {
+        strcpy(eth_gw_str,"");
+    }
+    if (load_from_nvs("ap_gw_str",ap_gw_str) < 0) {
+        strcpy(ap_gw_str,"192.168.2.1");
+    }
+    if (load_from_nvs("sta_gw_str",sta_gw_str) < 0) {
+        strcpy(sta_gw_str,"");
+    }
 
-	load_from_nvs("eth_gw_str", eth_ip4_str);
-    load_from_nvs("wlan0_gw_str", wlan0_ip4_str);
-    load_from_nvs("wlan1_gw_str", wlan1_ip4_str);
+    // nm
+	if (load_from_nvs("eth_nm_str",eth_nm_str) < 0) {
+        strcpy(eth_nm_str,"255.255.255.0");
+    }
+    if (load_from_nvs("ap_nm_str",ap_nm_str) < 0) {
+        strcpy(ap_nm_str,"255.255.255.0");
+    }
+    if (load_from_nvs("sta_nm_str",sta_nm_str) < 0) {
+        strcpy(sta_nm_str,"255.255.255.0");
+    }
 
-    load_from_nvs("r_reg0_str", r_reg0_str);
-    load_from_nvs("r_reg1_str", r_reg1_str);
-    load_from_nvs("r_reg2_str", r_reg2_str);
-    load_from_nvs("r_reg3_str", r_reg3_str);
+    // ssid
+    if (load_from_nvs("ap_ssid_str",ap_ssid_str) < 0) {
+        strcpy(ap_ssid_str,"192.168.2.1");
+    }
+    if (load_from_nvs("sta_ssid_str",sta_ssid_str) < 0) {
+        strcpy(sta_ssid_str,"");
+    }
 
-    load_from_nvs("rc_ip4_str", rc_ip4_str);
-    load_from_nvs("rb_ip4_str", rb_ip4_str);
+    // r
+    if (load_from_nvs("r_reg_str0",r_reg_str[0]) < 0) {
+        strcpy(r_reg_str[0],"");
+    }
+    if (load_from_nvs("r_reg_lo_str0",r_reg_lo_str[0]) < 0) {
+        strcpy(r_reg_lo_str[0],"");
+    }
+    if (load_from_nvs("r_reg_hi_str0",r_reg_hi_str[0]) < 0) {
+        strcpy(r_reg_hi_str[0],"");
+    }
+    if (load_from_nvs("r_reg_str1",r_reg_str[1]) < 0) {
+        strcpy(r_reg_str[1],"");
+    }
+    if (load_from_nvs("r_reg_lo_str1",r_reg_lo_str[1]) < 0) {
+        strcpy(r_reg_lo_str[1],"");
+    }
+    if (load_from_nvs("r_reg_hi_str1",r_reg_hi_str[1]) < 0) {
+        strcpy(r_reg_hi_str[1],"");
+    }
+    if (load_from_nvs("r_reg_str2",r_reg_str[2]) < 0) {
+        strcpy(r_reg_str[2],"");
+    }
+    if (load_from_nvs("r_reg_lo_str2",r_reg_lo_str[2]) < 0) {
+        strcpy(r_reg_lo_str[2],"");
+    }
+    if (load_from_nvs("r_reg_hi_str2",r_reg_hi_str[2]) < 0) {
+        strcpy(r_reg_hi_str[2],"");
+    }
+    if (load_from_nvs("r_reg_str3",r_reg_str[3]) < 0) {
+        strcpy(r_reg_str[3],"");
+    }
+    if (load_from_nvs("r_reg_lo_str3",r_reg_lo_str[3]) < 0) {
+        strcpy(r_reg_lo_str[3],"");
+    }
+    if (load_from_nvs("r_reg_hi_str3",r_reg_hi_str[3]) < 0) {
+        strcpy(r_reg_hi_str[3],"");
+    }
+    if (load_from_nvs("rb_ip4_str",rb_ip4_str) < 0) {
+        strcpy(rb_ip4_str,"");
+    }
+    if (load_from_nvs("rc_ip4_str",rc_ip4_str) < 0) {
+        strcpy(rc_ip4_str,"");
+    }
 
-    load_from_nvs("w_reg0_str", w_reg0_str);
-    load_from_nvs("w_reg1_str", w_reg1_str);
-    load_from_nvs("w_reg2_str", w_reg2_str);
-    load_from_nvs("w_reg3_str", w_reg3_str);
-
-    load_from_nvs("wc_ip4_str", wc_ip4_str);
-    load_from_nvs("wb_ip4_str", wb_ip4_str);
-
-	// tx config
-
-	strcpy(wlan0_ip4_str,"192.168.2.11");
-	strcpy(wlan0_ssid_str,"192.168.2.11");
-	strcpy(wlan1_ip4_str,"192.168.2.2");
-	strcpy(wlan1_ssid_str,"192.168.2.1");
-
-    strcpy(rb_ip4_str,wlan1_ip4_str);
-    strcpy(rc_ip4_str,DAT_8024_IP4_STR);
-	strcpy(wb_ip4_str,"127.0.0.1");
-    strcpy(wc_ip4_str,"127.0.0.1");
-
-
-
-
-
-
-	// rx config
-	/*
-	strcpy(wlan0_ip4_str,"192.168.2.1");
-	strcpy(wlan0_ssid_str,"192.168.2.1");
-	strcpy(wlan1_ip4_str,"");
-	strcpy(wlan1_ssid_str,"");
-
-	strcpy(eth_ip4_str,"192.168.1.1");
-
-    strcpy(rb_ip4_str,"");
-    strcpy(rc_ip4_str,"");
-    strcpy(wb_ip4_str,"");
-    strcpy(wc_ip4_str,"");
-	*/
-
-
-
-    strcpy(r_reg0_str,"40000");
-    strcpy(r_reg1_str,"40001");
-    strcpy(r_reg2_str,"40002");
-    strcpy(r_reg3_str,"40003");
-    strcpy(w_reg0_str,"40000");
-    strcpy(w_reg1_str,"40001");
-    strcpy(w_reg2_str,"40002");
-    strcpy(w_reg3_str,"40003");
-
+    // w
+    if (load_from_nvs("w_reg_str0",w_reg_str[0]) < 0) {
+        strcpy(w_reg_str[0],"");
+    }
+    if (load_from_nvs("w_reg_lo_str0",w_reg_lo_str[0]) < 0) {
+        strcpy(w_reg_lo_str[0],"");
+    }
+    if (load_from_nvs("w_reg_hi_str0",w_reg_hi_str[0]) < 0) {
+        strcpy(w_reg_hi_str[0],"");
+    }
+    if (load_from_nvs("w_reg_str1",w_reg_str[1]) < 0) {
+        strcpy(w_reg_str[1],"");
+    }
+    if (load_from_nvs("w_reg_lo_str1",w_reg_lo_str[1]) < 0) {
+        strcpy(w_reg_lo_str[1],"");
+    }
+    if (load_from_nvs("w_reg_hi_str1",w_reg_hi_str[1]) < 0) {
+        strcpy(w_reg_hi_str[1],"");
+    }
+    if (load_from_nvs("w_reg_str2",w_reg_str[2]) < 0) {
+        strcpy(w_reg_str[2],"");
+    }
+    if (load_from_nvs("w_reg_lo_str2",w_reg_lo_str[2]) < 0) {
+        strcpy(w_reg_lo_str[2],"");
+    }
+    if (load_from_nvs("w_reg_hi_str2",w_reg_hi_str[2]) < 0) {
+        strcpy(w_reg_hi_str[2],"");
+    }
+    if (load_from_nvs("w_reg_str3",w_reg_str[3]) < 0) {
+        strcpy(w_reg_str[3],"");
+    }
+    if (load_from_nvs("w_reg_lo_str3",w_reg_lo_str[3]) < 0) {
+        strcpy(w_reg_lo_str[3],"");
+    }
+    if (load_from_nvs("w_reg_hi_str3",w_reg_hi_str[3]) < 0) {
+        strcpy(w_reg_hi_str[3],"");
+    }
+    if (load_from_nvs("wb_ip4_str",wb_ip4_str) < 0) {
+        strcpy(wb_ip4_str,"");
+    }
+    if (load_from_nvs("wc_ip4_str",wc_ip4_str) < 0) {
+        strcpy(wc_ip4_str,"");
+    }
 }

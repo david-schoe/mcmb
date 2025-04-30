@@ -21,7 +21,7 @@ void app_main(void){
     start_mb();
     start_wifi();
     start_httpd();
-    // start_eth();
+    start_eth();
     for (;;){
         vTaskDelay(100);
     }

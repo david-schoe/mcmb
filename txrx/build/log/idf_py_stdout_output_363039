@@ -1,0 +1,4426 @@
+Command: /home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/davey_schoe/esp/mcmb/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/davey_schoe/esp/mcmb/txrx/build/txrx.elf /home/davey_schoe/esp/mcmb/txrx/build/bootloader/bootloader.elf -m '/home/davey_schoe/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/davey_schoe/esp/mcmb/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2290-g94cfe394fe-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 15 2025 22:53:45[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27038h (159800) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00037060 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00037084 vaddr=3ffb0000 size=04118h ( 16664) load[0m
+[0;32mI (153) esp_image: segment 3: paddr=0003b1a4 vaddr=40080000 size=04e74h ( 20084) load[0m
+[0;32mI (162) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=922e0h (598752) map[0m
+[0;32mI (367) esp_image: segment 5: paddr=000d2308 vaddr=40084e74 size=14da0h ( 85408) load[0m
+[0;32mI (413) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (413) boot: Disabling RNG early entropy source...[0m
+[0;32mI (424) cpu_start: Multicore app[0m
+D (424) cpu_start: Pro cpu up
+D (424) cpu_start: Starting app cpu, entry point is 0x40081384D (432) clk: RTC_SLOW_CLK calibration value: 3090842
+D (444) cprt: Pro cpu start user code
+[0;32mI (449) cpu_start: cpu freq: 160000 txrx[0m
+[0;32mI (466) app_init: App version:      e7e3d0c-dirty[0m
+I (471 Compile time:     Apr 15 2025 22:53:44
+[0;32mI (476) app_init: ELF file SHA256:  4e711a654...[0m
+[0;32mI (480) app_init: ESP-IDF:          v5.5-dev-2290-g94cfe394fe-dirty[0m
+D (486) cpu_start: calling init function: 0x400d3284 on core: 0
+[0;32mI (492) efuse_init: Min chip re   v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (499) efuse_init: Chip rev:         v3.1[0m
+D (503) cpu_start: calling init function: 0x400d524c on core: 0
+D (509) memory_layout: Checking 9 reserved memory ranges:
+D (514) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000
+D (520) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0
+D (526) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb9088
+D (532) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440
+D (538) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350
+D (544) memory_layout: Reserved memory range 0x40070000 - 0x40078000
+D (551) memory_layout: Reserved memory range 0x40078000 - 0x40080000
+D (557) memory_layout: Reserved memory range 0x40080000 - 0x40099c14
+D (563) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000
+D (569) memory_layout: Building list of available memory regions:
+D (575) memory_layout: Available memory region 0x3ffae6e0 - 0x3ffb0000
+D (581) memory_layout: Available memory region 0x3ffb9088 - 0x3ffc0000
+D (587) memory_layout: Available memory region 0x3ffc0000 - 0x3ffc2000
+D (593) memory_layout: Available memory region 0x3ffc2000 - 0x3ffc4000
+D (600) memory_layout: Available memory region 0x3ffc4000 - 0x3ffc6000
+D (606) memory_layout: Available memory region 0x3ffc6000 - 0x3f8000
+D (612) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000
+D (618) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000
+D (625) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000
+D (631) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000
+D (637) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000
+D (643) memory_lay2000 - 0x3ffd4000
+D (650) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000
+D (656) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000
+D (662) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000
+D (668) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000
+D (675) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000
+D (681) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000
+D (687) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20
+D (693) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000
+D (700) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000
+D (706) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000
+D (712) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000
+D (718) memory_layout: Available memory region 0x3fffc000 - 0x40000000
+D (725) memory_layout: Available memory region 0x40099c14 - 0x4009a000
+D (731) memory_layout: Available memory region 0x4009a000 - 0x4009c000
+D (737) memory_layout: Available memory region 0x4009c000 - 0x4009e000
+D (743) memory_layout: Available memory region 0x4009e000 - 0x400a0000
+[0;32mI (750) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (756) heap_init: New heap initialised at 0x3ffae6e0
+[0;32mI (761) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+D (766) heap_init: New heap initialised at 0x3ffb9088
+[0;32mI (770) heap_init: At 3FFB9088 len 00026F78 (155 KiB): DRAM[0m
+[0;32mI (776) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (781) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (787) heap_init: New heap initialised at 0x40099c14
+[0;32mI (791) heap_init: At 40099C14 len 000063EC (24 KiB): IRAM[0m
+D (797) cpu_start: calling init function: 0x400d6970 on core: 0
+D (802) cpu_start: calling init function: 0x400d6378 on core: 0
+D (808) cpu_start: calling init function: 0x400d37dc on core: 0
+D (814) intr_alloc: Connected src 46 to int 1 (cpu 0)
+D (818) cpu_start: calling init function: 0x400d37e8 on core: 0
+D (824) cpu_start: calling init function: 0x400d7c68 on core: 0
+D (830) cpu_start: calling init function: 0x400d9e84 on core: 0
+D (835) cpu_start: calling init function: 0x400d8694 on core: 0
+D (841) cpu_start: calling init function: 0x400d6384 on core: 0
+D (847) cpu_start: calling init function: 0x400d37f4 on core: 0
+D (852) spi_flash: trying chip: issi
+D (856) spi_flash: trying chip: gd
+D (859) spi_flash: trying chip: mxic
+D (862) spi_flash: trying chip: winbond
+D (865) spi_flash: trying chip: generic
+[0;32mI (869) spi_fip: generic[0m
+[0;32mI (873) spi_flash: flash io: dio[0m
+[0;33mW (876) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (888) cpu_start: calling init function: 0x400d3310 on core: 0
+D (894) cpu_start: calling init function: 0x40145100
+D (898) cpu_stu_start: calling init function: n: 0x40089c7c
+D (912) cpu_startfunction: 0x400d4768
+D (917) cpu_start: calling init function: 0x400e2ff0 on core: 0
+D (923) intr_alloc: Connected src 17 to int 2 (cpu 0)
+D (927) cpu_start: calling init function: 0x4015919c on core: 0
+D (933) cpu_start: calling init function: 0x400d3824 on core: 0
+D (939) intr_alloc: Connected src 24 to int 3 (cpu 0)
+D (943) app_start: Starting scheduler on CPU0
+I (948D (948) intr_alloc: Connected src 25 to int 1 (cpu 1)
+D (948) app_start: Starting scheduler on CPU1
+) main_task: Started on CPU0
+D (958) heap_init: New heap initialised at 0x3ffe0440
+D (958) heap_init: New heap initialised at 0x3ffe4350
+D (968) intr_alloc: Connected src 16 to int 5 (cpu 0)
+[0;32mI (968) main_task: Calling app_main()[0m
+D (978) lwip: netif: netmask of interface    set to 255.0.0.0
+
+D (978) lwip: netif: GW address of interface    set to 127.0.0.1
+
+D (988) lwip: netif_set_ipaddr: netif address being changed
+
+D (988) lwip: netif: added interface lo IP
+D (998) lwip:  addr 
+D (998) lwip: 127.0.0.1
+D (998) lwip:  netmask 
+D (998) lwip: 255.0.0.0
+D (998) lwip:  gw 
+D (1008) lwip: 127.0.0.1
+D (1008) lwip: 
+
+D (1008) esp_netif_lwip: LwIP stack has been initialized
+D (1008) esp_netif_lwip: esp-netif has been successfully initialized
+D (1018) event: running task for loop 0x3ffbd2bc
+D (1028) event: created task for loop 0x3ffbd2bc
+D (1028) event: created event loop 0x3ffbd2bc
+D (1068) nvs: nvs_open_from_partition storage 0
+D (1078) nvs: nvs_get_str_or_blob eth_ip4_str
+D (1078) nvs: nvs_get_str_or_blob eth_ip4_str
+D (1078) nvs: nvs_close 1
+D (1078) nvs: nvs_open_from_partition storage 0
+D (1078) nvs: nvs_get_str_or_blob wlan0_ip4_str
+D (1088) nvs: nvs_get_str_or_blob wlan0_ip4_str
+D (1088) nvs: nvs_close 2
+D (1088) nvs: nvs_open_from_partition storage 0
+D (1098) nvs: nvs_get_str_or_blob wlan1_ip4_str
+D (1098) nvs: nvs_get_str_or_blob wlan1_ip4_str
+D (1108) nvs: nvs_close 3
+D (1108) nvs: nvs_open_from_partition storage 0
+D (1108) nvs: nvs_get_str_or_blob eth_gw_str
+D (1118) nvs: nvs_get_str_or_blob eth_gw_str
+D (1118) nvs: nvs_close 4
+D (1118) nvs: nvs_open_from_partition storage 0
+D (1128) nvs: nvs_get_str_or_blob wlan0_gw_str
+D (1128) nvs: nvs_get_str_or_blob wlan0_gw_str
+D (1138) nvs: nvs_close 5
+D (1138) nvs: nvs_open_from_partition storage 0
+D (1138) nvs: nvs_get_str_or_blob wlan1_gw_str
+D (1148) nvs: nvs_get_str_or_blob wlan1_gw_str
+D (1148) nvs: nvs_close 6
+D (1148) nvs: nvs_open_from_partition storage 0
+D (1158) nvs: nvs_get_str_or_blob eth_nm_str
+D (1158) nvs: nvs_get_str_or_blob eth_nm_str
+D (1168) nvs: nvs_close 7
+D (1168) nvs: nvs_open_from_partition storage 0
+D (1168) nvs: nvs_get_str_or_blob wlan0_nm_str
+D (1178) nvs: nvs_get_str_or_blob wlan0_nm_str
+D (1178) nvs: nvs_close 8
+D (1178) nvs: nvs_open_from_partition storage 0
+D (1188) nvs: nvs_get_str_or_blob wlan1_nm_str
+D (1188) nvs: nvs_get_str_or_blob wlan1_nm_str
+D (1198) nvs: nvs_close 9
+D (1198) nvs: nvs_open_from_partition storage 0
+D (1198) nvs: nvs_get_str_or_blob wlan0_ssid_str
+D (1208) nvs: nvs_get_str_or_blob wlan0_ssid_str
+D (1208) nvs: nvs_close 10
+D (1208) nvs: nvs_open_from_partition storage 0
+D (1218) nvs: nvs_get_str_or_blob wlan1_ssid_str
+D (1218) nvs: nvs_get_str_or_blob wlan1_ssid_str
+D (1228) nvs: nvs_close 11
+D (1228) nvs: nvs_open_from_partition storage 0
+D (1228) nvs: nvs_get_str_or_blob r_reg0_str
+D (1238) nvs: nvs_get_str_or_blob r_reg0_str
+D (1238) nvs: nvs_close 12
+D (1238) nvs: nvs_open_from_partition storage 0
+D (1248) nvs: nvs_get_str_or_blob r_reg1_str
+D (1248) nvs: nvs_get_str_or_blob r_reg1_str
+D (1258) nvs: nvs_close 13
+D (1258) nvs: nvs_open_from_partition storage 0
+D (1258) nvs: nvs_get_str_or_blob r_reg2_str
+D (1268) nvs: nvs_get_str_or_blob r_reg2_str
+D (1268) nvs: nvs_close 14
+D (1268) nvs: nvs_open_from_partition storage 0
+D (1278) nvs: nvs_get_str_or_blob r_reg3_str
+D (1278) nvs: nvs_get_str_or_blob r_reg3_str
+D (1288) nvs: nvs_close 15
+D (1288) nvs: nvs_open_from_partition storage 0
+D (1288) nvs: nvs_get_str_or_blob rb_ip4_str
+D (1298) nvs: nvs_get_str_or_blob rb_ip4_str
+D (1298) nvs: nvs_close 16
+D (1298) nvs: nvs_open_from_partition storage 0
+D (1308) nvs: nvs_get_str_or_blob rc_ip4_str
+D (1308) nvs: nvs_get_str_or_blob rc_ip4_str
+D (1308) nvs: nvs_close 17
+D (1318) nvs: nvs_open_from_partition storage 0
+D (1318) nvs: nvs_get_str_or_blob w_reg0_str
+D (1318) nvs: nvs_get_str_or_blob w_reg0_str
+D (1328) nvs: nvs_close 18
+D (1328) nvs: nvs_open_from_partition storage 0
+D (1338) nvs: nvs_get_str_or_blob w_reg1_str
+D (1338) nvs: nvs_get_str_or_blob w_reg1_str
+D (1338) nvs: nvs_close 19
+D (1348) nvs: nvs_open_from_partition storage 0
+D (1348) nvs: nvs_get_str_or_blob w_reg2_str
+D (1348) nvs: nvs_get_str_or_blob w_reg2_str
+D (1358) nvs: nvs_close 20
+D (1358) nvs: nvs_open_from_partition storage 0
+D (1358) nvs: nvs_get_str_or_blob w_reg3_str
+D (1368) nvs: nvs_get_str_or_blob w_reg3_str
+D (1368) nvs: nvs_close 21
+D (1378) nvs: nvs_open_from_partition storage 0
+D (1378) nvs: nvs_get_str_or_blob wb_ip4_str
+D (1378) nvs: nvs_get_str_or_blob wb_ip4_str
+D (1388) nvs: nvs_close 22
+D (1388) nvs: nvs_open_from_partition storage 0
+D (1388) nvs: nvs_get_str_or_blob wc_ip4_str
+D (1398) nvs: nvs_get_str_or_blob wc_ip4_str
+D (1398) nvs: nvs_close 23
+[0;32mI (1398) lwmb: created remote, r->b_ip4_str=192.168.2.1, r->c_ip4_str=[0m
+[0;32mI (1408) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=[0m
+[0;32mI (1418) lwmb: created remote, r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174[0m
+[0;32mI (1418) lwmb: created remote, r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1[0m
+D (1428) nvs: nvs_open_from_partition misc 1
+[0;32mI (1428) mb: idle[0m
+[1;31mE (1448) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[0;32mI (1448) wifi:wifi driver task: 3ffc3b98, prio:23, stack:6656, core=0[0m
+D (1448) efuse: BLK0 REG2 [8-15], len=8 bits
+D (1458) efuse: BLK0 REG2 [0-7], len=8 bits
+D (1458) efuse: BLK0 REG1 [24-31], len=8 bits
+D (1458) efuse: BLK0 REG1 [16-23], len=8 bits
+D (1468) efuse: BLK0 REG1 [8-15], len=8 bits
+D (1468) efuse: BLK0 REG1 [0-7], len=8 bits
+D (1478) efuse: BLK0 REG2 [16-23], len=8 bits
+D (1448) lwmb: r_socket(), r->b_ip4_str=127.0.0.1, b=54, errno=0
+D (1478) nvs: nvs_open_from_partition nvs.net80211 1
+D (1488) lwmb: r_bind(54), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (1488) nvs: nvs_get opmode 1
+D (1498) lwip: pbuf_alloc(length=4)
+
+D (1498) nvs: nvs_get_str_or_blob sta.ssid
+D (1498) lwip: pbuf_alloc(length=4) == 0x3ffc51a0
+
+D (1508) nvs: nvs_get sta.authmode 1
+D (1508) lwip: pbuf_add_header: old 0x3ffc51e8 new 0x3ffc51d4 (20)
+
+D (1508) nvs: nvs_get_str_or_blob sta.pswd
+D (1518) lwip: pbuf_add_header: old 0x3ffc51d4 new 0x3ffc51c0 (20)
+
+D (1518) nvs: nvs_get_str_or_blob sta.pmk
+D (1528) lwip: ip4_output_if: lo0
+
+D (1528) nvs: nvs_get sta.chan 1
+D (1538) lwip: IP header:
+
+D (1538) nvs: nvs_get auto.conn 1
+D (1538) lwip: +-------------------------------+
+
+D (1538) nvs: nvs_get bssid.set 1
+D (1548) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (1548) nvs: nvs_get_str_or_--------+
+
+D (1558) nvs: nvs_get sta.lis_intval 2
+D (1568) lw       0      |000|       0   | (id, flags, offset)
+
+D (1568) nvs: nvs_get sta.phym 1
+D (1578) lwip: +-------------------------------+
+
+D (1578) nvs: nvs_get sta.phybw 1
+D (1578) lwip: |   64  |    6  |    0x7cca     | (ttl, proto, chksum)
+
+D (1588) nvs: nvs_get_str_or_blob sta.apsw
+D (1588) lwip: +-------------------------------+
+
+D (1598) nvs: nvs_get_str_or_blob sta.apinfo
+D (1598) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (1608) nvs: nvs_get sta.scan_method 1
+D (1608) lwip: +-------------------------------+
+
+D (1608) nvs: nvs_get sta.sort_method 1
+D (1618) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (1618) nvs: nvs_get sta.minrssi 1
+D (1628) lwip: +-------------------------------+
+
+D (1628) nvs: nvs_get sta.minauth 1
+D (1638) lwip: netif_loop_output()
+
+D (1638) nvs: nvs_get sta.pmf_e 1
+D (1638) lwip: pbuf_alloc(length=44)
+
+D (1648) nvs: nvs_get sta.pmf_r 1
+D (1648) lwip: pbuf_alloc(length=44) == 0x3ffc521c
+
+D (1648) nvs: nvs_get sta.btm_e 1
+D (1658) lwip: pbuf_copy(0x3ffc521c, 0x3ffc51a0)
+
+D (1658) nvs: nvs_get sta.rrm_e 1
+D (1658) lwip: pbuf_copy_partial_pbuf(0x3ffc521c, 0x3ffc51a0, 44, 0)
+
+D (1668) nvs: nvs_get sta.mbo_e 1
+D (1668) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (1678) nvs: nvs_get_str_or_blob ap.ssid
+D (1678) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (1688) nvs: nvs_get_str_or_blob ap.passwd
+D (1688) lwip: ip4_input: packet accepted on interface lo
+
+D (1698) nvs: nvs_get_str_or_blob ap.pmk
+D (1698) lwip: ip4_input: 
+
+D (1708) nvs: nvs_get ap.chan 1
+D (1708) lwip: IP header:
+
+D (1708) nvs: nvs_get ap.authmode 1
+D (1708) lwip: +-------------------------------+
+
+D4     | (v, hl, tos, len)
+
+D (1728) nvs: nvs_get ap.max.conn 1
+D (1728) lwip: +-------------------------------+
+
+D (1728) nvs: nvs_get bcn.interval 2
+D (1738) lwip: |        0      |000|       0   | (id, flags, offset)
+
+D (1738) nvs: nvs_get ap.phym 1
+D (1748) lwip: +-------------------------------+
+
+D (1748) nvs: nvs_get ap.phybw 1
+D (1758) lwip: |   64  |    6  |    0x7cca     | (ttl, proto, chksum)
+
+D (1758) nvs: nvs_get ap.sndchan 1
+D (1758) lwip: +-------------------------------+
+
+D (1768) nvs: nvs_get ap.pmf_e 1
+D (1768) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (1778) nvs: nvs_get ap.pmf_r 1
+D (1778) lwip: +-------------------------------+
+
+D (1778) nvs: nvs_get ap.p_cipher 1
+D (1788) lwip(dest)
+
+D (1788) nvs: nvs_get lorate 1
+D (1798) lwip: +-------------------------------+
+
+D (1798) nvs: nvs_get_str_or_blob country
+D (1798) lwip: ip4_input: p->len 44 p->tot_len 44
+
+D (1808) nvs: nvs_get ap.ftm_r 1
+D (1808) lwip: pbuf_remove_header: old 0x3ffc523c new 0x3ffc5250 (20)
+
+D (1818) nvs: nvs_get sta.ft 1
+D (1818) lwip: pbuf_remove_header: old 0x3ffc5250 new 0x3ffc5268 (24)
+
+D (1818) nvs: nvs_get sta.owe 1
+D (1828) lwip: pbuf_alloc(length=20)
+
+D (1828) nvs: nvs_get sta.trans_d 1
+D (1838) lwip: pbuf_alloc(length=20) == 0x3ffc5280
+
+D (1838) nvs: nvs_get sta.sae_h2e 1
+D (1838) lwip: pbuf_add_header: old 0x3ffc52b4 new 0x3ffc52a0 (20)
+
+D (1848) nvs: nvs_get sta.sae_pk_mode 1
+D (1848) lwip: ip4_output_if: lo0
+
+D (1858) nvs: nvs_get sta.bss_retry 1
+D (1858) lwip: IP header:
+
+D (1858) nvs: nvs_get_str_or_blob sta.owe_data
+D (1868) lwip: +-------------------------------+
+
+D (1868) nvs: nvs_get sta.he_dcm 1
+D (1878) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (1878) nvs: nvs_get sta.he_dche_dcm_c_rx 1
+D (1888) lwip: |        1      |000|       0   | (id, flags, offset)
+
+D (1898) nvs: nvs_get sta.he_mcs9_d 1
+D (1898) lwip: +-------------------------------+
+
+D (1908) nvs: nvs_get sta.he_su_b_d 1
+D (1908) lwip: |   64  |    6  |    0x7ccd     | (ttl, proto, chksum)
+
+D (1908) nvs: nvs_get sta.he_su_b_f_d 1
+D (1918) lwip: +-------------------------------+
+
+D (1918) nvs: nvs_get sta.he_mu_b_f_d 1
+D (1928) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (1928) nvs: nvs_get sta.he_cqi_f_d 1
+D (1938) lwip: +-------------------------------+
+
+D (1938) nvs: nvs_get_str_or_blob sta.sae_h2e_id
+D (1938) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (1948) nvs: nvs_get ap.sae_h2e 1
+D (1948) lwip: +-------------------------------+
+
+D (1958) nvs: nvs_get_str_or_vs: nvs_get nan.phym 1
+D (1968) lwip: pbuf_alloc(length=40)
+
+D (1968) nvs: nvs_get sta.pwr_reset 1
+D (1978) lwip: pbuf_alloc(length=40) == 0x3ffc52cc
+
+D (1978) nvs: nvs_get band_mode 1
+D (1978) lwip: pbuf_copy(0x3ffc52cc, 0x3ffc5280)
+
+D (1988) nvs: nvs_get sta.phym5g 1
+D (1988) lwip: pbuf_copy_partial_pbuf(0x3ffc52cc, 0x3ffc5280, 40, 0)
+
+D (1988) nvs: nvs_get ap.phym5g 1
+D (1998) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (1998) nvs: nvs_get sta.phybw5g 1
+D (2008) lwip: pbuf_free(0x3ffc5280)
+
+D (2008) nvs: nvs_get ap.phybw5g 1
+D (2018) lwip: pbuf_free: deallocating 0x3ffc5280
+
+D (2018) nvs: nvs_get ap.sndchan5g 1
+D (2018) lwip: pbuf_free(0x3ffc521c)
+
+D (2028) nvs: nvs_get ap.chan5g 1
+D (2028) lwip: pbuf_free: deallocating 0x3ffc521c
+
+D (2028) nvs: nvs_get ap.chanisset 1
+D (2038) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (2038) nvs: nvs_get ap.chan5gisset 1
+D (2048) lwip: ip4_input: packet accepted on interface lo
+
+D (2048) nvs: nvs_get sta.rssi_5g_adj 1
+D (2058) lwip: ip4_input: 
+
+D (2058) nvs: nvs_get ap.csa_count 1
+D (2058) lwip: IP header:
+
+D (2068) nvs: nvs_get ap.dtim_period 1
+D (2068) lwip: +-------------------------------+
+
+D (2068) nvs: nvs_get ap.trans_d 1
+D (2078) lwip: | 4 | 5 |  0x00 || (v, hl, tos, len)
+
+D (2078) vs_set ap.sndchan 1 1
+D (2088) lwip: +-------------------------------+
+
+[1;31mE (1678) lwmb: r_connect(54), r->b_ip4_str=127.0.0.1, b=-1, errno=119[0m
+[0;32mI (2098) wifi:D (2088) lwip: |        1      |000|       0   | (id, flags, offset)[0m
+
+wifi firmware version: 3a3aca644D (2108) lwip: +-------------------------------+
+
+
+D (2118) lwip: |   64  |    6  |    0x7ccd     | (ttl, proto, chksum)
+
+[0;32mI (2118) wifi:D (2118) lwip: +-------------------------------+[0m
+
+wifi certification version: v7.0D (2128) lwip: |  127  |    0  |    0  |    1  | (src)
+
+
+D (2138) lwip: +-------------------------------+
+
+[0;32mI (2138) wifi:D (2138) lwip: |  127  |    0  |    0  |    1  | (dest)[0m
+
+config NVS flash: enabledD (2148) lwip: +-------------------------------+
+
+
+D (2148) lwip: ip4_input: p->len 40 p->tot_len 40
+
+[0;32mI (2148) wifi:D (2158) lwip: pbuf_remove_header: old 0x3ffc52ec new 0x3ffc5300 (20)[0m
+
+config nano formatting: disabled
+D (2168) lwip: pbuf_remove_header: old 0x3ffc5300 new 0x3ffc5314 (20)
+
+[0;32mI (2168) wifi:Init data frame dynamic rx buffer num: 32[0m
+D (2178) lwip: pbuf_free(0x3ffc51a0)
+
+[0;32mI (2178) wifi:D (2178) lwip: pbuf_free: deallocating 0x3ffc51a0[0m
+
+Init static rx mgmt buffer num: 5
+D (2188) lwip: pbuf_free(0x3ffc52cc)
+
+[0;32mI (2188) wifi:D (2198) lwip: pbuf_free: deallocating 0x3ffc52cc[0m
+
+Init management short buffer num: 32
+D (2198) lwip: etharp_timer
+
+[0;32mI (2208) wifi:Init dynamic tx buffer num: 32[0m
+D (2098) lwmb: r_co4), pending
+[0;32mI (2208) wifi:E (2218) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection[0m
+Init static rx buffer size: 1600E (2218) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=, no tcp connection
+
+[0;32mI (2228) wifi:D (2228) lwmb: r_socket(), r->b_ip4_str=127.0.0.1, b=55, errno=119[0m
+Init static rx buffer num: 10
+D (2238) lwmb: r_bind(55), r->b_ip4_str=127.0.0.1, b=0, errno=9
+[0;32mI (2238) wifi:Init dynamic rx buffer num: 32[0m
+D (2248) lwmb: r_listen(55), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (2248) wifi:E (2258) lwmb: r_select_task(), r->b_ip4_str=192.168.2.1, no network connection
+Reset scan defaults in ms : min,max,passive,chan_dwell :(0,120,360,30)
+[1;31mE (2268) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[0;32mI (2268) wifi_init: rx ba win: 6[0m
+[1;31mE (2278) lwmb: r_connect(54), r->b_ip4_str=127.0.0.1, b=-1, errno=128[0m
+[0;32mI (2288) wifi_init: accept mbox: 6[0m
+[1;31mE (2288) lwmb: r_shutdown(54), r->b_ip4_str=127.0.0.1, b=-1, errno=128[0m
+[0;32mI (2288) wifi_init: tcpip mbox: 32[0m
+D (2298) lwmb: r_close(54), r->b_ip4_str=127.0.0.1, b=0, errno=128
+[0;32mI (2298) wifi_init: udp mbox: 6[0m
+[0;32mI (2308) wifi_init: tcp mbox: 6[0m
+[0;32mI (2318) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2318) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2318) wifi_init: tcp mss: 1440[0m
+[0;32mI (2328) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2328) wifi_init: WiFi RX IRAM OP enabled[0m
+D (2328) esp_netif_lwip: check: remote, if=0x3ffbb0b0 fn=0x400f6720
+D (2338) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 1)
+D (2348) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2348) esp_netif_lwip: check: remote, if=0x3ffbb0b0 fn=0x400f6720
+D (2358) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 2)
+D (2368) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2368) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f6314
+D (2378) esp_netif_lwip: esp_netif_dhcps_stop_api esp_netif:0x3ffc05e0
+D (2388) esp_netif_lwip: dhcp server stop successfully
+D (2388) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2398) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f6c38
+D (2398) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffc05e0
+D (2408) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2408) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f61a0
+D (2418) esp_netif_lwip: esp_netif_dhcps_start_api esp_netif:0x3ffc05e0
+D (2428) esp_netif_lwip: dhcp server re init
+D (2428) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[0;32mI (2438) mb: idle[0m
+D (2438) nvs: nvs_get opmode 1
+D (2438) nvs: nvs_set ap.authmode 1 0
+D (2438) nvs: nvs_set ap.sae_h2e 1 4
+D (2448) nvs: nvs_set ap.chanisset 1 1
+D (2448) nvs: nvs_set ap.chan 1 1
+D (2448) nvs: nvs_set ap.sndchan 1 1
+D (2458) nvs: nvs_set_blob ap.ssid 36
+D (2458) nvs: nvs_set_blob ap.passwd 65
+D (2458) nvs: nvs_set ap.hidden 1 0
+D (2468) nvs: nvs_set ap.max.conn 1 4
+D (2468) nvs: nvs_set bcn.interval 2 100
+D (2468) nvs: nvs_set ap.p_cipher 1 0
+D (2478) nvs: nvs_set ap.trans_d 1 0
+D (2478) nvs: nvs_set ap.ftm_r 1 0
+D (2478) nvs: nvs_set ap.csa_count 1 3
+D (2488) nvs: nvs_set ap.dtim_period 1 1
+D (2488) wifi:clear blacklist
+D (2488) nvs: nvs_set_blob sta.ssid 36
+D (2498) nvs: nvs_set_blob sta.pswd 65
+D (2498) nvs: nvs_set bssid.set 1 0
+D (2498) nvs: nvs_set sta.lis_intval 2 3
+D (2508) nvs: nvs_set sta.chan 1 1
+D (2508) nvs: nvs_set sta.scan_method 1 0
+D (2508) nvs: nvs_set sta.sort_method 1 0
+D (2518) nvs: nvs_set sta.minrssi 1 -127
+D (2518) nvs: nvs_set sta.minauth 1 0
+D (2518) nvs: nvs_set_blob sta.apsw 2
+D (2528) nvs: nvs_set sta.pmf_e 1 1
+D (2528) nvs: nvs_set sta.pmf_r 1 0
+D (2528) nvs: nvs_set sta.rrm_e 1 0
+D (2538) nvs: nvs_set sta.btm_e 1 0
+D (2538) nvs: nvs_set sta.mbo_e 1 0
+D (2538) nvs: nvs_set sta.ft 1 0
+D (2548) nvs: nvs_set sta.owe 1 0
+D (2548) nvs: nvs_set sta.bss_retry 1 0
+D (2548) nvs: nvs_set sta.trans_d 1 0
+D (2558) nvs: nvs_set sta.sae_h2e 1 2
+D (2558) nvs: nvs_set sta.sae_pk_mode 1 0
+D (2558) nvs: nvs_set_blob sta.sae_h2e_id 32
+D (2568) nvs: nvs_set_blob sta.apinfo 700
+[0;32mI (2568) wifi: wlan0_init (ap) finished. SSID:192.168.2.1 password: channel:1[0m
+[0;32mI (2578) wifi: wlan1_init (sta) finished. SSID:192.168.2.21 password: channel:1[0m
+[0;32mI (2588) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+D (2588) phy_init: loading PHY init data from application binary
+D (2598) nvs: nvs_open_from_partition phy 0
+D (2598) nvs: nvs_get cal_version 4
+D (2598) nvs: nvs_get_str_or_blob cal_mac
+D (2608) efuse: BLK0 REG2 [8-15], len=8 bits
+D (2608) efuse: BLK0 REG2 [0-7], len=8 bits
+D (2618) efuse: BLK0 REG1 [24-31], len=8 bits
+D (2618) efuse: BLK0 REG1 [16-23], len=8 bits
+D (2618) efuse: BLK0 REG1 [8-15], len=8 bits
+D (2628) efuse: BLK0 REG1 [0-7], len=8 bits
+D (2628) efuse: BLK0 REG2 [16-23], len=8 bits
+D (2638) nvs: nvs_get_str_or_blob cal_data
+D (2648) nvs: nvs_close 26
+D (2648) efuse: BLK0 REG2 [8-15], len=8 bits
+D (2648) efuse: BLK0 REG2 [0-7], len=8 bits
+D (2648) efuse: BLK0 REG1 [24-31], len=8 bits
+D (2648) efuse: BLK0 REG1 [16-23], len=8 bits
+D (2658) efuse: BLK0 REG1 [8-15], len=8 bits
+D (2658) efuse: BLK0 REG1 [0-7], len=8 bits
+D (2668) efuse: BLK0 REG2 [16-23], len=8 bits
+D (2738) wifi:filter: set rx policy=0
+[0;32mI (2748) wifi:mode : sta (ac:15:18:e4:de:80) + softAP (ac:15:18:e4:de:81)[0m
+[0;32mI (2748) wifi:enable tsf[0m
+D (2748) wifi:filter: set rx policy=1
+D (2748) wifi:connect status 0 -> 0
+D (2748) wifi:filter: set rx policy=9
+[0;32mI (2758) wifi:Total power save buffer number: 16[0m
+[0;32mI (2758) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (2768) wifi:Init max length of beacon: 752/752[0m
+D (2768) event: running post WIFI_EVENT:43 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (2778) event: running post WIFI_EVENT:2 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (2788) event: running post WIFI_EVENT:2 with handler 0x400f90c4 and context 0x3ffca09c on loop 0x3ffbd2bc
+D (2798) wifi_init_default: wifi_start esp-netif:0x3ffca1f0 event-id2
+D (2798) wifi_init_default: WIFI mac address: ac 15 18 e4 de 80
+D (2808) esp_netif_lwip: check: remote, if=0x3ffca1f0 fn=0x400f5e20
+D (2818) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2818) esp_netif_lwip: check: remote, if=0x3ffca1f0 fn=0x400f63b4
+D (2818) esp_netif_n has started with netif0x3ffca1f0 from event_id=2
+D (2838) esp_netif_lwip: check: remote, if=0x3ffca1f0 fn=0x400f6940
+D (2838) esp_netif_lwip: esp_netif_start_api 0x3ffca1f0
+D (2848) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffca1f0
+D (2848) lwip: netif: added interface st IP
+D (2858) lwip:  addr 
+D (2858) lwip: 0.0.0.0
+D (2858) lwip:  netmask 
+D (2858) lwip: 0.0.0.0
+D (2858) lwip:  gw 
+D (2868) lwip: 0.0.0.0
+D (2868) lwip: 
+
+D (2868) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2878) event: running post WIFI_EVENT:43 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (2878) wifi:use bcast bss, send deauth: reason not authed(6)
+D (2888) event: running post WIFI_EVENT:12 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+[1;31mE (2898) evhdlr: ip4_str=192.168ent: running post WIFI_EVENT:12 with handler 0x400f90ac and context 0x3ffca15c on loop 0x3ffbd2bc[0m
+D (2918) wifi_init_default: wifi_start esp-netif:0x3ffc05e0 event-id12
+D (2918) wifi_init_default: WIFI mac address: ac 15 18 e4 de 81
+D (2888) wifi:use bcast bss, send deauth: reason not authed(6)
+D (2938) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f5e20
+D (2938) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (2948) esp_netif_handlers: esp_netif action has started with netif0x3ffc05e0 from event_id=12
+D (2958) esp_netif_lwip: check: remote, if=0x3ffc05e0 fn=0x400f6940
+D (2958) esp_netif_lwip: esp_netif_start_api 0x3ffc05e0
+D (2968) lwip: netif: netmask of interface    set to 255.255.255.0
+
+D (2968) lwip: netif: GW address of interface    set to 192.168.0.1
+
+D (2978) lwip: netif_set_ipaddr: netif address being changed
+
+D (2978) esp_netif_lwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffc52c8
+D (2988) esp_netif_lwip: if0x3ffc05e0 ip unchanged
+D (2998) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffc05e0
+D (2998) lwip: netif: added interface ap IP
+D (3008) lwip:  addr 
+D (3008) lwip: 192.168.2.1
+D (3008) lwip:  netmask 
+D (3008) lwip: 255.255.255.0
+D (3008) lwip:  gw 
+D (3018) lwip: 192.168.0.1
+D (3018) lwip: 
+
+D (3018) esp_netif_lwip: esp_netif_0x3ffc52c8 UP
+[0;32mI (3028) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.1[0m
+D (3038) esp_netif_lwip: check: local, if=0x3ffc05e0 fn=0x400f70c0
+D (3038) esp_netif_update_default_netif_lwip 0x3ffc05e0
+D (3048) lwip: netif: setting default interface ap
+
+D (3048) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3058) lwip: etharp_timer
+
+D (3058) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffca1f0
+D (3068) esp_netif_lwip: dhcp client stop successfully
+D (3068) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3078) esp_netif_lwip: check: remote, if=0x3ffca1f0 fn=0x400f6c38
+D (3078) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffca1f0
+D (3088) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3098) wifi:Start wifi connect
+D (3098) wifi:connect status 0 -> 0
+D (3098) wifi:connect chan=0
+D (3098) wifi:first chan=1
+D (3108) wifi:connect status 0 -> 1
+D (3108) wifi:filter: set rx policy=3
+D (3108) wifi:clear scan ap list
+D (3118) wifi:start scan: type=0x50f, priority=2, cb=0x40114b34, arg=0x0, ss_state=0x1, time=371856, index=0
+D (3128) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (3128) wifi:profile match: ss_state=0x7
+D (3138) wifi:profile match: ss_state=0x7
+D (3138) wifi:scan end: arg=0x3ffb625c, status=0, ss_state=0x7
+D (3138) wifi:find first mathched ssid, scan done
+D (3148) wifi:filter: set rx policy=4
+D (3148) wifi:first chan=1
+D (3148) wifi:handoff_cb: status=0
+D (3158) wifi:ap found, mac=a0:dd:6c:10:24:cd
+D (3158) wifi:going for connection with bssid=a0:dd:6c:10:24:cd
+D (3168) wifi:new_bss=0x3ffb7078, cur_bss=0x0, new_chan=<1,1>, cur_chan=1
+D (3168) wifi:filter: set rx policy=5
+[0;32mI (3178) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+D (3178) wifi:connect_op: status=0, auth=1, cipher=0 
+D (3188) wifi:connect_bss: auth=1, reconnect=0
+[0;32mI (3188) wifi:state: init -> auth (0xb0)[0m
+D (3198) nvs: nvs_get sta.pwr_reset 1
+D (3198) wifi:start 1s AUTH timer
+D (3198) wifi:clear scan ap list
+D (3208) httpd: httpd_thread: web server started
+D (3208) httpd: httpd_server: doing select maxfd+1 = 57
+D (3218) event: running post ESP_HTTP_SERVER_EVENT:1 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (3228) httpd_uri: httpd_register_uri_handler: [0] installed /
+D (3228) wifi:recv auth: seq=2, status=0, algo=0
+[0;32mI (3238) wifi:state: auth -> assoc (0x0)[0m
+D (3238) nvs: nvs_get sta.pwr_reset 1
+D (3238) wifi:restart connect 1s timer for assoc
+D (3248) httpd_uri: httpd_find_uri_handler: [0] = /
+D (3248) httpd_uri: httpd_register_uri_handler: [0] exists /
+D (3258) httpd_uri: httpd_register_uri_handler: [1] installed /
+D (3258) intr_alloc: Connected src 22 to int 8 (cpu 0)
+D (3268) spi: SPI2 use gpio matrix.
+D (3268) w5500.mac: Using default SPI Driver
+D (3268) intr_alloc: Connected src 30 to int 9 (cpu 0)
+D (3D (3278) wifi:recv assoc: type=0x10
+D (3278) wifi:filter: set rx policy=6
+[0;32mI (3288) wifi:state: assoc -> run (0x10)[0m
+D (3288) nvs: nvs_get sta.pwr_reset 1
+D (3288) wifi:start 10s connect timer for 4 way handshake
+[0;32mI (3298) wifi:connected with 192.168.2.21, aid = 1, channel 1, 40U, bssid = a0:dd:6c:10:24:cd[0m
+[0;32mI (3308) wifi:security: Open Auth, phy: bgn, rssi: -44[0m
+D (3308) wifi:remove all except a0:dd:6c:10:24:cd from rc list
+E 278) spi_hal: eff: 16000, limit: 26666k(/2), 0 dummy, 0 delay
+(3308) lwmb: r_select_task(), r->b_ip4_str=192.168.2.11, no network connection
+D (3318) wifi:clear blacklistE (3328) lwmb: r_select task(), r->b_ip4_str=192.168.2.1, r->c_ip4_str=, no tcp connection
+
+D (3338) lwmb: r_socket(), r->b_ip4_str=192.168.2.1, b=58, errno=128
+D (3338) nvs: nvs_set sta.chan 1 1
+D (3348) nvs: nvs_set_blob sta.apinfo 700
+D (3348) lwmb: r_bind(58), r->b_ip4_str=192.168.2.1, b=0, errno=9
+D (3358) wifi:filter: set rx policy=7
+D (3358) lwmb: r_listen(58), r->b_ip4_str=192.168.2.1, b=0, errno=9
+[0;32mI (3358) wifi:pm start, type: 1[0m
+
+[0;32mI (3368) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+D (3378) wifi:Send sta connected event
+D (3378) wifi:connect status 1 -> 5
+D (3388) wifi:obss scan is disabled
+D (3388) wifi:start obss scan: obss scan is stopped
+[1;31mE (3388) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+[0;32mI (3388) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+D (3398) lwmb: r_socket(), r->b_ip4_str=127.0.0.1, b=59, errno=9
+D (3398) event: running post WIFI_EVENT:4 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (3418) esp_netif_63b4
+D (3408) lwmb: r_bind(59), r->b_ip4_str=127.0.0.1, b=0, errno=9
+D (3428) esp_netif_lwip: esp_netif_dhcpc_stop_api esp_netif:0x3ffca1f0
+D (3318) spi_master: SPI2: New device added to CS0, effective clock: 16000000 Hz
+D (3438) esp_netif_lwip: dhcp client already stopped
+[0;32mI (3438) mb: idle[0m
+D (3448) wifi:D (3448) esp_netif_lwip: call api in lwip: ret=0x5005, give sem
+ap recv assoc/reassoc request
+D (3458) lwip: pbuf_alloc(length=4)
+
+D (3458) wifi:bss->bss_channel prim 1 second 0 
+D (3468) lwip: pbuf_alloc(length=4) == 0x3ffcf870
+
+
+D (3478) nvs: nvs_set ap.sndchan 1 0
+D (3478) lwip: pbuf_add_header: old 0x3ffcf8b8 new 0x3ffcf8a4 (20)
+
+[0;32mI (3488) wifi:D (3488) lwip: pbuf_add_header: old 0x3ffcf8a4 new 0x3ffcf890 (20)[0m
+
+new:<1,1>, old:<1,1>, ap:<1,0>, sta:<1,1>, prof:1, snd_ch_cfg:0x0
+D (3488) lwip: ip4_output_if: lo0
+
+D (3498) wifi:hostap_ht_operation_update current operation mode=0x0D (3498) lwip: IP header:
+
+
+D (3508) wifi:D (3508) lwip: +-------------------------------+
+
+bss=0x3ffce344, resp=16 join
+D (3518) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+[0;32mI (3518) wifi:station: 8e:4c:d2:35:6c:b2 join, AID=1, bgn, 20D (3528) lwip: +-------------------------------+[0m
+
+
+D (3538) wifi:D (3538) lwip: |        2      |000|       0   | (id, flags, offset)
+
+join success, ap send assoc response
+D (3538) lwip: +-------------------------------+
+
+D (3548) lwip: |   64  |    6  |    0x7cc8     | (ttl, proto, chksum)
+
+D (3458) esp_netif_lwip: check: remote, if=0x3ffca1f0 fn=0x400f6c38
+D (3558) lwip: +-------------------------------+
+
+[1;31mE (3448) gpio: gpio_pullup_en(78): GPIO number error[0m
+D (3568) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (3578) lwip: +-------------------------------+
+
+D (3578) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (3588) lwip: +-------------------------------+
+
+D (3588) lwip: netif_loop_output()
+
+D (3588) lwip: pbuf_alloc(length=44)
+
+D (3598) lwip: pbuf_alloc(length=44) == 0x3ffcf96c
+
+D (3598) lwip: pbuf_copy(0x3ffcf96c, 0x3ffcf870)
+
+D (3608) lwip: pbuf_copy_partial_pbuf(0x3ffcf96c, 0x3ffcf870, 44, 0)
+
+D (3608) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+[1;31mE (3618) lwmb: r_connect(59), r->b_ip4_str=127.0.0.1, b=-1, errno=119[0m
+D (3618) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffca1f0
+D (3618) w5500.mac: Waiting W5500 to start & verify version...
+D (3628) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (3628) lwmb: r_connect(59), pending
+[1;31mE (3638) evhdlr: ip4_str=192.168.2.11, state=1[0m
+D (3638) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+[0;32mI (3648) evhdlr: ip4_str=192.168.2.11, state=1[0m
+D (3658) lwip: ip4_input: packet accepted on interface lo
+
+D (3658) event: running post WIFI_EVENT:4 with handler 0x400f90f4 and context 0x3ffca0fc on loop 0x3ffbd2bc
+D (3668) lwip: ip4_input: 
+
+D (3678) esp_netif_handlers: esp_netif action connected with netif0x3ffca1f0 from event_id=4
+D (3688) esp_netif_lwip: check: remote, if=0x3ffca1f0 fn=0x400f6b5c
+D (3678) lwip: IP header:
+
+D (3678) lwip: pbuf_alloced_custom(length=110)
+
+D (3698) lwip: +-------------------------------+
+
+D (3698) lwip: pbuf_alloced_custom(length=86)
+
+D (3708) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (3708) lwip: pbuf_alloced_custom(length=110)
+
+D (3718) lwip: +-------------------------------+
+
+D (3718) lwip: pbuf_alloced_custom(length=342)
+
+D (wip: |        2      |000|       0   | (id, flags, offset)
+
+D (3728) lwip: pbuf_alloced_custom(length=62)
+
+D (3728) lwip: +-------------------------------+
+
+D (3738) wifi:D (3738) lwip: |   64  |    6  |    0x7cc8     | (ttl, proto, chksum)
+
+eb is dhcp or dns sport = 68, dport = 67D (3748) lwip: +-------------------------------+
+
+
+D (3758) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (3758) lwip: pbuf_alloced_custom(length=130)
+
+D (3758) lwip: +-------------------------------+
+
+[1;31mE (3658) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (3768) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (3788) lwip: +-------------------------------+
+
+D (3788) lwip: ip4_input: p->len 44 p->tot_len 44
+
+D (3798) lwip: pbuf_remove_header: old 0x3ffcf98c new 0x3ffcf9a0 (20)
+
+D (3798) lwip: pbuf_remove_header: old 0x3ffcf9a0 new 0x3ffcf9b8 (24)
+
+D (3808) lwip: pbuf_alloc(length=4)
+
+D (3808) lwip: pbuf_alloc(length=4) == 0x3ffd1dd8
+
+D (3818) lwip: pbuf_add_header: old 0x3ffd1e20 new 0x3ffd1e0c (20)
+
+D (3818) lwip: pbuf_add_header: old 0x3ffd1e0c new 0x3ffd1df8 (20)
+
+D (3828) lwip: ip4_output_if: lo0
+
+D (3828) lwip: IP header:
+
+D (3838) lwip: +-------------------------------+
+
+D (3838) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (3848) lwip: +-------------------------------+
+
+D (3848) lwip: |        3      |000|       0   | (id, flags, offset)
+
+D (3858) lwip: +-------------------------------+
+
+D (3858) lwip: |   64  |    6  |    0x7cc7     | (ttl, proto, chksum)
+
+D (3868) lwip: +-------------------------------+
+
+D (3868) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (3878) lwip: +-------------------------------+
+
+D (3878) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (3888) lwip: +-------------------------------+
+
+D (3888) lwip: netif_loop_output()
+
+D (3888) lwip: pbuf_alloc(length=44)
+
+D (3898) lwip: pbuf_alloc(length=44) == 0x3ffd1e28
+
+D (3898) lwip: pbuf_copy(0x3ffd1e28, 0x3ffd1dd8)
+
+D (3908) lwip: pbuf_alloced_custom(length=120)
+
+D (3908) lwip: pbuf_copy_partial_pbuf(0x3ffd1e28, 0x3ffd1dd8, 44, 0)
+
+D (3918) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (3918) lwip: pbuf_free(0x3ffcf96c)
+
+D (3928) lwip: pbuf_free: deallocating 0x3ffcf96c
+
+D (3928) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (3938) lwip: ip4_input: packet accepted on interface lo
+
+D (3938) lwip: ip4_input: 
+
+D (3948) lwip: IP header:
+
+D (3948) lwip: +-------------------------------+
+
+D (3948) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (3958) lwip: +-------------------------------+
+
+D (3958) lwip: |        3      |000|       0   | (id, flags, offset)
+
+D (3968) lwip: +-------------------------------+
+
+D (3978) lwip: |   64  |    6  |    0x7cc7     | (ttl, proto, chksum)
+
+D (3978) lwip: +-------------------------------+
+
+D (3988) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (3988) lwip: +-------------------------------+
+
+D (3998) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (3998) lwip: +-------------------------------+
+
+D (4008) lwip: ip4_input: p->len 44 p->tot_len 44
+
+D (4008) lwip: pbuf_remove_header: old 0x3ffd1e48 new 0x3ffd1e5c (20)
+
+D (4018) lwip: pbuf_remove_header: old 0x3ffd1e5c new 0x3ffd1e74 (24)
+
+D (4018) lwip: pbuf_free(0x3ffcf870)
+
+D (4buf_free: deallocating 0x3ffcf870
+
+D (4028) lwip: pbuf_alloc(length=20)
+
+D (4028) lwip: pbuf_alloc(length=20) == 0x3ffcf870
+
+D (4038) lwip: pbuf_add_header: old 0x3ffcf8a4 new 0x3ffcf890 (20)
+
+[1;31mE (3738) w5500.mac: W5500 version mismatched, expected 0x04, got 0x00[0m
+D (4048) lwip: ip4_output_if: lo0
+
+D (4048) lwip: IP header:
+
+D (4058) lwip: +-------------------------------+
+
+D (4058) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (4068) lwip: +-------------------------------+
+
+D (4068) lwip: |        4      |000|       0   | (id, flags, offset)
+
+D (4078) lwip: +-------------------------------+
+
+D (4078) lwip: |   64  |    6  |    0x7cca     | (ttl, proto, chksum)
+
+D (4088) lwip: +-------------------------------+
+
+D (4088) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (4098) lwip: +-------------------------------+
+
+D (4098) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (4108) lwip: +-------------------------------+
+
+D (4108) lwip: netif_loop_output()
+
+D (4118) lwip: pbuf_alloc(length=40)
+
+D (4118) lwip: pbuf_alloc(length=40) == 0x3ffcf96c
+
+D (4118) lwip: pbuf_copy(0x3ffcf96c, 0x3ffcf870)
+
+D (4128) lwip: pbuf_copy_partial_pbuf(0x3ffcf96c, 0x3ffcf870, 40, 0)
+
+D (4138) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (4138) lwip: pbuf_free(0x3ffcf870)
+
+D (4138) lwip: pbuf_free: deallocating 0x3ffcf870
+
+D (4148) lwip: pbuf_free(0x3ffd1e28)
+
+D (4148) lwip: pbuf_free: deallocating 0x3ffd1e28
+
+D (4158) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (4158) lwip: ip4_input: packet accepted on interface lo
+
+D (4168) lwip: ip4_input: 
+
+D (4168) lwip: IP header:
+
+D (4178) lwip: +-------------------------------+
+
+D (4178) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (4188) lwip: +-------------------------------+
+
+D (4188) lwip: |        4      |000|       0   | (id, flags, offset)
+
+D (4198) lwip: +-------------------------------+
+
+D (4198) lwip: |   64  |    6  |    0x7cca     | (ttl, proto, chksum)
+
+D (4208) lwip: +-------------------------------+
+
+D (4208) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (4218) lwip: +-------------------------------+
+
+D (4218) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (4228) lwip: +-------------------------------+
+
+D (4228) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (4238) lwip: pbuf_remove_header: old 0x3ffcf98c new 0x3ffcf9a0 (20)
+
+D (4238) lwip: pbuf_remove_header: old 0x3ffcf9a0 new 0x3ffcf9b4 (20)
+
+D (4248) lwip: pbuf_free(0x3ffd1dd8)
+
+D (4248) lwip: pbuf_free: deallocating 0x3ffd1dd8
+
+D (4258) lwip: pbuf_free(0x3ffcf96c)
+
+D (4258) lwip: pbuf_free: deallocating 0x3ffcf96c
+
+D (4258) lwip: etharp_timer
+
+D (4268) esp_netif_lwip: esp_netif_up_api esp_netif:0x3ffca1f0
+D (4268) lwip: netif: netmask of interface st set to 255.255.255.0
+
+D (4278) lwip: netif: GW address of interface st set to 192.168.2.21
+
+D (4288) lwip: netif_set_ipaddr: netif address being changed
+
+D (4288) ef_internal_dhcpc_cb lwip-netif:0x3ffca1f0 ip unchanged
+D (4298)eck: local, if=0x3ffca1f0 fn=0x400f70c0
+D (4308) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffca1f0
+D (4308) lwip: netif: setting default interface st
+
+D (4318) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (4318) esp_netif_lwip: esp_netif_get_ip_info esp_netif:0x3ffca1f0
+D (4318) lwip: ethernet_input: dest:33:33:00:00:00:16, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (4328) esp_netif_lwip: esp_netif_get_old_ip_info esp_netif:0x3ffca1f0
+D (4338) lwip: pbuf_free(0x3ffd017c)
+
+D (4338) esp_netif_lwip: check: remote, if=0x3ffca1f0 fn=0x400f5e48
+D (4348) lwip: pbuf_free: deallocating 0x3ffd017c
+
+[1;31mE (4328) w5500.mac: emac_w5500_init(827): verify chip ID failed[0m
+D (4358) lwip: ethernet_input: dest:33:33:ff:e1:53:5e, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (4368) lwip: pbuf_free(0x3ffd1da4)
+
+D (4378) lwip: pbuf_free: deallocating 0x3ffd1da4
+
+D (4378) lwip: ethernet_input: dest:33:33:00:00:00:16, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (4388) lwip: pbuf_free(0x3ffd1ed4)
+
+D (4388) lwip: pbuf_free: deallocating 0x3ffd1ed4
+
+D (4398) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:800
+
+D (4398) lwip: pbuf_remove_header: old 0x3ffd0fc4 new 0x3ffd0fd2 (14)
+
+D (4408) lwip: ip_input: iphdr->dest 0xffffffff netif->ip_addr 0x102a8c0 (0xffffff, 0x2a8c0, 0xff000000)
+
+D (4418) lwip: ip4_input: packet accepted on interface ap
+
+D (4428) lwip: ip4_input: 
+
+D (4428) lwip: IP header:
+
+D (4428) lwip: +-------------------------------+
+
+D (v, hl, tos, len)
+
+D (4438) lwip: +-------------------------------+
+
+D (4448) lwip: |     3463      |000|       0   | (id, flags, offset)
+
+D (4448) lwip: +-------------------------------+
+
+[0;32mI (4448) mb: idle[0m
+D (4458) lwip: |  255  |   17  |    0xad1e     | (ttl, proto, chksum)
+
+D (4458) lwip: +-------------------------------+
+
+D (4468) lwip: |    0  |    0  |    0  |    0  | (src)
+
+D (4468) lwip: +-------------------------------+
+
+D (4478) lwip: |  255  |  255  |  255  |  255  | (dest)
+
+D (4478) lwip: +-------------------------------+
+
+D (4488) lwip: ip4_input: p->len 328 p->tot_len 328
+
+D (4488) lwip: pbuf_remove_header: old 0x3ffd0fd2 new 0x3ffd0fe6 (20)
+
+D (4498) lwip: pbuf_remove_header: old 0x3ffd0fe6 new 0x3ffd0fee (8)
+
+D (4508) lwip: pbuf_alloc(length=548)
+
+D (4508) lwip: pbuf_alloc(length=548) == 0x3ffcfbb0
+
+D (4508) lwip: etharp_add_static_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (4518) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (4528) lwip: etharp_find_entry: found empty entry 0
+
+D (4528) lwip: etharp_find_entry: selecting empty entry 0
+
+D (4538) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (4538) lwip: pbuf_add_header: old 0x3ffcfbf8 new 0x3ffcfbf0 (8)
+
+D (4548) lwip: pbuf_add_header: old 0x3ffcfbf0 new 0x3ffcfbdc (20)
+
+D (4548) lwip: ip4_output_if: ap2
+
+D (4558) lwip: IP header:
+
+D (4558) lwip: +-------------------------------+
+
+D (4558) lwip: | 4 | 5 |  0x00 |       576     | (v, hl, tos, len)
+
+D (4568) lwip: +-------------------------------+
+
+D (4578) lwip: |        5      |000|       0   | (id, flags, offset)
+
+D (4578) lwip: +-------------------------------+
+
+D (4588) lwip: |   64  |   17  |    0xf354     | (ttl, proto, chksum)
+
+D (4588) lwip: +-------------------------------+
+
+D (4598) lwip: |  192  |  168  |    2  |    1  | (src)
+
+D (4598) lwip: +-------------------------------+
+
+D (4608) lwip: |  192  |  168  |    2  |    2  | (dest)
+
+D (4608) lwip: +-------------------------------+
+
+[1;31mE (4448) gpio: gpio_pullup_en(78): GPIO number error[0m
+D (4618) lwip: ip4_output_if: call netif->output()
+
+D (4628) lwip: pbuf_add_header: old 0x3ffcfbdc new 0x3ffcfbce (14)
+
+D (4628) lwip: ethernet_output: sending packet 0x3ffcfbb0
+
+D (4638) wifi:eb is dhcp or dns sport = 67, dport = 68
+D (4638) lwip: etharp_remove_static_entry: 192.168.2.2
+
+D (4648) lwip: etharp_find_entry: found matching entry 0
+
+D (4648) esp_netif_lwip: esp_netif_dhcps_cb esp_netif:0x3ffc05e0
+[0;32mI (4658) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.2.2[0m
+D (4658) esp_netif_lwip: Client's MAC: 8e:4c:d2:35:6c:b2
+D (4668) lwip: pbuf_free(0x3ffcfbb0)
+
+D (4668) lwip: pbuf_free: deallocating 0x3ffcfbb0
+
+D (4678) lwip: pbuf_free(0x3ffd20ec)
+
+D (4678) lwip: pbuf_free: deallocating 0x3ffd20ec
+
+D (4688) lwip: ethernet_input: dest:33:33:00:00:00:02, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (4688) lwip: pbuf_free(0x3ffd21ec)
+
+D (4698) lwip: pbuf_free: deallocating 0x3ffd21ec
+
+D (4698) lwip: ethernet_input: dest:33:33:00:00:00:16, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (4708) lwip: pbuf_free(0x3ffd29f8)
+
+D (4708) lwip: pbuf_free: deallocating 0x3ffd29f8
+
+D (4718) lwip: ethernet_input: dest:33:33:00:00:00e:86dd
+
+D (4718) lwmb: r_socket(), r->b_ip4_str=192.168.2.11, b=60, errno=119
+D (4728) lwip: pbuf_free(0x3ffd1d6c)
+
+[0;32mI (4728) gpio: GPIO[34]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+D (4738) lwip: pbuf_free: deallocating 0x3ffd1d6c
+
+D (4748) esp_netif_lwip: esp_netif_set_ip_old_info_api esp_netif:0x3ffca1f0
+D (4758) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (4758) esp_netif_handlers: static ip: ip changed=true
+D (4758) lwmb: r_bind(60), r->b_ip4_str=192.168.2.11, b=0, errno=9
+D (4768) event: running post WIFI_EVENT:14 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (4768) lwip: pbuf_alloc(length=4)
+
+D (4778) event: running post IP_EVENT:2 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (4778) lwip: pbuf_alloc(length=4) == 0x3ffcf870
+
+D (4788) event: running post IP_EVENT:0 with handler 0x400db1f4 and context 0x3ffbe994 on loop 0x3ffbd2bc
+D (4798) lwip: pbuf_add_header: old 0x3ffcf8b8 new 0x3ffcf8a4 (20)
+
+D (4808) event: running post IP_EVENT:0 with handler 0x400f8f20 and context 0x3ffca1d0 on loop 0x3ffbd2bc
+D (4808) lwip: pbuf_add_header: old 0x3ffcf8a4 new 0x3ffcf890 (20)
+
+D (4818) wifi_init_default: Got IP wifi default handler entered
+D (4828) lwip: ip4_output_if: st1
+
+D (4828) esp_netif_handlers: esp_netif action got_ip with netif0x3ffca1f0 from event_id=0
+D (4838) lwip: IP header:
+
+[0;32mI (4848) esp_netif_handlers: sta ip: 192.168.2.11, mask: 255.255.255.0, gw: 192.168.2.21[0m
+D (4848) lwip: +-------------------------------+
+
+[1;31mE (4768) esp_eth: esp_eth_driver_install(250): init mac failed[0m
+D (4858) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+D (4868) lwip: +-------------------------------+
+
+D (4878) lwip: |        6      |000|       0p: +-------------------------------+
+
+D (4888) lwip: |   64  |    6  |    0xf5bc     | (ttl, proto, chksum)
+
+D (4888) lwip: +-------------------------------+
+
+D (4898) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (4898) lwip: +-------------------------------+
+
+D (4908) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (4908) lwip: pbuf_alloced_custom(length=120)
+
+D (4908) lwip: +-------------------------------+
+
+[1;31mE (4918) esp_eth: esp_eth_ioctl(438): ethernet driver handle can't be null[0m
+D (4918) lwip: ip4_output_if: call netif->output()
+
+D (4928) lwip: etharp_find_entry: found empty entry 0
+
+D (4938) lwip: etharp_find_entry: selecting empty entry 0
+
+D (4938) lwip: etharending ARP request.
+
+D (4948) lwip: pbuf_alloc(length=28)
+
+D (4948) lwip: pbuf_alloc(length=28) == 0x3ffd0020
+
+D (4958) lwip: etharp_raw: sending raw ARP packet.
+
+D (4958) lwip: pbuf_add_header: old 0x3ffd0040 new 0x3ffd0032 (14)
+
+D (4968) lwip: ethernet_output: sending packet 0x3ffd0020
+
+D (4968) lwip: pbuf_free(0x3ffd0020)
+
+D (4978) lwip: pbuf_free: deallocating 0x3ffd0020
+
+D (4978) lwip: etharp_query: queued packet 0x3ffcf870 on ARP entry 0
+
+[1;31mE (4988) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=119[0m
+D (4988) lwip: ethernet_input: dest:33:33:00:00:00:fb, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (4988) esp_netif_lwip: check: remote, if=0x3ffbb220 fn=0x400f6720
+D (4998) lwip: pbuf_free(0x3ffce1e0)
+
+D (4998) lwmb: r_connect(60), pending
+D (5008) lwip: pbuf_free: deallocating 0x3ffce1e0
+
+[1;31mE (5018) lwmb: r_select task(), r->b_ip4_str=127.0.0.1, r->c_ip4_str=127.0.0.1, no tcp connection[0m
+D (5018) lwip: etharp_timer
+
+D (5028) lwip: etharp_request: sending ARP request.
+
+D (502wip: pbuf_alloc(length=28) == 0x3ffcdb20
+
+D (5038) lwip: pbuf_alloced_custom(length=42)
+
+D (5038) lwip: etharp_raw: sending raw ARP packet.
+
+[0;32mI (5048) wifibuf_add_header: old 0x3ffcdb40 new 0x3ffcdb32 (14)[0m
+
+<ba-add>idx:0 (ifx:0, a0:dd:6c:10:24:cd), tid:0, ssn:0, winSize:64D (5058) lwip: ethernet_output: sending packet 0x3ffcdb20
+
+
+D (5068) lwip: pbuf_free(0x3ffcdb20)
+
+D (5068) lwip: pbuf_free: deallocating 0x3ffcdb20
+
+D (5078) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 3)
+D (5088) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+tcp_connect: can only connect from state CLOSED
+[1;31mE (5088) esp_eth: esp_eth_increase_reference(562): ethernet driver handle can't be null[0m
+D (5098) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:806
+
+[1;31mE (5098) lwmb: r_connect(59), r->b_ip4_str=127.0.0.1, b=-1, errno=127[0m
+D (5108) lwip: pbuf_remove_header: old 0x3ffcf9e8 new 0x3ffcf9f6 (14)
+
+[1;31mE (5108) esp_eth: esp_eth_update_input_path_info(369): ethernet driver handle can't be null[0m
+D (5118) lwip: etharp_update_arp_entry: 192.168.2.21 - a0:dd:6c:10:24:cd
+
+D (5118) lwmb: r_connect(59), r->b_ip4_str=127.0.0.1, b=-1, errno=127
+D (5138) lwip: etharp_find_entry: found matching entry 0
+
+[1;31mE (5138) esp_eth: esp_eth_ioctl(438): ethernet driver handle can't be nularp_update_arp_entry: updating stable entry 0[0m
+
+[1;31mE (5148) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (5158) lwip: pbuf_add_header: old 0x3ffcf890 new 0x3ffcf882 (14)
+
+D (5168) lwip: pbuf_alloced_custom(length=42)
+
+D (5178) lwip: ethernet_output: sending packet 0x3ffcf870
+
+[0;32mI (5158) esp_eth.netif.netif_glue: fc:d6:0d:40:04:1f[0m
+D (5188) lwip: pbuf_free(0x3ffcf870)
+
+D (5198) lwip: pbuf_free: 0x3ffcf870 has ref 1, ending here.
+
+D (5198) lwip: etharp_input: incoming ARP reply
+
+D (5208) lwip: pbuf_free(0x3ffd1d7c)
+
+D (5208) lwip: pbuf_free: deallocating 0x3ffd1d7c
+
+D (5208) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:806
+
+[1;31mE (5208) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5218) lwip: pbuf_remove_header: old 0x3ffd20b8 new 0x3ffd20c6 (14)
+
+D (5218) esp_netif_lwip: check: remote, if=0x3ffcdb20 fn=0x400f5e20
+D (5228) lwip: etharp_update_arp_entry: 192.168.2.21 - a0:dd:6c:10:24:cd
+
+D (5228) lwmb: r_connect(60), pending
+D (5248) lwip: etharp_find_entry: found matching entry 0
+
+D (5258) lwip: etharp_update_arp_entry: updating stable entry 0
+
+D (5258) lwip: etharp_input: incoming ARP reply
+
+D (5268) lwip: pbuf_free(0x3ffd20f0)
+
+D (5268) lwip: pbuf_free: deallocating 0x3ffd20f0
+
+D (5268) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[0;32mI (5278) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+D (5278) lwmb: r_a8) lwmb: created remote, r->b_ip4_str=, r->c_ip4_str=
+D (5298) p: esp_netif_dhcpc_stop_api esp_netif:0x3ffcdb20
+D (5308) esp_n0, give sem
+D (5318) esp_netif_lwip: check: remote, if=0x3ffcdb20 fn=0x400f6c38
+D (5318) esp_netif_lwip: esp_netif_set_ip_info_api esp_netif:0x3ffcdb20
+D (5328) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+[1;31mE (5328) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5338) esp_eth: esp_eth_start(304): ethernet driver handle can't be null[0m
+[1;31mE (5348) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5358) lwmb: r_connect(60), pending
+[1;31mE (5378) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_.168.2.11, b=-1, errno=120[0m
+D (5378) lwmb: r_connect(60), pending
+[1;31mE (5408) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5408) lwmb: r_connect(60), r->b_ip4_str=192.168.2.10[0m
+D (5408) lwmb: r_connect(60), pending
+[1;31mE (5428) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5428) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5428) lwmb: r_connect(60), pending
+[0;32mI (5458) mb: idle[0m
+[1;31mE (5458) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5458) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5458) lwmb: r_connect(60), pending
+[1;31mE (5488) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5488) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5488) lwmb: r_connect(60), pending
+[1;31mE (5508) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5508) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5508) lwmb: r_connect(60), pending
+[1;31mE (5538) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5538) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5538) lwmb: r_connect(60), pending
+[1;31mE (5558) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5558) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5558) lwmb: r_connect(60), pending
+[1;31mE (5588) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5588) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5588) lwmb: r_connect(60), pending
+[1;31mE (5608) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5608) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5608) lwmb: r_connect(60), pending
+[1;31mE (5638) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+[1;31mE (5638) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5638) lwmb: r_connect(60), pending
+D (5648) lwip: pbuf_alloced_custom(length=42)
+
+D (5648) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (5658) lwip: pbuf_remove_header: old 0x3ffd02d0 new 0x3ffd02de (14)
+
+D (5658) lwip: pbuf_alloced_custom(length=42)
+
+D (5658) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+[1;31mE (5658) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (5668) lwip: etharp_find_entry: found empty entry 1
+
+D (5678) lwip: pbuf_alloced_custom(length=58)
+
+D (5688) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (5698) lwip: etharp_input: incoming ARP request
+
+D (5698) lwip: etharp_input: ARP request was not for us.
+
+D (5708) lwip: pbuf_free(0x3ffd1d80)
+
+D (5708) lwip: pbuf_free: deallocating 0x3ffd1d80
+
+D (5708) lwip: pbuf_alloced_custom(length=100)
+
+D (5718) lwip: pbuf_alloced_custom(length=120)
+
+D (5718) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (5728) lwip: pbuf_remove_header: old 0x3ffd0994 new 0x3ffd09a2 (14)
+
+D (5738) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (5748) lwip: etharp_find_entry: found empty entry 1
+
+D (5748) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (5758) lwip: etharp_input: incoming ARP request
+
+D (5758) lwip: etharp_input: ARP request was not for us.
+
+D (5768) lwip: pbuf_free(0x3ffd20f4)
+
+D (5768) lwip: pbuf_free: deallocating 0x3ffd20f4
+
+D (5778) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+[1;31mE (5778) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=120[0m
+D (5778) lwip: pbuf_remove_header: old 0x3ffd017c new 0x3ffd018a (14)
+
+D (5788) lwmb: r_connect(60), pending
+D (5798) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (5808) lwip: ip4_input: packet accepted on interface st
+
+D (5808) lwip: ip4_input: 
+
+D (5818) lwip: IP header:
+
+D (5818) lwip: +-------------------------------+
+
+D (5818) lwip: | 4 | 5 |  0x00 |        44     | (v, hl, tos, len)
+
+[1;31mE (5828) lwmb: r_select task(), r->b_ip4_str=192.168.2.11, r->c_ip4_str=192.168.1.174, no tcp connection[0m
+D (5828) lwip: +-------------------------------+
+
+D (5838) lwip: |    24856      |000|       0   | (id, flags, offset)
+
+D (5848) lwip: +-------------------------------+
+
+D (5848) lwip: |   99  |    6  |    0x71aa     | (ttl, proto, chksum)
+
+D (5858) lwip: +-------------------------------+
+
+D (5858) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (5868) lwip: +-------------------------------+
+
+D (5868) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (5878) lwip: +-------------------------------+
+
+D (5878) lwip: ip4_input: p->len 44 p->tot_len 44
+
+D (5888) lwip: pbuf_remove_header: old 0x3ffd018a new 0x3ffd019e (20)
+
+D (5898) lwip: pbuf_remove_header: old 0x3ffd019e new 0x3ffd01b6 (24)
+
+D (5898) lwip: pbuf_free(0x3ffcf870)
+
+D (5898) lwip: pbuf_free: deallocating 0x3ffcf870
+
+D (5908) lwip: pbuf_alloc(length=20)
+
+D (5908) lwip: pbuf_alloc(length=20) == 0x3ffcf870
+
+D (5918) lwip: pbuf_add_header: old 0x3ffcf8a4 new 0x3ffcf890 (20)
+
+D (5918) lwip: ip4_output_if: st1
+
+D (5928) lwip: IP header:
+
+D (5928) lwip: +-------------------------------+
+
+D (5928) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (5938) lwip: +-------------------------id, flags, offset)
+
+D (5948) lwip: +--------------------------  |    6  |    0xf5bf     | (ttl, proto, chksum)
+
+D (5958) lwip: +-------------------------------+
+
+D (5968) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (5968) lwip: +-------------------------------+
+
+D (5978) l2  |  168  |    1  |  174  | (dest)
+
+D (5978) lwip: +-------------------------------+
+
+D (5988) lwip: ip4_output_if: call netif->output()
+
+D (5988) lwip: pbuf_add_header: old 0x3ffcf890 new 0x3ffcf882 (14)
+
+D (5998) lwip: ethernet_output: sending packet 0x3ffcf870
+
+D (5998) lwip: pbuf_free(0x3ffcf870)
+
+D (5998) lwip: pbuf_free: deallocatiree(0x3ffd202c)
+
+D (6008) lwip: pbuf_free: deallocating 0x3ffd
+
+D (6018) lwip: etharp_timer
+
+D (6018) lwip: ethernet_input: dest:01:00:5e:00:00:fb, src:8e:4c:d2:35:6c:b2, type:800
+
+D (6028) lwip: pbuf_remove_header: old 0x3ffd1058 new 0x3ffd1066 (14)
+
+D (6028) lwip: ip4_input: UDP packet to DHCP client port 5353
+
+D (6038) lwip: ip4_input: packet not for us.
+
+D (6038) lwip: pbuf_free(0x3ffd2060)
+
+D (6048) lwip: pbuf_free: deallocating 0x3ffd2060
+
+D (6048) lwip: ethernet_input: dest:33:33:00:00:00:fb, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (6058) lwip: pbuf_free(0x3ffd2094)
+
+D (6058) lwip: pbuf_free: deallocating 0x3ffd2094
+
+tcp_connect: can only connect from state CLOSED
+[1;31mE (6068) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=127[0m
+D (6078) lwmb: r_connect(60), r->b_ip4_str=192.168.2.11, b=-1, errno=127
+[0;32mI (6458) mb: hw: 2272[0m
+
+[0;32mI (6458) mb: Largest free block: 110592[0m
+
+[0;32mI (6458) mb: Free heap: 191320[0m
+
+D (6458) lwip: pbuf_alloc(length=100)
+
+D (6458) lwip: pbuf_alloc(length=100) == 0x3ffd202c
+
+D (6458) lwip: pbuf_add_header: old 0x3ffd2074 new 0x3ffd2060 (20)
+
+D (6468) lwip: pbuf_add_header: old 0x3ffd2060 new 0x3ffd204c (20)
+
+D (6468) lwip: ip4_output_if: st1
+
+D (6478) lwip: IP header:
+
+D (6478) lwip: +-------------------------------+
+
+D (6478) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (6488) lwip: +-------------------------------+
+
+D (6488) lwip: |        8      |000|       0   | (id, flags, offset)
+
+D (6498) lwip: +-------------------------------+
+
+D (6508) lwip: |   64  |    6  |    0xf5b2     | (ttl, proto, chksum)
+
+D (6508) lwip: +-------------------------------+
+
+D (6518) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (6518) lwip: +-------------------------------+
+
+D (6528) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (6528) lwip: +-------------------------------+
+
+D (6538) lwip: ip4_output_if: call netif->output()
+
+D (6538) lwip: pbuf_add_header: old 0x3ffd204c new 0x3ffd203e (14)
+
+D (6548) lwip: ethernet_output: sending packet 0x3ffd202c
+
+D (6548) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (6658) lwip: pbuf_alloc(length=100)
+
+D (6658) lwip: pbuf_alloc(length=100) == 0x3ffcfbc0
+
+D (6658) lwip: pbuf_add_header: old 0x3ffcfc08 new 0x3ffcfbf4 (20)
+
+D (6658) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (6708) lwip: pbuf_alloced_custom(length=42)
+
+D (6708) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (6708) lwip: pbuf_remove_header: old 0x3ffd02d0 new 0x3ffd02de (14)
+
+D (6708) lwip: pbuf_alloced_custom(length=54)
+
+D (6718) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (6718) lwip: pbuf_alloced_custom(length=100)
+
+D (6728) lwip: etharp_find_entry: found empty entry 1
+
+D (6728) lwip: pbuf_alloced_custom(le (6738) lwip: etharp_find_entry:empty entry found and not allowed to recycle
+
+D (6748) lwip: etharp_input: incoming ARP request
+
+D (6748) lwip: etharp_input: ARP request was not for us.
+
+D (6758) lwip: pbuf_free(0x3ffcf870)
+
+D (6758) lwip: pbuf_free: deallocating 0x3ffcf870
+
+D (6768) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (6778) lwip: pbuf_remove_header: old 0x3ffcfe30 new 0x3ffcfe3e (14)
+
+D (6778) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (6788) lwip: ip4_input: packet accepted on interface st
+
+D (6798) lwip: ip4_input: 
+
+D (6798) lwip: IP header:
+
+D (6798) lwip: +-------------------------------+
+
+D (6808) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (6808) lwip: +-------------------------------+
+
+D (6808) lwip: pbuf_alloced_custom(length=65)
+
+D (6818) lwip: |    24858      |000|       0   | (id, flags, offset)
+
+D (6828) lwip: +-------------------------------+
+
+D (6828) lwip: |   99  |    6  |    0x71ac     | (ttl, proto, chksum)
+
+D (6838) lwip: +-------------------------------+
+
+D (6838) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (6848) lwip: +-------------------------------+
+
+D (6848) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (6858) lwip: +-------------------------------+
+
+D (6858) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (6868) lwip: pbuf_remove_header: old 0x3ffcfe3e new 0x3ffcfe52 (20)
+
+D (6868) lwip: pbuf_remove_header: old 0x3ffcfe52 new 0x3ffcfe66 (20)
+
+D (6878) lwip: pbuf_free(0x3ffd202c)
+
+D (6878) lwip: pbuf_free: deallocating 0x3ffd202c
+
+D (6888) lwip: pbuf_add_header: old 0x3ffcfbf4 new 0x3ffcfbe0 (20)
+
+D (6888) lwip: ip4_output_if: st1
+
+D (6898) lwip: IP header:
+
+D (6898) lwip: +-------------------------------+
+
+D (6898) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (6908) lwip: +-------------------------------+
+
+D (6908) lwip: |        9      |000|       0   | (id, flags, offset)
+
+D (6918) lwip: +-------------------------------+
+
+D (6918) lwip: |   64  |    6  |    0xf5b1     | (ttl, proto, chksum)
+
+D (6928) lwip: +-------------------------------+
+
+D (6938) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (6938) lwip: +-------------------------------+
+
+D (6938) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (6948) lwip: +-------------------------------+
+
+D (6948) lwip: ip4_output_if: call netif->output()
+
+D (6958) lwip: pbuf_add_header: old 0x3ffcfbe0 new 0x3ffcfbd2 (14)
+
+D (6968) lwip: ethernet_output: sending packet 0x3ffcfbc0
+
+D (6968) lwip: pbuf_free(0x3ffcfc74)
+
+D (6968) lwip: pbuf_free: deallocating 0x3ffcfc74
+
+D (6978) lwip: ethernet_input: dest:01:00:5e:00:00:fb, src:8e:4c:d2:35:6c:b2, type:800
+
+D (6988) lwip: pbuf_remove_header: old 0x3ffd0994 new 0x3ffd09a2 (14)
+
+D (6988) lwip: ip4_input: UDP packet to DHCP client port 5353
+
+D (6998) lwip: ip4_input: packet not for us.
+
+D (6998) lwip: pbuf_free(0x3ffcfd80)
+
+D (7008) lwip: pbuf_free: deallocating 0x3ffcfd80
+
+D (7008) lwip: etharp_timer
+
+D (7008) lwip: ethernet_input: dest:33:33:00:00:00:fb, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (7018) lwip: pbuf_free(0x3ffcff90)
+
+D (7018) lwip: pbuf_free: deallocating 0x3ffcff90
+
+D (7028) lwip: pbuf_alloc(length=100)
+
+D (7028) lwip: pbuf_alloc(length=100) == 0x3ffd202c
+
+D (7038) lwip: pbuf_add_header: old 0x3ffd2074 new 0x3ffd2060 (20)
+
+D (7038) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (7038) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (7048) lwip: pbuf_remove_header: old 0x3ffcfd20 new 0x3ffcfd2e (14)
+
+D (7058) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (7068) lwip: ip4_input: packet accepted on interface st
+
+D (7078) lwip: ip4_input: 
+
+D (7078) lwip: IP header:
+
+D (7078) lwip: +-------------------------------+
+
+D (7088) lwip: | 4 | 5 |  0x00 |        51     | (v, hl, tos, len)
+
+D (7088) lwip: +-------------------------------+
+
+D (7098) lwip: |    24859      |000|       0   | (id, flags, offset)
+
+D (7108) lwip: +-------------------------------+
+
+D (7108) lwip: |   99  |    6  |    0x71a0     | (ttl, proto, chksum)
+
+D (7118) lwip: +-------------------------------+
+
+D (7118) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (7128) lwip: +-------------------------------+
+
+D (7128) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (7138) lwip: +-------------------------------+
+
+D (7138) lwip: ip4_input: p->len 51 p->tot_len 51
+
+D (7138) lwip: pbuf_remove_header: old 0x3ffcfd2e new 0x3ffcfd42 (20)
+
+D (7148) lwip: pbuf_remove_header: old 0x3ffcfd42 new 0x3ffcfd56 (20)
+
+D (7158) lwip: pbuf_free(0x3ffcf870)
+
+D (7158) lwip: pbuf_free: deallocating 0x3ffcf870
+
+D (7168) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (7168) lwmb: r_recv(60), r->b_ip4_str=192.168.2.11, r->ib=11, errno=127
+D (7178) lwmb: r_proc: malloc(0x3ffd2110), ntohs(ia->l)=5
+[0;32mI (7178) mb: time_elapsed=5750 [ms][0m
+D (7188) lwip: pbuf_alloc(length=1440)
+
+D (7188) lwip: pbuf_alloc(length=1440) == 0x3ffd0244
+
+D (7198) lwip: pbuf_add_header: old 0x3ffd028c new 0x3ffd0278 (20)
+
+D (7198) lwip: pbuf_add_header: old 0x3ffd0278 new 0x3ffd0264 (20)
+
+D (7208) lwip: ip4_output_if: lo0
+
+D (7208) lwip: IP header:
+
+D (7208) lwip: +-------------------------------+
+
+D (7218) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tosn)
+
+D (7218) lwip: pbuf_alloced_custom(length=54)
+
+D (7218) lwip: +-------------------------------+
+
+D (7228) lwip: pbuf_alloced_custom(length=63)
+
+D (7228) lwip: |       10      |000|       0   | (id, flags, offset)
+
+D (7238) lwip: +-------------------------------+
+
+D (7248) lwip: |   64  |    6  |    0x7cb8     | (ttl, proto, chksum)
+
+D (7248) lwip: +-------------------------------+
+
+D (7258) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (7258) lwip: +-------------------------------+
+
+[0;32mI (7268) mb: hw: 2160[0m
+
+D (7268) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+[0;32mI (7268) mb: Largest free block: 110592[0m
+
+D (7278) lwip: +-------------------------------+
+
+[0;32mI (7278) mb: Free heap: 188780[0m
+
+D (7278) lwip: netif_loop_output()
+
+D (7288) lwip: pbuf_alloc(length=52)
+
+D (7288) lwip: pbuf_alloc(length=52) == 0x3ffcfe24
+
+D (7298) lwip: pbuf_copy(0x3ffcfe24, 0x3ffd0244)
+
+D (7298) lwip: pbuf_alloced_custom(length=90)
+
+D (7298) lwip: pbuf_copy_partial_pbuf(0x3ffcfe24, 0x3ffd0244, 52, 0)
+
+D (7308) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (7318) lwmb: r_send(59), r->b_ip4_str=127.0.0.1, r->ob=12, b=12, errno=127
+D (7318) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (7328) lwip: pbuf_remove_header: old 0x3ffcfd00 new 0x3ffcfd0e (14)
+
+adu: 0x00 |D (7338) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+0x00 |D (7348) lwip: ip4_input: packet accepted on interface st
+
+0x00 |0x00 |D (7358) lwip: ip4_input: 
+
+D (7358) lwip: IP header:
+
+D (7358) lwip: +-------------------------------+
+
+0x00 |D (7368) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (7368) lwip: lwip: |    24860      |000|       0   | (id, flags, offset)
+
+0xff |D (7378) lwip: +-------------------------------+
+
+0x03 |D (7388) lwip: |   99  |    6  |    0x71aa     | (ttl, proto, chksum)
+
+0x02 |D (7398) lwip: +-------------------------------+
+
+D (7398) lwip: |  192  |  168  |    1  |  174  | (src)
+
+0x08 |D (7408) lwip: +-------------------------------+
+
+D (7408) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+0x0b |D (7418) lwip: +-------------------------------+
+
+D (7418) lwip: ip4_input: p->len 40 p->tot_len 40
+
+
+D (7428) lwip: pbuf_remove_header: old 0x3ffcfd0e new 0x3ffcfd22 (20)
+
+D (7428) lwip: pbuf_remove_header: old 0x3ffcfd22 new 0x3ffcfd36 (20)
+
+D (7438) lwip: pbuf_free(0x3ffcfbc0)
+
+D (7438) lwip: pbuf_free: deallocating 0x3ffcfbc0
+
+D (7448) lwip: pbuf_add_header: old 0x3ffd2060 new 0x3ffd204c (20)
+
+D (7448) lwip: ip4_output_if: st1
+
+D (7458) lwip: IP header:
+
+D (7458) lwip: +------------------------------+
+
+D (7458) lwip: | 4 | 5 |  0x00 |        64     | (v, hl, tos, len)
+
+D (7468) lwip: +-------------------------------+
+
+D (7468) lwip: |       11      |000|       0   | (id, flags, offset)
+
+D (7478) lwip: +-------------------------------+
+
+D (7478) lwip: |   64  |    6  |    0xf5a3     | (ttl, proto, chksum)
+
+D (7488) lwip: +-------------------------------+
+
+D (7488) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (7498) lwip: +-------------------------------+
+
+D (7498) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (7508) lwip: +-------------------------------+
+
+D (7508) lwip: ip4_output_if: call netif->output()
+
+D (7518) lwip: pbuf_add_header: old 0x3ffd204c new 0x3ffd203e (14)
+
+D (7518) lwip: ethernet_output: sending 528) lwip: pbuf_free(0x3ffcf888)
+
+D (7528) lwip: pbuf_free: deallocating 0x3ffcf888
+
+D (7538) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (7548) lwip: pbuf_remove_header: old 0x3ffcfdd4 new 0x3ffcfde2 (14)
+
+D (7548) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (7558) lwip: ip4_input: packet accepted on interface st
+
+D (7568) lwip: ip4_input: 
+
+D (7568) lwip: IP header:
+
+D (7568) lwip: +-------------------------------+
+
+D (7578) lwip: | 4 | 5 |  0x00 |        49     | (v, hl, tos, len)
+
+D (7578) lwip: +-------------------------------+
+
+D (7588) lwip: |    24861      |000|       0   | (id, flags, offset)
+
+D (7588) lwip: +-------------------------------+
+
+D (7598) lwip: |   99  |    6  |    0x71a0     | (ttl, proto, chksum)
+
+D (7598) lwip: +-------------------------------+
+
+D (7608) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (7608) lwip: +-------------------------------+
+
+D (7618) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (7618) lwip: +---------------------------+
+
+D (7628) lwip: ip4_input: p->len 49 p->tot_len 49
+
+D (7628) lwip: pbuf_remove_header: old 0x3ffcfde2 new 0x3ffcfdf6 (20)
+
+D (7638) lwip: pbuf_remove_header: old 0x3ffcfdf6 new 0x3ffcfe0a (20)
+
+D (7648) lwip: pbuf_alloc(length=20)
+
+D (7648) lwip: pbuf_free(0x3ffd00f0)
+
+D (7648) lwip: pbuf_alloc(length=20) == 0x3ffcfbc0
+
+D (7648) lwip: pbuf_free: deallocating 0x3ffd00f0
+
+D (7658) lwip: pbuf_alloced_custom(length=42)
+
+D (7658) lwip: pbuf_add_header: old 0x3ffcfbf4 new 0x3ffcfbe0 (20)
+
+D (7668) lwip: ip4_output_if: st1
+
+D (7668) lwip: IP header:
+
+D (7678) lwip: +-------------------------------+
+
+D (7678) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (7688) lwip: +-------------------------------+
+
+D (7688) lwip: |       12      |000|       0   | (id, flags, offset)
+
+D (7698) lwip: +-------------------------------+
+
+D (7698) lwip: |   64  |    6  |    0xf5ba     | (ttl, proto, chksum)
+
+D (7708) lwip: +-------------------------------+
+
+D (7708) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (7718) lwip: +-------------------------------+
+
+D (7718) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (7728) lwip: +-------------------------------+
+
+D (7728) lwip: pbuf_alloced_custom(length=54)
+
+D (7728) lwip: ip4_output_if: call netif->output()
+
+D (7738) lwip: pbuf_add_header: old 0x3ffcfbe0 new 0x3ffcfbd2 (14)
+
+D (7748) lwip: ethernet_output: sending packet 0x3ffcfbc0
+
+D (7748) lwip: pbuf_alloced_custom(length=72)
+
+D (7748) lwip: pbuf_free(0x3ffcfbc0)
+
+D (7768) lwip: pbuf_alloc(length=100) == 0x3ffcff50
+
+D (7768) lwip: pbuf_add_header: old 0x3ffcff98 new 0x3ffcff84 (20)
+
+D (7778) lwip: ethernet_input: dest:33:33:00:00:00:16, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (7778) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (7788) lwip: pbuf_free(0x3ffd0110)
+
+D (7798) lwip: pbuf_free: deallocating 0x3ffd0110
+
+D (7798) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (7808) lwip: ip4_input: packet accepted on interface lo
+
+D (7818) lwip: ip4_input: 
+
+D (7818) lwip: IP header:
+
+D (7818) lwip: +-------------------------------+
+
+D (7828) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (7828) lwip: +-------------------------------+
+
+D (7838) lwip: |       10      |000|       0   | (id, flags, offset)
+
+D (7838) lwip: +-------------------------------+
+
+D (7848) lwip: |   64  |    6  |    0x7cb8     | (ttl, proto, chksum)
+
+D (7848) lwip: +-------------------------------+
+
+D (7858) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (7858) lwip: +-------------------------------+
+
+D (7868) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (7868) lwip: +-------------------------------+
+
+D (7878) lwip: ip4_input: p->len 52 p->tot_len 52
+
+D (7878) lwip: pbuf_remove_header: old 0x3ffcfe44 new 0x3ffcfe58 (20)
+
+D (7888) lwip: pbuf_remove_header: old 0x3ffcfe58 new 0x3ffcfe6c (20)
+
+D (7898) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (7898) lwip: pbuf_alloced_custom(length=70)
+
+D (7898) lwip: pbuf_remove_header: old 0x3ffd0f98 new 0x3ffd0fa6 (14)
+
+D (7898) lwmb: r_recv(60), r->b_ip4_str=192.168.2.11, r->ib=9, errno=127
+D (7908) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (7918) lwmb: r_proc: malloc(0x3ffce1d0)
+D (7928) lwip: etharp_find_entry: found empty entry 1
+
+D (7938) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+adu: D (7938) lwip: etharp_input: incoming ARP request
+
+0x00 |D (7948) lwip: etharp_input: ARP request was not for us.
+
+D (7948) lwip: pbuf_free(0x3ffd20f8)
+
+0x01 |D (7958) lwip: pbuf_free: deallocating 0x3ffd20f8
+
+D (7958) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+0x00 |0x00 |D (7968) lwip: pbuf_remove_header: old 0x3ffcff08 new 0x3ffcff16 (14)
+
+0x00 |0x03 |D (7978) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+0xff |D (7988) lwip: ip4_input: packet accepted on interface st
+
+D (7988) lwip: ip4_input: 
+
+0x83 |D (7998) lwip: IP header:
+
+D (7998) lwip: +-------------------------------+
+
+D (7998) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+0x02 |D (8008) lwip: +-------------------------------+
+
+D (8008) lwip: |    24862      |000|       0   | (id, flags, offset)
+
+
+D (8018) lwip: +-------------------------------+
+
+D (8028) lwip: |   99  |    6  |    0x71a8     | (ttl, proto, chksum)
+
+D (8028) lwip: pbuf_free(0x3ffcfe24)
+
+D (8028) lwip: +-------------------------------+
+
+D (8038) lwip: pbuf_free: deallocating 0x3ffcfe24
+
+D (8038) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (8048) lwip: +-------------------------------+
+
+D (8048) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (8058) lwip: +-------------------------------+
+
+D (8058) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (8068) lwip: pbuf_remove_header: old 0x3ffcff16 new 0x3ffcff2a (20)
+
+D (8068) lwip: pbuf_remove_header: old 0x3ffcff2a new 0x3ffcff3e (20)
+
+D (8078) lwip: pbuf_free(0x3ffd202c)
+
+D (8078) lwip: pbuf_free: deallocating 0x3ffd202c
+
+D (8088) lwip: pbuf_add_header: old 0x3ffcff84 new 0x3ffcff70 (20)
+
+D (8088) lwip: ip4_output_if: st1
+
+D (8098) lwip: IP header:
+
+D (8098) lwip: +-------------------------------+
+
+D (8108) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (8108) lwip: +-------------------------------+
+
+D (8118) lwip: |       13      |000|       0   | (id, flags, offset)
+
+D (8118) lwip: +-------------------------------+
+
+D (8128) lwip: |   64  |    6  |    0xf5ad     | (ttl, proto, chksum)
+
+D (8128) lwip: +-------------------------------+
+
+D (8138) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (8138) lwip: +-------------------------------+
+
+D (8148) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (8148) lwip: +-------------------------------+
+
+D (8158) lwip: ip4_output_if: call netif->output()
+
+D (8158) lwip: pbuf_add_header: old 0x3ffcff70 new 0x3ffcff62 (14)
+
+D (8168) lwip: ethernet_output: sending packet 0x3ffcff50
+
+D (8168) lwip: pbuf_free(0x3ffd00f0)
+
+D (8178) lwip: pbuf_free: deallocating 0x3ffd00f0
+
+D (8178) lwip: etharp_timer
+
+D (8178) lwip: pbuf_alloc(length=20)
+
+D (8188) lwip: pbuf_alloc(length=20) == 0x3ffd00f0
+
+D (8188) lwip: pbuf_add_header: old 0x3ffd0124 new 0x3ffd0110 (20)
+
+D (8198) lwip: ip4_output_if: lo0
+
+D (8198) lwip: IP header:
+
+D (8198) lwip: +-------------------------------+
+
+D (8208) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (8208) lwip: +-------------------------------+
+
+D (8218) lwip: |       14      |000|       0   | (id, flags, offset)
+
+D (8218) lwip: +-------------------------------+
+
+D (8228) lwip: |   64  |    6  |    0x7cc0     | (ttl, proto, chksum)
+
+D (8238) lwip: +-------------------------------+
+
+D (8238) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (8238) lwip: +-------------------------------+
+
+D (8248) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (8248) lwip: +-------------------------------+
+
+D (8258) lwip: netif_loop_output()
+
+D (8258) lwip: pbuf_alloc(length=40)
+
+D (8268) lwip: pbuf_alloc(length=40) == 0x3ffd202c
+
+D (8268) lwip: pbuf_copy(0x3ffd202c, 0x3ffd00f0)
+
+D (8278) lwip: pbuf_copy_partial_pbuf(0x3ffd202c, 0x3ffd00f0, 40, 0)
+
+D (8278) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (8288) lwip: pbuf_free(0x3ffd00f0)
+
+D (8288) lwip: pbuf_free: deallocating 0x3ffd00f0
+
+D (8288) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (8298) lwip: pbuf_remove_header: old 0x3ffcfc98 new 0x3ffcfca6 (14)
+
+D (8308) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (8318) lwip: ip4_input: packet accepted on interface st
+
+D (8318) lwip: ip4_input: 
+
+D (8328) lwip: IP header:
+
+D (8328) lwip: +-------------------------------+
+
+D (8328) lwip: | 4 | 5 |  0x00 |        58     | (v, hl, tos, len)
+
+D (8338) lwip: +-------------------------------+
+
+D (8338) lwip: |    24863      |000|       0   | (id, flags, offset)
+
+D (8348) lwip: +-------------------------------+
+
+D (8348) lwip: |   99  |    6  |    0x7195     | (ttl, proto, chksum)
+
+D (8358) lwip: +-------------------------------+
+
+D (8358) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (8368) lwip: +-------------------------------+
+
+D (8368) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (8378) lwip: +-------------------------------+
+
+D (8378) lwip: ip4_input: p->len 58 p->tot_len 58
+
+D (8388) lwip: pbuf_remove_header: old 0x3ffcfca6 new 0x3ffcfcba (20)
+
+D (8388) lwip: pbuf_remove_header: old 0x3ffcfcba new 0x3ffcfcce (20)
+
+D (8398) lwip: pbuf_alloc(length=100)
+
+D (8398) lwip: pbuf_alloc(length=100) == 0x3ffcfcf0
+
+D (8408) lwip: pbuf_add_header: old 0x3ffcfd38 new 0x3ffcfd24 (20)
+
+D (8418) lwip: ethernet_input: dest:33:33:00:00:00:02, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (8418) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (8418) lwip: pbuf_free(0x3ffcfbd4)
+
+D (8428) lwip: pbuf_free: deallocating 0x3ffcfbd4
+
+D (8438) lwmb: r_recv(61), r->b_ip4_str=127.0.0.1, r->ib=12, errno=127
+D (8438) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (8448) lwip: pbuf_alloced_custom(length=54)
+
+D (8448) lwip: ip4_input: packet accepted on interface lo
+
+D (8458) lwip: ip4_input: 
+
+D (8468) lwipr:
+
+D (8468) lwip: +-------------------------------+
+
+D (8468) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (8478) lwip: +----------------: pbuf_alloced_custom(length=65)
+
+D (8478) lwip: |       14      |000|       0   | (id, flags, offset)
+
+D (8488) lwip: +-------------------------------+
+
+D (8498) lwip: |   64  |    6  |    0x7cc0     | (ttl, proto, chksum)
+
+D (8498) lwip: +-------------------------------+
+
+D (8508) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (8508) lwip: +-------------------------------+
+
+D (8518) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (8518) lwip: +-------------------------------+
+
+D (8528) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (8528) lwip: pbuf_remove_header: old 0x3ffd204c new 0x3ffd2060 (20)
+
+D (8538) lwip: pbuf_remove_header: old 0x3ffd2060 new 0x3ffd2074 (20)
+
+D (8548) lwip: pbuf_free(0x3ffd0244)
+
+D (8548) lwip: pbuf_free: deallocating 0x3ffd0244
+
+D (8548) lwip: pbuf_free(0x3ffd202c)
+
+D (8558) lwip: pbuf_free: deallocating 0x3ffd202c
+
+D (8558) lwip: pbuf_alloc(length=1440)
+
+D (8568) lwip: pbuf_alloc(length=1440) == 0x3ffd0244
+
+D (8568) lwip: pbuf_add_header: old 0x3ffd028c new 0x3ffd0278 (20)
+
+D (8578) lwip: pbuf_add_header: old 0x3ffd0278 new 0x3ffd0264 (20)
+
+D (8578) lwip: ip4_output_if: lo0
+
+D (8588) lwip: IP header:
+
+D (8588) lwip: +-------------------------------+
+
+D (8588) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (8598) lwip: +-------------------------------+
+
+D (8598) lwip: |       15      |000|       0   | (id, flags, offset)
+
+D (8608) lwip: +-------------------------------+
+
+D (8608) lwip: |   64  |    6  |    0x7cb3     | (ttl, proto, chksum)
+
+D (8618) lwip: +-------------------------------+
+
+D (8618) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (8628) lwip: +-------------------------------+
+
+D (8628) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (8638) lwip: +-------------------------------+
+
+D (8638) lwip: netif_loop_output()
+
+D (8648) lwip: pbuf_alloc(length=52)
+
+D (8648) lwip: pbuf_alloc(length=52) == 0x3ffcfe78
+
+D (8658) lwip: pbuf_copy(0x3ffcfe78, 0x3ffd0244)
+
+D (8658) lwip: pbuf_copy_partial_pbuf(0x3ffcfe78, 0x3ffd0244, 52, 0)
+
+D (8658) lwip: pbuf_alloced_custom(length=42)
+
+D (8668) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (8678) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (8678) lwmb: r_send(61), r->b_ip4_str=127.0.0.1, r->ob=12, b=12, errno=127
+D (8678) lwip: pbuf_remove_header: old 0x3ffcfe30 new 0x3ffcfe3e (14)
+
+D (8698) lwip: pbuf_free(0x3ffcf888)
+
+D (8698) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (8708) lwip: pbuf_free: deallocating 0x3ffcf888
+
+D (8708) lwip: ip4_input: packet accepted on interface st
+
+D (8718) lwip: ip4_input: 
+
+D (8718) lwip: IP header:
+
+D (8718) lwip: +--------
+
+D (8728) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos,en)
+
+D (8728) lwip: +-------------------------------+
+
+D (8738) lwip: |    24865      |000|       0   | (id, flags, offset)
+
+D (8748) lwip: +-------------------------------+
+
+D (8748) lwip: |   99  |    6  |    0x71a | (ttl, proto, chksum)
+
+D (8758) lwip: +-------------------------------+
+
+D (8758) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (8768) lwip: +-------------------------------+
+
+D (8768) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (8778) lwip: +-------------------------------+
+
+D (8778) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (8778) lwip: pbuf_remove_header: old 0x3ffcfe3e new 0x3ffcfe52 (20)
+
+D (8788) lwip: pbuf_remove_header: old 0x3ffcfe52 new 0x3ffcfe66 (20)
+
+D (8798) lwip: pbuf_free(0x3ffcff50)
+
+D (8798) lwip: pbuf_free: deallocating 0x3ffcff50
+
+D (8808) lwip: pbuf_add_header: old 0x3ffcfd24 new 0x3ffcfd10 (20)
+
+D (8808) lwip: ip4_output_if: st1
+
+D (8808) lwip: IP header:
+
+D (8818) lwip: +-------------------------------+
+
+D (8818) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (8828) lwip: +-------------------------------+
+
+D (8828) lwip: |       16      |000|       0   | (id, flags, offset)
+
+D (8838) lwip: +-------------------------------+
+
+D (8838) lwip: |   64  |    6  |    0xf5aa     | (ttl, proto, chksum)
+
+D (8848) lwip: +-------------------------------+
+
+D (8848) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (8858) lwip: +-------------------------------+
+
+D (8858) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (8868) lwip: +-------------------------------+
+
+D (8868) lwip: ip4_output_if: call netif->output()
+
+D (8878) lwip: pbuf_add_header: old 0x3ffcfd10 new 0x3ffcfd02 (14)
+
+D (8878) lwip: ethernet_output: sending packet 0x3ffcfcf0
+
+D (8888) lwip: pbuf_free(0x3ffcfbd4)
+
+D (8888) lwip: pbuf_free: deallocating 0x3ffcfbd4
+
+D (8898) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (8898) lwip: pbuf_remove_header: old 0x3ffd08d4 new 0x3ffd08e2 (14)
+
+D (8908) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (8918) lwip: ip4_input: packet accepted on interface st
+
+D (8928) lwip: ip4_input: 
+
+D (8928) lwip: IP header:
+
+D (8928) lwip: +-------------------------------+
+
+D (8938) lwip: | 4 | 5 |  0x00 |        51     | (v, hl, tos, len)
+
+D (8938) lwip: +-------------------------------+
+
+D (8948) lwip: |    24866      |000|       0   | (id, flags, offset)
+
+D (8948) lwip: +-------------------------------+
+
+D (8958) lwip: |   99  |    6  |    0x7199     | (ttl, proto, chksum)
+
+D (8958) lwip: +-------------------------------+
+
+D (8968) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (8968) lwip: +-------------------------------+
+
+D (8978) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (8978) lwip: +-------------------------------+
+
+D (8988) lwip: ip4_input: p->len 51 p->tot_len 51
+
+D (8988) lwip: pbuf_remove_header: old 0x3ffd08e2 new 0x3ffd08f6 (20)
+
+D (8998) lwip: pbuf_remove_header: old 0x3ffd08f6 new 0x3ffd090a (20)
+
+D (8998) lwip: pbuf_alloc(length=100)
+
+D (9008) lwip: pbuf_alloc(length=100) == 0x3ffd202c
+
+D (9008) lwip: pbuf_add_header: old 0x3ffd2074 new 0x3ffd2060 (20)
+
+D (9018) lwip: etharp_timer
+
+D (9018) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->oet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (9038) lwip: pbuf_remove_header: old 0x3ffd09b0 new 0x3ffd09be (14)
+
+D (9038) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (9048) lwip: etharp_find_entry: found empty entry 1
+
+D (9048) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (9058) lwip: etharp_input: incoming ARP request
+
+D (9068) lwip: etharp_input: ARP request was not for us.
+
+D (9068) lwip: pbuf_alloced_custom(length=54)
+
+D (9068) lwip: pbuf_free(0x3ffd20e0)
+
+D (9078) lwip: pbuf_free: deallocating 0x3ffd20e0
+
+D (9078) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (9088) lwip: ip4_input: packet accepted on interface 098) lwip: ip4_input: 
+
+D (9098) lwip: IP header:
+
+D (9098) lwip: +-------------------------------+
+
+D (9108) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (9108) lwip: pbuf_alloced_custom(length=63)
+
+D (9108) lwip: +-------------------------------+
+
+D (9118) lwip: |       15      |000|       0   | (id, flags, offset)
+
+D (9128) lwip: +-------------------------------+
+
+D (9128) lwip: |   64  |    6  |    0x7cb3     | (ttl, proto, chksum)
+
+D (9138) lwip: +-------------------------------+
+
+D (9138) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (9148) lwip: +-------------------------------+
+
+D (9148) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (9158) lwip: +-------------------------------+
+
+D (9158) lwip: ip4_ilen 52
+
+D (9168) lwip: pbuf_remove_header: old 0x3ffcfe98 new 0x3ffcfeac (20)
+
+D (9168) lwip: pbuf_remove_header: old 0x3ffcfeac new 0x3ffcfec0 (20)
+
+D (9178) lwip: pbuf_alloc(length=20)
+
+D (9178) lwip: pbuf_alloc(length=20) == 0x3ffcfed0
+
+D (9188) lwip: pbuf_add_header: old 0x3ffcff04 new 0x3ffcfef0 (20)
+
+D (9188) lwip: ip4_output_if: lo0
+
+D (9198) lwip: IP header:
+
+D (9198) lwip: +-------------------------------+
+
+D (9198) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (9208) lwip: +-------------------------------+
+
+D (9208) lwip: |       17      |000|       0   | (id, flags, offset)
+
+D (9218) lwip: +-------------------------------+
+
+D (9228) lwip: |   64  |    6  |    0x7cbd     | (ttl, proto, chksum)
+
+D (9228) lw-+
+
+D (9238) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (9238) lwip: +-------------------------------+
+
+D (9248) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (9248) lwip: +-------------------------------+
+
+D (9258) lwip: netif_loop_output()
+
+D (9258) lwip: pbuf_alloc(length=40)
+
+D (9258) lwip: pbuf_alloc(length=40) == 0x3ffcff1c
+
+D (9268) lwip: pbuf_copy(0x3ffcff1c, 0x3ffcfed0)
+
+D (9268) lwip: pbuf_copy_partial_pbuf(0x3ffcff1c, 0x3ffcfed0, 40, 0)
+
+D (9278) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (9278) lwip: pbuf_free(0x3ffcfed0)
+
+D (9288) lwip: pbuf_free: deallocating 0x3ffcfed0
+
+D (9288) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (9288) lwmb: r_recv(60), r->b_ip4_str=192.168.2.11, r->ib=18, errno=127
+D (9298) lwip: pbuf_remove_header: old 0x3ffcfe30 new 0x3ffcfe3e (14)
+
+D (9308) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (9308) lwmb: r_proc: malloc(0x3ffce1d0)
+D (9318) lwip: ip4_input: packet accepted on interface st
+
+adu: D (9328) lwip: ip4_input: 
+
+D (9328) lwip: IP header:
+
+0x00 |D (9328) lwip: +-------------------------------+
+
+0x03 |D (9338) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+0x00 |D (9348) lwip: +-------------------------------+
+
+0x00 |D (9348) lwip: |    24867      |000|       0   | (id, flags, offset)
+
+0x00 |D (9358) lwip: +-------------------------------+
+
+D (9358) lwip: |   99  |    6  |    0x71a3     | (ttl, proto, chksum)
+
+0x03 |D (9368) lwip: +-------------------------------+
+
+0xff |D (9368) lwip: |  192  |  168  |    1  |  174  | (src)
+
+0x83 |D (9378) lwip: +-------------------------------+
+
+0x02 |D (9388) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (9388) lwip: +-------------------------------+
+
+
+D (9398) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (9398) lwip: pbuf_remove_header: old 0x3ffcfe3e new 0x3ffcfe52 (20)
+
+D (9408) lwmb: r_proc: malloc(0x3ffce1d0)
+D (9408) lwip: pbuf_remove_header: old 0x3ffcfe52 new 0x3ffcfe66 (20)
+
+adu: 0x00 |0x02 |0x00 |D (9418) lwip: pbuf_free(0x3ffcfcf0)
+
+D (9418) lwip: pbuf_free: deallocating 0x3ffcfcf0
+
+0x00 |0x00 |0x03 |0xff |0x83 |0x02 |
+D (9428) lwip: pbuf_add_header: old 0x3ffd2060 new 0x3ffd204c (20)
+
+D (9438) lwip: ip4_output_if: st1
+
+D (9438) lwip: pbuf_free(0x3ffcfe78)
+
+D (9438) lwip: IP header:
+
+D (9448) lwip: +-------------------------------+
+
+D (9438) lwip: pbuf_free: deallocating 0x3ffcfe78
+
+D (9448) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (9458) lwip: +-------------------------------+
+
+D (9458) lwip: |       18      |000|       0   | (id, flags, offset)
+
+D (9468) lwip: +-------------------------------+
+
+D (9478) lwip: |   64  |    6  |    0xf5a8     | (ttl, proto, chksum)
+
+D (9478) lwip: +-------------------------------+
+
+D (9488) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (9488) lwip: +-------------------------------+
+
+D (9498) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (9498) lwip: +-------------------------------+
+
+D (9508) lwip: ip4_output_if: call netif->output()
+
+D (9508) lwip: pbuf_add_header: old 0x3ffd204c new 0x3ffd203e (14)
+
+D (9518) lwip: ethernet_output: sending packet 0x3ffd202c
+
+D (9518) lwip: pbuf_free(0x3ffd1d6c)
+
+D (9528) lwip: pbuf_free: deallocating 0x3ffd1d6c
+
+D (9528) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (9538) lwip: pbuf_remove_header: old 0x3ffcfc80 new 0x3ffcfc8e (14)
+
+D (9538) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (9548) lwip: ip4_input: packet accepted on interface st
+
+D (9558) lwip: ip4_input: 
+
+D (9558) lwip: IP header:
+
+D (9558) lwip: +-------------------------------+
+
+D (9568) lwip: | 4 | 5 |  0x00 |        49     | (v, hl, tos, len)
+
+D (9568) lwip: +-------------------------------+
+
+D (9578) lwip: |    24868      |000|       0   | (id, flags, offset)
+
+D (9578) lwip: +-------------------------------+
+
+D (9588) lwip: |   99  |    6  |    0x7199     | (ttl, proto, chksum)
+
+D (9598) lwip: +-------------------------------+
+
+D (9598) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (9608) lwip: +-------------------------------+
+
+D (9608) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (9608) lwip: +-------------------------------+
+
+D (9618) lwip: ip4_input: p->len 49 p->tot_len 49
+
+D (9618) lwip: pbuf_remove_header: old 0x3ffcfc8e new 0x3ffcfca2 (20)
+
+D (9628) lwip: pbuf_remove_header: old 0x3ffcfca2 new 0x3ffcfcb6 (20)
+
+D (9638) lwip: pbuf_alloc(length=20)
+
+D (9638) lwip: pbuf_alloc(length=20) == 0x3ffd0110
+
+D (9638) lwip: pbuf_add_header: old 0x3ffd0144 new 0x3ffd0130 (20)
+
+D (9648) lwip: ip4_output_if: st1
+
+D (9648) lwip: IP header:
+
+D (9658) lwip: +-------------------------------+
+
+D (9658) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (9668) lwip: +-------------------------------+
+
+D (9668) lwip: |       19      |000|       0   | (id, flags, offset)
+
+D (9678) lwip: pbuf_alloced_custom(length=42)
+
+D (9678) lwip: +-------------------------------+
+
+D (9678) lwip: pbuf_alloced_custom(length=54)
+
+D (9688) lwip: |   64  |    6  |    0xf5b3     | (ttl, proto, chksum)
+
+D (9698) lwip: +-------------------------------+
+
+D (9698) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (9708) lwip: +-------------------------------+
+
+D (9708) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (9718) lwip: +------------------+
+
+D (9718) lwip: ip4_output_if: call netif->output()
+
+D (9728) lwip: pbuf_add_header: old 0x3ffd0130 new 0x3ffd0122 (14)
+
+D (9728) lwip: pbuf_alloced_custom(length=100)
+
+D (9728) lwip: ethernet_output: sending packet 0x3ffd0110
+
+D (9738) lwip: pbuf_alloced_custom(length=120)
+
+D (9738) lwip: pbuf_free(0x3ffd0110)
+
+D (9748) lwip: pbuf_alloced_custom(length=63)
+
+D (9748) lwip: pbuf_free: deallocating 0x3ffd0110
+
+D (9758) lwip: pbuf_alloc(length=100)
+
+D (9758) lwip: pbuf_alloc(length=100) == 0x3ffcfdc4
+
+D (9768) lwip: pbuf_add_header: old 0x3ffcfe0c new 0x3ffcfdf8 (20)
+
+D (9768) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (9768) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (9778) lwip: ip4_input: packet accepted on interface lo
+
+D (9788) lwip: ip4_input: 
+
+D (9798) lwip: IP header:
+
+D (9798) lwip: +-------------------------------+
+
+D (9798) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (9808) lwip: +-------------------------------+
+
+D (9808) lwip: |       17      |000|       0   | (id, flags, offset)
+
+D (9818) lwip: +-------------------------------+
+
+D (9818) lwip: |   64  |    6  |    0x7cbd     | (ttl, proto, chksum)
+
+D (9828) lwip: +-------------------------------+
+
+D (9838) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (9838) lwip: +-------------------------------+
+
+D (9838) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (9848) lwip: +-------------------------------+
+
+D (9848) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (9858) lwip: pbuf_remove_header: old 0x3ffcff3c new 0x3ffcff50 (20)
+
+D (9868) lwip: pbuf_remove_header: old 0x3ffcff50 new 0x3ffcff64 (20)
+
+D (9868) lwip: pbuf_free(0x3ffd0244)
+
+D (9868) lwip: pbuf_free: deallocating 0x3ffd0244
+
+D (9878) lwip: pbuf_free(0x3ffcff1c)
+
+D (9878) lwip: pbuf_free: deallocating 0x3ffcff1c
+
+[0;32mI (9888) mb: hw: 2160[0m
+
+D (9888) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (9888) lwmb: r_recv(59), r->b_ip4_str=127.0.0.1, r->ib=12, errno=127
+D (9898) lwip: pbuf_remove_header: old 0x3ffd09b0 new 0x3ffd09be (14)
+
+[0;32mI (9888) mb: Largest free block: 110592[0m
+
+D (9908) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (9908) lwmb: r_proc: malloc(0x3ffcfee4), ntohs(ia->l)=6
+D (9918) lwip: etharp_find_entry: found empty entry 1
+
+D (9928) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+adu: D (9938) lwip: etharp_input: incoming ARP request
+
+D (9938) lwip: etharp_input: ARP request was not for us.
+
+0x00 |D (9948) lwip: pbuf_free(0x3ffd1d6c)
+
+0x10 |D (9948) lwip: pbuf_free: deallocating 0x3ffd1d6c
+
+[0;32mI (9908) mb: Free heap: 184472[0m
+
+D (9958) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+0x00 |D (9968) lwip: pbuf_remove_header: old 0x3ffcfd7c new 0x3ffcfd8a (14)
+
+0x00 |0x00 |D (9968) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+0x06 |D (9988) lwip: ip4_input: packet accepted on interface st
+
+0xff |0x06 |D (9988) lwip: ip4_input: 
+
+D (9988) lwip: IP header:
+
+0x00 |D (9998) lwip: +-------------------------------+
+
+D (9998) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+0x01 |D (10008) lwip: +-------------------------------+
+
+D (10008) lwip: |    24869      |000|       0   | (id, flags, offset)
+
+0x08) lwip: +-------------------------------+
+
+0x0b |D (10018) lw |    0x71a1     | (ttl, proto, chksum)
+
+
+D (10028) lwip: +-------------------------------+
+
+D (10038) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (10038) lwip: pbuf_free(0x3ffd00f0)
+
+D (10038) lwip: +-------------------------------+
+
+D (10048) lwip: pbuf_free: deallocating 0x3ffd00f0
+
+D (10048) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (10058) lwip: +-------------------------------+
+
+D (10058) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (10058) lwip: pbuf_free(0x3ffcfcd0)
+
+D (10068) lwip: pbuf_remove_header: old 0x3ffcfd8a new 0x3ffcfd9e (20)
+
+D (10078) lwip: pbuf_free: deallocating 0x3ffcfcd0
+
+D (10078) lwip: pbuf_remove_header: old 0x3ffcfd9e new 0x3ffcfdb2 (20)
+
+D (10088) lwip: pbuf_free(0x3ffd202c)
+
+D (10088) lwip: pbuf_free: deallocating 0x3ffd202c
+
+D (10098) lwip: pbuf_add_header: old 0x3ffcfdf8 new 0x3ffcfde4 (20)
+
+D (10098) lwip: ip4_output_if: st1
+
+D (10108) lwip: IP header:
+
+D (10108) lwip: +-------------------------------+
+
+D (10108) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (10118) lwip: +-------------------------------+
+
+D (10128) lwip: |       20      |000|       0   | (id, flags, offset)
+
+D (10128) lwip: +-------------------------------+
+
+D (10138) lwip: |   64  |    6  |    0xf5a6     | (ttl, proto, chksum)
+
+D (10138) lwip: +-------------------------------+
+
+D (10148) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (10148) lwip: +-------------------------------+
+
+D (10158) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (10158) lwip: +-------------------------------+
+
+D (10168) lwip: ip4_output_if: call netif->output()
+
+D (10168) lwip: pbuf_add_header: old 0x3ffcfde4 new 0x3ffcfdd6 (14)
+
+D (10178) lwip: ethernet_output: sending packet 0x3ffcfdc4
+
+D (10178) lwip: pbuf_free(0x3ffd20e0)
+
+D (10188) lwip: pbuf_free: deallocating 0x3ffd20e0
+
+D (10188) lwip: etharp_timer
+
+D (10188) lwip: ethernet_input: dest:01:00:5e:00:00:fb, src:8e:4c:d2:35:6c:b2, type:800
+
+D (10198) lwip: pbuf_remove_header: old 0x3ffd1074 new 0x3ffd1082 (14)
+
+D (10208) lwip: ip4_input: UDP packet to DHCP client port 5353
+
+D (10208) lwip: ip4_input: packet not for us.
+
+D (10218) lwip: pbuf_free(0x3ffd2100)
+
+D (10218) lwip: pbuf_free: deallocating 0x3ffd2100
+
+D (10228) lwip: ethernet_input: dest:33:33:00:00:00:fb, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (10238) lwip: pbuf_free(0x3ffcfec4)
+
+D (10p: pbuf_free: deallocating 0x3ffcfec4
+
+D (10238) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (10248) lwip: pbuf_remove_header: old 0x3ffd1900 new 0x3ffd190e (14)
+
+D (10258) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (10268) lwip: ip4_input: packet accepted on interface st
+
+D (10268) lwip: ip4_input: 
+
+D (10268) lwip: IP header:
+
+D (10278) lwip: +-------------------------------+
+
+D (10278) lwip: | 4 | 5 |  0x00 |        49     | (v, hl, tos, len)
+
+D (10288) lwip: +-------------------------------+
+
+D (10288) lwip: |    24870      |000|       0   | (id, flags, offset)
+
+D (10298) lwip: +-------------------------------+
+
+D (10298) lwip: |   99  |    6  |    0x7197     | (ttl, proto, chksum)
+
+D (10308) lwip: +-------------------------------+
+
+D (10308) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (10318) lwip: +-------------------------------+
+
+D (10318) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (10328) lwip: +-------------------------------+
+
+D (10328) lwip: ip4_input: p->len 49 p->tot_len 49
+
+D (10338) lwip: pbuf_remove_header: old 0x3ffd190e new 0x3ffd1922 (20)
+
+D (10348) lwip: pbuf_remove_header: old 0x3ffd1922 new 0x3ffd1936 (20)
+
+D (10348) lwip: pbuf_alloc(length=100)
+
+D (10358) lwip: pbuf_alloc(length=100) == 0x3ffcfeb0
+
+D (10358) lwip: pbuf_add_header: old 0x3ffcfef8 new 0x3ffcfee4 (20)
+
+D (10368) lwmb: r_recv(60), r->b_ip4_str=192.168.2.11, r->ib=20, errno=127
+D (10368) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (10368) lwmb: r_proc: malloc(0x3ffd1d84), ntohs(ia->l)=5
+[0;32mI (10388) mb: time_elapsed=3200 [ms][0m
+D (10388) lwip: pbuf_alloc(length=1440)
+
+D (10388) lwip: pbuf_alloc(length=1440) == 0x3ffd0244
+
+D (10398) lwip: pbuf_add_header: old 0x3ffd028c new 0x3ffd0278 (20)
+
+D (10398) lwip: pbuf_add_header: old 0x3ffd0278 new 0x3ffd0264 (20)
+
+D (10408) lwip: ip4_output_if: lo0
+
+D (10408) lwip: IP header:
+
+D (10418) lwip: +-------------------------------+
+
+D (10418) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (10428) lwip: +-------------------------------+
+
+D (10428) lwip: |       21      |000|       0   | (id, flags, offset)
+
+D (10438) lwip: +-------------------------------+
+
+D (10438) lwip: |   64  |    6  |    0x7cad     | (ttl, proto, chksum)
+
+D (10448) lwip: +-------------------------------+
+
+D (10448) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (10458) lwip: +-------------------------------+
+
+D (10458) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (10468) lwip: +-------------------------------+
+
+D (10468 pbuf_alloc(length=52)
+
+D (10478) lwip: pbuf_alloc(length=52) ffd00f0
+
+D (10478) lwip: pbuf_copy(0x3ffd00f0, 0x3ffd0244)
+
+D (10488) lwip: pbuf_copy_partial_pbuf(0x3ffd00f0, 0x3ffd0244, 52, 0)
+
+D (10498) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (10498) lwip: pbuf_alloced_custom(length=54)
+
+D (10498) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (10498) lwmb: r_send(59), r->b_ip4_str=127.0.0.1, r->ob=12, b=12, errno=127
+D (10518) lwip: pbuf_alloced_custom(length=63)
+
+D (10508) lwip: ip4_input: packet accepted on interface lo
+
+D (10498) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (10528) lwip: ip4_input: 
+
+adu: D (10538) lwip: IP header:
+
+0x00 |D (10538) lwip: +-------------------------------+
+
+0x00 |D (10548) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (10548) lwip: +-------------------------------+
+
+0x00 |D (10558) lwip: |       21      |000|       0   | (id, flags, offset)
+
+0x00 |D (10568) lwip: +-------------------------------+
+
+0x00 |D (10568) lwip: |   64  |    6  |    0x7cad     | (ttl, proto, chksum)
+
+0x05 |D (10578) lwip: +-------------------------------+
+
+0xff |D (10578) lwip: |  127  |    0  |    0  |    1  | (src)
+
+0x03 |D (10588) lwip: +-------------------------------+
+
+D (10588) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+0x02 |D (10598) lwip: +-------------------------------+
+
+0x08 |D (10598) lwip: ip4_input: p->len 52 p->tot_len 52
+
+0x0b |D (10608) lwip: pbuf_remove_header: old 0x3ffd0110 new 0x3ffd0124 (20)
+
+
+D (10618) lwip: pbuf_remove_header: old 0x3ffd0124 new 0x3ffd0138 (20)
+
+D (10618) lwmb: r_proc: malloc(0x3ffd1d84)
+D (10618) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (10628) lwip: pbuf_remove_header: old 0x3ffd20b8 new 0x3ffd20c6 (14)
+
+adu: D (10638) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+0x00 |D (10648) lwip: ip4_input: packet accepted on interface st
+
+0x01 |D (10658) lwip: ip4_input: 
+
+D (10658) lwip: IP header:
+
+D (10658) lwip: +-------------------------------+
+
+0x00 |D (10668) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (10668) lwip: +-------------------------------+
+
+D (10668) lwip: pbuf_alloced_custom(length=42)
+
+D (10678) lwip: |    24872      |000|       0   | (id, flags, offset)
+
+0x00 |D (10688) lwip: +-------------------------------+
+
+D (10688) lwip: |   99  |    6  |    0x719e     | (ttl, proto, chksum)
+
+0x00 |D (10698) lwip: +-------------------------------+
+
+0x03 |D (10708) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (10708) lwip: +-------------------------------+
+
+0xff |D (1 |  192  |  168  |    2  |   11  | (dest)
+
+D (10718) lwip: +-------------------------------+
+
+0x83 |D (10728) lwip: ip4_input: p->len 40 p->tot_len 40
+
+0x02 |
+D (10728) lwip: pbuf_remove_header: old 0x3ffd20c6 new 0x3ffd20da (20)
+
+D (10738) lwip: pbuf_remove_header: old 0x3ffd20cfdc4)
+
+D (10748) lwip: pbuf_free: deallocating 0x3ffcfdc4
+
+D (10748) lwip: pbuf_free: deallocating 0x3ffd00f0
+
+D (10758) lwip: pbuf_add_header: old 0x3ffcfee4 new 0x3ffcfed0 (20)
+
+D (10768) lwip: ip4_output_if: st1
+
+D (10768) lwip: IP header:
+
+D (10768) lwip: +-------------------------------+
+
+D (10778) lwip: | 4 | 5 |  0x00 |        64     | (v, hl, tos, len)
+
+D (78) lwip: +-------------------------------+
+
+D (10788) lwip: |       22      |000|       0   | (id, flags, offset)
+
+D (10788) lwip: +-------------------------------+
+
+D (10798) lwip: |   64  |    6  |    0xf598     | (ttl, proto, chksum)
+
+D (10808) lwip: +-------------------------------+
+
+D (10808) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (10818) lwip: +-------------------------------+
+
+D (10818) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (10828) lwip: +-------------------------------+
+
+D (10828) lwip: ip4_output_if: call netif->output()
+
+D (10828) lwip: pbuf_add_header: old 0x3ffcfed0 new 0x3ffcfec2 (14)
+
+D (10838) lwip: ethernet_output: sending packet 0x3ffcfeb0
+
+D (10848) lwip: pbuf_free(0x3ffd2100)
+
+D (10848) lwip: pbuf_free: deallocating 0x3ffd2100
+
+D (10848) lwip: pbuf_alloc(length=20)
+
+D (10858) lwip: pbuf_alloc(length=20) == 0x3ffd00f0
+
+D (10858) lwip: pbuf_add_header: old 0x3ffd0124 new 0x3ffd0110 (20)
+
+D (10868) lwip: ip4_output_if: lo0
+
+D (10868) lwip: IP header:
+
+D (10878) lwip: +-------------------------------+
+
+D (10878) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (10888) lwip: +-------------------------------+
+
+D (10888) lwip: |       23      |000|       0   | (id, flags, offset)
+
+D (10898) lwip: +-------------------------------+
+
+D (10898) lwip: |   64  |    6  |    0x7cb7     | (ttl, proto, chksum)
+
+D (10908) lwip: +-------------------------------+
+
+D (10908) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (10918) lwip: +-------------------------------+
+
+D (10918) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (10928) lwip: +-------------------------------+
+
+D (10928) lwip: netif_loop_output()
+
+D (10938) lwip: pbuf_alloc(length=40)
+
+D (10938) lwip: pbuf_alloc(length=40) == 0x3ffcff9c
+
+D (10938) lwip: pbuf_copy(0x3ffcff9c, 0x3ffd00f0)
+
+D (10948) lwip: pbuf_copy_partial_pbuf(0x3ffcff9c, 0x3ffd00f0, 40, 0)
+
+D (10948) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (10958) lwip: pbuf_free(0x3ffd00f0)
+
+D (10958) lwip: pbuf_free: deallocating 0x3ffd00f0
+
+D (10968) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (10978) lwip: pbuf_remove_header: old 0x3ffcfc4c new 0x3ffcfc5a (14)
+
+D (10978) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (10988) lwip: ip4_input: packet accepted on interface st
+
+D (10998) lwip: ip4_input: 
+
+D (10998) lwip: IP header:
+
+D (10998) lwip: +-------------------------------+
+
+D (11008) lwip: | 4 | 5 |  0x00 |        49     | (v, hl, tos, len)
+
+D (11008) lwip: pbuf_alloced_custom(length=54)
+
+D (11008) lwip: +-------------------------------+
+
+D (11018) lwip: |    24873      |000|       0   | (id, flags, offset)
+
+D (11028) lwip: +-------------------------------+
+
+D (11028) lwip: |   99  |    6  |    0x7194     | (ttl, proto, chksum)
+
+D (11038) lwip: +-------------------------------+
+
+D (11038) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (11048) lwip: +-------------------------------+
+
+D (11048) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (11058) lwip: +-------------------------------+
+
+D (11058) lwip: ip4_input: p->len 49 p->tot_len 49
+
+D (11068) lwip: pbuf_remove_header: old 0x3ffcfc5a new 0x3ffcfc6e (20)
+
+D (11068) lwip: pbuf_remove_header: old 0x3ffcfc6e new 0x3ffcfc82 (20)
+
+D (11078) lr
+
+D (11078) lwip: pbuf_alloc(length=100)
+
+D (11088) lwip: pbuf_alloc(length=100) == 0x3ffcfc9c
+
+D (11088) lwip: pbuf_add_header: old 0x3ffcfce4 new 0x3ffcfcd0 (20)
+
+D (11098) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (11098) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (11108) lwip: pbuf_alloced_custom(length=74)
+
+D (11108) lwip: pbuf_remove_header: old 0x3ffd08d4 new 0x3ffd08e2 (14)
+
+D (11118) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (11128) lwip: etharp_find_entry: found empty entry 1
+
+D (11138) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (11138) lwip: etharp_input: incoming ARP request
+
+D (11148) lwip: etharp_input: ARP request was not for us.
+
+D (11148) lwip: pbuf_free(0x3ffcfd50)
+
+D (11158) lwip: pbuf_free: deallocating 0x3ffcfd50
+
+D (11158) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (11168) lwip: ip4_input: packet accepted on interface lo
+
+D (11158) lwmb: r_recv(61), r->b_ip4_str=127.0.0.1, r->ib=12, errno=127
+D (11178) lwip: ip4_input: 
+
+D (11178) lwip: IP header:
+
+D (11188) lwip: +-------------------------------+
+
+D (11188) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (11198) lwip: +-------------------------------+
+
+D (11198) lwip: |       23      |000|       0   | (id, flags, offset)
+
+D (11208) lwip: +-------------------------------+
+
+D (11208) lwip: |   64  |    6  |    0x7cb7     | (ttl, proto, chksum)
+
+D (11218) lwip: +-------------------------------+
+
+D (11218) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (11228) lwip: +-------------------------------+
+
+D (11228) lwip: |  127   0  |    0  |    1  | (dest)
+
+D (11248) lwip: pbuf_remove_header: old 0x3ffcffbc new 0x3ffcffd0 (20)
+
+D (11248) lwip: pbuf_remove_header: old 0x3ffcffd0 new 0x3ffcffe4 (20)
+
+D (11258) lwip: pbuf_free(0x3ffd0244)
+
+D (11258) lwip: pbuf_free: deallocating 0x3ffd0244
+
+D (11268) lwip: pbuf_free(0x3ffcff9c)
+
+D (11268) lwip: pbuf_free: deallocating 0x3ffcff9c
+
+D (11278) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (11288) lwip: pbuf_remove_header: old 0x3ffd20b8 new 0x3ffd20c6 (14)
+
+D (11288) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (11298) lwip: ip4_input: packet accepted on interface st
+
+D (11308) lwip: ip4_input: 
+
+D (11308) lwip: IP header:
+
+D (11308) lwip: +-------------------------------+
+
+D (11318) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (11318) lwip: +-------------------------------+
+
+D (11328) lwip: |    24874      |000|       0   | (id, flags, offset)
+
+D (11328) lwip: +-------------------------------+
+
+D (11338) lwip: |   99  |    6  |    0x719c     | (ttl, proto, chksum)
+
+D (11338) lwip: +-------------------------------+
+
+D (11348) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (11348) lwip: +-------------------------------+
+
+D (11358) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (11358) lwip: +-------------------------------+
+
+D (11368) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (11368) lwip: pbuf_remove_header: old 0x3ffd20c6 new 0x3ffd20da (20)
+
+D (11378) lwip: pbuf_remove_header: old 0x3ffd20da new 0x3ffd20ee (20)
+
+D (11388) lwip: pbuf_free(0x3ffcfeb0)
+
+D (11388) lwip: pbuf_free: deallocating 0x3ffcfeb0
+
+D (11388) lwip: pbuf_add_header: old 0x3ffcfcd0 new 0x3ffcfcbc (20)
+
+D (11398) lwip: ip4_output_if: st1
+
+D (11398) lwip: IP header:
+
+D (11408) lwip: +-------------------------------+
+
+D (11408) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (11418) lwip: +-------------------------------+
+
+D (11418) lwip: |       24      |000|       0   | (id, flags, offset)
+
+D (11428) lwip: +-------------------------------+
+
+D (11428) lwip: |   64  |    6  |    0xf5a2     | (ttl, proto, chksum)
+
+D (11438) lwip: +-------------------------------+
+
+D (11438) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (11448) lwip: +-------------------------------+
+
+D (11448) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (11458) lwip: +-------------------------------+
+
+D (11458) lwip: ip4_output_if: call netif->output()
+
+D (11468) lwip: pbuf_add_header: old 0x3ffcfcbc new 0x3ffcfcae (14)
+
+D (11468) lwip: ethernet_output: sending packet 0x3ffcfc9c
+
+D (11478) lwip: pbuf_free(0x3ffd2100)
+
+D (11478) lwip: pbuf_free: deallocating 0x3ffd2100
+
+D (11488) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (11498) lwip: pbuf_remove_header: old 0x3ffcfdfc new 0x3ffcfe0a (14)
+
+D (11498) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (11508) lwip: ip4_input: packet accepted on interface st
+
+D (11518) lwip: ip4_input: 
+
+D (11518) lwip: IP header:
+
+D (11518) lwip: +-------------------------------+
+
+D (11528) lwip: | 4 | 5 |  0x00 |        60     | (v, hl, tos, len)
+
+D (11528) lwip: +-------------------------------+
+
+D (11538) lwip: |    24875      |000|       0   | (id, flags, offset)
+
+D (11538) lwip: +-------------------------------+
+
+D (11548) lwip: |   99  |    6  |    0x7187     | (ttl, proto, chksum)
+
+D (11548) lwip: +-------------------------------+
+
+D (11558) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (11558) lwip: +-------------------------------+
+
+D (11568) lwi|    2  |   11  | (dest)
+
+D (11568) lwip: +----------------------+
+
+D (11578) lwip: ip4_inpu78) lwip: pbuf_remove_header: olnew 0x3ffcfe1e (20)
+
+D (11588) lwip: pbuf_remove_header: old 0x3ffcfe1e new 0x3ffcfe32 (20)
+
+D (11598) lwip: pbuf_alloc(lengoc(length=20) == 0x3ffcff88
+
+D (11608) lwip: pbuf_add_header: old 0x3ffcffbc new 0x3ffcffa8 (20)
+
+D (11608) lwip: ip4_output_if: st1
+
+D (11608) lwip: IP header:
+
+D (11618) lwip: +-------------------------------+
+
+D (11618) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (11628) lwip: +-------------------------------+
+
+D (11628) lwip: |       25      |000|       0   | (id, flags, offset)
+
+D (11638) lwip: +-------------------------------+
+
+D (11638) lwip: |   64  |    6  |    0xf5ad     | (ttl, proto, chksum)
+
+D (11648) lwip: +-------------------------------+
+
+D (11648) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (11658) lwip: +-------------------------------+
+
+D (11658) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (11668) lwip: +-------------------------------+
+
+D (11668) lwip: ip4_output_if: call netif->output()
+
+D (11678) lwip: pbuf_add_header: old 0x3ffcffa8 new 0x3ffcff9a (14)
+
+D (11678) lwip: pbuf_alloced_custom(length=42)
+
+D (11678) lwip: ethernet_output: sending packet 0x3ffcff88
+
+D (11688) lwip: pbuf_free(0x3ffcff88)
+
+D (11698) lwip: pbuf_free: deallocating 0x3ffcff88
+
+D (11698) lwip: pbuf_alloc(length=1440)
+
+D (11698) lwip: pbuf_alloced_custom(length=54)
+
+D (11708) lwip: pbuf_alloc(length=1440) == 0x3ffd0908
+
+D (11708) lwip: pbuf_alloced_custom(length=63)
+
+D (11718) lwip: pbuf_add_header: old 0x3ffd0950 new 0x3ffd093c (20)
+
+D (11728) lwip: pbuf_add_header: old 0x3ffd093c new 0x3ffd0928 (20)
+
+D (11728) lwip: ip4_output_if: lo0
+
+D (11738) lwip: IP header:
+
+D (11738) lwip: +-------------------------------+
+
+D (11738) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (11748) lwip: +-------------------------------+
+
+D (11748) lwip: |       26      |000|       0   | (id, flags, offset)
+
+D (11758) lwip: +-------------------------------+
+
+D (11758) lwip: |   64  |    6  |    0x7ca8     | (ttl, proto, chksum)
+
+D (11768) lwip: +-------------------------------+
+
+D (11778) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (11778) lwip: +-------------------------------+
+
+D (11788) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (11788) lwip: +-------------------------------+
+
+D (11798) lwip: netif_loop_output()
+
+D (11798) lwip: pbuf_alloc(length=52)
+
+D (11798) lwip: pbuf_alloc(length=52) == 0x3ffcff88
+
+D (11808) lwip: pbuf_copy(0x3ffcff88, 0x3ffd0908)
+
+D (11808) lwip: pbuf_copy_partial_pbuf(0x3ffcff88, 0x3ffd0908, 52, 0)
+
+D (11818) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (11818) lwip: pbuf_alloc(length=100)
+
+D (11828) lwip: pbuf_alloc(length=100) == 0x3ffd1950
+
+D (11818) lwmb: r_send(61), r->b_ip4_str=127.0.0.1, r->ob=12, b=12, errno=127
+D (11828) lwip: pbuf_add_header: old 0x3ffd1998 new 0x3ffd1984 (20)
+
+D (11838) lwip: pbuf_free(0x3ffcff68)
+
+D (11838) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (11848) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (11858) lwip: pbuf_remove_header: old 0x3ffd02d0 new 0x3ffd02de (14)
+
+D (11858) lwip: pbuf_free: deallocating 0x3ffcff68
+
+D (11868) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (11878) lwip: pbuf_free(0x3ffcf89c)
+
+D (11878) lwip: etharp_find_entry: found empty entry 1
+
+D (11878) lwip: pbuf_free: deallocating 0x3ffcf89c
+
+D (11888) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (11888) lwip: pbuf_free(0x3ffd0108)
+
+D (11898) lwip: etharp_input: incoming ARP request
+
+D (11908) lwip: pbuf_free: deallocating 0x3ffd0108
+
+D (11908) lwip: etharp_input: ARP request was not for us.
+
+D (11918) lwip: pbuf_free(0x3ffcfd50)
+
+D (11918) lwip: pbuf_free: deallocating 0x3ffcfd50
+
+D (11928) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (11938) lwip: pbuf_remove_header: old 0x3ffd20b8 new 0x3ffd20c6 (14)
+
+D (11938) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (11948) lwip: ip4_input: packet accepted on interface st
+
+D (11958) lwip: ip4_input: 
+
+D (11958) lwip: IP header:
+
+D (11958) lwip: +-------------------------------+
+
+[0;32mI (11958) mb: hw: 2160[0m
+
+D (11968) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+[0;32mI (11968) mb: Largest free block: 110592[0m
+
+D (11978) lwip: +-------------------------------+
+
+D (11978) lwip: |    24876      |000|       0   | (id, flags, offset)
+
+[0;32mI (11988) mb: Free heap: 188688[0m
+
+D (11988) lwip: +-------------------------------+
+
+D (11998) lwip: |   99  |    6  |    0x719a     | (ttl, proto, chksum)
+
+D (11998) lwip: +-------------------------------+
+
+D (12008) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (12008) lwip: +-------------------------------+
+
+D (12018) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (12018) lwip: +-------------------------------+
+
+D (12028) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (12028) lwip: pbuf_remove_header: old 0x3ffd20c6 new 0x3ffd20da (20)
+
+D (12038) lwip: pbuf_remove_header: old 0x3ffd20da new 0x3ffd20ee (20)
+
+D (12048) lwip: pbuf_free(0x3ffcfc9c)
+
+D (12048) lwip: pbuf_free: deallocating 0x3ffcfc9c
+
+D (12048) lwip: pbuf_add_header: old 0x3ffd1984 )
+
+D (12058) lwip: ip4_output_if: st1
+
+D (12058) lwip: IP he
+D (12068) lwip: +-------------------------------+
+
+D (12068) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (12078) lwip: +-------------------------------+
+
+D (12078) lwip: |       27      |000|       0   | (id, flags, offset)
+
+D (12088) lwip: +-------------------------------+
+
+D (12088) lwip: |   64  |    6  |    0xf59f     | (ttl, proto, chksum)
+
+D (12098) lwip: +-------------------------------+
+
+D (12098) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (12108) lwip: +-------------------------------+
+
+D (12108) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (12118) lwip: +-------------------------------+
+
+D (12118) lwip: ip4_output_if: call netif->output()
+
+D (12128) lwip: pbuf_add_header: old 0x3ffd1970 new 0x3ffd1962 (14)
+
+D (12128) lwip: ethernet_output: sending packet 0x3ffd1950
+
+D (12138) lwip: pbuf_free(0x3ffd2100)
+
+D (12138) lwip: pbuf_free: deallocating 0x3ffd2100
+
+D (12148) lwip: etharp_timer
+
+D (12148) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (12158) lwip: pbuf_remove_header: old 0x3ffcfee0 new 0x3ffcfeee (14)
+
+D (12158) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (12168) lwip: ip4_input: packet accepted on interface st
+
+D (12178) lwip: ip4_input: 
+
+D (12178) lwip: IP header:
+
+D (12178) lwip: +-------------------------------+
+
+D (12188) lwip: | 4 | 5 |  0x00 |        49     | (v, hl, tos, len)
+
+D (12188) lwip: +-------------------------------+
+
+D (12198) lwip: |    24877      |000|       0   | (id, flags, offset)
+
+D (12208) lwip: +-------------------------------+
+
+D (12208) lwip: |   99  |     |    0x7190     | (ttl, proto, chksum)
+
+D (12218) lwip: +-------------------------------+
+
+D (12218) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (12228) lwip: +-------------------------------+
+
+D (12228) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (12238) lwip: +-------------------------------+
+
+D (12238) lwip: ip4_input: p->len 49 p->tot_len 49
+
+D (12248ader: old 0x3ffcfeee new 0x3ffcff02 (20)
+
+D (12248) lwip: pbuf_remove_header: old 0x3ffcff02 new 0x3ffcff16 (20)
+
+D (12258) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (12268) lwip: ip4_input: packet accepted on interface lo
+
+D (12268) lwip: ip4_input: 
+
+D (12278) lwip: IP header:
+
+D (12278) lwip: +-------------------------------+
+
+D (12278) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (12288) lwip: +-------------------------------+
+
+D (12288) lwip: |       26      |000|       0   | (id, flags, offset)
+
+D (12298) lwip: +-------------------------------+
+
+D (12298) lwip: |   64  |    6  |    0x7ca8     | (ttl, proto, chksum)
+
+D (12308) lwip: +-------------------------------+
+
+D (12318) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (12318) lwip: +-------------------------------+
+
+D (12328) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (12328) lwip: +-------------------------------+
+
+D (12328) lwip: ip4_input: p->len 52 p->tot_len 52
+
+D (12338) lwip: pbuf_remove_header: old 0x3ffcffa8 new 0x3ffcffbc (20)
+
+D (12348) lwip: pbuf_remove_header: old 0x3ffcffbc new 0x3ffcffd0 (20)
+
+D (12348) lwip: pbuf_alloc(length=100)
+
+D (12348) lwmb: r_recv(60), r->b_ip4_str=192.168.2.11, r->ib=38, errno=127
+D (12358) lwip: pbuf_alloc(length=100) == 0x3ffd202c
+
+D (12358) lwmb: r_proc: malloc(0x3ffd0154)
+D (12368) lwip: pbuf_add_header: old 0x3ffd2074 new 0x3ffd2060 (20)
+
+adu: 0x00 |0x02 |0x00 |0x00 |D (12378) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+0x00 |0x03 |0xff |0x83 |0x02 |
+D (12388) lwmb: r_proc: malloc(0x3ffd0154)
+adu: 0x00 |0x03 |0x00 |0x00 |0x00 |0x03 |0xff |0x83 |0x02 |
+D (12398) lwip: pbuf_alloc(length=20)
+
+D (12398) lwip: pbuf_alloc(length=20) == 0x3ffd00f0
+
+D (12408) lwmb: r_proc: malloc(0x3ffd0154), ntohs(ia->l)=5
+D (12408) lwip: pbuf_add_header: old 0x3ffd0124 new 0x3ffd0110 (20)
+
+[0;32mI (12418) mb: time_elapsed=2030 [ms][0m
+D (12418) lwip: pbuf_alloced_custom(length=70)
+
+D (12418) lwip: ip4_output_if: lo0
+
+D (12428) lwip: IP header:
+
+D (12428) lwip: +-------------------------------+
+
+D (12438) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (12438) lwip: pbuf_alloced_custom(length=54)
+
+D (12438) lwip: +-------------------------------+
+
+D (12448) lwip: |       28      |000|       0   | (id, flags, offset)
+
+D (12458) lwip: +-------------------------------+
+
+D (12458) lwip: |   64  |    6  |    0x7cb2     | (ttl, proto, chksum)
+
+D (12468) lwip: +-------------------------------+
+
+D (12468) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (12478) lwip: +-------------------------------+
+
+D (12478) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (12488) lwip: pbuf_alloced_custom(length=63)
+
+D (12488) lwip: +-------------------------------+
+
+D (12498) lwip: netif_loop_output()
+
+D (12498) lwip: pbuf_alloc(length=40)
+
+D (12498) lwip: pbuf_alloc(length=40) == 0x3ffcfd70
+
+D (12508) lwip: pbuf_copy(0x3ffcfd70, 0x3ffd00f0)
+
+D (12508) lwip: pbuf_copy_partial_pbuf(0x3ffcfd70, 0x3ffd00f0, 40, 0)
+
+D (12518) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (12528) lwip: pbuf_free(0x3ffd00f0)
+
+D (12528) lwip: pbuf_free: deallo00f0
+
+D (12528) lwip: pbuf_alloc(length=1440)
+
+D (12538) lwip: pbuf_alloc(length=1440) == 0x3ffd0f0c
+
+D (12538) lwip: pbuf_add_header: old 0x3ffd0f54 new 0x3ffd0f40 (20)
+
+D (12548) lwip: pbuf_add_header: old 0x3ffd0f40 new 0x3ffd0f2c (20)
+
+D (12548) lwip: ip4_output_if: lo0
+
+D (12558) lwip: IP header:
+
+D (12558) lwip: +-------------------------------+
+
+D (12568) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (12568) lwip: +-------------------------------+
+
+D (12578) lwip: |       29      |000|       0   | (id, flags, offset)
+
+D (12578) lwip: +-------------------------------+
+
+D (12588) lwip: |   64  |    6  |    0x7ca5     | (ttl, proto, chksum)
+
+D (12588) lwip: +-------------------------------+
+
+D (12598) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (12598) lwip: +-------------------------------+
+
+D (12608) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (12608) lwip: +-------------------------------+
+
+D (12618) lwip: netif_loop_output()
+
+D (12618) lwip: pbuf_alloc(length=52)
+
+D (12618) lwip: pbuf_alloc(length=52) == 0x3ffcfdbc
+
+D (12628) lwip: pbuf_copy(0x3ffcfdbc, 0x3ffd0f0c)
+
+D (12628) lwip: pbuf_copy_partial_pbuf(0x3ffcfdbc, 0x3ffd0f0c, 52, 0)
+
+D (12638) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (12648) lwip: ethernet_input: dest:33:33:00:00:00:02, src:8e:4c:d2:35:6c:b2, type:86dd
+
+D (12648) lwmb: r_send(59), r->b_ip4_str=127.0.0.1, r->ob=12, b=12, errno=127
+D (12648) lwip: pbuf_free(0x3ffd1d6c)
+
+D (12658) lwip: pbuf_free: deallocating 0x3ffd1d6c
+
+adu: 0x00 |0x00 |0x00 |0x00 |D (12668) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+0x00 |D (12678) lwip: pbuf_remove_header: old 0x3ffcfc4c new 0x3ffcfc5a (14)
+
+D (12678) lwip: pbuf_alloced_custom(length=42)
+
+D (12688) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+0x05 |D (12698) lwip: ip4_input: packet accepted on interface st
+
+0x03 |0x02 |0x08 |D (12698) lwip: ip4_input: 
+
+0x0b |D (12708) lwip: IP header:
+
+D (12708) lwip: +-------------------------------+
+
+
+D (12718) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (12718) lwip: +-------------------------------+
+
+D (12728) lwip: |    24879      |000|       0   | (id, flags, offset)
+
+D (12728) lwmb: r_proc: malloc(0x3ffd0154)
+D (12728) lwip: +-------------------------------+
+
+D (12738) lwip:    6  |    0x7197     | (ttl, proto, chksum)
+
+adu: D (12748) lwip: +-------------------------------+
+
+0x00 |D (12748) lwip: |  192  |  168  |    1  |  174  ---------------------+
+
+0x00 |D (12768) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (12768) lwip: +-------------------------------+
+
+0x00 |D (12778) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (12778) lwip: pbuf_remove_header: old 0x3ffcfc5a new 0x3ffcfc6e (20)
+
+0x00 |0x03 |0xff |0x83 |D (12788) lwip: pbuf_remove_header: old 0x3ffcfc6e new 0x3ffcfc82 (20)
+
+0x02 |
+D (12798) lwip: pbuf_free(0x3ffd1950)
+
+D (12798) lwip: pbuf_free: deallocating 0x3ffd1950
+
+D (12808) lwip: pbuf_add_header: old 0x3ffd2060 new 0x3ffd204c (20)
+
+D (12808) lwip: pbuf_free(0x3ffcff88)
+
+D (12808) lwip: ip4_output_if: st1
+
+D (12818) lwip: IP header:
+
+D (12818) lwip: +-------------------------------+
+
+D (12818) lwip: pbuf_free: deallocating 0x3ffcff88
+
+D (12818) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (12838) lwip: +-------------------------------+
+
+D (12838) lwip: |       30      |000|       0   | (id, flags, offset)
+
+D (12848) lwip: +-------------------------------+
+
+D (12848) lwip: |   64  |    6  |    0xf59c     | (ttl, proto, chksum)
+
+D (12858) lwip: +-------------------------------+
+
+D (12858) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (12868) lwip: +-------------------------------+
+
+D (12868) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (12878) lwip: +-------------------------------+
+
+D (12878) lwip: ip4_output_if: call netif->output()
+
+D (12888) lwip: pbuf_add_header: old 0x3ffd204c new 0x3ffd203e (14)
+
+D (12888) lwip: ethernet_output: sending packet 0x3ffd202c
+
+D (12898) lwip: pbuf_free(0x3ffd20f4)
+
+D (12898) lwip: pbuf_free: deallocating 0x3ffd20f4
+
+D (12908) lwip: pbuf_alloc(length=100)
+
+D (12908) lwip: pbuf_alloc(length=100) == 0x3ffcfbc0
+
+D (12908) lwip: pbuf_add_header: old 0x3ffcfc08 new 0x3ffcfbf4 (20)
+
+D (12918) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (12918) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (12928) lwip: pbuf_remove_header: old 0x3ffcfd20 new 0x3ffcfd2e (14)
+
+D (12938) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (1p4_input: packet accepted on interface st
+
+D (12958) lwip: ip4_input: 
+
+D (12958) lwip: IP header:
+
+D (12958) lwip: +-------------------------------+
+
+D (12968) lwip: | 4 | 5 |  0x00 |        49     | (v, hl, tos, len)
+
+D (12968) lwip: +-------------------------------+
+
+D (12978) lwip: |    24880      |000|       0   | (id, flags, offset)
+
+D (12978) lwip: +-------------------------------+
+
+D (12988) lwip: |   99  |    6  |    0x718d     | (ttl, proto, chksum)
+
+D (12988) lwip: +-------------------------------+
+
+D (12998) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (12998) lwip: +-------------------------------+
+
+D (13008) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (13008) lwip: +-------------------------------+
+
+D (13018) lwip: ip4_input: p->len 49 p->tot_len 49
+
+D (13018) lwip: pbuf_remove_header: old 0x3ffcfd2e new 0x3ffcfd42 (20)
+
+D (13028) lwip: pbuf_remove_header: old 0x3ffcfd42 new 0x3ffcfd56 (20)
+
+D (13038) lwip: etharp_timer
+
+D (13038) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (13048) lwip: ip4_input: packet accepted on interface lo
+
+D (13048) lwip: ip4_input: 
+
+D (13058) lwip: IP header:
+
+D (13058) lwip: pbuf_alloced_custom(length=54)
+
+D (13058) lwip: +-------------------------------+
+
+D (13068) lwip: | 4 | 5 0x00 |        40     | (v, hl, tos, len)
+
+D (13068) lwip: +-------------------------------+
+
+D (13078) lwip: |       28      |000|       0   | (id, flags, offset)
+
+D (13078) lwip: +-------------------------------+
+
+D (13088) lwip: |   64  |    6  |    0x7cb2     | (ttl, proto, chksum)
+
+D (13098) lwip: +-------------------------------+
+
+D (13098) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (13108) lwip: +-------------------------------+
+
+D (13108) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (13118) lwip: +-------------------------------+
+
+D (13118) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (13118) lwip: pbuf_remove_header: old 0x3ffcfd90 new 0x3ffcfda4 (20)
+
+D (13128) lwip: pbuf_remove_header: old 0x3ffcfda4 new 0x3ffcfdb8 (20)
+
+D (13138) lwip: pbuf_free(0x3ffd0908)
+
+D (13138) lwip: pbuf_free: deallocating 0x3ffd0908
+
+D (13148) lwip: pbuf_free(0x3ffcfd70)
+
+D (13148) lwip: pbuf_free: deallocating 0x3ffcfd70
+
+D (13148) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (13158) lwip: pbuf_alloced_custom(length=65)
+
+D (13158) lwip: ip4_input: packet accepted on interface lo
+
+D (13168) lwip: ip4_input: 
+
+D (13178) lwip: IP header:
+
+D (13178) lwip: +-------------------------------+
+
+D (13178) lwip: | 4 | 5 |  0x00 |        52     | (v, hl, tos, len)
+
+D (13188) lwip: +-------------------------------+
+
+D (13188) lwip: |       29      |000|       0   | (id, flags, offset)
+
+D (13198) lwip: +-------------------------------+
+
+D (13198) lwip: |   64  |    6  |    0x7ca5     | (ttl, proto, chksum)
+
+D (13208) lwip: +-------------------------------+
+
+D (13218) lwip: |  127  |    1  | (src)
+
+D (13218) lwip: +-----------------------------(13228) lwip: +-------------------------------+
+
+D (13228) lwip: ip4_input: p->len 52 p->tot_len 52
+
+D (13238) lwip: pbuf_remove_header: old 0x3ffcfddc new cfdf0 new 0x3ffcfe04 (20)
+
+D (13248) lwip: pbuf_alloc(length=20)
+
+D (13258) lwip: pbuf_alloc(length=20) == 0x3ffcfd70
+
+D (13258) lwip: pbuf_add_header: old 0x3ffcfda4 new 0x3ffcfd90 (20)268) lwip: ip4_output_if: lo0
+
+D (13268) lwip: IP header:
+
+D (13268) lwip: +-------------------------------+
+
+D (13278) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (13278) lwip: +-------------------------------+
+
+D (13288) lwip: |       31      |000|       0   | (id, flags, offset)
+
+D (13288) lwip: +-------------------------------+
+
+D (13298) lwip: |   64  |    6  |    0x7caf     | (ttl, proto, chksum)
+
+D (13308) lwip: +-------------------------------+
+
+D (13308) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (13308) lwip: +-------------------------------+
+
+D (13318) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (13318) lwip: +-------------------------------+
+
+D (13328) lwip: netif_loop_output()
+
+D (13328) lwip: pbuf_alloc(length=40)
+
+D (13338) lwip: pbuf_alloc(length=40) == 0x3ffd0108
+
+D (13338) lwip: pbuf_copy(0x3ffd0108, 0x3ffcfd70)
+
+D (13348) lwip: pbuf_copy_partial_pbuf(0x3ffd0108, 0x3ffcfd70, 40, 0)
+
+D (13348) lwip: pbuf_copy_partial_pbuf: copy complete.
+
+D (13358) lwip: pbuf_free(0x3ffcfd70)
+
+D (13358) lwip: pbuf_free: deallocating 0x3ffcfd70
+
+D (13368) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (13368) lwip: pbuf_remove_header: old 0x3ffd02d0 new 0x3ffd02de (14)
+
+D (13378) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (13388) lwip: etharp_find_entry: found empty entry 1
+
+D (13388) lwip: etharp_find_entry: no empty entry found and not allowed to recycle
+
+D (13398) lwip: etharp_input: incoming ARP request
+
+D (13398) lwip: etharp_input: ARP request was not for us.
+
+D (13408) lwip: pbuf_free(0x3ffd1d6c)
+
+D (13408) lwip: pbuf_free: deallocating 0x3ffd1d6c
+
+D (13418) lwmb: r_recv(59), r->b_ip4_str=127.0.0.1, r->ib=12, errno=127
+D (13418) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (13418) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (13428) lwip: pbuf_remove_header: old 0x3ffd159c new 0x3ffd15aa (14)
+
+D (13418) lwmb: r_proc: malloc(0x3ffd0154), ntohs(ia->l)=6
+D (13438) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+adu: D (13458) lwip: ip4_input: packet accepted on interface st
+
+D (13458) lwip: ip4_input: 
+
+0x00 |D (13468) lwip: IP header:
+
+D (13468) lwip: +-------------------------------+
+
+0x10 |D (13478) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (13478) lwip: +-------------------------------+
+
+0x00 |D (13488) lwip: |    24881      |000|       0   | (id, flags, offset)
+
+D (13488) lwip: +-------------------------------+
+
+0x00 |D (13498) lwip: |   99  |    6  |    0x7195     | (ttl, proto, chksum)
+
+D (13498) lwip: +-------------------------------+
+
+0x00 |D (13508) lwip: |  192  |  168  |    1  |  174  | (src)
+
+0x06 |D (13518) lwip: +-------------------------------+
+
+D (13518) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+0xff |D (13528) lwip: +-------------------------------+
+
+D (13528) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (13538) lwip: pbuf_remove_header: old 0x3ffd15aa new 0x3ffd15be (20)
+
+0x06 |0x00 |0x01 |D (13538) lwip: pbuf_remove_header: old 0x3ffd15be new 0x3ffd15d2 (20)
+
+0x08 |0x0b |
+D (13548) lwip: pbuf_free(0x3ffd202c)
+
+D (13548) lwip: pbuf_free: deallocating 0x3ffd202c
+
+D (13558) lwip: pbuf_add_header: old 0x3ffcfbf4 new 0x3ffcfbe0 (20)
+
+D (13558) lwip: pbuf_free(0x3ffcff30)
+
+D (13568) lwip: ip4_output_if: st1
+
+D (13568) lwip: IP header:
+
+D (13568) lwip: pbuf_free: deallocating 0x3ffcff30
+
+D (13568) lwip: +-------------------------------+
+
+D (13578) lwip: | 4 | 5 |  0x00 |        64     | (v, hl, ton)
+
+D (13588) lwip: pbuf_free(0x3ffcfff4)
+
+D (13588) lwip: +-------------------------------+
+
+D (13588) lwip: pbuf_free: deallocating 0x3ffcfff4
+
+D (13598) lwip: |       32      |000|       0   | (id, flags, offset)
+
+D (13608) lwip: +-------------------------------+
+
+D (13608
+D (13618) lwip: +-------------------------------+
+
+D (13628) lwip: |  192  |  168  |    2  |   11  | (src)
+
+D (13628) lwip: +-------------------------------+
+
+D (13628) lwip: |  192  |  168  |    1  |  174  | (dest)
+
+D (13638) lwip: +-------------------------------+
+
+D (13638) lwip: ip4_output_if: call netif->output()
+
+D (13648) lwip: pbuf_add_header: old 0x3ffcfbe0 new 0x3ffcfbd2 (14)
+
+D (13658) lwip: ethernet_output: sending packet 0x3ffcfbc0
+
+D (13658) lwip: pbuf_free(0x3ffd20f4)
+
+D (13658) lwip: pbuf_free: deallocating 0x3ffd20f4
+
+D (13668) lwip: ethernet_input: dest:ac:15:18:e4:de:80, src:a0:dd:6c:10:24:cd, type:800
+
+D (13678) lwip: pbuf_remove_header: old 0x3ffd0994 (13678) lwip: ip_input: iphdr->dest 0xb02a8c0 netif->ip_addr 0xb02a8c0 (0x2a8c0, 0x2a8c0, 0xb000000)
+
+D (13688) lwip: ip4_input: packet accepted on interface st
+
+D (13698) lwip: ip4_input: 
+
+D (13698) lwip: IP header:
+
+D (13698) lwip: +-------------------------------+
+
+D (13708) lwip: | 4 | 5 |  0x00 |        51     | (v, hl, tos, len)
+
+D (13708) lwip: +-------------------------------+
+
+D (13718) lwip: |    24882      |000|       0   | (id, flags, offset)
+
+D (13728) lwip: +-------------------------------+
+
+D (13728) lwip: |   99  |    6  |    0x7189     | (ttl, proto, chksum)
+
+D (13728) lwip: pbuf_alloced_custom(length=42)
+
+D (13738) lwip: +-------------------------------+738) lwip: |  192  |  168  |    1  |  174  | (src)
+
+D (13748) lwip: +-------------------------------+
+
+D (13748) lwip: |  192  |  168  |    2  |   11  | (dest)
+
+D (13758) lwip: +-------------------------------+
+
+D (13758) lwip: ip4_input: p->len 51 p->tot_len 51
+
+D (13768) lwip: pbuf_remove_header: old 0x3ffd09a2 new 0x3ffd09b6 (20)
+
+D (13778) lwip: pbuf_remove_header: old 0x3ffd09b6 new 0x3ffd09ca (20)
+
+D (13778) lwip: ip_input: iphdr->dest 0x100007f netif->ip_addr 0x100007f (0x7f, 0x7f, 0x1000000)
+
+D (13788) lwip: ip4_input: packet accepted on interface lo
+
+D (13798) lwip: ip4_input: 
+
+D (13798) lwip: IP header:
+
+D (13798) lwip: +-------------------------------+
+
+D (13808) lwip: | 4 | 5 |  0x00 |        40     | (v, hl, tos, len)
+
+D (13808) lwip: +-------------------------------+
+
+D (13818) lwip: |       31      |000|       0   | (id, flags, offset)
+
+D (13818) lwip: +-------------------------------+
+
+D (13828) lwip: |   64  |    6  |    0x7caf     | (ttl, proto, chksum)
+
+D -----------------+
+
+D (13838) lwip: |  127  |    0  |    0  |    1  | (src)
+
+D (13838) lwip: +-------------------------------+
+
+D (13848) lwip: |  127  |    0  |    0  |    1  | (dest)
+
+D (13848) lwip: +-------------------------------+
+
+D (13858) lwip: ip4_input: p->len 40 p->tot_len 40
+
+D (13858) lwip: pbuf_remove_header: old 0x3ffd0128 new 0x3ffd013c (20)
+
+D (13868) lwip: pbuf_remove_header: old 0x3ffd013c new 0x3ffd0150 (20)
+
+D (13878) lwip: pbuf_free(0x3ffd0f0c)
+
+D (13878) lwip: pbuf_alloced_custom(length=54)
+
+D (13878) lwip: pbuf_free: deallocating 0x3ffd0f0c
+
+D (13878) lwip: pbuf_alloced_custom(length=72)
+
+D (13888) lwip: pbuf_free(0x3ffd0108)
+
+D (13898) lwip: pbuf_free: deallocating 0x3ffd0108
+
+D (13898) lwip: pbuf_alloc(length=100)
+
+D (13898) lwip: pbuf_alloc(length=100) == 0x3ffcff38
+
+D (13908) lwip: pbuf_add_header: old 0x3ffcff80 new 0x3ffcff6c (20)
+
+D (13918) lwmb: r_send(60), r->b_ip4_str=192.168.2.11, r->ob=12, b=12, errno=0
+D (13918) lwip: ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:8e:4c:d2:35:6c:b2, type:806
+
+D (13918) lwmb: r_recv(60), r->b_ip4_str=192.168.2.11, r->ib=18, errno=127
+D (13928) lwip: pbuf_remove_header: old 0x3ffd02d0 new 0x3ffd02de (14)
+
+D (13938) lwip: etharp_update_arp_entry: 192.168.2.2 - 8e:4c:d2:35:6c:b2
+
+D (13938) lwmb: r_proc: malloc(0x3ffce1d0)
+D (13948) lwip: etharp_find_entry: found empty entry 1
+

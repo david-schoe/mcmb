@@ -17,6 +17,10 @@ void connect_eth(void) {
 
 esp_netif_t *start_eth(void){
 
+    if (!strcmp(eth_ip4_str,"")) {
+        return NULL;
+    }
+
     eth_mac_config_t eth_mac_cfg = ETH_MAC_DEFAULT_CONFIG();
     eth_phy_config_t eth_phy_cfg = ETH_PHY_DEFAULT_CONFIG();
 

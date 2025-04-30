@@ -796,9 +796,7 @@ int r_send(struct r *r) {
         ESP_LOGE(TAG,"r_send(%d), r->b_ip4_str=%s, r->ob=%d, b=%d, errno=%d",r->s,r->b_ip4_str,r->ob,b,errno);
         switch (errno) {
             case (EWOULDBLOCK):
-
-                // TO DO: Add support to not drop packets?
-                vTaskDelay(10);
+                r_dconn(r);
                 return -1;
             case (EBADF):
                 r_dconn(r);
