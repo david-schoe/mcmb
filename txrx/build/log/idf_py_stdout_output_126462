@@ -1,7 +1,0 @@
-Command: ninja flash
-[0/1] Re-running CMake...
--- Component directory /home/davey_schoe/esp/lwmb/include does not contain a CMakeLists.txt file. No component will be added
--- Configuring incomplete, errors occurred!
-See also "/home/davey_schoe/esp/mcmb/txrx/build/CMakeFiles/CMakeOutput.log".
-FAILED: build.ninja 
-/usr/bin/cmake --regenerate-during-build -S/home/davey_schoe/esp/mcmb/txrx -B/home/davey_schoe/esp/mcmb/txrx/build

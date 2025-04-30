@@ -1,1 +1,0 @@
-/home/davey_schoe/esp/mcmb/esp-idf/components/mbedtls/mbedtls/library/version_features.c
