@@ -4,7 +4,7 @@
 #define R_SEL_VERIFY_NC 1       // if this is enabled, the select task will ensure that each remote in the remote table has a netif connection established
 #define R_SEL_VERIFY_TC 1       // if this is enabled, the select task will ensure that each remote in the remote table has a tcp connection established
 #define R_SEL_TIMEO_S 0
-#define R_SEL_TIMEO_US 10000
+#define R_SEL_TIMEO_US 1000000
 #define R_IM_SIZE 256
 #define R_OM_SIZE 256
 
@@ -42,7 +42,9 @@ void r_select_task(void *pvParameters);
 struct r* r_create(char *b_ip4_str, uint16_t bp, char *c_ip4_str, uint16_t cp);
 void r_recv_req(struct r *r);
 void r_send_req(struct r *r, uint16_t tid, uint8_t *pdu, size_t sz);
+
 void r_dump(struct r *r);
+void r_inc_bport(struct r *r);
 
 int r_conn(struct r *r);
 int r_dconn(struct r *r);

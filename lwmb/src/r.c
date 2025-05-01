@@ -492,10 +492,14 @@ void r_send_req(struct r *r, uint16_t tid, uint8_t *pdu, size_t sz) {
     oa->tid = htons(tid);
     oa->pid = 0;
     oa->l = htons(sz+1);
-    oa->uid = 0xff;
+    oa->uid = 0x05;
     memcpy(oa->p,pdu,sz);
     r_send(r);
 }
+
+
+
+//////////
 
 
 void r_dump(struct r *r) {
@@ -515,11 +519,33 @@ void r_dump(struct r *r) {
     fflush(stdout);
 }
 
+void r_inc_bport(struct r *r){
+
+    // increment the binding port number
+
+    if (r->ba[3] < 0xff) {
+        r->ba[3] += 8;
+    } else {
+        r->ba[3] -= 0xff;
+    }
+    ESP_LOGE(TAG,"r_inc_bport(%d), r->b_ip4_str=%s, binding port changed to %d",r->s,r->b_ip4_str,htons(*((uint16_t*)(r->ba+2))));
+    return;
+}
+
+
+///////////
+
 
 int r_conn(struct r *r) {
 
-    if (r->tc < 0) {
+    if (r->tc < 0 && r->tc > -11) {
         goto connect;
+    } else if (r->tc < -10){
+        r_shutdown(r);
+        r_close(r);
+        r_inc_bport(r);
+        r->s = 0;
+        r->tc = 0;
     }
 
     if ((r->ba[0] == 16) || (r->ca[0] == 16)) {
@@ -639,10 +665,15 @@ int r_bind(struct r *r) {
 
             case (EBADF):
                 r->s = 0;
+                r_inc_bport(r);
                 return -1;
             default:
-                // assume failure to bind is not detrimental
-                return 0;
+                // assume failure to bind is detrimental
+                r_shutdown(r);
+                r_close(r);
+                r->s = 0;
+                r_inc_bport(r);
+                return -1;
         }
     }
     ESP_LOGD(TAG,"r_bind(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
@@ -680,14 +711,13 @@ int r_connect(struct r *r) {
     int b;              // return value
 
     // connect to the remote address
-
     if ((b=connect(r->s,(struct sockaddr*)r->ca,r->ca[0])) < 0) {
         ESP_LOGE(TAG,"r_connect(%d), r->b_ip4_str=%s, b=%d, errno=%d",r->s,r->b_ip4_str,b,errno);
         switch (errno) {
             case (EAGAIN):
             case (EALREADY):
                 ESP_LOGD(TAG,"r_connect(%d), pending",r->s);
-                r->tc = -1;
+                r->tc --;
                 return 0;
             case (EBADF):
                 r->s = 0;
@@ -695,7 +725,7 @@ int r_connect(struct r *r) {
                 return -1;
             case (EINPROGRESS):
                 ESP_LOGD(TAG,"r_connect(%d), pending",r->s);
-                r->tc = -1;
+                r->tc --;
                 return 0;
             case (EISCONN):
                 break;
@@ -856,6 +886,9 @@ int r_close(struct r *r) {
 }
 
 
+///////////
+
+
 void rt_push(struct r *r) {
     struct rt *c = (struct rt*) calloc(sizeof(struct rt),sizeof(char));
     xSemaphoreTake(h->re,portMAX_DELAY);
@@ -863,6 +896,7 @@ void rt_push(struct r *r) {
     c->n = h->rt;
     h->rt = c;
     xSemaphoreGive(h->re);
+    return;
 }
 
 

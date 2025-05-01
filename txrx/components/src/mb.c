@@ -171,14 +171,14 @@ void start_mb(void) {
 
     if (strcmp(rb_ip4_str,"") && strcmp(rc_ip4_str,"")) {
         // create a remote that will request a connection to rc_ip4_addr, port 502
-        rr = r_create(rb_ip4_str,0xf00,rc_ip4_str,502);
+        rr = r_create(rb_ip4_str,0x401,rc_ip4_str,502);
     } else {
         h_start(h);
         return;
     }
     if (strcmp(wb_ip4_str,"") && strcmp(wc_ip4_str,"")) {
         // create a remote that will request a connection to wc_ip4_addr, port 502
-        rw = r_create(wb_ip4_str,0xf02,wc_ip4_str,502);
+        rw = r_create(wb_ip4_str,0x402,wc_ip4_str,502);
     }
 
     // register recvd_resp_cb and recvd_error_cb
