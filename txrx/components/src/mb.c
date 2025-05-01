@@ -37,7 +37,11 @@ void recvd_resp_cb(struct a *ia) {
     }
 
     // verify the necessary connections
-    if (!rw->nc || (rw->tc < 1)) {
+    if (rw == NULL) {
+        a_dump(ia);
+        free(ia);
+        return;
+    } else if (!rw->nc || (rw->tc < 1)) {
         a_dump(ia);
         free(ia);
         return;
@@ -112,7 +116,9 @@ void set_mb_reg(void) {
 void mb_send_task(void *pvParameters) {
     for (;;) {
         // verify the necessary connections
-        if (!rr->nc || (rr->tc < 1)) {
+        if (rr == NULL) {
+            return;
+        } else if (!rr->nc || (rr->tc < 1)) {
             ESP_LOGI(TAG,"idle");
             vTaskDelay(200);
             continue;
